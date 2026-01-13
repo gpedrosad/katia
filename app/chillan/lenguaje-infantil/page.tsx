@@ -103,7 +103,7 @@ export default function LenguajeInfantilPage() {
                   <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">
                     ✓
                   </span>
-                  <span><strong>+8 años de experiencia</strong> en trastornos del lenguaje infantil</span>
+                  <span><strong>Más de 20 años de experiencia</strong> en trastornos del lenguaje infantil</span>
                 </li>
               </ul>
 
@@ -136,7 +136,7 @@ export default function LenguajeInfantilPage() {
                     <span className="text-2xl">🎓</span>
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-900">+8 años</p>
+                    <p className="font-semibold text-gray-900">+20 años</p>
                     <p className="text-sm text-gray-600">de experiencia</p>
                   </div>
                 </div>
@@ -304,7 +304,7 @@ export default function LenguajeInfantilPage() {
                   ¿Por qué confiar en mí?
                 </h2>
                 <p className="mb-6 text-lg leading-relaxed text-gray-700">
-                  Soy <strong>Katia Domínguez</strong>, fonoaudióloga con más de 8 años
+                  Soy <strong>Katia Domínguez</strong>, fonoaudióloga con más de 20 años
                   ayudando a niños de Chillán a desarrollar su lenguaje.
                 </p>
                 <ul className="mb-6 space-y-3 text-gray-700">
@@ -324,7 +324,7 @@ export default function LenguajeInfantilPage() {
                     <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">
                       ✓
                     </span>
-                    <span><strong>+8 años</strong> de experiencia clínica con niños</span>
+                    <span><strong>Más de 20 años</strong> de experiencia clínica con niños</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">

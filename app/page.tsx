@@ -173,7 +173,7 @@ export default function Home() {
               Sobre mí
             </h2>
             <p className="mb-6 text-lg leading-relaxed text-gray-700">
-              Soy <strong>Katia Domínguez</strong>, fonoaudióloga con más de 8
+              Soy <strong>Katia Domínguez</strong>, fonoaudióloga con más de 20
               años de experiencia en evaluación y tratamiento de trastornos de
               la comunicación.
             </p>
@@ -199,7 +199,7 @@ export default function Home() {
                   ✓
                 </span>
                 <span>
-                  <strong>+8 años</strong> de experiencia clínica
+                  <strong>Más de 20 años</strong> de experiencia clínica
                 </span>
               </li>
               <li className="flex items-start gap-3">
