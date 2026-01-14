@@ -10,7 +10,7 @@ import { StickyWhatsApp } from "../chillan/lenguaje-infantil/_components/StickyW
 // CONFIGURACIÓN - Editar estos valores según sea necesario
 // ============================================================================
 
-const SITE_URL = "https://www.katiadominguez.cl"; // TODO: Reemplazar con el dominio real
+const SITE_URL = "https://www.katialafono.cl";
 const PAGE_PATH = "/fonoaudiologa-ninos-chillan";
 
 // TODO: Reemplazar con el número de WhatsApp real

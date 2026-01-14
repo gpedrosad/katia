@@ -1,7 +1,6 @@
 import { MetadataRoute } from "next";
 
-// TODO: Reemplazar con el dominio real del sitio
-const SITE_URL = "https://www.katiadominguez.cl";
+const SITE_URL = "https://www.katialafono.cl";
 
 export default function robots(): MetadataRoute.Robots {
   return {
