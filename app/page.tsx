@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   const WHATSAPP_LINK =
-    "https://wa.me/56912345678?text=Hola%2C%20quiero%20agendar%20una%20hora";
+    "https://wa.me/56995497838?text=Hola%2C%20quiero%20agendar%20una%20hora";
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-rose-50 to-white">

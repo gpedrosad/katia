@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 };
 
 const WHATSAPP_LINK =
-  "https://wa.me/56912345678?text=Hola%2C%20quiero%20agendar%20una%20evaluaci%C3%B3n%20de%20lenguaje%20para%20mi%20hijo%2Fa";
+  "https://wa.me/56995497838?text=Hola%2C%20quiero%20agendar%20una%20evaluaci%C3%B3n%20de%20lenguaje%20para%20mi%20hijo%2Fa";
 
 const concerns = [
   {

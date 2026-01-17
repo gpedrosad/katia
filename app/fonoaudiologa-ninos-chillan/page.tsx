@@ -13,8 +13,7 @@ import { StickyWhatsApp } from "../chillan/lenguaje-infantil/_components/StickyW
 const SITE_URL = "https://www.katialafono.cl";
 const PAGE_PATH = "/fonoaudiologa-ninos-chillan";
 
-// TODO: Reemplazar con el número de WhatsApp real
-const WHATSAPP_NUMBER = "56912345678";
+const WHATSAPP_NUMBER = "56995497838";
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=Hola%2C%20quiero%20agendar%20una%20evaluaci%C3%B3n%20de%20lenguaje%20para%20mi%20hijo%2Fa`;
 
 // ============================================================================
@@ -76,8 +75,7 @@ const jsonLd = {
   description:
     "Fonoaudiología para niños en Chillán. Evaluación y terapia de lenguaje, habla, trastornos fonológicos y dificultades de lectura y escritura.",
   url: `${SITE_URL}${PAGE_PATH}`,
-  // TODO: Agregar teléfono real cuando esté disponible
-  // telephone: "+56912345678",
+  telephone: "+56995497838",
   // TODO: Agregar dirección real cuando esté disponible
   // address: {
   //   "@type": "PostalAddress",
