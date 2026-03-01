@@ -20,7 +20,75 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.9,
     },
-    // NOTA: La landing antigua /chillan/lenguaje-infantil está excluida
-    // porque tiene NOINDEX y no debe ser indexada por buscadores.
+    // Hub de servicios
+    {
+      url: `${SITE_URL}/servicios`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    // Páginas de servicios individuales
+    {
+      url: `${SITE_URL}/servicios/terapia-lenguaje-infantil`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/servicios/trastornos-del-habla`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/servicios/evaluacion-fonoaudiologica`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/servicios/tel-trastorno-especifico-lenguaje`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/servicios/tea-trastorno-espectro-autista`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/servicios/dificultades-lectoescritura`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    // Glosario
+    {
+      url: `${SITE_URL}/glosario`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.7,
+    },
+    {
+      url: `${SITE_URL}/glosario/dislalia`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
+      url: `${SITE_URL}/glosario/tel`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    // Recursos
+    {
+      url: `${SITE_URL}/recursos`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.7,
+    },
   ];
 }

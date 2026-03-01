@@ -15,9 +15,29 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Katia Domínguez - Fonoaudióloga en Chillán",
+  title: {
+    default: "Fonoaudióloga en Chillán | Katia Domínguez",
+    template: "%s | Katia Domínguez - Fonoaudióloga Chillán",
+  },
   description:
-    "Fonoaudióloga especialista en evaluación y tratamiento de trastornos del lenguaje y comunicación. Atención presencial en Chillán.",
+    "Fonoaudióloga en Chillán especialista en terapia de lenguaje infantil, trastornos del habla, TEL, TEA y lectoescritura. +20 años de experiencia. Atención presencial.",
+  keywords: [
+    "fonoaudióloga Chillán",
+    "fonoaudióloga en Chillán",
+    "terapia de lenguaje Chillán",
+    "trastornos del habla niños",
+    "fonoaudiología infantil",
+  ],
+  authors: [{ name: "Katia Domínguez" }],
+  openGraph: {
+    type: "website",
+    locale: "es_CL",
+    siteName: "Katia Domínguez - Fonoaudióloga",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
