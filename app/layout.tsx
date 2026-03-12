@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | Katia Domínguez - Fonoaudióloga Chillán",
   },
   description:
-    "Fonoaudióloga en Chillán especialista en terapia de lenguaje infantil, trastornos del habla, TEL, TEA y lectoescritura. +20 años de experiencia. Atención presencial.",
+    "Fonoaudióloga en Chillán especializada en trastornos del lenguaje y comunicación en niños. Más de 20 años de experiencia. Agenda una evaluación fonoaudiológica hoy.",
   keywords: [
     "fonoaudióloga Chillán",
     "fonoaudióloga en Chillán",
@@ -33,6 +33,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_CL",
     siteName: "Katia Domínguez - Fonoaudióloga",
+    title: "Fonoaudióloga en Chillán | Katia Domínguez",
+    description:
+      "Fonoaudióloga en Chillán especializada en trastornos del lenguaje y comunicación en niños. Más de 20 años de experiencia en evaluación y tratamiento. Agenda una evaluación fonoaudiológica hoy.",
   },
   robots: {
     index: true,
