@@ -14,6 +14,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const SITE_URL = "https://www.katialafono.cl";
+const OG_IMAGE = `${SITE_URL}/KatiaDominguezFonoaudiologa.png`;
+
 export const metadata: Metadata = {
   title: {
     default: "Fonoaudióloga en Chillán | Katia Domínguez",
@@ -36,6 +39,15 @@ export const metadata: Metadata = {
     title: "Fonoaudióloga en Chillán | Katia Domínguez",
     description:
       "Fonoaudióloga en Chillán especializada en trastornos del lenguaje y comunicación en niños. Más de 20 años de experiencia en evaluación y tratamiento. Agenda una evaluación fonoaudiológica hoy.",
+    url: SITE_URL,
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Katia Domínguez - Fonoaudióloga en Chillán" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Fonoaudióloga en Chillán | Katia Domínguez",
+    description:
+      "Fonoaudióloga en Chillán. +20 años de experiencia. Evaluación y terapia de lenguaje, habla y comunicación en niños. Agenda tu hora.",
+    images: [OG_IMAGE],
   },
   robots: {
     index: true,

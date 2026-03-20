@@ -1,6 +1,11 @@
 {
   "version": 1,
   "skills": {
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "computedHash": "645b891da1edbae76ab79c7b088d4e73397464f8396edaf773c0e01971ce75d6"
+    },
     "programmatic-seo": {
       "source": "coreyhaines31/marketingskills",
       "sourceType": "github",
@@ -10,6 +15,11 @@
       "source": "coreyhaines31/marketingskills",
       "sourceType": "github",
       "computedHash": "27156d103697411bba81520fef469e77bfba4c65d904c841e4965a158d531fbd"
+    },
+    "seo-geo": {
+      "source": "resciencelab/opc-skills",
+      "sourceType": "github",
+      "computedHash": "1d38520f453282af8712874c360e3e34a379827f737fb536bd45055e2d60d964"
     }
   }
 }

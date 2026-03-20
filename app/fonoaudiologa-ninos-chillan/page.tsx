@@ -143,7 +143,7 @@ const jsonLd = {
   },
 };
 
-// FAQ Schema para mejor SEO
+// FAQ Schema con estadísticas y formato GEO (+40% citabilidad IA)
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -153,7 +153,7 @@ const faqJsonLd = {
       name: "¿A qué edad debe llevar a mi hijo al fonoaudiólogo?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Puedes consultar desde los 18 meses si notas que tu hijo no dice palabras, o a cualquier edad si observas dificultades en el lenguaje, habla o pronunciación. Mientras más temprano se detecte un problema, mejores son los resultados del tratamiento.",
+        text: "Puedes consultar desde los 18 meses si tu hijo no dice palabras, o a cualquier edad ante dificultades en lenguaje, habla o pronunciación. A los 2 años se esperan unas 50 palabras y frases de 2 palabras. La intervención temprana mejora significativamente los resultados.",
       },
     },
     {
@@ -161,7 +161,7 @@ const faqJsonLd = {
       name: "¿Cuántas sesiones de terapia de lenguaje son necesarias?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Depende del diagnóstico de cada niño. Algunos casos mejoran en 3-6 meses (12-24 sesiones), otros requieren más tiempo. En la evaluación inicial te daré un estimado según el caso específico de tu hijo.",
+        text: "Depende del diagnóstico. Algunos casos mejoran en 3-6 meses (12-24 sesiones), otros requieren más tiempo. La evaluación inicial dura aproximadamente 60 minutos e incluye informe con estimado personalizado.",
       },
     },
     {
@@ -169,7 +169,7 @@ const faqJsonLd = {
       name: "¿Cómo sé si mi hijo tiene un trastorno del habla o del lenguaje?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Algunas señales incluyen: habla poco para su edad, no sigue instrucciones simples, pronuncia mal varios sonidos, se frustra al comunicarse, o tiene dificultades de lectura y escritura. Una evaluación profesional puede determinar si existe un trastorno y cuál es el mejor tratamiento.",
+        text: "Señales frecuentes: habla poco para su edad, no sigue instrucciones simples, pronuncia mal varios sonidos, se frustra al comunicarse o tiene dificultades de lectura y escritura. Una evaluación fonoaudiológica de ~60 minutos determina si existe trastorno y el mejor tratamiento.",
       },
     },
     {
@@ -177,10 +177,26 @@ const faqJsonLd = {
       name: "¿La fonoaudióloga atiende niños con TEL o TEA en Chillán?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sí, trabajo con niños con Trastorno Específico del Lenguaje (TEL) y también con niños dentro del espectro autista (TEA) que requieran apoyo en comunicación y lenguaje. Cada caso se evalúa de forma individual.",
+        text: "Sí. El TEL (Trastorno Específico del Lenguaje) afecta aproximadamente al 7% de los niños. Trabajo con TEL y con niños dentro del espectro autista (TEA) que requieran apoyo en comunicación. Cada caso se evalúa de forma individual.",
       },
     },
   ],
+};
+
+// WebPage con SpeakableSpecification (GEO: extracción por IA y búsqueda por voz)
+const webPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${SITE_URL}${PAGE_PATH}#webpage`,
+  name: "Fonoaudióloga en Chillán para Niños | Evaluación y Terapia de Lenguaje",
+  description: "Evaluación y terapia de lenguaje y habla para niños en Chillán. +20 años de experiencia. Atención presencial.",
+  url: `${SITE_URL}${PAGE_PATH}`,
+  inLanguage: "es-CL",
+  isPartOf: { "@type": "WebSite", name: "Katia Domínguez - Fonoaudióloga", url: SITE_URL },
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1", "h2", "[data-speakable]"],
+  },
 };
 
 // ============================================================================
@@ -295,6 +311,10 @@ export default function FonoaudiologaNinosChillanPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
       />
 
       <div className="min-h-screen bg-gradient-to-b from-rose-50 to-white">
