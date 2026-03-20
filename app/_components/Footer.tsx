@@ -14,6 +14,14 @@ const resources = [
   { href: "/recursos", label: "Recursos para padres" },
 ];
 
+const patologiasChillan = [
+  { href: "/chillan/dislalia", label: "Dislalia Chillán" },
+  { href: "/chillan/retraso-del-lenguaje", label: "Retraso del lenguaje Chillán" },
+  { href: "/chillan/tel", label: "TEL Chillán" },
+  { href: "/chillan/dislexia", label: "Dislexia Chillán" },
+  { href: "/chillan/lectoescritura", label: "Lectoescritura Chillán" },
+];
+
 export function Footer() {
   return (
     <footer className="bg-gray-950 px-4 py-12 sm:px-6 lg:px-8">
@@ -50,7 +58,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Resources + Patologías Chillán */}
           <div>
             <h3 className="mb-4 text-lg font-semibold text-white">Recursos</h3>
             <ul className="space-y-2">
@@ -61,6 +69,21 @@ export function Footer() {
                     className="text-sm text-gray-400 hover:text-rose-400 hover:underline"
                   >
                     {resource.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <h3 className="mb-4 mt-6 text-lg font-semibold text-white">
+              Por patología en Chillán
+            </h3>
+            <ul className="space-y-2">
+              {patologiasChillan.map((p) => (
+                <li key={p.href}>
+                  <Link
+                    href={p.href}
+                    className="text-sm text-gray-400 hover:text-rose-400 hover:underline"
+                  >
+                    {p.label}
                   </Link>
                 </li>
               ))}

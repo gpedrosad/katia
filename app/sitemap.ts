@@ -90,5 +90,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.7,
     },
+    // Landings por patología (programmatic SEO - Locations)
+    ...[
+      "dislalia",
+      "retraso-del-lenguaje",
+      "retraso-del-habla",
+      "trastorno-fonologico",
+      "tel",
+      "apraxia-del-habla",
+      "dislexia",
+      "disfemia",
+      "tea-comunicacion",
+      "lectoescritura",
+    ].map((slug) => ({
+      url: `${SITE_URL}/chillan/${slug}`,
+      lastModified: now.toISOString(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
   ];
 }
