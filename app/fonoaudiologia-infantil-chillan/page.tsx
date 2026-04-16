@@ -62,31 +62,31 @@ export default function FonoaudiologiaInfantilPage() {
                 title="Evaluación Fonoaudiológica"
                 description="Diagnóstico preciso del desarrollo comunicativo."
                 href="/evaluacion-fonoaudiologica-infantil-chillan"
-                icon="📋"
+                emoji="📋"
               />
               <ServiceCard 
                  title="Retraso del Lenguaje"
                  description="Estimulación temprana para niños que demoran en hablar."
                  href="/tratamientos/retraso-del-lenguaje-chillan"
-                 icon="🗣️"
+                 emoji="🗣️"
               />
               <ServiceCard 
                  title="Trastorno Fonológico (TEL)"
                  description="Terapia estructurada para Trastornos Específicos del Lenguaje."
                  href="/tratamientos/tel-trastorno-especifico-lenguaje-chillan"
-                 icon="🧠"
+                 emoji="🧠"
               />
               <ServiceCard 
                  title="Retraso del Habla"
                  description="Corrección y desarrollo de articulación y fluidez."
                  href="/tratamientos/retraso-del-habla-chillan"
-                 icon="👶"
+                 emoji="👶"
               />
               <ServiceCard 
                  title="Dislalia Infantil"
                  description="Ayuda con niños que pronuncian mal ciertas letras (ej. R)."
                  href="/tratamientos/dislalia-infantil-chillan"
-                 icon="💬"
+                 emoji="💬"
               />
             </div>
           </section>
