@@ -171,5 +171,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.7,
     })),
+    // Voz Online — Adultos todo Chile
+    ...[
+      "fonoaudiologa-de-voz-online",
+      "evaluacion-vocal-online",
+      "tratamiento-disfonia-online",
+      "nodulos-vocales-tratamiento-online",
+      "fatiga-vocal-tratamiento-online",
+      "rehabilitacion-vocal-profesionales-voz",
+      "terapia-vocal-docentes-profesores",
+      "paralisis-cordal-rehabilitacion-online",
+      "higiene-vocal-cuidado-voz",
+      "voz-ronca-causas-tratamiento",
+    ].map((slug) => ({
+      url: `${SITE_URL}/voz-online/${slug}`,
+      lastModified: now.toISOString(),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    })),
   ];
 }
