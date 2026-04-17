@@ -183,6 +183,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       "paralisis-cordal-rehabilitacion-online",
       "higiene-vocal-cuidado-voz",
       "voz-ronca-causas-tratamiento",
+      "fonoaudiologa-voz-santiago",
+      "fonoaudiologa-voz-concepcion",
+      "fonoaudiologa-voz-vina-del-mar",
+      "fonoaudiologa-voz-temuco",
+      "fonoaudiologa-voz-antofagasta",
     ].map((slug) => ({
       url: `${SITE_URL}/voz-online/${slug}`,
       lastModified: now.toISOString(),

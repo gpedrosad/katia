@@ -1,12 +1,13 @@
 import { Metadata } from "next";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
+import { TestimonialCard } from "@/app/_components/TestimonialCard";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Terapia Vocal para Docentes y Profesores | Online Chile",
   description:
-    "Fonoaudióloga especialista en voz del docente. Tratamiento y prevención de disfonía para profesores online en todo Chile. Cuidado vocal profesional.",
+    "¿Llegas al viernes sin voz por las clases? Terapia vocal online exclusiva para docentes. Salva tus cuerdas vocales desde casa con fonoaudióloga experta.",
   alternates: {
     canonical:
       "https://www.katialafono.cl/voz-online/terapia-vocal-docentes-profesores",
@@ -53,120 +54,67 @@ export default function TerapiaVocalDocentesPage() {
         />
 
         <article className="prose prose-emerald lg:prose-lg max-w-none">
-          <h1 className="text-4xl font-extrabold text-emerald-950">
-            Terapia Vocal para Docentes y Profesores — Online Todo Chile
-          </h1>
-          <p className="lead font-medium text-gray-700">
-            Los profesores están entre los profesionales con mayor riesgo de
-            desarrollar trastornos de la voz. Estudios estiman que hasta un{" "}
-            <strong>57% de los docentes</strong> en Chile ha presentado algún
-            problema vocal durante su carrera. Si eres profesor y tu voz sufre,
-            no estás solo y tiene solución.
-          </p>
-
-          <section>
-            <h2 className="text-2xl font-bold mt-8 text-emerald-900">
-              La voz del docente: un problema silencioso
-            </h2>
-            <ul>
-              <li>
-                Llegas al viernes prácticamente sin voz y necesitas todo el fin
-                de semana para recuperarte.
-              </li>
-              <li>
-                Sientes{" "}
-                <Link
-                  href="/voz-online/fatiga-vocal-tratamiento-online"
-                  className="font-semibold text-emerald-600"
-                >
-                  fatiga vocal
-                </Link>{" "}
-                después de la segunda hora de clase.
-              </li>
-              <li>
-                Has tenido que pedir licencia porque te quedaste completamente
-                sin voz.
-              </li>
-              <li>
-                El otorrino te dijo que tienes{" "}
-                <Link
-                  href="/voz-online/nodulos-vocales-tratamiento-online"
-                  className="font-semibold text-emerald-600"
-                >
-                  nódulos vocales
-                </Link>{" "}
-                o edema en las cuerdas.
-              </li>
-              <li>
-                Sientes un &quot;nudo&quot; o tensión permanente en la garganta y
-                cuello.
-              </li>
-            </ul>
-          </section>
-
-          <div className="bg-emerald-50 p-6 rounded-xl my-8 border border-emerald-100">
-            <h3 className="text-xl font-bold text-emerald-900 mt-0">
-              Terapia online: ideal para profesores
-            </h3>
-            <p className="text-emerald-800">
-              El formato online elimina la barrera de tiempo y distancia que
-              muchos docentes enfrentan. Puedes tomar tu sesión desde tu casa
-              después de clases, sin trasladarte. Trabajamos{" "}
-              <strong>técnica vocal aplicada a la sala de clases</strong>:
-              proyección sin esfuerzo, uso estratégico de pausas, resonancia
-              facial y amplificación natural de la voz. Además, enseñamos
-              rutinas de{" "}
-              <Link
-                href="/voz-online/higiene-vocal-cuidado-voz"
-                className="font-semibold text-emerald-700 underline"
-              >
-                higiene vocal
-              </Link>{" "}
-              adaptadas a tu jornada escolar.
+          <header className="mb-10 text-center">
+            <h1 className="text-4xl font-extrabold text-emerald-950 mb-6">
+              ¿Sobrevives apenas tus clases porque tu voz no da más?
+            </h1>
+            <p className="lead font-medium text-gray-700 max-w-3xl mx-auto">
+              Ser profesor y quedarte sin voz no es un "gafe del oficio" aceptable. Es una alerta roja de que estás destruyendo tu herramienta de trabajo vital. <strong>Casi el 60% de los docentes en Chile</strong> enfrentará un problema vocal severo en su carrera. Sal de la estadística aprendiendo a usar tu voz sin dañarte.
             </p>
-          </div>
+          </header>
 
-          <section>
-            <h2 className="text-2xl font-bold mt-8 text-emerald-900">
-              ¿Qué incluye el programa de voz docente?
+          <section className="my-10">
+            <div className="bg-emerald-50 p-8 rounded-2xl border border-emerald-200 shadow-sm text-center">
+              <h3 className="text-2xl font-bold text-emerald-900 mt-0 mb-4">
+                No arriesgues una licencia médica ni tu carrera vocacional
+              </h3>
+              <p className="text-emerald-800 mb-6 text-left">
+                He visto a cientos de profesores llegar a consulta llorando porque la disfonía y los nódulos amenazaban con forzarlos a cambiar de profesión. A través de nuestra terapia de voz 100% online, puedes entrar a la sala con la certeza de que tu voz resistirá la jornada completa. Sin tener que ir a un box, directo desde tu hogar tras tu horario escolar.
+              </p>
+              <WhatsAppCTA
+                href="https://wa.me/56995497838?text=Hola,%20soy%20docente%20y%20mi%20voz%20no%20da%20m%C3%A1s.%20Deseo%20tratamiento%20online."
+                className="bg-emerald-600 hover:bg-emerald-700 ring-emerald-300 w-full sm:w-auto"
+              >
+                Proteger Mi Voz Docente
+              </WhatsAppCTA>
+              <p className="text-xs mt-3 text-emerald-700 font-bold opacity-80">
+                Horarios especiales compatibles post jornada escolar.
+              </p>
+            </div>
+          </section>
+
+          <section className="my-12">
+            <h2 className="text-2xl font-bold mt-8 text-emerald-900 border-b pb-2">
+              El diagnóstico oculto tras el pizarrón
             </h2>
-            <ul>
+            <ul className="space-y-4 mt-4 text-gray-800">
               <li>
-                <Link
-                  href="/voz-online/evaluacion-vocal-online"
-                  className="font-semibold text-emerald-600"
-                >
-                  Evaluación vocal completa
-                </Link>{" "}
-                para determinar tu nivel de riesgo y daño actual.
+                <strong>Silencio de fin de semana:</strong> El sábado y domingo te quedas mudo/a para poder apenas tener un hilo de voz el lunes por la mañana.
               </li>
               <li>
-                Técnica respiratoria funcional para sostener la voz durante toda
-                la jornada.
+                <strong>Falta de proyección:</strong> Gritas para ordenar el curso, la vena y el cuello se te marcan pero el volumen final en sala es bajo y lleno de "aire".
               </li>
               <li>
-                Ejercicios de calentamiento vocal (&lt;5 minutos) para hacer
-                antes de cada clase.
-              </li>
-              <li>
-                Estrategias de proyección vocal en salas grandes sin
-                amplificación.
-              </li>
-              <li>
-                Plan de manejo de la voz para períodos de alta demanda
-                (evaluaciones, actos).
+                <strong>Dolor como agujas:</strong> Las últimas horas de la jornada las das apretando los dientes del dolor en la garganta al pronunciar vocales.
               </li>
             </ul>
           </section>
 
-          <div className="mt-12 flex justify-center">
-            <WhatsAppCTA
-              href="https://wa.me/56995497838?text=Hola,%20soy%20profesor/a%20y%20necesito%20ayuda%20con%20mi%20voz,%20atenci%C3%B3n%20online"
-              className="bg-emerald-600 hover:bg-emerald-700 ring-emerald-300"
-            >
-              Cuidar mi Voz de Docente
-            </WhatsAppCTA>
-          </div>
+          <section className="my-12">
+            <h2 className="text-2xl font-bold text-emerald-900 text-center mb-8">
+              Profesores que hoy hacen clases sin miedo
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6 not-prose">
+              <TestimonialCard
+                name="Teresa J., Profe Ed. Básica"
+                text="Mis niños absorben todo mi tiempo. Llegaba sin una gota de voz a casa. Me asusté mucho cuando me pasé todo el verano ronca. La Katia me atendió online por zoom los miércoles en la tarde. Me enseñó a proyectar mi voz desde el estómago. Fue mi salvación profesional total."
+              />
+              <TestimonialCard
+                name="Fabián H., Profe de Edu. Física"
+                text="Gritar en un gimnasio cerrado es la muerte para las cuerdas. Desarrollé nódulos, y tras operarme debía hacer la rehabilitación online obligatoria. Katia logró sacar mi voz como nunca antes en mi vida. Es un lujo atenderse desde la casa cansado."
+              />
+            </div>
+          </section>
         </article>
       </main>
     </>

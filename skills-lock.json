@@ -1,6 +1,11 @@
 {
   "version": 1,
   "skills": {
+    "conversion-psychology": {
+      "source": "mike-coulbourn/claude-vibes",
+      "sourceType": "github",
+      "computedHash": "9a0302bf7fbb1c6b8fab6ac3f2ee217489af4d4babf9f64c409a424670d57392"
+    },
     "find-skills": {
       "source": "vercel-labs/skills",
       "sourceType": "github",

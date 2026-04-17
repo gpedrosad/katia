@@ -1,12 +1,13 @@
 import { Metadata } from "next";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
+import { TestimonialCard } from "@/app/_components/TestimonialCard";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Fatiga Vocal: Causas y Tratamiento Online | Chile",
   description:
-    "¿Se te cansa la voz al hablar mucho? Tratamiento online de fatiga vocal para profesionales. Fonoaudióloga con atención a todo Chile.",
+    "¿Llegas al viernes sin voz? Tratamiento online para la fatiga vocal. Aprende a hablar sin cansancio ni tensión. Evaluación remota para todo Chile.",
   alternates: {
     canonical:
       "https://www.katialafono.cl/voz-online/fatiga-vocal-tratamiento-online",
@@ -53,119 +54,82 @@ export default function FatigaVocalPage() {
         />
 
         <article className="prose prose-orange lg:prose-lg max-w-none">
-          <h1 className="text-4xl font-extrabold text-orange-950">
-            Fatiga Vocal: ¿Se te Cansa la Voz? Tratamiento Online
-          </h1>
-          <p className="lead font-medium text-gray-700">
-            Terminas el día con la voz gastada, necesitas hacer esfuerzo para
-            que te escuchen, sientes tensión en el cuello o dolor al tragar.
-            La fatiga vocal es real, no es &quot;frescura&quot;, y es una señal
-            de alarma de que tu voz necesita atención profesional.
-          </p>
+          <header className="mb-10 text-center">
+            <h1 className="text-4xl font-extrabold text-orange-950 mb-6">
+              ¿Tu voz es una lucha cada tarde? Domina la Fatiga Vocal
+            </h1>
+            <p className="lead font-medium text-gray-700 max-w-3xl mx-auto">
+              Llegas al final del día sintiendo que un cinturón te aprieta el cuello. Tienes que empujar el aire para que te escuchen. Te duele tragar. Esto es la fatiga vocal y es <strong>la puerta de entrada a lesiones crónicas de la voz</strong>. No lo normalices.
+            </p>
+          </header>
 
-          <section>
-            <h2 className="text-2xl font-bold mt-8 text-orange-900">
-              ¿Cómo se manifiesta la fatiga vocal?
+          <section className="my-10">
+            <div className="bg-orange-50 p-8 rounded-2xl border border-orange-200 shadow-sm text-center">
+              <h3 className="text-2xl font-bold text-orange-900 mt-0 mb-4">
+                El peligro de acostumbrarse al dolor al hablar
+              </h3>
+              <p className="text-orange-800 mb-6 text-left">
+                Es como correr una maratón todos los días con los zapatos equivocados. Puedes hacerlo un tiempo, pero te lesionarás los músculos. La tensión descontrolada produce edema, disfonía y finalmente nódulos. La sesión online te entrega los "zapatos" correctos: técnica respiratoria y proyección.
+              </p>
+              <WhatsAppCTA
+                href="https://wa.me/56995497838?text=Hola,%20se%20me%20cansa%20mucho%20la%20voz%20diariamente%20y%20necesito%20ayuda%20via%20online."
+                className="bg-orange-600 hover:bg-orange-700 ring-orange-300 w-full sm:w-auto"
+              >
+                Superar mi Fatiga Vocal
+              </WhatsAppCTA>
+              <p className="text-xs mt-3 text-orange-700 font-bold opacity-80">
+                Evita la pausa médica prolongada actuando a tiempo.
+              </p>
+            </div>
+          </section>
+
+          <section className="my-12">
+            <h2 className="text-2xl font-bold mt-8 text-orange-900 border-b pb-2">
+              El diagnóstico escondido en tu rutina diaria
             </h2>
-            <ul>
+            <ul className="space-y-3 mt-4 text-gray-800">
               <li>
-                La voz se debilita o se vuelve ronca a medida que avanza el día.
+                <strong>Lunes vs Viernes:</strong> Tu voz suena completamente diferente el fin de semana por el nivel de desgaste.
               </li>
               <li>
-                Necesitas &quot;empujar&quot; para que te escuchen en reuniones o
-                clases.
+                <strong>Esfuerzo extra:</strong> Sientes que debes "empujar" físicamente las palabras desde tu pecho para hablar en una reunión de zoom.
               </li>
               <li>
-                Sientes tensión, dolor o molestia en la zona del cuello y
-                garganta.
+                <strong>Tensión extrema:</strong> Los masajes en el cuello y hombros no bastan para quitar la pesadez que sientes al final de tu jornada.
               </li>
               <li>
-                La voz se quiebra o se corta al hablar seguido más de 30-40
-                minutos.
-              </li>
-              <li>
-                Los lunes tu voz es buena, pero el viernes estás casi sin voz.
+                <strong>Pérdida de volumen:</strong> Tu voz se "esconde" y ya nadie te logra escuchar en lugares con algo de ruido.
               </li>
             </ul>
           </section>
 
-          <div className="bg-orange-50 p-6 rounded-xl my-8 border border-orange-100">
-            <h3 className="text-xl font-bold text-orange-900 mt-0">
-              ¿Por qué se cansa tu voz?
-            </h3>
-            <p className="text-orange-800">
-              La fatiga vocal ocurre cuando usas la voz con un{" "}
-              <strong>patrón ineficiente</strong>: poca respiración, tensión
-              excesiva de la laringe, falta de resonancia y proyección forzada.
-              Es como correr con mala técnica: puedes hacerlo, pero te
-              lesionarás. Los{" "}
-              <Link
-                href="/voz-online/terapia-vocal-docentes-profesores"
-                className="font-semibold text-orange-700 underline"
-              >
-                profesores
-              </Link>
-              , vendedores, telemarketers y{" "}
-              <Link
-                href="/voz-online/rehabilitacion-vocal-profesionales-voz"
-                className="font-semibold text-orange-700 underline"
-              >
-                profesionales de la voz
-              </Link>{" "}
-              son los más afectados.
-            </p>
-          </div>
-
-          <section>
-            <h2 className="text-2xl font-bold mt-8 text-orange-900">
-              ¿Qué pasa si no se trata?
+          <section className="my-12">
+            <h2 className="text-2xl font-bold text-orange-900 text-center mb-8">
+              Profesionales que recuperaron su vida vocal
             </h2>
-            <p>
-              La fatiga vocal sostenida puede llevar a lesiones orgánicas como{" "}
-              <Link
-                href="/voz-online/nodulos-vocales-tratamiento-online"
-                className="font-semibold text-orange-600"
-              >
-                nódulos vocales
-              </Link>
-              , edema de cuerdas vocales o{" "}
-              <Link
-                href="/voz-online/tratamiento-disfonia-online"
-                className="font-semibold text-orange-600"
-              >
-                disfonía crónica
-              </Link>
-              . Cuanto antes consultes, más rápido y simple es el tratamiento.
-            </p>
+            <div className="grid md:grid-cols-2 gap-6 not-prose">
+              <TestimonialCard
+                name="Sebastián F., Gerente Comercial"
+                text="Pasó de ser un problema del trabajo a afectar mi vida social. Llegaba mudo a mi casa porque no quería ni responderle a los niños por el cansancio en la garganta. La terapia con Katia por Zoom fue muy práctica. Me dio ejercicios cortos que podía hacer antes de entrar a mis reuniones."
+              />
+              <TestimonialCard
+                name="Lucía R., Emprendedora"
+                text="No entendía por qué me dolía tanto hablar hasta que Katia por la videollamada vio mi postura y patrón de respiración. Empezamos la rehabilitación y fue un cambio del cielo a la tierra. Ahora hablo horas y horas y mi voz ni se entera."
+              />
+            </div>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold mt-8 text-orange-900">
-              Tratamiento online: eficaz y práctico
+            <h2 className="text-2xl font-bold mt-12 text-orange-900">
+              Por qué tratarte 100% online
             </h2>
             <p>
-              La terapia de fatiga vocal por videollamada incluye ejercicios de
-              técnica respiratoria diafragmática, entrenamiento de resonancia
-              para hablar sin esfuerzo, relajación de la musculatura cervical y
-              laríngea, y un plan de{" "}
-              <Link
-                href="/voz-online/higiene-vocal-cuidado-voz"
-                className="font-semibold text-orange-600"
-              >
-                higiene vocal
-              </Link>{" "}
-              personalizado para tu rutina laboral. Atendemos a todo Chile.
+              El online no solo es más cómodo, sino que <strong>nos permite trabajar in situ</strong>. Yo estaré frente a ti en la postura real en que trabajas diariamente. Veré cómo respiras al estar sentado en tu escritorio, qué tensiones haces en cámara y adaptaremos la técnica a tu verdadero campo de batalla.
+            </p>
+            <p className="mt-4">
+              Aprenderemos técnica respiratoria costo-diafragmática orientada al habla sostenible, para que proyectes desde el abdomen y no destruyéndote la laringe.
             </p>
           </section>
-
-          <div className="mt-12 flex justify-center">
-            <WhatsAppCTA
-              href="https://wa.me/56995497838?text=Hola,%20se%20me%20cansa%20mucho%20la%20voz%20y%20necesito%20ayuda%20online"
-              className="bg-orange-600 hover:bg-orange-700 ring-orange-300"
-            >
-              Recuperar mi Voz Online
-            </WhatsAppCTA>
-          </div>
         </article>
       </main>
     </>
