@@ -109,6 +109,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.8,
     },
+    {
+      url: `${SITE_URL}/especialista-lenguaje-infantil-chillan`,
+      lastModified: now.toISOString(),
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
+    },
+    {
+      url: `${SITE_URL}/agendar-hora-fonoaudiologo-infantil-chillan`,
+      lastModified: now.toISOString(),
+      changeFrequency: "weekly" as const,
+      priority: 0.75,
+    },
+    {
+      url: `${SITE_URL}/chillan/lenguaje-infantil`,
+      lastModified: now.toISOString(),
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
+    },
     // Tratamientos
     ...[
       "retraso-del-lenguaje-chillan",

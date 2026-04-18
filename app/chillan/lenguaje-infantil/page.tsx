@@ -4,10 +4,8 @@ import { ConcernCard } from "./_components/ConcernCard";
 import { WhatsAppCTA } from "./_components/WhatsAppCTA";
 import { StickyWhatsApp } from "./_components/StickyWhatsApp";
 
-// NOTA: Esta landing está marcada como NOINDEX porque existe una landing
-// principal optimizada para SEO en /fonoaudiologa-ninos-chillan
-// Esta página se mantiene para tráfico directo o Google Ads específicos,
-// pero NO debe aparecer en resultados de búsqueda orgánica.
+const SITE_URL = "https://www.katialafono.cl";
+
 export const metadata: Metadata = {
   title: "Fonoaudióloga en Chillán | Lenguaje Infantil | Katia Domínguez",
   description:
@@ -19,20 +17,23 @@ export const metadata: Metadata = {
     "fonoaudiología infantil Chillán",
     "problemas del habla niños",
   ],
+  alternates: {
+    canonical: `${SITE_URL}/chillan/lenguaje-infantil`,
+  },
   openGraph: {
     title: "Fonoaudióloga en Chillán | Lenguaje Infantil | Katia Domínguez",
     description:
       "Evaluación y tratamiento fonoaudiológico infantil en Chillán. Ayudamos a tu hijo a comunicarse mejor.",
     type: "website",
     locale: "es_CL",
+    url: `${SITE_URL}/chillan/lenguaje-infantil`,
   },
-  // NOINDEX: Evitar que esta página se indexe en buscadores
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
     googleBot: {
-      index: false,
-      follow: false,
+      index: true,
+      follow: true,
     },
   },
 };
