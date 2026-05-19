@@ -1,40 +1,27 @@
 import Image from "next/image";
-import { Metadata } from "next";
+import { SITE_URL, whatsappUrl } from "@/lib/site";
+import { buildPageMetadata } from "@/lib/seo";
 import { Breadcrumbs } from "../../_components/Breadcrumbs";
 import { Footer } from "../../_components/Footer";
 import { Header } from "../../_components/Header";
 import { WhatsAppCTA } from "../../_components/WhatsAppCTA";
 import { StickyWhatsApp } from "../../_components/StickyWhatsApp";
 
-const SITE_URL = "https://www.katialafono.cl";
 const PAGE_PATH = "/servicios/dificultades-lectoescritura";
-const WHATSAPP_LINK =
-  "https://wa.me/56995497838?text=Hola%2C%20quiero%20consultar%20por%20dificultades%20de%20lectura%20y%20escritura";
+const WHATSAPP_HREF = whatsappUrl("Hola, quiero consultar por dificultades de lectura y escritura");
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
+  path: PAGE_PATH,
   title: "Dificultades de Lectura y Escritura en Chillán | Fonoaudióloga",
   description:
     "Tratamiento de dificultades de lectura y escritura en niños en Chillán. Ayuda con problemas de lectoescritura, conciencia fonológica y dislexia. Fonoaudióloga con +20 años de experiencia.",
-  keywords: [
-    "dificultades lectoescritura Chillán",
+  keywords: ["dificultades lectoescritura Chillán",
     "problemas de lectura niños",
     "dislexia tratamiento Chillán",
     "fonoaudióloga lectoescritura",
     "conciencia fonológica",
-    "aprender a leer dificultades",
-  ],
-  alternates: {
-    canonical: `${SITE_URL}${PAGE_PATH}`,
-  },
-  openGraph: {
-    title: "Dificultades de Lectura y Escritura en Chillán",
-    description:
-      "Apoyo especializado para niños con dificultades en el aprendizaje de la lectura y escritura.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-    locale: "es_CL",
-  },
-};
+    "aprender a leer dificultades",],
+});
 
 const signs = [
   "Dificultad para aprender las letras y sus sonidos",
@@ -201,7 +188,7 @@ export default function LectoescrituraPage() {
                     </span>
                   </li>
                 </ul>
-                <WhatsAppCTA href={WHATSAPP_LINK}>
+                <WhatsAppCTA href={WHATSAPP_HREF}>
                   Consultar por WhatsApp
                 </WhatsAppCTA>
                 <p className="mt-4 text-sm text-gray-500">
@@ -245,7 +232,7 @@ export default function LectoescrituraPage() {
               ))}
             </div>
             <div className="mt-10 text-center">
-              <WhatsAppCTA href={WHATSAPP_LINK}>
+              <WhatsAppCTA href={WHATSAPP_HREF}>
                 Consultar mi caso por WhatsApp
               </WhatsAppCTA>
             </div>
@@ -439,7 +426,7 @@ export default function LectoescrituraPage() {
               Una evaluación puede identificar las causas y definir el mejor
               plan de apoyo.
             </p>
-            <WhatsAppCTA href={WHATSAPP_LINK}>
+            <WhatsAppCTA href={WHATSAPP_HREF}>
               Consultar por WhatsApp
             </WhatsAppCTA>
             <p className="mt-6 text-gray-300">
@@ -449,7 +436,7 @@ export default function LectoescrituraPage() {
         </section>
       </main>
       <Footer />
-      <StickyWhatsApp href={WHATSAPP_LINK} />
+      <StickyWhatsApp href={WHATSAPP_HREF} />
     </>
   );
 }

@@ -1,150 +1,241 @@
-import { Metadata } from "next";
-import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
-import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import Link from "next/link";
+import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
+import { StickyWhatsApp } from "@/app/_components/StickyWhatsApp";
+import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
+import { buildPageMetadata } from "@/lib/seo";
+import { SITE_URL, whatsappUrl } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Mi Hijo No Arma Frases | Cuándo Consultar",
+const PAGE_PATH = "/sintomas/hijo-no-arma-frases-chillan";
+const WHATSAPP_LINK = whatsappUrl("Hola, mi hijo no arma frases y me preocupa. Busco hora en Chillán");
+
+export const metadata = buildPageMetadata({
+  path: PAGE_PATH,
+  title: "Mi hijo no arma frases | Chillán",
   description:
-    "¿Tu hijo solo dice palabras sueltas y no arma frases? Conoce las señales de un posible retraso del lenguaje y cuándo pedir hora con fonoaudióloga en Chillán.",
-  alternates: {
-    canonical:
-      "https://www.katialafono.cl/sintomas/hijo-no-arma-frases-chillan",
-  },
+    "¿Tu hijo solo dice palabras sueltas? Hitos por edad, causas posibles y qué hacer. Fonoaudióloga infantil en Chillán. Evaluación y terapia de lenguaje.",
+  keywords: ["fonoaudióloga Chillán", "fonoaudiología infantil", "hijo no arma frases chillan"],
+});
+
+const signalsByAge = [
+  { age: "18-24 meses", concern: "No combina dos palabras con intención comunicativa." },
+  { age: "2-3 años", concern: "Solo etiquetas («auto», «perro») sin verbos ni estructura." },
+  { age: "3 años", concern: "No forma oraciones de 3-4 palabras ni hace preguntas simples." },
+  { age: "4 años", concern: "No relata experiencias del jardín con secuencia básica." },
+  { age: "5+ años", concern: "Frases telegráficas persistentes frente a pares." },
+];
+
+const actionsNow = [
+  { icon: "➕", title: "Expande una palabra", description: "Si dice «agua», modela «quiero agua» sin exigir repetición inmediata." },
+  { icon: "❓", title: "Ofrece opciones", description: "«¿Zumo o leche?» favorece respuestas de dos palabras." },
+  { icon: "📖", title: "Cuentos con pausas", description: "Deja espacios para que complete la frase del cuento." },
+  { icon: "📋", title: "Evalúa comprensión", description: "A veces el problema es mixto; conviene evaluación expresiva y receptiva." },
+];
+
+const faqs = [
+  { q: "¿A qué edad debería armar frases?", a: "Entre 18-24 meses suelen aparecer frases de dos palabras; a los 3 años, oraciones más largas." },
+  { q: "¿Es normal que un niño de 3 años no arme frases?", a: "No es lo esperado. Conviene evaluar retraso del lenguaje o TEL." },
+  { q: "¿Qué técnicas usan en terapia?", a: "Expansión, modelado, recast y juego simbólico con objetivos graduales." },
+  { q: "¿Debo preocuparme si entiende todo?", a: "Puede ser retraso expresivo, pero hay que confirmarlo y descartar TEL u otros factores." },
+];
+
+const medicalWebPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "@id": `${SITE_URL}${PAGE_PATH}#webpage`,
+  name: "¿Tu hijo no arma frases? Cuándo consultar en Chillán",
+  description: "¿Tu hijo solo dice palabras sueltas? Hitos por edad, causas posibles y qué hacer. Fonoaudióloga infantil en Chillán. Evaluación y terapia de lenguaje.",
+  medicalSpecialty: "SpeechTherapy",
+  about: { "@type": "MedicalCondition", name: "Retraso del lenguaje expresivo" },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
 };
 
 export default function HijoNoArmaFrasesPage() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "¿A qué edad debería mi hijo armar frases?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "La mayoría de los niños comienzan a combinar dos palabras (por ejemplo 'mamá agua' o 'más pan') entre los 18 y 24 meses. A los 3 años, deberían usar frases de 3-4 palabras. Si tu hijo a los 2 años y medio solo dice palabras sueltas, es recomendable una evaluación fonoaudiológica.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "¿Es normal que un niño de 3 años no arme frases?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "No es lo esperado. A los 3 años el niño debería estar armando frases simples y relatar experiencias básicas. Si solo usa palabras aisladas, podría tratarse de un retraso del lenguaje que requiere intervención profesional.",
-        },
-      },
-    ],
-  };
-
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalWebPageJsonLd) }}
       />
-      <main className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
-        <Breadcrumbs
-          items={[
-            { label: "Inicio", href: "/" },
-            {
-              label: "Fonoaudiología",
-              href: "/fonoaudiologia-infantil-chillan",
-            },
-            { label: "No Arma Frases" },
-          ]}
-        />
-
-        <article className="prose prose-sky lg:prose-lg max-w-none">
-          <h1 className="text-4xl font-extrabold text-sky-950">
-            ¿Tu hijo no arma frases? Cuándo consultar en Chillán
-          </h1>
-          <p className="lead font-medium text-gray-700">
-            Que un niño diga palabras sueltas pero no logre combinarlas en
-            frases puede ser una señal de que su desarrollo lingüístico
-            necesita apoyo. Es una de las consultas más frecuentes que recibimos
-            de padres en Chillán y alrededores.
-          </p>
-
-          <div className="bg-sky-50 rounded-2xl p-8 my-10 border-l-4 border-sky-500">
-            <h2 className="text-2xl font-bold mt-0 text-sky-900">
-              Hitos esperados en la formación de frases
-            </h2>
-            <ul className="text-sky-800 space-y-3">
-              <li>
-                <strong>18-24 meses:</strong> Comienza a juntar dos palabras (
-                &quot;más leche&quot;, &quot;papá ven&quot;).
-              </li>
-              <li>
-                <strong>2 a 3 años:</strong> Frases de 2-3 palabras y empieza a
-                usar verbos (&quot;quiero jugar&quot;, &quot;mamá dame pan&quot;).
-              </li>
-              <li>
-                <strong>3 a 4 años:</strong> Oraciones más largas, relata
-                experiencias simples y hace preguntas (&quot;¿por qué?&quot;,
-                &quot;¿dónde está?&quot;).
-              </li>
-            </ul>
-          </div>
-
-          <section>
-            <h2 className="text-2xl font-bold mt-8 text-sky-900">
-              Posibles causas de que no arme frases
-            </h2>
-            <ul>
-              <li>
-                <Link
-                  href="/tratamientos/retraso-del-lenguaje-chillan"
-                  className="font-semibold text-sky-600"
-                >
-                  Retraso del lenguaje expresivo
-                </Link>
-                : el niño comprende pero no logra producir combinaciones de
-                palabras.
-              </li>
-              <li>
-                <Link
-                  href="/tratamientos/tel-trastorno-especifico-lenguaje-chillan"
-                  className="font-semibold text-sky-600"
-                >
-                  Trastorno Específico del Lenguaje (TEL)
-                </Link>
-                : limitaciones más profundas en la estructura gramatical.
-              </li>
-              <li>
-                Dificultades de comprensión auditiva no detectadas.
-              </li>
-              <li>
-                Escasa estimulación comunicativa en el entorno.
-              </li>
-            </ul>
-          </section>
-
-          <div className="bg-sky-50 p-6 rounded-xl my-8 border border-sky-100">
-            <h3 className="text-xl font-bold text-sky-900 mt-0">
-              Cómo abordamos este síntoma en Chillán
-            </h3>
-            <p className="text-sky-800">
-              En la consulta presencial en <strong>Chillán</strong>, evaluamos
-              tanto el lenguaje comprensivo como el expresivo del niño. Si
-              confirma un desfase, iniciamos terapia con técnicas de{" "}
-              <em>expansión</em> (agregar palabras a lo que dice) y{" "}
-              <em>modelado</em> (repetir la frase correcta de forma natural)
-              para que progresivamente comience a estructurar frases por sí
-              mismo.
-            </p>
-          </div>
-
-          <div className="mt-12 flex justify-center">
-            <WhatsAppCTA
-              href="https://wa.me/56995497838?text=Hola,%20mi%20hijo%20no%20arma%20frases%20y%20me%20preocupa.%20Busco%20hora%20en%20Chill%C3%A1n"
-              className="bg-sky-600 hover:bg-sky-700 ring-sky-300"
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <main className="min-h-screen bg-gradient-to-b from-sky-50 to-white">
+        <section className="px-4 py-12 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl">
+            <Breadcrumbs
+              items={[
+                { label: "Inicio", href: "/" },
+                { label: "Síntomas", href: "/fonoaudiologia-infantil-chillan" },
+                { label: "No arma frases" },
+              ]}
+            />
+            <span className="mb-4 mt-6 inline-block rounded-full bg-sky-100 px-4 py-2 text-sm font-medium text-sky-700">
+              Estructura del lenguaje
+            </span>
+            <h1 className="mb-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
+              ¿Tu hijo no arma frases? Cuándo consultar en Chillán
+            </h1>
+            <p
+              data-speakable
+              className="mb-6 text-xl leading-relaxed text-gray-600"
             >
-              Evaluar a mi hijo hoy
+              Pasar de palabras sueltas a frases es un hito clave entre los 18 y 36 meses. Si tu hijo nombra objetos pero no combina («más pan», «mamá ven»), puede necesitar apoyo en lenguaje expresivo.
+            </p>
+            <ul className="mb-8 space-y-3 text-gray-700">
+              <li className="flex items-start gap-3">
+                <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">✓</span>
+                <span><strong>Señales por edad</strong> para decidir si consultar</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">✓</span>
+                <span><strong>Estrategias de estimulación</strong> sin presionar al niño</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">✓</span>
+                <span><strong>Derivación a terapia</strong> si hay retraso o TEL</span>
+              </li>
+            </ul>
+            <WhatsAppCTA href={WHATSAPP_LINK} className="bg-sky-600 hover:bg-sky-700 ring-sky-300">
+              Consultar por WhatsApp
             </WhatsAppCTA>
           </div>
-        </article>
+        </section>
+
+        <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl">
+            <p className="mb-8 text-center text-lg leading-relaxed text-gray-600">La <strong>OMS</strong> enfatiza la detección temprana de retrasos del desarrollo, incluido el lenguaje, para mejorar resultados. (<a href="https://www.who.int/news-room/fact-sheets/detail/developmental-disabilities-in-children" target="_blank" rel="noopener noreferrer" className="font-medium text-sky-600 underline">OMS</a>).</p>
+            <h2 className="mb-4 text-center text-3xl font-bold text-gray-900">
+              Señales por edad
+            </h2>
+            <p className="mb-10 text-center text-lg text-gray-600">
+              Cada etapa tiene hitos esperados. Si tu hijo está por debajo de
+              varios de estos, conviene una evaluación.
+            </p>
+            <div className="space-y-4">
+              {signalsByAge.map((s) => (
+                <div
+                  key={s.age}
+                  className="flex items-center gap-4 rounded-xl border border-sky-100 bg-white p-4 shadow-sm"
+                >
+                  <div className="flex h-16 w-24 flex-shrink-0 items-center justify-center rounded-lg bg-sky-100 text-center">
+                    <span className="text-sm font-bold text-sky-700">{s.age}</span>
+                  </div>
+                  <p className="text-gray-700">{s.concern}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-10 text-center">
+              <WhatsAppCTA href={WHATSAPP_LINK}>Consultar mi caso</WhatsAppCTA>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-sky-50 px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="mb-6 text-center text-3xl font-bold text-gray-900">
+              ¿Qué puede estar pasando?
+            </h2>
+            <p className="mb-8 text-center text-gray-600">Consulta <a href="/tratamientos/retraso-del-lenguaje-chillan">retraso del lenguaje</a>, <a href="/tratamientos/tel-trastorno-especifico-lenguaje-chillan">TEL</a>, <a href="/glosario/tel">glosario</a>, <a href="/chillan/retraso-del-lenguaje">Chillán</a>, <a href="/servicios/terapia-de-lenguaje-infantil-chillan">terapia de lenguaje</a> y <a href="/evaluacion-fonoaudiologica-infantil-chillan">evaluación</a>.</p>
+          </div>
+        </section>
+
+        <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="mb-10 text-center text-3xl font-bold text-gray-900">
+              Qué hacer ahora
+            </h2>
+            <div className="grid gap-6 sm:grid-cols-2">
+              {actionsNow.map((b) => (
+                <div
+                  key={b.title}
+                  className="flex items-start gap-4 rounded-xl border border-gray-100 bg-gray-50 p-6"
+                >
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-sky-100 text-2xl">
+                    {b.icon}
+                  </div>
+                  <div>
+                    <h3 className="mb-2 font-semibold text-gray-900">{b.title}</h3>
+                    <p className="text-sm text-gray-600">{b.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-sky-50 px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="mb-10 text-center text-3xl font-bold text-gray-900">
+              Preguntas frecuentes
+            </h2>
+            <div className="space-y-4">
+              {faqs.map((f) => (
+                <details
+                  key={f.q}
+                  className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm"
+                >
+                  <summary className="flex cursor-pointer items-start justify-between gap-4 font-semibold text-gray-900">
+                    <span>{f.q}</span>
+                    <span className="flex-shrink-0 text-sky-500 transition-transform group-open:rotate-180">
+                      ▼
+                    </span>
+                  </summary>
+                  <p className="mt-4 text-gray-600">{f.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="mb-8 text-center text-2xl font-bold text-gray-900">
+              Recursos relacionados
+            </h2>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              <Link href="/tratamientos/retraso-del-lenguaje-chillan" className="rounded-xl border border-gray-200 p-4 text-center transition-colors hover:border-sky-300 hover:bg-sky-50">
+                <span className="text-2xl">💬</span>
+                <p className="mt-2 font-medium text-gray-900">Retraso del lenguaje</p>
+              </Link>
+              <Link href="/evaluacion-fonoaudiologica-infantil-chillan" className="rounded-xl border border-gray-200 p-4 text-center transition-colors hover:border-sky-300 hover:bg-sky-50">
+                <span className="text-2xl">📋</span>
+                <p className="mt-2 font-medium text-gray-900">Evaluación</p>
+              </Link>
+              <Link href="/glosario/tel" className="rounded-xl border border-gray-200 p-4 text-center transition-colors hover:border-sky-300 hover:bg-sky-50">
+                <span className="text-2xl">📖</span>
+                <p className="mt-2 font-medium text-gray-900">Glosario TEL</p>
+              </Link>
+              <Link href="/sintomas/hijo-no-arma-frases-chillan" className="rounded-xl border border-gray-200 p-4 text-center transition-colors hover:border-sky-300 hover:bg-sky-50">
+                <span className="text-2xl">📝</span>
+                <p className="mt-2 font-medium text-gray-900">No arma frases</p>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-gradient-to-br from-gray-900 to-gray-800 px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="mb-4 text-3xl font-bold text-white">
+              ¿Solo palabras sueltas?
+            </h2>
+            <p className="mb-8 text-xl text-gray-200">
+              Te oriento con evaluación presencial en Chillán.
+            </p>
+            <WhatsAppCTA href={WHATSAPP_LINK}>Agendar por WhatsApp</WhatsAppCTA>
+          </div>
+        </section>
       </main>
+      <StickyWhatsApp href={WHATSAPP_LINK} />
     </>
   );
 }

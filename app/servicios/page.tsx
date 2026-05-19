@@ -1,9 +1,28 @@
 import { Metadata } from "next";
+import { GeoFAQ } from "@/app/_components/GeoFAQ";
 import { Breadcrumbs } from "../_components/Breadcrumbs";
 import { ServiceCard } from "../_components/ServiceCard";
 import { Footer } from "../_components/Footer";
 import { Header } from "../_components/Header";
 import { WhatsAppCTA } from "../_components/WhatsAppCTA";
+
+const faqItems = [
+  {
+    question: "¿Qué servicios de fonoaudiología ofrece en Chillán?",
+    answer:
+      "Terapia de lenguaje infantil, trastornos del habla, evaluación fonoaudiológica con informe, TEL, apoyo comunicativo en TEA y dificultades de lectoescritura. Todo con atención presencial.",
+  },
+  {
+    question: "¿Cómo elijo el servicio adecuado para mi hijo?",
+    answer:
+      "Si no estás segura, escríbenos por WhatsApp con la edad del niño y tus dudas. En la primera evaluación definimos diagnóstico y plan sin compromiso de continuar terapia.",
+  },
+  {
+    question: "¿Por qué es importante la intervención temprana?",
+    answer:
+      "La OMS destaca que detectar a tiempo retrasos del desarrollo, incluido el lenguaje, mejora resultados educativos y familiares. Fuente: https://www.who.int/news-room/fact-sheets/detail/developmental-disabilities-in-children",
+  },
+];
 
 const SITE_URL = "https://www.katialafono.cl";
 const PAGE_PATH = "/servicios";
@@ -136,7 +155,10 @@ export default function ServiciosPage() {
               <h1 className="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl">
                 Servicios de fonoaudiología en Chillán
               </h1>
-              <p className="mx-auto max-w-2xl text-lg text-gray-600">
+              <p
+                data-speakable
+                className="mx-auto max-w-2xl text-lg text-gray-600"
+              >
                 Más de 20 años de experiencia en evaluación y tratamiento de
                 trastornos del lenguaje, habla y comunicación. Atención
                 presencial para niños en Chillán.
@@ -163,6 +185,11 @@ export default function ServiciosPage() {
                 Consultar por WhatsApp
               </WhatsAppCTA>
             </div>
+
+            <GeoFAQ
+              items={faqItems}
+              className="mx-auto mt-16 max-w-3xl rounded-2xl border border-rose-100 bg-white p-8 shadow-sm"
+            />
           </div>
         </section>
 

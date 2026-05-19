@@ -1,33 +1,74 @@
-import { Metadata } from "next";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
+import { GeoFAQ } from "@/app/_components/GeoFAQ";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import { ServiceCard } from "@/app/_components/ServiceCard";
 import Link from "next/link";
+import { buildPageMetadata, buildWebPageJsonLd } from "@/lib/seo";
+import { SITE_URL } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Fonoaudióloga Infantil en Chillán | Especialista en Lenguaje",
-  description: "Atención fonoaudiológica infantil en Chillán. Diagnóstico y tratamiento de trastornos del lenguaje, habla y comunicación. Evaluación presencial.",
-  alternates: {
-    canonical: "https://www.katialafono.cl/fonoaudiologa-ninos-chillan",
+const CANONICAL_PATH = "/fonoaudiologa-ninos-chillan";
+
+const faqItems = [
+  {
+    question: "¿Qué edades atiende la fonoaudióloga infantil en Chillán?",
+    answer:
+      "Principalmente niños de 2 a 10 años con dificultades de lenguaje, habla o comunicación. Cada caso se evalúa para definir frecuencia y objetivos terapéuticos.",
   },
-};
+  {
+    question: "¿La primera consulta es evaluación o terapia?",
+    answer:
+      "Siempre comenzamos con evaluación fonoaudiológica (~60 minutos) e informe. A partir de ahí planificamos terapia semanal según diagnóstico y necesidades familiares.",
+  },
+  {
+    question: "¿Tratan TEL, dislalia y retraso del lenguaje?",
+    answer:
+      "Sí. Abordamos trastorno fonológico, TEL, dislalia, retraso del habla y lenguaje, y derivaciones desde colegio o pediatra en consulta presencial en Chillán.",
+  },
+  {
+    question: "¿Qué tan frecuentes son los trastornos del lenguaje?",
+    answer:
+      "La ASHA estima que afectan aproximadamente al 7% de los niños en edad escolar; la intervención temprana mejora pronóstico comunicativo y escolar. Fuente: https://www.asha.org/public/speech/disorders/language-disorders/",
+  },
+];
+
+export const metadata = buildPageMetadata({
+  path: "/fonoaudiologia-infantil-chillan",
+  canonicalPath: "/fonoaudiologa-ninos-chillan",
+  title: "Fonoaudióloga Infantil en Chillán | Especialista en Lenguaje",
+  description:
+    "Atención fonoaudiológica infantil en Chillán. Diagnóstico y tratamiento de trastornos del lenguaje, habla y comunicación. Evaluación presencial.",
+});
 
 export default function FonoaudiologiaInfantilPage() {
+  const pillarUrl = `${SITE_URL}${CANONICAL_PATH}`;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "MedicalOrganization",
-    "name": "Katia Domínguez - Fonoaudióloga Infantil Chillán",
-    "medicalSpecialty": "SpeechTherapy",
-    "description": "Fonoaudióloga pediatra especializada en trastornos de lenguaje y habla en niñas y niños de Chillán.",
-    "areaServed": "Chillán, Región de Ñuble",
-    "url": "https://www.katialafono.cl/fonoaudiologia-infantil-chillan",
+    "@id": `${pillarUrl}#organization`,
+    name: "Katia Domínguez - Fonoaudióloga Infantil Chillán",
+    medicalSpecialty: "SpeechTherapy",
+    description:
+      "Fonoaudióloga pediatra especializada en trastornos de lenguaje y habla en niñas y niños de Chillán.",
+    areaServed: "Chillán, Región de Ñuble",
+    url: pillarUrl,
   };
+  const webPageJsonLd = buildWebPageJsonLd({
+    path: CANONICAL_PATH,
+    name: "Fonoaudióloga Infantil en Chillán | Especialista en Lenguaje",
+    description:
+      "Atención fonoaudiológica infantil en Chillán. Diagnóstico y tratamiento de trastornos del lenguaje, habla y comunicación. Evaluación presencial.",
+    speakable: true,
+  });
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
       />
       
       <main className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
@@ -43,11 +84,14 @@ export default function FonoaudiologiaInfantilPage() {
             <h1 className="mb-4 text-4xl font-extrabold tracking-tight sm:text-5xl">
               Fonoaudióloga Infantil en Chillán
             </h1>
-            <p className="mx-auto max-w-3xl text-xl leading-relaxed text-rose-800/80">
+            <p
+              data-speakable
+              className="mx-auto max-w-3xl text-xl leading-relaxed text-rose-800/80"
+            >
               Atención presencial especializada en la evaluación y tratamiento de problemas de comunicación, lenguaje y habla en niños de todas las edades.
             </p>
             <div className="mt-8 flex justify-center">
-              <WhatsAppCTA href="https://wa.me/56995497838?text=Hola,%20me%20gustar%C3%ADa%20agendar%20una%20hora%20infantil%20en%20Chill%C3%A1n">
+              <WhatsAppCTA message="Hola, me gustaría agendar una hora infantil en Chillán">
                 📍 Agendar Hora en Chillán
               </WhatsAppCTA>
             </div>
@@ -99,6 +143,11 @@ export default function FonoaudiologiaInfantilPage() {
               La atención presencial en <Link href="/fonoaudiologo-pediatrico-chillan" className="font-medium text-rose-600 hover:text-rose-800">especialistas pediátricos locales</Link> como nuestra consulta en Chillán, nos permite aplicar estrategias de juego guiado (Play Therapy) que necesitan del vínculo uno-a-uno. Entendemos el ritmo de descanso, los estímulos y acompañamos integralmente a la familia en Ñuble.
             </p>
           </section>
+
+          <GeoFAQ
+            items={faqItems}
+            className="not-prose my-12 rounded-2xl border border-rose-100 bg-rose-50/40 p-8"
+          />
         </article>
       </main>
     </>

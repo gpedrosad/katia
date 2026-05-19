@@ -42,7 +42,14 @@ export const metadata: Metadata = {
     description:
       "Fonoaudióloga en Chillán especializada en trastornos del lenguaje y comunicación en niños. Más de 20 años de experiencia en evaluación y tratamiento. Agenda una evaluación fonoaudiológica hoy.",
     url: SITE_URL,
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Katia Domínguez - Fonoaudióloga en Chillán" }],
+    images: [
+      {
+        url: OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: "Katia Domínguez - Fonoaudióloga en Chillán",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",

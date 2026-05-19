@@ -1,41 +1,44 @@
-import { Metadata } from "next";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import { TestimonialCard } from "@/app/_components/TestimonialCard";
 import Link from "next/link";
+import { GeoFAQ } from "@/app/_components/GeoFAQ";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
+  path: "/voz-online/fatiga-vocal-tratamiento-online",
   title: "Fatiga Vocal: Causas y Tratamiento Online | Chile",
   description:
     "¿Llegas al viernes sin voz? Tratamiento online para la fatiga vocal. Aprende a hablar sin cansancio ni tensión. Evaluación remota para todo Chile.",
-  alternates: {
-    canonical:
-      "https://www.katialafono.cl/voz-online/fatiga-vocal-tratamiento-online",
+});
+
+const faqItems = [
+  {
+    question: "¿Qué es la fatiga vocal?",
+    answer:
+      "Es cansancio, debilidad o esfuerzo al hablar, sobre todo al final de la jornada. Suele deberse a uso vocal ineficiente y puede anticipar disfonía o lesiones en cuerdas vocales.",
   },
-};
+  {
+    question: "¿La fatiga vocal se puede tratar online?",
+    answer:
+      "Sí. Por videollamada se trabaja respiración, resonancia e higiene vocal con la misma evidencia que en modalidad presencial para adultos.",
+  },
+  {
+    question: "¿La fatiga vocal siempre termina en nódulos?",
+    answer:
+      "No siempre, pero el mal uso crónico aumenta el riesgo de edema, disfonía y nódulos. Intervenir a tiempo suele evitar cirugía.",
+  },
+];
 
 export default function FatigaVocalPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "¿Qué es la fatiga vocal?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "La fatiga vocal es una sensación de cansancio, debilidad o esfuerzo al hablar, especialmente al final de la jornada laboral. Se produce por un uso ineficiente de la voz y puede ser el primer síntoma de un trastorno vocal en desarrollo.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "¿La fatiga vocal se puede tratar online?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Sí. La terapia vocal online permite trabajar técnica respiratoria, resonancia y hábitos de higiene vocal de forma efectiva por videollamada. Los estudios internacionales respaldan la telefonoaudiología para tratamientos de voz en adultos.",
-        },
-      },
-    ],
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
+    })),
   };
 
   return (
@@ -58,8 +61,26 @@ export default function FatigaVocalPage() {
             <h1 className="text-4xl font-extrabold text-orange-950 mb-6">
               ¿Tu voz es una lucha cada tarde? Domina la Fatiga Vocal
             </h1>
-            <p className="lead font-medium text-gray-700 max-w-3xl mx-auto">
+            <p
+              className="lead font-medium text-gray-700 max-w-3xl mx-auto"
+              data-speakable
+            >
               Llegas al final del día sintiendo que un cinturón te aprieta el cuello. Tienes que empujar el aire para que te escuchen. Te duele tragar. Esto es la fatiga vocal y es <strong>la puerta de entrada a lesiones crónicas de la voz</strong>. No lo normalices.
+            </p>
+            <p className="mx-auto mt-4 max-w-2xl text-sm text-orange-800">
+              <strong>Dato:</strong> Los profesionales con uso vocal intensivo (docentes, cantantes, call center) presentan mayor prevalencia de trastornos de la voz que la población general.
+              <cite className="mt-1 block text-xs text-orange-700 not-italic">
+                Fuente:{" "}
+                <a
+                  href="https://www.asha.org/public/speech/disorders/Voice-Disorders/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-orange-900"
+                >
+                  ASHA — Voice Disorders
+                </a>
+                , occupational voice disorders.
+              </cite>
             </p>
           </header>
 
@@ -72,7 +93,7 @@ export default function FatigaVocalPage() {
                 Es como correr una maratón todos los días con los zapatos equivocados. Puedes hacerlo un tiempo, pero te lesionarás los músculos. La tensión descontrolada produce edema, disfonía y finalmente nódulos. La sesión online te entrega los "zapatos" correctos: técnica respiratoria y proyección.
               </p>
               <WhatsAppCTA
-                href="https://wa.me/56995497838?text=Hola,%20se%20me%20cansa%20mucho%20la%20voz%20diariamente%20y%20necesito%20ayuda%20via%20online."
+                message="Hola, se me cansa mucho la voz diariamente y necesito ayuda via online."
                 className="bg-orange-600 hover:bg-orange-700 ring-orange-300 w-full sm:w-auto"
               >
                 Superar mi Fatiga Vocal
@@ -130,6 +151,12 @@ export default function FatigaVocalPage() {
               Aprenderemos técnica respiratoria costo-diafragmática orientada al habla sostenible, para que proyectes desde el abdomen y no destruyéndote la laringe.
             </p>
           </section>
+
+          <GeoFAQ
+            items={faqItems}
+            includeJsonLd={false}
+            className="not-prose my-12 rounded-2xl border border-orange-100 bg-orange-50/40 p-8"
+          />
         </article>
       </main>
     </>

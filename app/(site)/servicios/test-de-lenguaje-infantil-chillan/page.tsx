@@ -1,15 +1,33 @@
-import { Metadata } from "next";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
+import { GeoFAQ } from "@/app/_components/GeoFAQ";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import Link from "next/link";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Test de Lenguaje para Niños en Chillán | Evaluación Formal",
-  description: "Aplicación de test de lenguaje formales e informales en Chillán (TEPROSIF-R, TECAL, STSG). Evaluaciones requisito para escuelas de lenguaje.",
-  alternates: {
-    canonical: "https://www.katialafono.cl/servicios/test-de-lenguaje-infantil-chillan",
+const faqItems = [
+  {
+    question: "¿Cuándo el colegio pide un test de lenguaje?",
+    answer:
+      "Suele solicitarse si hay retraso expresivo o comprensivo, dificultades para seguir instrucciones o postulación a apoyos PIE o escuela de lenguaje. La evaluación objetiva con test estandarizados aclara el diagnóstico.",
   },
-};
+  {
+    question: "¿Qué test se aplican en Chillán?",
+    answer:
+      "Según edad y motivo: TEPROSIF-R (fonología), TECAL (comprensión y vocabulario) y STSG (gramática). Los puntajes se comparan con rangos etarios chilenos.",
+  },
+  {
+    question: "¿Los resultados sirven para el sistema educativo?",
+    answer:
+      "Sí. El informe posterior es válido para PIE y escuelas de lenguaje. La ASHA estima que los trastornos del lenguaje afectan ~7% de escolares; detectarlos a tiempo facilita apoyos escolares. Fuente: https://www.asha.org/public/speech/disorders/language-disorders/",
+  },
+];
+
+export const metadata = buildPageMetadata({
+  path: "/servicios/test-de-lenguaje-infantil-chillan",
+  title: "Test de Lenguaje para Niños en Chillán | Evaluación Formal",
+  description:
+    "Aplicación de test de lenguaje formales e informales en Chillán (TEPROSIF-R, TECAL, STSG). Evaluaciones requisito para escuelas de lenguaje.",
+});
 
 export default function TestLenguajePage() {
   const jsonLd = {
@@ -39,7 +57,7 @@ export default function TestLenguajePage() {
           <h1 className="text-4xl font-extrabold text-violet-950">
             Aplicación de Test de Lenguaje Infantil en Chillán
           </h1>
-          <p className="lead font-medium text-gray-700">
+          <p className="lead font-medium text-gray-700" data-speakable>
             ¿El colegio, jardín infantil o control sano pediatra te pidió "evaluar el lenguaje" de tu hijo? Llevamos a cabo baterías de test estandarizados en Chile exigidos por el Ministerio de Educación.
           </p>
 
@@ -62,8 +80,13 @@ export default function TestLenguajePage() {
             </p>
           </div>
 
+          <GeoFAQ
+            items={faqItems}
+            className="not-prose my-12 rounded-2xl border border-violet-100 bg-violet-50/40 p-8"
+          />
+
           <div className="mt-12 flex justify-center">
-            <WhatsAppCTA href="https://wa.me/56995497838?text=Hola,%20necesito%20aplicar%20un%20test%20de%20lenguaje%20para%20mi%20hijo%20en%20Chill%C3%A1n" className="bg-violet-600 hover:bg-violet-700 ring-violet-300">
+            <WhatsAppCTA message="Hola, necesito aplicar un test de lenguaje para mi hijo en Chillán" className="bg-violet-600 hover:bg-violet-700 ring-violet-300">
               Agendar Test de Lenguaje
             </WhatsAppCTA>
           </div>

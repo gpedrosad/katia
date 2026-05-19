@@ -1,18 +1,34 @@
-import { Metadata } from "next";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import { TestimonialCard } from "@/app/_components/TestimonialCard";
 import Link from "next/link";
+import { GeoFAQ } from "@/app/_components/GeoFAQ";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
+  path: "/voz-online/nodulos-vocales-tratamiento-online",
   title: "Nódulos Vocales: Tratamiento Online sin Cirugía | Chile",
   description:
     "¿Te diagnosticaron nódulos y temes operarte? Evita la cirugía con tratamiento fonoaudiológico online. Rehabilitación vocal conservadora directa a tu hogar.",
-  alternates: {
-    canonical:
-      "https://www.katialafono.cl/voz-online/nodulos-vocales-tratamiento-online",
+});
+
+const faqItems = [
+  {
+    question: "¿Los nódulos vocales siempre requieren cirugía?",
+    answer:
+      "No. En muchos casos la terapia vocal conservadora reduce el tamaño de los nódulos y mejora la calidad vocal. La cirugía se reserva cuando no hay respuesta o hay indicación otorrinolaringológica.",
   },
-};
+  {
+    question: "¿Se pueden tratar nódulos vocales online?",
+    answer:
+      "Sí. La rehabilitación se basa en ejercicios de respiración, relajación laríngea y técnica vocal por videollamada, con seguimiento acústico y perceptivo.",
+  },
+  {
+    question: "¿Por qué reaparecen los nódulos después de operarse?",
+    answer:
+      "Porque la causa suele ser el mal uso vocal. Sin cambiar el patrón de habla, la fricción en las cuerdas vuelve a generar lesión.",
+  },
+];
 
 export default function NodulosVocalesPage() {
   const jsonLd = {
@@ -51,8 +67,26 @@ export default function NodulosVocalesPage() {
             <h1 className="text-4xl font-extrabold text-amber-950 mb-6">
               ¿Te diagnosticaron Nódulos Vocales y temes una cirugía?
             </h1>
-            <p className="lead font-medium text-gray-700 max-w-3xl mx-auto">
+            <p
+              className="lead font-medium text-gray-700 max-w-3xl mx-auto"
+              data-speakable
+            >
               Recibir este diagnóstico asusta, especialmente si tu trabajo depende de tu voz. La excelente noticia es que en la inmensa mayoría de los casos, los nódulos se pueden reabsorber y tratar <strong>sin necesidad de entrar a pabellón</strong> mediante terapia vocal especializada.
+            </p>
+            <p className="mx-auto mt-4 max-w-2xl text-sm text-amber-800">
+              <strong>Dato:</strong> Las guías clínicas recomiendan terapia vocal como primera línea antes de cirugía en nódulos vocales funcionales.
+              <cite className="mt-1 block text-xs text-amber-700 not-italic">
+                Fuente:{" "}
+                <a
+                  href="https://www.asha.org/public/speech/disorders/Vocal-Nodules/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-amber-900"
+                >
+                  ASHA — Vocal Nodules
+                </a>{" "}
+                y consenso otorrinolaringológico.
+              </cite>
             </p>
           </header>
 
@@ -64,7 +98,7 @@ export default function NodulosVocalesPage() {
               Los nódulos son callosidades que se forman por el choque constante al usar mal la voz. Si te operas pero no cambias la forma en que hablas, <strong>volverán a aparecer</strong>. La evidencia médica mundial aconseja la <strong>terapia fonoaudiológica online como primera línea de defensa</strong>.
             </p>
             <WhatsAppCTA
-              href="https://wa.me/56995497838?text=Hola,%20tengo%20n%C3%B3dulos%20vocales%20y%20quiero%20evitar%20la%20cirug%C3%ADa.%20Busco%20tratamiento%20online."
+              message="Hola, tengo nódulos vocales y quiero evitar la cirugía. Busco tratamiento online."
               className="bg-amber-600 hover:bg-amber-700 ring-amber-300 w-full sm:w-auto"
             >
               Consultar por Rehabilitación
@@ -125,6 +159,11 @@ export default function NodulosVocalesPage() {
               Si las excusas para cuidarte han sido la falta de tiempo, la tele-rehabilitación es exactamente lo que necesitas para recuperar la salud de tus cuerdas.
             </p>
           </section>
+
+          <GeoFAQ
+            items={faqItems}
+            className="not-prose my-12 rounded-2xl border border-amber-100 bg-amber-50/40 p-8"
+          />
         </article>
       </main>
     </>

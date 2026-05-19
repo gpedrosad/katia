@@ -21,6 +21,9 @@ export type GlosarioTermino = {
   chillanSlug?: string;
   servicioHref?: string;
   whatsappText: string;
+  /** URL de referencia clínica (ASHA, OMS, etc.) para citabilidad */
+  sourceUrl?: string;
+  sourceLabel?: string;
 };
 
 /** Rutas estáticas con prioridad sobre [slug] */
@@ -81,6 +84,9 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     chillanSlug: "dislalia",
     servicioHref: "/servicios/trastornos-del-habla",
     whatsappText: "Hola, quiero consultar por dislalia",
+    sourceUrl:
+      "https://www.asha.org/public/speech/disorders/articulation-and-phonology/",
+    sourceLabel: "ASHA — Articulation and Phonology",
   },
   {
     slug: "tel",
@@ -136,6 +142,9 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     chillanSlug: "tel",
     servicioHref: "/servicios/tel-trastorno-especifico-lenguaje",
     whatsappText: "Hola, quiero consultar por TEL",
+    sourceUrl:
+      "https://www.asha.org/public/speech/disorders/Developmental-Language-Disorders/",
+    sourceLabel: "ASHA — Developmental Language Disorder",
   },
   {
     slug: "tea",
@@ -191,6 +200,8 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     chillanSlug: "tea-comunicacion",
     servicioHref: "/servicios/tea-trastorno-espectro-autista",
     whatsappText: "Hola, quiero consultar por TEA y comunicación",
+    sourceUrl: "https://www.asha.org/public/speech/disorders/Autism/",
+    sourceLabel: "ASHA — Autism",
   },
   {
     slug: "trastorno-fonologico",
@@ -246,6 +257,9 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     chillanSlug: "trastorno-fonologico",
     servicioHref: "/servicios/trastornos-del-habla",
     whatsappText: "Hola, quiero consultar por trastorno fonológico",
+    sourceUrl:
+      "https://www.asha.org/public/speech/disorders/phonological-disorders/",
+    sourceLabel: "ASHA — Phonological Disorders",
   },
   {
     slug: "retraso-del-lenguaje",
@@ -301,6 +315,9 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     chillanSlug: "retraso-del-lenguaje",
     servicioHref: "/servicios/terapia-lenguaje-infantil",
     whatsappText: "Hola, quiero consultar por retraso del lenguaje",
+    sourceUrl:
+      "https://www.asha.org/public/speech/disorders/Developmental-Language-Disorders/",
+    sourceLabel: "ASHA — Developmental Language Disorder",
   },
   {
     slug: "conciencia-fonologica",
@@ -356,6 +373,9 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     chillanSlug: "lectoescritura",
     servicioHref: "/servicios/dificultades-lectoescritura",
     whatsappText: "Hola, quiero consultar por conciencia fonológica",
+    sourceUrl:
+      "https://www.asha.org/public/speech/disorders/Literacy-and-Communication-Disorders/",
+    sourceLabel: "ASHA — Literacy and Communication Disorders",
   },
   {
     slug: "disfasia",
@@ -411,6 +431,9 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     chillanSlug: "tel",
     servicioHref: "/servicios/tel-trastorno-especifico-lenguaje",
     whatsappText: "Hola, quiero consultar por disfasia o TEL",
+    sourceUrl:
+      "https://www.asha.org/public/speech/disorders/Developmental-Language-Disorders/",
+    sourceLabel: "ASHA — Developmental Language Disorder",
   },
   {
     slug: "disartria",
@@ -465,6 +488,8 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     relatedSlugs: ["apraxia-del-habla", "praxias-orofaciales"],
     servicioHref: "/servicios/trastornos-del-habla",
     whatsappText: "Hola, quiero consultar por disartria",
+    sourceUrl: "https://www.asha.org/public/speech/disorders/dysarthria/",
+    sourceLabel: "ASHA — Dysarthria",
   },
   {
     slug: "apraxia-del-habla",
@@ -520,6 +545,9 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     chillanSlug: "apraxia-del-habla",
     servicioHref: "/servicios/trastornos-del-habla",
     whatsappText: "Hola, quiero consultar por apraxia del habla",
+    sourceUrl:
+      "https://www.asha.org/public/speech/disorders/apraxia-of-speech/",
+    sourceLabel: "ASHA — Childhood Apraxia of Speech",
   },
   {
     slug: "disfemia",
@@ -575,6 +603,8 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     chillanSlug: "disfemia",
     servicioHref: "/servicios/trastornos-del-habla",
     whatsappText: "Hola, quiero consultar por tartamudez",
+    sourceUrl: "https://www.asha.org/public/speech/disorders/stutter/",
+    sourceLabel: "ASHA — Stuttering",
   },
   {
     slug: "dislexia",
@@ -630,6 +660,9 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     chillanSlug: "dislexia",
     servicioHref: "/servicios/dificultades-lectoescritura",
     whatsappText: "Hola, quiero consultar por dislexia",
+    sourceUrl:
+      "https://www.asha.org/public/speech/disorders/Literacy-and-Communication-Disorders/",
+    sourceLabel: "ASHA — Literacy and Communication Disorders",
   },
   {
     slug: "praxias-orofaciales",
@@ -684,6 +717,9 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     relatedSlugs: ["dislalia", "apraxia-del-habla"],
     servicioHref: "/servicios/trastornos-del-habla",
     whatsappText: "Hola, quiero consultar por terapia del habla",
+    sourceUrl:
+      "https://www.asha.org/public/speech/disorders/articulation-and-phonology/",
+    sourceLabel: "ASHA — Articulation and Phonology",
   },
 ];
 

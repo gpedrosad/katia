@@ -1,18 +1,29 @@
-import { Metadata } from "next";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import { TestimonialCard } from "@/app/_components/TestimonialCard";
 import Link from "next/link";
+import { buildPageMetadata } from "@/lib/seo";
+import { GeoFAQ } from "@/app/_components/GeoFAQ";
 
-export const metadata: Metadata = {
+const faqItems = [
+  {
+    question: "¿Puedo hacer terapia vocal online si vivo en Temuco?",
+    answer:
+      "Sí. Atendemos a la Araucanía por videollamada, ideal para evitar traslados en invierno o jornadas docentes largas.",
+  },
+  {
+    question: "¿Qué problemas de voz se tratan online desde Temuco?",
+    answer:
+      "Disfonía, fatiga vocal, nódulos en fase conservadora, higiene vocal y rehabilitación para profesionales de la voz.",
+  },
+];
+
+export const metadata = buildPageMetadata({
+  path: "/voz-online/fonoaudiologa-voz-temuco",
   title: "Fonoaudióloga de Voz Online en Temuco | Disfonía y Nódulos",
   description:
     "¿Eres de Temuco y sientes molestia prolongada al hablar? Rehabilitación fonoaudiológica experta 100% online sin largos traslados médicos. Reserva tu cupo.",
-  alternates: {
-    canonical:
-      "https://www.katialafono.cl/voz-online/fonoaudiologa-voz-temuco",
-  },
-};
+});
 
 export default function FonoaudiologaVozTemucoPage() {
   const jsonLd = {
@@ -50,8 +61,26 @@ export default function FonoaudiologaVozTemucoPage() {
             <h1 className="text-4xl font-extrabold text-green-950 mb-6">
               Fonoaudióloga especialista en Voz en Temuco: Telemedicina directa a ti
             </h1>
-            <p className="lead font-medium text-gray-700 max-w-3xl mx-auto">
+            <p
+              className="lead font-medium text-gray-700 max-w-3xl mx-auto"
+              data-speakable
+            >
               La intensa fatiga térmica de invierno en <strong>Temuco</strong> o los extenuantes días docentes de La Araucanía detonan daños permanentes en la voz. Pon fin a tu afonía sin necesidad de gastar horas de movilización clínica; tu especialista fonoaudiológica está disponible desde tu hogar vía virtual exhaustiva.
+            </p>
+            <p className="mx-auto mt-4 max-w-2xl text-sm text-green-800">
+              <strong>Dato:</strong> Hasta el 58% de los docentes desarrollará un trastorno de la voz durante su carrera (ASHA).
+              <cite className="mt-1 block text-xs text-green-700 not-italic">
+                Fuente:{" "}
+                <a
+                  href="https://www.asha.org/public/speech/disorders/Voice/Teachers-Use-Their-Voices/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-green-900"
+                >
+                  American Speech-Language-Hearing Association (ASHA)
+                </a>
+                , trastornos de la voz en docentes.
+              </cite>
             </p>
           </header>
 
@@ -64,7 +93,7 @@ export default function FonoaudiologaVozTemucoPage() {
                 Creer un "estoy afónico de frío" persistente tras 2 o 3 semanas no es normal. La disfonía continuada agrava los cuadros. La nueva recomendación mundial de atención indica iniciar <strong>terapia vocal intensiva</strong> desde espacios controlados, como tu hogar seguro.
               </p>
               <WhatsAppCTA
-                href="https://wa.me/56995497838?text=Hola,%20escribo%20desde%20Temuco%20y%20necesito%20evaluaci%C3%B3n%20para%20un%20problema%20de%20voz."
+                message="Hola, escribo desde Temuco y necesito evaluación para un problema de voz."
                 className="bg-green-600 hover:bg-green-700 ring-green-300 w-full sm:w-auto"
               >
                 Atención experta para La Araucanía
@@ -101,6 +130,11 @@ export default function FonoaudiologaVozTemucoPage() {
               />
             </div>
           </section>
+
+          <GeoFAQ
+            items={faqItems}
+            className="not-prose my-12 rounded-2xl border border-green-100 bg-green-50/40 p-8"
+          />
         </article>
       </main>
     </>

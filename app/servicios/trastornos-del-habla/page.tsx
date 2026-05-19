@@ -1,40 +1,27 @@
 import Image from "next/image";
-import { Metadata } from "next";
+import { SITE_URL, whatsappUrl } from "@/lib/site";
+import { buildPageMetadata } from "@/lib/seo";
 import { Breadcrumbs } from "../../_components/Breadcrumbs";
 import { Footer } from "../../_components/Footer";
 import { Header } from "../../_components/Header";
 import { WhatsAppCTA } from "../../_components/WhatsAppCTA";
 import { StickyWhatsApp } from "../../_components/StickyWhatsApp";
 
-const SITE_URL = "https://www.katialafono.cl";
 const PAGE_PATH = "/servicios/trastornos-del-habla";
-const WHATSAPP_LINK =
-  "https://wa.me/56995497838?text=Hola%2C%20quiero%20consultar%20por%20trastornos%20del%20habla";
+const WHATSAPP_HREF = whatsappUrl("Hola, quiero consultar por trastornos del habla");
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
+  path: PAGE_PATH,
   title: "Tratamiento de Trastornos del Habla en Chillán | Dislalia, Pronunciación",
   description:
     "Tratamiento de trastornos del habla en niños en Chillán: dislalia, problemas de pronunciación, articulación y trastornos fonológicos. Fonoaudióloga con +20 años de experiencia.",
-  keywords: [
-    "trastornos del habla Chillán",
+  keywords: ["trastornos del habla Chillán",
     "dislalia tratamiento Chillán",
     "problemas de pronunciación niños",
     "fonoaudióloga habla Chillán",
     "trastornos fonológicos",
-    "articulación del habla",
-  ],
-  alternates: {
-    canonical: `${SITE_URL}${PAGE_PATH}`,
-  },
-  openGraph: {
-    title: "Tratamiento de Trastornos del Habla en Chillán",
-    description:
-      "Tratamiento especializado de dislalia y problemas de pronunciación en niños.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-    locale: "es_CL",
-  },
-};
+    "articulación del habla",],
+});
 
 const disorders = [
   {
@@ -177,7 +164,7 @@ export default function TrastornosHablaPage() {
                     </span>
                   </li>
                 </ul>
-                <WhatsAppCTA href={WHATSAPP_LINK}>
+                <WhatsAppCTA href={WHATSAPP_HREF}>
                   Agendar evaluación por WhatsApp
                 </WhatsAppCTA>
                 <p className="mt-4 text-sm text-gray-500">
@@ -233,7 +220,7 @@ export default function TrastornosHablaPage() {
               ))}
             </div>
             <div className="mt-10 text-center">
-              <WhatsAppCTA href={WHATSAPP_LINK}>
+              <WhatsAppCTA href={WHATSAPP_HREF}>
                 Consultar mi caso por WhatsApp
               </WhatsAppCTA>
             </div>
@@ -415,7 +402,7 @@ export default function TrastornosHablaPage() {
               Con tratamiento adecuado, la mayoría de los niños mejoran
               significativamente. Agenda una evaluación.
             </p>
-            <WhatsAppCTA href={WHATSAPP_LINK}>
+            <WhatsAppCTA href={WHATSAPP_HREF}>
               Agendar evaluación por WhatsApp
             </WhatsAppCTA>
             <p className="mt-6 text-gray-300">
@@ -425,7 +412,7 @@ export default function TrastornosHablaPage() {
         </section>
       </main>
       <Footer />
-      <StickyWhatsApp href={WHATSAPP_LINK} />
+      <StickyWhatsApp href={WHATSAPP_HREF} />
     </>
   );
 }

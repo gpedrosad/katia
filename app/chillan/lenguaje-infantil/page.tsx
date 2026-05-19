@@ -1,45 +1,28 @@
+import { buildPageMetadata, buildWebPageJsonLd } from "@/lib/seo";
+
+const CANONICAL_PATH = "/fonoaudiologa-ninos-chillan";
+import { whatsappUrl } from "@/lib/site";
 import Image from "next/image";
-import { Metadata } from "next";
 import { ConcernCard } from "./_components/ConcernCard";
 import { WhatsAppCTA } from "./_components/WhatsAppCTA";
 import { StickyWhatsApp } from "./_components/StickyWhatsApp";
 
-const SITE_URL = "https://www.katialafono.cl";
-
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
+  path: "/chillan/lenguaje-infantil",
+  canonicalPath: "/fonoaudiologa-ninos-chillan",
   title: "Fonoaudióloga en Chillán | Lenguaje Infantil",
   description:
     "¿Tu hijo tiene dificultades para hablar? Evaluación y tratamiento fonoaudiológico infantil en Chillán. Primera consulta de evaluación. Agenda tu hora.",
-  keywords: [
-    "fonoaudióloga Chillán",
+  keywords: ["fonoaudióloga Chillán",
     "lenguaje infantil",
     "terapia de lenguaje niños",
     "fonoaudiología infantil Chillán",
-    "problemas del habla niños",
-  ],
-  alternates: {
-    canonical: `${SITE_URL}/fonoaudiologa-ninos-chillan`,
-  },
-  openGraph: {
-    title: "Fonoaudióloga en Chillán | Lenguaje Infantil",
-    description:
-      "Evaluación y tratamiento fonoaudiológico infantil en Chillán. Ayudamos a tu hijo a comunicarse mejor.",
-    type: "website",
-    locale: "es_CL",
-    url: `${SITE_URL}/chillan/lenguaje-infantil`,
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
-  },
-};
+    "problemas del habla niños",],
+});
 
-const WHATSAPP_LINK =
-  "https://wa.me/56995497838?text=Hola%2C%20quiero%20agendar%20una%20evaluaci%C3%B3n%20de%20lenguaje%20para%20mi%20hijo%2Fa";
+const WHATSAPP_HREF = whatsappUrl(
+  "Hola, quiero agendar una evaluación de lenguaje para mi hijo/a"
+);
 
 const concerns = [
   {
@@ -79,6 +62,14 @@ const concerns = [
       "Le cuesta interactuar con otros niños o iniciar conversaciones.",
   },
 ];
+
+const webPageJsonLd = buildWebPageJsonLd({
+  path: CANONICAL_PATH,
+  name: "Fonoaudióloga en Chillán | Lenguaje Infantil",
+  description:
+    "¿Tu hijo tiene dificultades para hablar? Evaluación y tratamiento fonoaudiológico infantil en Chillán. Primera consulta de evaluación. Agenda tu hora.",
+  speakable: true,
+});
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -140,6 +131,10 @@ export default function LenguajeInfantilPage() {
     <>
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
     <div className="min-h-screen bg-gradient-to-b from-rose-50 to-white">
@@ -182,7 +177,7 @@ export default function LenguajeInfantilPage() {
               </ul>
 
               <div className="flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
-                <WhatsAppCTA href={WHATSAPP_LINK}>
+                <WhatsAppCTA href={WHATSAPP_HREF}>
                   Agendar evaluación por WhatsApp
                 </WhatsAppCTA>
               </div>
@@ -244,7 +239,7 @@ export default function LenguajeInfantilPage() {
           
           {/* CTA intermedio */}
           <div className="mt-12 text-center">
-            <WhatsAppCTA href={WHATSAPP_LINK}>
+            <WhatsAppCTA href={WHATSAPP_HREF}>
               Consultar mi caso por WhatsApp
             </WhatsAppCTA>
             <p className="mt-3 text-sm text-gray-600">
@@ -500,7 +495,7 @@ export default function LenguajeInfantilPage() {
 
           {/* CTA after FAQs */}
           <div className="mt-12 text-center">
-            <WhatsAppCTA href={WHATSAPP_LINK}>
+            <WhatsAppCTA href={WHATSAPP_HREF}>
               Resolver mis dudas por WhatsApp
             </WhatsAppCTA>
             <p className="mt-3 text-sm text-gray-600">
@@ -520,7 +515,7 @@ export default function LenguajeInfantilPage() {
             Una evaluación a tiempo puede marcar la diferencia en el desarrollo
             de tu hijo. Escríbeme y conversemos sin compromiso.
           </p>
-          <WhatsAppCTA href={WHATSAPP_LINK} className="text-lg sm:text-xl">
+          <WhatsAppCTA href={WHATSAPP_HREF} className="text-lg sm:text-xl">
             Agendar evaluación por WhatsApp
           </WhatsAppCTA>
           <p className="mt-6 text-base text-gray-300">
@@ -538,7 +533,7 @@ export default function LenguajeInfantilPage() {
       </footer>
 
       {/* Sticky WhatsApp Button */}
-      <StickyWhatsApp href={WHATSAPP_LINK} />
+      <StickyWhatsApp href={WHATSAPP_HREF} />
     </div>
     </>
   );

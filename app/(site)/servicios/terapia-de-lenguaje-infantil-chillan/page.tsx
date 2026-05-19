@@ -1,21 +1,27 @@
-import { Metadata } from "next";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import Link from "next/link";
+import { buildPageMetadata, buildWebPageJsonLd } from "@/lib/seo";
+import { SITE_URL } from "@/lib/site";
 
-export const metadata: Metadata = {
+const CANONICAL_PATH = "/servicios/terapia-lenguaje-infantil";
+
+export const metadata = buildPageMetadata({
+  path: "/servicios/terapia-de-lenguaje-infantil-chillan",
+  canonicalPath: "/servicios/terapia-lenguaje-infantil",
   title: "Terapia de Lenguaje Infantil en Chillán | Fonoaudióloga",
-  description: "Sesiones presenciales de terapia de lenguaje para niños en Chillán. Estimulación, juegos y corrección fonológica con especialista pediátrica.",
-  alternates: {
-    canonical: "https://www.katialafono.cl/servicios/terapia-lenguaje-infantil",
-  },
-};
+  description:
+    "Sesiones presenciales de terapia de lenguaje para niños en Chillán. Estimulación, juegos y corrección fonológica con especialista pediátrica.",
+});
 
 export default function TerapiaLenguajePage() {
+  const pillarUrl = `${SITE_URL}${CANONICAL_PATH}`;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "TherapeuticProcedure",
-    "name": "Terapia de Lenguaje Infantil",
+    "@id": `${pillarUrl}#service`,
+    url: pillarUrl,
+    name: "Terapia de Lenguaje Infantil",
     "description": "Intervención clínica fonoaudiológica para desarrollar habilidades comprensivas y expresivas en niños.",
     "provider": {
       "@type": "MedicalOrganization",
@@ -23,15 +29,25 @@ export default function TerapiaLenguajePage() {
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Chillán"
-      }
-    }
+      },
+    },
   };
+  const webPageJsonLd = buildWebPageJsonLd({
+    path: CANONICAL_PATH,
+    name: "Terapia de Lenguaje Infantil en Chillán | Fonoaudióloga",
+    description:
+      "Sesiones presenciales de terapia de lenguaje para niños en Chillán. Estimulación, juegos y corrección fonológica con especialista pediátrica.",
+  });
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
       />
       <main className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
         <Breadcrumbs
@@ -74,7 +90,7 @@ export default function TerapiaLenguajePage() {
           </p>
 
           <div className="mt-12 flex justify-center">
-            <WhatsAppCTA href="https://wa.me/56995497838?text=Hola,%20busco%20informaci%C3%B3n%20sobre%20terapia%20de%20lenguaje%20en%20Chill%C3%A1n" className="bg-pink-600 hover:bg-pink-700 ring-pink-300">
+            <WhatsAppCTA message="Hola, busco información sobre terapia de lenguaje en Chillán" className="bg-pink-600 hover:bg-pink-700 ring-pink-300">
               Consultar por Terapia Infantil
             </WhatsAppCTA>
           </div>

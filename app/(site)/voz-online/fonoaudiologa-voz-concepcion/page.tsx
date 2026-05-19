@@ -1,18 +1,29 @@
-import { Metadata } from "next";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import { TestimonialCard } from "@/app/_components/TestimonialCard";
 import Link from "next/link";
+import { buildPageMetadata } from "@/lib/seo";
+import { GeoFAQ } from "@/app/_components/GeoFAQ";
 
-export const metadata: Metadata = {
+const faqItems = [
+  {
+    question: "¿Puedo hacer terapia vocal online si vivo en Concepción?",
+    answer:
+      "Sí. Atendemos al Gran Concepción y región del Biobío por videollamada, sin cruzar puentes ni perder horas en traslados.",
+  },
+  {
+    question: "¿Qué problemas de voz se tratan online desde Concepción?",
+    answer:
+      "Disfonía, fatiga vocal, nódulos en fase conservadora, higiene vocal y programas para docentes y profesionales de la voz.",
+  },
+];
+
+export const metadata = buildPageMetadata({
+  path: "/voz-online/fonoaudiologa-voz-concepcion",
   title: "Fonoaudióloga especialista en Voz en Concepción | Terapia Online",
   description:
     "Atención online para residentes del Biobío. Fonoaudióloga experta en voz, nódulos y fatiga vocal. Recupérate sin salir de Concepción.",
-  alternates: {
-    canonical:
-      "https://www.katialafono.cl/voz-online/fonoaudiologa-voz-concepcion",
-  },
-};
+});
 
 export default function FonoaudiologaVozConcepcionPage() {
   const jsonLd = {
@@ -50,8 +61,26 @@ export default function FonoaudiologaVozConcepcionPage() {
             <h1 className="text-4xl font-extrabold text-blue-950 mb-6">
               Fonoaudióloga de Voz para Concepción: Recupérate sin moverte de casa
             </h1>
-            <p className="lead font-medium text-gray-700 max-w-3xl mx-auto">
+            <p
+              className="lead font-medium text-gray-700 max-w-3xl mx-auto"
+              data-speakable
+            >
               Si el clima o los grandes puentes de <strong>Concepción y el Gran Concepción</strong> te quitan las ganas de ir a terapias médicas semanales para tu disfonía, el tratamiento fonoaudiológico de la voz 100% online es el alivio profundo que estabas esperando para rehabilitar tus cuerdas vocales.
+            </p>
+            <p className="mx-auto mt-4 max-w-2xl text-sm text-blue-800">
+              <strong>Dato:</strong> La tele-rehabilitación vocal en adultos muestra resultados comparables a la presencial en estudios clínicos revisados.
+              <cite className="mt-1 block text-xs text-blue-700 not-italic">
+                Fuente:{" "}
+                <a
+                  href="https://www.asha.org/practice/telepractice/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-blue-900"
+                >
+                  ASHA — Telepractice guidelines
+                </a>
+                , literatura de telefonoaudiología.
+              </cite>
             </p>
           </header>
 
@@ -64,7 +93,7 @@ export default function FonoaudiologaVozConcepcionPage() {
                 La humedad y los drásticos cambios de temperatura en el Biobío son devastadores para voces de docentes y profesionales. Nuestra rehabilitación consiste en establecer técnica vocal de resistencia, trabajando en directo pantalla a pantalla, ahorrándote los peligrosos resfriados que conllevan los largos traslados luego de someter la garganta a consulta presencial.
               </p>
               <WhatsAppCTA
-                href="https://wa.me/56995497838?text=Hola,%20vivo%20en%20Concepci%C3%B3n%20y%20necesito%20terapia%20vocal%20online."
+                message="Hola, vivo en Concepción y necesito terapia vocal online."
                 className="bg-blue-600 hover:bg-blue-700 ring-blue-300 w-full sm:w-auto"
               >
                 Atenderme en Concepción (vía Zoom)
@@ -104,6 +133,11 @@ export default function FonoaudiologaVozConcepcionPage() {
               />
             </div>
           </section>
+
+          <GeoFAQ
+            items={faqItems}
+            className="not-prose my-12 rounded-2xl border border-blue-100 bg-blue-50/40 p-8"
+          />
         </article>
       </main>
     </>

@@ -1,18 +1,29 @@
-import { Metadata } from "next";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import { TestimonialCard } from "@/app/_components/TestimonialCard";
 import Link from "next/link";
+import { buildPageMetadata } from "@/lib/seo";
+import { GeoFAQ } from "@/app/_components/GeoFAQ";
 
-export const metadata: Metadata = {
+const faqItems = [
+  {
+    question: "¿Puedo hacer terapia vocal online si vivo en Antofagasta?",
+    answer:
+      "Sí. Atendemos al norte de Chile por videollamada, sin perder tiempo en traslados ni turnos presenciales.",
+  },
+  {
+    question: "¿Qué trastornos de la voz se tratan online desde Antofagasta?",
+    answer:
+      "Disfonía, fatiga vocal por turnos, nódulos en tratamiento conservador e higiene vocal para profesionales.",
+  },
+];
+
+export const metadata = buildPageMetadata({
+  path: "/voz-online/fonoaudiologa-voz-antofagasta",
   title: "Fonoaudióloga especialista en Voz en Antofagasta | Online",
   description:
     "¿Tu voz te duele tras días de turnos en Antofagasta? Diagnóstico y rehabilitación vocal intensiva experta desde tu propia pantalla en el Norte.",
-  alternates: {
-    canonical:
-      "https://www.katialafono.cl/voz-online/fonoaudiologa-voz-antofagasta",
-  },
-};
+});
 
 export default function FonoaudiologaVozAntofagastaPage() {
   const jsonLd = {
@@ -50,8 +61,26 @@ export default function FonoaudiologaVozAntofagastaPage() {
             <h1 className="text-4xl font-extrabold text-orange-950 mb-6">
               Fonoaudióloga de Voz Online para Antofagasta y el Norte
             </h1>
-            <p className="lead font-medium text-gray-700 max-w-3xl mx-auto">
+            <p
+              className="lead font-medium text-gray-700 max-w-3xl mx-auto"
+              data-speakable
+            >
               Si el clima del desierto, los turnos extenuantes corporativos o el polvo de <strong>Antofagasta</strong> agotó por entero tus cuerdas vocales, tenemos la solución. No sacrifiques tu escaso tiempo libre viajando al médico en la ciudad. Restaura tu volumen de resonancia y frena la afonía cómodamente con mi terapia online.
+            </p>
+            <p className="mx-auto mt-4 max-w-2xl text-sm text-orange-800">
+              <strong>Dato:</strong> Los profesionales con uso vocal intensivo presentan mayor riesgo de trastornos de la voz que la población general.
+              <cite className="mt-1 block text-xs text-orange-700 not-italic">
+                Fuente:{" "}
+                <a
+                  href="https://www.asha.org/public/speech/disorders/Voice-Disorders/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-orange-900"
+                >
+                  ASHA — Voice Disorders
+                </a>
+                , occupational voice disorders.
+              </cite>
             </p>
           </header>
 
@@ -64,7 +93,7 @@ export default function FonoaudiologaVozAntofagastaPage() {
                 Cuando una voz "picada" no sana por largos periodos ni bebiendo litro de fluidos, estás ante una <Link href="/voz-online/tratamiento-disfonia-online" className="text-orange-600 font-bold border-b border-orange-300">disfonía persistente</Link>. Telemedicina interactiva es el paso indicado, donde monitorearemos un riguroso plan de ejercicios de rehabilitación para restaurar la función perdida antes de un desenlace nodular.
               </p>
               <WhatsAppCTA
-                href="https://wa.me/56995497838?text=Hola,%20busco%20fonoaudi%C3%B3loga%20para%20la%20voz%20desde%20Antofagasta(Online)."
+                message="Hola, busco fonoaudióloga para la voz desde Antofagasta(Online)."
                 className="bg-orange-600 hover:bg-orange-700 ring-orange-300 w-full sm:w-auto"
               >
                 Inicia Fonoaudiología Online Aquí
@@ -101,6 +130,11 @@ export default function FonoaudiologaVozAntofagastaPage() {
               />
             </div>
           </section>
+
+          <GeoFAQ
+            items={faqItems}
+            className="not-prose my-12 rounded-2xl border border-orange-100 bg-orange-50/40 p-8"
+          />
         </article>
       </main>
     </>

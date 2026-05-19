@@ -1,18 +1,29 @@
-import { Metadata } from "next";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import { TestimonialCard } from "@/app/_components/TestimonialCard";
 import Link from "next/link";
+import { buildPageMetadata } from "@/lib/seo";
+import { GeoFAQ } from "@/app/_components/GeoFAQ";
 
-export const metadata: Metadata = {
+const faqItems = [
+  {
+    question: "¿Puedo hacer terapia vocal online si vivo en Santiago?",
+    answer:
+      "Sí. Atendemos pacientes de la Región Metropolitana por videollamada, sin traslados ni salas de espera.",
+  },
+  {
+    question: "¿Qué trastornos de la voz se tratan online desde Santiago?",
+    answer:
+      "Disfonía, fatiga vocal, nódulos en tratamiento conservador, higiene vocal y rehabilitación para docentes y profesionales de la voz.",
+  },
+];
+
+export const metadata = buildPageMetadata({
+  path: "/voz-online/fonoaudiologa-voz-santiago",
   title: "Fonoaudióloga especialista en Voz en Santiago | Terapia Online",
   description:
     "¿Buscas expertos en voz en Santiago? Terapia vocal online sin los tacos de la ciudad. Fonoaudióloga experta en nódulos, disfonía y fatiga. Agenda hoy.",
-  alternates: {
-    canonical:
-      "https://www.katialafono.cl/voz-online/fonoaudiologa-voz-santiago",
-  },
-};
+});
 
 export default function FonoaudiologaVozSantiagoPage() {
   const jsonLd = {
@@ -50,8 +61,26 @@ export default function FonoaudiologaVozSantiagoPage() {
             <h1 className="text-4xl font-extrabold text-sky-950 mb-6">
               Fonoaudióloga de Voz en Santiago: Recupera tu voz sin sumarte al taco
             </h1>
-            <p className="lead font-medium text-gray-700 max-w-3xl mx-auto">
+            <p
+              className="lead font-medium text-gray-700 max-w-3xl mx-auto"
+              data-speakable
+            >
               Si vives en <strong>Santiago</strong> y el estrés de la capital está apretando tu garganta y quebrando tu voz, buscar ayuda no debería tomarte dos horas en Transantiago o el Metro. Tu terapia fonoaudiológica experta, ahora 100% online y desde tu hogar o departamento.
+            </p>
+            <p className="mx-auto mt-4 max-w-2xl text-sm text-sky-800">
+              <strong>Dato:</strong> La ASHA respalda la tele-práctica fonoaudiológica cuando se usan protocolos validados y equipamiento adecuado.
+              <cite className="mt-1 block text-xs text-sky-700 not-italic">
+                Fuente:{" "}
+                <a
+                  href="https://www.asha.org/practice/telepractice/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-sky-900"
+                >
+                  American Speech-Language-Hearing Association (ASHA)
+                </a>
+                , telepractice.
+              </cite>
             </p>
           </header>
 
@@ -64,7 +93,7 @@ export default function FonoaudiologaVozSantiagoPage() {
                 Pacientes en el Barrio El Golf, Providencia o Maipú están optando por tratar sus disfonías, fatigas vocales y nódulos desde su pantalla. ¿Por qué? Porque la rehabilitación vocal en adultos depende del trabajo sonoro y respiratorio, <strong>no requiere que vayas a una clínica a tocarte la garganta</strong>.
               </p>
               <WhatsAppCTA
-                href="https://wa.me/56995497838?text=Hola,%20vivo%20en%20Santiago%20y%20necesito%20evaluaci%C3%B3n%20vocal%20online."
+                message="Hola, vivo en Santiago y necesito evaluación vocal online."
                 className="bg-sky-600 hover:bg-sky-700 ring-sky-300 w-full sm:w-auto"
               >
                 Agendar Mi Hora en Santiago
@@ -107,6 +136,11 @@ export default function FonoaudiologaVozSantiagoPage() {
               />
             </div>
           </section>
+
+          <GeoFAQ
+            items={faqItems}
+            className="not-prose my-12 rounded-2xl border border-sky-100 bg-sky-50/40 p-8"
+          />
         </article>
       </main>
     </>

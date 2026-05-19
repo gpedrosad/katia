@@ -1,16 +1,17 @@
-import { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../_components/Breadcrumbs";
 import { Footer } from "../../_components/Footer";
 import { Header } from "../../_components/Header";
 import { WhatsAppCTA } from "../../_components/WhatsAppCTA";
+import { buildPageMetadata } from "@/lib/seo";
+import { SITE_URL } from "@/lib/site";
 
-const SITE_URL = "https://www.katialafono.cl";
 const PAGE_PATH = "/glosario/tel";
 const WHATSAPP_LINK =
   "https://wa.me/56995497838?text=Hola%2C%20quiero%20consultar%20por%20TEL";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
+  path: PAGE_PATH,
   title: "¿Qué es el TEL? | Trastorno Específico del Lenguaje Explicado",
   description:
     "Qué es el TEL (Trastorno Específico del Lenguaje): causas, síntomas, diagnóstico y tratamiento. Guía para padres. Fonoaudióloga especialista en Chillán.",
@@ -22,18 +23,8 @@ export const metadata: Metadata = {
     "síntomas TEL",
     "tratamiento TEL",
   ],
-  alternates: {
-    canonical: `${SITE_URL}${PAGE_PATH}`,
-  },
-  openGraph: {
-    title: "¿Qué es el TEL? | Trastorno Específico del Lenguaje",
-    description:
-      "Guía completa sobre el TEL: qué es, síntomas, diagnóstico y tratamiento.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "article",
-    locale: "es_CL",
-  },
-};
+  ogType: "article",
+});
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -47,7 +38,7 @@ const jsonLd = {
     jobTitle: "Fonoaudióloga",
   },
   datePublished: "2024-06-01",
-  dateModified: "2025-05-01",
+  dateModified: "2026-05-19",
 };
 
 const faqJsonLd = {

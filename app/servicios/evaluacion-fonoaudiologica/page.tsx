@@ -1,40 +1,27 @@
 import Image from "next/image";
-import { Metadata } from "next";
+import { SITE_URL, whatsappUrl } from "@/lib/site";
+import { buildPageMetadata } from "@/lib/seo";
 import { Breadcrumbs } from "../../_components/Breadcrumbs";
 import { Footer } from "../../_components/Footer";
 import { Header } from "../../_components/Header";
 import { WhatsAppCTA } from "../../_components/WhatsAppCTA";
 import { StickyWhatsApp } from "../../_components/StickyWhatsApp";
 
-const SITE_URL = "https://www.katialafono.cl";
 const PAGE_PATH = "/servicios/evaluacion-fonoaudiologica";
-const WHATSAPP_LINK =
-  "https://wa.me/56995497838?text=Hola%2C%20quiero%20agendar%20una%20evaluaci%C3%B3n%20fonoaudiol%C3%B3gica";
+const WHATSAPP_HREF = whatsappUrl("Hola, quiero agendar una evaluación fonoaudiológica");
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
+  path: PAGE_PATH,
   title: "Evaluación Fonoaudiológica en Chillán | Diagnóstico de Lenguaje",
   description:
     "Evaluación fonoaudiológica completa en Chillán para niños. Diagnóstico de lenguaje, habla y comunicación con informe detallado. Primera consulta con plan de tratamiento. Agendar hora.",
-  keywords: [
-    "evaluación fonoaudiológica Chillán",
+  keywords: ["evaluación fonoaudiológica Chillán",
     "diagnóstico lenguaje niños",
     "evaluación del habla",
     "fonoaudióloga evaluación Chillán",
     "test de lenguaje infantil",
-    "informe fonoaudiológico",
-  ],
-  alternates: {
-    canonical: `${SITE_URL}${PAGE_PATH}`,
-  },
-  openGraph: {
-    title: "Evaluación Fonoaudiológica en Chillán | Diagnóstico de Lenguaje",
-    description:
-      "Evaluación completa con informe detallado y plan de tratamiento personalizado.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-    locale: "es_CL",
-  },
-};
+    "informe fonoaudiológico",],
+});
 
 const evaluationIncludes = [
   {
@@ -189,7 +176,7 @@ export default function EvaluacionFonoaudiologicaPage() {
                     </span>
                   </li>
                 </ul>
-                <WhatsAppCTA href={WHATSAPP_LINK}>
+                <WhatsAppCTA href={WHATSAPP_HREF}>
                   Agendar evaluación por WhatsApp
                 </WhatsAppCTA>
                 <p className="mt-4 text-sm text-gray-500">
@@ -241,7 +228,7 @@ export default function EvaluacionFonoaudiologicaPage() {
               ))}
             </div>
             <div className="mt-10 text-center">
-              <WhatsAppCTA href={WHATSAPP_LINK}>
+              <WhatsAppCTA href={WHATSAPP_HREF}>
                 Agendar mi evaluación
               </WhatsAppCTA>
             </div>
@@ -421,7 +408,7 @@ export default function EvaluacionFonoaudiologicaPage() {
               Una evaluación profesional te dará claridad sobre su desarrollo y
               los pasos a seguir.
             </p>
-            <WhatsAppCTA href={WHATSAPP_LINK}>
+            <WhatsAppCTA href={WHATSAPP_HREF}>
               Agendar evaluación por WhatsApp
             </WhatsAppCTA>
             <p className="mt-6 text-gray-300">
@@ -431,7 +418,7 @@ export default function EvaluacionFonoaudiologicaPage() {
         </section>
       </main>
       <Footer />
-      <StickyWhatsApp href={WHATSAPP_LINK} />
+      <StickyWhatsApp href={WHATSAPP_HREF} />
     </>
   );
 }

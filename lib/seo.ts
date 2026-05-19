@@ -7,6 +7,8 @@ type BuildPageMetadataInput = {
   description: string;
   keywords?: string[];
   ogType?: "website" | "article";
+  /** Canonical path when it differs from `path` (e.g. geo page → pillar). */
+  canonicalPath?: string;
 };
 
 function normalizePath(path: string): string {
@@ -20,18 +22,21 @@ export function buildPageMetadata({
   description,
   keywords,
   ogType = "website",
+  canonicalPath: canonicalPathOverride,
 }: BuildPageMetadataInput): Metadata {
   const normalizedPath = normalizePath(path);
-  const canonicalPath = normalizedPath === "/" ? "/" : normalizedPath;
+  const resolvedCanonical = normalizePath(canonicalPathOverride ?? path);
+  const canonical =
+    resolvedCanonical === "/" ? "/" : resolvedCanonical;
   const pageUrl =
     normalizedPath === "/" ? SITE_URL : `${SITE_URL}${normalizedPath}`;
 
   return {
-    title,
+    title: { absolute: title },
     description,
     ...(keywords?.length ? { keywords } : {}),
     alternates: {
-      canonical: canonicalPath,
+      canonical,
     },
     openGraph: {
       type: ogType,
@@ -59,5 +64,41 @@ export function buildPageMetadata({
       index: true,
       follow: true,
     },
+  };
+}
+
+type BuildWebPageJsonLdInput = {
+  /** Canonical path for `@id` and `url` (use pillar path when page has canonicalPath). */
+  path: string;
+  name: string;
+  description: string;
+  speakable?: boolean;
+};
+
+export function buildWebPageJsonLd({
+  path,
+  name,
+  description,
+  speakable = false,
+}: BuildWebPageJsonLdInput) {
+  const normalizedPath = normalizePath(path);
+  const pageUrl =
+    normalizedPath === "/" ? SITE_URL : `${SITE_URL}${normalizedPath}`;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${pageUrl}#webpage`,
+    name,
+    description,
+    url: pageUrl,
+    ...(speakable
+      ? {
+          speakable: {
+            "@type": "SpeakableSpecification",
+            cssSelector: ["article h1", "article > p:first-of-type"],
+          },
+        }
+      : {}),
   };
 }

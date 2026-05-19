@@ -1,41 +1,44 @@
-import { Metadata } from "next";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import { TestimonialCard } from "@/app/_components/TestimonialCard";
 import Link from "next/link";
+import { GeoFAQ } from "@/app/_components/GeoFAQ";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
+  path: "/voz-online/terapia-vocal-docentes-profesores",
   title: "Terapia Vocal para Docentes y Profesores | Online Chile",
   description:
     "¿Llegas al viernes sin voz por las clases? Terapia vocal online exclusiva para docentes. Salva tus cuerdas vocales desde casa con fonoaudióloga experta.",
-  alternates: {
-    canonical:
-      "https://www.katialafono.cl/voz-online/terapia-vocal-docentes-profesores",
+});
+
+const faqItems = [
+  {
+    question: "¿Por qué los profesores pierden la voz?",
+    answer:
+      "Los docentes usan la voz entre 6 y 8 horas diarias, muchas veces en ambientes ruidosos, con mala acústica, sin amplificación y con técnica vocal deficiente. Esto genera un sobresfuerzo crónico que puede derivar en disfonía o nódulos vocales.",
   },
-};
+  {
+    question: "¿Se puede prevenir la disfonía docente?",
+    answer:
+      "Sí. Con técnica vocal adecuada, higiene vocal, hidratación y uso estratégico de la voz se puede prevenir. La terapia fonoaudiológica online enseña estas herramientas de manera práctica.",
+  },
+  {
+    question: "¿La terapia vocal online sirve para docentes de colegio?",
+    answer:
+      "Sí. Los ejercicios se adaptan al aula real: proyección sin gritar, calentamiento antes de clases y descansos vocales entre jornadas, con horarios compatibles con la rutina escolar.",
+  },
+];
 
 export default function TerapiaVocalDocentesPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "¿Por qué los profesores pierden la voz?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Los docentes usan la voz entre 6 y 8 horas diarias, muchas veces en ambientes ruidosos, con mala acústica, sin amplificación y con técnica vocal deficiente. Esto genera un sobresfuerzo crónico que puede derivar en disfonía o nódulos vocales.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "¿Se puede prevenir la disfonía docente?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Sí. Con técnica vocal adecuada, higiene vocal, hidratación y uso estratégico de la voz se puede prevenir. La terapia fonoaudiológica online enseña estas herramientas de manera práctica.",
-        },
-      },
-    ],
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
+    })),
   };
 
   return (
@@ -58,8 +61,26 @@ export default function TerapiaVocalDocentesPage() {
             <h1 className="text-4xl font-extrabold text-emerald-950 mb-6">
               ¿Sobrevives apenas tus clases porque tu voz no da más?
             </h1>
-            <p className="lead font-medium text-gray-700 max-w-3xl mx-auto">
-              Ser profesor y quedarte sin voz no es un "gafe del oficio" aceptable. Es una alerta roja de que estás destruyendo tu herramienta de trabajo vital. <strong>Casi el 60% de los docentes en Chile</strong> enfrentará un problema vocal severo en su carrera. Sal de la estadística aprendiendo a usar tu voz sin dañarte.
+            <p
+              className="lead font-medium text-gray-700 max-w-3xl mx-auto"
+              data-speakable
+            >
+              Ser profesor y quedarte sin voz no es un &quot;gafe del oficio&quot; aceptable. Es una alerta roja de que estás destruyendo tu herramienta de trabajo vital. Sal de la estadística aprendiendo a usar tu voz sin dañarte.
+            </p>
+            <p className="mx-auto mt-4 max-w-2xl text-sm text-emerald-800">
+              <strong>Dato:</strong> La ASHA estima que hasta el 58% de los docentes desarrollará un trastorno de la voz durante su carrera profesional.
+              <cite className="mt-1 block text-xs text-emerald-700 not-italic">
+                Fuente:{" "}
+                <a
+                  href="https://www.asha.org/public/speech/disorders/Voice/Teachers-Use-Their-Voices/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-emerald-900"
+                >
+                  American Speech-Language-Hearing Association (ASHA)
+                </a>
+                , voice disorders in teachers.
+              </cite>
             </p>
           </header>
 
@@ -72,7 +93,7 @@ export default function TerapiaVocalDocentesPage() {
                 He visto a cientos de profesores llegar a consulta llorando porque la disfonía y los nódulos amenazaban con forzarlos a cambiar de profesión. A través de nuestra terapia de voz 100% online, puedes entrar a la sala con la certeza de que tu voz resistirá la jornada completa. Sin tener que ir a un box, directo desde tu hogar tras tu horario escolar.
               </p>
               <WhatsAppCTA
-                href="https://wa.me/56995497838?text=Hola,%20soy%20docente%20y%20mi%20voz%20no%20da%20m%C3%A1s.%20Deseo%20tratamiento%20online."
+                message="Hola, soy docente y mi voz no da más. Deseo tratamiento online."
                 className="bg-emerald-600 hover:bg-emerald-700 ring-emerald-300 w-full sm:w-auto"
               >
                 Proteger Mi Voz Docente
@@ -115,6 +136,12 @@ export default function TerapiaVocalDocentesPage() {
               />
             </div>
           </section>
+
+          <GeoFAQ
+            items={faqItems}
+            includeJsonLd={false}
+            className="not-prose my-12 rounded-2xl border border-emerald-100 bg-emerald-50/40 p-8"
+          />
         </article>
       </main>
     </>

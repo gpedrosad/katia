@@ -1,14 +1,12 @@
-import { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../_components/Breadcrumbs";
 import { Footer } from "../_components/Footer";
 import { Header } from "../_components/Header";
 import { GLOSARIO_CATEGORIES, GLOSARIO_TERMINOS } from "./terminos";
+import { buildPageMetadata } from "@/lib/seo";
 
-const SITE_URL = "https://www.katialafono.cl";
-const PAGE_PATH = "/glosario";
-
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
+  path: "/glosario",
   title: "Glosario Fonoaudiológico | Términos de Lenguaje y Habla",
   description:
     "Glosario de términos fonoaudiológicos explicados de forma simple. Dislalia, TEL, TEA, disfasia, trastorno fonológico y más. Guía para padres en Chillán.",
@@ -20,18 +18,7 @@ export const metadata: Metadata = {
     "trastornos del lenguaje definición",
     "vocabulario fonoaudiología",
   ],
-  alternates: {
-    canonical: `${SITE_URL}${PAGE_PATH}`,
-  },
-  openGraph: {
-    title: "Glosario Fonoaudiológico | Términos de Lenguaje y Habla",
-    description:
-      "Términos fonoaudiológicos explicados de forma clara para padres.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-    locale: "es_CL",
-  },
-};
+});
 
 export default function GlosarioPage() {
   return (
@@ -52,6 +39,36 @@ export default function GlosarioPage() {
                 padres. Encuentra definiciones claras de trastornos del lenguaje
                 y habla.
               </p>
+            </div>
+
+            <div className="mb-10">
+              <h2 className="mb-4 text-xl font-bold text-gray-900">
+                Comparaciones útiles
+              </h2>
+              <div className="grid gap-3 sm:grid-cols-2">
+                <Link
+                  href="/comparaciones/dislalia-vs-trastorno-fonologico"
+                  className="block rounded-xl border border-gray-200 bg-white p-4 transition-all hover:border-rose-300 hover:shadow-md"
+                >
+                  <h3 className="font-semibold text-gray-900 hover:text-rose-600">
+                    Dislalia vs trastorno fonológico
+                  </h3>
+                  <p className="mt-1 text-sm text-gray-600">
+                    Diferencias clínicas, tabla comparativa y cuándo consultar.
+                  </p>
+                </Link>
+                <Link
+                  href="/comparaciones/tel-vs-retraso-del-lenguaje"
+                  className="block rounded-xl border border-gray-200 bg-white p-4 transition-all hover:border-rose-300 hover:shadow-md"
+                >
+                  <h3 className="font-semibold text-gray-900 hover:text-rose-600">
+                    TEL vs retraso del lenguaje
+                  </h3>
+                  <p className="mt-1 text-sm text-gray-600">
+                    Cómo distinguir un retraso transitorio del TEL/TDL.
+                  </p>
+                </Link>
+              </div>
             </div>
 
             {GLOSARIO_CATEGORIES.map((category) => (

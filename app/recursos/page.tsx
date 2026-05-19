@@ -1,13 +1,11 @@
-import { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../_components/Breadcrumbs";
 import { Footer } from "../_components/Footer";
 import { Header } from "../_components/Header";
+import { buildPageMetadata } from "@/lib/seo";
 
-const SITE_URL = "https://www.katialafono.cl";
-const PAGE_PATH = "/recursos";
-
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
+  path: "/recursos",
   title: "Recursos para Padres | Guías de Lenguaje y Habla",
   description:
     "Recursos gratuitos para padres sobre desarrollo del lenguaje y habla en niños. Guías, señales de alerta y consejos de fonoaudióloga con +20 años de experiencia.",
@@ -18,18 +16,7 @@ export const metadata: Metadata = {
     "ejercicios lenguaje casa",
     "estimular lenguaje niños",
   ],
-  alternates: {
-    canonical: `${SITE_URL}${PAGE_PATH}`,
-  },
-  openGraph: {
-    title: "Recursos para Padres | Guías de Lenguaje y Habla",
-    description:
-      "Recursos gratuitos para entender y estimular el desarrollo del lenguaje de tu hijo.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-    locale: "es_CL",
-  },
-};
+});
 
 const guides = [
   {

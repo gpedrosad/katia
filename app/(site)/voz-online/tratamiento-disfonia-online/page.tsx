@@ -1,17 +1,34 @@
-import { Metadata } from "next";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import { TestimonialCard } from "@/app/_components/TestimonialCard";
 import Link from "next/link";
+import { GeoFAQ } from "@/app/_components/GeoFAQ";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
+  path: "/voz-online/tratamiento-disfonia-online",
   title: "Tratamiento de Disfonía Online | Fonoaudióloga Chile",
   description:
     "¿Llevas semanas con voz ronca o áspera? No esperes más. Tratamiento fonoaudiológico de disfonía online para todo Chile. Agenda tu evaluación hoy.",
-  alternates: {
-    canonical: "https://www.katialafono.cl/voz-online/tratamiento-disfonia-online",
+});
+
+const faqItems = [
+  {
+    question: "¿Qué es la disfonía?",
+    answer:
+      "Es cualquier alteración de la calidad vocal: ronquera, voz tensa, soplada o afonía parcial. Puede ser funcional (por mal uso) u orgánica (nódulos, edema, parálisis cordal).",
   },
-};
+  {
+    question: "¿Cuánto dura el tratamiento de disfonía online?",
+    answer:
+      "Depende del tipo y antigüedad del cuadro. Casos funcionales suelen mejorar en 6–12 semanas con adherencia al plan; lesiones orgánicas pueden requerir más tiempo y coordinación con otorrinolaringología.",
+  },
+  {
+    question: "¿Cuándo debo consultar por disfonía?",
+    answer:
+      "Si la ronquera o cambio de voz persiste más de 2–3 semanas sin resfriado, empeora progresivamente o duele al hablar. La ASHA recomienda evaluación oportuna para evitar cronicidad.",
+  },
+];
 
 export default function TratamientoDisfoniaPage() {
   const jsonLd = {
@@ -48,8 +65,26 @@ export default function TratamientoDisfoniaPage() {
             <h1 className="text-4xl font-extrabold text-rose-950 mb-6">
               Saca esa ronquera de tu vida con Tratamiento de Disfonía Online
             </h1>
-            <p className="lead font-medium text-gray-700 max-w-3xl mx-auto">
-              Si llevas semanas con la voz áspera o "rasposa", sintiendo que la voz vibra mal en tu garganta, necesitas detenerte. La disfonía no es una condición normal, es una alarma de tu cuerpo pidiendo ayuda especializada a gritos.
+            <p
+              className="lead font-medium text-gray-700 max-w-3xl mx-auto"
+              data-speakable
+            >
+              Si llevas semanas con la voz áspera o &quot;rasposa&quot;, sintiendo que la voz vibra mal en tu garganta, necesitas detenerte. La disfonía no es una condición normal, es una alarma de tu cuerpo pidiendo ayuda especializada.
+            </p>
+            <p className="mx-auto mt-4 max-w-2xl text-sm text-rose-800">
+              <strong>Dato:</strong> La ASHA indica que la ronquera que persiste más de dos semanas sin causa respiratoria justifica evaluación fonoaudiológica u otorrinolaringológica.
+              <cite className="mt-1 block text-xs text-rose-700 not-italic">
+                Fuente:{" "}
+                <a
+                  href="https://www.asha.org/public/speech/disorders/Hoarseness/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-rose-900"
+                >
+                  American Speech-Language-Hearing Association (ASHA)
+                </a>
+                , señales de alarma en trastornos de la voz.
+              </cite>
             </p>
           </header>
 
@@ -62,7 +97,7 @@ export default function TratamientoDisfoniaPage() {
                 Una disfonía que pasa de funcional (por mal uso prolongado) a orgánica en cuestión de meses puede traer la aparición de patologías severas. No tienes que perder tiempo con desplazamientos en la ciudad. Puedes tratarlo 100% online y recuperar tu calidad vocal desde tu habitación.
               </p>
               <WhatsAppCTA
-                href="https://wa.me/56995497838?text=Hola,%20tengo%20disfon%C3%ADa%20hace%20semanas%20y%20necesito%20rehabiliataci%C3%B3n%20online."
+                message="Hola, tengo disfonía hace semanas y necesito rehabiliatación online."
                 className="bg-rose-600 hover:bg-rose-700 ring-rose-300 w-full sm:w-auto"
               >
                 Tratar mi Disfonía Ahora
@@ -114,6 +149,11 @@ export default function TratamientoDisfoniaPage() {
               El proceso se hace 100% mediante videollamadas. Nos enfocaremos en una rehabilitación paso-a-paso de tus cuerdas vocales con ejercicios de técnica vocal (desde la relajación laríngea hasta la instalación de un patrón de resonancia frontal óptimo). Te guío, te corrigiendo visual y auditivamente en el acto.
             </p>
           </section>
+
+          <GeoFAQ
+            items={faqItems}
+            className="not-prose my-12 rounded-2xl border border-rose-100 bg-rose-50/40 p-8"
+          />
         </article>
       </main>
     </>

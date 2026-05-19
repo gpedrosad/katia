@@ -1,40 +1,27 @@
 import Image from "next/image";
-import { Metadata } from "next";
+import { SITE_URL, whatsappUrl } from "@/lib/site";
+import { buildPageMetadata } from "@/lib/seo";
 import { Breadcrumbs } from "../../_components/Breadcrumbs";
 import { Footer } from "../../_components/Footer";
 import { Header } from "../../_components/Header";
 import { WhatsAppCTA } from "../../_components/WhatsAppCTA";
 import { StickyWhatsApp } from "../../_components/StickyWhatsApp";
 
-const SITE_URL = "https://www.katialafono.cl";
 const PAGE_PATH = "/servicios/terapia-lenguaje-infantil";
-const WHATSAPP_LINK =
-  "https://wa.me/56995497838?text=Hola%2C%20quiero%20consultar%20por%20terapia%20de%20lenguaje%20infantil";
+const WHATSAPP_HREF = whatsappUrl("Hola, quiero consultar por terapia de lenguaje infantil");
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
+  path: PAGE_PATH,
   title: "Terapia de Lenguaje Infantil en Chillán",
   description:
     "Terapia de lenguaje para niños de 2 a 10 años en Chillán. Tratamiento de retraso del lenguaje, vocabulario limitado y dificultades de expresión. +20 años de experiencia. Agendar hora.",
-  keywords: [
-    "terapia de lenguaje infantil Chillán",
+  keywords: ["terapia de lenguaje infantil Chillán",
     "fonoaudióloga para niños Chillán",
     "retraso del lenguaje niños",
     "terapia del lenguaje niños",
     "fonoaudiología infantil Chillán",
-    "tratamiento lenguaje niños",
-  ],
-  alternates: {
-    canonical: `${SITE_URL}${PAGE_PATH}`,
-  },
-  openGraph: {
-    title: "Terapia de Lenguaje Infantil en Chillán | Fonoaudióloga",
-    description:
-      "Terapia de lenguaje para niños en Chillán. Tratamiento personalizado con enfoque lúdico.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-    locale: "es_CL",
-  },
-};
+    "tratamiento lenguaje niños",],
+});
 
 const signals = [
   {
@@ -200,7 +187,7 @@ export default function TerapiaLenguajeInfantilPage() {
                     </span>
                   </li>
                 </ul>
-                <WhatsAppCTA href={WHATSAPP_LINK}>
+                <WhatsAppCTA href={WHATSAPP_HREF}>
                   Agendar evaluación por WhatsApp
                 </WhatsAppCTA>
                 <p className="mt-4 text-sm text-gray-500">
@@ -271,7 +258,7 @@ export default function TerapiaLenguajeInfantilPage() {
               ))}
             </div>
             <div className="mt-10 text-center">
-              <WhatsAppCTA href={WHATSAPP_LINK}>
+              <WhatsAppCTA href={WHATSAPP_HREF}>
                 Consultar mi caso por WhatsApp
               </WhatsAppCTA>
             </div>
@@ -466,7 +453,7 @@ export default function TerapiaLenguajeInfantilPage() {
               Una evaluación a tiempo puede marcar la diferencia. Escríbeme y
               conversemos sobre su caso.
             </p>
-            <WhatsAppCTA href={WHATSAPP_LINK}>
+            <WhatsAppCTA href={WHATSAPP_HREF}>
               Agendar evaluación por WhatsApp
             </WhatsAppCTA>
             <p className="mt-6 text-gray-300">
@@ -476,7 +463,7 @@ export default function TerapiaLenguajeInfantilPage() {
         </section>
       </main>
       <Footer />
-      <StickyWhatsApp href={WHATSAPP_LINK} />
+      <StickyWhatsApp href={WHATSAPP_HREF} />
     </>
   );
 }

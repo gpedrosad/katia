@@ -1,17 +1,33 @@
-import { Metadata } from "next";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
+import { GeoFAQ } from "@/app/_components/GeoFAQ";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import Link from "next/link";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+const faqItems = [
+  {
+    question: "¿Qué es la conciencia fonológica?",
+    answer:
+      "Es la habilidad de identificar y manipular sonidos del habla: rimar, segmentar sílabas y fonemas. Es base para aprender a leer y escribir.",
+  },
+  {
+    question: "¿A qué edad conviene evaluarla en Chillán?",
+    answer:
+      "Ideal entre 4 y 5 años, antes de primero básico. Si hay trastorno fonológico o retraso del lenguaje, conviene evaluar antes.",
+  },
+  {
+    question: "¿La conciencia fonológica predice dificultades lectoras?",
+    answer:
+      "Sí. La literatura clínica y la OMS vinculan detección temprana de retrasos del desarrollo —incluido lenguaje y habilidades pre-lectoras— con mejores resultados escolares. Fuente: https://www.who.int/news-room/fact-sheets/detail/developmental-disabilities-in-children",
+  },
+];
+
+export const metadata = buildPageMetadata({
+  path: "/servicios/conciencia-fonologica-chillan",
   title: "Conciencia Fonológica en Niños | Fonoaudióloga en Chillán",
   description:
     "Evaluación y estimulación de conciencia fonológica para niños en Chillán. Base fundamental para una lectoescritura exitosa. Fonoaudióloga pediátrica.",
-  alternates: {
-    canonical:
-      "https://www.katialafono.cl/servicios/conciencia-fonologica-chillan",
-  },
-};
+});
 
 export default function ConcienciaFonologicaPage() {
   const jsonLd = {
@@ -46,7 +62,7 @@ export default function ConcienciaFonologicaPage() {
           <h1 className="text-4xl font-extrabold text-lime-950">
             Conciencia Fonológica en Niños: Evaluación y Estimulación en Chillán
           </h1>
-          <p className="lead font-medium text-gray-700">
+          <p className="lead font-medium text-gray-700" data-speakable>
             La conciencia fonológica es la capacidad de reconocer, identificar y
             manipular los sonidos que forman las palabras. Es el{" "}
             <strong>pilar fundamental</strong> para que un niño aprenda a leer y
@@ -126,9 +142,14 @@ export default function ConcienciaFonologicaPage() {
             </p>
           </section>
 
+          <GeoFAQ
+            items={faqItems}
+            className="not-prose my-12 rounded-2xl border border-lime-100 bg-lime-50/40 p-8"
+          />
+
           <div className="mt-12 flex justify-center">
             <WhatsAppCTA
-              href="https://wa.me/56995497838?text=Hola,%20busco%20evaluar%20la%20conciencia%20fonol%C3%B3gica%20de%20mi%20hijo%20en%20Chill%C3%A1n"
+              message="Hola, busco evaluar la conciencia fonológica de mi hijo en Chillán"
               className="bg-lime-600 hover:bg-lime-700 ring-lime-300"
             >
               Evaluar Conciencia Fonológica

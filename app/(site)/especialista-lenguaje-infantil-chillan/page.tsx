@@ -1,33 +1,49 @@
-import { Metadata } from "next";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import Link from "next/link";
+import { buildPageMetadata, buildWebPageJsonLd } from "@/lib/seo";
+import { SITE_URL } from "@/lib/site";
 
-export const metadata: Metadata = {
+const CANONICAL_PATH = "/fonoaudiologa-ninos-chillan";
+
+export const metadata = buildPageMetadata({
+  path: "/especialista-lenguaje-infantil-chillan",
+  canonicalPath: "/fonoaudiologa-ninos-chillan",
   title: "Especialista en Lenguaje Infantil en Chillán | Fono Pediátrica",
-  description: "Trata a tu hijo con un profesional idóneo. Especialista presencial en lenguaje y habla infantil en Chillán para estimular neurodesarrollo temprano.",
-  alternates: {
-    canonical: "https://www.katialafono.cl/fonoaudiologa-ninos-chillan",
-  },
-};
+  description:
+    "Trata a tu hijo con un profesional idóneo. Especialista presencial en lenguaje y habla infantil en Chillán para estimular neurodesarrollo temprano.",
+});
 
 export default function EspecialistaLenguajePage() {
+  const pillarUrl = `${SITE_URL}${CANONICAL_PATH}`;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
-    "mainEntity": {
+    "@id": `${pillarUrl}#profile`,
+    url: pillarUrl,
+    mainEntity: {
       "@type": "Person",
       "name": "Katia Domínguez",
       "jobTitle": "Fonoaudióloga",
-      "knowsAbout": "Lenguaje infantil, terapia del habla"
-    }
+      knowsAbout: "Lenguaje infantil, terapia del habla",
+    },
   };
+  const webPageJsonLd = buildWebPageJsonLd({
+    path: CANONICAL_PATH,
+    name: "Especialista en Lenguaje Infantil en Chillán | Fono Pediátrica",
+    description:
+      "Trata a tu hijo con un profesional idóneo. Especialista presencial en lenguaje y habla infantil en Chillán para estimular neurodesarrollo temprano.",
+  });
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
       />
       <main className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
         <Breadcrumbs
@@ -65,7 +81,7 @@ export default function EspecialistaLenguajePage() {
           </div>
 
           <div className="mt-12 flex justify-center">
-            <WhatsAppCTA href="https://wa.me/56995497838?text=Hola,%20busco%20hora%20con%20Especialista%20en%20Lenguaje%20Infantil%20en%20Chill%C3%A1n" className="bg-cyan-600 hover:bg-cyan-700 ring-cyan-300">
+            <WhatsAppCTA message="Hola, busco hora con Especialista en Lenguaje Infantil en Chillán" className="bg-cyan-600 hover:bg-cyan-700 ring-cyan-300">
               Conversar con Especialista
             </WhatsAppCTA>
           </div>

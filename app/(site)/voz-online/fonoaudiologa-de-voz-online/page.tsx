@@ -1,17 +1,34 @@
-import { Metadata } from "next";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import { TestimonialCard } from "@/app/_components/TestimonialCard";
 import Link from "next/link";
+import { GeoFAQ } from "@/app/_components/GeoFAQ";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
+  path: "/voz-online/fonoaudiologa-de-voz-online",
   title: "Fonoaudióloga de Voz Online | Recupera tu Voz sin Salir de Casa",
   description:
     "¿Tu voz te abandona a mitad del día? Fonoaudióloga especialista en trastornos de la voz. Tratamiento online para nódulos, disfonía y fatiga con resultados probados. Cupos limitados.",
-  alternates: {
-    canonical: "https://www.katialafono.cl/voz-online/fonoaudiologa-de-voz-online",
+});
+
+const faqItems = [
+  {
+    question: "¿Qué trastornos de la voz se pueden tratar online?",
+    answer:
+      "Disfonía funcional y orgánica, fatiga vocal, nódulos y pólipos en fase conservadora, preparación y rehabilitación post-cirugía, parálisis cordal leve a moderada, y programas de higiene vocal para docentes y profesionales de la voz.",
   },
-};
+  {
+    question: "¿La terapia vocal por videollamada es tan efectiva como la presencial?",
+    answer:
+      "La evidencia en adultos muestra resultados comparables en parámetros acústicos y perceptivos cuando se usan protocolos estandarizados. La tele-rehabilitación permite mayor adherencia al tratamiento al eliminar traslados.",
+  },
+  {
+    question: "¿Atienden pacientes fuera de Chillán?",
+    answer:
+      "Sí. El servicio de voz online está disponible para todo Chile: Santiago, regiones y localidades sin fonoaudiólogo especializado en voz cercano.",
+  },
+];
 
 export default function FonoaudiologaVozOnlinePage() {
   const jsonLd = {
@@ -56,11 +73,29 @@ export default function FonoaudiologaVozOnlinePage() {
             <h1 className="mb-4 text-4xl font-extrabold tracking-tight sm:text-5xl">
               ¿Sientes que tu voz te abandona cuando más la necesitas?
             </h1>
-            <p className="mx-auto max-w-3xl text-xl leading-relaxed text-sky-800/80">
+            <p
+              className="mx-auto max-w-3xl text-xl leading-relaxed text-sky-800/80"
+              data-speakable
+            >
               Vivir con ronquera constante, ardor en la garganta o sentir que debes esforzarte para que te escuchen <strong>no es normal</strong>. Detén el desgaste antes de que sea irreversible con terapia vocal online especializada.
             </p>
+            <p className="mx-auto mt-4 max-w-2xl text-sm text-sky-800/90">
+              <strong>Dato:</strong> Estudios de la ASHA estiman que entre el 6% y el 10% de los adultos experimentará un trastorno de la voz en algún momento de su vida.
+              <cite className="mt-1 block text-xs text-sky-700 not-italic">
+                Fuente:{" "}
+                <a
+                  href="https://www.asha.org/public/speech/disorders/Voice-Disorders/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-sky-900"
+                >
+                  American Speech-Language-Hearing Association (ASHA)
+                </a>
+                , datos epidemiológicos sobre trastornos de la voz.
+              </cite>
+            </p>
             <div className="mt-8 flex flex-col items-center justify-center space-y-4">
-              <WhatsAppCTA href="https://wa.me/56995497838?text=Hola,%20siento%20que%20mi%20voz%20falla%20y%20necesito%20ayuda.%20Quiero%20agendar%20una%20evaluaci%C3%B3n%20online.">
+              <WhatsAppCTA message="Hola, siento que mi voz falla y necesito ayuda. Quiero agendar una evaluación online.">
                 Salvar mi Voz Hoy
               </WhatsAppCTA>
               <p className="text-sm font-medium text-sky-700">🗓️ Agenda abierta. Cupos limitados para pacientes nuevos este mes.</p>
@@ -207,6 +242,60 @@ export default function FonoaudiologaVozOnlinePage() {
               </div>
             </div>
           </section>
+
+          <section className="my-16 not-prose">
+            <h2 className="mb-6 text-center text-3xl font-bold text-sky-900">
+              Atención online en tu ciudad
+            </h2>
+            <p className="mx-auto mb-8 max-w-2xl text-center text-gray-600">
+              Terapia vocal por videollamada para profesionales de la voz en
+              todo Chile. Elige tu ciudad para ver cómo funciona la atención
+              online en tu región.
+            </p>
+            <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {[
+                {
+                  href: "/voz-online/fonoaudiologa-voz-santiago",
+                  label: "Santiago",
+                },
+                {
+                  href: "/voz-online/fonoaudiologa-voz-concepcion",
+                  label: "Concepción",
+                },
+                {
+                  href: "/voz-online/fonoaudiologa-voz-vina-del-mar",
+                  label: "Viña del Mar",
+                },
+                {
+                  href: "/voz-online/fonoaudiologa-voz-temuco",
+                  label: "Temuco",
+                },
+                {
+                  href: "/voz-online/fonoaudiologa-voz-antofagasta",
+                  label: "Antofagasta",
+                },
+              ].map((ciudad) => (
+                <li key={ciudad.href}>
+                  <Link
+                    href={ciudad.href}
+                    className="block rounded-2xl border border-sky-100 bg-white p-5 text-center shadow-sm transition hover:border-sky-300 hover:shadow-md"
+                  >
+                    <span className="text-lg font-semibold text-sky-900">
+                      Fonoaudióloga de voz en {ciudad.label}
+                    </span>
+                    <span className="mt-2 block text-sm text-sky-600">
+                      Atención online →
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <GeoFAQ
+            items={faqItems}
+            className="not-prose my-16 rounded-3xl border border-sky-100 bg-sky-50/50 p-8"
+          />
         </article>
       </main>
     </>

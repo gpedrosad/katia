@@ -1,15 +1,38 @@
-import { Metadata } from "next";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
+import { GeoFAQ } from "@/app/_components/GeoFAQ";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import Link from "next/link";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Consulta Fonoaudióloga Infantil Chillán | Agendar Hora",
-  description: "¡No dejes para el próximo año el desarrollo de tu hijo! Agenda ahora tu hora con fonoaudióloga presencial orientada a niños en Chillán, Ñuble.",
-  alternates: {
-    canonical: "https://www.katialafono.cl/agendar-hora-fonoaudiologo-infantil-chillan",
+const faqItems = [
+  {
+    question: "¿Cómo agendo una hora con fonoaudióloga infantil en Chillán?",
+    answer:
+      "Escríbenos por WhatsApp indicando la edad del niño y el motivo de consulta. Te proponemos horarios compatibles con jornada escolar; la primera cita suele ser evaluación diagnóstica.",
   },
-};
+  {
+    question: "¿Atienden familias de otras comunas de Ñuble?",
+    answer:
+      "Sí. Atendemos presencialmente en Chillán a familias de San Carlos, Bulnes, Coihueco y comunas cercanas que prefieren consulta local sin viajar a otras ciudades.",
+  },
+  {
+    question: "¿Qué debo llevar a la primera consulta?",
+    answer:
+      "Informes escolares o pediátricos previos, lista de palabras que usa el niño y, si aplica, solicitud del colegio para evaluación PIE o escuela de lenguaje.",
+  },
+  {
+    question: "¿Por qué conviene consultar temprano?",
+    answer:
+      "La OMS enfatiza la detección temprana de retrasos del desarrollo, incluido el lenguaje, para mejorar resultados a largo plazo. Fuente: https://www.who.int/news-room/fact-sheets/detail/developmental-disabilities-in-children",
+  },
+];
+
+export const metadata = buildPageMetadata({
+  path: "/agendar-hora-fonoaudiologo-infantil-chillan",
+  title: "Consulta Fonoaudióloga Infantil Chillán | Agendar Hora",
+  description:
+    "¡No dejes para el próximo año el desarrollo de tu hijo! Agenda ahora tu hora con fonoaudióloga presencial orientada a niños en Chillán, Ñuble.",
+});
 
 export default function AgendarHoraPage() {
   const jsonLd = {
@@ -48,7 +71,7 @@ export default function AgendarHoraPage() {
           <h1 className="text-4xl font-extrabold text-rose-950">
             Consulta Fonoaudióloga Infantil Chillán
           </h1>
-          <p className="lead font-medium text-gray-700">
+          <p className="lead font-medium text-gray-700" data-speakable>
             Agenda tu sesión presencial. Una consulta temprana puede cambiar rotundamente la adaptación social y éxito escolar de tu pequeño. No importa si vienes desde Chillán centro, San Carlos u otras comunas vecinas de Ñuble.
           </p>
 
@@ -61,7 +84,7 @@ export default function AgendarHoraPage() {
             </ul>
             
             <div className="mt-10 mb-4">
-              <WhatsAppCTA href="https://wa.me/56995497838?text=Hola,%20quisiera%20agendar%20una%20hora%20de%20fonoaudiolog%C3%ADa%20infantil%20en%20Chill%C3%A1n" className="text-xl px-10 py-6">
+              <WhatsAppCTA message="Hola, quisiera agendar una hora de fonoaudiología infantil en Chillán" className="text-xl px-10 py-6">
                 Chatear y Agendar Hora
               </WhatsAppCTA>
             </div>
@@ -74,6 +97,11 @@ export default function AgendarHoraPage() {
               Toda intervención inicia invariablemente por una <Link href="/evaluacion-fonoaudiologica-infantil-chillan">evaluación fonoaudiológica pormenorizada</Link>. En caso de que tú o el profesor sospechen de alguna condición como Tel, Disfasia, <Link href="/tratamientos/retraso-del-lenguaje-chillan">retrasos en la comprensión</Link>, prepararemos baterías evaluativas estandarizadas aplicables presencialmente.
             </p>
           </section>
+
+          <GeoFAQ
+            items={faqItems}
+            className="not-prose my-12 text-left rounded-2xl border border-rose-100 bg-rose-50/40 p-8"
+          />
 
         </article>
       </main>

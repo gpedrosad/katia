@@ -1,40 +1,43 @@
-import { Metadata } from "next";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import Link from "next/link";
+import { GeoFAQ } from "@/app/_components/GeoFAQ";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
+  path: "/voz-online/voz-ronca-causas-tratamiento",
   title: "Voz Ronca: Causas y Tratamiento Online | Fonoaudióloga Chile",
   description:
     "¿Llevas días o semanas con la voz ronca? Conoce las causas y accede a tratamiento fonoaudiológico online desde cualquier ciudad de Chile.",
-  alternates: {
-    canonical:
-      "https://www.katialafono.cl/voz-online/voz-ronca-causas-tratamiento",
+});
+
+const faqItems = [
+  {
+    question: "¿Por qué tengo la voz ronca?",
+    answer:
+      "La ronquera aparece cuando las cuerdas vocales no vibran de forma simétrica. Causas frecuentes: mal uso vocal, laringitis, reflujo, nódulos, tabaco y alergias. Si persiste más de 2 semanas, conviene evaluación.",
   },
-};
+  {
+    question: "¿Cuándo debo preocuparme por la voz ronca?",
+    answer:
+      "Si dura más de 2–3 semanas sin resfriado, empeora, duele al hablar o se repite la afonía. La ASHA recomienda no postergar la consulta.",
+  },
+  {
+    question: "¿Se puede tratar la voz ronca online?",
+    answer:
+      "Sí en casos funcionales y en rehabilitación post-diagnóstico. Primero se realiza evaluación vocal online; si hay sospecha de lesión orgánica, se coordina con otorrinolaringología.",
+  },
+];
 
 export default function VozRoncaPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "¿Por qué tengo la voz ronca?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "La ronquera se produce cuando las cuerdas vocales no vibran correctamente. Las causas más comunes son: mal uso de la voz, laringitis, reflujo laringofaríngeo, nódulos o pólipos vocales, tabaquismo y alergias. Si la ronquera dura más de 2 semanas, se recomienda evaluación fonoaudiológica.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "¿Cuándo debo preocuparme por la voz ronca?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Consulta si la ronquera dura más de 2-3 semanas sin causa clara (como un resfrío), si empeora progresivamente, si se acompaña de dolor al hablar o tragar, o si tienes antecedentes de tabaquismo.",
-        },
-      },
-    ],
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
+    })),
   };
 
   return (
@@ -56,11 +59,27 @@ export default function VozRoncaPage() {
           <h1 className="text-4xl font-extrabold text-pink-950">
             ¿Por Qué Tengo la Voz Ronca? Causas y Tratamiento Online
           </h1>
-          <p className="lead font-medium text-gray-700">
+          <p className="lead font-medium text-gray-700" data-speakable>
             La voz ronca (o disfónica) es una de las consultas más frecuentes en
             fonoaudiología de voz. Una ronquera que no se va después de un
             resfrío <strong>no es normal</strong> y merece atención. Evaluamos
             y tratamos la voz ronca online para todo Chile.
+          </p>
+          <p className="not-prose my-4 rounded-xl border border-pink-200 bg-pink-50/80 p-4 text-sm text-pink-900">
+            <strong>Dato:</strong> La ASHA señala que la ronquera persistente
+            (&gt;2 semanas) debe evaluarse para descartar patología laríngea.
+            <cite className="mt-1 block text-xs text-pink-700 not-italic">
+              Fuente:{" "}
+              <a
+                href="https://www.asha.org/public/speech/disorders/Hoarseness/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-pink-900"
+              >
+                American Speech-Language-Hearing Association (ASHA)
+              </a>
+              , ronquera persistente.
+            </cite>
           </p>
 
           <section>
@@ -171,9 +190,15 @@ export default function VozRoncaPage() {
             </p>
           </section>
 
+          <GeoFAQ
+            items={faqItems}
+            includeJsonLd={false}
+            className="not-prose my-12 rounded-2xl border border-pink-100 bg-pink-50/40 p-8"
+          />
+
           <div className="mt-12 flex justify-center">
             <WhatsAppCTA
-              href="https://wa.me/56995497838?text=Hola,%20tengo%20la%20voz%20ronca%20hace%20tiempo%20y%20busco%20ayuda%20online"
+              message="Hola, tengo la voz ronca hace tiempo y busco ayuda online"
               className="bg-pink-600 hover:bg-pink-700 ring-pink-300"
             >
               Evaluar mi Voz Ronca Online

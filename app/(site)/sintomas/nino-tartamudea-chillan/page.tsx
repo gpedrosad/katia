@@ -1,157 +1,241 @@
-import { Metadata } from "next";
-import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
-import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import Link from "next/link";
+import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
+import { StickyWhatsApp } from "@/app/_components/StickyWhatsApp";
+import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
+import { buildPageMetadata } from "@/lib/seo";
+import { SITE_URL, whatsappUrl } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Mi Hijo Tartamudea | Evaluación de Fluidez en Chillán",
+const PAGE_PATH = "/sintomas/nino-tartamudea-chillan";
+const WHATSAPP_LINK = whatsappUrl("Hola, mi hijo tartamudea y quisiera una evaluación en Chillán");
+
+export const metadata = buildPageMetadata({
+  path: PAGE_PATH,
+  title: "Mi hijo tartamudea | Evaluación Chillán",
   description:
-    "¿Tu hijo repite sílabas, se traba o bloquea al hablar? Evaluamos la fluidez del habla infantil en Chillán. Aprende a diferenciar tartamudeo normal de patológico.",
-  alternates: {
-    canonical:
-      "https://www.katialafono.cl/sintomas/nino-tartamudea-chillan",
-  },
+    "¿Tu hijo repite sílabas o se traba al hablar? Diferencia disfluencia normal y tartamudez. Qué hacer y evaluación de fluidez fonoaudiológica en Chillán.",
+  keywords: ["fonoaudióloga Chillán", "fonoaudiología infantil", "nino tartamudea chillan"],
+});
+
+const signalsByAge = [
+  { age: "2-3 años", concern: "Repite palabras enteras («yo yo quiero») sin tensión; suele ser evolutivo." },
+  { age: "3-4 años", concern: "Aparecen repeticiones de sonidos («p-p-papá») o prolongaciones." },
+  { age: "4-5 años", concern: "Bloqueos con esfuerzo facial o movimientos asociados." },
+  { age: "5-6 años", concern: "Evita hablar en el jardín o con personas nuevas." },
+  { age: "6+ años", concern: "Tartamudez persistente más de 6 meses con frustración." },
+];
+
+const actionsNow = [
+  { icon: "🤫", title: "Escucha sin interrumpir", description: "Mantén contacto visual; no completes todas sus frases." },
+  { icon: "🐢", title: "Modela ritmo calmado", description: "Habla un poco más lento tú, sin pedirle que «hable despacio»." },
+  { icon: "😌", title: "Reduce presión", description: "Evita situaciones de exposición forzada si él está tenso." },
+  { icon: "📋", title: "Evalúa si hay alerta", description: "Si hay repeticiones de sonidos, bloqueos o evitación, agenda evaluación de fluidez." },
+];
+
+const faqs = [
+  { q: "¿Es normal que un niño tartamudee?", a: "Hay disfluencia normal entre 2-5 años. Consulta si hay repeticiones de sonidos, bloqueos, tensión o duración mayor a 6 meses." },
+  { q: "¿Qué NO debo decir?", a: "Evita «respira», «piensa antes» o «relájate»; aumentan la presión." },
+  { q: "¿Se puede tratar en la infancia?", a: "Sí. La intervención temprana en fluidez mejora pronóstico y confianza." },
+  { q: "¿Qué evalúan en consulta?", a: "Tipo y frecuencia de disfluencias, conductas secundarias y impacto emocional." },
+];
+
+const medicalWebPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "@id": `${SITE_URL}${PAGE_PATH}#webpage`,
+  name: "¿Tu hijo tartamudea? Cuándo actuar en Chillán",
+  description: "¿Tu hijo repite sílabas o se traba al hablar? Diferencia disfluencia normal y tartamudez. Qué hacer y evaluación de fluidez fonoaudiológica en Chillán.",
+  medicalSpecialty: "SpeechTherapy",
+  about: { "@type": "MedicalCondition", name: "Trastornos de la fluidez del habla" },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
 };
 
 export default function NinoTartamudeaPage() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "¿Es normal que un niño tartamudee?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Existe una 'disfluencia normal del desarrollo' que ocurre entre los 2 y 5 años mientras el niño aprende a estructurar frases más complejas. Sin embargo, si la tartamudez dura más de 6 meses, incluye tensión muscular visible, bloqueos o el niño evita hablar, se recomienda evaluación fonoaudiológica.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "¿Cuándo debo consultar por tartamudez infantil?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Consulta si el niño repite sonidos o sílabas más de 3 veces seguidas, si muestra tensión facial al hablar, si las disfluencias duran más de 6 meses, o si el niño muestra frustración o evita hablar.",
-        },
-      },
-    ],
-  };
-
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalWebPageJsonLd) }}
       />
-      <main className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
-        <Breadcrumbs
-          items={[
-            { label: "Inicio", href: "/" },
-            {
-              label: "Fonoaudiología",
-              href: "/fonoaudiologia-infantil-chillan",
-            },
-            { label: "Tartamudez Infantil" },
-          ]}
-        />
-
-        <article className="prose prose-yellow lg:prose-lg max-w-none">
-          <h1 className="text-4xl font-extrabold text-yellow-950">
-            ¿Tu hijo tartamudea? Cuándo preocuparte y dónde consultar en
-            Chillán
-          </h1>
-          <p className="lead font-medium text-gray-700">
-            Escuchar que tu hijo repite sílabas (&quot;pe-pe-pe-pelota&quot;), prolonga
-            sonidos (&quot;ssssopa&quot;) o se queda &quot;trabado&quot; sin poder sacar la
-            palabra puede ser angustiante. La buena noticia: no siempre es
-            tartamudez patológica. Pero sí necesitas saber cuándo actuar.
-          </p>
-
-          <section>
-            <h2 className="text-2xl font-bold mt-8 text-yellow-900">
-              Disfluencia normal vs. tartamudez
-            </h2>
-            <div className="grid sm:grid-cols-2 gap-4 not-prose">
-              <div className="bg-green-50 rounded-xl p-5 border border-green-200">
-                <h3 className="font-bold text-green-900 mb-2">
-                  ✅ Disfluencia normal (2-5 años)
-                </h3>
-                <ul className="text-green-800 text-sm space-y-1">
-                  <li>• Repite palabras completas (&quot;yo yo yo quiero&quot;)</li>
-                  <li>• Usa muletillas (&quot;eh...&quot;, &quot;mmm...&quot;)</li>
-                  <li>• No muestra tensión ni frustración</li>
-                  <li>• Dura menos de 6 meses</li>
-                </ul>
-              </div>
-              <div className="bg-red-50 rounded-xl p-5 border border-red-200">
-                <h3 className="font-bold text-red-900 mb-2">
-                  ⚠️ Señales de alerta
-                </h3>
-                <ul className="text-red-800 text-sm space-y-1">
-                  <li>• Repite sonidos o sílabas (&quot;p-p-p-papá&quot;)</li>
-                  <li>• Bloqueos visibles con tensión facial</li>
-                  <li>• Movimientos asociados (parpadeo, puños)</li>
-                  <li>• Evita hablar o situaciones sociales</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          <div className="bg-yellow-50 p-6 rounded-xl my-8 border border-yellow-200">
-            <h3 className="text-xl font-bold text-yellow-900 mt-0">
-              Evaluación de fluidez en Chillán
-            </h3>
-            <p className="text-yellow-800">
-              En nuestra consulta presencial en <strong>Chillán</strong>,
-              evaluamos el tipo, frecuencia y severidad de las disfluencias.
-              Analizamos si hay conductas secundarias (tensión, evitación) y
-              construimos un perfil claro que nos permite diferenciar la
-              disfluencia normal de una tartamudez que requiere intervención
-              temprana. Mientras antes consultemos, mejores son los resultados.
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white">
+        <section className="px-4 py-12 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl">
+            <Breadcrumbs
+              items={[
+                { label: "Inicio", href: "/" },
+                { label: "Síntomas", href: "/fonoaudiologia-infantil-chillan" },
+                { label: "Tartamudez" },
+              ]}
+            />
+            <span className="mb-4 mt-6 inline-block rounded-full bg-yellow-100 px-4 py-2 text-sm font-medium text-yellow-700">
+              Fluidez del habla
+            </span>
+            <h1 className="mb-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
+              ¿Tu hijo tartamudea? Cuándo actuar en Chillán
+            </h1>
+            <p
+              data-speakable
+              className="mb-6 text-xl leading-relaxed text-gray-600"
+            >
+              Escuchar repeticiones o bloqueos puede angustiar a la familia. Entre los 2 y 5 años hay disfluencias normales del desarrollo, pero ciertas señales indican que conviene evaluar la fluidez del habla cuanto antes.
             </p>
-          </div>
-
-          <section>
-            <h2 className="text-2xl font-bold mt-8 text-yellow-900">
-              ¿Qué hacer mientras tanto?
-            </h2>
-            <ul>
-              <li>
-                <strong>No lo presiones:</strong> Evita decir &quot;habla más
-                despacio&quot; o &quot;piensa antes de hablar&quot;.
+            <ul className="mb-8 space-y-3 text-gray-700">
+              <li className="flex items-start gap-3">
+                <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">✓</span>
+                <span><strong>Señales por edad</strong> para decidir si consultar</span>
               </li>
-              <li>
-                <strong>Escucha con paciencia:</strong> Mantén contacto visual y
-                no completes sus frases.
+              <li className="flex items-start gap-3">
+                <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">✓</span>
+                <span><strong>Estrategias de estimulación</strong> sin presionar al niño</span>
               </li>
-              <li>
-                <strong>Modela habla pausada:</strong> Habla tú más lento, sin
-                que parezca forzado.
-              </li>
-              <li>
-                <strong>Consulta:</strong> Si las disfluencias llevan más de 6
-                meses, agenda una{" "}
-                <Link
-                  href="/evaluacion-fonoaudiologica-infantil-chillan"
-                  className="font-semibold text-yellow-700"
-                >
-                  evaluación fonoaudiológica
-                </Link>
-                .
+              <li className="flex items-start gap-3">
+                <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">✓</span>
+                <span><strong>Derivación a terapia</strong> si hay retraso o TEL</span>
               </li>
             </ul>
-          </section>
-
-          <div className="mt-12 flex justify-center">
-            <WhatsAppCTA
-              href="https://wa.me/56995497838?text=Hola,%20mi%20hijo%20tartamudea%20y%20quisiera%20una%20evaluaci%C3%B3n%20en%20Chill%C3%A1n"
-              className="bg-yellow-600 hover:bg-yellow-700 ring-yellow-300"
-            >
-              Evaluar la fluidez de mi hijo
+            <WhatsAppCTA href={WHATSAPP_LINK} className="bg-yellow-600 hover:bg-yellow-700 ring-yellow-300">
+              Consultar por WhatsApp
             </WhatsAppCTA>
           </div>
-        </article>
+        </section>
+
+        <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl">
+            <p className="mb-8 text-center text-lg leading-relaxed text-gray-600">La <strong>ASHA</strong> recomienda consulta si las disfluencias duran más de 6 meses, hay tensión visible o el niño evita hablar. (<a href="https://www.asha.org/public/speech/disorders/stuttering/" target="_blank" rel="noopener noreferrer" className="font-medium text-yellow-600 underline">ASHA</a>).</p>
+            <h2 className="mb-4 text-center text-3xl font-bold text-gray-900">
+              Señales por edad
+            </h2>
+            <p className="mb-10 text-center text-lg text-gray-600">
+              Cada etapa tiene hitos esperados. Si tu hijo está por debajo de
+              varios de estos, conviene una evaluación.
+            </p>
+            <div className="space-y-4">
+              {signalsByAge.map((s) => (
+                <div
+                  key={s.age}
+                  className="flex items-center gap-4 rounded-xl border border-yellow-100 bg-white p-4 shadow-sm"
+                >
+                  <div className="flex h-16 w-24 flex-shrink-0 items-center justify-center rounded-lg bg-yellow-100 text-center">
+                    <span className="text-sm font-bold text-yellow-700">{s.age}</span>
+                  </div>
+                  <p className="text-gray-700">{s.concern}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-10 text-center">
+              <WhatsAppCTA href={WHATSAPP_LINK}>Consultar mi caso</WhatsAppCTA>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-yellow-50 px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="mb-6 text-center text-3xl font-bold text-gray-900">
+              ¿Qué puede estar pasando?
+            </h2>
+            <p className="mb-8 text-center text-gray-600">Más en <a href="/glosario/disfemia">glosario: disfemia</a>, <a href="/chillan/disfemia">tartamudez en Chillán</a>, <a href="/servicios/terapia-del-habla-infantil-chillan">terapia del habla</a> y <a href="/evaluacion-fonoaudiologica-infantil-chillan">evaluación</a>.</p>
+          </div>
+        </section>
+
+        <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="mb-10 text-center text-3xl font-bold text-gray-900">
+              Qué hacer ahora
+            </h2>
+            <div className="grid gap-6 sm:grid-cols-2">
+              {actionsNow.map((b) => (
+                <div
+                  key={b.title}
+                  className="flex items-start gap-4 rounded-xl border border-gray-100 bg-gray-50 p-6"
+                >
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-yellow-100 text-2xl">
+                    {b.icon}
+                  </div>
+                  <div>
+                    <h3 className="mb-2 font-semibold text-gray-900">{b.title}</h3>
+                    <p className="text-sm text-gray-600">{b.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-yellow-50 px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="mb-10 text-center text-3xl font-bold text-gray-900">
+              Preguntas frecuentes
+            </h2>
+            <div className="space-y-4">
+              {faqs.map((f) => (
+                <details
+                  key={f.q}
+                  className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm"
+                >
+                  <summary className="flex cursor-pointer items-start justify-between gap-4 font-semibold text-gray-900">
+                    <span>{f.q}</span>
+                    <span className="flex-shrink-0 text-yellow-500 transition-transform group-open:rotate-180">
+                      ▼
+                    </span>
+                  </summary>
+                  <p className="mt-4 text-gray-600">{f.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="mb-8 text-center text-2xl font-bold text-gray-900">
+              Recursos relacionados
+            </h2>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              <Link href="/tratamientos/retraso-del-lenguaje-chillan" className="rounded-xl border border-gray-200 p-4 text-center transition-colors hover:border-yellow-300 hover:bg-yellow-50">
+                <span className="text-2xl">💬</span>
+                <p className="mt-2 font-medium text-gray-900">Retraso del lenguaje</p>
+              </Link>
+              <Link href="/evaluacion-fonoaudiologica-infantil-chillan" className="rounded-xl border border-gray-200 p-4 text-center transition-colors hover:border-yellow-300 hover:bg-yellow-50">
+                <span className="text-2xl">📋</span>
+                <p className="mt-2 font-medium text-gray-900">Evaluación</p>
+              </Link>
+              <Link href="/glosario/tel" className="rounded-xl border border-gray-200 p-4 text-center transition-colors hover:border-yellow-300 hover:bg-yellow-50">
+                <span className="text-2xl">📖</span>
+                <p className="mt-2 font-medium text-gray-900">Glosario TEL</p>
+              </Link>
+              <Link href="/sintomas/hijo-no-arma-frases-chillan" className="rounded-xl border border-gray-200 p-4 text-center transition-colors hover:border-yellow-300 hover:bg-yellow-50">
+                <span className="text-2xl">📝</span>
+                <p className="mt-2 font-medium text-gray-900">No arma frases</p>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-gradient-to-br from-gray-900 to-gray-800 px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="mb-4 text-3xl font-bold text-white">
+              ¿Te preocupa su fluidez al hablar?
+            </h2>
+            <p className="mb-8 text-xl text-gray-200">
+              Evaluación de tartamudez infantil en Chillán.
+            </p>
+            <WhatsAppCTA href={WHATSAPP_LINK}>Agendar por WhatsApp</WhatsAppCTA>
+          </div>
+        </section>
       </main>
+      <StickyWhatsApp href={WHATSAPP_LINK} />
     </>
   );
 }

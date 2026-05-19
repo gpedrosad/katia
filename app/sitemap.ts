@@ -4,16 +4,6 @@ import { SITE_URL } from "@/lib/site";
 
 const LAST_MODIFIED = "2026-05-19";
 
-const SECONDARY_PRIORITY_SLUGS = new Set([
-  "fonoaudiologia-infantil-chillan",
-  "fonoaudiologo-pediatrico-chillan",
-  "especialista-lenguaje-infantil-chillan",
-  "evaluacion-fonoaudiologica-infantil-chillan",
-  "terapia-de-lenguaje-infantil-chillan",
-  "problemas-lectoescritura-chillan",
-  "terapia-tea-comunicacion-chillan",
-]);
-
 function getGlosarioTermUrls(): MetadataRoute.Sitemap {
   return GLOSARIO_TERMINOS.map((t) => ({
     url: `${SITE_URL}/glosario/${t.slug}`,
@@ -39,13 +29,10 @@ function entry(
 export default function sitemap(): MetadataRoute.Sitemap {
   const secondaryServiciosSlugs = [
     "test-de-lenguaje-infantil-chillan",
-    "terapia-de-lenguaje-infantil-chillan",
     "terapia-del-habla-infantil-chillan",
     "estimulacion-temprana-del-lenguaje-chillan",
     "conciencia-fonologica-chillan",
     "informe-fonoaudiologico-pie-chillan",
-    "terapia-tea-comunicacion-chillan",
-    "problemas-lectoescritura-chillan",
   ];
 
   return [
@@ -59,14 +46,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry("/servicios/tea-trastorno-espectro-autista", 0.8),
     entry("/servicios/dificultades-lectoescritura", 0.8),
     entry("/glosario", 0.7),
+    entry("/comparaciones", 0.75, "monthly"),
+    entry("/sintomas", 0.75, "monthly"),
+    entry("/chillan", 0.75, "monthly"),
+    entry("/comparaciones/dislalia-vs-trastorno-fonologico", 0.7, "monthly"),
+    entry("/comparaciones/tel-vs-retraso-del-lenguaje", 0.7, "monthly"),
     ...getGlosarioTermUrls(),
     entry("/recursos", 0.7),
-    entry("/fonoaudiologia-infantil-chillan", 0.5),
-    entry("/evaluacion-fonoaudiologica-infantil-chillan", 0.5),
-    entry("/fonoaudiologo-pediatrico-chillan", 0.5),
-    entry("/especialista-lenguaje-infantil-chillan", 0.5),
     entry("/agendar-hora-fonoaudiologo-infantil-chillan", 0.75),
-    entry("/chillan/lenguaje-infantil", 0.5),
     ...[
       "retraso-del-lenguaje-chillan",
       "retraso-del-habla-chillan",
@@ -83,12 +70,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       "nino-no-entiende-instrucciones-chillan",
       "nino-tartamudea-chillan",
     ].map((slug) => entry(`/sintomas/${slug}`, 0.7)),
-    ...secondaryServiciosSlugs.map((slug) =>
-      entry(
-        `/servicios/${slug}`,
-        SECONDARY_PRIORITY_SLUGS.has(slug) ? 0.5 : 0.8
-      )
-    ),
+    ...secondaryServiciosSlugs.map((slug) => entry(`/servicios/${slug}`, 0.8)),
     ...[
       "dislalia",
       "retraso-del-lenguaje",

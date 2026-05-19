@@ -1,24 +1,27 @@
-import { Metadata } from "next";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import Link from "next/link";
+import { buildPageMetadata, buildWebPageJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title:
-    "TEA y Comunicación | Fonoaudiología para Autismo en Chillán",
+const CANONICAL_PATH = "/servicios/tea-trastorno-espectro-autista";
+
+export const metadata = buildPageMetadata({
+  path: "/servicios/terapia-tea-comunicacion-chillan",
+  canonicalPath: "/servicios/tea-trastorno-espectro-autista",
+  title: "TEA y Comunicación | Fonoaudiología para Autismo en Chillán",
   description:
     "Terapia fonoaudiológica para niños con TEA en Chillán. Trabajamos comunicación funcional, comprensión social y habilidades pragmáticas del lenguaje.",
-  alternates: {
-    canonical:
-      "https://www.katialafono.cl/servicios/tea-trastorno-espectro-autista",
-  },
-};
+});
 
 export default function TerapiaTeaComunicacionPage() {
   const jsonLd = {
-    "@context": "https://schema.org",
+    ...buildWebPageJsonLd({
+      path: CANONICAL_PATH,
+      name: "TEA y Comunicación - Fonoaudiología en Chillán",
+      description:
+        "Intervención fonoaudiológica enfocada en las dificultades comunicativas y pragmáticas asociadas al Trastorno del Espectro Autista en niños.",
+    }),
     "@type": "MedicalWebPage",
-    name: "TEA y Comunicación - Fonoaudiología en Chillán",
     medicalSpecialty: "SpeechTherapy",
     about: {
       "@type": "MedicalCondition",
@@ -144,7 +147,7 @@ export default function TerapiaTeaComunicacionPage() {
 
           <div className="mt-12 flex justify-center">
             <WhatsAppCTA
-              href="https://wa.me/56995497838?text=Hola,%20busco%20terapia%20fonoaudiol%C3%B3gica%20para%20mi%20hijo%20con%20TEA%20en%20Chill%C3%A1n"
+              message="Hola, busco terapia fonoaudiológica para mi hijo con TEA en Chillán"
               className="bg-teal-600 hover:bg-teal-700 ring-teal-300"
             >
               Consultar por Terapia TEA

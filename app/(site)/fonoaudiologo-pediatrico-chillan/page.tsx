@@ -1,21 +1,27 @@
-import { Metadata } from "next";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import Link from "next/link";
+import { buildPageMetadata, buildWebPageJsonLd } from "@/lib/seo";
+import { SITE_URL } from "@/lib/site";
 
-export const metadata: Metadata = {
+const CANONICAL_PATH = "/fonoaudiologa-ninos-chillan";
+
+export const metadata = buildPageMetadata({
+  path: "/fonoaudiologo-pediatrico-chillan",
+  canonicalPath: "/fonoaudiologa-ninos-chillan",
   title: "Fonoaudiólogo Pediátrico en Chillán | Especialista de Niños",
-  description: "Tratamiento con fonoaudióloga pediátrica presencial en Chillán. Diagnósticos clínicos para niños en un ambiente amigable y seguro.",
-  alternates: {
-    canonical: "https://www.katialafono.cl/fonoaudiologa-ninos-chillan",
-  },
-};
+  description:
+    "Tratamiento con fonoaudióloga pediátrica presencial en Chillán. Diagnósticos clínicos para niños en un ambiente amigable y seguro.",
+});
 
 export default function FonoaudiologoPediatricoPage() {
+  const pillarUrl = `${SITE_URL}${CANONICAL_PATH}`;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Katia Domínguez",
+    "@id": `${pillarUrl}#person`,
+    url: pillarUrl,
+    name: "Katia Domínguez",
     "jobTitle": "Fonoaudióloga",
     "address": {
       "@type": "PostalAddress",
@@ -28,14 +34,24 @@ export default function FonoaudiologoPediatricoPage() {
       { "@type": "TherapeuticProcedure", "name": "Psicomotricidad Oral Infantil" },
       { "@type": "TherapeuticProcedure", "name": "Terapia de Lenguaje Infantil" }
     ],
-    "description": "Fonoaudiología médica especializada de niños."
+    description: "Fonoaudiología médica especializada de niños.",
   };
+  const webPageJsonLd = buildWebPageJsonLd({
+    path: CANONICAL_PATH,
+    name: "Fonoaudiólogo Pediátrico en Chillán | Especialista de Niños",
+    description:
+      "Tratamiento con fonoaudióloga pediátrica presencial en Chillán. Diagnósticos clínicos para niños en un ambiente amigable y seguro.",
+  });
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
       />
       <main className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
         <Breadcrumbs
@@ -73,7 +89,7 @@ export default function FonoaudiologoPediatricoPage() {
           </div>
 
           <div className="mt-12 flex justify-center">
-            <WhatsAppCTA href="https://wa.me/56995497838?text=Hola,%20busco%20hora%20con%20Fonoaudi%C3%B3loga%20Pedi%C3%A1trica%20en%20Chill%C3%A1n" className="bg-fuchsia-600 hover:bg-fuchsia-700 ring-fuchsia-300">
+            <WhatsAppCTA message="Hola, busco hora con Fonoaudióloga Pediátrica en Chillán" className="bg-fuchsia-600 hover:bg-fuchsia-700 ring-fuchsia-300">
               Agendar con Fono Pediátrica
             </WhatsAppCTA>
           </div>

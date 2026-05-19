@@ -1,17 +1,14 @@
-import { Metadata } from "next";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import Link from "next/link";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
+  path: "/servicios/terapia-del-habla-infantil-chillan",
   title: "Terapia del Habla Infantil en Chillán | Fonoaudióloga Especialista",
   description:
     "Terapia del habla para niños en Chillán. Tratamiento presencial de problemas articulatorios, fluidez y pronunciación con fonoaudióloga pediátrica.",
-  alternates: {
-    canonical:
-      "https://www.katialafono.cl/servicios/terapia-del-habla-infantil-chillan",
-  },
-};
+});
 
 export default function TerapiaHablaInfantilPage() {
   const jsonLd = {
@@ -131,7 +128,7 @@ export default function TerapiaHablaInfantilPage() {
 
           <div className="mt-12 flex justify-center">
             <WhatsAppCTA
-              href="https://wa.me/56995497838?text=Hola,%20busco%20terapia%20del%20habla%20para%20mi%20hijo%20en%20Chill%C3%A1n"
+              message="Hola, busco terapia del habla para mi hijo en Chillán"
               className="bg-orange-600 hover:bg-orange-700 ring-orange-300"
             >
               Agendar Terapia del Habla

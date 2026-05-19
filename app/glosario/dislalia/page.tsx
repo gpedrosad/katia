@@ -1,16 +1,17 @@
-import { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../_components/Breadcrumbs";
 import { Footer } from "../../_components/Footer";
 import { Header } from "../../_components/Header";
 import { WhatsAppCTA } from "../../_components/WhatsAppCTA";
+import { buildPageMetadata } from "@/lib/seo";
+import { SITE_URL } from "@/lib/site";
 
-const SITE_URL = "https://www.katialafono.cl";
 const PAGE_PATH = "/glosario/dislalia";
 const WHATSAPP_LINK =
   "https://wa.me/56995497838?text=Hola%2C%20quiero%20consultar%20por%20dislalia";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
+  path: PAGE_PATH,
   title: "¿Qué es la Dislalia? | Causas, Síntomas y Tratamiento",
   description:
     "Qué es la dislalia: dificultad para pronunciar sonidos correctamente. Conoce tipos, causas, síntomas y tratamiento. Fonoaudióloga en Chillán con +20 años de experiencia.",
@@ -22,18 +23,8 @@ export const metadata: Metadata = {
     "dislalia en niños",
     "pronunciación incorrecta",
   ],
-  alternates: {
-    canonical: `${SITE_URL}${PAGE_PATH}`,
-  },
-  openGraph: {
-    title: "¿Qué es la Dislalia? | Causas, Síntomas y Tratamiento",
-    description:
-      "Guía completa sobre dislalia: qué es, tipos, causas y cómo se trata.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "article",
-    locale: "es_CL",
-  },
-};
+  ogType: "article",
+});
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -55,7 +46,7 @@ const jsonLd = {
     "@id": `${SITE_URL}${PAGE_PATH}`,
   },
   datePublished: "2024-06-01",
-  dateModified: "2025-05-01",
+  dateModified: "2026-05-19",
 };
 
 const faqJsonLd = {

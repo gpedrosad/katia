@@ -1,26 +1,32 @@
 "use client";
 
+import { whatsappUrl } from "@/lib/site";
+
 interface WhatsAppCTAProps {
-  href: string;
+  href?: string;
+  message?: string;
   children: React.ReactNode;
   className?: string;
 }
 
 export function WhatsAppCTA({
   href,
+  message,
   children,
   className = "",
 }: WhatsAppCTAProps) {
+  const linkHref = href ?? (message ? whatsappUrl(message) : whatsappUrl());
+
   const handleClick = () => {
     if (typeof window !== "undefined") {
       window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({ event: "whatsapp_lead", label: href });
+      window.dataLayer.push({ event: "whatsapp_lead", label: linkHref });
     }
   };
 
   return (
     <a
-      href={href}
+      href={linkHref}
       target="_blank"
       rel="noopener noreferrer"
       onClick={handleClick}

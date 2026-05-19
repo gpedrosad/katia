@@ -1,18 +1,34 @@
-import { Metadata } from "next";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import { TestimonialCard } from "@/app/_components/TestimonialCard";
 import Link from "next/link";
+import { GeoFAQ } from "@/app/_components/GeoFAQ";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
+  path: "/voz-online/rehabilitacion-vocal-profesionales-voz",
   title: "Rehabilitación Vocal para Profesionales de la Voz | Online Chile",
   description:
     "¿Eres locutor, cantante o animador y tu voz empezó a fallar? Entrenamiento y rehabilitación vocal online exclusiva para profesionales en Chile.",
-  alternates: {
-    canonical:
-      "https://www.katialafono.cl/voz-online/rehabilitacion-vocal-profesionales-voz",
+});
+
+const faqItems = [
+  {
+    question: "¿Qué profesionales deberían hacer rehabilitación vocal?",
+    answer:
+      "Cantantes, actores, locutores, profesores, abogados, vendedores y cualquier persona cuyo trabajo exija uso vocal prolongado o de alto rendimiento.",
   },
-};
+  {
+    question: "¿La rehabilitación vocal online sirve para artistas?",
+    answer:
+      "Sí. Se adaptan ejercicios de calentamiento, técnica y recuperación post-show, con seguimiento acústico por videollamada.",
+  },
+  {
+    question: "¿Cuánto dura un programa para profesionales de la voz?",
+    answer:
+      "Varía según la lesión: desde 6 semanas en disfonía funcional hasta varios meses si hay nódulos o cirugía previa.",
+  },
+];
 
 export default function RehabilitacionVocalProfesionalesPage() {
   const jsonLd = {
@@ -52,8 +68,26 @@ export default function RehabilitacionVocalProfesionalesPage() {
             <h1 className="text-4xl font-extrabold text-indigo-950 mb-6">
               Si vives de tu voz, no puedes permitirte que te abandone
             </h1>
-            <p className="lead font-medium text-gray-700 max-w-3xl mx-auto">
-              Como cantante, actor, animador u orador recurrente, tu instrumento vocal es el centro de tu sustento. Cuando experimentas quiebres sorpresivos, notas que se escapan o fatiga incontrolable post-show, tu carrera entera entra en pánico. 
+            <p
+              className="lead font-medium text-gray-700 max-w-3xl mx-auto"
+              data-speakable
+            >
+              Como cantante, actor, animador u orador recurrente, tu instrumento vocal es el centro de tu sustento. Cuando experimentas quiebres sorpresivos, notas que se escapan o fatiga incontrolable post-show, tu carrera entera entra en pánico.
+            </p>
+            <p className="mx-auto mt-4 max-w-2xl text-sm text-indigo-800">
+              <strong>Dato:</strong> Los cantantes profesionales reportan hasta 5 veces más síntomas vocales que hablantes ocasionales.
+              <cite className="mt-1 block text-xs text-indigo-700 not-italic">
+                Fuente:{" "}
+                <a
+                  href="https://www.asha.org/public/speech/disorders/Voice/Performers-Use-Their-Voices/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-indigo-900"
+                >
+                  ASHA — Performers and Voice
+                </a>
+                ; estudios de medicina de la voz en artistas.
+              </cite>
             </p>
           </header>
 
@@ -66,7 +100,7 @@ export default function RehabilitacionVocalProfesionalesPage() {
                 El dolor y la inestabilidad en la voz humana profesional no ocurre por azar. Ocurre por uso indebido y sobrecarga bajo tensión. A través de nuestra terapia de rehabilitación 100% online y personalizada te devolveremos el rango, la proyección clara y la resistencia de atleta vocal que necesitas arriba del escenario.
               </p>
               <WhatsAppCTA
-                href="https://wa.me/56995497838?text=Hola,%20soy%20profesional%20vocal%20y%20necesito%20ayuda%20experta%20v%C3%ADa%20online."
+                message="Hola, soy profesional vocal y necesito ayuda experta vía online."
                 className="bg-indigo-600 hover:bg-indigo-700 ring-indigo-300 w-full sm:w-auto"
               >
                 Recuperar Mi Voz Profesional
@@ -109,6 +143,11 @@ export default function RehabilitacionVocalProfesionalesPage() {
               />
             </div>
           </section>
+
+          <GeoFAQ
+            items={faqItems}
+            className="not-prose my-12 rounded-2xl border border-indigo-100 bg-indigo-50/40 p-8"
+          />
         </article>
       </main>
     </>

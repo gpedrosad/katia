@@ -1,48 +1,43 @@
-import { Metadata } from "next";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import Link from "next/link";
+import { GeoFAQ } from "@/app/_components/GeoFAQ";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
+  path: "/voz-online/higiene-vocal-cuidado-voz",
   title: "Higiene Vocal: Cómo Cuidar tu Voz | Fonoaudióloga Online Chile",
   description:
     "Guía de higiene vocal y cuidado de la voz para profesionales y cantantes. Consejos prácticos y asesoría fonoaudiológica online para todo Chile.",
-  alternates: {
-    canonical:
-      "https://www.katialafono.cl/voz-online/higiene-vocal-cuidado-voz",
+});
+
+const faqItems = [
+  {
+    question: "¿Qué es la higiene vocal?",
+    answer:
+      "Conjunto de hábitos que protegen las cuerdas vocales: hidratación, evitar carraspear y gritar, descansos vocales y reducir irritantes como tabaco y alcohol.",
   },
-};
+  {
+    question: "¿Cuánta agua debo tomar para cuidar mi voz?",
+    answer:
+      "Aproximadamente 2 litros diarios a temperatura ambiente. La hidratación sistémica mantiene las mucosas laríngeas lubricadas.",
+  },
+  {
+    question: "¿Carraspear daña la voz?",
+    answer:
+      "Sí. Carrasear golpea las cuerdas vocales y puede generar edema. Mejor tragar saliva, beber agua o hacer un bostezo suave.",
+  },
+];
 
 export default function HigieneVocalPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "¿Qué es la higiene vocal?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "La higiene vocal es un conjunto de hábitos y prácticas que protegen las cuerdas vocales y mantienen la salud de la voz. Incluye hidratación adecuada, evitar carraspear, no gritar, descansar la voz y evitar irritantes como tabaco y alcohol.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "¿Cuánta agua debo tomar para cuidar mi voz?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Se recomienda beber al menos 2 litros de agua al día a temperatura ambiente. Las cuerdas vocales necesitan estar hidratadas para vibrar correctamente. Evita cafeína en exceso y alcohol, ya que deshidratan las mucosas.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "¿Carraspear daña la voz?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Sí. Carraspear es como golpear las cuerdas vocales entre sí con fuerza. Si lo haces frecuentemente, genera irritación e inflamación. Alternativas: tragar saliva, tomar un sorbo de agua o hacer un bostezo suave.",
-        },
-      },
-    ],
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
+    })),
   };
 
   return (
@@ -64,11 +59,28 @@ export default function HigieneVocalPage() {
           <h1 className="text-4xl font-extrabold text-teal-950">
             Higiene Vocal: Cómo Cuidar tu Voz Correctamente
           </h1>
-          <p className="lead font-medium text-gray-700">
+          <p className="lead font-medium text-gray-700" data-speakable>
             La higiene vocal son los hábitos diarios que protegen tus cuerdas
             vocales y previenen el deterioro de la voz. Es la base de cualquier
             tratamiento vocal y lo primero que trabajamos en terapia. Aquí te
             comparto las recomendaciones esenciales.
+          </p>
+          <p className="not-prose my-4 rounded-xl border border-teal-200 bg-teal-50/80 p-4 text-sm text-teal-900">
+            <strong>Dato:</strong> La deshidratación reduce la lubricación de
+            las cuerdas vocales y empeora la calidad vocal; la ASHA recomienda
+            hidratación sistemática como pilar de higiene vocal.
+            <cite className="mt-1 block text-xs text-teal-700 not-italic">
+              Fuente:{" "}
+              <a
+                href="https://www.asha.org/public/speech/development/taking-care-of-your-voice/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-teal-900"
+              >
+                American Speech-Language-Hearing Association (ASHA)
+              </a>
+              , higiene vocal.
+            </cite>
           </p>
 
           <section>
@@ -187,9 +199,15 @@ export default function HigieneVocalPage() {
             y te entrego un protocolo a medida.
           </p>
 
+          <GeoFAQ
+            items={faqItems}
+            includeJsonLd={false}
+            className="not-prose my-12 rounded-2xl border border-teal-100 bg-teal-50/40 p-8"
+          />
+
           <div className="mt-12 flex justify-center">
             <WhatsAppCTA
-              href="https://wa.me/56995497838?text=Hola,%20quiero%20aprender%20a%20cuidar%20mi%20voz%20correctamente,%20atenci%C3%B3n%20online"
+              message="Hola, quiero aprender a cuidar mi voz correctamente, atención online"
               className="bg-teal-600 hover:bg-teal-700 ring-teal-300"
             >
               Quiero Cuidar mi Voz

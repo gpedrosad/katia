@@ -145,6 +145,22 @@ export default async function GlosarioTermPage({ params }: PageProps) {
                 <p key={p.slice(0, 40)}>{p}</p>
               ))}
 
+              {termino.sourceUrl && (
+                <p className="text-sm text-gray-600">
+                  <cite className="not-italic">
+                    Fuente:{" "}
+                    <a
+                      href={termino.sourceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium text-rose-700 underline hover:text-rose-800"
+                    >
+                      {termino.sourceLabel ?? "Referencia clínica"}
+                    </a>
+                  </cite>
+                </p>
+              )}
+
               <h2>Señales comunes</h2>
               <ul>
                 {termino.commonSigns.map((sign) => (

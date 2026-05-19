@@ -5,8 +5,8 @@ import { notFound } from "next/navigation";
 import { PATOLOGIAS, getPatologiaBySlug } from "./patologias";
 import { WhatsAppCTA } from "../lenguaje-infantil/_components/WhatsAppCTA";
 import { StickyWhatsApp } from "../lenguaje-infantil/_components/StickyWhatsApp";
-
-const SITE_URL = "https://www.katialafono.cl";
+import { buildPageMetadata } from "@/lib/seo";
+import { SITE_URL } from "@/lib/site";
 
 export async function generateStaticParams() {
   return PATOLOGIAS.map((p) => ({ slug: p.slug }));
@@ -21,13 +21,13 @@ export async function generateMetadata({
   const patologia = getPatologiaBySlug(slug);
   if (!patologia) return { title: "No encontrado" };
 
-  const title = patologia.titulo;
   const description =
     patologia.descripcion.slice(0, 155) +
     " Evaluación y terapia presencial en Chillán. Agenda por WhatsApp.";
 
-  return {
-    title,
+  return buildPageMetadata({
+    path: `/chillan/${patologia.slug}`,
+    title: patologia.titulo,
     description,
     keywords: [
       patologia.titulo,
@@ -35,21 +35,7 @@ export async function generateMetadata({
       `tratamiento ${patologia.slug} niños`,
       "fonoaudiología infantil Chillán",
     ],
-    alternates: { canonical: `${SITE_URL}/chillan/${patologia.slug}` },
-    openGraph: {
-      title,
-      description,
-      url: `${SITE_URL}/chillan/${patologia.slug}`,
-      type: "website",
-      locale: "es_CL",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-    },
-    robots: { index: true, follow: true },
-  };
+  });
 }
 
 export default async function PatologiaChillanPage({

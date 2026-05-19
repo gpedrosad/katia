@@ -1,40 +1,27 @@
 import Image from "next/image";
-import { Metadata } from "next";
+import { SITE_URL, whatsappUrl } from "@/lib/site";
+import { buildPageMetadata } from "@/lib/seo";
 import { Breadcrumbs } from "../../_components/Breadcrumbs";
 import { Footer } from "../../_components/Footer";
 import { Header } from "../../_components/Header";
 import { WhatsAppCTA } from "../../_components/WhatsAppCTA";
 import { StickyWhatsApp } from "../../_components/StickyWhatsApp";
 
-const SITE_URL = "https://www.katialafono.cl";
 const PAGE_PATH = "/servicios/tel-trastorno-especifico-lenguaje";
-const WHATSAPP_LINK =
-  "https://wa.me/56995497838?text=Hola%2C%20quiero%20consultar%20por%20TEL";
+const WHATSAPP_HREF = whatsappUrl("Hola, quiero consultar por TEL");
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
+  path: PAGE_PATH,
   title: "Tratamiento TEL en Chillán | Trastorno Específico del Lenguaje",
   description:
     "Tratamiento especializado del Trastorno Específico del Lenguaje (TEL) en niños en Chillán. Diagnóstico, terapia intensiva y apoyo escolar. Fonoaudióloga con +20 años de experiencia.",
-  keywords: [
-    "TEL Chillán",
+  keywords: ["TEL Chillán",
     "trastorno específico del lenguaje",
     "TEL tratamiento",
     "fonoaudióloga TEL Chillán",
     "trastorno del desarrollo del lenguaje",
-    "TDL tratamiento",
-  ],
-  alternates: {
-    canonical: `${SITE_URL}${PAGE_PATH}`,
-  },
-  openGraph: {
-    title: "Tratamiento TEL en Chillán | Trastorno Específico del Lenguaje",
-    description:
-      "Tratamiento especializado del TEL con enfoque personalizado y apoyo familiar.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-    locale: "es_CL",
-  },
-};
+    "TDL tratamiento",],
+});
 
 const characteristics = [
   {
@@ -173,7 +160,7 @@ export default function TELPage() {
                     </span>
                   </li>
                 </ul>
-                <WhatsAppCTA href={WHATSAPP_LINK}>
+                <WhatsAppCTA href={WHATSAPP_HREF}>
                   Consultar por WhatsApp
                 </WhatsAppCTA>
                 <p className="mt-4 text-sm text-gray-500">
@@ -241,7 +228,7 @@ export default function TELPage() {
             </div>
 
             <div className="mt-10 text-center">
-              <WhatsAppCTA href={WHATSAPP_LINK}>
+              <WhatsAppCTA href={WHATSAPP_HREF}>
                 Consultar mi caso por WhatsApp
               </WhatsAppCTA>
             </div>
@@ -441,7 +428,7 @@ export default function TELPage() {
               Una evaluación especializada puede confirmar el diagnóstico y
               definir el mejor plan de tratamiento.
             </p>
-            <WhatsAppCTA href={WHATSAPP_LINK}>
+            <WhatsAppCTA href={WHATSAPP_HREF}>
               Consultar por WhatsApp
             </WhatsAppCTA>
             <p className="mt-6 text-gray-300">
@@ -451,7 +438,7 @@ export default function TELPage() {
         </section>
       </main>
       <Footer />
-      <StickyWhatsApp href={WHATSAPP_LINK} />
+      <StickyWhatsApp href={WHATSAPP_HREF} />
     </>
   );
 }

@@ -1,23 +1,27 @@
-import { Metadata } from "next";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import Link from "next/link";
+import { buildPageMetadata, buildWebPageJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = {
+const CANONICAL_PATH = "/servicios/dificultades-lectoescritura";
+
+export const metadata = buildPageMetadata({
+  path: "/servicios/problemas-lectoescritura-chillan",
+  canonicalPath: "/servicios/dificultades-lectoescritura",
   title: "Problemas de Lectoescritura en Niños",
   description:
     "¿Tu hijo tiene problemas para leer o escribir? La fonoaudiología trata las bases lingüísticas de la lectoescritura. Atención presencial en Chillán.",
-  alternates: {
-    canonical:
-      "https://www.katialafono.cl/servicios/dificultades-lectoescritura",
-  },
-};
+});
 
 export default function ProblemasLectoescrituraPage() {
   const jsonLd = {
-    "@context": "https://schema.org",
+    ...buildWebPageJsonLd({
+      path: CANONICAL_PATH,
+      name: "Problemas de Lectoescritura - Fonoaudiología Chillán",
+      description:
+        "Dificultades en el aprendizaje de la lectura y escritura que tienen relación con bases lingüísticas como la conciencia fonológica, vocabulario y procesamiento del lenguaje.",
+    }),
     "@type": "MedicalWebPage",
-    name: "Problemas de Lectoescritura - Fonoaudiología Chillán",
     medicalSpecialty: "SpeechTherapy",
     about: {
       "@type": "MedicalCondition",
@@ -153,7 +157,7 @@ export default function ProblemasLectoescrituraPage() {
 
           <div className="mt-12 flex justify-center">
             <WhatsAppCTA
-              href="https://wa.me/56995497838?text=Hola,%20mi%20hijo%20tiene%20problemas%20de%20lectoescritura.%20Busco%20hora%20en%20Chill%C3%A1n"
+              message="Hola, mi hijo tiene problemas de lectoescritura. Busco hora en Chillán"
               className="bg-emerald-600 hover:bg-emerald-700 ring-emerald-300"
             >
               Consultar por Lectoescritura

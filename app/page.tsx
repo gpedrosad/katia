@@ -1,9 +1,34 @@
 import Image from "next/image";
 import Link from "next/link";
+import { GeoFAQ } from "@/app/_components/GeoFAQ";
+import { buildWebPageJsonLd } from "@/lib/seo";
 import { Header } from "./_components/Header";
 import { Footer } from "./_components/Footer";
 import { ServiceCard } from "./_components/ServiceCard";
 import { TestimonialCard } from "./_components/TestimonialCard";
+
+const homeFaqItems = [
+  {
+    question: "¿Dónde está la consulta de fonoaudiología infantil en Chillán?",
+    answer:
+      "Atención presencial en Chillán, Región de Ñuble. Coordina tu hora por WhatsApp; respondemos en horario hábil de lunes a viernes.",
+  },
+  {
+    question: "¿Qué problemas trata la fonoaudióloga para niños?",
+    answer:
+      "Retraso del lenguaje y del habla, dislalia, trastorno fonológico, TEL, dificultades de comprensión, lectoescritura y apoyo comunicativo en TEA.",
+  },
+  {
+    question: "¿Cómo es la primera consulta en Chillán?",
+    answer:
+      "Inicia con evaluación fonoaudiológica de aproximadamente 60 minutos, pruebas según edad e informe con diagnóstico y plan de tratamiento.",
+  },
+  {
+    question: "¿A qué edad conviene evaluar el lenguaje?",
+    answer:
+      "La ASHA señala que los trastornos del lenguaje afectan alrededor del 7% de los escolares; si hay dudas antes de los 3 años o el colegio lo solicita, conviene evaluar sin esperar. Fuente: https://www.asha.org/public/speech/disorders/language-disorders/",
+  },
+];
 
 const WHATSAPP_LINK =
   "https://wa.me/56995497838?text=Hola%2C%20quiero%20agendar%20una%20hora";
@@ -166,12 +191,24 @@ const localBusinessSchema = {
   ],
 };
 
+const webPageJsonLd = buildWebPageJsonLd({
+  path: "/",
+  name: "Fonoaudióloga en Chillán | Katia Domínguez",
+  description:
+    "Fonoaudióloga en Chillán especialista en terapia de lenguaje infantil, trastornos del habla, TEL, TEA y lectoescritura. Más de 20 años de experiencia.",
+  speakable: true,
+});
+
 export default function Home() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
       />
       <Header />
       <main className="min-h-screen bg-gradient-to-b from-rose-50 to-white">
@@ -385,6 +422,17 @@ export default function Home() {
                 </li>
               </ul>
             </div>
+          </div>
+        </section>
+
+        {/* FAQ — consulta Chillán */}
+        <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl">
+            <GeoFAQ
+              items={homeFaqItems}
+              heading="Preguntas sobre la consulta en Chillán"
+              className="rounded-2xl border border-rose-100 bg-rose-50/50 p-8"
+            />
           </div>
         </section>
 

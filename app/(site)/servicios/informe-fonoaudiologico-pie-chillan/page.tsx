@@ -1,18 +1,33 @@
-import { Metadata } from "next";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
+import { GeoFAQ } from "@/app/_components/GeoFAQ";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import Link from "next/link";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title:
-    "Informe Fonoaudiológico para PIE y Escuelas de Lenguaje | Chillán",
+const faqItems = [
+  {
+    question: "¿Para qué sirve un informe fonoaudiológico PIE?",
+    answer:
+      "Documenta diagnóstico, áreas afectadas y plan de intervención para ingresar o mantener apoyos en el Programa de Integración Escolar o postular a escuela de lenguaje en Chillán y Ñuble.",
+  },
+  {
+    question: "¿Cuánto demora la evaluación e informe?",
+    answer:
+      "La evaluación presencial dura aproximadamente 60 minutos con test estandarizados (TEPROSIF-R, TECAL, STSG según corresponda). El informe escrito se entrega en plazo acordado en consulta.",
+  },
+  {
+    question: "¿Es obligatorio un diagnóstico formal?",
+    answer:
+      "Para PIE y escuelas de lenguaje se requiere evaluación con test y diagnóstico fonoaudiológico. La ASHA estima que ~7% de niños en edad escolar presentan trastornos del lenguaje; documentarlo facilita acceso a apoyos. Fuente: https://www.asha.org/public/speech/disorders/language-disorders/",
+  },
+];
+
+export const metadata = buildPageMetadata({
+  path: "/servicios/informe-fonoaudiologico-pie-chillan",
+  title: "Informe Fonoaudiológico para PIE y Escuelas de Lenguaje | Chillán",
   description:
     "Informes fonoaudiológicos válidos para Programa de Integración Escolar (PIE) y postulación a escuelas de lenguaje en Chillán. Diagnóstico con test estandarizados.",
-  alternates: {
-    canonical:
-      "https://www.katialafono.cl/servicios/informe-fonoaudiologico-pie-chillan",
-  },
-};
+});
 
 export default function InformePiePage() {
   const jsonLd = {
@@ -54,7 +69,7 @@ export default function InformePiePage() {
           <h1 className="text-4xl font-extrabold text-violet-950">
             Informe Fonoaudiológico para PIE y Escuelas de Lenguaje en Chillán
           </h1>
-          <p className="lead font-medium text-gray-700">
+          <p className="lead font-medium text-gray-700" data-speakable>
             ¿El colegio o jardín infantil te pidió un informe fonoaudiológico
             para ingresar al <strong>Programa de Integración Escolar (PIE)</strong>{" "}
             o postular a una <strong>escuela de lenguaje</strong>? Realizamos
@@ -141,9 +156,14 @@ export default function InformePiePage() {
             </ul>
           </section>
 
+          <GeoFAQ
+            items={faqItems}
+            className="not-prose my-12 rounded-2xl border border-violet-100 bg-violet-50/40 p-8"
+          />
+
           <div className="mt-12 flex justify-center">
             <WhatsAppCTA
-              href="https://wa.me/56995497838?text=Hola,%20necesito%20un%20informe%20fonoaudiol%C3%B3gico%20para%20PIE%20en%20Chill%C3%A1n"
+              message="Hola, necesito un informe fonoaudiológico para PIE en Chillán"
               className="bg-violet-600 hover:bg-violet-700 ring-violet-300"
             >
               Solicitar Informe PIE

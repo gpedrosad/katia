@@ -1,17 +1,14 @@
-import { Metadata } from "next";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import Link from "next/link";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
+  path: "/servicios/estimulacion-temprana-del-lenguaje-chillan",
   title: "Estimulación Temprana del Lenguaje en Chillán | 0 a 3 Años",
   description:
     "Estimulación temprana del lenguaje para bebés y niños de 0 a 3 años en Chillán. Intervención fonoaudiológica presencial para potenciar las primeras palabras.",
-  alternates: {
-    canonical:
-      "https://www.katialafono.cl/servicios/estimulacion-temprana-del-lenguaje-chillan",
-  },
-};
+});
 
 export default function EstimulacionTempranaPage() {
   const jsonLd = {
@@ -127,7 +124,7 @@ export default function EstimulacionTempranaPage() {
 
           <div className="mt-12 flex justify-center">
             <WhatsAppCTA
-              href="https://wa.me/56995497838?text=Hola,%20busco%20estimulaci%C3%B3n%20temprana%20del%20lenguaje%20para%20mi%20beb%C3%A9%20en%20Chill%C3%A1n"
+              message="Hola, busco estimulación temprana del lenguaje para mi bebé en Chillán"
               className="bg-cyan-600 hover:bg-cyan-700 ring-cyan-300"
             >
               Consultar por Estimulación Temprana

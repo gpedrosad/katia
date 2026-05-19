@@ -1,67 +1,31 @@
+import { SITE_URL, whatsappUrl } from "@/lib/site";
+import { buildPageMetadata } from "@/lib/seo";
 import Image from "next/image";
-import { Metadata } from "next";
+import Link from "next/link";
 
 // Componentes compartidos
 import { ConcernCard } from "../chillan/lenguaje-infantil/_components/ConcernCard";
 import { WhatsAppCTA } from "../chillan/lenguaje-infantil/_components/WhatsAppCTA";
 import { StickyWhatsApp } from "../chillan/lenguaje-infantil/_components/StickyWhatsApp";
 
-// ============================================================================
-// CONFIGURACIÓN - Editar estos valores según sea necesario
-// ============================================================================
-
-const SITE_URL = "https://www.katialafono.cl";
 const PAGE_PATH = "/fonoaudiologa-ninos-chillan";
+const WHATSAPP_HREF = whatsappUrl("Hola, quiero agendar una evaluación de lenguaje para mi hijo/a");
 
-const WHATSAPP_NUMBER = "56995497838";
-const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=Hola%2C%20quiero%20agendar%20una%20evaluaci%C3%B3n%20de%20lenguaje%20para%20mi%20hijo%2Fa`;
-
-// ============================================================================
-// METADATA SEO
-// ============================================================================
-
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
+  path: PAGE_PATH,
   title:
     "Fonoaudióloga en Chillán para Niños | Evaluación y Terapia de Lenguaje y Habla",
   description:
     "Evaluación y terapia de lenguaje y habla para niños en Chillán. Especialista en trastornos del habla, dificultades de pronunciación y lectoescritura. +20 años de experiencia. Agenda tu hora.",
-  keywords: [
-    "fonoaudióloga en Chillán",
+  keywords: ["fonoaudióloga en Chillán",
     "fonoaudióloga para niños",
     "terapia de lenguaje para niños",
     "trastornos del habla",
     "dificultades de lectura y escritura",
     "fonoaudiología infantil Chillán",
     "problemas de pronunciación niños",
-    "terapia fonoaudiológica Chillán",
-  ],
-  alternates: {
-    canonical: `${SITE_URL}${PAGE_PATH}`,
-  },
-  openGraph: {
-    title: "Fonoaudióloga en Chillán para Niños – Terapia de Lenguaje y Habla",
-    description:
-      "Evaluación y tratamiento fonoaudiológico infantil en Chillán. Ayudamos a tu hijo con problemas de lenguaje, habla, pronunciación y lectoescritura.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-    locale: "es_CL",
-    siteName: "Katia Domínguez - Fonoaudióloga",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Fonoaudióloga en Chillán para Niños | Terapia de Lenguaje",
-    description:
-      "Evaluación y terapia de lenguaje y habla para niños en Chillán. +20 años de experiencia.",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
-  },
-};
+    "terapia fonoaudiológica Chillán",],
+});
 
 // ============================================================================
 // JSON-LD STRUCTURED DATA
@@ -269,6 +233,29 @@ const therapySteps = [
   },
 ];
 
+const guiasPorTema = [
+  { href: "/sintomas/mi-hijo-no-habla-bien-chillan", label: "Mi hijo no habla bien" },
+  { href: "/sintomas/nino-pronuncia-mal-chillan", label: "Niño pronuncia mal" },
+  { href: "/sintomas/hijo-habla-poco-edad-chillan", label: "Hijo habla poco para su edad" },
+  { href: "/sintomas/hijo-no-arma-frases-chillan", label: "Hijo no arma frases" },
+  { href: "/sintomas/nino-no-entiende-instrucciones-chillan", label: "Niño no entiende instrucciones" },
+  { href: "/sintomas/nino-tartamudea-chillan", label: "Niño tartamudea" },
+  { href: "/tratamientos/dislalia-infantil-chillan", label: "Tratamiento dislalia infantil" },
+  { href: "/tratamientos/retraso-del-lenguaje-chillan", label: "Retraso del lenguaje" },
+  { href: "/tratamientos/retraso-del-habla-chillan", label: "Retraso del habla" },
+  { href: "/tratamientos/tel-trastorno-especifico-lenguaje-chillan", label: "TEL en Chillán" },
+  { href: "/tratamientos/trastorno-fonologico-chillan", label: "Trastorno fonológico" },
+  { href: "/tratamientos/apraxia-del-habla-infantil-chillan", label: "Apraxia del habla infantil" },
+  { href: "/chillan/dislalia", label: "Dislalia en Chillán" },
+  { href: "/chillan/retraso-del-lenguaje", label: "Retraso del lenguaje en Chillán" },
+  { href: "/chillan/tel", label: "TEL en Chillán" },
+  { href: "/chillan/dislexia", label: "Dislexia y fonoaudiología" },
+  { href: "/chillan/lectoescritura", label: "Dificultades de lectoescritura" },
+  { href: "/glosario", label: "Glosario fonoaudiológico" },
+  { href: "/comparaciones", label: "Comparaciones clínicas (dislalia, TEL…)" },
+  { href: "/servicios/evaluacion-fonoaudiologica", label: "Evaluación fonoaudiológica infantil" },
+];
+
 const benefits = [
   {
     icon: "🎯",
@@ -373,7 +360,7 @@ export default function FonoaudiologaNinosChillanPage() {
                 </ul>
 
                 <div className="flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
-                  <WhatsAppCTA href={WHATSAPP_LINK}>
+                  <WhatsAppCTA href={WHATSAPP_HREF}>
                     Agendar evaluación por WhatsApp
                   </WhatsAppCTA>
                 </div>
@@ -459,7 +446,7 @@ export default function FonoaudiologaNinosChillanPage() {
 
             {/* CTA intermedio */}
             <div className="mt-12 text-center">
-              <WhatsAppCTA href={WHATSAPP_LINK}>
+              <WhatsAppCTA href={WHATSAPP_HREF}>
                 Consultar mi caso por WhatsApp
               </WhatsAppCTA>
               <p className="mt-3 text-sm text-gray-600">
@@ -611,6 +598,48 @@ export default function FonoaudiologaNinosChillanPage() {
           </div>
         </section>
 
+        {/* Guías por tema */}
+        <section className="bg-rose-50 px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-5xl">
+            <div className="mb-10 text-center">
+              <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
+                Guías por tema
+              </h2>
+              <p className="mx-auto max-w-2xl text-lg text-gray-600">
+                Explora síntomas, tratamientos y patologías según lo que observas
+                en tu hijo. Cada guía explica señales y cuándo agendar evaluación.
+              </p>
+            </div>
+            <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {guiasPorTema.map((guia) => (
+                <li key={guia.href}>
+                  <Link
+                    href={guia.href}
+                    className="block rounded-xl border border-rose-100 bg-white px-4 py-3 text-sm font-medium text-gray-800 shadow-sm transition hover:border-rose-300 hover:text-rose-700"
+                  >
+                    {guia.label} →
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-6 text-center text-sm text-gray-600">
+              <Link
+                href="/sintomas"
+                className="font-medium text-rose-600 underline hover:text-rose-700"
+              >
+                Ver índice de síntomas
+              </Link>
+              {" · "}
+              <Link
+                href="/chillan"
+                className="font-medium text-rose-600 underline hover:text-rose-700"
+              >
+                Todas las patologías en Chillán
+              </Link>
+            </p>
+          </div>
+        </section>
+
         {/* FAQs Section */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl">
@@ -721,7 +750,7 @@ export default function FonoaudiologaNinosChillanPage() {
 
             {/* CTA after FAQs */}
             <div className="mt-12 text-center">
-              <WhatsAppCTA href={WHATSAPP_LINK}>
+              <WhatsAppCTA href={WHATSAPP_HREF}>
                 Resolver mis dudas por WhatsApp
               </WhatsAppCTA>
               <p className="mt-3 text-sm text-gray-600">
@@ -741,7 +770,7 @@ export default function FonoaudiologaNinosChillanPage() {
               Una evaluación de lenguaje a tiempo puede marcar la diferencia en
               el desarrollo de tu hijo. Escríbeme y conversemos sobre su caso.
             </p>
-            <WhatsAppCTA href={WHATSAPP_LINK} className="text-lg sm:text-xl">
+            <WhatsAppCTA href={WHATSAPP_HREF} className="text-lg sm:text-xl">
               Agendar evaluación por WhatsApp
             </WhatsAppCTA>
             <p className="mt-6 text-base text-gray-300">
@@ -762,7 +791,7 @@ export default function FonoaudiologaNinosChillanPage() {
         </footer>
 
         {/* Sticky WhatsApp Button */}
-        <StickyWhatsApp href={WHATSAPP_LINK} />
+        <StickyWhatsApp href={WHATSAPP_HREF} />
       </div>
     </>
   );

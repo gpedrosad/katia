@@ -3,11 +3,11 @@ import Link from "next/link";
 const hubs = [
   {
     href: "/fonoaudiologa-ninos-chillan",
-    label: "Fonoaudióloga para niños en Chillán",
+    label: "Fonoaudióloga para niños en Chillán (pilar)",
   },
   {
-    href: "/fonoaudiologia-infantil-chillan",
-    label: "Fonoaudiología infantil Chillán (hub)",
+    href: "/chillan",
+    label: "Patologías del lenguaje en Chillán",
   },
   {
     href: "/chillan/lenguaje-infantil",
@@ -16,6 +16,10 @@ const hubs = [
   {
     href: "/voz-online/fonoaudiologa-de-voz-online",
     label: "Fonoaudióloga de voz online",
+  },
+  {
+    href: "/agendar-hora-fonoaudiologo-infantil-chillan",
+    label: "Agendar hora fonoaudiólogo infantil",
   },
 ];
 
@@ -46,7 +50,30 @@ const services = [
   },
 ];
 
+const tratamientos = [
+  {
+    href: "/tratamientos/dislalia-infantil-chillan",
+    label: "Dislalia infantil Chillán",
+  },
+  {
+    href: "/tratamientos/retraso-del-lenguaje-chillan",
+    label: "Retraso del lenguaje Chillán",
+  },
+  {
+    href: "/tratamientos/tel-trastorno-especifico-lenguaje-chillan",
+    label: "TEL Chillán",
+  },
+  {
+    href: "/tratamientos/trastorno-fonologico-chillan",
+    label: "Trastorno fonológico Chillán",
+  },
+];
+
 const sintomasFrecuentes = [
+  {
+    href: "/sintomas",
+    label: "Índice de síntomas",
+  },
   {
     href: "/sintomas/mi-hijo-no-habla-bien-chillan",
     label: "Mi hijo no habla bien",
@@ -63,10 +90,42 @@ const sintomasFrecuentes = [
     href: "/sintomas/hijo-no-arma-frases-chillan",
     label: "Hijo no arma frases",
   },
+  {
+    href: "/sintomas/nino-no-entiende-instrucciones-chillan",
+    label: "Niño no entiende instrucciones",
+  },
+  {
+    href: "/sintomas/nino-tartamudea-chillan",
+    label: "Niño tartamudea",
+  },
+];
+
+const ciudadesVozOnline = [
+  {
+    href: "/voz-online/fonoaudiologa-voz-santiago",
+    label: "Fonoaudióloga de voz Santiago",
+  },
+  {
+    href: "/voz-online/fonoaudiologa-voz-concepcion",
+    label: "Fonoaudióloga de voz Concepción",
+  },
+  {
+    href: "/voz-online/fonoaudiologa-voz-vina-del-mar",
+    label: "Fonoaudióloga de voz Viña del Mar",
+  },
+  {
+    href: "/voz-online/fonoaudiologa-voz-temuco",
+    label: "Fonoaudióloga de voz Temuco",
+  },
+  {
+    href: "/voz-online/fonoaudiologa-voz-antofagasta",
+    label: "Fonoaudióloga de voz Antofagasta",
+  },
 ];
 
 const resources = [
   { href: "/glosario", label: "Glosario fonoaudiológico" },
+  { href: "/comparaciones", label: "Comparaciones clínicas" },
   { href: "/recursos", label: "Recursos para padres" },
 ];
 
@@ -115,6 +174,21 @@ export function Footer() {
                 </li>
               ))}
             </ul>
+            <h4 className="mb-2 mt-6 text-sm font-medium text-white">
+              Voz online por ciudad
+            </h4>
+            <ul className="space-y-2">
+              {ciudadesVozOnline.map((c) => (
+                <li key={c.href}>
+                  <Link
+                    href={c.href}
+                    className="text-sm text-gray-400 hover:text-rose-400 hover:underline"
+                  >
+                    {c.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div>
@@ -127,6 +201,21 @@ export function Footer() {
                     className="text-sm text-gray-400 hover:text-rose-400 hover:underline"
                   >
                     {service.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <h3 className="mb-4 mt-6 text-lg font-semibold text-white">
+              Tratamientos
+            </h3>
+            <ul className="space-y-2">
+              {tratamientos.map((t) => (
+                <li key={t.href}>
+                  <Link
+                    href={t.href}
+                    className="text-sm text-gray-400 hover:text-rose-400 hover:underline"
+                  >
+                    {t.label}
                   </Link>
                 </li>
               ))}

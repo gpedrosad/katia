@@ -1,18 +1,29 @@
-import { Metadata } from "next";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import { TestimonialCard } from "@/app/_components/TestimonialCard";
 import Link from "next/link";
+import { buildPageMetadata } from "@/lib/seo";
+import { GeoFAQ } from "@/app/_components/GeoFAQ";
 
-export const metadata: Metadata = {
+const faqItems = [
+  {
+    question: "¿Puedo hacer terapia vocal online si vivo en Viña del Mar?",
+    answer:
+      "Sí. Atendemos a pacientes de Viña, Valparaíso y la región por videollamada desde su hogar u oficina.",
+  },
+  {
+    question: "¿Qué trastornos de la voz se tratan online desde la Quinta Región?",
+    answer:
+      "Disfonía, fatiga vocal, nódulos en tratamiento conservador, higiene vocal y rehabilitación para profesionales de la voz.",
+  },
+];
+
+export const metadata = buildPageMetadata({
+  path: "/voz-online/fonoaudiologa-voz-vina-del-mar",
   title: "Fonoaudióloga experta en Voz en Viña del Mar | Vía Online",
   description:
     "El mejor tratamiento fonoaudiológico para problemas de voz ahora sin salir de Viña del Mar o Valparaíso. Nódulos y fatiga vocal rehabilitada remotamente.",
-  alternates: {
-    canonical:
-      "https://www.katialafono.cl/voz-online/fonoaudiologa-voz-vina-del-mar",
-  },
-};
+});
 
 export default function FonoaudiologaVozVinaDelMarPage() {
   const jsonLd = {
@@ -50,8 +61,26 @@ export default function FonoaudiologaVozVinaDelMarPage() {
             <h1 className="text-4xl font-extrabold text-teal-950 mb-6">
               Fonoaudióloga especialista en Voz: Atención Online para Viña del Mar
             </h1>
-            <p className="lead font-medium text-gray-700 max-w-3xl mx-auto">
-              Recupera y protege tu salud vocal sin tener que cruzar todo el tráfico de la Av. España. Para vecinos de <strong>Viña del Mar y Valparaíso</strong>, les ofrecemos la rehabilitación fonoaudiológica más contundente para sus laringes desde la privacidad que prefieran. 
+            <p
+              className="lead font-medium text-gray-700 max-w-3xl mx-auto"
+              data-speakable
+            >
+              Recupera y protege tu salud vocal sin tener que cruzar todo el tráfico de la Av. España. Para vecinos de <strong>Viña del Mar y Valparaíso</strong>, les ofrecemos la rehabilitación fonoaudiológica más contundente para sus laringes desde la privacidad que prefieran.
+            </p>
+            <p className="mx-auto mt-4 max-w-2xl text-sm text-purple-800">
+              <strong>Dato:</strong> La ASHA respalda la tele-práctica fonoaudiológica con protocolos validados y equipamiento adecuado.
+              <cite className="mt-1 block text-xs text-purple-700 not-italic">
+                Fuente:{" "}
+                <a
+                  href="https://www.asha.org/practice/telepractice/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-purple-900"
+                >
+                  American Speech-Language-Hearing Association (ASHA)
+                </a>
+                , tele-práctica fonoaudiológica.
+              </cite>
             </p>
           </header>
 
@@ -64,7 +93,7 @@ export default function FonoaudiologaVozVinaDelMarPage() {
                 Ignorar la ronquera por semanas te acerca irremediablemente a nódulos o la temida afonía permanente. La gran solución médica actual prescrita es la intervención tele-operada. Te enseño posturas asertivas para recuperar los sonidos agudos perdidos y volver a ser el dueño absoluto de tu proyección.
               </p>
               <WhatsAppCTA
-                href="https://wa.me/56995497838?text=Hola,%20soy%20de%20Vi%C3%B1a%20y%20necesito%20tratar%20mi%20fatiga%20vocal%20online."
+                message="Hola, soy de Viña y necesito tratar mi fatiga vocal online."
                 className="bg-teal-600 hover:bg-teal-700 ring-teal-300 w-full sm:w-auto"
               >
                 Inicia tu Rehabilitación hoy
@@ -104,6 +133,11 @@ export default function FonoaudiologaVozVinaDelMarPage() {
               />
             </div>
           </section>
+
+          <GeoFAQ
+            items={faqItems}
+            className="not-prose my-12 rounded-2xl border border-purple-100 bg-purple-50/40 p-8"
+          />
         </article>
       </main>
     </>

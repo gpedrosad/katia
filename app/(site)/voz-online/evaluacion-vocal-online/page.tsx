@@ -1,16 +1,33 @@
-import { Metadata } from "next";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import Link from "next/link";
+import { GeoFAQ } from "@/app/_components/GeoFAQ";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
+  path: "/voz-online/evaluacion-vocal-online",
   title: "Evaluación Vocal Online | Diagnóstico de Voz Chile",
   description:
     "Evaluación fonoaudiológica de la voz online para adultos en todo Chile. Análisis acústico, perceptual y funcional de tu voz desde tu hogar.",
-  alternates: {
-    canonical: "https://www.katialafono.cl/voz-online/evaluacion-vocal-online",
+});
+
+const faqItems = [
+  {
+    question: "¿Qué incluye una evaluación vocal online?",
+    answer:
+      "Anamnesis vocal, análisis perceptual (GRBAS/CAPE-V), registro acústico, pruebas funcionales (tiempos máximos de fonación, relación s/z) e informe con plan de tratamiento.",
   },
-};
+  {
+    question: "¿Necesito equipamiento especial?",
+    answer:
+      "Solo un dispositivo con cámara, micrófono de buena calidad y conexión estable. Se solicitan grabaciones de voz en un ambiente silencioso siguiendo instrucciones del protocolo.",
+  },
+  {
+    question: "¿La evaluación online es válida clínicamente?",
+    answer:
+      "Sí para adultos con trastornos funcionales de la voz. La literatura de telefonoaudiología respalda evaluación perceptiva y acústica remota; si se sospecha lesión orgánica, se deriva a nasofibrolaringoscopía.",
+  },
+];
 
 export default function EvaluacionVocalOnlinePage() {
   const jsonLd = {
@@ -44,11 +61,29 @@ export default function EvaluacionVocalOnlinePage() {
           <h1 className="text-4xl font-extrabold text-violet-950">
             Evaluación Vocal Online: Diagnóstico de Voz para Todo Chile
           </h1>
-          <p className="lead font-medium text-gray-700">
+          <p className="lead font-medium text-gray-700" data-speakable>
             Una evaluación vocal completa es el primer paso para entender qué le
             pasa a tu voz. Realizamos diagnósticos fonoaudiológicos por
             videollamada con protocolos clínicos validados, sin necesidad de
             trasladarte.
+          </p>
+          <p className="not-prose my-4 rounded-xl border border-violet-200 bg-violet-50/80 p-4 text-sm text-violet-900">
+            <strong>Dato:</strong> Revisiones sistemáticas reportan concordancia
+            aceptable entre evaluación vocal presencial y por teleconsulta en
+            adultos para parámetros perceptivos y acústicos.
+            <cite className="mt-1 block text-xs text-violet-700 not-italic">
+              Fuente:{" "}
+              <a
+                href="https://www.asha.org/practice/telepractice/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-violet-900"
+              >
+                ASHA — Telepractice
+              </a>
+              , literatura de telefonoaudiología en trastornos de la voz
+              (revisión de estudios clínicos, 2015–2024).
+            </cite>
           </p>
 
           <section>
@@ -133,9 +168,14 @@ export default function EvaluacionVocalOnlinePage() {
             </ul>
           </section>
 
+          <GeoFAQ
+            items={faqItems}
+            className="not-prose my-12 rounded-2xl border border-violet-100 bg-violet-50/40 p-8"
+          />
+
           <div className="mt-12 flex justify-center">
             <WhatsAppCTA
-              href="https://wa.me/56995497838?text=Hola,%20necesito%20una%20evaluaci%C3%B3n%20vocal%20online"
+              message="Hola, necesito una evaluación vocal online"
               className="bg-violet-600 hover:bg-violet-700 ring-violet-300"
             >
               Agendar Evaluación Vocal Online
