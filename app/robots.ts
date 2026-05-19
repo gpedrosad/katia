@@ -1,13 +1,22 @@
 import { MetadataRoute } from "next";
+import { SITE_URL } from "@/lib/site";
 
-const SITE_URL = "https://www.katialafono.cl";
+const AI_AND_SEARCH_BOTS = [
+  "*",
+  "GPTBot",
+  "ChatGPT-User",
+  "ClaudeBot",
+  "anthropic-ai",
+  "PerplexityBot",
+  "Google-Extended",
+] as const;
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: {
-      userAgent: "*",
+    rules: AI_AND_SEARCH_BOTS.map((userAgent) => ({
+      userAgent,
       allow: "/",
-    },
+    })),
     sitemap: `${SITE_URL}/sitemap.xml`,
   };
 }

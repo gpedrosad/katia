@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "../_components/Breadcrumbs";
 import { Footer } from "../_components/Footer";
 import { Header } from "../_components/Header";
+import { GLOSARIO_CATEGORIES, GLOSARIO_TERMINOS } from "./terminos";
 
 const SITE_URL = "https://www.katialafono.cl";
 const PAGE_PATH = "/glosario";
@@ -32,95 +33,6 @@ export const metadata: Metadata = {
   },
 };
 
-const terms = [
-  {
-    slug: "dislalia",
-    term: "Dislalia",
-    shortDescription:
-      "Dificultad para pronunciar ciertos sonidos correctamente.",
-    category: "Trastornos del habla",
-  },
-  {
-    slug: "tel",
-    term: "TEL (Trastorno Específico del Lenguaje)",
-    shortDescription:
-      "Trastorno que afecta la adquisición del lenguaje sin causa aparente.",
-    category: "Trastornos del lenguaje",
-  },
-  {
-    slug: "tea",
-    term: "TEA (Trastorno del Espectro Autista)",
-    shortDescription:
-      "Condición del neurodesarrollo que puede afectar la comunicación.",
-    category: "Desarrollo",
-  },
-  {
-    slug: "trastorno-fonologico",
-    term: "Trastorno fonológico",
-    shortDescription:
-      "Patrones sistemáticos de errores en los sonidos del habla.",
-    category: "Trastornos del habla",
-  },
-  {
-    slug: "retraso-del-lenguaje",
-    term: "Retraso del lenguaje",
-    shortDescription:
-      "Desarrollo del lenguaje más lento de lo esperado para la edad.",
-    category: "Trastornos del lenguaje",
-  },
-  {
-    slug: "conciencia-fonologica",
-    term: "Conciencia fonológica",
-    shortDescription:
-      "Habilidad para identificar y manipular los sonidos del lenguaje.",
-    category: "Habilidades",
-  },
-  {
-    slug: "disfasia",
-    term: "Disfasia",
-    shortDescription:
-      "Otro nombre para el Trastorno Específico del Lenguaje (TEL).",
-    category: "Trastornos del lenguaje",
-  },
-  {
-    slug: "disartria",
-    term: "Disartria",
-    shortDescription:
-      "Dificultad para hablar por debilidad de los músculos del habla.",
-    category: "Trastornos del habla",
-  },
-  {
-    slug: "apraxia-del-habla",
-    term: "Apraxia del habla",
-    shortDescription:
-      "Dificultad para planificar los movimientos necesarios para hablar.",
-    category: "Trastornos del habla",
-  },
-  {
-    slug: "disfemia",
-    term: "Disfemia (Tartamudez)",
-    shortDescription:
-      "Alteración de la fluidez del habla con repeticiones o bloqueos.",
-    category: "Trastornos del habla",
-  },
-  {
-    slug: "dislexia",
-    term: "Dislexia",
-    shortDescription:
-      "Dificultad específica para aprender a leer de origen neurobiológico.",
-    category: "Lectoescritura",
-  },
-  {
-    slug: "praxias-orofaciales",
-    term: "Praxias orofaciales",
-    shortDescription:
-      "Ejercicios de los músculos de la boca, lengua y cara.",
-    category: "Intervención",
-  },
-];
-
-const categories = [...new Set(terms.map((t) => t.category))];
-
 export default function GlosarioPage() {
   return (
     <>
@@ -142,16 +54,14 @@ export default function GlosarioPage() {
               </p>
             </div>
 
-            {/* Categories */}
-            {categories.map((category) => (
+            {GLOSARIO_CATEGORIES.map((category) => (
               <div key={category} className="mb-10">
                 <h2 className="mb-4 text-xl font-bold text-gray-900">
                   {category}
                 </h2>
                 <div className="space-y-3">
-                  {terms
-                    .filter((t) => t.category === category)
-                    .map((term) => (
+                  {GLOSARIO_TERMINOS.filter((t) => t.category === category).map(
+                    (term) => (
                       <Link
                         key={term.slug}
                         href={`/glosario/${term.slug}`}
@@ -164,12 +74,12 @@ export default function GlosarioPage() {
                           {term.shortDescription}
                         </p>
                       </Link>
-                    ))}
+                    )
+                  )}
                 </div>
               </div>
             ))}
 
-            {/* CTA */}
             <div className="mt-12 rounded-2xl bg-rose-50 p-8 text-center">
               <h2 className="mb-4 text-2xl font-bold text-gray-900">
                 ¿Tienes dudas sobre el desarrollo de tu hijo?

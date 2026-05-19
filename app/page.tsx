@@ -187,7 +187,10 @@ export default function Home() {
                 <p className="mb-4 text-2xl font-medium text-rose-600 sm:text-3xl">
                   Katia Domínguez
                 </p>
-                <p className="mb-8 text-xl leading-relaxed text-gray-600">
+                <p
+                  data-speakable
+                  className="mb-8 text-xl leading-relaxed text-gray-600"
+                >
                   Especialista en evaluación y tratamiento de trastornos del
                   lenguaje y comunicación en niños. Más de 20 años de
                   experiencia. Atención presencial en Chillán.

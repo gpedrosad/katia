@@ -333,7 +333,10 @@ export default function FonoaudiologaNinosChillanPage() {
                   Fonoaudióloga en Chillán para niños
                 </h1>
 
-                <p className="mb-6 text-xl leading-relaxed text-gray-700 sm:text-2xl">
+                <p
+                  data-speakable
+                  className="mb-6 text-xl leading-relaxed text-gray-700 sm:text-2xl"
+                >
                   Evaluación y terapia de lenguaje y habla para niños de 2 a 10
                   años
                 </p>
@@ -411,6 +414,28 @@ export default function FonoaudiologaNinosChillanPage() {
         {/* When to Consult Section */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
+            <p className="mb-10 text-center text-lg leading-relaxed text-gray-600">
+              El Trastorno Específico del Lenguaje (TEL) afecta aproximadamente al{" "}
+              <strong>7% de los niños en edad escolar</strong>, según estimaciones de la{" "}
+              <a
+                href="https://www.asha.org/public/speech/disorders/language-disorders/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-rose-600 underline hover:text-rose-700"
+              >
+                American Speech-Language-Hearing Association (ASHA)
+              </a>{" "}
+              y la{" "}
+              <a
+                href="https://www.who.int/news-room/fact-sheets/detail/developmental-disabilities-in-children"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-rose-600 underline hover:text-rose-700"
+              >
+                Organización Mundial de la Salud (OMS)
+              </a>
+              . Una evaluación temprana permite identificar si tu hijo necesita apoyo.
+            </p>
             <div className="mb-10 text-center">
               {/* H2 con variación de keyword */}
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">

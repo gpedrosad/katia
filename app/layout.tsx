@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import { Analytics } from "@vercel/analytics/react";
+import { OG_IMAGE, SITE_URL } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,13 +15,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const SITE_URL = "https://www.katialafono.cl";
-const OG_IMAGE = `${SITE_URL}/KatiaDominguezFonoaudiologa.png`;
-
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  alternates: {
+    canonical: "/",
+  },
   title: {
     default: "Fonoaudióloga en Chillán | Katia Domínguez",
-    template: "%s | Katia Domínguez - Fonoaudióloga Chillán",
+    template: "%s | Katia Domínguez",
   },
   description:
     "Fonoaudióloga en Chillán especializada en trastornos del lenguaje y comunicación en niños. Más de 20 años de experiencia. Agenda una evaluación fonoaudiológica hoy.",

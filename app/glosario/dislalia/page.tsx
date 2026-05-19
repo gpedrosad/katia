@@ -54,6 +54,8 @@ const jsonLd = {
     "@type": "WebPage",
     "@id": `${SITE_URL}${PAGE_PATH}`,
   },
+  datePublished: "2024-06-01",
+  dateModified: "2025-05-01",
 };
 
 const faqJsonLd = {

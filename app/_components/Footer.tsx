@@ -1,12 +1,68 @@
 import Link from "next/link";
 
+const hubs = [
+  {
+    href: "/fonoaudiologa-ninos-chillan",
+    label: "Fonoaudióloga para niños en Chillán",
+  },
+  {
+    href: "/fonoaudiologia-infantil-chillan",
+    label: "Fonoaudiología infantil Chillán (hub)",
+  },
+  {
+    href: "/chillan/lenguaje-infantil",
+    label: "Lenguaje infantil en Chillán",
+  },
+  {
+    href: "/voz-online/fonoaudiologa-de-voz-online",
+    label: "Fonoaudióloga de voz online",
+  },
+];
+
 const services = [
-  { href: "/servicios/terapia-lenguaje-infantil", label: "Terapia de lenguaje infantil" },
-  { href: "/servicios/trastornos-del-habla", label: "Trastornos del habla" },
-  { href: "/servicios/evaluacion-fonoaudiologica", label: "Evaluación fonoaudiológica" },
-  { href: "/servicios/tel-trastorno-especifico-lenguaje", label: "TEL" },
-  { href: "/servicios/tea-trastorno-espectro-autista", label: "TEA y comunicación" },
-  { href: "/servicios/dificultades-lectoescritura", label: "Lectoescritura" },
+  {
+    href: "/servicios/terapia-lenguaje-infantil",
+    label: "Terapia de lenguaje infantil",
+  },
+  {
+    href: "/servicios/trastornos-del-habla",
+    label: "Tratamiento de trastornos del habla",
+  },
+  {
+    href: "/servicios/evaluacion-fonoaudiologica",
+    label: "Evaluación fonoaudiológica infantil",
+  },
+  {
+    href: "/servicios/tel-trastorno-especifico-lenguaje",
+    label: "Tratamiento TEL en Chillán",
+  },
+  {
+    href: "/servicios/tea-trastorno-espectro-autista",
+    label: "TEA y comunicación en Chillán",
+  },
+  {
+    href: "/servicios/dificultades-lectoescritura",
+    label: "Dificultades de lectoescritura",
+  },
+];
+
+const sintomasFrecuentes = [
+  {
+    href: "/sintomas/mi-hijo-no-habla-bien-chillan",
+    label: "Mi hijo no habla bien",
+  },
+  {
+    href: "/sintomas/nino-pronuncia-mal-chillan",
+    label: "Niño pronuncia mal",
+  },
+  {
+    href: "/sintomas/hijo-habla-poco-edad-chillan",
+    label: "Hijo habla poco para su edad",
+  },
+  {
+    href: "/sintomas/hijo-no-arma-frases-chillan",
+    label: "Hijo no arma frases",
+  },
 ];
 
 const resources = [
@@ -15,19 +71,24 @@ const resources = [
 ];
 
 const patologiasChillan = [
-  { href: "/chillan/dislalia", label: "Dislalia Chillán" },
-  { href: "/chillan/retraso-del-lenguaje", label: "Retraso del lenguaje Chillán" },
-  { href: "/chillan/tel", label: "TEL Chillán" },
-  { href: "/chillan/dislexia", label: "Dislexia Chillán" },
-  { href: "/chillan/lectoescritura", label: "Lectoescritura Chillán" },
+  { href: "/chillan/dislalia", label: "Tratamiento dislalia en Chillán" },
+  {
+    href: "/chillan/retraso-del-lenguaje",
+    label: "Retraso del lenguaje en Chillán",
+  },
+  { href: "/chillan/tel", label: "TEL en Chillán" },
+  { href: "/chillan/dislexia", label: "Dislexia en Chillán" },
+  {
+    href: "/chillan/lectoescritura",
+    label: "Problemas de lectoescritura Chillán",
+  },
 ];
 
 export function Footer() {
   return (
     <footer className="bg-gray-950 px-4 py-12 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-6xl">
-        <div className="grid gap-8 md:grid-cols-3">
-          {/* Brand */}
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <h3 className="mb-4 text-lg font-semibold text-white">
               Katia Domínguez
@@ -39,9 +100,23 @@ export function Footer() {
             <p className="text-sm text-gray-500">
               📍 Chillán, Región de Ñuble, Chile
             </p>
+            <h4 className="mb-2 mt-6 text-sm font-medium text-white">
+              Páginas principales
+            </h4>
+            <ul className="space-y-2">
+              {hubs.map((hub) => (
+                <li key={hub.href}>
+                  <Link
+                    href={hub.href}
+                    className="text-sm text-gray-400 hover:text-rose-400 hover:underline"
+                  >
+                    {hub.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
-          {/* Services */}
           <div>
             <h3 className="mb-4 text-lg font-semibold text-white">Servicios</h3>
             <ul className="space-y-2">
@@ -58,17 +133,18 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Resources + Patologías Chillán */}
           <div>
-            <h3 className="mb-4 text-lg font-semibold text-white">Recursos</h3>
+            <h3 className="mb-4 text-lg font-semibold text-white">
+              Síntomas frecuentes
+            </h3>
             <ul className="space-y-2">
-              {resources.map((resource) => (
-                <li key={resource.href}>
+              {sintomasFrecuentes.map((s) => (
+                <li key={s.href}>
                   <Link
-                    href={resource.href}
+                    href={s.href}
                     className="text-sm text-gray-400 hover:text-rose-400 hover:underline"
                   >
-                    {resource.label}
+                    {s.label}
                   </Link>
                 </li>
               ))}
@@ -84,6 +160,22 @@ export function Footer() {
                     className="text-sm text-gray-400 hover:text-rose-400 hover:underline"
                   >
                     {p.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="mb-4 text-lg font-semibold text-white">Recursos</h3>
+            <ul className="space-y-2">
+              {resources.map((resource) => (
+                <li key={resource.href}>
+                  <Link
+                    href={resource.href}
+                    className="text-sm text-gray-400 hover:text-rose-400 hover:underline"
+                  >
+                    {resource.label}
                   </Link>
                 </li>
               ))}

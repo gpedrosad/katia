@@ -12,7 +12,7 @@ const WHATSAPP_LINK =
   "https://wa.me/56995497838?text=Hola%2C%20quiero%20consultar%20por%20terapia%20de%20lenguaje%20infantil";
 
 export const metadata: Metadata = {
-  title: "Terapia de Lenguaje Infantil en Chillán | Fonoaudióloga Katia Domínguez",
+  title: "Terapia de Lenguaje Infantil en Chillán",
   description:
     "Terapia de lenguaje para niños de 2 a 10 años en Chillán. Tratamiento de retraso del lenguaje, vocabulario limitado y dificultades de expresión. +20 años de experiencia. Agendar hora.",
   keywords: [
@@ -226,6 +226,28 @@ export default function TerapiaLenguajeInfantilPage() {
         {/* Warning Signs by Age */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
+            <p className="mb-8 text-center text-lg leading-relaxed text-gray-600">
+              Los trastornos del lenguaje en la infancia afectan aproximadamente al{" "}
+              <strong>7% de los niños en edad escolar</strong>, según la{" "}
+              <a
+                href="https://www.asha.org/public/speech/disorders/language-disorders/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-rose-600 underline hover:text-rose-700"
+              >
+                ASHA
+              </a>{" "}
+              y referencias de la{" "}
+              <a
+                href="https://www.who.int/news-room/fact-sheets/detail/developmental-disabilities-in-children"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-rose-600 underline hover:text-rose-700"
+              >
+                OMS
+              </a>
+              . Detectar señales a tiempo facilita una intervención más efectiva.
+            </p>
             <h2 className="mb-4 text-center text-3xl font-bold text-gray-900">
               Señales de alerta según la edad
             </h2>

@@ -21,7 +21,7 @@ export async function generateMetadata({
   const patologia = getPatologiaBySlug(slug);
   if (!patologia) return { title: "No encontrado" };
 
-  const title = `${patologia.titulo} | Fonoaudióloga Katia Domínguez`;
+  const title = patologia.titulo;
   const description =
     patologia.descripcion.slice(0, 155) +
     " Evaluación y terapia presencial en Chillán. Agenda por WhatsApp.";
@@ -215,6 +215,39 @@ export default async function PatologiaChillanPage({
               <WhatsAppCTA href={whatsappUrl}>
                 Consultar mi caso por WhatsApp
               </WhatsAppCTA>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="bg-rose-50 px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="mb-10 text-center text-3xl font-bold text-gray-900">
+              Preguntas frecuentes
+            </h2>
+            <div className="space-y-4">
+              <details className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+                <summary className="flex cursor-pointer items-start justify-between gap-4 font-semibold text-gray-900">
+                  <span>¿Qué es {p.titulo.split(" en ")[0]}?</span>
+                  <span className="flex-shrink-0 text-rose-500 transition-transform group-open:rotate-180">
+                    ▼
+                  </span>
+                </summary>
+                <p className="mt-4 text-gray-600">{p.descripcion}</p>
+              </details>
+              <details className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+                <summary className="flex cursor-pointer items-start justify-between gap-4 font-semibold text-gray-900">
+                  <span>¿Dónde se atiende en Chillán?</span>
+                  <span className="flex-shrink-0 text-rose-500 transition-transform group-open:rotate-180">
+                    ▼
+                  </span>
+                </summary>
+                <p className="mt-4 text-gray-600">
+                  Atención presencial en Chillán. La evaluación dura aproximadamente
+                  60 minutos e incluye informe con diagnóstico y plan de tratamiento.
+                  Se agenda por WhatsApp.
+                </p>
+              </details>
             </div>
           </div>
         </section>

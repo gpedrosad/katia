@@ -1,133 +1,72 @@
 import { MetadataRoute } from "next";
+import { GLOSARIO_TERMINOS } from "@/app/glosario/terminos";
+import { SITE_URL } from "@/lib/site";
 
-const SITE_URL = "https://www.katialafono.cl";
+const LAST_MODIFIED = "2026-05-19";
+
+const SECONDARY_PRIORITY_SLUGS = new Set([
+  "fonoaudiologia-infantil-chillan",
+  "fonoaudiologo-pediatrico-chillan",
+  "especialista-lenguaje-infantil-chillan",
+  "evaluacion-fonoaudiologica-infantil-chillan",
+  "terapia-de-lenguaje-infantil-chillan",
+  "problemas-lectoescritura-chillan",
+  "terapia-tea-comunicacion-chillan",
+]);
+
+function getGlosarioTermUrls(): MetadataRoute.Sitemap {
+  return GLOSARIO_TERMINOS.map((t) => ({
+    url: `${SITE_URL}/glosario/${t.slug}`,
+    lastModified: LAST_MODIFIED,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+}
+
+function entry(
+  path: string,
+  priority: number,
+  changeFrequency: MetadataRoute.Sitemap[0]["changeFrequency"] = "weekly"
+): MetadataRoute.Sitemap[0] {
+  return {
+    url: `${SITE_URL}${path}`,
+    lastModified: LAST_MODIFIED,
+    changeFrequency,
+    priority,
+  };
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
+  const secondaryServiciosSlugs = [
+    "test-de-lenguaje-infantil-chillan",
+    "terapia-de-lenguaje-infantil-chillan",
+    "terapia-del-habla-infantil-chillan",
+    "estimulacion-temprana-del-lenguaje-chillan",
+    "conciencia-fonologica-chillan",
+    "informe-fonoaudiologico-pie-chillan",
+    "terapia-tea-comunicacion-chillan",
+    "problemas-lectoescritura-chillan",
+  ];
 
   return [
-    // Home - página principal
-    {
-      url: SITE_URL,
-      lastModified: now.toISOString(),
-      changeFrequency: "monthly",
-      priority: 1.0,
-    },
-    // Landing SEO principal - fonoaudióloga para niños en Chillán
-    {
-      url: `${SITE_URL}/fonoaudiologa-ninos-chillan`,
-      lastModified: now.toISOString(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    // Hub de servicios
-    {
-      url: `${SITE_URL}/servicios`,
-      lastModified: now.toISOString(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    // Páginas de servicios individuales
-    {
-      url: `${SITE_URL}/servicios/terapia-lenguaje-infantil`,
-      lastModified: now.toISOString(),
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${SITE_URL}/servicios/trastornos-del-habla`,
-      lastModified: now.toISOString(),
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${SITE_URL}/servicios/evaluacion-fonoaudiologica`,
-      lastModified: now.toISOString(),
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${SITE_URL}/servicios/tel-trastorno-especifico-lenguaje`,
-      lastModified: now.toISOString(),
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${SITE_URL}/servicios/tea-trastorno-espectro-autista`,
-      lastModified: now.toISOString(),
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${SITE_URL}/servicios/dificultades-lectoescritura`,
-      lastModified: now.toISOString(),
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    // Glosario
-    {
-      url: `${SITE_URL}/glosario`,
-      lastModified: now.toISOString(),
-      changeFrequency: "weekly",
-      priority: 0.7,
-    },
-    {
-      url: `${SITE_URL}/glosario/dislalia`,
-      lastModified: now.toISOString(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: `${SITE_URL}/glosario/tel`,
-      lastModified: now.toISOString(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    // Recursos
-    {
-      url: `${SITE_URL}/recursos`,
-      lastModified: now.toISOString(),
-      changeFrequency: "weekly",
-      priority: 0.7,
-    },
-    // Hub y páginas principales SEO
-    {
-      url: `${SITE_URL}/fonoaudiologia-infantil-chillan`,
-      lastModified: now.toISOString(),
-      changeFrequency: "weekly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${SITE_URL}/evaluacion-fonoaudiologica-infantil-chillan`,
-      lastModified: now.toISOString(),
-      changeFrequency: "weekly" as const,
-      priority: 0.8,
-    },
-    {
-      url: `${SITE_URL}/fonoaudiologo-pediatrico-chillan`,
-      lastModified: now.toISOString(),
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
-    },
-    {
-      url: `${SITE_URL}/especialista-lenguaje-infantil-chillan`,
-      lastModified: now.toISOString(),
-      changeFrequency: "monthly" as const,
-      priority: 0.75,
-    },
-    {
-      url: `${SITE_URL}/agendar-hora-fonoaudiologo-infantil-chillan`,
-      lastModified: now.toISOString(),
-      changeFrequency: "weekly" as const,
-      priority: 0.75,
-    },
-    {
-      url: `${SITE_URL}/chillan/lenguaje-infantil`,
-      lastModified: now.toISOString(),
-      changeFrequency: "weekly" as const,
-      priority: 0.85,
-    },
-    // Tratamientos
+    entry("/", 1.0, "monthly"),
+    entry("/fonoaudiologa-ninos-chillan", 0.9),
+    entry("/servicios", 0.9),
+    entry("/servicios/terapia-lenguaje-infantil", 0.8),
+    entry("/servicios/trastornos-del-habla", 0.8),
+    entry("/servicios/evaluacion-fonoaudiologica", 0.8),
+    entry("/servicios/tel-trastorno-especifico-lenguaje", 0.8),
+    entry("/servicios/tea-trastorno-espectro-autista", 0.8),
+    entry("/servicios/dificultades-lectoescritura", 0.8),
+    entry("/glosario", 0.7),
+    ...getGlosarioTermUrls(),
+    entry("/recursos", 0.7),
+    entry("/fonoaudiologia-infantil-chillan", 0.5),
+    entry("/evaluacion-fonoaudiologica-infantil-chillan", 0.5),
+    entry("/fonoaudiologo-pediatrico-chillan", 0.5),
+    entry("/especialista-lenguaje-infantil-chillan", 0.5),
+    entry("/agendar-hora-fonoaudiologo-infantil-chillan", 0.75),
+    entry("/chillan/lenguaje-infantil", 0.5),
     ...[
       "retraso-del-lenguaje-chillan",
       "retraso-del-habla-chillan",
@@ -135,13 +74,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       "dislalia-infantil-chillan",
       "trastorno-fonologico-chillan",
       "apraxia-del-habla-infantil-chillan",
-    ].map((slug) => ({
-      url: `${SITE_URL}/tratamientos/${slug}`,
-      lastModified: now.toISOString(),
-      changeFrequency: "weekly" as const,
-      priority: 0.8,
-    })),
-    // Síntomas
+    ].map((slug) => entry(`/tratamientos/${slug}`, 0.8)),
     ...[
       "mi-hijo-no-habla-bien-chillan",
       "nino-pronuncia-mal-chillan",
@@ -149,29 +82,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       "hijo-no-arma-frases-chillan",
       "nino-no-entiende-instrucciones-chillan",
       "nino-tartamudea-chillan",
-    ].map((slug) => ({
-      url: `${SITE_URL}/sintomas/${slug}`,
-      lastModified: now.toISOString(),
-      changeFrequency: "weekly" as const,
-      priority: 0.7,
-    })),
-    // Servicios (nuevas páginas SEO)
-    ...[
-      "test-de-lenguaje-infantil-chillan",
-      "terapia-de-lenguaje-infantil-chillan",
-      "terapia-del-habla-infantil-chillan",
-      "estimulacion-temprana-del-lenguaje-chillan",
-      "conciencia-fonologica-chillan",
-      "informe-fonoaudiologico-pie-chillan",
-      "terapia-tea-comunicacion-chillan",
-      "problemas-lectoescritura-chillan",
-    ].map((slug) => ({
-      url: `${SITE_URL}/servicios/${slug}`,
-      lastModified: now.toISOString(),
-      changeFrequency: "weekly" as const,
-      priority: 0.8,
-    })),
-    // Landings por patología (programmatic SEO - Locations)
+    ].map((slug) => entry(`/sintomas/${slug}`, 0.7)),
+    ...secondaryServiciosSlugs.map((slug) =>
+      entry(
+        `/servicios/${slug}`,
+        SECONDARY_PRIORITY_SLUGS.has(slug) ? 0.5 : 0.8
+      )
+    ),
     ...[
       "dislalia",
       "retraso-del-lenguaje",
@@ -183,13 +100,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       "disfemia",
       "tea-comunicacion",
       "lectoescritura",
-    ].map((slug) => ({
-      url: `${SITE_URL}/chillan/${slug}`,
-      lastModified: now.toISOString(),
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    })),
-    // Voz Online — Adultos todo Chile
+    ].map((slug) => entry(`/chillan/${slug}`, 0.7, "monthly")),
     ...[
       "fonoaudiologa-de-voz-online",
       "evaluacion-vocal-online",
@@ -206,11 +117,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       "fonoaudiologa-voz-vina-del-mar",
       "fonoaudiologa-voz-temuco",
       "fonoaudiologa-voz-antofagasta",
-    ].map((slug) => ({
-      url: `${SITE_URL}/voz-online/${slug}`,
-      lastModified: now.toISOString(),
-      changeFrequency: "weekly" as const,
-      priority: 0.8,
-    })),
+    ].map((slug) => entry(`/voz-online/${slug}`, 0.8)),
   ];
 }

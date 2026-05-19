@@ -7,7 +7,7 @@ import { StickyWhatsApp } from "./_components/StickyWhatsApp";
 const SITE_URL = "https://www.katialafono.cl";
 
 export const metadata: Metadata = {
-  title: "Fonoaudióloga en Chillán | Lenguaje Infantil | Katia Domínguez",
+  title: "Fonoaudióloga en Chillán | Lenguaje Infantil",
   description:
     "¿Tu hijo tiene dificultades para hablar? Evaluación y tratamiento fonoaudiológico infantil en Chillán. Primera consulta de evaluación. Agenda tu hora.",
   keywords: [
@@ -18,10 +18,10 @@ export const metadata: Metadata = {
     "problemas del habla niños",
   ],
   alternates: {
-    canonical: `${SITE_URL}/chillan/lenguaje-infantil`,
+    canonical: `${SITE_URL}/fonoaudiologa-ninos-chillan`,
   },
   openGraph: {
-    title: "Fonoaudióloga en Chillán | Lenguaje Infantil | Katia Domínguez",
+    title: "Fonoaudióloga en Chillán | Lenguaje Infantil",
     description:
       "Evaluación y tratamiento fonoaudiológico infantil en Chillán. Ayudamos a tu hijo a comunicarse mejor.",
     type: "website",
@@ -80,8 +80,68 @@ const concerns = [
   },
 ];
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "¿A qué edad conviene consultar?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Puedes consultar desde los 18 meses si notas que tu hijo no dice palabras, o a cualquier edad si observas dificultades en el lenguaje. Mientras más temprano se detecte, mejores son los resultados.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuántas sesiones suelen ser necesarias?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Depende del diagnóstico. Algunos casos mejoran en 3-6 meses (12-24 sesiones), otros requieren más tiempo. En la evaluación inicial te daré un estimado según el caso de tu hijo.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué pasa en la primera evaluación?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Conversamos sobre el desarrollo de tu hijo, aplico pruebas específicas de lenguaje (de forma lúdica), y al final te entrego un informe con diagnóstico y plan de tratamiento. Dura aproximadamente 60 minutos.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Trabaja con niños con TEL o TEA?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sí, trabajo con niños con Trastorno Específico del Lenguaje (TEL) y también con niños dentro del espectro autista (TEA) que requieran apoyo en comunicación. Cada caso se evalúa de forma individual.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Dónde atiende en Chillán?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Atiendo en mi domicilio en Chillán. Al agendar tu hora, te envío por WhatsApp la dirección exacta y referencias de cómo llegar.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuáles son los valores?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Los valores varían según el tipo de sesión (evaluación o terapia). Escríbeme por WhatsApp y te envío la información de precios actualizada.",
+      },
+    },
+  ],
+};
+
 export default function LenguajeInfantilPage() {
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
     <div className="min-h-screen bg-gradient-to-b from-rose-50 to-white">
       {/* Hero Section */}
       <section className="relative overflow-hidden px-4 pb-16 pt-12 sm:px-6 lg:px-8">
@@ -480,5 +540,6 @@ export default function LenguajeInfantilPage() {
       {/* Sticky WhatsApp Button */}
       <StickyWhatsApp href={WHATSAPP_LINK} />
     </div>
+    </>
   );
 }
