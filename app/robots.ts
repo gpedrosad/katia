@@ -16,6 +16,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: AI_AND_SEARCH_BOTS.map((userAgent) => ({
       userAgent,
       allow: "/",
+      disallow: ["/seo-links"],
     })),
     sitemap: `${SITE_URL}/sitemap.xml`,
   };

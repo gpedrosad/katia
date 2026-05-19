@@ -16,6 +16,18 @@ function normalizePath(path: string): string {
   return path.startsWith("/") ? path : `/${path}`;
 }
 
+/** Metadata para páginas internas que no deben indexarse. */
+export function buildNoIndexMetadata(title: string): Metadata {
+  return {
+    title: { absolute: title },
+    robots: {
+      index: false,
+      follow: false,
+      googleBot: { index: false, follow: false },
+    },
+  };
+}
+
 export function buildPageMetadata({
   path,
   title,
