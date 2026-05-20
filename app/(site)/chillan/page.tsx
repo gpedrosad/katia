@@ -48,6 +48,29 @@ export default function ChillanPatologiasHubPage() {
           </li>
         ))}
       </ul>
+      <section className="mt-12 rounded-2xl border border-rose-100 bg-rose-50 p-6 text-center">
+        <p className="mb-4 text-gray-700">
+          Atención presencial en Chillán, Ñuble. Primera cita: evaluación
+          fonoaudiológica.
+        </p>
+        <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <Link
+            href="/fonoaudiologa-ninos-chillan"
+            className="font-semibold text-rose-700 underline"
+          >
+            Fonoaudióloga infantil
+          </Link>
+          <Link
+            href="/agendar-hora-fonoaudiologo-infantil-chillan"
+            className="font-semibold text-rose-700 underline"
+          >
+            Agendar hora
+          </Link>
+          <Link href="/glosario" className="font-semibold text-rose-700 underline">
+            Glosario (dislalia, TEL…)
+          </Link>
+        </div>
+      </section>
     </main>
   );
 }

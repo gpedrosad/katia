@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { GeoFAQ } from "@/app/_components/GeoFAQ";
 import { Breadcrumbs } from "../_components/Breadcrumbs";
 import { ServiceCard } from "../_components/ServiceCard";
@@ -30,9 +31,11 @@ const WHATSAPP_LINK =
   "https://wa.me/56995497838?text=Hola%2C%20quiero%20consultar%20por%20sus%20servicios";
 
 export const metadata: Metadata = {
-  title: "Servicios de Fonoaudiología en Chillán | Katia Domínguez",
+  title: {
+    absolute: "Servicios de fonoaudiología infantil Chillán",
+  },
   description:
-    "Servicios de fonoaudiología en Chillán: terapia de lenguaje infantil, trastornos del habla, evaluación fonoaudiológica, TEL, TEA y dificultades de lectoescritura. +20 años de experiencia.",
+    "Terapia de lenguaje infantil, trastornos del habla, evaluación con informe, TEL, TEA y lectoescritura. Presencial en Chillán, Ñuble. Agenda por WhatsApp.",
   keywords: [
     "servicios fonoaudiología Chillán",
     "fonoaudióloga Chillán",
@@ -45,9 +48,9 @@ export const metadata: Metadata = {
     canonical: `${SITE_URL}${PAGE_PATH}`,
   },
   openGraph: {
-    title: "Servicios de Fonoaudiología en Chillán | Katia Domínguez",
+    title: "Servicios de fonoaudiología infantil Chillán",
     description:
-      "Servicios especializados de fonoaudiología para niños y adultos en Chillán. Más de 20 años de experiencia.",
+      "Terapia de lenguaje, habla, evaluación, TEL, TEA y lectoescritura en Chillán. +20 años de experiencia.",
     url: `${SITE_URL}${PAGE_PATH}`,
     type: "website",
     locale: "es_CL",
@@ -171,6 +174,28 @@ export default function ServiciosPage() {
                 <ServiceCard key={service.href} {...service} />
               ))}
             </div>
+
+            <p className="mt-8 text-center text-sm text-gray-600">
+              También puedes ver{" "}
+              <Link
+                href="/fonoaudiologa-ninos-chillan"
+                className="font-medium text-rose-600 underline"
+              >
+                fonoaudióloga infantil en Chillán
+              </Link>
+              , el{" "}
+              <Link href="/chillan" className="font-medium text-rose-600 underline">
+                índice por patología
+              </Link>{" "}
+              o{" "}
+              <Link
+                href="/glosario"
+                className="font-medium text-rose-600 underline"
+              >
+                glosario (dislalia, TEL…)
+              </Link>
+              .
+            </p>
 
             {/* CTA Section */}
             <div className="mt-16 rounded-3xl bg-rose-50 p-8 text-center sm:p-12">

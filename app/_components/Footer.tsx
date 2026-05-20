@@ -3,15 +3,11 @@ import Link from "next/link";
 const hubs = [
   {
     href: "/fonoaudiologa-ninos-chillan",
-    label: "Fonoaudióloga para niños en Chillán (pilar)",
+    label: "Fonoaudióloga infantil Chillán",
   },
   {
     href: "/chillan",
     label: "Patologías del lenguaje en Chillán",
-  },
-  {
-    href: "/chillan/lenguaje-infantil",
-    label: "Lenguaje infantil en Chillán",
   },
   {
     href: "/voz-online/fonoaudiologa-de-voz-online",

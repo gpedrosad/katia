@@ -9,7 +9,7 @@ export const metadata = buildPageMetadata({
   path: "/glosario",
   title: "Glosario Fonoaudiológico | Términos de Lenguaje y Habla",
   description:
-    "Glosario de términos fonoaudiológicos explicados de forma simple. Dislalia, TEL, TEA, disfasia, trastorno fonológico y más. Guía para padres en Chillán.",
+    "Glosario fonoaudiológico en español (Chile): dislalia, TEL/TDL, TEA y más. Definiciones claras para padres en Chillán, Ñuble.",
   keywords: [
     "glosario fonoaudiológico",
     "términos fonoaudiología",
@@ -35,10 +35,42 @@ export default function GlosarioPage() {
                 Glosario fonoaudiológico
               </h1>
               <p className="mx-auto max-w-2xl text-lg text-gray-600">
-                Términos de fonoaudiología explicados de forma simple para
-                padres. Encuentra definiciones claras de trastornos del lenguaje
-                y habla.
+                Términos de fonoaudiología explicados para padres en{" "}
+                <strong>Chillán, Región de Ñuble, Chile</strong>. Definiciones
+                claras de trastornos del lenguaje y del habla.
               </p>
+            </div>
+
+            <div className="mb-10 grid gap-3 sm:grid-cols-3">
+              <Link
+                href="/glosario/dislalia"
+                className="rounded-xl border border-rose-200 bg-white p-4 hover:border-rose-400"
+              >
+                <h2 className="font-semibold text-gray-900">Dislalia</h2>
+                <p className="mt-1 text-sm text-gray-600">
+                  Qué es y cuándo consultar en Chillán
+                </p>
+              </Link>
+              <Link
+                href="/glosario/tel"
+                className="rounded-xl border border-rose-200 bg-white p-4 hover:border-rose-400"
+              >
+                <h2 className="font-semibold text-gray-900">TEL / TDL</h2>
+                <p className="mt-1 text-sm text-gray-600">
+                  Definición y tratamiento infantil
+                </p>
+              </Link>
+              <Link
+                href="/fonoaudiologa-ninos-chillan"
+                className="rounded-xl border border-rose-200 bg-rose-50 p-4 hover:border-rose-400"
+              >
+                <h2 className="font-semibold text-gray-900">
+                  Fonoaudióloga infantil
+                </h2>
+                <p className="mt-1 text-sm text-gray-600">
+                  Evaluación presencial en Chillán
+                </p>
+              </Link>
             </div>
 
             <div className="mb-10">
@@ -105,6 +137,13 @@ export default function GlosarioPage() {
                 Si alguno de estos términos te suena familiar, una evaluación
                 profesional puede aclarar tus dudas.
               </p>
+              <Link
+                href="/agendar-hora-fonoaudiologo-infantil-chillan"
+                className="mb-4 inline-block text-sm font-medium text-rose-600 underline"
+              >
+                Agendar evaluación en Chillán
+              </Link>
+              <br />
               <a
                 href="https://wa.me/56995497838?text=Hola%2C%20tengo%20una%20consulta"
                 target="_blank"

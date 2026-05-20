@@ -13,6 +13,16 @@ const nextConfig: NextConfig = {
         destination: "https://www.katialafono.cl/:path*",
         permanent: true,
       },
+      {
+        source: "/chillan/lenguaje-infantil",
+        destination: "/fonoaudiologa-ninos-chillan",
+        permanent: true,
+      },
+      {
+        source: "/agendar",
+        destination: "/agendar-hora-fonoaudiologo-infantil-chillan",
+        permanent: true,
+      },
     ];
   },
 };

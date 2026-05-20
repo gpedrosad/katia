@@ -13,10 +13,9 @@ const WHATSAPP_HREF = whatsappUrl("Hola, quiero agendar una evaluación de lengu
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title:
-    "Fonoaudióloga en Chillán para Niños | Evaluación y Terapia de Lenguaje y Habla",
+  title: "Fonoaudióloga infantil Chillán | Evaluación y terapia",
   description:
-    "Evaluación y terapia de lenguaje y habla para niños en Chillán. Especialista en trastornos del habla, dificultades de pronunciación y lectoescritura. +20 años de experiencia. Agenda tu hora.",
+    "¿Tu hijo habla poco o no se le entiende? Evaluación fonoaudiológica infantil en Chillán, Ñuble. Lenguaje, habla y lectoescritura. +20 años. Agenda por WhatsApp.",
   keywords: ["fonoaudióloga en Chillán",
     "fonoaudióloga para niños",
     "terapia de lenguaje para niños",

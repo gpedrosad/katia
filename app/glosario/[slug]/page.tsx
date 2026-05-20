@@ -15,7 +15,7 @@ import {
 const SITE_URL = "https://www.katialafono.cl";
 const WHATSAPP_BASE = "https://wa.me/56995497838";
 const DATE_PUBLISHED = "2024-01-15";
-const DATE_MODIFIED = "2026-05-19";
+const DATE_MODIFIED = "2026-05-20";
 
 type PageProps = {
   params: Promise<{ slug: string }>;

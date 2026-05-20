@@ -21,13 +21,21 @@ export async function generateMetadata({
   const patologia = getPatologiaBySlug(slug);
   if (!patologia) return { title: "No encontrado" };
 
-  const description =
-    patologia.descripcion.slice(0, 155) +
-    " Evaluación y terapia presencial en Chillán. Agenda por WhatsApp.";
+  const suffix = " Evaluación y terapia en Chillán. Agenda por WhatsApp.";
+  const maxBase = 155 - suffix.length;
+  let base: string = patologia.descripcion;
+  if (base.length > maxBase) {
+    base = base.slice(0, maxBase).replace(/\s+\S*$/, "").trim();
+  }
+  const description = `${base}${suffix}`;
+
+  const titleOverrides: Record<string, string> = {
+    tel: "TEL en Chillán: diagnóstico y terapia infantil",
+  };
 
   return buildPageMetadata({
     path: `/chillan/${patologia.slug}`,
-    title: patologia.titulo,
+    title: titleOverrides[slug] ?? patologia.titulo,
     description,
     keywords: [
       patologia.titulo,

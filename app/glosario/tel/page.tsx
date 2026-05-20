@@ -14,7 +14,7 @@ export const metadata = buildPageMetadata({
   path: PAGE_PATH,
   title: "¿Qué es el TEL? | Trastorno Específico del Lenguaje Explicado",
   description:
-    "Qué es el TEL (Trastorno Específico del Lenguaje): causas, síntomas, diagnóstico y tratamiento. Guía para padres. Fonoaudióloga especialista en Chillán.",
+    "El TEL (TDL) es un trastorno del desarrollo del lenguaje en niños. Definición, síntomas y tratamiento en Chillán, Ñuble, Chile. Evaluación fonoaudiológica.",
   keywords: [
     "qué es TEL",
     "trastorno específico del lenguaje",
@@ -38,7 +38,7 @@ const jsonLd = {
     jobTitle: "Fonoaudióloga",
   },
   datePublished: "2024-06-01",
-  dateModified: "2026-05-19",
+  dateModified: "2026-05-20",
 };
 
 const faqJsonLd = {
@@ -67,6 +67,22 @@ const faqJsonLd = {
       acceptedAnswer: {
         "@type": "Answer",
         text: "El TEL es una condición que acompaña a la persona, pero con tratamiento adecuado los niños mejoran significativamente y desarrollan estrategias para comunicarse efectivamente.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuál es la definición de TEL?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "El TEL (Trastorno Específico del Lenguaje), hoy también llamado TDL, es un trastorno del neurodesarrollo que afecta la adquisición del lenguaje sin causa aparente como sordera o discapacidad intelectual.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuál es la diferencia entre TEL y TDL?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "TEL y TDL son el mismo diagnóstico con distinto nombre. TDL (Trastorno del Desarrollo del Lenguaje) es el término más usado actualmente en guías clínicas.",
       },
     },
   ],
@@ -103,10 +119,46 @@ export default function TELGlosarioPage() {
                 ¿Qué es el TEL?
               </h1>
               <p className="text-xl text-gray-600">
-                Trastorno Específico del Lenguaje: guía completa para padres
-                sobre síntomas, diagnóstico y tratamiento.
+                El <strong>TEL</strong> (o <strong>TDL</strong>) es un trastorno
+                del desarrollo del lenguaje en niños con inteligencia normal.
+                Guía para familias en <strong>Chillán, Chile</strong>.
               </p>
             </header>
+
+            <nav
+              aria-label="Atención fonoaudiológica en Chillán"
+              className="mb-8 rounded-2xl border border-rose-200 bg-white p-5"
+            >
+              <p className="mb-3 text-sm font-semibold text-rose-800">
+                ¿Buscas evaluación o terapia TEL en Chillán?
+              </p>
+              <ul className="flex flex-col gap-2 text-sm sm:flex-row sm:flex-wrap">
+                <li>
+                  <Link
+                    href="/chillan/tel"
+                    className="font-medium text-rose-600 underline"
+                  >
+                    TEL en Chillán
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/servicios/tel-trastorno-especifico-lenguaje"
+                    className="font-medium text-rose-600 underline"
+                  >
+                    Servicio TEL
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/agendar-hora-fonoaudiologo-infantil-chillan"
+                    className="font-medium text-rose-600 underline"
+                  >
+                    Agendar evaluación
+                  </Link>
+                </li>
+              </ul>
+            </nav>
 
             <div className="prose prose-lg max-w-none">
               <h2>Definición de TEL</h2>
@@ -250,6 +302,15 @@ export default function TELGlosarioPage() {
                   </h3>
                   <p className="text-sm text-gray-600">
                     Desarrollo del lenguaje más lento de lo esperado.
+                  </p>
+                </Link>
+                <Link
+                  href="/chillan/tel"
+                  className="rounded-xl border border-gray-200 bg-white p-4 transition-colors hover:border-rose-300"
+                >
+                  <h3 className="font-semibold text-gray-900">TEL en Chillán</h3>
+                  <p className="text-sm text-gray-600">
+                    Diagnóstico y terapia presencial en Ñuble.
                   </p>
                 </Link>
                 <Link

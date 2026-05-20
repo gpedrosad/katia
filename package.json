@@ -6,10 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "gsc:auth": "node --env-file=.env.local scripts/gsc-report.mjs --auth",
+    "gsc:report": "node --env-file=.env.local scripts/gsc-report.mjs",
+    "gsc:report:md": "node --env-file=.env.local scripts/gsc-report-md.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^1.6.1",
+    "googleapis": "^171.4.0",
     "next": "16.1.1",
     "react": "19.2.3",
     "react-dom": "19.2.3"

@@ -21,11 +21,11 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   title: {
-    default: "Fonoaudióloga en Chillán | Katia Domínguez",
+    default: "Fonoaudiología infantil Chillán | Katia Lafono",
     template: "%s | Katia Domínguez",
   },
   description:
-    "Fonoaudióloga en Chillán especializada en trastornos del lenguaje y comunicación en niños. Más de 20 años de experiencia. Agenda una evaluación fonoaudiológica hoy.",
+    "Fonoaudióloga infantil en Chillán, Ñuble. Evaluación y terapia de lenguaje, habla y lectoescritura. +20 años de experiencia. Agenda por WhatsApp.",
   keywords: [
     "fonoaudióloga Chillán",
     "fonoaudióloga en Chillán",
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_CL",
     siteName: "Katia Domínguez - Fonoaudióloga",
-    title: "Fonoaudióloga en Chillán | Katia Domínguez",
+    title: "Fonoaudiología infantil Chillán | Katia Lafono",
     description:
-      "Fonoaudióloga en Chillán especializada en trastornos del lenguaje y comunicación en niños. Más de 20 años de experiencia en evaluación y tratamiento. Agenda una evaluación fonoaudiológica hoy.",
+      "Fonoaudióloga infantil en Chillán, Ñuble. Evaluación y terapia de lenguaje, habla y lectoescritura. +20 años de experiencia. Agenda por WhatsApp.",
     url: SITE_URL,
     images: [
       {

@@ -14,7 +14,7 @@ export const metadata = buildPageMetadata({
   path: PAGE_PATH,
   title: "¿Qué es la Dislalia? | Causas, Síntomas y Tratamiento",
   description:
-    "Qué es la dislalia: dificultad para pronunciar sonidos correctamente. Conoce tipos, causas, síntomas y tratamiento. Fonoaudióloga en Chillán con +20 años de experiencia.",
+    "La dislalia es la dificultad para pronunciar sonidos en niños. Definición, tipos y tratamiento en Chillán, Ñuble, Chile. Fonoaudióloga con +20 años de experiencia.",
   keywords: [
     "qué es dislalia",
     "dislalia definición",
@@ -46,7 +46,7 @@ const jsonLd = {
     "@id": `${SITE_URL}${PAGE_PATH}`,
   },
   datePublished: "2024-06-01",
-  dateModified: "2026-05-19",
+  dateModified: "2026-05-20",
 };
 
 const faqJsonLd = {
@@ -75,6 +75,22 @@ const faqJsonLd = {
       acceptedAnswer: {
         "@type": "Answer",
         text: "Sí, la mayoría de los casos de dislalia se corrigen completamente con tratamiento fonoaudiológico. El tiempo de tratamiento depende de la cantidad y tipo de sonidos afectados.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué significa dislalia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Dislalia significa dificultad para articular fonemas del habla (omitir, sustituir o distorsionar sonidos). Es un trastorno del habla frecuente en la infancia, con buen pronóstico con terapia fonoaudiológica.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuándo llevar al fonoaudiólogo por dislalia en Chillán?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Si después de los 5-6 años persisten errores de pronunciación, o si el colegio o la familia tienen dificultad para entender al niño. Una evaluación en Chillán identifica sonidos afectados y plan de tratamiento.",
       },
     },
   ],
@@ -111,10 +127,46 @@ export default function DislaliaPage() {
                 ¿Qué es la dislalia?
               </h1>
               <p className="text-xl text-gray-600">
-                Guía completa sobre este trastorno del habla: definición, tipos,
-                causas y tratamiento.
+                La <strong>dislalia</strong> es la dificultad para pronunciar
+                sonidos correctamente en niños (omitir, sustituir o distorsionar
+                fonemas). Guía para familias en <strong>Chillán, Chile</strong>.
               </p>
             </header>
+
+            <nav
+              aria-label="Atención fonoaudiológica en Chillán"
+              className="mb-8 rounded-2xl border border-rose-200 bg-white p-5"
+            >
+              <p className="mb-3 text-sm font-semibold text-rose-800">
+                ¿Buscas evaluación o terapia en Chillán?
+              </p>
+              <ul className="flex flex-col gap-2 text-sm sm:flex-row sm:flex-wrap">
+                <li>
+                  <Link
+                    href="/chillan/dislalia"
+                    className="font-medium text-rose-600 underline"
+                  >
+                    Tratamiento dislalia en Chillán
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/fonoaudiologa-ninos-chillan"
+                    className="font-medium text-rose-600 underline"
+                  >
+                    Fonoaudióloga infantil
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/agendar-hora-fonoaudiologo-infantil-chillan"
+                    className="font-medium text-rose-600 underline"
+                  >
+                    Agendar evaluación
+                  </Link>
+                </li>
+              </ul>
+            </nav>
 
             {/* Content */}
             <div className="prose prose-lg max-w-none">
@@ -268,6 +320,17 @@ export default function DislaliaPage() {
                   </h3>
                   <p className="text-sm text-gray-600">
                     Patrones sistemáticos de errores en los sonidos.
+                  </p>
+                </Link>
+                <Link
+                  href="/chillan/dislalia"
+                  className="rounded-xl border border-gray-200 bg-white p-4 transition-colors hover:border-rose-300"
+                >
+                  <h3 className="font-semibold text-gray-900">
+                    Dislalia en Chillán
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    Señales, evaluación y terapia presencial en Ñuble.
                   </p>
                 </Link>
                 <Link
