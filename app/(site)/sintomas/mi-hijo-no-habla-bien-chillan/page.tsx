@@ -75,7 +75,7 @@ export default function MiHijoNoHablaBienPage() {
             <Breadcrumbs
               items={[
                 { label: "Inicio", href: "/" },
-                { label: "Síntomas", href: "/fonoaudiologia-infantil-chillan" },
+                { label: "Síntomas", href: "/fonoaudiologa-ninos-chillan" },
                 { label: "No habla bien" },
               ]}
             />
@@ -145,7 +145,7 @@ export default function MiHijoNoHablaBienPage() {
             <h2 className="mb-6 text-center text-3xl font-bold text-gray-900">
               ¿Qué puede estar pasando?
             </h2>
-            <p className="mb-8 text-center text-gray-600">Puede haber <a href="/tratamientos/retraso-del-lenguaje-chillan">retraso del lenguaje</a>, <a href="/tratamientos/retraso-del-habla-chillan">retraso del habla</a> o <a href="/tratamientos/apraxia-del-habla-infantil-chillan">apraxia</a>. Mira <a href="/chillan/lenguaje-infantil">lenguaje infantil en Chillán</a>, <a href="/glosario/tel">glosario TEL</a>, <a href="/servicios/terapia-de-lenguaje-infantil-chillan">terapia de lenguaje</a> y <a href="/evaluacion-fonoaudiologica-infantil-chillan">evaluación</a>.</p>
+            <p className="mb-8 text-center text-gray-600">Puede haber <a href="/tratamientos/retraso-del-lenguaje-chillan">retraso del lenguaje</a>, <a href="/tratamientos/retraso-del-habla-chillan">retraso del habla</a> o <a href="/tratamientos/apraxia-del-habla-infantil-chillan">apraxia</a>. Mira <a href="/fonoaudiologa-ninos-chillan">lenguaje infantil en Chillán</a>, <a href="/glosario/tel">glosario TEL</a>, <a href="/servicios/terapia-lenguaje-infantil">terapia de lenguaje</a> y <a href="/servicios/evaluacion-fonoaudiologica">evaluación</a>.</p>
           </div>
         </section>
 
@@ -207,7 +207,7 @@ export default function MiHijoNoHablaBienPage() {
                 <span className="text-2xl">💬</span>
                 <p className="mt-2 font-medium text-gray-900">Retraso del lenguaje</p>
               </Link>
-              <Link href="/evaluacion-fonoaudiologica-infantil-chillan" className="rounded-xl border border-gray-200 p-4 text-center transition-colors hover:border-amber-300 hover:bg-amber-50">
+              <Link href="/servicios/evaluacion-fonoaudiologica" className="rounded-xl border border-gray-200 p-4 text-center transition-colors hover:border-amber-300 hover:bg-amber-50">
                 <span className="text-2xl">📋</span>
                 <p className="mt-2 font-medium text-gray-900">Evaluación</p>
               </Link>

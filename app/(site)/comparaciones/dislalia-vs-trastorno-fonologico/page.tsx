@@ -273,7 +273,7 @@ export default function DislaliaVsTrastornoFonologicoPage() {
                 <li>
                   En ambos casos la{" "}
                   <Link
-                    href="/servicios/terapia-de-lenguaje-infantil-chillan"
+                    href="/servicios/terapia-lenguaje-infantil"
                     className="font-semibold text-rose-600"
                   >
                     terapia de lenguaje infantil

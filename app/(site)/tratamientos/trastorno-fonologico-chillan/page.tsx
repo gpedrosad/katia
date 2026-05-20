@@ -82,7 +82,7 @@ export default function TrastornoFonologicoPage() {
             <Breadcrumbs
               items={[
                 { label: "Inicio", href: "/" },
-                { label: "Tratamientos", href: "/fonoaudiologia-infantil-chillan" },
+                { label: "Tratamientos", href: "/fonoaudiologa-ninos-chillan" },
                 { label: "Trastorno fonológico" },
               ]}
             />
@@ -177,7 +177,7 @@ export default function TrastornoFonologicoPage() {
               y la{" "}
               <Link href="/servicios/conciencia-fonologica-chillan" className="font-semibold text-orange-600 underline">conciencia fonológica</Link>.{" "}
               La{" "}
-              <Link href="/evaluacion-fonoaudiologica-infantil-chillan" className="font-semibold text-orange-600 underline">evaluación</Link>{" "}
+              <Link href="/servicios/evaluacion-fonoaudiologica" className="font-semibold text-orange-600 underline">evaluación</Link>{" "}
               orienta si hay un{" "}
               <Link href="/tratamientos/tel-trastorno-especifico-lenguaje-chillan" className="font-semibold text-orange-600 underline">TEL</Link> asociado.
             </p>
@@ -242,7 +242,7 @@ export default function TrastornoFonologicoPage() {
                 <span className="text-2xl">🔤</span>
                 <p className="mt-2 font-medium text-gray-900">Conciencia fonológica</p>
               </Link>
-              <Link href="/evaluacion-fonoaudiologica-infantil-chillan" className="rounded-xl border border-gray-200 p-4 text-center transition-colors hover:border-orange-300 hover:bg-orange-50">
+              <Link href="/servicios/evaluacion-fonoaudiologica" className="rounded-xl border border-gray-200 p-4 text-center transition-colors hover:border-orange-300 hover:bg-orange-50">
                 <span className="text-2xl">📋</span>
                 <p className="mt-2 font-medium text-gray-900">Evaluación inicial</p>
               </Link>

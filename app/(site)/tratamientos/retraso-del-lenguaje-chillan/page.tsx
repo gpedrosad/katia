@@ -113,7 +113,7 @@ export default function RetrasoLenguajePage() {
             <Breadcrumbs
               items={[
                 { label: "Inicio", href: "/" },
-                { label: "Tratamientos", href: "/fonoaudiologia-infantil-chillan" },
+                { label: "Tratamientos", href: "/fonoaudiologa-ninos-chillan" },
                 { label: "Retraso del lenguaje" },
               ]}
             />
@@ -215,7 +215,7 @@ export default function RetrasoLenguajePage() {
             <p className="mb-8 text-center text-gray-600">
               Partimos de una{" "}
               <Link
-                href="/evaluacion-fonoaudiologica-infantil-chillan"
+                href="/servicios/evaluacion-fonoaudiologica"
                 className="font-semibold text-rose-600 underline"
               >
                 evaluación fonoaudiológica
@@ -293,14 +293,14 @@ export default function RetrasoLenguajePage() {
             </h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               <Link
-                href="/servicios/terapia-de-lenguaje-infantil-chillan"
+                href="/servicios/terapia-lenguaje-infantil"
                 className="rounded-xl border border-gray-200 p-4 text-center transition-colors hover:border-rose-300 hover:bg-rose-50"
               >
                 <span className="text-2xl">💬</span>
                 <p className="mt-2 font-medium text-gray-900">Terapia de lenguaje</p>
               </Link>
               <Link
-                href="/evaluacion-fonoaudiologica-infantil-chillan"
+                href="/servicios/evaluacion-fonoaudiologica"
                 className="rounded-xl border border-gray-200 p-4 text-center transition-colors hover:border-rose-300 hover:bg-rose-50"
               >
                 <span className="text-2xl">📋</span>

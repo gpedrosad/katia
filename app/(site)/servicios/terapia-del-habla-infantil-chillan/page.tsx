@@ -39,7 +39,7 @@ export default function TerapiaHablaInfantilPage() {
         <Breadcrumbs
           items={[
             { label: "Inicio", href: "/" },
-            { label: "Servicios", href: "/fonoaudiologia-infantil-chillan" },
+            { label: "Servicios", href: "/fonoaudiologa-ninos-chillan" },
             { label: "Terapia del Habla" },
           ]}
         />
@@ -117,7 +117,7 @@ export default function TerapiaHablaInfantilPage() {
               </Link>
               . Por eso la{" "}
               <Link
-                href="/evaluacion-fonoaudiologica-infantil-chillan"
+                href="/servicios/evaluacion-fonoaudiologica"
                 className="font-semibold text-orange-600"
               >
                 evaluación inicial

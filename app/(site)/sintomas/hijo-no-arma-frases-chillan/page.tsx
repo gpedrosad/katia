@@ -75,7 +75,7 @@ export default function HijoNoArmaFrasesPage() {
             <Breadcrumbs
               items={[
                 { label: "Inicio", href: "/" },
-                { label: "Síntomas", href: "/fonoaudiologia-infantil-chillan" },
+                { label: "Síntomas", href: "/fonoaudiologa-ninos-chillan" },
                 { label: "No arma frases" },
               ]}
             />
@@ -145,7 +145,7 @@ export default function HijoNoArmaFrasesPage() {
             <h2 className="mb-6 text-center text-3xl font-bold text-gray-900">
               ¿Qué puede estar pasando?
             </h2>
-            <p className="mb-8 text-center text-gray-600">Consulta <a href="/tratamientos/retraso-del-lenguaje-chillan">retraso del lenguaje</a>, <a href="/tratamientos/tel-trastorno-especifico-lenguaje-chillan">TEL</a>, <a href="/glosario/tel">glosario</a>, <a href="/chillan/retraso-del-lenguaje">Chillán</a>, <a href="/servicios/terapia-de-lenguaje-infantil-chillan">terapia de lenguaje</a> y <a href="/evaluacion-fonoaudiologica-infantil-chillan">evaluación</a>.</p>
+            <p className="mb-8 text-center text-gray-600">Consulta <a href="/tratamientos/retraso-del-lenguaje-chillan">retraso del lenguaje</a>, <a href="/tratamientos/tel-trastorno-especifico-lenguaje-chillan">TEL</a>, <a href="/glosario/tel">glosario</a>, <a href="/chillan/retraso-del-lenguaje">Chillán</a>, <a href="/servicios/terapia-lenguaje-infantil">terapia de lenguaje</a> y <a href="/servicios/evaluacion-fonoaudiologica">evaluación</a>.</p>
           </div>
         </section>
 
@@ -207,7 +207,7 @@ export default function HijoNoArmaFrasesPage() {
                 <span className="text-2xl">💬</span>
                 <p className="mt-2 font-medium text-gray-900">Retraso del lenguaje</p>
               </Link>
-              <Link href="/evaluacion-fonoaudiologica-infantil-chillan" className="rounded-xl border border-gray-200 p-4 text-center transition-colors hover:border-sky-300 hover:bg-sky-50">
+              <Link href="/servicios/evaluacion-fonoaudiologica" className="rounded-xl border border-gray-200 p-4 text-center transition-colors hover:border-sky-300 hover:bg-sky-50">
                 <span className="text-2xl">📋</span>
                 <p className="mt-2 font-medium text-gray-900">Evaluación</p>
               </Link>

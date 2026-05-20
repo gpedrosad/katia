@@ -82,7 +82,7 @@ export default function ApraxiaHablaPage() {
             <Breadcrumbs
               items={[
                 { label: "Inicio", href: "/" },
-                { label: "Tratamientos", href: "/fonoaudiologia-infantil-chillan" },
+                { label: "Tratamientos", href: "/fonoaudiologa-ninos-chillan" },
                 { label: "Apraxia del habla" },
               ]}
             />
@@ -178,7 +178,7 @@ export default function ApraxiaHablaPage() {
               y{" "}
               <Link href="/servicios/terapia-del-habla-infantil-chillan" className="font-semibold text-slate-600 underline">terapia del habla</Link>.{" "}
               Agenda una{" "}
-              <Link href="/evaluacion-fonoaudiologica-infantil-chillan" className="font-semibold text-slate-600 underline">evaluación especializada</Link>.
+              <Link href="/servicios/evaluacion-fonoaudiologica" className="font-semibold text-slate-600 underline">evaluación especializada</Link>.
             </p>
           </div>
         </section>
@@ -241,7 +241,7 @@ export default function ApraxiaHablaPage() {
                 <span className="text-2xl">🗣️</span>
                 <p className="mt-2 font-medium text-gray-900">Terapia del habla</p>
               </Link>
-              <Link href="/evaluacion-fonoaudiologica-infantil-chillan" className="rounded-xl border border-gray-200 p-4 text-center transition-colors hover:border-slate-300 hover:bg-slate-50">
+              <Link href="/servicios/evaluacion-fonoaudiologica" className="rounded-xl border border-gray-200 p-4 text-center transition-colors hover:border-slate-300 hover:bg-slate-50">
                 <span className="text-2xl">📋</span>
                 <p className="mt-2 font-medium text-gray-900">Evaluación</p>
               </Link>

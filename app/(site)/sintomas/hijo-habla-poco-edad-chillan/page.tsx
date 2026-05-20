@@ -83,7 +83,7 @@ export default function HablaPocoPage() {
             <Breadcrumbs
               items={[
                 { label: "Inicio", href: "/" },
-                { label: "Síntomas", href: "/fonoaudiologia-infantil-chillan" },
+                { label: "Síntomas", href: "/fonoaudiologa-ninos-chillan" },
                 { label: "Habla poco" },
               ]}
             />
@@ -168,8 +168,8 @@ export default function HablaPocoPage() {
               <Link href="/tratamientos/tel-trastorno-especifico-lenguaje-chillan" className="font-semibold text-indigo-600 underline">TEL</Link>.{" "}
               Lee el <Link href="/glosario/tel" className="font-semibold text-indigo-600 underline">glosario</Link>,{" "}
               <Link href="/chillan/retraso-del-lenguaje" className="font-semibold text-indigo-600 underline">retraso del lenguaje en Chillán</Link> y la{" "}
-              <Link href="/servicios/terapia-de-lenguaje-infantil-chillan" className="font-semibold text-indigo-600 underline">terapia de lenguaje</Link>.{" "}
-              La <Link href="/evaluacion-fonoaudiologica-infantil-chillan" className="font-semibold text-indigo-600 underline">evaluación</Link> aclara el diagnóstico.
+              <Link href="/servicios/terapia-lenguaje-infantil" className="font-semibold text-indigo-600 underline">terapia de lenguaje</Link>.{" "}
+              La <Link href="/servicios/evaluacion-fonoaudiologica" className="font-semibold text-indigo-600 underline">evaluación</Link> aclara el diagnóstico.
             </p>
           </div>
         </section>
@@ -232,7 +232,7 @@ export default function HablaPocoPage() {
                 <span className="text-2xl">💬</span>
                 <p className="mt-2 font-medium text-gray-900">Retraso del lenguaje</p>
               </Link>
-              <Link href="/evaluacion-fonoaudiologica-infantil-chillan" className="rounded-xl border border-gray-200 p-4 text-center transition-colors hover:border-indigo-300 hover:bg-indigo-50">
+              <Link href="/servicios/evaluacion-fonoaudiologica" className="rounded-xl border border-gray-200 p-4 text-center transition-colors hover:border-indigo-300 hover:bg-indigo-50">
                 <span className="text-2xl">📋</span>
                 <p className="mt-2 font-medium text-gray-900">Evaluación</p>
               </Link>

@@ -4,6 +4,7 @@ import { Footer } from "../_components/Footer";
 import { Header } from "../_components/Header";
 import { GLOSARIO_CATEGORIES, GLOSARIO_TERMINOS } from "./terminos";
 import { buildPageMetadata } from "@/lib/seo";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata = buildPageMetadata({
   path: "/glosario",
@@ -20,9 +21,63 @@ export const metadata = buildPageMetadata({
   ],
 });
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "¿Qué es la dislalia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "La dislalia es un trastorno del habla en el que el niño tiene dificultad para pronunciar sonidos correctamente (omite, sustituye o distorsiona fonemas). Con evaluación y tratamiento fonoaudiológico, la mayoría de los casos mejora de forma significativa.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué es el TEL?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "El TEL o TDL (Trastorno del Desarrollo del Lenguaje) es un trastorno del neurodesarrollo que afecta la adquisición del lenguaje sin causa aparente como sordera o discapacidad intelectual. Afecta aproximadamente al 7% de los niños y mejora con intervención temprana.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuándo llevar a mi hijo al fonoaudiólogo en Chillán?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Conviene consultar si el lenguaje o la pronunciación van claramente por detrás de otros niños de su edad, si persisten dificultades más de 6 meses sin mejoría, o si el colegio o el pediatra lo recomiendan. En Chillán puedes agendar una evaluación fonoaudiológica presencial.",
+      },
+    },
+  ],
+};
+
+const itemListJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Glosario fonoaudiológico",
+  description:
+    "Términos de fonoaudiología explicados para padres en Chillán, Chile",
+  numberOfItems: GLOSARIO_TERMINOS.length,
+  itemListElement: GLOSARIO_TERMINOS.map((term, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: term.term,
+    url: `${SITE_URL}/glosario/${term.slug}`,
+  })),
+};
+
 export default function GlosarioPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
+      />
       <Header />
       <main className="min-h-screen bg-gradient-to-b from-rose-50 to-white">
         <section className="px-4 py-12 sm:px-6 lg:px-8">

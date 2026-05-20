@@ -3,6 +3,8 @@ import { SITE_URL } from "@/lib/site";
 
 const AI_AND_SEARCH_BOTS = [
   "*",
+  "Googlebot",
+  "Bingbot",
   "GPTBot",
   "ChatGPT-User",
   "ClaudeBot",
@@ -16,7 +18,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: AI_AND_SEARCH_BOTS.map((userAgent) => ({
       userAgent,
       allow: "/",
-      disallow: ["/seo-links"],
+      disallow: ["/seo-links", "/interno"],
     })),
     sitemap: `${SITE_URL}/sitemap.xml`,
   };

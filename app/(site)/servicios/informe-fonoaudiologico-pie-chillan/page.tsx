@@ -60,7 +60,7 @@ export default function InformePiePage() {
         <Breadcrumbs
           items={[
             { label: "Inicio", href: "/" },
-            { label: "Servicios", href: "/fonoaudiologia-infantil-chillan" },
+            { label: "Servicios", href: "/fonoaudiologa-ninos-chillan" },
             { label: "Informe PIE" },
           ]}
         />
@@ -142,7 +142,7 @@ export default function InformePiePage() {
               <li>
                 Cuando el pediatra solicita{" "}
                 <Link
-                  href="/evaluacion-fonoaudiologica-infantil-chillan"
+                  href="/servicios/evaluacion-fonoaudiologica"
                   className="font-semibold text-violet-600"
                 >
                   evaluación fonoaudiológica

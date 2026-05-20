@@ -9,6 +9,52 @@ import { SITE_URL } from "@/lib/site";
 const PAGE_PATH = "/glosario/tel";
 const WHATSAPP_LINK =
   "https://wa.me/56995497838?text=Hola%2C%20quiero%20consultar%20por%20TEL";
+const ASHA_URL =
+  "https://www.asha.org/public/speech/disorders/Developmental-Language-Disorders/";
+const ASHA_LABEL = "ASHA — Developmental Language Disorder";
+
+const faqs = [
+  {
+    question: "¿Qué significa TEL?",
+    answer:
+      "TEL significa Trastorno Específico del Lenguaje. Es un trastorno del neurodesarrollo que afecta la adquisición y desarrollo del lenguaje sin causa aparente como pérdida auditiva, discapacidad intelectual o daño neurológico.",
+    acceptedAnswer:
+      "TEL significa Trastorno Específico del Lenguaje. Es un trastorno del neurodesarrollo que afecta la adquisición y desarrollo del lenguaje sin causa aparente como pérdida auditiva, discapacidad intelectual o daño neurológico. Según ASHA, el Trastorno del Desarrollo del Lenguaje (DLD/TDL) afecta la adquisición del lenguaje sin otra causa subyacente (https://www.asha.org/public/speech/disorders/Developmental-Language-Disorders/).",
+    cite: true,
+  },
+  {
+    question: "¿El TEL es lo mismo que TDL?",
+    answer:
+      "Sí, actualmente se usa más el término TDL (Trastorno del Desarrollo del Lenguaje) en lugar de TEL. Ambos nombres se refieren a la misma condición.",
+    acceptedAnswer:
+      "Sí, actualmente se usa más el término TDL (Trastorno del Desarrollo del Lenguaje) en lugar de TEL. Ambos nombres se refieren a la misma condición. Según ASHA, el término internacional preferido es Developmental Language Disorder (DLD), equivalente al TDL (https://www.asha.org/public/speech/disorders/Developmental-Language-Disorders/).",
+    cite: true,
+  },
+  {
+    question: "¿El TEL se cura?",
+    answer:
+      "El TEL es una condición que acompaña a la persona, pero con tratamiento adecuado los niños mejoran significativamente y desarrollan estrategias para comunicarse efectivamente.",
+    acceptedAnswer:
+      "El TEL es una condición que acompaña a la persona, pero con tratamiento adecuado los niños mejoran significativamente y desarrollan estrategias para comunicarse efectivamente. Según ASHA, la intervención temprana e intensiva mejora de forma importante las habilidades lingüísticas (https://www.asha.org/public/speech/disorders/Developmental-Language-Disorders/).",
+    cite: true,
+  },
+  {
+    question: "¿Cuál es la definición de TEL?",
+    answer:
+      "El TEL (Trastorno Específico del Lenguaje), hoy también llamado TDL, es un trastorno del neurodesarrollo que afecta la adquisición del lenguaje sin causa aparente como sordera o discapacidad intelectual.",
+    acceptedAnswer:
+      "El TEL (Trastorno Específico del Lenguaje), hoy también llamado TDL, es un trastorno del neurodesarrollo que afecta la adquisición del lenguaje sin causa aparente como sordera o discapacidad intelectual. Según ASHA, el DLD afecta aproximadamente al 7% de los niños en edad escolar (https://www.asha.org/public/speech/disorders/Developmental-Language-Disorders/).",
+    cite: true,
+  },
+  {
+    question: "¿Cuál es la diferencia entre TEL y TDL?",
+    answer:
+      "TEL y TDL son el mismo diagnóstico con distinto nombre. TDL (Trastorno del Desarrollo del Lenguaje) es el término más usado actualmente en guías clínicas.",
+    acceptedAnswer:
+      "TEL y TDL son el mismo diagnóstico con distinto nombre. TDL (Trastorno del Desarrollo del Lenguaje) es el término más usado actualmente en guías clínicas. Según ASHA, DLD es el nombre internacional unificado para esta condición (https://www.asha.org/public/speech/disorders/Developmental-Language-Disorders/).",
+    cite: true,
+  },
+];
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
@@ -44,48 +90,14 @@ const jsonLd = {
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "¿Qué significa TEL?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "TEL significa Trastorno Específico del Lenguaje. Es un trastorno del neurodesarrollo que afecta la adquisición y desarrollo del lenguaje sin causa aparente como pérdida auditiva, discapacidad intelectual o daño neurológico.",
-      },
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.acceptedAnswer,
     },
-    {
-      "@type": "Question",
-      name: "¿El TEL es lo mismo que TDL?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Sí, actualmente se usa más el término TDL (Trastorno del Desarrollo del Lenguaje) en lugar de TEL. Ambos nombres se refieren a la misma condición.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿El TEL se cura?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "El TEL es una condición que acompaña a la persona, pero con tratamiento adecuado los niños mejoran significativamente y desarrollan estrategias para comunicarse efectivamente.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Cuál es la definición de TEL?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "El TEL (Trastorno Específico del Lenguaje), hoy también llamado TDL, es un trastorno del neurodesarrollo que afecta la adquisición del lenguaje sin causa aparente como sordera o discapacidad intelectual.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Cuál es la diferencia entre TEL y TDL?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "TEL y TDL son el mismo diagnóstico con distinto nombre. TDL (Trastorno del Desarrollo del Lenguaje) es el término más usado actualmente en guías clínicas.",
-      },
-    },
-  ],
+  })),
 };
 
 export default function TELGlosarioPage() {
@@ -251,26 +263,38 @@ export default function TELGlosarioPage() {
               </ul>
 
               <h2>Preguntas frecuentes</h2>
+            </div>
 
-              <h3>¿El TEL afecta la inteligencia?</h3>
-              <p>
-                No. El TEL afecta específicamente el lenguaje, no la
-                inteligencia general. Los niños con TEL tienen inteligencia
-                normal.
-              </p>
-
-              <h3>¿El TEL se cura?</h3>
-              <p>
-                El TEL es una condición que acompaña a la persona, pero con
-                tratamiento adecuado los niños mejoran significativamente y
-                desarrollan estrategias compensatorias.
-              </p>
-
-              <h3>¿El TEL afecta la lectura?</h3>
-              <p>
-                Muchos niños con TEL tienen dificultades de lectura y escritura
-                porque el lenguaje oral es la base de la lectoescritura.
-              </p>
+            <div className="not-prose space-y-4">
+              {faqs.map((faq) => (
+                <details
+                  key={faq.question}
+                  className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm"
+                >
+                  <summary className="flex cursor-pointer items-start justify-between gap-4 font-semibold text-gray-900">
+                    <span>{faq.question}</span>
+                    <span className="flex-shrink-0 text-rose-500 transition-transform group-open:rotate-180">
+                      ▼
+                    </span>
+                  </summary>
+                  <p className="mt-4 text-gray-600">{faq.answer}</p>
+                  {faq.cite && (
+                    <p className="mt-3 text-sm text-gray-600">
+                      <cite className="not-italic">
+                        Fuente:{" "}
+                        <a
+                          href={ASHA_URL}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-medium text-rose-700 underline hover:text-rose-800"
+                        >
+                          {ASHA_LABEL}
+                        </a>
+                      </cite>
+                    </p>
+                  )}
+                </details>
+              ))}
             </div>
 
             {/* CTA */}

@@ -71,7 +71,7 @@ export default function RetrasoHablaPage() {
       <main className="min-h-screen bg-gradient-to-b from-sky-50 to-white">
         <section className="px-4 py-12 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
-            <Breadcrumbs items={[{ label: "Inicio", href: "/" }, { label: "Tratamientos", href: "/fonoaudiologia-infantil-chillan" }, { label: "Retraso del habla" }]} />
+            <Breadcrumbs items={[{ label: "Inicio", href: "/" }, { label: "Tratamientos", href: "/fonoaudiologa-ninos-chillan" }, { label: "Retraso del habla" }]} />
             <span className="mb-4 mt-6 inline-block rounded-full bg-sky-100 px-4 py-2 text-sm font-medium text-sky-700">Terapia del habla</span>
             <h1 className="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl">Terapia para retraso del habla en Chillán</h1>
             <p data-speakable className="mb-6 text-xl text-gray-600">
@@ -113,11 +113,11 @@ export default function RetrasoHablaPage() {
               <Link href="/tratamientos/dislalia-infantil-chillan" className="font-semibold text-sky-600 underline">dislalia</Link>,{" "}
               <Link href="/tratamientos/trastorno-fonologico-chillan" className="font-semibold text-sky-600 underline">trastorno fonológico</Link>{" "}
               o un patrón distinto. La{" "}
-              <Link href="/evaluacion-fonoaudiologica-infantil-chillan" className="font-semibold text-sky-600 underline">evaluación inicial</Link>{" "}
+              <Link href="/servicios/evaluacion-fonoaudiologica" className="font-semibold text-sky-600 underline">evaluación inicial</Link>{" "}
               define el plan. Más contexto en{" "}
               <Link href="/glosario/dislalia" className="font-semibold text-sky-600 underline">qué es la dislalia</Link>{" "}
               y en{" "}
-              <Link href="/chillan/lenguaje-infantil" className="font-semibold text-sky-600 underline">fonoaudiología infantil en Chillán</Link>.
+              <Link href="/fonoaudiologa-ninos-chillan" className="font-semibold text-sky-600 underline">fonoaudiología infantil en Chillán</Link>.
             </p>
           </div>
         </section>
@@ -151,7 +151,7 @@ export default function RetrasoHablaPage() {
         <section className="bg-white px-4 py-12 sm:px-6 lg:px-8">
           <div className="mx-auto grid max-w-4xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <Link href="/servicios/terapia-del-habla-infantil-chillan" className="rounded-xl border p-4 text-center hover:border-sky-300 hover:bg-sky-50"><span className="text-2xl">🗣️</span><p className="mt-2 font-medium">Terapia del habla</p></Link>
-            <Link href="/evaluacion-fonoaudiologica-infantil-chillan" className="rounded-xl border p-4 text-center hover:border-sky-300 hover:bg-sky-50"><span className="text-2xl">📋</span><p className="mt-2 font-medium">Evaluación</p></Link>
+            <Link href="/servicios/evaluacion-fonoaudiologica" className="rounded-xl border p-4 text-center hover:border-sky-300 hover:bg-sky-50"><span className="text-2xl">📋</span><p className="mt-2 font-medium">Evaluación</p></Link>
             <Link href="/glosario/dislalia" className="rounded-xl border p-4 text-center hover:border-sky-300 hover:bg-sky-50"><span className="text-2xl">📖</span><p className="mt-2 font-medium">Glosario: dislalia</p></Link>
             <Link href="/sintomas/nino-pronuncia-mal-chillan" className="rounded-xl border p-4 text-center hover:border-sky-300 hover:bg-sky-50"><span className="text-2xl">🔤</span><p className="mt-2 font-medium">Pronuncia mal</p></Link>
           </div>

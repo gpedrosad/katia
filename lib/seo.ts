@@ -40,8 +40,8 @@ export function buildPageMetadata({
   const resolvedCanonical = normalizePath(canonicalPathOverride ?? path);
   const canonical =
     resolvedCanonical === "/" ? "/" : resolvedCanonical;
-  const pageUrl =
-    normalizedPath === "/" ? SITE_URL : `${SITE_URL}${normalizedPath}`;
+  const canonicalUrl =
+    resolvedCanonical === "/" ? SITE_URL : `${SITE_URL}${resolvedCanonical}`;
 
   return {
     title: { absolute: title },
@@ -56,7 +56,7 @@ export function buildPageMetadata({
       siteName: "Katia Domínguez - Fonoaudióloga",
       title,
       description,
-      url: pageUrl,
+      url: canonicalUrl,
       images: [
         {
           url: OG_IMAGE,

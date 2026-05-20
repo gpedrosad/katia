@@ -48,7 +48,7 @@ export default function TestLenguajePage() {
         <Breadcrumbs
           items={[
             { label: "Inicio", href: "/" },
-            { label: "Evaluación", href: "/evaluacion-fonoaudiologica-infantil-chillan" },
+            { label: "Evaluación", href: "/servicios/evaluacion-fonoaudiologica" },
             { label: "Test de Lenguaje" },
           ]}
         />

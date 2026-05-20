@@ -41,7 +41,7 @@ export default function ProblemasLectoescrituraPage() {
         <Breadcrumbs
           items={[
             { label: "Inicio", href: "/" },
-            { label: "Servicios", href: "/fonoaudiologia-infantil-chillan" },
+            { label: "Servicios", href: "/fonoaudiologa-ninos-chillan" },
             { label: "Problemas de Lectoescritura" },
           ]}
         />

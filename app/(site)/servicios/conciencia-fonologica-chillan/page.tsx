@@ -53,7 +53,7 @@ export default function ConcienciaFonologicaPage() {
         <Breadcrumbs
           items={[
             { label: "Inicio", href: "/" },
-            { label: "Servicios", href: "/fonoaudiologia-infantil-chillan" },
+            { label: "Servicios", href: "/fonoaudiologa-ninos-chillan" },
             { label: "Conciencia Fonológica" },
           ]}
         />

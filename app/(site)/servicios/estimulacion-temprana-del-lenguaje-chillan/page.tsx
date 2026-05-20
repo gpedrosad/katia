@@ -34,7 +34,7 @@ export default function EstimulacionTempranaPage() {
         <Breadcrumbs
           items={[
             { label: "Inicio", href: "/" },
-            { label: "Servicios", href: "/fonoaudiologia-infantil-chillan" },
+            { label: "Servicios", href: "/fonoaudiologa-ninos-chillan" },
             { label: "Estimulación Temprana" },
           ]}
         />
@@ -112,7 +112,7 @@ export default function EstimulacionTempranaPage() {
           <p>
             Si tu pediatra o educadora de párvulos ha sugerido una{" "}
             <Link
-              href="/evaluacion-fonoaudiologica-infantil-chillan"
+              href="/servicios/evaluacion-fonoaudiologica"
               className="font-semibold text-cyan-600"
             >
               evaluación fonoaudiológica

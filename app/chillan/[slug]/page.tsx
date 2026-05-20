@@ -5,8 +5,20 @@ import { notFound } from "next/navigation";
 import { PATOLOGIAS, getPatologiaBySlug } from "./patologias";
 import { WhatsAppCTA } from "../lenguaje-infantil/_components/WhatsAppCTA";
 import { StickyWhatsApp } from "../lenguaje-infantil/_components/StickyWhatsApp";
-import { buildPageMetadata } from "@/lib/seo";
+import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
+import { buildPageMetadata, buildWebPageJsonLd } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
+
+function statSnippet(slug: string): string {
+  switch (slug) {
+    case "tel":
+      return "";
+    case "tea-comunicacion":
+      return " Aproximadamente el 40% de los niños con TEA tiene retraso significativo del lenguaje.";
+    default:
+      return " La intervención temprana mejora significativamente el pronóstico.";
+  }
+}
 
 export async function generateStaticParams() {
   return PATOLOGIAS.map((p) => ({ slug: p.slug }));
@@ -73,16 +85,26 @@ export default async function PatologiaChillanPage({
     serviceType: p.titulo,
   };
 
+  const patologiaLabel = p.titulo.split(" en ")[0];
+  const pagePath = `/chillan/${p.slug}`;
+
+  const webPageJsonLd = buildWebPageJsonLd({
+    path: pagePath,
+    name: p.titulo,
+    description: p.descripcion,
+    speakable: true,
+  });
+
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
       {
         "@type": "Question",
-        name: `¿Qué es ${p.titulo.split(" en ")[0]}?`,
+        name: `¿Qué es ${patologiaLabel}?`,
         acceptedAnswer: {
           "@type": "Answer",
-          text: p.descripcion,
+          text: `${p.descripcion}${statSnippet(slug)}`,
         },
       },
       {
@@ -90,7 +112,15 @@ export default async function PatologiaChillanPage({
         name: "¿Dónde se atiende en Chillán?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Atención presencial en Chillán. La evaluación dura aproximadamente 60 minutos e incluye informe con diagnóstico y plan de tratamiento. Se agenda por WhatsApp.",
+          text: "Atención presencial en Chillán. La evaluación dura aproximadamente 60 minutos e incluye informe con diagnóstico y plan de tratamiento. Se agenda por WhatsApp al +56995497838.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "¿Cuándo llevar al fonoaudiólogo en Chillán?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `Consulta si tu hijo presenta señales persistentes para su edad relacionadas con ${patologiaLabel.toLowerCase()}. Revisa definición y causas en el glosario (${SITE_URL}${p.glosarioHref}) o agenda evaluación presencial en Chillán (${SITE_URL}/agendar-hora-fonoaudiologo-infantil-chillan).`,
         },
       },
     ],
@@ -104,6 +134,10 @@ export default async function PatologiaChillanPage({
       />
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
@@ -111,28 +145,29 @@ export default async function PatologiaChillanPage({
         {/* Hero */}
         <section className="relative overflow-hidden px-4 pb-16 pt-12 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-6xl">
-            <nav className="mb-6 text-sm text-gray-600">
-              <Link href="/" className="hover:text-rose-600">
-                Inicio
-              </Link>
-              <span className="mx-2">/</span>
-              <Link href="/fonoaudiologa-ninos-chillan" className="hover:text-rose-600">
-                Fonoaudióloga Chillán
-              </Link>
-              <span className="mx-2">/</span>
-              <span className="text-gray-900">{p.titulo.split(" en ")[0]}</span>
-            </nav>
+            <Breadcrumbs
+              items={[
+                { label: "Inicio", href: "/" },
+                { label: "Chillán", href: "/chillan" },
+                { label: patologiaLabel },
+              ]}
+            />
             <div className="grid items-center gap-12 lg:grid-cols-2">
               <div className="text-center lg:text-left">
-                <span className="mb-4 inline-block rounded-full bg-rose-100 px-4 py-2 text-sm font-medium text-rose-700">
-                  📍 Atención presencial en Chillán
-                </span>
-                <h1 className="mb-4 text-4xl font-bold leading-tight tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
-                  {p.titulo}
-                </h1>
-                <p className="mb-6 text-xl leading-relaxed text-gray-700 sm:text-2xl">
-                  {p.subtitulo}
-                </p>
+                <article>
+                  <span className="mb-4 inline-block rounded-full bg-rose-100 px-4 py-2 text-sm font-medium text-rose-700">
+                    📍 Atención presencial en Chillán
+                  </span>
+                  <h1 className="mb-4 text-4xl font-bold leading-tight tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
+                    {p.titulo}
+                  </h1>
+                  <p
+                    data-speakable
+                    className="mb-6 text-xl leading-relaxed text-gray-700 sm:text-2xl"
+                  >
+                    {p.subtitulo}
+                  </p>
+                </article>
                 <p className="mb-8 text-lg text-gray-600">{p.descripcion}</p>
                 <ul className="mb-8 space-y-3 text-left text-gray-700">
                   <li className="flex items-start gap-3">
@@ -240,6 +275,27 @@ export default async function PatologiaChillanPage({
                   Atención presencial en Chillán. La evaluación dura aproximadamente
                   60 minutos e incluye informe con diagnóstico y plan de tratamiento.
                   Se agenda por WhatsApp.
+                </p>
+              </details>
+              <details className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+                <summary className="flex cursor-pointer items-start justify-between gap-4 font-semibold text-gray-900">
+                  <span>¿Cuándo llevar al fonoaudiólogo en Chillán?</span>
+                  <span className="flex-shrink-0 text-rose-500 transition-transform group-open:rotate-180">
+                    ▼
+                  </span>
+                </summary>
+                <p className="mt-4 text-gray-600">
+                  Consulta si tu hijo presenta señales persistentes para su edad
+                  relacionadas con {patologiaLabel.toLowerCase()}. Puedes revisar más
+                  información en el{" "}
+                  <Link href={p.glosarioHref} className="font-medium text-rose-600 underline hover:text-rose-700">
+                    glosario
+                  </Link>{" "}
+                  o{" "}
+                  <Link href="/agendar-hora-fonoaudiologo-infantil-chillan" className="font-medium text-rose-600 underline hover:text-rose-700">
+                    agendar evaluación
+                  </Link>{" "}
+                  presencial en Chillán.
                 </p>
               </details>
             </div>

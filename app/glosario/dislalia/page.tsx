@@ -9,6 +9,52 @@ import { SITE_URL } from "@/lib/site";
 const PAGE_PATH = "/glosario/dislalia";
 const WHATSAPP_LINK =
   "https://wa.me/56995497838?text=Hola%2C%20quiero%20consultar%20por%20dislalia";
+const ASHA_URL =
+  "https://www.asha.org/public/speech/disorders/articulation/";
+const ASHA_LABEL = "ASHA — Articulation";
+
+const faqs = [
+  {
+    question: "¿Qué es la dislalia?",
+    answer:
+      "La dislalia es un trastorno del habla caracterizado por la dificultad para pronunciar ciertos sonidos correctamente. El niño puede omitir, sustituir o distorsionar sonidos al hablar.",
+    acceptedAnswer:
+      "La dislalia es un trastorno del habla caracterizado por la dificultad para pronunciar ciertos sonidos correctamente. El niño puede omitir, sustituir o distorsionar sonidos al hablar. Según ASHA, los trastornos de articulación implican dificultades para producir sonidos del habla de forma inteligible (https://www.asha.org/public/speech/disorders/articulation/).",
+    cite: true,
+  },
+  {
+    question: "¿A qué edad se corrige la dislalia?",
+    answer:
+      "La mayoría de los sonidos deben estar adquiridos a los 4-5 años. Si después de esa edad persisten errores de pronunciación, es recomendable consultar a un fonoaudiólogo.",
+    acceptedAnswer:
+      "La mayoría de los sonidos deben estar adquiridos a los 4-5 años. Si después de esa edad persisten errores de pronunciación, es recomendable consultar a un fonoaudiólogo. Según ASHA, los errores articulatorios fuera del rango evolutivo esperado pueden requerir evaluación profesional (https://www.asha.org/public/speech/disorders/articulation/).",
+    cite: true,
+  },
+  {
+    question: "¿La dislalia se cura con tratamiento?",
+    answer:
+      "Sí, la mayoría de los casos de dislalia se corrigen completamente con tratamiento fonoaudiológico. El tiempo de tratamiento depende de la cantidad y tipo de sonidos afectados.",
+    acceptedAnswer:
+      "Sí, la mayoría de los casos de dislalia se corrigen completamente con tratamiento fonoaudiológico. El tiempo de tratamiento depende de la cantidad y tipo de sonidos afectados. Según ASHA, la terapia del habla puede mejorar significativamente la articulación en niños con trastornos del habla (https://www.asha.org/public/speech/disorders/articulation/).",
+    cite: true,
+  },
+  {
+    question: "¿Qué significa dislalia?",
+    answer:
+      "Dislalia significa dificultad para articular fonemas del habla (omitir, sustituir o distorsionar sonidos). Es un trastorno del habla frecuente en la infancia, con buen pronóstico con terapia fonoaudiológica.",
+    acceptedAnswer:
+      "Dislalia significa dificultad para articular fonemas del habla (omitir, sustituir o distorsionar sonidos). Es un trastorno del habla frecuente en la infancia, con buen pronóstico con terapia fonoaudiológica. Según ASHA, las dificultades articulatorias afectan la producción de sonidos individuales del habla (https://www.asha.org/public/speech/disorders/articulation/).",
+    cite: true,
+  },
+  {
+    question: "¿Cuándo llevar al fonoaudiólogo por dislalia en Chillán?",
+    answer:
+      "Si después de los 5-6 años persisten errores de pronunciación, o si el colegio o la familia tienen dificultad para entender al niño. Una evaluación en Chillán identifica sonidos afectados y plan de tratamiento.",
+    acceptedAnswer:
+      "Si después de los 5-6 años persisten errores de pronunciación, o si el colegio o la familia tienen dificultad para entender al niño. Según ASHA, conviene evaluar cuando los errores persisten más allá de los hitos evolutivos (https://www.asha.org/public/speech/disorders/articulation/). En Chillán puedes agendar una evaluación fonoaudiológica presencial.",
+    cite: true,
+  },
+];
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
@@ -52,48 +98,14 @@ const jsonLd = {
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "¿Qué es la dislalia?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "La dislalia es un trastorno del habla caracterizado por la dificultad para pronunciar ciertos sonidos correctamente. El niño puede omitir, sustituir o distorsionar sonidos al hablar.",
-      },
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.acceptedAnswer,
     },
-    {
-      "@type": "Question",
-      name: "¿A qué edad se corrige la dislalia?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "La mayoría de los sonidos deben estar adquiridos a los 4-5 años. Si después de esa edad persisten errores de pronunciación, es recomendable consultar a un fonoaudiólogo.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿La dislalia se cura con tratamiento?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Sí, la mayoría de los casos de dislalia se corrigen completamente con tratamiento fonoaudiológico. El tiempo de tratamiento depende de la cantidad y tipo de sonidos afectados.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Qué significa dislalia?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Dislalia significa dificultad para articular fonemas del habla (omitir, sustituir o distorsionar sonidos). Es un trastorno del habla frecuente en la infancia, con buen pronóstico con terapia fonoaudiológica.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Cuándo llevar al fonoaudiólogo por dislalia en Chillán?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Si después de los 5-6 años persisten errores de pronunciación, o si el colegio o la familia tienen dificultad para entender al niño. Una evaluación en Chillán identifica sonidos afectados y plan de tratamiento.",
-      },
-    },
-  ],
+  })),
 };
 
 export default function DislaliaPage() {
@@ -269,26 +281,38 @@ export default function DislaliaPage() {
               </ol>
 
               <h2>Preguntas frecuentes</h2>
+            </div>
 
-              <h3>¿La dislalia se cura?</h3>
-              <p>
-                Sí, la mayoría de los casos de dislalia se corrigen
-                completamente con tratamiento. El tiempo depende de la cantidad
-                y tipo de sonidos afectados.
-              </p>
-
-              <h3>¿Cuánto dura el tratamiento?</h3>
-              <p>
-                Problemas simples (1-2 sonidos) pueden corregirse en 2-4 meses.
-                Problemas más complejos requieren 6-12 meses.
-              </p>
-
-              <h3>¿Qué pasa si no se trata?</h3>
-              <p>
-                Sin tratamiento, los errores de pronunciación pueden persistir
-                hasta la edad adulta y afectar la autoestima, las relaciones
-                sociales y el desempeño laboral.
-              </p>
+            <div className="not-prose space-y-4">
+              {faqs.map((faq) => (
+                <details
+                  key={faq.question}
+                  className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm"
+                >
+                  <summary className="flex cursor-pointer items-start justify-between gap-4 font-semibold text-gray-900">
+                    <span>{faq.question}</span>
+                    <span className="flex-shrink-0 text-rose-500 transition-transform group-open:rotate-180">
+                      ▼
+                    </span>
+                  </summary>
+                  <p className="mt-4 text-gray-600">{faq.answer}</p>
+                  {faq.cite && (
+                    <p className="mt-3 text-sm text-gray-600">
+                      <cite className="not-italic">
+                        Fuente:{" "}
+                        <a
+                          href={ASHA_URL}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-medium text-rose-700 underline hover:text-rose-800"
+                        >
+                          {ASHA_LABEL}
+                        </a>
+                      </cite>
+                    </p>
+                  )}
+                </details>
+              ))}
             </div>
 
             {/* CTA */}

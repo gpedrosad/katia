@@ -62,7 +62,7 @@ export default function DislaliaInfantilPage() {
       <main className="min-h-screen bg-gradient-to-b from-teal-50 to-white">
         <section className="px-4 py-12 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
-            <Breadcrumbs items={[{ label: "Inicio", href: "/" }, { label: "Tratamientos", href: "/fonoaudiologia-infantil-chillan" }, { label: "Dislalia" }]} />
+            <Breadcrumbs items={[{ label: "Inicio", href: "/" }, { label: "Tratamientos", href: "/fonoaudiologa-ninos-chillan" }, { label: "Dislalia" }]} />
             <span className="mb-4 mt-6 inline-block rounded-full bg-teal-100 px-4 py-2 text-sm font-medium text-teal-700">Pronunciación y articulación</span>
             <h1 className="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl">Tratamiento de dislalia infantil en Chillán</h1>
             <p data-speakable className="mb-6 text-xl text-gray-600">
@@ -97,7 +97,7 @@ export default function DislaliaInfantilPage() {
               Más en <Link href="/glosario/dislalia" className="font-semibold text-teal-600 underline">glosario: dislalia</Link>,{" "}
               <Link href="/chillan/dislalia" className="font-semibold text-teal-600 underline">dislalia en Chillán</Link>,{" "}
               <Link href="/servicios/terapia-del-habla-infantil-chillan" className="font-semibold text-teal-600 underline">terapia del habla</Link> y{" "}
-              <Link href="/evaluacion-fonoaudiologica-infantil-chillan" className="font-semibold text-teal-600 underline">evaluación fonoaudiológica</Link>.
+              <Link href="/servicios/evaluacion-fonoaudiologica" className="font-semibold text-teal-600 underline">evaluación fonoaudiológica</Link>.
             </p>
           </div>
         </section>

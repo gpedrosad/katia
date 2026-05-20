@@ -62,7 +62,7 @@ export default function TratamientoTELPage() {
       <main className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
         <section className="px-4 py-12 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
-            <Breadcrumbs items={[{ label: "Inicio", href: "/" }, { label: "Tratamientos", href: "/fonoaudiologia-infantil-chillan" }, { label: "TEL" }]} />
+            <Breadcrumbs items={[{ label: "Inicio", href: "/" }, { label: "Tratamientos", href: "/fonoaudiologa-ninos-chillan" }, { label: "TEL" }]} />
             <span className="mb-4 mt-6 inline-block rounded-full bg-purple-100 px-4 py-2 text-sm font-medium text-purple-700">TEL / TDL</span>
             <h1 className="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl">Tratamiento TEL en Chillán</h1>
             <p data-speakable className="mb-6 text-xl text-gray-600">
@@ -96,8 +96,8 @@ export default function TratamientoTELPage() {
             <p>
               Lee más en el <Link href="/glosario/tel" className="font-semibold text-purple-600 underline">glosario: qué es el TEL</Link>, revisa{" "}
               <Link href="/chillan/tel" className="font-semibold text-purple-600 underline">TEL en Chillán</Link> y conoce la{" "}
-              <Link href="/servicios/terapia-de-lenguaje-infantil-chillan" className="font-semibold text-purple-600 underline">terapia de lenguaje infantil</Link>. La{" "}
-              <Link href="/evaluacion-fonoaudiologica-infantil-chillan" className="font-semibold text-purple-600 underline">evaluación fonoaudiológica</Link> es el primer paso.
+              <Link href="/servicios/terapia-lenguaje-infantil" className="font-semibold text-purple-600 underline">terapia de lenguaje infantil</Link>. La{" "}
+              <Link href="/servicios/evaluacion-fonoaudiologica" className="font-semibold text-purple-600 underline">evaluación fonoaudiológica</Link> es el primer paso.
             </p>
           </div>
         </section>
@@ -132,11 +132,11 @@ export default function TratamientoTELPage() {
           <div className="mx-auto max-w-4xl">
             <h2 className="mb-8 text-center text-2xl font-bold text-gray-900">Recursos relacionados</h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              <Link href="/servicios/terapia-de-lenguaje-infantil-chillan" className="rounded-xl border border-gray-200 p-4 text-center hover:border-purple-300 hover:bg-purple-50">
+              <Link href="/servicios/terapia-lenguaje-infantil" className="rounded-xl border border-gray-200 p-4 text-center hover:border-purple-300 hover:bg-purple-50">
                 <span className="text-2xl">💬</span>
                 <p className="mt-2 font-medium">Terapia de lenguaje</p>
               </Link>
-              <Link href="/evaluacion-fonoaudiologica-infantil-chillan" className="rounded-xl border border-gray-200 p-4 text-center hover:border-purple-300 hover:bg-purple-50">
+              <Link href="/servicios/evaluacion-fonoaudiologica" className="rounded-xl border border-gray-200 p-4 text-center hover:border-purple-300 hover:bg-purple-50">
                 <span className="text-2xl">📋</span>
                 <p className="mt-2 font-medium">Evaluación</p>
               </Link>

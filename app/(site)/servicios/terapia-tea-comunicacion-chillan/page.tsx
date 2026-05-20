@@ -42,7 +42,7 @@ export default function TerapiaTeaComunicacionPage() {
         <Breadcrumbs
           items={[
             { label: "Inicio", href: "/" },
-            { label: "Servicios", href: "/fonoaudiologia-infantil-chillan" },
+            { label: "Servicios", href: "/fonoaudiologa-ninos-chillan" },
             { label: "TEA y Comunicación" },
           ]}
         />
@@ -137,7 +137,7 @@ export default function TerapiaTeaComunicacionPage() {
             es fundamental, ya que el abordaje terapéutico es distinto. Por eso
             siempre partimos con una{" "}
             <Link
-              href="/evaluacion-fonoaudiologica-infantil-chillan"
+              href="/servicios/evaluacion-fonoaudiologica"
               className="font-semibold text-teal-600"
             >
               evaluación fonoaudiológica completa
