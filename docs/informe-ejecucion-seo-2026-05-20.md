@@ -8,18 +8,18 @@
 - Datos API: [`gsc-informe-2026-05-20.md`](./gsc-informe-2026-05-20.md)
 - Diagnóstico y plan: [`gsc-evaluacion-completa-2026-05-20.md`](./gsc-evaluacion-completa-2026-05-20.md)
 - Plan multi-agente: [`plan-agentes-seo-katialafono.md`](./plan-agentes-seo-katialafono.md)
-- Checklist post-deploy: [`gsc-checklist-post-deploy.md`](./gsc-checklist-post-deploy.md)
+- Checklist post-producción: [`gsc-checklist-post-deploy.md`](./gsc-checklist-post-deploy.md)
 
 ---
 
 ## Resumen en una página
 
-| Dimensión | Antes (20-may) | Después (código + Vercel) | Después (GSC medido) |
+| Dimensión | Antes (20-may) | Después (producción verificada) | Después (GSC medido) |
 | --- | --- | --- | --- |
 | **Integración GSC** | No existía en repo | Panel, scripts, informes, skill | — |
-| **Dominio canónico** | 307, clics en apex | 308 → www en Vercel + `next.config` | Pendiente ~28 d |
-| **Snippets CTR (top URLs)** | Crítico (0–0,3% CTR) | Titles/metas reescritos | Pendiente ~28 d |
-| **Consolidación URLs** | lenguaje-infantil duplicada | 308 + footer | Pendiente ~28 d |
+| **Dominio canónico** | 307, clics en apex | 308 → www verificado en producción | Pendiente ~28 d |
+| **Snippets CTR (top URLs)** | Crítico (0–0,3% CTR) | Publicados; `/chillan/tel` requiere ajuste | Pendiente ~28 d |
+| **Consolidación URLs** | lenguaje-infantil duplicada | 308 desplegados; quedan enlaces residuales a alias | Pendiente ~28 d |
 | **Glosario / GEO** | FAQ básico, poco puente a Chillán | FAQs ampliadas + enlaces + Chile | Pendiente ~28 d |
 | **Operaciones GSC** | Sin checklist | Doc checklist | Humano pendiente |
 
@@ -28,8 +28,8 @@
 | Momento | Puntuación | Nota |
 | --- | --- | --- |
 | **Antes** (solo datos GSC, sin fixes) | **4,2 / 10** | Visibilidad sube pero conversión y señales divididas |
-| **Después** (implementación completa en repo + Vercel) | **7,8 / 10** | Falta deploy, GSC manual y medición |
-| **Objetivo** (28 d post-deploy) | **8,5 / 10** | Si KPIs de §4 se cumplen parcialmente |
+| **Después** (producción verificada) | **7,8 / 10** | Falta GSC manual, medición y fix de meta `/chillan/tel` |
+| **Objetivo** (28 d post-verificación) | **8,5 / 10** | Si KPIs de §4 se cumplen parcialmente |
 
 ---
 
@@ -71,7 +71,7 @@
 | 1 | Primary www + redirect apex | 10 | 3 | 10 | pendiente | Hecho (Vercel 308) |
 | 2 | Redirect vercel.app → www | 7 | 2 | 10 | pendiente | Hecho (Vercel 308) |
 | 3 | Title/meta **home** www | 10 | 1 | 9 | pendiente | Hecho (código) |
-| 4 | Meta **`/chillan/tel`** (truncada) | 10 | 0 | 9 | pendiente | Hecho (código) |
+| 4 | Meta **`/chillan/tel`** (truncada) | 10 | 0 | 5 | pendiente | **Parcial** (publicada con corte no natural) |
 | 5 | Title/meta **`/fonoaudiologa-ninos-chillan`** | 9 | 2 | 9 | pendiente | Hecho (código) |
 | 6 | **`/chillan/lenguaje-infantil`** → pilar | 9 | 1 | 9 | pendiente | Hecho (308 + footer) |
 | 7 | Title/meta **`/agendar-hora-...`** | 8 | 3 | 9 | pendiente | Hecho (código) |
@@ -79,7 +79,7 @@
 | 9 | Redirect **`/agendar`** → URL real | 7 | 0 | 9 | pendiente | Hecho (código) |
 | 10 | Warning **sitemap** en GSC UI | 8 | ? | 5 | pendiente | **Falta** (humano) |
 | 11 | **URL Inspection** + indexación | 7 | 5 | 5 | pendiente | **Falta** (humano) |
-| 12 | **Deploy** a producción | 10 | — | 0 | pendiente | **Falta** |
+| 12 | **Deploy** a producción | 10 | — | 10 | — | Hecho |
 | 13 | Glosario dislalia/TEL: FAQ + enlaces Chillán | 6 | 5 | 9 | pendiente | Hecho (código) |
 | 14 | Hubs `/glosario`, `/chillan`, `/servicios` | 6 | 4 | 8 | pendiente | Hecho (código) |
 | 15 | Sitemap `lastmod` 2026-05-20 | 3 | 6 | 8 | pendiente | Hecho (código) |
@@ -99,13 +99,13 @@
 | --- | --- |
 | Salud ANTES (ítems 1–12) | **2,6 / 10** |
 | Salud DESPUÉS código (ítems 1–12) | **8,7 / 10** |
-| Completitud ejecución (ítems 1–12) | **9 / 12 hechos en código/Vercel** (75%); **3 pendientes** humano/deploy |
+| Completitud ejecución (ítems 1–12) | **9 / 12 resueltos**, **1 parcial** (`/chillan/tel`), **2 pendientes** humanos en GSC |
 
 ---
 
 ## 3. KPIs Search Console: antes, objetivo y después
 
-> **DESPUÉS (GSC)** se rellena tras deploy + 21–28 días con `npm run gsc:report:md`.
+> **DESPUÉS (GSC)** se rellena tras recrawl + 21–28 días desde la verificación de producción del 2026-05-20 con `npm run gsc:report:md`.
 
 | KPI | ANTES (28 d) | Objetivo DESPUÉS | DESPUÉS GSC (medido) | Δ vs antes |
 | --- | --- | --- | --- | --- |
@@ -152,7 +152,7 @@
 | Archivo / área | Cambio |
 | --- | --- |
 | `app/layout.tsx` | Title/meta home: fonoaudiología infantil Chillán, CTA WhatsApp |
-| `app/chillan/[slug]/page.tsx` | Fix meta truncada (tel y resto patologías); title TEL ampliado |
+| `app/chillan/[slug]/page.tsx` | Title TEL ampliado; la lógica de meta quedó desplegada pero `/chillan/tel` sigue con un corte no natural en producción |
 | `app/fonoaudiologa-ninos-chillan/page.tsx` | Title corto + meta dolor/agenda |
 | `app/(site)/agendar-hora-fonoaudiologo-infantil-chillan/page.tsx` | Title agendar + meta primera cita |
 | `app/servicios/page.tsx` | `title.absolute` sin doble marca; meta actualizada |
@@ -181,24 +181,32 @@
 - [x] `npm run build` — OK  
 - [x] `npm run gsc:report` / `gsc:report:md` — OK (baseline 20-may)
 
+### Verificación de producción
+
+- [x] `katialafono.cl` → **308** → `www.katialafono.cl`
+- [x] `/chillan/lenguaje-infantil` → **308** → `/fonoaudiologa-ninos-chillan`
+- [x] `/agendar` → **308** → `/agendar-hora-fonoaudiologo-infantil-chillan`
+- [x] `/servicios` publica title sin marca duplicada
+- [ ] `/chillan/tel` sigue con meta publicada defectuosa
+
 ---
 
 ## 5. Lo que falta por realizar
 
-### Crítico (bloquea medición de resultados)
+### Crítico (bloquea medición o deja un bug visible en producción)
 
 | # | Tarea | Imp. | Responsable | Plazo sugerido |
 | --- | --- | --- | --- | --- |
-| 1 | **Deploy** a producción (Ola 1 + 2) | 10 | Dev / Vercel | Inmediato |
-| 2 | Checklist GSC UI (sitemap + 4 URL inspection) | 8 | Gonzalo | Día 0 post-deploy |
-| 3 | Anotar fecha deploy en §5 evaluación | 6 | Gonzalo | Día 0 |
+| 1 | Checklist GSC UI (sitemap + 4 URL inspection) | 8 | Gonzalo | Inmediato |
+| 2 | Corregir meta publicada de `/chillan/tel` | 10 | Dev | Inmediato |
+| 3 | Anotar fecha de despliegue / validación en §5 evaluación | 6 | Gonzalo | Inmediato |
 
 ### Alto (2–4 semanas)
 
 | # | Tarea | Imp. | Notas |
 | --- | --- | --- | --- |
 | 4 | Regenerar informe `gsc:report:md` y comparar KPIs | 8 | Ola 3 — ~2026-06-19 |
-| 5 | Auditar alias `canonicalPath` restantes (301 o dejar de enlazar) | 6 | programmatic-seo |
+| 5 | Auditar alias `canonicalPath` restantes y enlaces internos residuales | 6 | programmatic-seo |
 | 6 | Reforzar landings para «fonoaudiologo chillan» | 7 | Copy ya parcial en agendar/pilar |
 
 ### Medio / bajo (backlog)
@@ -259,14 +267,14 @@ docs/informe-ejecucion-seo-2026-05-20.md (este archivo)
 
 ```mermaid
 flowchart LR
-  A[Deploy] --> B[Checklist GSC 15 min]
+  A[Checklist GSC 15 min] --> B[Corregir meta TEL]
   B --> C[Esperar 21-28 días]
   C --> D[npm run gsc:report:md]
   D --> E[Actualizar DESPUÉS GSC en este informe]
 ```
 
-1. Deploy producción.  
-2. [`gsc-checklist-post-deploy.md`](./gsc-checklist-post-deploy.md).  
+1. [`gsc-checklist-post-deploy.md`](./gsc-checklist-post-deploy.md).  
+2. Corregir la meta publicada de `/chillan/tel`.  
 3. **2026-06-19:** Ola 3 — nuevo informe y rellenar columnas «DESPUÉS GSC» de §3.  
 4. Si CTR home/tel no mejoran: iterar titles o revisar competencia SERP.
 
@@ -276,11 +284,11 @@ flowchart LR
 
 | Criterio | Estado |
 | --- | --- |
-| Código Ola 1 + 2 en producción | Pendiente deploy |
+| Código Ola 1 + 2 en producción | Hecho (verificado 2026-05-20) |
 | Checklist GSC ejecutado | Pendiente |
-| Informe comparativo 28 d post-deploy | Pendiente |
+| Informe comparativo 28 d post-recrawl | Pendiente |
 | Al menos 2 de 3: CTR home ≥1%, CTR tel ≥3%, clics ≥30 | Pendiente medición |
 
 ---
 
-*Informe generado al cierre de la ejecución en Cursor (2026-05-20). Actualizar §3 y §9 tras la primera medición GSC post-deploy.*
+*Informe generado al cierre de la ejecución en Cursor (2026-05-20). Actualizado tras verificación de producción el 2026-05-20; mantener §3 y §9 como pendientes hasta la primera medición GSC post-recrawl.*

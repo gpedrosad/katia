@@ -9,6 +9,13 @@
 **Informe API detallado (datos crudos):** [`gsc-informe-2026-05-20.md`](./gsc-informe-2026-05-20.md)  
 **Panel interno:** `/interno/gsc` (local: http://localhost:3000/interno/gsc)
 
+**Actualización de estado tras verificar producción el 2026-05-20:**
+- `https://katialafono.cl/` responde `308` a `https://www.katialafono.cl/`
+- `https://www.katialafono.cl/chillan/lenguaje-infantil` responde `308` al pilar
+- `https://www.katialafono.cl/agendar` responde `308` a la URL final
+- `/servicios` ya publica title sin marca duplicada
+- `/chillan/tel` publica una meta description con corte no natural y sigue siendo el bug on-page prioritario
+
 ---
 
 ## Resumen ejecutivo
@@ -22,7 +29,7 @@
 
 **Diagnóstico en una frase:** el sitio **gana exposición** pero **no convierte** en las URLs que más impresiones generan (home www, landings Chillán posición 2–3 con 0% CTR). El **77% de clics es móvil** (pos. 5,9); desktop arrastra posición media (38,6). **Casi todo el tráfico es no-marca** (0 clics de marca detectados).
 
-**Prioridad absoluta (P0):** unificar señal **www** (redirect 307 + canonical + sitemap ya apuntan a www, pero **10 de 22 clics** van a `katialafono.cl` sin www mientras **337 impresiones** están en home www con CTR 0,30%). Corregir snippets en 5 URLs con mayor gap de CTR.
+**Prioridad absoluta (P0):** cerrar el circuito entre producción y GSC. El host canónico ya responde `308` a `www`, pero GSC aún puede arrastrar señales del estado previo; además, `/chillan/tel` publicó una meta description con corte no natural y sigue siendo el principal fix de snippet pendiente.
 
 ---
 
@@ -93,31 +100,32 @@
 
 | Check | Resultado |
 | --- | --- |
-| robots.txt | OK en www; apex 307 → www |
+| robots.txt | OK en www; apex 308 → www |
 | Sitemap | OK, 71 `<loc>` todas www |
 | Bots IA | Permitidos (GPTBot, PerplexityBot, ClaudeBot, etc.) |
 | Disallow | Solo `/seo-links` (correcto) |
-| Redirect apex | **307** → www (recomendable **301** si Vercel/CDN lo permite) |
+| Redirect apex | **308** → www |
 
 ### 2.2 www vs non-www — evidencia
 
 ```
-curl -sI https://katialafono.cl/     → 307 → https://www.katialafono.cl/
+curl -sI https://katialafono.cl/     → 308 → https://www.katialafono.cl/
 curl -sI https://www.katialafono.cl/ → 200
 ```
 
 - Código: `SITE_URL = "https://www.katialafono.cl"`, canonical en HTML → www.
-- GSC: clics concentrados en apex; impresiones en www → **fragmentación de señales**.
+- Producción: host canónico consistente.
+- GSC baseline: clics concentrados en apex; impresiones en www → **fragmentación histórica de señales** que debe medirse tras recrawl.
 
-### 2.3 On-page crítico (acciones title/meta)
+### 2.3 On-page crítico (estado tras verificación de producción)
 
-| URL | Imp. | Problema detectado | Acción |
+| URL | Imp. | Estado actual | Acción |
 | --- | --- | --- | --- |
-| `/chillan/tel` | 159 | Meta truncada/duplicada en HTML | Reescribir title + meta 150–155 car. con CTA Chillán |
-| `/chillan/lenguaje-infantil` | 150 | Canonical → `/fonoaudiologa-ninos-chillan`; 0% CTR | 301 al pilar o alinear snippet al canonical |
-| `/fonoaudiologa-ninos-chillan` | 193 | Title largo, pos. 3,7, 0 clics | Acortar title; meta con dolor + prueba social |
-| `/agendar-hora-fonoaudiologo-infantil-chillan` | 82 | Intención agendar, 0 clics | Title «Agendar fonoaudiólogo infantil Chillán» |
-| `/servicios` | 149 | Doble marca en title (layout + página) | Un solo «Katia Domínguez» en SERP |
+| `/chillan/tel` | 159 | Meta publicada con corte no natural: `...lenguaje sin Evaluación...` | Corregir metadata y re-inspeccionar |
+| `/chillan/lenguaje-infantil` | 150 | `308` al pilar verificado en producción | Medir consolidación en GSC |
+| `/fonoaudiologa-ninos-chillan` | 193 | Snippet ya desplegado; sigue pendiente medición de CTR | Medir tras recrawl |
+| `/agendar-hora-fonoaudiologo-infantil-chillan` | 82 | Snippet desplegado; `/agendar` ya redirige | URL Inspection + medir clics |
+| `/servicios` | 149 | Title corregido en producción; sin duplicación de marca | Medir CTR; no reescribir por ahora |
 
 ### 2.4 Qué NO tocar
 
@@ -174,12 +182,11 @@ No invertir en rankings España. Refuerzo geo en copy: «Chillán, Ñuble, Chile
 
 | # | Acción | Responsable | Verificación |
 | --- | --- | --- | --- |
-| 1 | Confirmar www como URL canónica única (301 si posible; revisar enlaces internos/backlinks) | Dev | Una sola URL home en GSC «Páginas» |
-| 2 | Abrir warning sitemap www en GSC → Sitemaps | SEO | Warning resuelto o documentado |
-| 3 | URL Inspection: agendar, home www, `/chillan/tel`, `/fonoaudiologa-ninos-chillan` | SEO | PASS o acción de indexación |
-| 4 | Reescribir title/meta home www (337 imp., CTR 0,30%) | Contenido | CTR home >1% en 28 d |
-| 5 | Corregir meta rota `/chillan/tel` | Contenido | `curl` sin truncado |
-| 6 | Corregir title duplicado `/servicios` | Contenido | Sin doble marca en SERP |
+| 1 | Abrir warning sitemap www en GSC → Sitemaps | SEO | Warning resuelto o documentado |
+| 2 | URL Inspection: agendar, home www, `/chillan/tel`, `/fonoaudiologa-ninos-chillan` | SEO | PASS o acción de indexación |
+| 3 | Corregir meta rota `/chillan/tel` | Contenido | `curl` sin corte no natural |
+| 4 | Confirmar en GSC que las señales se consolidan en www | SEO | Una sola URL home dominante en «Páginas» |
+| 5 | Limpiar enlaces internos que aún apuntan a aliases con `308` | Dev | Sin hops internos en CTAs y breadcrumbs clave |
 
 ### P1 — 2 semanas
 
@@ -207,8 +214,8 @@ Usar esta tabla al aplicar cada cambio (copiar fila por fila en el próximo info
 
 | Fecha cambio | Cambio aplicado | URLs afectadas | KPI objetivo | Revisar en GSC (fecha) | Resultado |
 | --- | --- | --- | --- | --- | --- |
-| 2026-05-20 | Ola 1: titles/metas + redirects lenguaje-infantil/agendar | /, /chillan/tel, /fonoaudiologa-ninos-chillan, /agendar-*, /servicios | CTR home ≥1%; tel ≥3% | 2026-06-19 | pendiente deploy |
-| 2026-05-20 | Ola 2: glosario GEO + hubs + sitemap lastmod | /glosario/*, /chillan, /servicios | clics glosario; enlaces internos | 2026-06-19 | pendiente deploy |
+| 2026-05-20 | Ola 1: titles/metas + redirects lenguaje-infantil/agendar | /, /chillan/tel, /fonoaudiologa-ninos-chillan, /agendar-*, /servicios | CTR home ≥1%; tel ≥3% | 2026-06-19 | publicado en producción; medición pendiente |
+| 2026-05-20 | Ola 2: glosario GEO + hubs + sitemap lastmod | /glosario/*, /chillan, /servicios | clics glosario; enlaces internos | 2026-06-19 | publicado en producción; medición pendiente |
 | | | | | | |
 | _ej. 2026-05-22_ | _Title home www_ | _/_ | _CTR home >1%_ | _2026-06-19_ | _pendiente_ |
 
@@ -262,7 +269,7 @@ Usar esta tabla al aplicar cada cambio (copiar fila por fila en el próximo info
 
 ### Técnico
 
-- [ ] `curl -sI https://katialafono.cl/` — sigue 307/301 a www
+- [ ] `curl -sI https://katialafono.cl/` — sigue 308/301 a www
 - [ ] Conteo `<loc>` en sitemap vs GSC enviadas
 - [ ] CTR audit top 10 URLs por impresiones
 

@@ -105,7 +105,7 @@ export default function FonoaudiologiaInfantilPage() {
               <ServiceCard 
                 title="Evaluación Fonoaudiológica"
                 description="Diagnóstico preciso del desarrollo comunicativo."
-                href="/evaluacion-fonoaudiologica-infantil-chillan"
+                href="/servicios/evaluacion-fonoaudiologica"
                 emoji="📋"
               />
               <ServiceCard 
@@ -140,7 +140,7 @@ export default function FonoaudiologiaInfantilPage() {
               ¿Por qué elegir un fonoaudiólogo para niños en Chillán?
             </h3>
             <p className="text-gray-600">
-              La atención presencial en <Link href="/fonoaudiologo-pediatrico-chillan" className="font-medium text-rose-600 hover:text-rose-800">especialistas pediátricos locales</Link> como nuestra consulta en Chillán, nos permite aplicar estrategias de juego guiado (Play Therapy) que necesitan del vínculo uno-a-uno. Entendemos el ritmo de descanso, los estímulos y acompañamos integralmente a la familia en Ñuble.
+              La atención presencial en <Link href="/fonoaudiologa-ninos-chillan" className="font-medium text-rose-600 hover:text-rose-800">especialistas pediátricos locales</Link> como nuestra consulta en Chillán, nos permite aplicar estrategias de juego guiado (Play Therapy) que necesitan del vínculo uno-a-uno. Entendemos el ritmo de descanso, los estímulos y acompañamos integralmente a la familia en Ñuble.
             </p>
           </section>
 

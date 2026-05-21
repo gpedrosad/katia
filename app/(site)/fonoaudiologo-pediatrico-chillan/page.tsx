@@ -84,7 +84,7 @@ export default function FonoaudiologoPediatricoPage() {
           <div className="bg-fuchsia-50 p-6 rounded-xl my-8 border border-fuchsia-100">
             <h3 className="text-xl font-bold text-fuchsia-900 mt-0">Consulta Presencial en Chillán</h3>
             <p className="text-fuchsia-800">
-              Ofrecemos un espacio 100% acondicionado e interactivo en la ciudad de Chillán. Entendemos que las familias de la provincia de Ñuble necesitan atención pediátrica validada que resuelva problemas del ciclo <Link href="/evaluacion-fonoaudiologica-infantil-chillan">diagnóstico</Link> y el posterior tratamiento semanal.
+              Ofrecemos un espacio 100% acondicionado e interactivo en la ciudad de Chillán. Entendemos que las familias de la provincia de Ñuble necesitan atención pediátrica validada que resuelva problemas del ciclo <Link href="/servicios/evaluacion-fonoaudiologica">diagnóstico</Link> y el posterior tratamiento semanal.
             </p>
           </div>
 

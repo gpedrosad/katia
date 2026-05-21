@@ -58,7 +58,7 @@ export default function EspecialistaLenguajePage() {
             Especialista en Lenguaje Infantil en Chillán
           </h1>
           <p className="lead font-medium text-gray-700">
-            El lenguaje es la herramienta más importante de socialización del ser humano. Cuando hay "choques" en su adquisición, buscar la orientación de una <Link href="/fonoaudiologo-pediatrico-chillan" className="underline">especialista pediátrica</Link> te brindará un camino a seguir claro y clínico.
+            El lenguaje es la herramienta más importante de socialización del ser humano. Cuando hay &quot;choques&quot; en su adquisición, buscar la orientación de una <Link href="/fonoaudiologa-ninos-chillan" className="underline">especialista pediátrica</Link> te brindará un camino a seguir claro y clínico.
           </p>
 
           <section>

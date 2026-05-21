@@ -1,5 +1,7 @@
 # Plan multi-agente — SEO katialafono.cl
 
+> Documento histórico de planificación. Estado actualizado al 2026-05-20: producción ya verificada; usar `docs/cambios-prioritarios-seo-2026-05-20.md`, `docs/gsc-evaluacion-completa-2026-05-20.md` y `docs/gsc-checklist-post-deploy.md` como referencia operativa actual.
+
 **Baseline:** [`gsc-evaluacion-completa-2026-05-20.md`](./gsc-evaluacion-completa-2026-05-20.md)  
 **Datos API:** `npm run gsc:report:md` → `docs/gsc-informe-YYYY-MM-DD.md`  
 **Vercel dominios:** hecho (308 apex + vercel.app → www)
@@ -175,7 +177,7 @@ NO implementar código. Salida: docs/gsc-checklist-post-deploy.md
 
 ## Ola 2 — Paralelo (después de merge + deploy ola 1)
 
-**Estado 2026-05-20:** implementada en código (B1 glosario, B2 sitemap/hubs). Pendiente deploy + B3 QA en producción.
+**Estado 2026-05-20:** implementada y publicada en producción. Pendiente B3 QA en GSC/producción y medición post-recrawl.
 
 ### Agente B1 — Glosario + GEO
 

@@ -2,48 +2,46 @@
 
 **Fecha:** 2026-05-20  
 **Método:** evaluación paralela con 4 agentes (skills: *seo-audit*, *google-search-console*, *seo-geo*, *programmatic-seo*)  
-**Fuentes:** código en repo, GSC API (28 d), informes existentes en `docs/`
+**Fuentes:** código en repo, GSC API (28 d), informes existentes en `docs/`, verificación de producción con `curl` el 2026-05-20
 
 **Documentos relacionados:**
 - [Informe de ejecución](./informe-ejecucion-seo-2026-05-20.md)
 - [Evaluación GSC completa](./gsc-evaluacion-completa-2026-05-20.md)
-- [Checklist post-deploy](./gsc-checklist-post-deploy.md)
+- [Checklist post-producción](./gsc-checklist-post-deploy.md)
 
 ---
 
 ## Resumen ejecutivo
 
-El sitio **ya gana visibilidad** (854 imp./28 d, +11,5%) pero **no convierte** en las URLs que más impresiones generan: home www (0,30% CTR), `/chillan/tel` y pilar infantil (0% CTR con posición 2–4). El código de las Olas 1–2 está listo; **el mayor bloqueador hoy no es falta de ideas sino falta de deploy y consolidación de URLs**.
+El sitio **ya gana visibilidad** (854 imp./28 d, +11,5%) pero **no convierte** en las URLs que más impresiones generan: home www (0,30% CTR), `/chillan/tel` y pilar infantil (0% CTR con posición 2–4). **La producción ya está desplegada y verificada**; el mayor bloqueador hoy es cerrar la verificación en GSC, corregir la meta publicada de `/chillan/tel` y terminar la consolidación interna de URLs.
 
 | Dimensión | Estado código | Estado producción / GSC | Prioridad |
 | --- | --- | --- | --- |
-| Snippets CTR (titles/metas) | Hecho (Ola 1) | Pendiente deploy | **P0** |
-| Dominio www + redirects clave | Hecho (Vercel + `next.config`) | Parcial hasta deploy | **P0** |
-| Alias `canonicalPath` sin 301 | Parcial (solo `lenguaje-infantil`) | Fragmentación activa | **P1** |
+| Snippets CTR (titles/metas) | Hecho (Ola 1) | Publicados; `/chillan/tel` quedó con meta defectuosa | **P0** |
+| Dominio www + redirects clave | Hecho (Vercel + `next.config`) | Verificado en producción (`308`) | **P0** |
+| Alias `canonicalPath` sin 301 | Mejorado (redirects clave ya activos) | Fragmentación residual por enlaces internos a alias | **P1** |
 | GEO / schema glosario–Chillán | Mejorado (Ola 2) | Sin medir en índice | **P1** |
-| Arquitectura hubs / enlaces | Hubs OK; enlaces a alias | Cannibalización interna | **P1** |
+| Arquitectura hubs / enlaces | Hubs OK; quedan enlaces a alias | Cannibalización interna residual | **P1** |
 | Medición GSC | Infra lista | Checklist humano pendiente | **P0** |
 
-**Potencial teórico identificado (baseline GSC):** ~138 clics/mes adicionales si se cierra el gap CTR en las 8 URLs con más impresiones — solo alcanzable tras deploy + recrawl + consolidación.
+**Potencial teórico identificado (baseline GSC):** ~138 clics/mes adicionales si se cierra el gap CTR en las 8 URLs con más impresiones; ahora depende de recrawl, consolidación y corrección del snippet de `/chillan/tel`.
 
 ---
 
-## Top 10 cambios para potenciar SEO ahora
+## Cambios pendientes para potenciar SEO ahora
 
-Ordenados por impacto esperado y dependencias. Los ítems 1–3 son **bloqueadores**; el resto se ejecuta en paralelo tras deploy.
+Ordenados por impacto esperado y dependencias. Los ítems 1–3 son **bloqueadores**; el resto se puede ejecutar en paralelo.
 
 | # | Cambio | Impacto | Esfuerzo | Agente / skill |
 | --- | --- | --- | --- | --- |
-| **1** | **Deploy a producción** (Ola 1 + 2: metas, 308 `/chillan/lenguaje-infantil`, `/agendar`, glosario, sitemap `lastmod`) | Crítico | Bajo (ops) | GSC + técnico |
-| **2** | **Checklist GSC día 0** — warning sitemap www, URL Inspection (home, `/chillan/tel`, pilar, agendar), anotar fecha deploy | Crítico | 15 min | GSC |
-| **3** | **Consolidar alias con `canonicalPath`** — 301 a pilar o dejar de enlazar; prioridad: `/fonoaudiologia-infantil-chillan`, evaluación/terapia `-chillan`, enlaces residuales a `/chillan/lenguaje-infantil` | Alto | Medio | Técnico + programmatic |
-| **4** | **Alinear enlaces internos al pilar** — sustituir hub `/fonoaudiologia-infantil-chillan` por `/fonoaudiologa-ninos-chillan` en breadcrumbs de `/tratamientos/*`, `/sintomas/*`, `/servicios/*-chillan` | Alto | Medio | Programmatic |
-| **5** | **Jerarquía patología hub–spoke** — pilar `/chillan/{slug}`; tratamientos/síntomas como spokes que enlazan al pilar (no al revás) | Alto | Medio | Programmatic |
-| **6** | **GEO glosario dislalia/TEL** — 5 FAQs visibles = 5 en `FAQPage`; citas ASHA en schema y HTML (`<cite>`); estadística 7% TEL en JSON-LD | Medio-alto | Bajo–medio | seo-geo |
+| **1** | **Checklist GSC día 0** — warning sitemap www, URL Inspection (home, `/chillan/tel`, pilar, agendar), anotar fecha de despliegue/validación | Crítico | 15 min | GSC |
+| **2** | **Corregir meta publicada de `/chillan/tel`** — hoy sale con corte no natural en producción | Crítico | Bajo | Técnico + on-page |
+| **3** | **Consolidar alias con `canonicalPath`** — mantener 308 ya desplegados y cortar enlaces residuales a `/fonoaudiologia-infantil-chillan`, evaluación/terapia `-chillan`, `/chillan/lenguaje-infantil` | Alto | Medio | Técnico + programmatic |
+| **4** | **Alinear enlaces internos al pilar** — sustituir alias redirigidos por URLs canónicas en breadcrumbs, CTAs y cross-links | Alto | Medio | Programmatic |
+| **5** | **Jerarquía patología hub–spoke** — pilar `/chillan/{slug}`; tratamientos/síntomas como spokes que enlazan al pilar (no al revés) | Alto | Medio | Programmatic |
+| **6** | **GEO glosario dislalia/TEL** — reforzar puente glosario → Chillán y medir si el rich snippet ayuda al CTR | Medio-alto | Bajo–medio | seo-geo |
 | **7** | **Fortalecer `/chillan/[slug]` para GEO** — `speakable`, breadcrumbs, 3–4 FAQs con datos, enlace a glosario | Medio | Medio | seo-geo |
-| **8** | **Nav Header** — enlace visible a `/chillan` o pilar infantil + agendar (PageRank above-the-fold) | Medio | Bajo | Programmatic |
-| **9** | **Query «fonoaudiologo chillan»** — H1/meta home con variante masculina; pilar + agendar sin competir con alias | Medio | Bajo | GSC + on-page |
-| **10** | **Schema / OG al canonical** — `openGraph.url` y JSON-LD `@id` usan URL canónica, no alias (`lib/seo.ts` + landings) | Medio | Bajo | Técnico + GEO |
+| **8** | **Query `fonoaudiologo chillan`** — revisar si home, pilar y agendar cubren bien la variante masculina sin reabrir aliases | Medio | Bajo | GSC + on-page |
 
 ---
 
@@ -55,18 +53,18 @@ Ordenados por impacto esperado y dependencias. Los ítems 1–3 son **bloqueador
 
 **Oportunidades con más datos:**
 
-| URL / cluster | Imp. | CTR | Acción ya en código | Medir post-deploy |
+| URL / cluster | Imp. | CTR | Acción ya en código | Medir post-recrawl |
 | --- | --- | --- | --- | --- |
-| Home www | 337 | 0,30% | Title/meta Ola 1 | CTR ≥ 1% |
-| `/chillan/tel` | 159 | 0% | Meta + title TEL | CTR ≥ 3% |
-| `/fonoaudiologa-ninos-chillan` | 193 | 0% | Title corto + meta | CTR ≥ 2% |
-| `/chillan/lenguaje-infantil` | 150 | 0% | 308 → pilar | Imp. consolidan en pilar |
-| `/agendar-hora-...` | 82 | 0% | Title + 308 `/agendar` | ≥ 2 clics |
+| Home www | 337 | 0,30% | Title/meta ya publicados | CTR ≥ 1% |
+| `/chillan/tel` | 159 | 0% | Title publicado; meta hoy queda mal cortada | CTR ≥ 3% |
+| `/fonoaudiologa-ninos-chillan` | 193 | 0% | Snippet ya publicado | CTR ≥ 2% |
+| `/chillan/lenguaje-infantil` | 150 | 0% | 308 → pilar verificado en prod | Imp. consolidan en pilar |
+| `/agendar-hora-...` | 82 | 0% | Title + 308 `/agendar` ya publicados | ≥ 2 clics |
 | Glosario dislalia/TEL | 121 | 0 clics | FAQ + enlaces Chillán | ≥ 1 clic o pos. < 40 |
 
 **Queries sin clics (posición útil):** `fonoaudiologa` (46 imp.), `fonoaudiologia` (45 imp.), `fonoaudiologo chillan` (7 imp., pos. 2,4).
 
-**KPIs objetivo (28 d post-deploy, ~2026-06-19):**
+**KPIs objetivo (28 d post-recrawl, ~2026-06-19):**
 
 | KPI | Baseline | Objetivo |
 | --- | --- | --- |
@@ -88,17 +86,16 @@ Ordenados por impacto esperado y dependencias. Los ítems 1–3 son **bloqueador
 - `SITE_URL` = `https://www.katialafono.cl`; canonical en layout; 308 apex en Vercel + `next.config.ts`
 - `robots.ts`: bots IA permitidos; `disallow` solo `/seo-links`; sitemap www
 - `sitemap.ts`: ~71 URLs, `lastModified` 2026-05-20
-- Redirects: `/agendar`, `/chillan/lenguaje-infantil`
+- Redirects en producción verificados: `/agendar`, `/chillan/lenguaje-infantil`
 
 **Hallazgos pendientes:**
 
 | Problema | Impacto | Fix |
 | --- | --- | --- |
-| Código Ola 1–2 no en producción | Alto | Deploy |
-| 8 alias indexables, fuera de sitemap, muy enlazados | Alto | 301 o dejar de enlazar |
+| `/chillan/tel` publica meta defectuosa (`...lenguaje sin Evaluación...`) | Alto | Corregir lógica de descripción |
+| Quedan enlaces internos que apuntan a alias con `308` | Alto | Reemplazar por canónicos |
 | GSC: warning sitemap www, 0/64 indexadas (API), 64 vs 71 URLs | Medio | Checklist UI + reenvío sitemap |
-| `openGraph.url` usa path alias, no canonical | Medio | `lib/seo.ts` |
-| `/interno` noindex pero no en `disallow` | Bajo | `app/robots.ts` |
+| Persistencia de clics en apex dentro de GSC baseline | Medio | Recrawl + URL Inspection + monitoreo host |
 
 ---
 
@@ -146,24 +143,24 @@ Ordenados por impacto esperado y dependencias. Los ítems 1–3 son **bloqueador
 
 ## Plan de acción por olas
 
-### Ola A — Inmediato (día 0, sin más código obligatorio)
+### Ola A — Inmediato (post-producción)
 
 ```mermaid
 flowchart LR
-  A[Deploy Ola 1+2] --> B[Checklist GSC 15 min]
-  B --> C[Anotar fecha deploy]
+  A[Verificación técnica prod] --> B[Checklist GSC 15 min]
+  B --> C[Anotar fecha de validación]
   C --> D[Esperar 21-28 días]
   D --> E[npm run gsc:report:md]
 ```
 
-- [ ] Deploy producción
+- [x] Producción verificada (`308` apex, redirects clave, title `/servicios`)
 - [ ] Ejecutar [`gsc-checklist-post-deploy.md`](./gsc-checklist-post-deploy.md)
-- [ ] Anotar fecha deploy en evaluación completa
+- [ ] Anotar fecha de despliegue / validación en evaluación completa
 
 ### Ola B — Semana 1–2 (código, alto ROI)
 
 - [x] 308 alias `canonicalPath` en `next.config.ts` (7 redirects)
-- [x] Enlaces internos → pilar en tratamientos/síntomas/servicios/comparaciones (21 archivos)
+- [ ] Limpiar enlaces internos residuales a alias con `308`
 - [x] FAQ visible = schema + citas ASHA en dislalia/TEL; hub glosario FAQPage + ItemList
 - [x] `lib/seo.ts`: OG URL = canonical; `robots.ts` + `llms.txt`
 - [x] Header «Chillán»; `/chillan/[slug]` speakable + breadcrumbs + FAQ GEO
@@ -219,7 +216,7 @@ public/llms.txt
 
 | Señal | Umbral |
 | --- | --- |
-| Deploy + checklist GSC | Completado |
+| Producción verificada + checklist GSC | Completado |
 | CTR home www | ≥ 1% |
 | CTR `/chillan/tel` | ≥ 3% |
 | Clics totales 28 d | ≥ 30–35 |
@@ -228,4 +225,4 @@ public/llms.txt
 
 ---
 
-*Documento generado por consolidación multi-agente (2026-05-20). Actualizar tras primera medición GSC post-deploy.*
+*Documento generado por consolidación multi-agente (2026-05-20). Actualizado tras verificación de producción el 2026-05-20; próxima actualización tras primera medición GSC post-recrawl.*

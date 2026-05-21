@@ -1,6 +1,8 @@
-# Checklist GSC post-deploy — Ola 1 (2026-05-20)
+# Checklist GSC post-producción — Ola 1 (2026-05-20)
 
-Ejecutar **después del deploy** a producción de titles/metas y redirects.
+Estado al 2026-05-20:
+- Producción ya verificada por `curl`.
+- Pendiente: GSC UI, solicitud de indexación y corregir la meta publicada de `/chillan/tel`.
 
 **Propiedad:** `sc-domain:katialafono.cl`  
 **Baseline:** [`gsc-evaluacion-completa-2026-05-20.md`](./gsc-evaluacion-completa-2026-05-20.md)
@@ -17,13 +19,13 @@ curl -s "https://www.katialafono.cl/chillan/tel" | grep -o '<meta name="descript
 curl -s "https://www.katialafono.cl/servicios" | grep -o '<title>[^<]*</title>'
 ```
 
-| Check | Esperado |
-| --- | --- |
-| Apex | HTTP 308 → www |
-| `/chillan/lenguaje-infantil` | 308 → `/fonoaudiologa-ninos-chillan` |
-| `/agendar` | 308 → `/agendar-hora-fonoaudiologo-infantil-chillan` |
-| Meta TEL | Sin texto «terapia inte» truncado |
-| Title servicios | Sin «Katia Domínguez» duplicado |
+| Check | Esperado | Estado 2026-05-20 |
+| --- | --- | --- |
+| Apex | HTTP 308 → www | OK |
+| `/chillan/lenguaje-infantil` | 308 → `/fonoaudiologa-ninos-chillan` | OK |
+| `/agendar` | 308 → `/agendar-hora-fonoaudiologo-infantil-chillan` | OK |
+| Meta TEL | Sin corte no natural | Falla: quedó `...lenguaje sin Evaluación...` |
+| Title servicios | Sin «Katia Domínguez» duplicado | OK |
 
 ---
 
@@ -59,7 +61,7 @@ Para cada URL → **Inspeccionar URL** → si es indexable → **Solicitar index
 
 | Fecha | Cambio | URLs | KPI | Revisar GSC |
 | --- | --- | --- | --- | --- |
-| 2026-05-20 | Ola 1: titles/metas + 301 lenguaje-infantil + agendar | ver deploy | CTR home ≥1%; tel ≥3% | 2026-06-19 |
+| 2026-05-20 | Ola 1: titles/metas + 308 lenguaje-infantil + agendar | `/, /chillan/tel, /fonoaudiologa-ninos-chillan, /agendar-*, /servicios` | CTR home ≥1%; tel ≥3% | 2026-06-19 |
 
 ---
 
@@ -69,7 +71,7 @@ Para cada URL → **Inspeccionar URL** → si es indexable → **Solicitar index
 npm run gsc:report:md
 ```
 
-**Cuándo:** ~21–28 días después del deploy (2026-06-10 a 2026-06-19).
+**Cuándo:** ~21–28 días después de la validación en producción del 2026-05-20 (2026-06-10 a 2026-06-19).
 
 Comparar con baseline: 22 clics, CTR home 0,30%, imp. tel 159.
 

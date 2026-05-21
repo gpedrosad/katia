@@ -9,6 +9,13 @@ import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 import { buildPageMetadata, buildWebPageJsonLd } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 
+const DESCRIPTION_MAX_LENGTH = 155;
+const DESCRIPTION_SUFFIX =
+  " Evaluación y terapia en Chillán. Agenda por WhatsApp.";
+const DESCRIPTION_OVERRIDES: Record<string, string> = {
+  tel: "TEL en Chillán: evaluación y terapia infantil. Diagnóstico fonoaudiológico, apoyo familiar y coordinación escolar. Agenda por WhatsApp.",
+};
+
 function statSnippet(slug: string): string {
   switch (slug) {
     case "tel":
@@ -18,6 +25,40 @@ function statSnippet(slug: string): string {
     default:
       return " La intervención temprana mejora significativamente el pronóstico.";
   }
+}
+
+function buildPatologiaMetadataDescription(
+  slug: string,
+  baseDescription: string
+): string {
+  const override = DESCRIPTION_OVERRIDES[slug];
+  if (override) return override;
+
+  if (
+    baseDescription.length + DESCRIPTION_SUFFIX.length <=
+    DESCRIPTION_MAX_LENGTH
+  ) {
+    return `${baseDescription}${DESCRIPTION_SUFFIX}`;
+  }
+
+  const firstSentence = baseDescription.match(/^.+?[.!?](?=\s|$)/)?.[0];
+  if (
+    firstSentence &&
+    firstSentence.length + DESCRIPTION_SUFFIX.length <=
+      DESCRIPTION_MAX_LENGTH
+  ) {
+    return `${firstSentence}${DESCRIPTION_SUFFIX}`;
+  }
+
+  const maxBaseLength =
+    DESCRIPTION_MAX_LENGTH - DESCRIPTION_SUFFIX.length - 1;
+  const trimmedBase = baseDescription
+    .slice(0, maxBaseLength)
+    .replace(/\s+\S*$/, "")
+    .trim()
+    .replace(/[.,;:!?-–—\s]+$/, "");
+
+  return `${trimmedBase}.${DESCRIPTION_SUFFIX}`;
 }
 
 export async function generateStaticParams() {
@@ -33,13 +74,10 @@ export async function generateMetadata({
   const patologia = getPatologiaBySlug(slug);
   if (!patologia) return { title: "No encontrado" };
 
-  const suffix = " Evaluación y terapia en Chillán. Agenda por WhatsApp.";
-  const maxBase = 155 - suffix.length;
-  let base: string = patologia.descripcion;
-  if (base.length > maxBase) {
-    base = base.slice(0, maxBase).replace(/\s+\S*$/, "").trim();
-  }
-  const description = `${base}${suffix}`;
+  const description = buildPatologiaMetadataDescription(
+    slug,
+    patologia.descripcion
+  );
 
   const titleOverrides: Record<string, string> = {
     tel: "TEL en Chillán: diagnóstico y terapia infantil",

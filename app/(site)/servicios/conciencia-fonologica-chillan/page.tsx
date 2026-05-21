@@ -133,7 +133,7 @@ export default function ConcienciaFonologicaPage() {
               dificultades en esta área que no reciben apoyo suelen tener
               problemas en la{" "}
               <Link
-                href="/servicios/problemas-lectoescritura-chillan"
+                href="/servicios/dificultades-lectoescritura"
                 className="font-semibold text-lime-700"
               >
                 lectoescritura

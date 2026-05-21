@@ -79,7 +79,7 @@ export default function AgendarHoraPage() {
             <h2 className="text-2xl font-bold mt-0 text-rose-900">Pasos para Agendar tu Hora</h2>
             <ul className="text-left text-rose-800 font-medium">
               <li>1. Escríbenos informando la edad del niño o niña.</li>
-              <li>2. Describe brevemente el motivo ("<Link href="/sintomas/mi-hijo-no-habla-bien-chillan">no habla bien</Link>", "pide evaluación para el PIE del colegio", etc).</li>
+              <li>2. Describe brevemente el motivo (&quot;<Link href="/sintomas/mi-hijo-no-habla-bien-chillan">no habla bien</Link>&quot;, &quot;pide evaluación para el PIE del colegio&quot;, etc).</li>
               <li>3. Te ofreceremos alternativas de horario compatibles con la vida escolar.</li>
             </ul>
             
@@ -94,7 +94,7 @@ export default function AgendarHoraPage() {
           <section className="text-left mt-16 border-t pt-8">
             <h3 className="text-xl font-bold text-gray-900">Información sobre la Evaluación en Consulta</h3>
             <p>
-              Toda intervención inicia invariablemente por una <Link href="/evaluacion-fonoaudiologica-infantil-chillan">evaluación fonoaudiológica pormenorizada</Link>. En caso de que tú o el profesor sospechen de alguna condición como Tel, Disfasia, <Link href="/tratamientos/retraso-del-lenguaje-chillan">retrasos en la comprensión</Link>, prepararemos baterías evaluativas estandarizadas aplicables presencialmente.
+              Toda intervención inicia invariablemente por una <Link href="/servicios/evaluacion-fonoaudiologica">evaluación fonoaudiológica pormenorizada</Link>. En caso de que tú o el profesor sospechen de alguna condición como Tel, Disfasia, <Link href="/tratamientos/retraso-del-lenguaje-chillan">retrasos en la comprensión</Link>, prepararemos baterías evaluativas estandarizadas aplicables presencialmente.
             </p>
           </section>
 

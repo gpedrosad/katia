@@ -61,7 +61,7 @@ export default function EvaluacionFonoaudiologicaPage() {
         <Breadcrumbs
           items={[
             { label: "Inicio", href: "/" },
-            { label: "Evaluación Fonoaudiológica", href: "/evaluacion-fonoaudiologica-infantil-chillan" },
+            { label: "Evaluación Fonoaudiológica", href: "/servicios/evaluacion-fonoaudiologica" },
           ]}
         />
         
