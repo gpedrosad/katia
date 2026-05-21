@@ -133,7 +133,7 @@ export default function EvaluacionLenguajeInfantilPage() {
             <Breadcrumbs
               items={[
                 { label: "Inicio", href: "/" },
-                { label: "Servicios", href: "/fonoaudiologa-ninos-chillan" },
+                { label: "Servicios", href: "/servicios" },
                 { label: "Evaluación del lenguaje infantil" },
               ]}
             />

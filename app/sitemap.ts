@@ -3,7 +3,7 @@ import { GLOSARIO_TERMINOS } from "@/app/glosario/terminos";
 import { SITE_URL } from "@/lib/site";
 
 /** Actualizar en deploys que toquen URLs del sitemap. */
-const LAST_MODIFIED = "2026-05-21";
+const LAST_MODIFIED = "2026-05-20";
 
 function getGlosarioTermUrls(): MetadataRoute.Sitemap {
   return GLOSARIO_TERMINOS.map((t) => ({
@@ -45,13 +45,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "primera-evaluacion-fonoaudiologica-infantil",
   ];
 
-  const geoChillanSlugs = [
-    "evaluacion-fonoaudiologica-infantil-chillan",
-    "fonoaudiologia-infantil-chillan",
-    "especialista-lenguaje-infantil-chillan",
-    "fonoaudiologo-pediatrico-chillan",
-  ];
-
   return [
     entry("/", 1.0, "monthly"),
     entry("/fonoaudiologa-ninos-chillan", 0.9),
@@ -79,7 +72,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...recursosSlugs.map((slug) => entry(`/recursos/${slug}`, 0.65, "monthly")),
     entry("/sobre-katia-dominguez-fonoaudiologa-chillan", 0.75, "monthly"),
     entry("/contacto-fonoaudiologa-chillan", 0.75, "monthly"),
-    ...geoChillanSlugs.map((slug) => entry(`/${slug}`, 0.75, "monthly")),
     entry("/agendar-hora-fonoaudiologo-infantil-chillan", 0.75),
     ...[
       "retraso-del-lenguaje-chillan",

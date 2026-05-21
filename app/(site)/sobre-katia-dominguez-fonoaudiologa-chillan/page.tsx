@@ -46,7 +46,7 @@ const areas = [
   },
   {
     title: "Comunicación en TEA",
-    href: "/servicios/terapia-tea-comunicacion-chillan",
+    href: "/servicios/tea-trastorno-espectro-autista",
     description: "Apoyo comunicativo para niños en el espectro autista.",
   },
 ];
