@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SITE_URL, whatsappUrl } from "@/lib/site";
 import { buildPageMetadata } from "@/lib/seo";
 import { Breadcrumbs } from "../../_components/Breadcrumbs";
@@ -326,6 +327,77 @@ export default function EvaluacionFonoaudiologicaPage() {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Evaluaciones específicas */}
+        <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="mb-4 text-center text-3xl font-bold text-gray-900">
+              Evaluaciones específicas en Chillán
+            </h2>
+            <p className="mb-8 text-center text-lg text-gray-600">
+              Si ya sabes qué área te preocupa, estas páginas detallan el
+              proceso y cuándo conviene agendar.
+            </p>
+            <ul className="grid gap-4 sm:grid-cols-2">
+              <li>
+                <Link
+                  href="/servicios/evaluacion-del-lenguaje-infantil-chillan"
+                  className="block rounded-xl border border-rose-100 bg-rose-50/50 p-5 transition hover:border-rose-300"
+                >
+                  <h3 className="font-semibold text-gray-900">
+                    Evaluación del lenguaje infantil
+                  </h3>
+                  <p className="mt-2 text-sm text-gray-600">
+                    Vocabulario, comprensión, frases y uso del lenguaje.
+                  </p>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/servicios/evaluacion-del-habla-infantil-chillan"
+                  className="block rounded-xl border border-rose-100 bg-rose-50/50 p-5 transition hover:border-rose-300"
+                >
+                  <h3 className="font-semibold text-gray-900">
+                    Evaluación del habla infantil
+                  </h3>
+                  <p className="mt-2 text-sm text-gray-600">
+                    Pronunciación, articulación y claridad del habla.
+                  </p>
+                </Link>
+              </li>
+            </ul>
+            <p className="mt-6 text-center text-sm text-gray-600">
+              <Link
+                href="/recursos/primera-evaluacion-fonoaudiologica-infantil"
+                className="font-medium text-rose-600 hover:underline"
+              >
+                Guía: qué esperar de la primera evaluación →
+              </Link>
+            </p>
+            <p className="mt-4 text-center text-sm text-gray-600">
+              <Link
+                href="/sobre-katia-dominguez-fonoaudiologa-chillan"
+                className="font-medium text-rose-600 hover:underline"
+              >
+                Sobre Katia Domínguez
+              </Link>
+              {" · "}
+              <Link
+                href="/contacto-fonoaudiologa-chillan"
+                className="font-medium text-rose-600 hover:underline"
+              >
+                Contacto y agenda
+              </Link>
+              {" · "}
+              <Link
+                href="/recursos"
+                className="font-medium text-rose-600 hover:underline"
+              >
+                Más recursos para padres
+              </Link>
+            </p>
           </div>
         </section>
 

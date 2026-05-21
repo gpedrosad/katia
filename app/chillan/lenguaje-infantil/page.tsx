@@ -112,7 +112,7 @@ const faqJsonLd = {
       name: "¿Dónde atiende en Chillán?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Atiendo en mi domicilio en Chillán. Al agendar tu hora, te envío por WhatsApp la dirección exacta y referencias de cómo llegar.",
+        text: "Atiendo en consulta presencial en Chillán, Región de Ñuble. Al agendar por WhatsApp coordinamos día, hora y detalles de la cita.",
       },
     },
     {
@@ -478,7 +478,9 @@ export default function LenguajeInfantilPage() {
                 <span className="flex-shrink-0 text-rose-500 transition-transform group-open:rotate-180">▼</span>
               </summary>
               <p className="mt-4 text-gray-600">
-                Atiendo en mi Domicilio en Chillán. Al agendar tu hora, te envío por WhatsApp la dirección exacta y referencias de cómo llegar.
+                Atiendo en consulta presencial en Chillán, Región de Ñuble. Al
+                agendar por WhatsApp coordinamos día, hora y detalles de la
+                cita.
               </p>
             </details>
 

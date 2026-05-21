@@ -5,7 +5,12 @@ import { buildWebPageJsonLd } from "@/lib/seo";
 import { Header } from "./_components/Header";
 import { Footer } from "./_components/Footer";
 import { ServiceCard } from "./_components/ServiceCard";
-import { TestimonialCard } from "./_components/TestimonialCard";
+import { GoogleReviewsSection } from "./_components/GoogleReviewsSection";
+import {
+  GOOGLE_REVIEWS_AGGREGATE,
+  buildGoogleAggregateRatingJsonLd,
+  buildGoogleReviewsJsonLd,
+} from "@/lib/google-reviews";
 
 const homeFaqItems = [
   {
@@ -32,33 +37,6 @@ const homeFaqItems = [
 
 const WHATSAPP_LINK =
   "https://wa.me/56995497838?text=Hola%2C%20quiero%20agendar%20una%20hora";
-
-const testimonials = [
-  {
-    name: "Marcela Pedrosa",
-    text: "Excelente fonoaudióloga. Intervención profesional, clara y bien estructurada, con evaluación precisa y seguimiento constante. Logró avances significativos en mi hijo.",
-  },
-  {
-    name: "Gonzalo Larrea",
-    text: "Excelente profesional, atendió a mi hijo y los avances fueron notables. Responsable, con mucha experiencia y muy cercana. Totalmente recomendada.",
-  },
-  {
-    name: "Marcela Opazo",
-    text: "Excelente Profesional, muy cercana con sus pacientes y comprometida, nos ayudó como familia a superar el diagnóstico de nuestro pequeño. 100% recomendada!",
-  },
-  {
-    name: "Arantzazu Larraza",
-    text: "Atendió a mi hija de 10 años, fue una excelente experiencia de principio a fin. Es una profesional comprometida, entregada y muy lúdica! 100% recomendada.",
-  },
-  {
-    name: "Raimundo Rodríguez",
-    text: "Excelente fonoaudióloga, en pocos meses su tratamiento hizo un cambio increíble. Se nota que ama lo que hace y se preocupa de verdad.",
-  },
-  {
-    name: "Carolina Rojas",
-    text: "La dedicación en la Fonoaudiología que entrega fue fundamental para mi recuperación. Su constancia y empatía me ayudó mucho, su trabajo cambia vidas.",
-  },
-];
 
 const services = [
   {
@@ -106,7 +84,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "MedicalBusiness",
   "@id": "https://www.katialafono.cl/#business",
-  name: "Fonoaudióloga Katia Domínguez",
+  name: "Katia Domínguez",
   description:
     "Fonoaudióloga en Chillán especialista en terapia de lenguaje infantil, trastornos del habla, TEL, TEA y lectoescritura. Más de 20 años de experiencia.",
   url: "https://www.katialafono.cl",
@@ -128,67 +106,8 @@ const localBusinessSchema = {
       closes: "18:00",
     },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5.0",
-    reviewCount: "40",
-    bestRating: "5",
-    worstRating: "1",
-  },
-  review: [
-    {
-      "@type": "Review",
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: "5",
-      },
-      author: {
-        "@type": "Person",
-        name: "Marcela Andrea Pedrosa Ramirez",
-      },
-      reviewBody:
-        "Excelente fonoaudióloga. Intervención profesional, clara y bien estructurada, con evaluación precisa y seguimiento constante. Logró avances significativos en mi hijo.",
-    },
-    {
-      "@type": "Review",
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: "5",
-      },
-      author: {
-        "@type": "Person",
-        name: "Gonzalo Larrea",
-      },
-      reviewBody:
-        "Excelente profesional, atendió a mi hijo y los avances fueron notables. Responsable, con mucha experiencia y muy cercana. Totalmente recomendada.",
-    },
-    {
-      "@type": "Review",
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: "5",
-      },
-      author: {
-        "@type": "Person",
-        name: "Marcela Opazo Cid",
-      },
-      reviewBody:
-        "Excelente Profesional, muy cercana con sus pacientes y comprometida, nos ayudó como familia a superar el diagnóstico de nuestro pequeño asociado a problemas en el lenguaje.",
-    },
-    {
-      "@type": "Review",
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: "5",
-      },
-      author: {
-        "@type": "Person",
-        name: "Raimundo Rodríguez",
-      },
-      reviewBody:
-        "Excelente fonoaudióloga, en pocos meses su tratamiento hizo un cambio increíble. Se nota que ama lo que hace y se preocupa de verdad.",
-    },
-  ],
+  aggregateRating: buildGoogleAggregateRatingJsonLd(),
+  review: buildGoogleReviewsJsonLd(),
 };
 
 const webPageJsonLd = buildWebPageJsonLd({
@@ -270,8 +189,12 @@ export default function Home() {
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                     ))}
-                    <span className="ml-1 font-semibold text-gray-900">5.0</span>
-                    <span className="text-gray-600">(40 reseñas)</span>
+                    <span className="ml-1 font-semibold text-gray-900">
+                      {GOOGLE_REVIEWS_AGGREGATE.ratingValue}
+                    </span>
+                    <span className="text-gray-600">
+                      ({GOOGLE_REVIEWS_AGGREGATE.reviewCount} reseñas)
+                    </span>
                   </div>
                   <span className="hidden sm:inline text-gray-300">•</span>
                   <span className="text-sm text-gray-600">
@@ -327,50 +250,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Testimonials Section */}
+        {/* Google reviews */}
         <section className="bg-rose-50 px-4 py-20 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-6xl">
-            <div className="mb-12 text-center">
-              <div className="mb-4 flex items-center justify-center gap-2">
-                <div className="flex items-center gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <svg
-                      key={i}
-                      className="h-6 w-6 text-yellow-400"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                <span className="text-xl font-bold text-gray-900">5.0</span>
-                <span className="text-gray-600">(40 reseñas en Google)</span>
-              </div>
-              <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
-                Lo que dicen las familias
-              </h2>
-              <p className="mx-auto max-w-2xl text-lg text-gray-600">
-                Más de 40 familias confían en mi trabajo
-              </p>
-            </div>
-
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {testimonials.map((testimonial, index) => (
-                <TestimonialCard key={index} {...testimonial} />
-              ))}
-            </div>
-
-            <div className="mt-10 text-center">
-              <a
-                href="https://g.page/r/CQTz_OxX_3IBEAE/review"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-lg font-medium text-rose-600 hover:underline"
-              >
-                Ver todas las reseñas en Google →
-              </a>
-            </div>
+            <GoogleReviewsSection
+              heading="Lo que dicen las familias"
+              subheading={`Más de ${GOOGLE_REVIEWS_AGGREGATE.reviewCount} familias han dejado su valoración en Google`}
+            />
           </div>
         </section>
 
@@ -421,6 +307,20 @@ export default function Home() {
                   </span>
                 </li>
               </ul>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Link
+                  href="/sobre-katia-dominguez-fonoaudiologa-chillan"
+                  className="font-medium text-rose-600 hover:underline"
+                >
+                  Conoce mi perfil profesional →
+                </Link>
+                <Link
+                  href="/contacto-fonoaudiologa-chillan"
+                  className="font-medium text-rose-600 hover:underline"
+                >
+                  Contacto y consulta →
+                </Link>
+              </div>
             </div>
           </div>
         </section>
@@ -470,7 +370,7 @@ export default function Home() {
                 </p>
               </Link>
               <Link
-                href="/servicios/evaluacion-fonoaudiologica"
+                href="/recursos/primera-evaluacion-fonoaudiologica-infantil"
                 className="rounded-xl border-2 border-gray-100 bg-gray-50 p-6 text-center transition-colors hover:border-rose-200"
               >
                 <span className="mb-3 block text-3xl">📋</span>

@@ -64,6 +64,14 @@ const SERVICIO_CHILLAN_SLUGS: { slug: string; label: string }[] = [
     slug: "problemas-lectoescritura-chillan",
     label: "Problemas de lectoescritura",
   },
+  {
+    slug: "evaluacion-del-lenguaje-infantil-chillan",
+    label: "Evaluación del lenguaje infantil",
+  },
+  {
+    slug: "evaluacion-del-habla-infantil-chillan",
+    label: "Evaluación del habla infantil",
+  },
 ];
 
 const VOZ_ONLINE_SLUGS: { slug: string; label: string }[] = [
@@ -107,6 +115,11 @@ export const SEO_ROUTE_SECTIONS: SeoRouteSection[] = [
     routes: [
       route("/", "Inicio"),
       route("/fonoaudiologa-ninos-chillan", "Fonoaudióloga niños Chillán (pilar)"),
+      route(
+        "/sobre-katia-dominguez-fonoaudiologa-chillan",
+        "Sobre Katia Domínguez"
+      ),
+      route("/contacto-fonoaudiologa-chillan", "Contacto fonoaudióloga Chillán"),
     ],
   },
   {
@@ -177,6 +190,10 @@ export const SEO_ROUTE_SECTIONS: SeoRouteSection[] = [
         "/comparaciones/tel-vs-retraso-del-lenguaje",
         "TEL vs retraso del lenguaje"
       ),
+      route(
+        "/comparaciones/retraso-del-habla-vs-retraso-del-lenguaje",
+        "Retraso del habla vs retraso del lenguaje"
+      ),
     ],
   },
   {
@@ -193,13 +210,28 @@ export const SEO_ROUTE_SECTIONS: SeoRouteSection[] = [
     title: "Glosario",
     routes: [
       route("/glosario", "Hub glosario"),
+      route("/glosario/dislalia", "Dislalia (página estática)"),
+      route("/glosario/tel", "TEL (página estática)"),
+      route("/glosario/retraso-del-habla", "Retraso del habla (página estática)"),
       ...GLOSARIO_TERMINOS.map((t) => route(`/glosario/${t.slug}`, t.term)),
     ],
   },
   {
     id: "recursos",
     title: "Recursos",
-    routes: [route("/recursos", "Recursos")],
+    routes: [
+      route("/recursos", "Hub recursos"),
+      route("/recursos/hitos-del-lenguaje-por-edad", "Hitos del lenguaje por edad"),
+      route(
+        "/recursos/senales-de-alerta-del-lenguaje-y-habla",
+        "Señales de alerta del lenguaje y habla"
+      ),
+      route("/recursos/estimular-lenguaje-en-casa", "Estimular lenguaje en casa"),
+      route(
+        "/recursos/primera-evaluacion-fonoaudiologica-infantil",
+        "Primera evaluación fonoaudiológica infantil"
+      ),
+    ],
   },
   {
     id: "voz-online",

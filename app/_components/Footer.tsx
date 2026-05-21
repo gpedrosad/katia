@@ -123,6 +123,33 @@ const resources = [
   { href: "/glosario", label: "Glosario fonoaudiológico" },
   { href: "/comparaciones", label: "Comparaciones clínicas" },
   { href: "/recursos", label: "Recursos para padres" },
+  {
+    href: "/recursos/hitos-del-lenguaje-por-edad",
+    label: "Hitos del lenguaje por edad",
+  },
+  {
+    href: "/recursos/senales-de-alerta-del-lenguaje-y-habla",
+    label: "Señales de alerta",
+  },
+  {
+    href: "/recursos/estimular-lenguaje-en-casa",
+    label: "Estimular lenguaje en casa",
+  },
+  {
+    href: "/recursos/primera-evaluacion-fonoaudiologica-infantil",
+    label: "Primera evaluación: qué esperar",
+  },
+];
+
+const aboutLinks = [
+  {
+    href: "/sobre-katia-dominguez-fonoaudiologa-chillan",
+    label: "Sobre Katia Domínguez",
+  },
+  {
+    href: "/contacto-fonoaudiologa-chillan",
+    label: "Contacto y consulta",
+  },
 ];
 
 const patologiasChillan = [
@@ -166,6 +193,21 @@ export function Footer() {
                     className="text-sm text-gray-400 hover:text-rose-400 hover:underline"
                   >
                     {hub.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <h4 className="mb-2 mt-6 text-sm font-medium text-white">
+              Sobre la profesional
+            </h4>
+            <ul className="space-y-2">
+              {aboutLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-gray-400 hover:text-rose-400 hover:underline"
+                  >
+                    {link.label}
                   </Link>
                 </li>
               ))}

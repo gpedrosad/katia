@@ -3,7 +3,7 @@ import { GLOSARIO_TERMINOS } from "@/app/glosario/terminos";
 import { SITE_URL } from "@/lib/site";
 
 /** Actualizar en deploys que toquen URLs del sitemap. */
-const LAST_MODIFIED = "2026-05-20";
+const LAST_MODIFIED = "2026-05-21";
 
 function getGlosarioTermUrls(): MetadataRoute.Sitemap {
   return GLOSARIO_TERMINOS.map((t) => ({
@@ -34,6 +34,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "estimulacion-temprana-del-lenguaje-chillan",
     "conciencia-fonologica-chillan",
     "informe-fonoaudiologico-pie-chillan",
+    "evaluacion-del-lenguaje-infantil-chillan",
+    "evaluacion-del-habla-infantil-chillan",
+  ];
+
+  const recursosSlugs = [
+    "hitos-del-lenguaje-por-edad",
+    "senales-de-alerta-del-lenguaje-y-habla",
+    "estimular-lenguaje-en-casa",
+    "primera-evaluacion-fonoaudiologica-infantil",
+  ];
+
+  const geoChillanSlugs = [
+    "evaluacion-fonoaudiologica-infantil-chillan",
+    "fonoaudiologia-infantil-chillan",
+    "especialista-lenguaje-infantil-chillan",
+    "fonoaudiologo-pediatrico-chillan",
   ];
 
   return [
@@ -52,8 +68,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry("/chillan", 0.75, "monthly"),
     entry("/comparaciones/dislalia-vs-trastorno-fonologico", 0.7, "monthly"),
     entry("/comparaciones/tel-vs-retraso-del-lenguaje", 0.7, "monthly"),
+    entry(
+      "/comparaciones/retraso-del-habla-vs-retraso-del-lenguaje",
+      0.7,
+      "monthly"
+    ),
     ...getGlosarioTermUrls(),
+    entry("/glosario/retraso-del-habla", 0.6, "monthly"),
     entry("/recursos", 0.7),
+    ...recursosSlugs.map((slug) => entry(`/recursos/${slug}`, 0.65, "monthly")),
+    entry("/sobre-katia-dominguez-fonoaudiologa-chillan", 0.75, "monthly"),
+    entry("/contacto-fonoaudiologa-chillan", 0.75, "monthly"),
+    ...geoChillanSlugs.map((slug) => entry(`/${slug}`, 0.75, "monthly")),
     entry("/agendar-hora-fonoaudiologo-infantil-chillan", 0.75),
     ...[
       "retraso-del-lenguaje-chillan",

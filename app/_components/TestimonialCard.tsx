@@ -24,7 +24,9 @@ export function TestimonialCard({ name, text, date }: TestimonialCardProps) {
       <p className="mb-4 flex-grow text-gray-700">&ldquo;{text}&rdquo;</p>
       <div className="flex items-center justify-between border-t border-gray-100 pt-4">
         <span className="font-medium text-gray-900">{name}</span>
-        {date && <span className="text-sm text-gray-500">{date}</span>}
+        {date ? (
+          <span className="text-sm text-gray-500">{date}</span>
+        ) : null}
       </div>
     </div>
   );

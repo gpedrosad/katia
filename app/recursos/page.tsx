@@ -20,6 +20,7 @@ export const metadata = buildPageMetadata({
 
 const guides = [
   {
+    href: "/recursos/hitos-del-lenguaje-por-edad",
     title: "Hitos del desarrollo del lenguaje",
     description:
       "¿Qué debe decir tu hijo a cada edad? Guía de las etapas del desarrollo del lenguaje de 0 a 6 años.",
@@ -27,6 +28,7 @@ const guides = [
     category: "Desarrollo",
   },
   {
+    href: "/recursos/senales-de-alerta-del-lenguaje-y-habla",
     title: "Señales de alerta en el habla",
     description:
       "Signos que indican que deberías consultar a un fonoaudiólogo. Cuándo preocuparse y cuándo esperar.",
@@ -34,6 +36,7 @@ const guides = [
     category: "Alerta",
   },
   {
+    href: "/recursos/estimular-lenguaje-en-casa",
     title: "Cómo estimular el lenguaje en casa",
     description:
       "Estrategias simples para ayudar a tu hijo a desarrollar su lenguaje en el día a día.",
@@ -41,6 +44,7 @@ const guides = [
     category: "Consejos",
   },
   {
+    href: "/recursos/primera-evaluacion-fonoaudiologica-infantil",
     title: "Preparando la primera consulta",
     description:
       "Qué esperar de una evaluación fonoaudiológica y qué información llevar.",
@@ -53,27 +57,16 @@ const faqs = [
   {
     question: "¿A qué edad debe hablar mi hijo?",
     answer:
-      "Las primeras palabras suelen aparecer alrededor del año. A los 2 años debe juntar dos palabras y tener unas 50 palabras. A los 3 años forma oraciones de 3-4 palabras. Cada niño tiene su ritmo, pero si hay retraso significativo, conviene consultar.",
+      "Los hitos varían según la edad. Si hay duda persistente o el colegio lo señala, conviene evaluar sin esperar.",
+    guideHref: "/recursos/hitos-del-lenguaje-por-edad",
+    guideLabel: "Ver guía de hitos del lenguaje por edad",
   },
   {
-    question: "¿Cuándo debo preocuparme por su pronunciación?",
+    question: "¿Cuándo debo preocuparme por su pronunciación o lenguaje?",
     answer:
-      "A los 3 años tu hijo debería ser entendido por extraños al menos un 75% del tiempo. A los 4-5 años la mayoría de los sonidos deben estar adquiridos. Si después de los 5 años tiene errores de pronunciación, es recomendable evaluar.",
-  },
-  {
-    question: "¿Es normal que mi hijo de 2 años no hable?",
-    answer:
-      "Algunos niños son 'hablantes tardíos' y alcanzan a sus pares sin intervención. Pero un 30-40% de estos niños siguen con dificultades. Una evaluación temprana permite identificar quiénes necesitan ayuda.",
-  },
-  {
-    question: "¿La pantalla afecta el desarrollo del lenguaje?",
-    answer:
-      "El exceso de pantallas puede limitar las oportunidades de interacción verbal, que es clave para el desarrollo del lenguaje. Se recomienda limitar pantallas y priorizar el juego e interacción cara a cara.",
-  },
-  {
-    question: "¿El bilingüismo causa retraso del lenguaje?",
-    answer:
-      "No, el bilingüismo no causa trastornos del lenguaje. Los niños bilingües pueden tardar un poco más en algunos hitos, pero desarrollan ambos idiomas normalmente. Si hay un trastorno, se manifestará en ambas lenguas.",
+      "Si la claridad del habla o el vocabulario van claramente por detrás de otros niños de su edad, una evaluación puede aclarar si es variación normal o requiere apoyo.",
+    guideHref: "/recursos/senales-de-alerta-del-lenguaje-y-habla",
+    guideLabel: "Ver señales de alerta del lenguaje y habla",
   },
 ];
 
@@ -121,9 +114,10 @@ export default function RecursosPage() {
               </h2>
               <div className="grid gap-4 sm:grid-cols-2">
                 {guides.map((guide) => (
-                  <div
-                    key={guide.title}
-                    className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm"
+                  <Link
+                    key={guide.href}
+                    href={guide.href}
+                    className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition hover:border-rose-300 hover:shadow-md"
                   >
                     <div className="mb-3 text-3xl">{guide.icon}</div>
                     <span className="mb-2 inline-block rounded-full bg-rose-100 px-2 py-1 text-xs font-medium text-rose-700">
@@ -133,12 +127,12 @@ export default function RecursosPage() {
                       {guide.title}
                     </h3>
                     <p className="text-sm text-gray-600">{guide.description}</p>
-                  </div>
+                    <span className="mt-4 inline-block text-sm font-medium text-rose-600">
+                      Leer guía →
+                    </span>
+                  </Link>
                 ))}
               </div>
-              <p className="mt-6 text-center text-sm text-gray-500">
-                Próximamente: guías descargables en PDF
-              </p>
             </div>
 
             {/* Quick FAQs */}
@@ -159,6 +153,14 @@ export default function RecursosPage() {
                       </span>
                     </summary>
                     <p className="mt-4 text-gray-600">{faq.answer}</p>
+                    {faq.guideHref ? (
+                      <Link
+                        href={faq.guideHref}
+                        className="mt-3 inline-block text-sm font-medium text-rose-600 hover:underline"
+                      >
+                        {faq.guideLabel} →
+                      </Link>
+                    ) : null}
                   </details>
                 ))}
               </div>
@@ -191,13 +193,13 @@ export default function RecursosPage() {
                   </p>
                 </Link>
                 <Link
-                  href="/servicios/evaluacion-fonoaudiologica"
+                  href="/recursos/primera-evaluacion-fonoaudiologica-infantil"
                   className="rounded-xl border border-gray-200 bg-white p-4 text-center transition-colors hover:border-rose-300"
                 >
                   <span className="mb-2 block text-2xl">📋</span>
-                  <h3 className="font-semibold text-gray-900">Primera consulta</h3>
+                  <h3 className="font-semibold text-gray-900">Primera evaluación</h3>
                   <p className="mt-1 text-sm text-gray-600">
-                    Qué incluye la evaluación
+                    Qué esperar y qué llevar
                   </p>
                 </Link>
               </div>

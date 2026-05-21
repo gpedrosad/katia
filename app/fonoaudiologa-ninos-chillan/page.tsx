@@ -34,7 +34,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": `${SITE_URL}${PAGE_PATH}#business`,
-  name: "Katia Domínguez - Fonoaudióloga Infantil",
+  name: "Katia Domínguez",
   description:
     "Fonoaudiología para niños en Chillán. Evaluación y terapia de lenguaje, habla, trastornos fonológicos y dificultades de lectura y escritura.",
   url: `${SITE_URL}${PAGE_PATH}`,
@@ -252,6 +252,11 @@ const guiasPorTema = [
   { href: "/chillan/lectoescritura", label: "Dificultades de lectoescritura" },
   { href: "/glosario", label: "Glosario fonoaudiológico" },
   { href: "/comparaciones", label: "Comparaciones clínicas (dislalia, TEL…)" },
+  {
+    href: "/comparaciones/retraso-del-habla-vs-retraso-del-lenguaje",
+    label: "Retraso del habla vs retraso del lenguaje",
+  },
+  { href: "/recursos", label: "Recursos y guías para padres" },
   { href: "/servicios/evaluacion-fonoaudiologica", label: "Evaluación fonoaudiológica infantil" },
 ];
 
@@ -580,6 +585,20 @@ export default function FonoaudiologaNinosChillanPage() {
                     trato cercano y empático, porque cada niño aprende mejor
                     cuando se siente seguro y motivado.
                   </p>
+                  <div className="mt-6 flex flex-wrap gap-4">
+                    <Link
+                      href="/sobre-katia-dominguez-fonoaudiologa-chillan"
+                      className="font-medium text-rose-600 hover:underline"
+                    >
+                      Ver perfil completo →
+                    </Link>
+                    <Link
+                      href="/contacto-fonoaudiologa-chillan"
+                      className="font-medium text-rose-600 hover:underline"
+                    >
+                      Contacto y consulta →
+                    </Link>
+                  </div>
                 </div>
                 <div className="hidden md:block">
                   <div className="relative mx-auto aspect-square w-48 overflow-hidden rounded-full bg-rose-100 shadow-lg">
@@ -622,6 +641,13 @@ export default function FonoaudiologaNinosChillanPage() {
               ))}
             </ul>
             <p className="mt-6 text-center text-sm text-gray-600">
+              <Link
+                href="/recursos"
+                className="font-medium text-rose-600 underline hover:text-rose-700"
+              >
+                Guías para padres
+              </Link>
+              {" · "}
               <Link
                 href="/sintomas"
                 className="font-medium text-rose-600 underline hover:text-rose-700"
@@ -723,9 +749,9 @@ export default function FonoaudiologaNinosChillanPage() {
                   </span>
                 </summary>
                 <p className="mt-4 text-gray-600">
-                  Atiendo en consulta particular en Chillán. Al agendar tu hora
-                  por WhatsApp, te envío la dirección exacta y referencias de
-                  cómo llegar.
+                  Atiendo en consulta presencial en Chillán, Región de Ñuble. Al
+                  agendar por WhatsApp coordinamos día, hora y detalles de la
+                  cita.
                 </p>
               </details>
 

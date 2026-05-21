@@ -45,7 +45,7 @@ export default function FonoaudiologiaInfantilPage() {
     "@context": "https://schema.org",
     "@type": "MedicalOrganization",
     "@id": `${pillarUrl}#organization`,
-    name: "Katia Domínguez - Fonoaudióloga Infantil Chillán",
+    name: "Katia Domínguez",
     medicalSpecialty: "SpeechTherapy",
     description:
       "Fonoaudióloga pediatra especializada en trastornos de lenguaje y habla en niñas y niños de Chillán.",

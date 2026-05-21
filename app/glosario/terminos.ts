@@ -27,7 +27,11 @@ export type GlosarioTermino = {
 };
 
 /** Rutas estáticas con prioridad sobre [slug] */
-export const STATIC_GLOSSARY_SLUGS = ["dislalia", "tel"] as const;
+export const STATIC_GLOSSARY_SLUGS = [
+  "dislalia",
+  "tel",
+  "retraso-del-habla",
+] as const;
 
 export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
   {

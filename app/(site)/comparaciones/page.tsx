@@ -24,6 +24,12 @@ const comparaciones = [
     description:
       "Cómo distinguir el Trastorno Específico del Lenguaje de un retraso transitorio y qué hacer en cada caso.",
   },
+  {
+    href: "/comparaciones/retraso-del-habla-vs-retraso-del-lenguaje",
+    title: "Retraso del habla vs retraso del lenguaje",
+    description:
+      "Diferencias entre pronunciación y vocabulario/comprensión, señales en casa y cuándo evaluar en Chillán.",
+  },
 ];
 
 export default function ComparacionesHubPage() {

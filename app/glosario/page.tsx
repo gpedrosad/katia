@@ -96,7 +96,7 @@ export default function GlosarioPage() {
               </p>
             </div>
 
-            <div className="mb-10 grid gap-3 sm:grid-cols-3">
+            <div className="mb-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               <Link
                 href="/glosario/dislalia"
                 className="rounded-xl border border-rose-200 bg-white p-4 hover:border-rose-400"
@@ -113,6 +113,15 @@ export default function GlosarioPage() {
                 <h2 className="font-semibold text-gray-900">TEL / TDL</h2>
                 <p className="mt-1 text-sm text-gray-600">
                   Definición y tratamiento infantil
+                </p>
+              </Link>
+              <Link
+                href="/glosario/retraso-del-habla"
+                className="rounded-xl border border-rose-200 bg-white p-4 hover:border-rose-400"
+              >
+                <h2 className="font-semibold text-gray-900">Retraso del habla</h2>
+                <p className="mt-1 text-sm text-gray-600">
+                  Pronunciación, señales y evaluación
                 </p>
               </Link>
               <Link
@@ -153,6 +162,17 @@ export default function GlosarioPage() {
                   </h3>
                   <p className="mt-1 text-sm text-gray-600">
                     Cómo distinguir un retraso transitorio del TEL/TDL.
+                  </p>
+                </Link>
+                <Link
+                  href="/comparaciones/retraso-del-habla-vs-retraso-del-lenguaje"
+                  className="block rounded-xl border border-gray-200 bg-white p-4 transition-all hover:border-rose-300 hover:shadow-md"
+                >
+                  <h3 className="font-semibold text-gray-900 hover:text-rose-600">
+                    Retraso del habla vs retraso del lenguaje
+                  </h3>
+                  <p className="mt-1 text-sm text-gray-600">
+                    Diferencias entre pronunciación y comprensión/vocabulario.
                   </p>
                 </Link>
               </div>
