@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { GeoFAQ } from "@/app/_components/GeoFAQ";
-import { buildWebPageJsonLd } from "@/lib/seo";
+import { buildPageMetadata, buildWebPageJsonLd } from "@/lib/seo";
 import { Header } from "./_components/Header";
 import { Footer } from "./_components/Footer";
 import { ServiceCard } from "./_components/ServiceCard";
@@ -37,6 +37,23 @@ const homeFaqItems = [
 
 const WHATSAPP_LINK =
   "https://wa.me/56995497838?text=Hola%2C%20quiero%20agendar%20una%20hora";
+const PAGE_PATH = "/";
+const HOME_TITLE = "Fonoaudióloga en Chillán | Evaluación y terapia infantil";
+const HOME_DESCRIPTION =
+  "Katia Domínguez, fonoaudióloga infantil en Chillán. Evaluación y terapia de lenguaje, habla, TEL y lectoescritura. Agenda por WhatsApp.";
+
+export const metadata = buildPageMetadata({
+  path: PAGE_PATH,
+  title: HOME_TITLE,
+  description: HOME_DESCRIPTION,
+  keywords: [
+    "fonoaudióloga Chillán",
+    "fonoaudiología Chillán",
+    "fonoaudiólogo Chillán",
+    "evaluación fonoaudiológica infantil",
+    "terapia de lenguaje Chillán",
+  ],
+});
 
 const services = [
   {
@@ -85,8 +102,7 @@ const localBusinessSchema = {
   "@type": "MedicalBusiness",
   "@id": "https://www.katialafono.cl/#business",
   name: "Katia Domínguez",
-  description:
-    "Fonoaudióloga en Chillán especialista en terapia de lenguaje infantil, trastornos del habla, TEL, TEA y lectoescritura. Más de 20 años de experiencia.",
+  description: HOME_DESCRIPTION,
   url: "https://www.katialafono.cl",
   telephone: "+56995497838",
   areaServed: {
@@ -111,10 +127,9 @@ const localBusinessSchema = {
 };
 
 const webPageJsonLd = buildWebPageJsonLd({
-  path: "/",
-  name: "Fonoaudióloga en Chillán | Katia Domínguez",
-  description:
-    "Fonoaudióloga en Chillán especialista en terapia de lenguaje infantil, trastornos del habla, TEL, TEA y lectoescritura. Más de 20 años de experiencia.",
+  path: PAGE_PATH,
+  name: HOME_TITLE,
+  description: HOME_DESCRIPTION,
   speakable: true,
 });
 

@@ -20,6 +20,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/seo-links", "/interno"],
     })),
+    host: SITE_URL,
     sitemap: `${SITE_URL}/sitemap.xml`,
   };
 }

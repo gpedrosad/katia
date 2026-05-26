@@ -29,9 +29,9 @@ const faqItems = [
 
 export const metadata = buildPageMetadata({
   path: "/agendar-hora-fonoaudiologo-infantil-chillan",
-  title: "Agendar fonoaudiólogo infantil Chillán | WhatsApp",
+  title: "Agenda evaluación fonoaudiológica en Chillán | WhatsApp",
   description:
-    "Primera cita: evaluación fonoaudiológica ~60 min en Chillán, Ñuble. Indica edad del niño y motivo por WhatsApp. Horarios compatibles con jornada escolar.",
+    "Agenda por WhatsApp tu evaluación fonoaudiológica infantil en Chillán. Primera cita, horarios compatibles con el colegio y respuesta en horario hábil.",
 });
 
 export default function AgendarHoraPage() {

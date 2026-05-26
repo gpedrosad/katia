@@ -13,7 +13,7 @@ const DESCRIPTION_MAX_LENGTH = 155;
 const DESCRIPTION_SUFFIX =
   " Evaluación y terapia en Chillán. Agenda por WhatsApp.";
 const DESCRIPTION_OVERRIDES: Record<string, string> = {
-  tel: "TEL en Chillán: evaluación y terapia infantil. Diagnóstico fonoaudiológico, apoyo familiar y coordinación escolar. Agenda por WhatsApp.",
+  tel: "Evaluación y terapia fonoaudiológica para TEL/TDL en Chillán. Diagnóstico, apoyo familiar, coordinación escolar y agenda por WhatsApp.",
 };
 
 function statSnippet(slug: string): string {
@@ -80,7 +80,7 @@ export async function generateMetadata({
   );
 
   const titleOverrides: Record<string, string> = {
-    tel: "TEL en Chillán: diagnóstico y terapia infantil",
+    tel: "TEL en Chillán | Evaluación y terapia infantil",
   };
 
   return buildPageMetadata({
@@ -105,6 +105,10 @@ export default async function PatologiaChillanPage({
   const patologia = getPatologiaBySlug(slug);
   if (!patologia) notFound();
   const p = patologia as NonNullable<typeof patologia>;
+  const metadataDescription = buildPatologiaMetadataDescription(
+    slug,
+    p.descripcion
+  );
 
   const whatsappUrl = `https://wa.me/56995497838?text=${encodeURIComponent(p.whatsappText)}`;
 
@@ -129,7 +133,7 @@ export default async function PatologiaChillanPage({
   const webPageJsonLd = buildWebPageJsonLd({
     path: pagePath,
     name: p.titulo,
-    description: p.descripcion,
+    description: metadataDescription,
     speakable: true,
   });
 

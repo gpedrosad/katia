@@ -29,13 +29,16 @@ const SITE_URL = "https://www.katialafono.cl";
 const PAGE_PATH = "/servicios";
 const WHATSAPP_LINK =
   "https://wa.me/56995497838?text=Hola%2C%20quiero%20consultar%20por%20sus%20servicios";
+const PAGE_TITLE =
+  "Servicios de fonoaudiología en Chillán | Lenguaje y habla";
+const PAGE_DESCRIPTION =
+  "Revisa evaluaciones y terapias en Chillán: lenguaje infantil, habla, TEL, TEA y lectoescritura. Atención presencial y agenda por WhatsApp.";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Servicios de fonoaudiología infantil Chillán",
+    absolute: PAGE_TITLE,
   },
-  description:
-    "Terapia de lenguaje infantil, trastornos del habla, evaluación con informe, TEL, TEA y lectoescritura. Presencial en Chillán, Ñuble. Agenda por WhatsApp.",
+  description: PAGE_DESCRIPTION,
   keywords: [
     "servicios fonoaudiología Chillán",
     "fonoaudióloga Chillán",
@@ -48,9 +51,8 @@ export const metadata: Metadata = {
     canonical: `${SITE_URL}${PAGE_PATH}`,
   },
   openGraph: {
-    title: "Servicios de fonoaudiología infantil Chillán",
-    description:
-      "Terapia de lenguaje, habla, evaluación, TEL, TEA y lectoescritura en Chillán. +20 años de experiencia.",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
     url: `${SITE_URL}${PAGE_PATH}`,
     type: "website",
     locale: "es_CL",
@@ -112,8 +114,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "MedicalBusiness",
   name: "Katia Domínguez - Fonoaudióloga",
-  description:
-    "Servicios de fonoaudiología en Chillán: terapia de lenguaje, trastornos del habla, evaluaciones y más.",
+  description: PAGE_DESCRIPTION,
   url: `${SITE_URL}${PAGE_PATH}`,
   telephone: "+56995497838",
   areaServed: {

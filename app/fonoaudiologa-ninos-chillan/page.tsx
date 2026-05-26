@@ -10,12 +10,14 @@ import { StickyWhatsApp } from "../chillan/lenguaje-infantil/_components/StickyW
 
 const PAGE_PATH = "/fonoaudiologa-ninos-chillan";
 const WHATSAPP_HREF = whatsappUrl("Hola, quiero agendar una evaluación de lenguaje para mi hijo/a");
+const PAGE_TITLE = "Fonoaudióloga infantil en Chillán | Agenda evaluación";
+const PAGE_DESCRIPTION =
+  "¿Tu hijo habla poco o no se le entiende? Evaluación y terapia infantil en Chillán para lenguaje, habla, TEL y lectoescritura. Agenda por WhatsApp.";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Fonoaudióloga infantil Chillán | Evaluación y terapia",
-  description:
-    "¿Tu hijo habla poco o no se le entiende? Evaluación fonoaudiológica infantil en Chillán, Ñuble. Lenguaje, habla y lectoescritura. +20 años. Agenda por WhatsApp.",
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   keywords: ["fonoaudióloga en Chillán",
     "fonoaudióloga para niños",
     "terapia de lenguaje para niños",
@@ -35,8 +37,7 @@ const jsonLd = {
   "@type": "ProfessionalService",
   "@id": `${SITE_URL}${PAGE_PATH}#business`,
   name: "Katia Domínguez",
-  description:
-    "Fonoaudiología para niños en Chillán. Evaluación y terapia de lenguaje, habla, trastornos fonológicos y dificultades de lectura y escritura.",
+  description: PAGE_DESCRIPTION,
   url: `${SITE_URL}${PAGE_PATH}`,
   telephone: "+56995497838",
   // TODO: Agregar dirección real cuando esté disponible
@@ -151,8 +152,8 @@ const webPageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "@id": `${SITE_URL}${PAGE_PATH}#webpage`,
-  name: "Fonoaudióloga en Chillán para Niños | Evaluación y Terapia de Lenguaje",
-  description: "Evaluación y terapia de lenguaje y habla para niños en Chillán. +20 años de experiencia. Atención presencial.",
+  name: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   url: `${SITE_URL}${PAGE_PATH}`,
   inLanguage: "es-CL",
   isPartOf: { "@type": "WebSite", name: "Katia Domínguez - Fonoaudióloga", url: SITE_URL },

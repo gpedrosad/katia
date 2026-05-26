@@ -146,13 +146,6 @@ export const SEO_ROUTE_SECTIONS: SeoRouteSection[] = [
         "/agendar-hora-fonoaudiologo-infantil-chillan",
         "Agendar hora fonoaudiólogo infantil"
       ),
-      route(
-        "/evaluacion-fonoaudiologica-infantil-chillan",
-        "Evaluación fonoaudiológica infantil"
-      ),
-      route("/fonoaudiologia-infantil-chillan", "Fonoaudiología infantil"),
-      route("/especialista-lenguaje-infantil-chillan", "Especialista lenguaje infantil"),
-      route("/fonoaudiologo-pediatrico-chillan", "Fonoaudiólogo pediátrico"),
     ],
   },
   {
@@ -201,7 +194,6 @@ export const SEO_ROUTE_SECTIONS: SeoRouteSection[] = [
     title: "Patologías Chillán",
     routes: [
       route("/chillan", "Hub patologías Chillán"),
-      route("/chillan/lenguaje-infantil", "Lenguaje infantil (geo → pilar)"),
       ...PATOLOGIAS.map((p) => route(`/chillan/${p.slug}`, p.titulo)),
     ],
   },
