@@ -1,4 +1,3 @@
-import { Metadata } from "next";
 import Link from "next/link";
 import { GeoFAQ } from "@/app/_components/GeoFAQ";
 import { Breadcrumbs } from "../_components/Breadcrumbs";
@@ -6,6 +5,8 @@ import { ServiceCard } from "../_components/ServiceCard";
 import { Footer } from "../_components/Footer";
 import { Header } from "../_components/Header";
 import { WhatsAppCTA } from "../_components/WhatsAppCTA";
+import { buildPageMetadata } from "@/lib/seo";
+import { SITE_URL } from "@/lib/site";
 
 const faqItems = [
   {
@@ -25,19 +26,17 @@ const faqItems = [
   },
 ];
 
-const SITE_URL = "https://www.katialafono.cl";
 const PAGE_PATH = "/servicios";
 const WHATSAPP_LINK =
   "https://wa.me/56995497838?text=Hola%2C%20quiero%20consultar%20por%20sus%20servicios";
 const PAGE_TITLE =
-  "Servicios de fonoaudiología en Chillán | Lenguaje y habla";
+  "Servicios de fonoaudiología en Chillán | Lenguaje, habla, TEL y TEA";
 const PAGE_DESCRIPTION =
-  "Revisa evaluaciones y terapias en Chillán: lenguaje infantil, habla, TEL, TEA y lectoescritura. Atención presencial y agenda por WhatsApp.";
+  "Conoce los servicios de fonoaudiología infantil en Chillán: evaluación, terapia de lenguaje, habla, TEL, TEA y lectoescritura. Agenda por WhatsApp.";
 
-export const metadata: Metadata = {
-  title: {
-    absolute: PAGE_TITLE,
-  },
+export const metadata = buildPageMetadata({
+  path: PAGE_PATH,
+  title: PAGE_TITLE,
   description: PAGE_DESCRIPTION,
   keywords: [
     "servicios fonoaudiología Chillán",
@@ -47,17 +46,7 @@ export const metadata: Metadata = {
     "evaluación fonoaudiológica",
     "fonoaudióloga infantil Chillán",
   ],
-  alternates: {
-    canonical: `${SITE_URL}${PAGE_PATH}`,
-  },
-  openGraph: {
-    title: PAGE_TITLE,
-    description: PAGE_DESCRIPTION,
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-    locale: "es_CL",
-  },
-};
+});
 
 const services = [
   {

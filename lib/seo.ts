@@ -36,7 +36,6 @@ export function buildPageMetadata({
   ogType = "website",
   canonicalPath: canonicalPathOverride,
 }: BuildPageMetadataInput): Metadata {
-  const normalizedPath = normalizePath(path);
   const resolvedCanonical = normalizePath(canonicalPathOverride ?? path);
   const canonical =
     resolvedCanonical === "/" ? "/" : resolvedCanonical;

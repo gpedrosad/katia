@@ -10,9 +10,10 @@ import { StickyWhatsApp } from "../chillan/lenguaje-infantil/_components/StickyW
 
 const PAGE_PATH = "/fonoaudiologa-ninos-chillan";
 const WHATSAPP_HREF = whatsappUrl("Hola, quiero agendar una evaluación de lenguaje para mi hijo/a");
-const PAGE_TITLE = "Fonoaudióloga infantil en Chillán | Agenda evaluación";
+const PAGE_TITLE =
+  "Fonoaudióloga para niños en Chillán | Lenguaje, habla y TEL";
 const PAGE_DESCRIPTION =
-  "¿Tu hijo habla poco o no se le entiende? Evaluación y terapia infantil en Chillán para lenguaje, habla, TEL y lectoescritura. Agenda por WhatsApp.";
+  "Evaluación y terapia para niños en Chillán por dificultades de lenguaje, habla, TEL y lectoescritura. Atención presencial con Katia Domínguez. Agenda por WhatsApp.";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,

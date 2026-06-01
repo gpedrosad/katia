@@ -29,9 +29,9 @@ const faqItems = [
 
 export const metadata = buildPageMetadata({
   path: "/agendar-hora-fonoaudiologo-infantil-chillan",
-  title: "Agenda evaluación fonoaudiológica en Chillán | WhatsApp",
+  title: "Agenda hora con fonoaudióloga infantil en Chillán | WhatsApp",
   description:
-    "Agenda por WhatsApp tu evaluación fonoaudiológica infantil en Chillán. Primera cita, horarios compatibles con el colegio y respuesta en horario hábil.",
+    "Agenda por WhatsApp una evaluación fonoaudiológica infantil en Chillán. Horarios compatibles con el colegio y orientación inicial según motivo de consulta.",
 });
 
 export default function AgendarHoraPage() {
@@ -67,12 +67,12 @@ export default function AgendarHoraPage() {
           ]}
         />
         
-        <article className="prose prose-rose lg:prose-lg max-w-none mx-auto">
+        <article className="prose prose-rose mx-auto max-w-none lg:prose-lg">
           <h1 className="text-4xl font-extrabold text-rose-950">
-            Consulta Fonoaudióloga Infantil Chillán
+            Agenda hora con fonoaudióloga infantil en Chillán
           </h1>
           <p className="lead font-medium text-gray-700" data-speakable>
-            Agenda tu sesión presencial. Una consulta temprana puede cambiar rotundamente la adaptación social y éxito escolar de tu pequeño. No importa si vienes desde Chillán centro, San Carlos u otras comunas vecinas de Ñuble.
+            Agenda tu evaluación presencial por WhatsApp. Atiendo en Chillán a familias de Ñuble que buscan orientación temprana en lenguaje, habla y comunicación infantil.
           </p>
 
           <div className="bg-rose-50 p-8 rounded-2xl my-10 border border-rose-100 shadow-sm max-w-2xl mx-auto">

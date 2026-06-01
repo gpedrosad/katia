@@ -3,7 +3,7 @@ import { GLOSARIO_TERMINOS } from "@/app/glosario/terminos";
 import { SITE_URL } from "@/lib/site";
 
 /** Actualizar en deploys que toquen URLs del sitemap. */
-const LAST_MODIFIED = "2026-05-20";
+const LAST_MODIFIED = "2026-06-01";
 
 function getGlosarioTermUrls(): MetadataRoute.Sitemap {
   return GLOSARIO_TERMINOS.map((t) => ({

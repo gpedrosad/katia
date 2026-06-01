@@ -38,9 +38,10 @@ const homeFaqItems = [
 const WHATSAPP_LINK =
   "https://wa.me/56995497838?text=Hola%2C%20quiero%20agendar%20una%20hora";
 const PAGE_PATH = "/";
-const HOME_TITLE = "Fonoaudióloga en Chillán | Evaluación y terapia infantil";
+const HOME_TITLE =
+  "Fonoaudiología en Chillán | Katia Domínguez, fonoaudióloga infantil";
 const HOME_DESCRIPTION =
-  "Katia Domínguez, fonoaudióloga infantil en Chillán. Evaluación y terapia de lenguaje, habla, TEL y lectoescritura. Agenda por WhatsApp.";
+  "Evaluación y terapia fonoaudiológica infantil en Chillán para lenguaje, habla, TEL y lectoescritura. Katia Domínguez, +20 años de experiencia. Agenda por WhatsApp.";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,

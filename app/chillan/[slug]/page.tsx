@@ -13,7 +13,21 @@ const DESCRIPTION_MAX_LENGTH = 155;
 const DESCRIPTION_SUFFIX =
   " Evaluación y terapia en Chillán. Agenda por WhatsApp.";
 const DESCRIPTION_OVERRIDES: Record<string, string> = {
-  tel: "Evaluación y terapia fonoaudiológica para TEL/TDL en Chillán. Diagnóstico, apoyo familiar, coordinación escolar y agenda por WhatsApp.",
+  tel: "TEL / TDL en Chillán: evaluación fonoaudiológica infantil, apoyo en comprensión y expresión, coordinación con familia y colegio. Agenda por WhatsApp.",
+};
+
+const TITLE_OVERRIDES: Record<string, string> = {
+  tel: "TEL / TDL en Chillán | Evaluación y terapia fonoaudiológica",
+};
+
+const KEYWORD_OVERRIDES: Record<string, string[]> = {
+  tel: [
+    "TEL Chillán",
+    "TDL Chillán",
+    "fonoaudióloga TEL Chillán",
+    "evaluación TEL infantil",
+    "terapia lenguaje TEL",
+  ],
 };
 
 function statSnippet(slug: string): string {
@@ -79,20 +93,17 @@ export async function generateMetadata({
     patologia.descripcion
   );
 
-  const titleOverrides: Record<string, string> = {
-    tel: "TEL en Chillán | Evaluación y terapia infantil",
-  };
-
   return buildPageMetadata({
     path: `/chillan/${patologia.slug}`,
-    title: titleOverrides[slug] ?? patologia.titulo,
+    title: TITLE_OVERRIDES[slug] ?? patologia.titulo,
     description,
-    keywords: [
-      patologia.titulo,
-      `fonoaudióloga ${patologia.slug} Chillán`,
-      `tratamiento ${patologia.slug} niños`,
-      "fonoaudiología infantil Chillán",
-    ],
+    keywords:
+      KEYWORD_OVERRIDES[slug] ?? [
+        patologia.titulo,
+        `fonoaudióloga ${patologia.slug} Chillán`,
+        `tratamiento ${patologia.slug} niños`,
+        "fonoaudiología infantil Chillán",
+      ],
   });
 }
 

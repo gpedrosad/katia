@@ -70,8 +70,8 @@ export const PATOLOGIAS = [
   },
   {
     slug: "tel",
-    titulo: "TEL en Chillán",
-    subtitulo: "Trastorno Específico del Lenguaje — Diagnóstico y tratamiento",
+    titulo: "TEL / TDL en Chillán",
+    subtitulo: "Evaluación y terapia fonoaudiológica para dificultades persistentes del lenguaje",
     descripcion:
       "El TEL (o TDL) afecta aproximadamente al 7% de los niños. Dificultades persistentes de lenguaje sin causa aparente. Evaluación especializada y terapia intensiva en Chillán, con coordinación escolar y familiar.",
     senales: [
