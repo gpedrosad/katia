@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import type { GscDashboardData } from "@/lib/gsc";
 
+import { GscCoreWebVitalsSection } from "./GscCoreWebVitalsSection";
 import { GscCtrSection } from "./GscCtrSection";
 import { GscExecutiveSummary } from "./GscExecutiveSummary";
 import { GscIndexingSection } from "./GscIndexingSection";
@@ -62,6 +63,7 @@ export function GscDashboard({ data }: { data: GscDashboardData }) {
       <GscInsightsSection insights={data.insights} />
       <GscCtrSection data={data} />
       <GscPerformanceSection data={data} />
+      <GscCoreWebVitalsSection report={data.coreWebVitals} />
       <GscIndexingSection />
       <GscUrlInspectionSection data={data} />
       <GscSitemapsDetailSection data={data} />

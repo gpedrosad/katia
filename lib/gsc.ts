@@ -16,6 +16,7 @@ import {
   generateActionPlan,
   resolveBrandTerms,
 } from "./gsc-analysis";
+import { fetchCoreWebVitalsReport, type CoreWebVitalsReport } from "./pagespeed";
 
 const SCOPES = ["https://www.googleapis.com/auth/webmasters.readonly"];
 const GSC_API_TIMEOUT_MS = Number(process.env.GSC_API_TIMEOUT_MS ?? 15000);
@@ -139,6 +140,8 @@ export type GscDashboardData = {
   urlInspectionSamples: GscUrlInspectionDashboardItem[];
   /** Plan priorizado (gsc-analysis): CTR, www, sitemaps, tendencias, marca/no marca */
   actionPlan: ActionPlanItem[];
+  /** PageSpeed Insights (lab + CrUX). Requiere PAGESPEED_API_KEY. */
+  coreWebVitals: CoreWebVitalsReport;
 };
 
 export type { ActionPlanItem, LowCtrOpportunity } from "./gsc-analysis";
@@ -603,7 +606,7 @@ export const getGscDashboardData = async (
 
   const origin = publicSiteOrigin(siteUrl);
   const homeUrl = new URL("/", origin).toString().replace(/\/?$/, "/");
-  const agendarUrl = new URL("agendar", origin).toString();
+  const agendarUrl = new URL("/agendar-hora-fonoaudiologo-infantil-chillan", origin).toString();
 
   let topPerformingUrl: string | undefined;
   const topPaged = pagesSorted[0]?.keys[0]?.trim();
@@ -659,9 +662,23 @@ export const getGscDashboardData = async (
         "urlInspection.batch",
       );
 
-  const [sitemaps, urlInspectionSamples] = await Promise.all([
+  const coreWebVitalsPromise = bestEffort(
+    fetchCoreWebVitalsReport(),
+    {
+      enabled: false,
+      strategy: "mobile",
+      fetchedAt: new Date().toISOString(),
+      results: [],
+      error: "PageSpeed no disponible",
+    },
+    Number(process.env.PAGESPEED_TIMEOUT_MS ?? 90000),
+    "pagespeed",
+  );
+
+  const [sitemaps, urlInspectionSamples, coreWebVitals] = await Promise.all([
     sitemapsPromise,
     urlInspectionSamplesPromise,
+    coreWebVitalsPromise,
   ]);
 
   const actionPlan = generateActionPlan({
@@ -705,6 +722,7 @@ export const getGscDashboardData = async (
     sitemaps,
     urlInspectionSamples,
     actionPlan,
+    coreWebVitals,
   };
 };
 
