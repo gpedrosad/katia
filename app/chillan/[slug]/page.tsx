@@ -13,11 +13,15 @@ const DESCRIPTION_MAX_LENGTH = 155;
 const DESCRIPTION_SUFFIX =
   " Evaluación y terapia en Chillán. Agenda por WhatsApp.";
 const DESCRIPTION_OVERRIDES: Record<string, string> = {
-  tel: "TEL / TDL en Chillán: evaluación fonoaudiológica infantil, apoyo en comprensión y expresión, coordinación con familia y colegio. Agenda por WhatsApp.",
+  tel: "Si tu hijo tiene dificultad para comprender, expresarse o armar frases, agenda evaluación TEL/TDL en Chillán con orientación familiar y escolar.",
+  "tea-comunicacion":
+    "Apoyo fonoaudiológico para niños con TEA: comunicación funcional, lenguaje y habilidades sociales. Evaluación presencial en Chillán.",
 };
 
 const TITLE_OVERRIDES: Record<string, string> = {
-  tel: "TEL / TDL en Chillán | Evaluación y terapia fonoaudiológica",
+  tel: "TEL / TDL en niños en Chillán | Evaluación fonoaudiológica",
+  "tea-comunicacion":
+    "Fonoaudiología para TEA en Chillán | Comunicación infantil",
 };
 
 const KEYWORD_OVERRIDES: Record<string, string[]> = {
@@ -27,6 +31,13 @@ const KEYWORD_OVERRIDES: Record<string, string[]> = {
     "fonoaudióloga TEL Chillán",
     "evaluación TEL infantil",
     "terapia lenguaje TEL",
+  ],
+  "tea-comunicacion": [
+    "TEA Chillán",
+    "fonoaudiología TEA Chillán",
+    "comunicación infantil TEA",
+    "autismo comunicación niños",
+    "fonoaudióloga autismo Chillán",
   ],
 };
 
