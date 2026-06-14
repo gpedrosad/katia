@@ -12,9 +12,9 @@ const WHATSAPP_HREF = whatsappUrl("Hola, quiero consultar por TEA y comunicació
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Fonoaudiología para TEA en Chillán | Comunicación y Lenguaje Autismo",
+  title: "Terapia TEA Chillán | Comunicación y lenguaje autismo",
   description:
-    "Apoyo fonoaudiológico para niños con TEA en Chillán. Desarrollo de comunicación, lenguaje funcional y habilidades sociales. Fonoaudióloga con experiencia en autismo.",
+    "Fonoaudiología para niños con autismo/TEA en Chillán: comunicación funcional, lenguaje y participación escolar. Evaluación presencial. Agenda WhatsApp.",
   keywords: ["TEA Chillán",
     "autismo fonoaudiología",
     "comunicación TEA",

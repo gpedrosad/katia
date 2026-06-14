@@ -10,7 +10,8 @@
     "gsc:auth": "node --env-file=.env.local scripts/gsc-report.mjs --auth",
     "gsc:report": "node --env-file=.env.local scripts/gsc-report.mjs",
     "gsc:report:md": "node --env-file=.env.local scripts/gsc-report-md.mjs",
-    "pagespeed:report": "node --env-file=.env.local scripts/pagespeed-report.mjs"
+    "pagespeed:report": "node --env-file=.env.local scripts/pagespeed-report.mjs",
+    "gsc:checklist": "node --env-file=.env.local scripts/gsc-checklist.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^1.6.1",

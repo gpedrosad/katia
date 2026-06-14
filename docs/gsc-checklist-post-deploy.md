@@ -24,36 +24,47 @@ curl -s "https://www.katialafono.cl/servicios" | grep -o '<title>[^<]*</title>'
 | Apex | HTTP 308 → www | OK |
 | `/chillan/lenguaje-infantil` | 308 → `/fonoaudiologa-ninos-chillan` | OK |
 | `/agendar` | 308 → `/agendar-hora-fonoaudiologo-infantil-chillan` | OK |
-| Meta TEL | Sin corte no natural | Falla: quedó `...lenguaje sin Evaluación...` |
+| Meta TEL | Sin corte no natural | OK (2026-06-08) |
 | Title servicios | Sin «Katia Domínguez» duplicado | OK |
 
 ---
 
 ## 2. Sitemaps (GSC UI)
 
-1. Ir a **Indexación → Sitemaps**
-2. Abrir `https://www.katialafono.cl/sitemap.xml`
-3. Anotar:
-   - Tipo de warning (si sigue)
-   - Enviadas vs indexadas
-4. Si el warning es «URLs no indexadas»: contrastar con **Indexación → Páginas** (no asumir desindexación masiva)
+**Ejecutado vía API 2026-06-08** (`npm run gsc:checklist` → [`gsc-checklist-ejecutado-2026-06-08.md`](./gsc-checklist-ejecutado-2026-06-08.md))
 
-**Registrar en** `gsc-evaluacion-completa-2026-05-20.md` §5 tabla resultados.
+| Sitemap | Errores | Warnings | Enviadas | Indexadas (API) |
+| --- | --- | --- | --- | --- |
+| www.katialafono.cl/sitemap.xml | 0 | **0** ✅ | 81 | 0* |
+| katialafono.cl/sitemap.xml | 0 | 0 | 81 | 0* |
+
+\*El contador 0/81 en informe de sitemap **no implica** desindexación masiva. Las 4 URLs clave inspeccionadas están **indexadas**.
+
+~~Warning en www~~ — **resuelto** (0 warnings al 2026-06-08).
+
+**Acción opcional UI:** Indexación → Páginas (contrastar total indexadas vs 81 del sitemap).
 
 ---
 
 ## 3. Inspección de URL (GSC UI)
 
-Para cada URL → **Inspeccionar URL** → si es indexable → **Solicitar indexación**
+**Ejecutado vía API 2026-06-08 — 4/4 PASS, indexadas, fetch OK, canónica www.**
 
-| URL | Objetivo |
-| --- | --- |
-| https://www.katialafono.cl/ | Home con nuevo snippet |
-| https://www.katialafono.cl/chillan/tel | Meta corregida |
-| https://www.katialafono.cl/fonoaudiologa-ninos-chillan | Pilar infantil |
-| https://www.katialafono.cl/agendar-hora-fonoaudiologo-infantil-chillan | Conversión |
+| URL | Verdict | Cobertura | Canónica Google |
+| --- | --- | --- | --- |
+| https://www.katialafono.cl/ | PASS | Enviada e indexada | www ✅ |
+| https://www.katialafono.cl/chillan/tel | PASS | Enviada e indexada | www ✅ |
+| https://www.katialafono.cl/fonoaudiologa-ninos-chillan | PASS | Enviada e indexada | www ✅ |
+| https://www.katialafono.cl/agendar-hora-fonoaudiologo-infantil-chillan | PASS | Enviada e indexada | www ✅ |
 
-**Opcional:** re-inspeccionar `https://katialafono.cl/` (debe redirigir; canonical www).
+### Pendiente manual (~5 min): Solicitar indexación
+
+La API no puede pulsar «Solicitar indexación». Abre cada enlace y confirma:
+
+1. [Home](https://search.google.com/search-console/inspect?resource_id=sc-domain%3Akatialafono.cl&url=https%3A%2F%2Fwww.katialafono.cl%2F)
+2. [/chillan/tel](https://search.google.com/search-console/inspect?resource_id=sc-domain%3Akatialafono.cl&url=https%3A%2F%2Fwww.katialafono.cl%2Fchillan%2Ftel)
+3. [/fonoaudiologa-ninos-chillan](https://search.google.com/search-console/inspect?resource_id=sc-domain%3Akatialafono.cl&url=https%3A%2F%2Fwww.katialafono.cl%2Ffonoaudiologa-ninos-chillan)
+4. [/agendar-hora-...](https://search.google.com/search-console/inspect?resource_id=sc-domain%3Akatialafono.cl&url=https%3A%2F%2Fwww.katialafono.cl%2Fagendar-hora-fonoaudiologo-infantil-chillan)
 
 ---
 
