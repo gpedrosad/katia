@@ -34,8 +34,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "estimulacion-temprana-del-lenguaje-chillan",
     "conciencia-fonologica-chillan",
     "informe-fonoaudiologico-pie-chillan",
-    "evaluacion-del-lenguaje-infantil-chillan",
-    "evaluacion-del-habla-infantil-chillan",
   ];
 
   const recursosSlugs = [
@@ -73,6 +71,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry("/sobre-katia-dominguez-fonoaudiologa-chillan", 0.75, "monthly"),
     entry("/contacto-fonoaudiologa-chillan", 0.75, "monthly"),
     entry("/evaluacion-fonoaudiologica-infantil-chillan", 0.8, "monthly"),
+    entry("/servicios/evaluacion-del-lenguaje-infantil-chillan", 0.8, "monthly"),
+    entry("/servicios/evaluacion-del-habla-infantil-chillan", 0.8, "monthly"),
     entry("/agendar-hora-fonoaudiologo-infantil-chillan", 0.75),
     ...[
       "retraso-del-lenguaje-chillan",

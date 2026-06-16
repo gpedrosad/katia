@@ -150,6 +150,14 @@ export const SEO_ROUTE_SECTIONS: SeoRouteSection[] = [
         "/evaluacion-fonoaudiologica-infantil-chillan",
         "Evaluación fonoaudiológica infantil"
       ),
+      route(
+        "/servicios/evaluacion-del-lenguaje-infantil-chillan",
+        "Evaluación del lenguaje infantil"
+      ),
+      route(
+        "/servicios/evaluacion-del-habla-infantil-chillan",
+        "Evaluación del habla infantil"
+      ),
     ],
   },
   {
