@@ -146,6 +146,10 @@ export const SEO_ROUTE_SECTIONS: SeoRouteSection[] = [
         "/agendar-hora-fonoaudiologo-infantil-chillan",
         "Agendar hora fonoaudiólogo infantil"
       ),
+      route(
+        "/evaluacion-fonoaudiologica-infantil-chillan",
+        "Evaluación fonoaudiológica infantil"
+      ),
     ],
   },
   {
