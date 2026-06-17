@@ -66,6 +66,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ),
     ...getGlosarioTermUrls(),
     entry("/glosario/retraso-del-habla", 0.6, "monthly"),
+    entry("/glosario/tdl", 0.6, "monthly"),
     entry("/recursos", 0.7),
     ...recursosSlugs.map((slug) => entry(`/recursos/${slug}`, 0.65, "monthly")),
     entry("/sobre-katia-dominguez-fonoaudiologa-chillan", 0.75, "monthly"),
@@ -89,6 +90,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       "hijo-no-arma-frases-chillan",
       "nino-no-entiende-instrucciones-chillan",
       "nino-tartamudea-chillan",
+      "mi-hijo-no-comprende-chillan",
     ].map((slug) => entry(`/sintomas/${slug}`, 0.7)),
     ...secondaryServiciosSlugs.map((slug) => entry(`/servicios/${slug}`, 0.8)),
     ...[

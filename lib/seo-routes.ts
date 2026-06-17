@@ -38,6 +38,7 @@ const SINTOMA_SLUGS: { slug: string; label: string }[] = [
     label: "Niño no entiende instrucciones",
   },
   { slug: "nino-tartamudea-chillan", label: "Niño tartamudea" },
+  { slug: "mi-hijo-no-comprende-chillan", label: "Mi hijo no comprende" },
 ];
 
 const SERVICIO_CHILLAN_SLUGS: { slug: string; label: string }[] = [
@@ -217,6 +218,7 @@ export const SEO_ROUTE_SECTIONS: SeoRouteSection[] = [
       route("/glosario/dislalia", "Dislalia (página estática)"),
       route("/glosario/tel", "TEL (página estática)"),
       route("/glosario/retraso-del-habla", "Retraso del habla (página estática)"),
+      route("/glosario/tdl", "TDL (trastorno del desarrollo del lenguaje)"),
       ...GLOSARIO_TERMINOS.map((t) => route(`/glosario/${t.slug}`, t.term)),
     ],
   },
