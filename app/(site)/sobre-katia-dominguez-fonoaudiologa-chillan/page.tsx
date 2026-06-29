@@ -10,9 +10,9 @@ const WHATSAPP_LINK = whatsappUrl("Hola, quiero agendar una evaluación con Kati
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Katia Domínguez | Fonoaudióloga Infantil en Chillán",
+  title: "Katia Domínguez | Fonoaudióloga U. de Chile en Chillán",
   description:
-    "Conoce a Katia Domínguez, fonoaudióloga infantil en Chillán con más de 20 años de experiencia en lenguaje, habla y lectoescritura.",
+    "Fonoaudióloga infantil en Chillán, titulada U. de Chile y con +20 años en lenguaje, habla y lectoescritura. Conoce su perfil y enfoque.",
   keywords: [
     "Katia Domínguez",
     "fonoaudióloga Chillán",

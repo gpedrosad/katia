@@ -29,9 +29,9 @@ const faqItems = [
 
 export const metadata = buildPageMetadata({
   path: "/agendar-hora-fonoaudiologo-infantil-chillan",
-  title: "Agendar fonoaudióloga Chillán | WhatsApp hoy",
+  title: "Agendar hora con fonoaudióloga en Chillán | WhatsApp",
   description:
-    "Pide hora para evaluación infantil en Chillán: envía edad del niño y motivo de consulta. Respuesta en horario hábil. Atención presencial.",
+    "Reserva tu evaluación fonoaudiológica en Chillán por WhatsApp. Indica edad del niño y motivo; respondemos en <24 h hábiles.",
 });
 
 export default function AgendarHoraPage() {

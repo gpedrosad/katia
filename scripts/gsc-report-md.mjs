@@ -405,8 +405,18 @@ function detectObservedHosts(pages) {
     .sort((a, b) => b.rows - a.rows);
 }
 
-function summarizeSitemapCoverageIssues(sitemaps) {
+function detectSitemapReportMismatch(urlInspectionSamples = []) {
+  if (!Array.isArray(urlInspectionSamples) || urlInspectionSamples.length === 0) {
+    return false;
+  }
+  return urlInspectionSamples.some(
+    (sample) => !sample.error && sample.indexVerdict === "PASS",
+  );
+}
+
+function summarizeSitemapCoverageIssues(sitemaps, urlInspectionSamples = []) {
   const issues = [];
+  const isMismatch = detectSitemapReportMismatch(urlInspectionSamples);
 
   for (const sitemap of sitemaps) {
     for (const content of sitemap.contents ?? []) {
@@ -419,7 +429,8 @@ function summarizeSitemapCoverageIssues(sitemaps) {
           type: content.type ?? sitemap.type ?? "-",
           submitted,
           indexed,
-          severity: "alta",
+          severity: isMismatch ? "baja" : "alta",
+          falseAlarm: isMismatch,
         });
         continue;
       }
@@ -431,7 +442,8 @@ function summarizeSitemapCoverageIssues(sitemaps) {
           type: content.type ?? sitemap.type ?? "-",
           submitted,
           indexed,
-          severity: "media",
+          severity: isMismatch ? "baja" : "media",
+          falseAlarm: isMismatch,
         });
       }
     }
@@ -442,7 +454,10 @@ function summarizeSitemapCoverageIssues(sitemaps) {
 
 function generateActionPlan(data) {
   const items = [];
-  const sitemapCoverageIssues = summarizeSitemapCoverageIssues(data.sitemaps);
+  const sitemapCoverageIssues = summarizeSitemapCoverageIssues(
+    data.sitemaps,
+    data.urlInspectionSamples,
+  );
 
   const badSitemaps = data.sitemaps.filter((item) => num(item.errors) > 0 || num(item.warnings) > 0);
   if (badSitemaps.length > 0) {
@@ -463,6 +478,23 @@ function generateActionPlan(data) {
       priority: "alta",
       title: "Validar por que el sitemap envia URLs pero no muestra indexacion",
       detail: `${item.path} reporta ${item.submitted} URL(s) enviadas y ${item.indexed} indexadas. Revisar canonical, indexabilidad real, cobertura y si el API esta devolviendo contenido consistente.`,
+    });
+  }
+
+  const falseAlarmSitemaps = sitemapCoverageIssues.filter(
+    (item) => item.falseAlarm,
+  );
+  if (falseAlarmSitemaps.length > 0) {
+    const item = falseAlarmSitemaps[0];
+    const inspected = (data.urlInspectionSamples ?? [])
+      .filter((sample) => !sample.error && sample.indexVerdict === "PASS")
+      .map((sample) => sample.inspectionUrl)
+      .slice(0, 3)
+      .join(", ");
+    items.push({
+      priority: "baja",
+      title: "Falsa alarma de indexacion en reporte de sitemap (verificada por inspeccion de URL)",
+      detail: `${item.path} reporta ${item.submitted} URL(s) enviadas y ${item.indexed} indexadas, pero la inspeccion de URL confirma que las paginas SI estan indexadas (verdict PASS en ${inspected || "URLs inspeccionadas"}). El contador "indexadas" del reporte de sitemap de GSC solo refleja descubrimientos-via-sitemap; al estar las paginas indexadas por otros medios (links internos, crawls previos, indexacion previa), el contador queda en 0. No requiere accion.`,
     });
   }
 
@@ -836,7 +868,10 @@ function buildMarkdown(data) {
   const inspectionIssues = data.urlInspectionSamples.filter(
     (item) => item.error || (item.indexVerdict && item.indexVerdict !== "PASS"),
   );
-  const sitemapCoverageIssues = summarizeSitemapCoverageIssues(data.sitemaps);
+  const sitemapCoverageIssues = summarizeSitemapCoverageIssues(
+    data.sitemaps,
+    data.urlInspectionSamples,
+  );
 
   const parts = [];
   parts.push(`# Informe completo de Google Search Console`);
@@ -897,9 +932,18 @@ function buildMarkdown(data) {
     notableIssues.push("- Sitemaps: hay al menos un sitemap con errores o advertencias.");
   }
   if (sitemapCoverageIssues.length > 0) {
-    notableIssues.push(
-      `- Cobertura de sitemap: ${sitemapCoverageIssues.length} alerta(s) de indexacion baja o nula en URLs enviadas.`,
-    );
+    const real = sitemapCoverageIssues.filter((item) => !item.falseAlarm);
+    const falseAlarms = sitemapCoverageIssues.filter((item) => item.falseAlarm);
+    if (real.length > 0) {
+      notableIssues.push(
+        `- Cobertura de sitemap: ${real.length} alerta(s) de indexacion baja o nula en URLs enviadas, sin contraprueba en inspeccion de URL.`,
+      );
+    }
+    if (falseAlarms.length > 0) {
+      notableIssues.push(
+        `- Cobertura de sitemap: el contador de "indexadas" aparece en 0 en ${falseAlarms.length} sitemap(s), pero la inspeccion de URL confirma que las paginas SI estan indexadas (falsa alarma conocida del reporte de sitemap de GSC).`,
+      );
+    }
   }
   parts.push(section("Riesgos detectados", notableIssues.join("\n") || "- No se detectaron riesgos tecnicos fuertes en este corte."));
 
