@@ -30,9 +30,9 @@ const PAGE_PATH = "/servicios";
 const WHATSAPP_LINK =
   "https://wa.me/56995497838?text=Hola%2C%20quiero%20consultar%20por%20sus%20servicios";
 const PAGE_TITLE =
-  "Servicios de fonoaudiología infantil en Chillán";
+  "Fonoaudiología Infantil en Chillán: Servicios y Agenda";
 const PAGE_DESCRIPTION =
-  "Evaluación, terapia de lenguaje, habla, TEL, TEA y lectoescritura para niños en Chillán. Revisa el servicio adecuado y agenda por WhatsApp.";
+  "Evaluación, terapia de lenguaje, habla, TEL, TEA y lectoescritura. Elige el servicio adecuado para tu hijo y agenda por WhatsApp.";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,

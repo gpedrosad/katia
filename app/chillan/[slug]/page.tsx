@@ -16,11 +16,15 @@ const DESCRIPTION_OVERRIDES: Record<string, string> = {
   tel: "Dificultad para comprender, expresarse o armar frases puede ser TEL/TDL. Evaluación fonoaudiológica infantil en Chillán con orientación escolar. WhatsApp.",
   "tea-comunicacion":
     "Apoyo fonoaudiológico para niños con TEA: lenguaje, comunicación funcional y habilidades sociales. Evaluación presencial en Chillán. Escribe por WhatsApp.",
+  "apraxia-del-habla":
+    "Errores inconsistentes al hablar y esfuerzo visible: puede ser apraxia. Evaluación especializada en Chillán con plan claro. Agenda por WhatsApp.",
 };
 
 const TITLE_OVERRIDES: Record<string, string> = {
   tel: "TEL en niños Chillán | ¿Habla poco o no se entiende?",
   "tea-comunicacion": "TEA y autismo Chillán | Comunicación infantil",
+  "apraxia-del-habla":
+    "Apraxia del Habla Infantil Chillán | Eval. Especializada",
 };
 
 const KEYWORD_OVERRIDES: Record<string, string[]> = {

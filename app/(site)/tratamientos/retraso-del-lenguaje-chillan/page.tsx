@@ -12,9 +12,9 @@ const WHATSAPP_LINK = whatsappUrl(
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Tratamiento Retraso del Lenguaje en Niños | Chillán",
+  title: "Retraso del Lenguaje en Niños | Chillán · Habla Poco",
   description:
-    "Terapia fonoaudiológica para retraso del lenguaje infantil en Chillán. Si tu hijo comprende pero habla poco, evaluamos y armamos un plan. Atención presencial.",
+    "Si tu hijo comprende pero habla poco o no arma frases, evaluamos en Chillán y armamos un plan. Terapia presencial. Agenda por WhatsApp.",
   keywords: [
     "retraso del lenguaje niños Chillán",
     "mi hijo no habla",

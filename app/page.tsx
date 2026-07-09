@@ -39,9 +39,9 @@ const WHATSAPP_LINK =
   "https://wa.me/56995497838?text=Hola%2C%20quiero%20agendar%20una%20hora";
 const PAGE_PATH = "/";
 const HOME_TITLE =
-  "Fonoaudióloga en Chillán | +20 años con niños | Katia Domínguez";
+  "Fonoaudióloga Infantil Chillán | Diagnóstico en 60 min";
 const HOME_DESCRIPTION =
-  "Evaluación fonoaudiológica con Katia Domínguez (U. de Chile). Diagnóstico en 60 min, plan claro, atención presencial en Chillán. Agenda por WhatsApp.";
+  "¿Tu hijo habla poco o no se entiende? Evaluación presencial con informe y plan. +20 años, U. de Chile. Agenda por WhatsApp hoy.";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
