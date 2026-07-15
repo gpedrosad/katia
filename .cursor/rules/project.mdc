@@ -1,0 +1,23 @@
+---
+description: Mapa del proyecto katialafono.cl — leer antes de editar
+alwaysApply: true
+---
+
+# Proyecto
+
+Web fonoaudiología infantil Chillán (Katia Domínguez). Next.js 16 App Router.
+
+**Antes de explorar el repo:** leer `AGENTS.md` (mapa corto). No cargar `docs/` enteros salvo tarea GSC/SEO explícita.
+
+## Fuentes de verdad
+
+- `lib/site.ts` — URL, WhatsApp, NAP
+- `lib/seo.ts` — metadata / noindex
+- `lib/seo-routes.ts` — inventario de rutas
+
+## No hacer
+
+- Hardcodear WhatsApp o dominio
+- Inventar datos clínicos, precios o dirección
+- Crear docs markdown largos sin que el usuario lo pida
+- Commitear/pushear sin pedirlo

@@ -19,6 +19,11 @@ npm run dev
 
 Abrir `http://localhost:3000`.
 
+## Para agentes de IA
+
+Mapa corto del repo (ahorra tokens): **[AGENTS.md](./AGENTS.md)**  
+Reglas Cursor: `.cursor/rules/`
+
 ## SEO y documentación
 
 - Auditoría SEO actual: [docs/auditoria-seo-web-katialafono-cl-2026-05-20.md](./docs/auditoria-seo-web-katialafono-cl-2026-05-20.md)

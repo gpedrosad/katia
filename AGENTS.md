@@ -1,0 +1,85 @@
+# AGENTS.md — katialafono.cl
+
+Mapa corto para agentes. Leer esto primero; abrir `docs/` solo si la tarea lo pide.
+
+## Qué es
+
+Web de **Katia Domínguez**, fonoaudióloga infantil en **Chillán** (Ñuble, Chile).  
+Producción: https://www.katialafono.cl  
+Stack: Next.js 16 App Router · TypeScript · Tailwind 4 · Vercel.
+
+## Constantes (no hardcodear)
+
+| Dónde | Qué |
+| --- | --- |
+| `lib/site.ts` | `SITE_URL`, WhatsApp, NAP, `whatsappUrl()` |
+| `lib/seo.ts` | `buildPageMetadata()`, `buildNoIndexMetadata()` |
+| `lib/seo-routes.ts` | Inventario de rutas SEO (hubs, tratamientos, síntomas, voz) |
+
+CTA principal: WhatsApp. Copy/geo: español de Chile (`es_CL`).
+
+## Estructura de rutas
+
+```
+app/
+  page.tsx                         # Home
+  fonoaudiologa-ninos-chillan/     # Landing SEO pilar infantil
+  chillan/[slug]/                 # Landings patología (datos en patologias.ts)
+  chillan/lenguaje-infantil/       # Ads landing (revisar indexación)
+  servicios/                       # Servicios generales
+  glosario/                        # Definiciones + FAQ
+  recursos/                        # Guías padres
+  (site)/                          # Layout con Header/Footer
+    tratamientos/*-chillan/        # SEO tratamientos locales
+    sintomas/*-chillan/            # SEO síntomas padres
+    servicios/*-chillan/           # SEO servicios locales
+    voz-online/                    # Línea voz (online / otras ciudades)
+    contacto-*, agendar-*, etc.
+  interno/gsc/                     # Dashboard GSC (noindex)
+  _components/                     # Header, Footer, CTA, etc.
+lib/                               # site, seo, gsc, pagespeed
+docs/                              # Informes GSC/SEO (histórico; no leer todo)
+.agents/skills/                    # Skills SEO locales del repo
+```
+
+## Cómo agregar contenido
+
+1. **Patología Chillán** (`/chillan/{slug}`): entrada en `app/chillan/[slug]/patologias.ts` (titulo, señales, hrefs, whatsappText). Template en `page.tsx`. Tras `notFound()`, usar variable tipada (`const p = ...`).
+2. **Página SEO nueva**: `buildPageMetadata({ path, title, description, keywords })`. Schema Service/FAQ cuando aporte. Enlaces a servicio + glosario + pilar.
+3. **Ruta en inventario**: actualizar `lib/seo-routes.ts` y sitemap si aplica.
+4. **Noindex**: `buildNoIndexMetadata` o `robots: { index: false }` (interno, ads si corresponde).
+
+## Skills del repo (usar según tarea)
+
+| Skill | Cuándo |
+| --- | --- |
+| `.agents/skills/seo-geo` | Keywords, schema, GEO/AI search |
+| `.agents/skills/seo-audit` | Auditoría técnica on-page |
+| `.agents/skills/programmatic-seo` | Páginas a escala / templates |
+| `.agents/skills/google-search-console` | Datos GSC / informes |
+| `.agents/skills/local-seo` | GBP, NAP, local |
+| `.agents/skills/conversion-psychology` | Copy CTA / conversión |
+
+## Scripts útiles
+
+```bash
+npm run dev
+npm run build
+npm run gsc:report:md      # → docs/gsc-informe-YYYY-MM-DD.md
+npm run pagespeed:report
+```
+
+## Reglas de trabajo
+
+- Español Chile. Marca: **Katia Domínguez**. Ciudad: **Chillán**.
+- No inventar precios, horarios ni direcciones: usar `lib/site.ts` / copy existente.
+- No editar `docs/gsc-*.md` históricos salvo pedir informe nuevo.
+- Cambios de URL/canonical/sitemap → avisar validación GSC post-deploy.
+- Commits solo si el usuario lo pide. No push sin pedir.
+- Preferir editar archivos existentes; no crear markdown largo de estrategia a menos que se pida.
+
+## Docs largos (abrir solo si hace falta)
+
+- Estrategia ads/keywords: `descripcion-web-fonoaudiologia-chillan.md`, `google-ads-keywords-fonoaudiologia-chillan.txt`
+- SEO operativo: `docs/cambios-prioritarios-seo-*.md`, último `docs/gsc-informe-*.md`
+- Plan agentes (histórico): `docs/plan-agentes-seo-katialafono.md`

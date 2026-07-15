@@ -1,0 +1,12 @@
+---
+description: Dashboard GSC interno y scripts de informes
+globs: app/interno/**,lib/gsc*.ts,scripts/gsc*
+alwaysApply: false
+---
+
+# GSC interno
+
+- Rutas bajo `app/interno/` son **noindex**.
+- Informes: `npm run gsc:report:md` → `docs/gsc-informe-YYYY-MM-DD.md`.
+- Skill: `.agents/skills/google-search-console`.
+- No reescribir informes históricos; generar uno nuevo si se pide análisis.

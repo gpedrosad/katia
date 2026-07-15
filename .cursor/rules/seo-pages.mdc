@@ -1,0 +1,15 @@
+---
+description: Convenciones SEO y landings programáticas
+globs: app/**/*.tsx,app/**/*.ts,lib/seo*.ts
+alwaysApply: false
+---
+
+# Páginas SEO
+
+- Metadata con `buildPageMetadata` de `lib/seo.ts`.
+- Locale/copy: `es_CL`, Chillán. CTA: `whatsappUrl()` de `lib/site.ts`.
+- Landings `/chillan/[slug]`: datos en `patologias.ts`, no duplicar template.
+- Tras `if (!x) notFound()`, tipar con aserción (`as NonNullable<typeof x>`) si TS no estrecha.
+- Enlazar servicio + glosario + pilar `/fonoaudiologa-ninos-chillan` cuando aporte.
+- Si hay nueva ruta indexable: `lib/seo-routes.ts` + sitemap.
+- Skills: `seo-geo`, `programmatic-seo`, `seo-audit` en `.agents/skills/`.
