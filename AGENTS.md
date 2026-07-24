@@ -2,6 +2,12 @@
 
 Mapa corto para agentes. Leer esto primero; abrir `docs/` solo si la tarea lo pide.
 
+## Memoria self-learn (tokens)
+
+Leer primero: [`docs/ai-self-learn/INDEX.md`](docs/ai-self-learn/INDEX.md).  
+Cómo anotar: [`docs/ai-self-learn/README.md`](docs/ai-self-learn/README.md).  
+Regla Cursor: `.cursor/rules/ai-self-learn.mdc`.
+
 ## Qué es
 
 Web de **Katia Domínguez**, fonoaudióloga infantil en **Chillán** (Ñuble, Chile).  
@@ -12,7 +18,9 @@ Stack: Next.js 16 App Router · TypeScript · Tailwind 4 · Vercel.
 
 | Dónde | Qué |
 | --- | --- |
-| `lib/site.ts` | `SITE_URL`, WhatsApp, NAP, `whatsappUrl()` |
+| `lib/site.ts` | `SITE_URL`, WhatsApp, NAP, GBP (`g.page/r/CQTz…`), `whatsappUrl()` |
+| `lib/local-business-schema.ts` | `buildMedicalBusinessJsonLd()` — `@id` canónico `#business` |
+| `lib/google-reviews.ts` | Reseñas GBP + links ficha/reseñas |
 | `lib/seo.ts` | `buildPageMetadata()`, `buildNoIndexMetadata()` |
 | `lib/seo-routes.ts` | Inventario de rutas SEO (hubs, tratamientos, síntomas, voz) |
 
@@ -39,6 +47,7 @@ app/
   _components/                     # Header, Footer, CTA, etc.
 lib/                               # site, seo, gsc, pagespeed
 docs/                              # Informes GSC/SEO (histórico; no leer todo)
+docs/ai-self-learn/                # Memoria densa para agentes
 .agents/skills/                    # Skills SEO locales del repo
 ```
 
@@ -66,8 +75,17 @@ docs/                              # Informes GSC/SEO (histórico; no leer todo)
 npm run dev
 npm run build
 npm run gsc:report:md      # → docs/gsc-informe-YYYY-MM-DD.md
+npm run gsc:auth
 npm run pagespeed:report
 ```
+
+## Atajos GBP / local
+
+| Tema | Dónde |
+| --- | --- |
+| NAP / GBP / schema | `lib/site.ts`, `lib/local-business-schema.ts`, `docs/gbp-vinculacion-web-2026-07-24.md` |
+| Ficha Maps canónica | `https://g.page/r/CQTz_OxX_3IBEAE` |
+| GSC informe | `npm run gsc:report:md` → `docs/gsc-informe-*.md` |
 
 ## Reglas de trabajo
 
@@ -77,9 +95,4 @@ npm run pagespeed:report
 - Cambios de URL/canonical/sitemap → avisar validación GSC post-deploy.
 - Commits solo si el usuario lo pide. No push sin pedir.
 - Preferir editar archivos existentes; no crear markdown largo de estrategia a menos que se pida.
-
-## Docs largos (abrir solo si hace falta)
-
-- Estrategia ads/keywords: `descripcion-web-fonoaudiologia-chillan.md`, `google-ads-keywords-fonoaudiologia-chillan.txt`
-- SEO operativo: `docs/cambios-prioritarios-seo-*.md`, último `docs/gsc-informe-*.md`
-- Plan agentes (histórico): `docs/plan-agentes-seo-katialafono.md`
+- Tras hallazgos SEO/GBP estables: anotar en `docs/ai-self-learn/log.md` + `INDEX.md`.

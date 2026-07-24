@@ -7,6 +7,7 @@ import { Header } from "../_components/Header";
 import { WhatsAppCTA } from "../_components/WhatsAppCTA";
 import { buildPageMetadata } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
+import { buildMedicalBusinessJsonLd } from "@/lib/local-business-schema";
 
 const faqItems = [
   {
@@ -101,29 +102,26 @@ const services = [
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "MedicalBusiness",
-  name: "Katia Domínguez - Fonoaudióloga",
-  description: PAGE_DESCRIPTION,
-  url: `${SITE_URL}${PAGE_PATH}`,
-  telephone: "+56995497838",
-  areaServed: {
-    "@type": "City",
-    name: "Chillán",
-  },
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Servicios de Fonoaudiología",
-    itemListElement: services.map((service, index) => ({
-      "@type": "Offer",
-      position: index + 1,
-      itemOffered: {
-        "@type": "Service",
-        name: service.title,
-        description: service.description,
-        url: `${SITE_URL}${service.href}`,
+  ...buildMedicalBusinessJsonLd({
+    description: PAGE_DESCRIPTION,
+    pageUrl: `${SITE_URL}${PAGE_PATH}`,
+    extra: {
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Servicios de Fonoaudiología",
+        itemListElement: services.map((service, index) => ({
+          "@type": "Offer",
+          position: index + 1,
+          itemOffered: {
+            "@type": "Service",
+            name: service.title,
+            description: service.description,
+            url: `${SITE_URL}${service.href}`,
+          },
+        })),
       },
-    })),
-  },
+    },
+  }),
 };
 
 export default function ServiciosPage() {

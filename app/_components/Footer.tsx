@@ -1,4 +1,12 @@
 import Link from "next/link";
+import {
+  BUSINESS_NAME,
+  BUSINESS_PHONE_DISPLAY,
+  GOOGLE_BUSINESS_PROFILE_URL,
+  SERVICE_AREA_CITY,
+  SERVICE_AREA_REGION,
+  whatsappUrl,
+} from "@/lib/site";
 
 const hubs = [
   {
@@ -173,14 +181,27 @@ export function Footer() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <h3 className="mb-4 text-lg font-semibold text-white">
-              Katia Domínguez
+              {BUSINESS_NAME}
             </h3>
             <p className="mb-4 text-sm text-gray-400">
               Fonoaudióloga en Chillán con más de 20 años de experiencia en
               evaluación y tratamiento de trastornos del lenguaje y comunicación.
             </p>
             <p className="text-sm text-gray-500">
-              📍 Chillán, Región de Ñuble, Chile
+              📍 {SERVICE_AREA_CITY}, {SERVICE_AREA_REGION}, Chile
+            </p>
+            <p className="mt-2 text-sm text-gray-500">
+              📞 {BUSINESS_PHONE_DISPLAY}
+            </p>
+            <p className="mt-3">
+              <a
+                href={GOOGLE_BUSINESS_PROFILE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-rose-400 hover:text-rose-300 hover:underline"
+              >
+                Ver ficha en Google Maps →
+              </a>
             </p>
             <h4 className="mb-2 mt-6 text-sm font-medium text-white">
               Páginas principales
@@ -310,7 +331,7 @@ export function Footer() {
             <div className="mt-6">
               <h4 className="mb-2 text-sm font-medium text-white">Contacto</h4>
               <a
-                href="https://wa.me/56995497838"
+                href={whatsappUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm text-green-400 hover:text-green-300"
@@ -320,6 +341,16 @@ export function Footer() {
                 </svg>
                 WhatsApp
               </a>
+              <p className="mt-2">
+                <a
+                  href={GOOGLE_BUSINESS_PROFILE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-gray-400 hover:text-rose-400 hover:underline"
+                >
+                  Google Business Profile
+                </a>
+              </p>
             </div>
           </div>
         </div>

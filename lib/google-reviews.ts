@@ -1,15 +1,24 @@
 /**
- * Reseñas de Google Business Profile (GBP).
- * Actualizar al exportar nuevas reseñas desde Google.
- * Enlace del negocio: https://g.page/r/CQTz_OxX_3IBEAE/review
+ * Reseñas y enlaces de Google Business Profile (GBP).
+ * Ficha canónica = la de g.page con las reseñas (CQTz_OxX_3IBEAE).
+ * Actualizar reviewCount al exportar nuevas reseñas desde Google.
  */
 
-export const GOOGLE_REVIEWS_LIST_URL =
-  "https://g.page/r/CQTz_OxX_3IBEAE/review";
+import {
+  GOOGLE_BUSINESS_PROFILE_URL,
+  GOOGLE_REVIEWS_URL,
+} from "./site";
+
+/** Pedir reseña / listado de opiniones en Google. */
+export const GOOGLE_REVIEWS_LIST_URL = GOOGLE_REVIEWS_URL;
+
+/** Ficha pública del negocio (Maps) — misma entidad que las reseñas. */
+export const GOOGLE_BUSINESS_PROFILE_LIST_URL = GOOGLE_BUSINESS_PROFILE_URL;
 
 export const GOOGLE_REVIEWS_AGGREGATE = {
   ratingValue: "5.0",
-  reviewCount: 40,
+  /** Sincronizado con GBP el 2026-07-24 (antes 40). */
+  reviewCount: 42,
   bestRating: 5,
   worstRating: 1,
 } as const;

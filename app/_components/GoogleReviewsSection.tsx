@@ -1,8 +1,8 @@
-import Link from "next/link";
 import {
   GOOGLE_REVIEWS,
   GOOGLE_REVIEWS_AGGREGATE,
   GOOGLE_REVIEWS_LIST_URL,
+  GOOGLE_BUSINESS_PROFILE_LIST_URL,
 } from "@/lib/google-reviews";
 import { TestimonialCard } from "./TestimonialCard";
 
@@ -65,7 +65,7 @@ export function GoogleReviewsSection({
       <p className="mt-8 text-center text-sm text-gray-500">
         Reseñas verificadas en Google Business Profile.
       </p>
-      <p className="mt-4 text-center">
+      <p className="mt-4 flex flex-col items-center gap-2 text-center sm:flex-row sm:justify-center sm:gap-6">
         <a
           href={GOOGLE_REVIEWS_LIST_URL}
           target="_blank"
@@ -73,6 +73,14 @@ export function GoogleReviewsSection({
           className="text-lg font-medium text-rose-600 hover:underline"
         >
           Ver todas las reseñas en Google →
+        </a>
+        <a
+          href={GOOGLE_BUSINESS_PROFILE_LIST_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-base font-medium text-gray-700 hover:text-rose-600 hover:underline"
+        >
+          Ver ficha en Google Maps →
         </a>
       </p>
     </section>

@@ -1,11 +1,42 @@
 export const SITE_URL = "https://www.katialafono.cl";
 export const WHATSAPP_NUMBER = "56995497838";
 
-/** NAP canónico (alineado Google Business Profile): nombre sin sufijos geo. */
+/**
+ * NAP canónico — mantener idéntico en web, GBP, Instagram y citaciones.
+ * Calle exacta: no publicar en schema/footer; se coordina por WhatsApp.
+ */
 export const BUSINESS_NAME = "Katia Domínguez";
+/** Nombre tal como aparece hoy en Google Business Profile / Maps. */
+export const GOOGLE_BUSINESS_ALTERNATE_NAME =
+  "Fonoaudiologa Katia Dominguez - Chillan";
 export const BUSINESS_PHONE_E164 = "+56995497838";
+export const BUSINESS_PHONE_DISPLAY = "9 9549 7838";
 export const SERVICE_AREA_CITY = "Chillán";
 export const SERVICE_AREA_REGION = "Región de Ñuble";
+export const SERVICE_AREA_COUNTRY = "CL";
+
+/** Perfil GBP canónico (el de las reseñas; no el share genérico). */
+export const GOOGLE_BUSINESS_PROFILE_URL =
+  "https://g.page/r/CQTz_OxX_3IBEAE";
+/** Pedir / listar reseñas en esa misma ficha. */
+export const GOOGLE_REVIEWS_URL =
+  "https://g.page/r/CQTz_OxX_3IBEAE/review";
+/** Knowledge Graph mid del negocio (panel de búsqueda). */
+export const GOOGLE_KGMID = "/g/11mz8n1czr";
+export const GOOGLE_KNOWLEDGE_PANEL_URL = `https://www.google.com/search?kgmid=${encodeURIComponent(GOOGLE_KGMID)}&q=${encodeURIComponent(GOOGLE_BUSINESS_ALTERNATE_NAME)}`;
+/** Coordenadas aproximadas del pin en Maps (Chillán). */
+export const BUSINESS_GEO = {
+  latitude: -36.5814696,
+  longitude: -72.0705339,
+} as const;
+export const INSTAGRAM_PROFILE_URL = "https://www.instagram.com/katialafono/";
+/** Horario de atención alineado a GBP (abre 10:00). */
+export const BUSINESS_HOURS = {
+  opens: "10:00",
+  closes: "18:00",
+  daysLabel: "lunes a viernes",
+} as const;
+
 /** Ruta de imagen OG generada por app/opengraph-image.tsx (metadata file convention). */
 export const OG_IMAGE = "/opengraph-image";
 

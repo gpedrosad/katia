@@ -2,21 +2,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { GeoFAQ } from "@/app/_components/GeoFAQ";
 import { buildPageMetadata, buildWebPageJsonLd } from "@/lib/seo";
+import { buildMedicalBusinessJsonLd } from "@/lib/local-business-schema";
 import { Header } from "./_components/Header";
 import { Footer } from "./_components/Footer";
 import { ServiceCard } from "./_components/ServiceCard";
 import { GoogleReviewsSection } from "./_components/GoogleReviewsSection";
-import {
-  GOOGLE_REVIEWS_AGGREGATE,
-  buildGoogleAggregateRatingJsonLd,
-  buildGoogleReviewsJsonLd,
-} from "@/lib/google-reviews";
+import { GOOGLE_REVIEWS_AGGREGATE } from "@/lib/google-reviews";
 
 const homeFaqItems = [
   {
     question: "¿Dónde está la consulta de fonoaudiología infantil en Chillán?",
     answer:
-      "Atención presencial en Chillán, Región de Ñuble. Coordina tu hora por WhatsApp; respondemos en horario hábil de lunes a viernes.",
+      "Atención presencial en Chillán, Región de Ñuble. Coordina tu hora por WhatsApp; respondemos en horario hábil de lunes a viernes (10:00–18:00).",
   },
   {
     question: "¿Qué problemas trata la fonoaudióloga para niños?",
@@ -100,31 +97,10 @@ const services = [
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "MedicalBusiness",
-  "@id": "https://www.katialafono.cl/#business",
-  name: "Katia Domínguez",
-  description: HOME_DESCRIPTION,
-  url: "https://www.katialafono.cl",
-  telephone: "+56995497838",
-  areaServed: {
-    "@type": "City",
-    name: "Chillán",
-    containedInPlace: {
-      "@type": "AdministrativeArea",
-      name: "Región de Ñuble",
-    },
-  },
-  priceRange: "$$",
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "09:00",
-      closes: "18:00",
-    },
-  ],
-  aggregateRating: buildGoogleAggregateRatingJsonLd(),
-  review: buildGoogleReviewsJsonLd(),
+  ...buildMedicalBusinessJsonLd({
+    description: HOME_DESCRIPTION,
+    includeReviews: true,
+  }),
 };
 
 const webPageJsonLd = buildWebPageJsonLd({

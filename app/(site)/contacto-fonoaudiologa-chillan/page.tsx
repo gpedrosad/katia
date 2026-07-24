@@ -3,7 +3,18 @@ import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 import { StickyWhatsApp } from "@/app/_components/StickyWhatsApp";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import { buildPageMetadata } from "@/lib/seo";
-import { SITE_URL, whatsappUrl } from "@/lib/site";
+import {
+  BUSINESS_HOURS,
+  BUSINESS_PHONE_DISPLAY,
+  GOOGLE_BUSINESS_PROFILE_URL,
+  SERVICE_AREA_CITY,
+  SERVICE_AREA_REGION,
+  SITE_URL,
+  whatsappUrl,
+} from "@/lib/site";
+import {
+  buildMedicalBusinessJsonLd,
+} from "@/lib/local-business-schema";
 
 const PAGE_PATH = "/contacto-fonoaudiologa-chillan";
 const WHATSAPP_LINK = whatsappUrl(
@@ -45,14 +56,11 @@ const faqs = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "MedicalBusiness",
-      "@id": `${SITE_URL}#medicalbusiness`,
-      name: "Katia Domínguez - Fonoaudióloga Infantil",
-      url: SITE_URL,
-      areaServed: { "@type": "City", name: "Chillán" },
-      telephone: "+56995497838",
-    },
+    buildMedicalBusinessJsonLd({
+      description:
+        "Contacto y agenda con fonoaudióloga infantil en Chillán. Horarios, ubicación y reserva de evaluación.",
+      pageUrl: `${SITE_URL}${PAGE_PATH}`,
+    }),
     {
       "@type": "FAQPage",
       mainEntity: faqs.map((f) => ({
@@ -83,11 +91,24 @@ export default function ContactoPage() {
             <h1 className="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl">Contacto y agenda de fonoaudiología infantil en Chillán</h1>
             <p className="mb-6 text-xl text-gray-600">Reserva tu evaluación presencial en Chillán. Respuesta en horario hábil, de lunes a viernes.</p>
             <ul className="mb-8 space-y-3 text-gray-700">
-              <li className="flex gap-3"><span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">✓</span><span>Atención presencial en Chillán, Región de Ñuble</span></li>
-              <li className="flex gap-3"><span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">✓</span><span>Respuesta en horario hábil</span></li>
+              <li className="flex gap-3"><span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">✓</span><span>Atención presencial en {SERVICE_AREA_CITY}, {SERVICE_AREA_REGION}</span></li>
+              <li className="flex gap-3"><span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">✓</span><span>Teléfono / WhatsApp: {BUSINESS_PHONE_DISPLAY}</span></li>
+              <li className="flex gap-3"><span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">✓</span><span>Respuesta {BUSINESS_HOURS.daysLabel}, {BUSINESS_HOURS.opens}–{BUSINESS_HOURS.closes}</span></li>
               <li className="flex gap-3"><span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">✓</span><span>Evaluación con informe y orientación clínica</span></li>
             </ul>
             <WhatsAppCTA href={WHATSAPP_LINK}>Escribir por WhatsApp ahora</WhatsAppCTA>
+            <p className="mt-4 text-sm text-gray-600">
+              También puedes{" "}
+              <a
+                href={GOOGLE_BUSINESS_PROFILE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-rose-600 underline"
+              >
+                ver la ficha en Google Maps
+              </a>
+              .
+            </p>
           </div>
         </section>
 

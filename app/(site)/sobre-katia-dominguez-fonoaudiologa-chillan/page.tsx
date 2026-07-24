@@ -4,6 +4,10 @@ import { StickyWhatsApp } from "@/app/_components/StickyWhatsApp";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import { buildPageMetadata } from "@/lib/seo";
 import { SITE_URL, whatsappUrl } from "@/lib/site";
+import {
+  MEDICAL_BUSINESS_ID,
+  buildMedicalBusinessJsonLd,
+} from "@/lib/local-business-schema";
 
 const PAGE_PATH = "/sobre-katia-dominguez-fonoaudiologa-chillan";
 const WHATSAPP_LINK = whatsappUrl("Hola, quiero agendar una evaluación con Katia Domínguez");
@@ -77,17 +81,17 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Person",
-      "@id": `${SITE_URL}#person`,
+      "@id": `${SITE_URL}/#person`,
       name: "Katia Domínguez",
       jobTitle: "Fonoaudióloga Infantil",
       url: SITE_URL,
-      worksFor: {
-        "@type": "MedicalBusiness",
-        "@id": `${SITE_URL}#medicalbusiness`,
-        name: "Katia Domínguez - Fonoaudióloga Infantil",
-        areaServed: { "@type": "City", name: "Chillán" },
-      },
+      worksFor: { "@id": MEDICAL_BUSINESS_ID },
     },
+    buildMedicalBusinessJsonLd({
+      description:
+        "Fonoaudióloga infantil en Chillán. Evaluación y terapia de lenguaje, habla, TEL, TEA y lectoescritura.",
+      pageUrl: `${SITE_URL}${PAGE_PATH}`,
+    }),
     {
       "@type": "FAQPage",
       mainEntity: faqs.map((f) => ({
