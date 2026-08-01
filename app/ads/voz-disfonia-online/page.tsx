@@ -35,8 +35,8 @@ const WA_MSG =
 /** Foto Ads optimizada (~79 KB). No usar el PNG 6 MB del sitio. */
 const HERO_IMAGE = "/katia-ads-hero.jpg";
 
-/** Message-match adulto/voz: Carolina Rojas, Raimundo Rodríguez. */
-const REVIEW_INDEXES = [5, 4] as const;
+/** Adulto/voz primero; resto para llenar grilla desktop (6 = 2×3). */
+const REVIEW_INDEXES = [5, 4, 0, 1, 2, 3] as const;
 
 const signals = [
   {
@@ -209,10 +209,7 @@ export default function AdsVozDisfoniaPage() {
       </p>
 
       <div className="content-auto">
-        <AdsGoogleReviews
-          reviewIndexes={[...REVIEW_INDEXES]}
-          limit={2}
-        />
+        <AdsGoogleReviews reviewIndexes={[...REVIEW_INDEXES]} />
       </div>
 
       <section className="content-auto mx-auto max-w-3xl px-4 py-10 sm:px-6">

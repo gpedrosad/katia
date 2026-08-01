@@ -21,7 +21,8 @@ Que el visitante del anuncio **escriba por WhatsApp** (evaluación de voz). Todo
 | FAQ **3** preguntas frías | online≈presencial · Chile · primer paso (menos scroll) |
 | 1 línea **Por qué Katia** antes de reseñas | Credencial sin inventar claims |
 | Sticky WhatsApp **solo mobile**, se oculta si hero o CTA final están a la vista | Nunca dos CTAs a la vez (`#ads-cta-hero` + `#ads-cta-final`) |
-| Reseñas índices **5, 4** (máx. 2) | Message-match adulto/recuperación; menos scroll |
+| Reseñas índices **5, 4, 0–3** (6) | Desktop grilla llena; mobile solo 2; voz/adulto primero |
+| Marca Google | `GoogleMark` en badge, header, tarjetas y CTA “Ver todas…” (`AdsGoogleTrust.tsx`) |
 | FAQ con `grid-rows` + focus-visible | Continuidad al abrir + teclado |
 | Links Maps `cid=` | `g.page` roto |
 | CWV móvil lab (prod, 2026-08-01) | Perf 99 · LCP 2,2s · CLS 0 · TBT 32ms |

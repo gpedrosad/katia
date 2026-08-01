@@ -6,7 +6,7 @@
 | Patrón | [`../PATRON-LANDING.md`](../PATRON-LANDING.md) |
 | Craft | [`CRAFT.md`](./CRAFT.md) (Impeccable 2026-08-01) |
 | Index | noindex |
-| Reseñas Google | índices **5, 4** · `limit={2}` |
+| Reseñas Google | índices **5, 4, 0, 1, 2, 3** (voz primero; 6 en desktop / 2 mobile) |
 | Foto | `/katia-ads-hero.jpg` (~79 KB) |
 | Sticky CTA | mobile only (`AdsStickyCta`) |
 
@@ -27,13 +27,15 @@
 
 ## Secciones (live)
 
-1. Hero (badge · H1 · dolor · CTA · foto)  
+1. Hero (`AdsGoogleBadge` con “G” · H1 · dolor · CTA · foto)  
 2. Señales (lista ×3)  
 3. Cómo funciona (pasos 1–3, sin CTA mid)  
 4. Por qué Katia (1 línea)  
-5. Reseñas Google (2)  
+5. Reseñas Google (`AdsGoogleReviews`: 6 desktop / 2 mobile + “G”)  
 6. FAQ (3: online≈presencial, Chile, primer paso)  
 7. CTA final + sticky mobile
+
+Reutilizar patrón: [`../PATRON-LANDING.md`](../PATRON-LANDING.md) § **Reseñas Google**.
 
 ## CWV móvil (lab)
 
