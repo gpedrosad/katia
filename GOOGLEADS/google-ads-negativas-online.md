@@ -1,13 +1,14 @@
-# Negativas Google Ads — online (Chile)
+# Negativas Google Ads — terapia online (Chile)
 
 Revisado: **2026-08-01**.
 
 Uso sugerido:
 
+- Este archivo asume campañas Search para **terapia fonoaudiológica online**. No contempla campañas presenciales.
 - Copiar el bloque **Base cuenta / campaña** en todas las campañas Search online.
 - Agregar los bloques por campaña o grupo de anuncios según corresponda.
 - En campañas 100% online, **no** negativizar: `online`, `en linea`, `en línea`, `virtual`, `videollamada`, `teleconsulta`, `teleterapia`.
-- En una campaña `Santiago + online`, no copiar el bloque de ciudades. En campañas nacionales sin ciudad en keywords, sí usarlo para evitar búsquedas presenciales/locales.
+- No usar ciudades sueltas como negativas por defecto. Para terapia online pueden aparecer búsquedas válidas como `fonoaudióloga online Santiago`; bloquea mejor la intención presencial con términos como `cerca de mí`, `a domicilio`, `presencial`, `dirección`.
 
 ---
 
@@ -23,6 +24,10 @@ vacante
 vacantes
 oferta laboral
 ofertas laborales
+busca fonoaudiologo
+busca fonoaudiólogo
+busca fonoaudiologa
+busca fonoaudióloga
 bolsa de trabajo
 linkedin
 postular
@@ -131,6 +136,23 @@ youtube
 video youtube
 videos youtube
 reels
+app
+apps
+aplicacion
+aplicación
+aplicaciones
+software
+plataforma
+plataformas
+chatgpt
+chat gpt
+inteligencia artificial
+juegos
+actividades
+laminas
+láminas
+material didactico
+material didáctico
 blog
 blogs
 articulo
@@ -154,6 +176,8 @@ autoevaluacion
 autoevaluación
 diagnostico gratis
 diagnóstico gratis
+evaluacion gratis
+evaluación gratis
 curso
 cursos
 curso gratis
@@ -206,9 +230,9 @@ curación
 
 ---
 
-## Presencialidad y ciudades
+## Presencialidad / intención local
 
-Usar en campañas online nacionales sin keywords de ciudad. **No usar** si existe una campaña separada `Santiago online`, `Concepción online`, etc.
+Usar en todas las campañas de terapia online. Bloquea intención de consulta presencial, domicilio o ubicación física sin matar búsquedas válidas con ciudad + online.
 
 ```
 presencial
@@ -216,89 +240,81 @@ presencialmente
 consulta presencial
 atencion presencial
 atención presencial
+terapia presencial
+terapia fonoaudiologica presencial
+terapia fonoaudiológica presencial
 domicilio
 a domicilio
 visita domiciliaria
 terapia a domicilio
+fonoaudiologo domicilio
+fonoaudiólogo domicilio
+fonoaudiologa domicilio
+fonoaudióloga domicilio
+fono a domicilio
 cerca de mi
 cerca de mí
 cerca mio
 cerca mío
 cerca
+fonoaudiologo cerca
+fonoaudiólogo cerca
+fonoaudiologa cerca
+fonoaudióloga cerca
+fono cerca
+clinica cerca
+clínica cerca
 en mi comuna
 en mi ciudad
 direccion
 dirección
+direccion consulta
+dirección consulta
+direccion exacta
+dirección exacta
 mapa
 ubicacion
 ubicación
-chillan
-chillán
-chillan viejo
-chillán viejo
-san carlos
-bulnes
-coihueco
-concepcion
-concepción
-los angeles
-los ángeles
-santiago
-providencia
-las condes
-ñuñoa
-nunoa
-maipu
-maipú
-la florida
-vina
-viña
-viña del mar
-valparaiso
-valparaíso
-temuco
-antofagasta
-rancagua
-talca
-iquique
-puerto montt
-punta arenas
-la serena
-coquimbo
-osorno
-curico
-curicó
-arica
-calama
-copiapo
-copiapó
-valdivia
+ubicacion consulta
+ubicación consulta
+consulta fisica
+consulta física
+atencion en consulta
+atención en consulta
 ```
 
 ---
 
-## Campañas presenciales / Chillán
+## Países fuera de Chile
 
-Usar solo si se activa una campaña presencial local. **No usar** en las campañas online.
+Usar si el cobro y la agenda serán solo para Chile. Quitar este bloque si se abre fase LATAM.
 
 ```
-online
-en linea
-en línea
-virtual
-videollamada
-video llamada
-por zoom
-zoom
-meet
-google meet
-teleconsulta
-teleterapia
-remoto
-remota
-a distancia
-todo chile
-chile online
+españa
+madrid
+barcelona
+mexico
+méxico
+cdmx
+argentina
+buenos aires
+colombia
+bogota
+bogotá
+peru
+perú
+lima
+ecuador
+quito
+uruguay
+montevideo
+bolivia
+paraguay
+venezuela
+estados unidos
+usa
+eeuu
+miami
 ```
 
 ---
@@ -356,6 +372,118 @@ locucion
 locución
 doblaje
 teatro
+```
+
+---
+
+## Terapia online genérica no fonoaudiológica
+
+Usar especialmente si alguna campaña queda con keywords amplias tipo `terapia online`.
+
+```
+psicoterapia
+psicoterapia online
+terapia psicologica
+terapia psicológica
+psicologo online
+psicólogo online
+psicologa online
+psicóloga online
+terapia de pareja
+terapia pareja
+pareja
+terapia familiar
+terapia matrimonial
+terapia sexual
+sexologo
+sexólogo
+sexologa
+sexóloga
+psiquiatra
+psiquiatria
+psiquiatría
+ansiedad
+depresion
+depresión
+autoestima
+duelo
+trauma
+estres
+estrés
+crisis de panico
+crisis de pánico
+adicciones
+adiccion
+adicción
+alcoholismo
+drogadiccion
+drogadicción
+terapia floral
+flores de bach
+reiki
+tarot
+astrologia
+astrología
+biodescodificacion
+biodescodificación
+constelaciones familiares
+terapia holistica
+terapia holística
+```
+
+---
+
+## Telemedicina / trámites no fonoaudiológicos
+
+Usar si la campaña apunta a terapia, no a consulta médica general ni certificados.
+
+```
+doctor online
+doctora online
+medico online
+médico online
+consulta medica online
+consulta médica online
+telemedicina
+receta
+recetas
+receta medica
+receta médica
+licencia medica
+licencia médica
+certificado medico
+certificado médico
+certificado discapacidad
+credencial discapacidad
+peritaje
+peritajes
+informe judicial
+informe medico legal
+informe médico legal
+```
+
+---
+
+## Urgencia / atención inmediata
+
+Usar si no se ofrece respuesta clínica inmediata o atención el mismo día.
+
+```
+urgencia
+urgencias
+emergencia
+emergencias
+atencion inmediata
+atención inmediata
+consulta inmediata
+hora hoy
+para hoy
+24 horas
+24/7
+sapu
+samu
+guardia
+pronto socorro
 ```
 
 ---

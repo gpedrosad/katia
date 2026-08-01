@@ -28,7 +28,7 @@ Actualizado: **2026-08-01**
 - UI: señales en lista; pasos numerados; sin CTA mid; sticky WhatsApp mobile; FAQ ×3; 1 línea “Por qué Katia”
 - Reseñas voz: índices **5, 4** (máx. 2); Maps `cid` no `g.page`
 - CWV lab mobile prod (2026-08-01): Perf **99** · LCP **2,2s** · CLS **0** · TBT 32ms
-- Negativas online: `GOOGLEADS/google-ads-negativas-online.md`; no negativizar `online/virtual/videollamada` en campañas online; ciudades solo si la campaña no usa geo+online.
+- Negativas online: `GOOGLEADS/google-ads-negativas-online.md`; plan Ads = terapia fonoaudiológica online; no negativizar `online/virtual/videollamada`; no usar ciudades sueltas como negativas por defecto.
 - Skill: `.agents/skills/impeccable` (`animate` / `distill` / `polish` / `optimize`)
 
 ## GSC / SEO orgánico (último corte)

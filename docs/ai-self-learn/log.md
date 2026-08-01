@@ -12,6 +12,7 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 - Ads | Doc craft | `ads/01-voz-disfonia-online/CRAFT.md` · actualizar `PATRON-LANDING.md`
 - Ads | FAQ 3 + línea “Por qué Katia” + CWV lab mobile prod | Perf 99 · LCP 2,2s · CLS 0 · TBT 32ms (Lighthouse CLI; PSI key/cuota faltó)
 - Ads | Negativas online ampliadas | `GOOGLEADS/google-ads-negativas-online.md`; separar base, ciudades, presencial/local, adultos/niños y clusters voz/TEA/ACV/deglución; no negativizar `online/virtual` en campañas online
+- Ads | Plan confirmado solo terapia online | Negativas ajustadas: quitar ciudades sueltas por defecto, reforzar presencial/local, terapia genérica no fono, telemedicina/trámites, urgencia, países fuera Chile
 
 ## 2026-07-24
 
