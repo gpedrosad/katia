@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import { Analytics } from "@vercel/analytics/react";
+import { GoogleAdsTag } from "@/app/_components/GoogleAdsTag";
 import { OG_IMAGE, SITE_URL } from "@/lib/site";
 
 const BRAND_NAME = "Katia Domínguez";
@@ -78,6 +79,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <GoogleAdsTag />
         {children}
         <Analytics />
       </body>

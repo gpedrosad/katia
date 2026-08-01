@@ -1,5 +1,6 @@
 "use client";
 
+import { trackWhatsAppLead } from "@/lib/ads-tracking";
 import { whatsappUrl } from "@/lib/site";
 
 interface WhatsAppCTAProps {
@@ -20,10 +21,7 @@ export function WhatsAppCTA({
   const linkHref = href ?? (message ? whatsappUrl(message) : whatsappUrl());
 
   const handleClick = () => {
-    if (typeof window !== "undefined") {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({ event: "whatsapp_lead", label: linkHref });
-    }
+    trackWhatsAppLead(linkHref);
   };
 
   return (

@@ -14,6 +14,8 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 - Ads | Negativas online ampliadas | `GOOGLEADS/google-ads-negativas-online.md`; separar base, ciudades, presencial/local, adultos/niños y clusters voz/TEA/ACV/deglución; no negativizar `online/virtual` en campañas online
 - Ads | Plan confirmado solo terapia online | Negativas ajustadas: quitar ciudades sueltas por defecto, reforzar presencial/local, terapia genérica no fono, telemedicina/trámites, urgencia, países fuera Chile
 - Ads | Reseñas con GoogleMark + 6 en desktop | Reutilizar `AdsGoogleTrust.tsx`; documentado en `ads/PATRON-LANDING.md` § Reseñas Google
+- Ads | Tag gtag `AW-18364805586` + whatsapp_lead | Doc `GOOGLEADS/google-ads-tag-conversiones.md`; conversión send_to pendiente en Vercel
+- Ads | Tel NAP Ads | `+56995497838` (mismo WhatsApp)
 
 ## 2026-07-24
 

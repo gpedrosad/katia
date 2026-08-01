@@ -87,6 +87,7 @@ npm run pagespeed:report
 | NAP / GBP / schema | `lib/site.ts`, `lib/local-business-schema.ts`, `docs/gbp-vinculacion-web-2026-07-24.md` |
 | Ficha Maps canónica | `https://www.google.com/maps?cid=8785110851903218280` |
 | Landings Ads | `ads/PATRON-LANDING.md` (reseñas + `GoogleMark`) · craft `ads/01-voz-disfonia-online/CRAFT.md` |
+| Tag / conversiones Ads | `GOOGLEADS/google-ads-tag-conversiones.md` · `AW-18364805586` · tel `+56995497838` |
 | GSC informe | `npm run gsc:report:md` → `docs/gsc-informe-*.md` |
 
 ## Reglas de trabajo

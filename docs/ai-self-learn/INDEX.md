@@ -6,7 +6,7 @@ Actualizado: **2026-08-01**
 
 - Nombre canónico web/schema: `Katia Domínguez`
 - Nombre GBP Maps: `Fonoaudiologa Katia Dominguez - Chillan` → `alternateName`
-- Tel: `+56995497838` / display `9 9549 7838`
+- Tel: `+56995497838` / display `9 9549 7838` (Ads/GBP/WhatsApp = mismo número)
 - Área: Chillán, Región de Ñuble, CL — **sin calle pública** (se da por WhatsApp)
 - Horario atención: lun–vie **10:00–18:00** (alineado GBP; antes schema 09:00)
 - Web canónica: `https://www.katialafono.cl` (apex → www 308)
@@ -30,6 +30,7 @@ Actualizado: **2026-08-01**
 - Reseñas voz: índices **5, 4, 0, 1, 2, 3**; Maps `cid` no `g.page`
 - CWV lab mobile prod (2026-08-01): Perf **99** · LCP **2,2s** · CLS **0** · TBT 32ms
 - Negativas online: `GOOGLEADS/google-ads-negativas-online.md`; plan Ads = terapia fonoaudiológica online; no negativizar `online/virtual/videollamada`; no usar ciudades sueltas como negativas por defecto.
+- Tag Google Ads: `AW-18364805586` en `GoogleAdsTag` + `trackWhatsAppLead` · doc `GOOGLEADS/google-ads-tag-conversiones.md` · falta env `NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_SEND_TO` tras crear la conversión
 - Skill: `.agents/skills/impeccable` (`animate` / `distill` / `polish` / `optimize`)
 
 ## GSC / SEO orgánico (último corte)

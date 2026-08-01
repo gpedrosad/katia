@@ -15,6 +15,7 @@ Craft Impeccable (2026-08-01): [`01-voz-disfonia-online/CRAFT.md`](./01-voz-disf
 | Estilo | Tailwind 4; sin cards decorativas en señales; sin vibecoding |
 | Foto Ads | `/katia-ads-hero.jpg` (~80 KB) — **no** el PNG 6 MB del sitio |
 | Sticky CTA | `AdsStickyCta` — solo `md:hidden`; oculta si `#ads-cta-hero` o `#ads-cta-final` están visibles |
+| Google Ads tag | `GoogleAdsTag` + `trackWhatsAppLead` · doc `GOOGLEADS/google-ads-tag-conversiones.md` |
 
 ### Animaciones (thesis)
 

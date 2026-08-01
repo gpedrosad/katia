@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { trackWhatsAppLead } from "@/lib/ads-tracking";
 
 interface StickyWhatsAppProps {
   href: string;
@@ -23,10 +24,7 @@ export function StickyWhatsApp({ href }: StickyWhatsAppProps) {
   }, []);
 
   const handleClick = () => {
-    if (typeof window !== "undefined") {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({ event: "whatsapp_lead", label: href });
-    }
+    trackWhatsAppLead(href);
   };
 
   if (!isVisible) return null;
