@@ -7,6 +7,7 @@ interface WhatsAppCTAProps {
   message?: string;
   children: React.ReactNode;
   className?: string;
+  tabIndex?: number;
 }
 
 export function WhatsAppCTA({
@@ -14,6 +15,7 @@ export function WhatsAppCTA({
   message,
   children,
   className = "",
+  tabIndex,
 }: WhatsAppCTAProps) {
   const linkHref = href ?? (message ? whatsappUrl(message) : whatsappUrl());
 
@@ -30,6 +32,7 @@ export function WhatsAppCTA({
       target="_blank"
       rel="noopener noreferrer"
       onClick={handleClick}
+      tabIndex={tabIndex}
       className={`inline-flex items-center justify-center gap-2 rounded-full bg-green-500 px-8 py-5 text-lg font-bold text-white shadow-xl transition-all hover:scale-105 hover:bg-green-600 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-green-300 ${className}`}
     >
       <svg

@@ -18,7 +18,7 @@ Stack: Next.js 16 App Router · TypeScript · Tailwind 4 · Vercel.
 
 | Dónde | Qué |
 | --- | --- |
-| `lib/site.ts` | `SITE_URL`, WhatsApp, NAP, GBP (`g.page/r/CQTz…`), `whatsappUrl()` |
+| `lib/site.ts` | `SITE_URL`, WhatsApp, NAP, GBP (`maps?cid=…`), `whatsappUrl()` |
 | `lib/local-business-schema.ts` | `buildMedicalBusinessJsonLd()` — `@id` canónico `#business` |
 | `lib/google-reviews.ts` | Reseñas GBP + links ficha/reseñas |
 | `lib/seo.ts` | `buildPageMetadata()`, `buildNoIndexMetadata()` |
@@ -33,7 +33,8 @@ app/
   page.tsx                         # Home
   fonoaudiologa-ninos-chillan/     # Landing SEO pilar infantil
   chillan/[slug]/                 # Landings patología (datos en patologias.ts)
-  chillan/lenguaje-infantil/       # Ads landing (revisar indexación)
+  ads/voz-disfonia-online/         # Landing Ads (noindex) — ver ads/PATRON-LANDING.md
+  chillan/lenguaje-infantil/       # Redirect / SEO (no ads)
   servicios/                       # Servicios generales
   glosario/                        # Definiciones + FAQ
   recursos/                        # Guías padres
@@ -84,7 +85,8 @@ npm run pagespeed:report
 | Tema | Dónde |
 | --- | --- |
 | NAP / GBP / schema | `lib/site.ts`, `lib/local-business-schema.ts`, `docs/gbp-vinculacion-web-2026-07-24.md` |
-| Ficha Maps canónica | `https://g.page/r/CQTz_OxX_3IBEAE` |
+| Ficha Maps canónica | `https://www.google.com/maps?cid=8785110851903218280` |
+| Landings Ads | `ads/PATRON-LANDING.md` · craft `ads/01-voz-disfonia-online/CRAFT.md` |
 | GSC informe | `npm run gsc:report:md` → `docs/gsc-informe-*.md` |
 
 ## Reglas de trabajo

@@ -1,6 +1,7 @@
 # Patrón landing Google Ads
 
-Usar para cada cluster. Ejemplo vivo: `/ads/voz-disfonia-online`.
+Usar para cada cluster. Ejemplo vivo: `/ads/voz-disfonia-online`.  
+Craft Impeccable (2026-08-01): [`01-voz-disfonia-online/CRAFT.md`](./01-voz-disfonia-online/CRAFT.md).
 
 ---
 
@@ -8,23 +9,26 @@ Usar para cada cluster. Ejemplo vivo: `/ads/voz-disfonia-online`.
 
 | Pieza | Uso |
 |-------|-----|
-| Iconos | `lucide-react` — nunca emojis |
-| Animación | CSS only: `.animate-fade-up` / `.animate-fade-in` + `animationDelay` |
-| Estilo | Tailwind 4; sin vibecoding (emojis, glow, pills de más) |
+| Iconos | `lucide-react` — solo en **señales**; pasos van numerados |
+| Animación | CSS only (scoped `.ads-landing`): hero focal + FAQ + CTA press. Sin Framer / sin scroll JS |
+| Estilo | Tailwind 4; sin cards decorativas en señales; sin vibecoding |
 | Foto Ads | `/katia-ads-hero.jpg` (~80 KB) — **no** el PNG 6 MB del sitio |
+| Sticky CTA | `AdsStickyCta` — solo `md:hidden`; oculta si `#ads-cta-hero` o `#ads-cta-final` están visibles |
 
-Iconos: `TrendingDown`, `Mic`, `CalendarClock`, `Video`, `ClipboardList`, `ArrowRight`.
+### Animaciones (thesis)
 
-### Animaciones (carga)
+**Focal:** hero “respiración” — copy con stagger corto + foto `scale` (sin opacity en LCP) + CTA settle.
 
 | Dónde | Clase | Notas |
 |-------|--------|--------|
-| Hero copy | `animate-fade-up` | 1 vez al cargar |
-| Hero foto | `animate-fade-in` + delay ~120ms | no mover LCP de más |
-| Señales / pasos | `animate-fade-up` + stagger 80ms | |
-| FAQ / CTA | sin animación de entrada | interacción click en FAQ |
+| Badge / H1 / lead | `ads-rise` + `ads-rise-d1…d2` | stagger ≤300 ms total |
+| CTA hero | `ads-cta-enter` + `ads-cta-press` | glow único al entrar; active scale |
+| Foto hero | `ads-photo-settle` | solo `transform: scale`; **nunca** fade opacity (LCP) |
+| Señales / pasos / reseñas | sin entrance | |
+| FAQ | grid-rows 0fr→1fr | continuidad al abrir/cerrar |
+| Sticky CTA | sin animación de entrada | siempre visible en mobile |
 
-Respeta `prefers-reduced-motion` (globals.css). Sin Framer Motion / JS de scroll.
+Respeta `prefers-reduced-motion` (globals.css).
 
 ### Performance (obligatorio)
 
@@ -33,9 +37,10 @@ Respeta `prefers-reduced-motion` (globals.css). Sin Framer Motion / JS de scroll
 | Imagen hero | `priority` + `fetchPriority="high"` + `quality={75}` + `sizes` reales |
 | Asset | Usar `katia-ads-hero.jpg` (Ads). Regenerar con `sips` si cambia la foto |
 | Below-fold | clase `content-auto` (`content-visibility: auto`) |
-| Client JS | Solo `AdsFaq` (acordeón) vía `next/dynamic` |
-| Link Google | `GOOGLE_BUSINESS_PROFILE_URL` (sin `/review`) |
+| Client JS | `AdsFaq` (dynamic) + `AdsStickyCta` (fixed; oculta vs `#ads-cta-final`) |
+| Link Google | `maps?cid=…` vía `GOOGLE_BUSINESS_PROFILE_URL` |
 | Noindex | siempre |
+| Padding | spacer en `AdsStickyCta` (colapsa si la barra está oculta); no `pb-24` fijo en main |
 
 ---
 
@@ -47,25 +52,30 @@ Respeta `prefers-reduced-motion` (globals.css). Sin Framer Motion / JS de scroll
 | Layout | `app/ads/layout.tsx` (lean, sin footer sitio) |
 | SEO | **siempre** `buildNoIndexMetadata` — noindex |
 | CTA | solo `WhatsAppCTA` + `whatsappUrl` (nunca teléfono hardcode) |
+| CTAs en página | **2** visibles: hero + final. Sticky mobile es el mismo CTA (no un tercero conceptual). **Sin** CTA intermedio en “Cómo funciona” |
 | Foto | `/katia-ads-hero.jpg` en hero (liviana) |
-| Reseñas | `AdsGoogleBadge` + `AdsGoogleReviews` desde `lib/google-reviews.ts` |
-| Copy | corto; message-match con keywords del cluster |
+| Reseñas | 2 máx., índices message-match del cluster |
+| Copy CTA | Hero/sticky: “Quiero ayuda con mi voz”. Final: “Empezar por WhatsApp”. Evitar “Evaluar mi voz por WhatsApp” |
 | Geo | país (Chile), **sin ciudades** en H1 |
-| Docs cluster | `ads/NN-slug/README.md` |
+| Docs cluster | `ads/NN-slug/README.md` + `CRAFT.md` si hay decisiones Impeccable |
 
 ---
 
 ## Orden de secciones (obligatorio)
 
-1. **Hero** — badge Google ★ · H1 keywords · 1 frase dolor · foto · CTA WhatsApp  
-2. **Señales** — 3 bullets máx.  
-3. **Cómo funciona** — 3 pasos en una línea cada uno  
-4. **Pacientes atendidos** — `AdsPatientQuotes` (2–3 testimonios del cluster; mismos textos que landings `/voz-online`, no inventar)  
-5. **Reseñas Google** — `AdsGoogleReviews` (GBP; **una sola sección**, destacada y centrada; el `AdsGoogleBadge` del hero es la única repetición permitida)  
-6. **FAQ** — `AdsFaq` (acordeón click; 4–5 preguntas; JSON-LD incluido)  
-7. **CTA final** — un solo botón WhatsApp  
+1. **Hero** — badge Google ★ · H1 keywords · 1 frase dolor · CTA WhatsApp · foto  
+2. **Señales** — lista de 3 (icono + texto), **sin cards**  
+3. **Cómo funciona** — 3 pasos **numerados** (secuencia), sin CTA mid  
+4. **Reseñas Google** — `AdsGoogleReviews` con índices del cluster (máx. 2)  
+5. **FAQ** — `AdsFaq` (acordeón; **3** preguntas frías: online≈presencial, Chile, primer paso)  
+6. **Por qué Katia** — 1 línea credencial (antes de reseñas)  
+7. **Reseñas Google** — `AdsGoogleReviews` con índices del cluster (máx. 2)  
+8. **CTA final** — un botón WhatsApp  
+9. **Sticky mobile** — `AdsStickyCta` (fuera del flujo visual desktop)
 
-No agregar: cards decorativas, stats inventados, precios, largos párrafos SEO, emojis.
+**Opcional:** `AdsPatientQuotes` solo con testimonios reales del cluster (nunca inventar). En voz/disfonía actual: omitido.
+
+No agregar: cards decorativas, stats inventados, precios, largos párrafos SEO, emojis, CTA intermedio.
 
 ---
 
@@ -73,17 +83,20 @@ No agregar: cards decorativas, stats inventados, precios, largos párrafos SEO, 
 
 ```
 app/ads/_components/AdsGoogleTrust.tsx
-  AdsGoogleBadge      → ★ + N reseñas → link GBP
-  AdsGoogleReviews    → 2 quotes de GOOGLE_REVIEWS
-
-app/ads/_components/AdsPatientQuotes.tsx
-  AdsPatientQuotes    → 2–3 comentarios pacientes (name, role, text)
+  AdsGoogleBadge      → ★ + N reseñas → link Maps cid
+  AdsGoogleReviews    → quotes filtrados (reviewIndexes + limit)
 
 app/ads/_components/AdsFaq.tsx
-  AdsFaq              → acordeón click (lucide ChevronDown)
+  AdsFaq              → acordeón (grid-rows) + focus-visible
+
+app/ads/_components/AdsStickyCta.tsx
+  AdsStickyCta        → barra fija WhatsApp (mobile only)
+
+app/ads/_components/AdsPatientQuotes.tsx
+  AdsPatientQuotes    → opcional; testimonios reales del cluster
 ```
 
-**Link Google:** usar `GOOGLE_BUSINESS_PROFILE_LIST_URL` / `GOOGLE_BUSINESS_PROFILE_URL` (`g.page/r/...` sin `/review`). El path `/review` es para escribir reseña y a menudo falla o no abre el perfil.
+**Link Google:** `GOOGLE_BUSINESS_PROFILE_URL` / `GOOGLE_REVIEWS_URL` (`maps?cid=…`). No usar `g.page`.
 
 Índices reseñas (`GOOGLE_REVIEWS` en `lib/google-reviews.ts`):
 
@@ -98,51 +111,17 @@ app/ads/_components/AdsFaq.tsx
 ## Checklist nueva landing
 
 ```
-[ ] Carpeta app/ads/{slug}/page.tsx
+[ ] Carpeta app/ads/{slug}/page.tsx + class ads-landing
 [ ] metadata = buildNoIndexMetadata(...)
 [ ] H1 = keyword principal del cluster (frase)
-[ ] Foto Katia en hero
+[ ] Foto Katia en hero (sin opacity animation)
 [ ] AdsGoogleBadge arriba
-[ ] AdsGoogleReviews con índices correctos
+[ ] AdsGoogleReviews con índices correctos (limit 2)
+[ ] Sin CTA mid; sticky mobile + pb-24
 [ ] WA_MSG menciona cluster + "llegué por Google"
-[ ] ads/{NN}-{slug}/README.md (URL + H1/H2 anuncio)
-[ ] Actualizar landing en GOOGLEADS/google-ads-keywords-online-ranking.md
-[ ] Probar local: /ads/{slug}
+[ ] ads/{NN}-{slug}/README.md (+ CRAFT.md si aplica)
+[ ] Probar local: /ads/{slug} (mobile sticky + FAQ)
 ```
-
----
-
-## Template mínimo (copiar)
-
-```tsx
-import Image from "next/image";
-import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
-import { GeoFAQ } from "@/app/_components/GeoFAQ";
-import { AdsGoogleBadge, AdsGoogleReviews } from "@/app/ads/_components/AdsGoogleTrust";
-import { buildNoIndexMetadata } from "@/lib/seo";
-import { BUSINESS_NAME } from "@/lib/site";
-
-export const metadata = buildNoIndexMetadata("TÍTULO — Katia Domínguez");
-
-const WA_MSG = "Hola, llegué por Google. Quiero [SERVICIO] online.";
-
-const faqItems = [/* 3 máx */];
-
-export default function Page() {
-  return (
-    <main>
-      {/* 1 Hero: badge + H1 + frase + foto + CTA */}
-      {/* 2 Señales: 3 bullets */}
-      {/* 3 Cómo funciona: 3 pasos */}
-      <AdsGoogleReviews reviewIndexes={[5, 4]} />
-      {/* 5 FAQ */}
-      {/* 6 CTA final */}
-    </main>
-  );
-}
-```
-
-Ver implementación: `app/ads/voz-disfonia-online/page.tsx`.
 
 ---
 

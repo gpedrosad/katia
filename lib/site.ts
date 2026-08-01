@@ -15,12 +15,17 @@ export const SERVICE_AREA_CITY = "Chillán";
 export const SERVICE_AREA_REGION = "Región de Ñuble";
 export const SERVICE_AREA_COUNTRY = "CL";
 
-/** Perfil GBP canónico (el de las reseñas; no el share genérico). */
-export const GOOGLE_BUSINESS_PROFILE_URL =
-  "https://g.page/r/CQTz_OxX_3IBEAE";
-/** Pedir / listar reseñas en esa misma ficha. */
-export const GOOGLE_REVIEWS_URL =
-  "https://g.page/r/CQTz_OxX_3IBEAE/review";
+/** CID de Google Maps (ficha con las reseñas). g.page/r/… está roto → google.com. */
+export const GOOGLE_MAPS_CID = "8785110851903218280";
+/** Feature id Maps (hex) — misma ficha. */
+export const GOOGLE_MAPS_FID = "0x51ceb051a2dde6f:0x79eafbc6381ee268";
+/** Perfil GBP canónico en Maps (abre ficha + reseñas). */
+export const GOOGLE_BUSINESS_PROFILE_URL = `https://www.google.com/maps?cid=${GOOGLE_MAPS_CID}`;
+/**
+ * Ver reseñas: misma ficha Maps (listado de opiniones).
+ * No usar g.page/…/review (redirige mal / solo sirve para escribir).
+ */
+export const GOOGLE_REVIEWS_URL = GOOGLE_BUSINESS_PROFILE_URL;
 /** Knowledge Graph mid del negocio (panel de búsqueda). */
 export const GOOGLE_KGMID = "/g/11mz8n1czr";
 export const GOOGLE_KNOWLEDGE_PANEL_URL = `https://www.google.com/search?kgmid=${encodeURIComponent(GOOGLE_KGMID)}&q=${encodeURIComponent(GOOGLE_BUSINESS_ALTERNATE_NAME)}`;

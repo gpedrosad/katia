@@ -40,18 +40,25 @@ async function run(url, strategy, key) {
   const lcp = a["largest-contentful-paint"]?.numericValue;
   const cls = a["cumulative-layout-shift"]?.numericValue;
   const fcp = a["first-contentful-paint"]?.numericValue;
+  const inp = a["interaction-to-next-paint"]?.numericValue;
+  const tbt = a["total-blocking-time"]?.numericValue;
   const field = data.loadingExperience ?? data.originLoadingExperience;
   const fLcp = field?.metrics?.LARGEST_CONTENTFUL_PAINT_MS?.percentile;
+  const fInp = field?.metrics?.INTERACTION_TO_NEXT_PAINT?.percentile;
 
   console.log(`\n📊 ${url} [${strategy}]`);
   console.log(`  Lighthouse Performance: ${perf}`);
   console.log(`  LCP lab: ${lcp != null ? (lcp / 1000).toFixed(1) + "s" : "—"} (${rateLcp(lcp)})`);
   console.log(`  CLS lab: ${cls != null ? cls.toFixed(3) : "—"} (${rateCls(cls)})`);
   console.log(`  FCP lab: ${fcp != null ? (fcp / 1000).toFixed(1) + "s" : "—"}`);
+  console.log(`  INP lab: ${inp != null ? Math.round(inp) + "ms" : "—"} · TBT: ${tbt != null ? Math.round(tbt) + "ms" : "—"}`);
   if (fLcp != null) {
     console.log(`  LCP campo (CrUX): ${(fLcp / 1000).toFixed(1)}s (${rateLcp(fLcp)})`);
   } else {
     console.log(`  LCP campo (CrUX): sin datos (poco tráfico)`);
+  }
+  if (fInp != null) {
+    console.log(`  INP campo (CrUX): ${Math.round(fInp)}ms`);
   }
 }
 

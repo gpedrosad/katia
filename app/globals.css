@@ -59,9 +59,109 @@ body {
   contain-intrinsic-size: 1px 480px;
 }
 
+/*
+ * Ads landing motion — thesis: hero “respiración” (copy stagger + foto scale).
+ * Transform/opacity only. LCP image stays opacity:1 (no fade en la foto).
+ * Easing: cubic-bezier(0.16, 1, 0.3, 1). Sin JS de scroll.
+ */
+@keyframes ads-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ads-photo-settle {
+  from {
+    transform: scale(1.045);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes ads-cta-glow {
+  from {
+    box-shadow: 0 10px 24px -8px rgb(22 163 74 / 0.15);
+  }
+  to {
+    box-shadow: 0 14px 28px -6px rgb(22 163 74 / 0.28);
+  }
+}
+
+.ads-landing .ads-rise {
+  animation: ads-rise 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ads-landing .ads-rise-d1 {
+  animation-delay: 60ms;
+}
+.ads-landing .ads-rise-d2 {
+  animation-delay: 140ms;
+}
+.ads-landing .ads-rise-d3 {
+  animation-delay: 220ms;
+}
+.ads-landing .ads-rise-d4 {
+  animation-delay: 300ms;
+}
+
+.ads-landing .ads-photo-settle {
+  animation: ads-photo-settle 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ads-landing .ads-cta-enter {
+  animation:
+    ads-rise 0.55s cubic-bezier(0.16, 1, 0.3, 1) 300ms both,
+    ads-cta-glow 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.75s both;
+}
+
+.ads-landing .ads-card {
+  transition:
+    transform 180ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 180ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .ads-landing .ads-card:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 8px 20px -8px rgb(28 25 23 / 0.12),
+      0 1px 0 rgb(28 25 23 / 0.04);
+  }
+}
+
+.ads-landing .ads-cta-press {
+  transition:
+    transform 120ms ease,
+    background-color 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.ads-landing .ads-cta-press:active {
+  transform: scale(0.98);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-fade-up,
-  .animate-fade-in {
+  .animate-fade-in,
+  .ads-landing .ads-rise,
+  .ads-landing .ads-photo-settle,
+  .ads-landing .ads-cta-enter {
     animation: none;
+  }
+
+  .ads-landing .ads-card,
+  .ads-landing .ads-cta-press {
+    transition: none;
+  }
+
+  .ads-landing .ads-card:hover,
+  .ads-landing .ads-cta-press:active {
+    transform: none;
   }
 }

@@ -1,7 +1,8 @@
 # Vinculación Google Business Profile ↔ web
 
 **Fecha:** 2026-07-24  
-**Ficha canónica (con reseñas):** [g.page/r/CQTz_OxX_3IBEAE](https://g.page/r/CQTz_OxX_3IBEAE)  
+**Ficha canónica (con reseñas):** [maps?cid=8785110851903218280](https://www.google.com/maps?cid=8785110851903218280)  
+**Nota:** `g.page/r/CQTz…` está roto (redirige a google.com) — no usar.  
 **Sitio:** `https://www.katialafono.cl`
 
 ## Objetivo
@@ -22,8 +23,7 @@ Hacer que Google (y usuarios) traten **una sola entidad**: misma profesional, mi
 ### Constantes (`lib/site.ts`, `lib/google-reviews.ts`)
 
 - NAP: `BUSINESS_NAME`, teléfono, ciudad/región
-- `GOOGLE_BUSINESS_PROFILE_URL` = `https://g.page/r/CQTz_OxX_3IBEAE` (ficha con reseñas)
-- `GOOGLE_REVIEWS_URL` = `…/review`
+- `GOOGLE_BUSINESS_PROFILE_URL` / `GOOGLE_REVIEWS_URL` = `https://www.google.com/maps?cid=8785110851903218280` (g.page reemplazado 2026-08-01)
 - `GOOGLE_KGMID` = `/g/11mz8n1czr`
 - `INSTAGRAM_PROFILE_URL`
 - Horario alineado a GBP: **10:00–18:00** lun–vie
@@ -62,7 +62,7 @@ Editar `GOOGLE_REVIEWS_AGGREGATE.reviewCount` en `lib/google-reviews.ts` y, si a
 
 | Recurso | Valor |
 | --- | --- |
-| Ficha Maps (canónica) | https://g.page/r/CQTz_OxX_3IBEAE |
-| Reseñas | https://g.page/r/CQTz_OxX_3IBEAE/review |
+| Ficha Maps (canónica) | https://www.google.com/maps?cid=8785110851903218280 |
+| Reseñas | misma URL Maps (g.page roto) |
 | kgmid | `/g/11mz8n1czr` |
 | Self-learn | `docs/ai-self-learn/` |

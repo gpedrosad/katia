@@ -4,6 +4,15 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 
 ---
 
+## 2026-08-01
+
+- GBP | `g.page/r/CQTz_OxX_3IBEAE` redirige a google.com (roto) | Reemplazado por `maps?cid=8785110851903218280` (ficha con 42 reseñas, verificado en browser)
+- Ads | Links “ver reseñas / ficha” usan Maps cid | No usar `/review` de g.page
+- Ads | Impeccable animate+distill+polish+optimize en `/ads/voz-disfonia-online` | Hero motion LCP-safe; lista señales; pasos numerados; sin CTA mid; sticky mobile; reseñas 5,4; docs `CRAFT.md` + patrón
+- Ads | Doc craft | `ads/01-voz-disfonia-online/CRAFT.md` · actualizar `PATRON-LANDING.md`
+- Ads | FAQ 3 + línea “Por qué Katia” + CWV lab mobile prod | Perf 99 · LCP 2,2s · CLS 0 · TBT 32ms (Lighthouse CLI; PSI key/cuota faltó)
+- Ads | Negativas online ampliadas | `GOOGLEADS/google-ads-negativas-online.md`; separar base, ciudades, presencial/local, adultos/niños y clusters voz/TEA/ACV/deglución; no negativizar `online/virtual` en campañas online
+
 ## 2026-07-24
 
 - GBP | Ficha canónica Maps = `https://g.page/r/CQTz_OxX_3IBEAE` (la de las reseñas) | `hasMap`/`sameAs`/footer apuntan ahí; no share.google

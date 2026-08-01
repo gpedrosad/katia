@@ -44,13 +44,13 @@ export function AdsFaq({
                     aria-expanded={open}
                     aria-controls={panelId}
                     onClick={() => setOpenIndex(open ? null : i)}
-                    className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left transition-colors hover:bg-stone-50"
+                    className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left transition-colors duration-150 hover:bg-stone-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-rose-400"
                   >
                     <span className="text-base font-semibold text-rose-950">
                       {item.question}
                     </span>
                     <ChevronDown
-                      className={`h-5 w-5 shrink-0 text-rose-700 transition-transform duration-200 ${
+                      className={`h-5 w-5 shrink-0 text-rose-700 transition-transform duration-200 ease-out ${
                         open ? "rotate-180" : ""
                       }`}
                       aria-hidden
@@ -61,14 +61,20 @@ export function AdsFaq({
                   id={panelId}
                   role="region"
                   aria-labelledby={buttonId}
-                  hidden={!open}
-                  className={
-                    open
-                      ? "px-5 pb-4 text-sm leading-relaxed text-stone-600"
-                      : undefined
-                  }
+                  aria-hidden={!open}
+                  className={`grid transition-[grid-template-rows] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none ${
+                    open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                  }`}
                 >
-                  {open ? item.answer : null}
+                  <div className="overflow-hidden">
+                    <p
+                      className={`px-5 pb-4 text-sm leading-relaxed text-stone-600 transition-opacity duration-200 motion-reduce:transition-none ${
+                        open ? "opacity-100" : "opacity-0"
+                      }`}
+                    >
+                      {item.answer}
+                    </p>
+                  </div>
                 </div>
               </div>
             );

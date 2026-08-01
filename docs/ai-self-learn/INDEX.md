@@ -1,6 +1,6 @@
 # INDEX — hechos densos (leer primero)
 
-Actualizado: **2026-07-24**
+Actualizado: **2026-08-01**
 
 ## Identidad / NAP
 
@@ -13,15 +13,23 @@ Actualizado: **2026-07-24**
 
 ## Google Business Profile
 
-- Ficha canónica (con reseñas): https://g.page/r/CQTz_OxX_3IBEAE
-- Reseñas: https://g.page/r/CQTz_OxX_3IBEAE/review
+- Ficha canónica Maps: `https://www.google.com/maps?cid=8785110851903218280` (42 reseñas) — **verificado 2026-08-01**
+- `g.page/r/CQTz…` está **roto** (redirige a google.com) — no usar
 - kgmid (panel búsqueda): `/g/11mz8n1czr`
-- Rating 5.0 · **42** reseñas (sync código 2026-07-24)
-- GBP → web ya OK; web → GBP: schema `sameAs`/`hasMap` + footer/contacto (2026-07-24)
-- No usar share.google genérico como URL principal de Maps
-- `pendiente:` verificar claim GBP + posible duplicado Maps `katia Dominguez`
+- Rating 5.0 · **42** reseñas
+- Código: `lib/site.ts` (`GOOGLE_MAPS_CID`, `GOOGLE_BUSINESS_PROFILE_URL`)
 - Doc: `docs/gbp-vinculacion-web-2026-07-24.md`
-- Código: `lib/site.ts`, `lib/local-business-schema.ts`, `lib/google-reviews.ts`
+- `pendiente:` verificar claim GBP + posible duplicado Maps `katia Dominguez`
+
+## Ads / landings
+
+- Ejemplo: `/ads/voz-disfonia-online` · patrón `ads/PATRON-LANDING.md` · craft `ads/01-voz-disfonia-online/CRAFT.md`
+- Motion: solo hero (CSS `.ads-landing`); foto sin fade opacity (LCP)
+- UI: señales en lista; pasos numerados; sin CTA mid; sticky WhatsApp mobile; FAQ ×3; 1 línea “Por qué Katia”
+- Reseñas voz: índices **5, 4** (máx. 2); Maps `cid` no `g.page`
+- CWV lab mobile prod (2026-08-01): Perf **99** · LCP **2,2s** · CLS **0** · TBT 32ms
+- Negativas online: `GOOGLEADS/google-ads-negativas-online.md`; no negativizar `online/virtual/videollamada` en campañas online; ciudades solo si la campaña no usa geo+online.
+- Skill: `.agents/skills/impeccable` (`animate` / `distill` / `polish` / `optimize`)
 
 ## GSC / SEO orgánico (último corte)
 
@@ -37,7 +45,7 @@ Actualizado: **2026-07-24**
 
 - Next.js App Router · metadata vía `buildPageMetadata` (`lib/seo.ts`)
 - Schema negocio: siempre `@id` `https://www.katialafono.cl/#business`
-- Skills: `.agents/skills/google-search-console`, `local-seo`, `seo-geo`, `conversion-psychology`
+- Skills: `.agents/skills/google-search-console`, `local-seo`, `seo-geo`, `conversion-psychology`, `impeccable`
 - Panel interno GSC: `/interno/gsc`
 
 ## No hacer (aprendido)
@@ -45,3 +53,4 @@ Actualizado: **2026-07-24**
 - No re-auditar indexación por el “0 indexadas” del sitemap sin URL Inspection
 - No publicar calle en schema/footer sin decisión explícita
 - No regenerar informe GSC sin token válido (`invalid_grant` → `npm run gsc:auth`)
+- No usar `g.page` ni fade opacity en LCP de landings Ads

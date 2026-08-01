@@ -4,14 +4,46 @@
 |-------|--------|
 | Landing | `/ads/voz-disfonia-online` |
 | Patrón | [`../PATRON-LANDING.md`](../PATRON-LANDING.md) |
+| Craft | [`CRAFT.md`](./CRAFT.md) (Impeccable 2026-08-01) |
 | Index | noindex |
-| Reseñas Google | índices 5, 4 (`lib/google-reviews.ts`) |
+| Reseñas Google | índices **5, 4** · `limit={2}` |
 | Foto | `/katia-ads-hero.jpg` (~79 KB) |
+| Sticky CTA | mobile only (`AdsStickyCta`) |
 
 ## Anuncio
 
 **H1:** Terapia de Voz Online  
 **H2:** Tratamiento Disfonía · Videollamada  
 **H2:** Todo Chile  
-**Desc:** Fonoaudióloga Katia Domínguez. Evalúa tu voz por WhatsApp.  
+**Desc:** Fonoaudióloga Katia Domínguez. Ayuda con tu voz por WhatsApp.  
+
+## CTAs (copy)
+
+| Ubicación | Texto |
+|-----------|--------|
+| Hero + sticky | Quiero ayuda con mi voz |
+| Final | Empezar por WhatsApp |
 **URL:** `/ads/voz-disfonia-online`
+
+## Secciones (live)
+
+1. Hero (badge · H1 · dolor · CTA · foto)  
+2. Señales (lista ×3)  
+3. Cómo funciona (pasos 1–3, sin CTA mid)  
+4. Por qué Katia (1 línea)  
+5. Reseñas Google (2)  
+6. FAQ (3: online≈presencial, Chile, primer paso)  
+7. CTA final + sticky mobile
+
+## CWV móvil (lab)
+
+| Fuente | Fecha | Perf | LCP | CLS | TBT |
+|--------|-------|------|-----|-----|-----|
+| Lighthouse mobile → prod | 2026-08-01 | **99** | 2,2s (bueno) | 0 | 32ms |
+
+Nota: `PAGESPEED_API_KEY` ausente / cuota PSI anónima agotada → medido con Lighthouse CLI. Re-correr post-deploy de este branch:
+
+```bash
+npx lighthouse https://www.katialafono.cl/ads/voz-disfonia-online --only-categories=performance --form-factor=mobile --quiet
+# o con key: PAGESPEED_URLS=…/ads/voz-disfonia-online npm run pagespeed:report
+```

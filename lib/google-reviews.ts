@@ -1,6 +1,6 @@
 /**
  * Reseñas y enlaces de Google Business Profile (GBP).
- * Ficha canónica = la de g.page con las reseñas (CQTz_OxX_3IBEAE).
+ * Ficha canónica = Maps cid 8785110851903218280 (42 reseñas).
  * Actualizar reviewCount al exportar nuevas reseñas desde Google.
  */
 
