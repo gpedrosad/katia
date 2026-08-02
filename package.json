@@ -11,10 +11,14 @@
     "gsc:report": "node --env-file=.env.local scripts/gsc-report.mjs",
     "gsc:report:md": "node --env-file=.env.local scripts/gsc-report-md.mjs",
     "pagespeed:report": "node --env-file=.env.local scripts/pagespeed-report.mjs",
-    "gsc:checklist": "node --env-file=.env.local scripts/gsc-checklist.mjs"
+    "gsc:checklist": "node --env-file=.env.local scripts/gsc-checklist.mjs",
+    "google-ads:auth": "node --env-file=.env.local scripts/google-ads-auth.mjs",
+    "google-ads:list-accounts": "node --env-file=.env.local scripts/google-ads-auth.mjs --list-accounts",
+    "google-ads:report": "node --env-file=.env.local scripts/google-ads-report.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^1.6.1",
+    "google-ads-api": "^23.0.1",
     "googleapis": "^171.4.0",
     "lucide-react": "^1.28.0",
     "next": "16.1.1",

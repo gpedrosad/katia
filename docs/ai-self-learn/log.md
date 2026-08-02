@@ -17,6 +17,7 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 - Ads | Tag gtag `AW-18364805586` + whatsapp_lead | Doc `GOOGLEADS/google-ads-tag-conversiones.md`; conversión send_to pendiente en Vercel
 - Ads | Tel NAP Ads | `+56995497838` (mismo WhatsApp)
 - Ads | Conversión Contacto send_to | `AW-18364805586/rBy6CNrQsNocENLjgrVE` (clic WhatsApp; medir como Clic, no page load)
+- Ads | API lectura Katialafono | customer `2147001598` OK directo; **no** `LOGIN_CUSTOMER_ID=8057859597` (permission denied); scripts `google-ads:*`; informe vacío 0 campañas (cuenta nueva)
 
 ## 2026-07-24
 
