@@ -92,7 +92,8 @@ Landing SEO: `/voz-online/fonoaudiologa-de-voz-online`
 "terapia de voz para docentes online"
 ```
 
-Landing: `/voz-online/terapia-vocal-docentes-profesores`
+Landing Ads: `/ads/terapia-vocal-docentes-online`
+Landing SEO: `/voz-online/terapia-vocal-docentes-profesores`
 
 ---
 
