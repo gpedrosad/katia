@@ -12,8 +12,8 @@ export const GOOGLE_ADS_CONVERSION_SEND_TO =
 
 /**
  * Dispara tracking de lead WhatsApp para Google Ads.
- * - dataLayer + gtag event `whatsapp_lead`
- * - gtag `conversion` con send_to de Contacto
+ * Equivale al fragmento "Clic" de Ads (`gtag_report_conversion`), pero sin
+ * `return false` ni redirect: el CTA abre WhatsApp en pestaña nueva.
  */
 export function trackWhatsAppLead(label?: string) {
   if (typeof window === "undefined") return;
@@ -30,6 +30,7 @@ export function trackWhatsAppLead(label?: string) {
     send_to: GOOGLE_ADS_ID,
   });
 
+  // Fragmento Contacto: AW-18364805586/rBy6CNrQsNocENLjgrVE
   gtag("event", "conversion", {
     send_to: GOOGLE_ADS_CONVERSION_SEND_TO,
     value: 1.0,
