@@ -3,9 +3,17 @@ export const GOOGLE_ADS_ID =
   process.env.NEXT_PUBLIC_GOOGLE_ADS_ID?.trim() || "AW-18364805586";
 
 /**
+ * Conversión "Contacto" / Clic WhatsApp.
+ * Override: NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_SEND_TO
+ */
+export const GOOGLE_ADS_CONVERSION_SEND_TO =
+  process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_SEND_TO?.trim() ||
+  "AW-18364805586/rBy6CNrQsNocENLjgrVE";
+
+/**
  * Dispara tracking de lead WhatsApp para Google Ads.
- * - Siempre: dataLayer + gtag event `whatsapp_lead`
- * - Si hay send_to: también `conversion` (acción de Google Ads)
+ * - dataLayer + gtag event `whatsapp_lead`
+ * - gtag `conversion` con send_to de Contacto
  */
 export function trackWhatsAppLead(label?: string) {
   if (typeof window === "undefined") return;
@@ -22,8 +30,9 @@ export function trackWhatsAppLead(label?: string) {
     send_to: GOOGLE_ADS_ID,
   });
 
-  const sendTo = process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_SEND_TO?.trim();
-  if (sendTo) {
-    gtag("event", "conversion", { send_to: sendTo });
-  }
+  gtag("event", "conversion", {
+    send_to: GOOGLE_ADS_CONVERSION_SEND_TO,
+    value: 1.0,
+    currency: "CLP",
+  });
 }

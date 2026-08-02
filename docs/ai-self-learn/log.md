@@ -16,6 +16,7 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 - Ads | Reseñas con GoogleMark + 6 en desktop | Reutilizar `AdsGoogleTrust.tsx`; documentado en `ads/PATRON-LANDING.md` § Reseñas Google
 - Ads | Tag gtag `AW-18364805586` + whatsapp_lead | Doc `GOOGLEADS/google-ads-tag-conversiones.md`; conversión send_to pendiente en Vercel
 - Ads | Tel NAP Ads | `+56995497838` (mismo WhatsApp)
+- Ads | Conversión Contacto send_to | `AW-18364805586/rBy6CNrQsNocENLjgrVE` (clic WhatsApp; medir como Clic, no page load)
 
 ## 2026-07-24
 

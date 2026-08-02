@@ -1,56 +1,55 @@
 # Google Ads — etiqueta y conversiones (katialafono.cl)
 
-**Actualizado:** 2026-08-01  
+**Actualizado:** 2026-08-02  
 **Cuenta Ads:** gpedrosadom@gmail.com  
 **Tag ID:** `AW-18364805586`  
+**Conversión Contacto (Clic WhatsApp):** `AW-18364805586/rBy6CNrQsNocENLjgrVE`  
 **Teléfono NAP / Ads:** `+56995497838` (display `9 9549 7838`) — WhatsApp mismo número
 
 ## Qué hay en el código
 
 | Pieza | Dónde |
 |-------|--------|
-| Etiqueta gtag (base) | `app/_components/GoogleAdsTag.tsx` → cargada en `app/layout.tsx` |
-| ID Ads | `lib/ads-tracking.ts` → `GOOGLE_ADS_ID` (default `AW-18364805586`) |
-| Lead WhatsApp | `trackWhatsAppLead()` en clic de `WhatsAppCTA` y `StickyWhatsApp` |
-| Env | `.env.example` → `NEXT_PUBLIC_GOOGLE_ADS_*` |
+| Etiqueta gtag (base) | `app/_components/GoogleAdsTag.tsx` → `app/layout.tsx` |
+| ID Ads | `lib/ads-tracking.ts` → `GOOGLE_ADS_ID` |
+| `send_to` conversión | `GOOGLE_ADS_CONVERSION_SEND_TO` (default Contacto arriba) |
+| Lead WhatsApp | `trackWhatsAppLead()` en `WhatsAppCTA` y `StickyWhatsApp` |
 
-**No usamos GTM** para Ads: gtag directo es suficiente.
+**No usamos GTM.** gtag directo.
 
-## Eventos
+## Cómo medir en Ads (UI)
 
-1. Al cargar cualquier página: `gtag('config', 'AW-18364805586')`
-2. Al clic WhatsApp:
-   - `dataLayer` → `{ event: "whatsapp_lead", label }`
-   - `gtag('event', 'whatsapp_lead', …)`
-   - Si existe env `NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_SEND_TO` → también `gtag('event', 'conversion', { send_to })`
+En el asistente del fragmento de evento:
 
-## Pendiente (conversión primaria)
+1. **Paso 1:** elige **Clic** (no “Carga de página”).
+2. No pegues el snippet a mano en el HTML: ya dispara en el `onClick` de WhatsApp.
+3. Confirma / listo en Ads.
 
-1. En Google Ads: Conversiones → sitio web → acción **Clic WhatsApp** (o “Contacto”).
-2. Copiar el `send_to` completo: `AW-18364805586/XXXXXXXX`.
-3. En Vercel (Production) y `.env.local`:
+## Eventos al clic WhatsApp
+
+```js
+gtag('event', 'whatsapp_lead', { … });
+gtag('event', 'conversion', {
+  send_to: 'AW-18364805586/rBy6CNrQsNocENLjgrVE',
+  value: 1.0,
+  currency: 'CLP',
+});
+```
+
+## Env (opcional; ya hay default en código)
 
 ```bash
 NEXT_PUBLIC_GOOGLE_ADS_ID=AW-18364805586
-NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_SEND_TO=AW-18364805586/XXXXXXXX
+NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_SEND_TO=AW-18364805586/rBy6CNrQsNocENLjgrVE
 ```
 
-4. Redeploy. Probar clic en `/ads/voz-disfonia-online` y ver “Conversiones recientes” / Tag Assistant.
+Tras push a `main` → deploy Vercel → probar clic en `/ads/voz-disfonia-online` con Tag Assistant.
 
-## Cuentas vinculadas (setup Ads)
+## Cuentas vinculadas
 
 | Fuente | ¿Vincular? |
 |--------|------------|
-| GBP Katia (ficha con reseñas) | Sí, si es la misma entidad |
-| Tel `+56995497838` | Opcional (llamadas); lead principal = WhatsApp |
+| GBP Katia (ficha con reseñas) | Sí |
+| Tel `+56995497838` | Opcional; lead = WhatsApp |
 | YouTube personal / Merchant Idea Madera | **No** |
 | App | **No** |
-
-## Verificación rápida
-
-```bash
-# Tras deploy: en Chrome DevTools → Network filtrar "google" / "gtag"
-# o extensión Google Tag Assistant en https://www.katialafono.cl
-```
-
-Landing Ads de referencia: `/ads/voz-disfonia-online` · patrón `ads/PATRON-LANDING.md`.

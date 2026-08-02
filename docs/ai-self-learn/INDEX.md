@@ -30,7 +30,7 @@ Actualizado: **2026-08-01**
 - Reseñas voz: índices **5, 4, 0, 1, 2, 3**; Maps `cid` no `g.page`
 - CWV lab mobile prod (2026-08-01): Perf **99** · LCP **2,2s** · CLS **0** · TBT 32ms
 - Negativas online: `GOOGLEADS/google-ads-negativas-online.md`; plan Ads = terapia fonoaudiológica online; no negativizar `online/virtual/videollamada`; no usar ciudades sueltas como negativas por defecto.
-- Tag Google Ads: `AW-18364805586` en `GoogleAdsTag` + `trackWhatsAppLead` · doc `GOOGLEADS/google-ads-tag-conversiones.md` · falta env `NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_SEND_TO` tras crear la conversión
+- Tag Google Ads: `AW-18364805586` + conversión Contacto `AW-18364805586/rBy6CNrQsNocENLjgrVE` en clic WhatsApp · doc `GOOGLEADS/google-ads-tag-conversiones.md`
 - Skill: `.agents/skills/impeccable` (`animate` / `distill` / `polish` / `optimize`)
 
 ## GSC / SEO orgánico (último corte)
