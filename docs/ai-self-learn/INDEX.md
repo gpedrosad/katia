@@ -32,6 +32,7 @@ Actualizado: **2026-08-01**
 - Negativas online: `GOOGLEADS/google-ads-negativas-online.md`; plan Ads = terapia fonoaudiológica online; no negativizar `online/virtual/videollamada`; no usar ciudades sueltas como negativas por defecto.
 - Tag Google Ads: `AW-18364805586` + conversión Contacto `AW-18364805586/rBy6CNrQsNocENLjgrVE` en clic WhatsApp · doc `GOOGLEADS/google-ads-tag-conversiones.md`
 - Ads API (lectura): customer `2147001598` (acceso directo; no LOGIN MCC) · `.secrets` symlink · `npm run google-ads:report` · doc `GOOGLEADS/google-ads-api-setup.md`
+- Playbook Search: `GOOGLEADS/google-ads-search-campana-playbook.md` (1 campaña/cluster; frase; landing `/ads/...`)
 - Skill: `.agents/skills/impeccable` (`animate` / `distill` / `polish` / `optimize`)
 
 ## GSC / SEO orgánico (último corte)

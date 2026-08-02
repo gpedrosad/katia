@@ -1,22 +1,3 @@
-# Negativas Google Ads — terapia online (Chile)
-
-Revisado: **2026-08-01**.
-
-Uso sugerido:
-
-- Este archivo asume campañas Search para **terapia fonoaudiológica online**. No contempla campañas presenciales.
-- Copiar el bloque **Base cuenta / campaña** en todas las campañas Search online.
-- Agregar los bloques por campaña o grupo de anuncios según corresponda.
-- En campañas 100% online, **no** negativizar: `online`, `en linea`, `en línea`, `virtual`, `videollamada`, `teleconsulta`, `teleterapia`.
-- No usar ciudades sueltas como negativas por defecto. Para terapia online pueden aparecer búsquedas válidas como `fonoaudióloga online Santiago`; bloquea mejor la intención presencial con términos como `cerca de mí`, `a domicilio`, `presencial`, `dirección`.
-
----
-
-## Base cuenta / campaña
-
-Agregar siempre en campañas online de fonoaudiología privada.
-
-```
 empleo
 trabajo
 trabajos
@@ -226,15 +207,6 @@ cura
 curar
 curacion
 curación
-```
-
----
-
-## Presencialidad / intención local
-
-Usar en todas las campañas de terapia online. Bloquea intención de consulta presencial, domicilio o ubicación física sin matar búsquedas válidas con ciudad + online.
-
-```
 presencial
 presencialmente
 consulta presencial
@@ -281,15 +253,6 @@ consulta fisica
 consulta física
 atencion en consulta
 atención en consulta
-```
-
----
-
-## Países fuera de Chile
-
-Usar si el cobro y la agenda serán solo para Chile. Quitar este bloque si se abre fase LATAM.
-
-```
 españa
 madrid
 barcelona
@@ -315,13 +278,6 @@ estados unidos
 usa
 eeuu
 miami
-```
-
----
-
-## Otras profesiones / servicios no ofrecidos
-
-```
 psicologo
 psicólogo
 psicologa
@@ -372,15 +328,6 @@ locucion
 locución
 doblaje
 teatro
-```
-
----
-
-## Terapia online genérica no fonoaudiológica
-
-Usar especialmente si alguna campaña queda con keywords amplias tipo `terapia online`.
-
-```
 psicoterapia
 psicoterapia online
 terapia psicologica
@@ -429,15 +376,6 @@ biodescodificación
 constelaciones familiares
 terapia holistica
 terapia holística
-```
-
----
-
-## Telemedicina / trámites no fonoaudiológicos
-
-Usar si la campaña apunta a terapia, no a consulta médica general ni certificados.
-
-```
 doctor online
 doctora online
 medico online
@@ -460,15 +398,6 @@ peritajes
 informe judicial
 informe medico legal
 informe médico legal
-```
-
----
-
-## Urgencia / atención inmediata
-
-Usar si no se ofrece respuesta clínica inmediata o atención el mismo día.
-
-```
 urgencia
 urgencias
 emergencia
@@ -484,15 +413,6 @@ sapu
 samu
 guardia
 pronto socorro
-```
-
----
-
-## Audiología / oído
-
-Usar en campañas de lenguaje, habla, voz y fono genérica si Katia no está captando evaluación auditiva.
-
-```
 audiometria
 audiometría
 impedanciometria
@@ -519,15 +439,6 @@ tapón de cera
 otitis
 dolor de oido
 dolor de oído
-```
-
----
-
-## Solo adultos / voz adultos
-
-Agregar en campañas de adultos para cortar búsquedas de padres.
-
-```
 niños
 ninos
 niño
@@ -571,59 +482,6 @@ retraso lenguaje infantil
 terapia lenguaje infantil
 autismo niños
 tea niños
-```
-
----
-
-## Solo niños / infantil
-
-Agregar en campañas infantiles para cortar búsquedas de adultos y voz laboral.
-
-```
-adultos
-adulto
-adulto mayor
-tercera edad
-geriatria
-geriatría
-docentes
-docente
-profesores
-profesor
-profesora
-laboral
-trabajo vocal
-voz laboral
-profesionales de la voz
-abogados
-abogado
-abogada
-locutores
-locutor
-locutora
-call center
-teleoperador
-teleoperadora
-acv
-ave
-ictus
-stroke
-afasia
-disfagia
-deglucion adultos
-deglución adultos
-parkinson
-alzheimer
-ela
-```
-
----
-
-## Voz / disfonía / nódulos / afonía
-
-Agregar en campañas de voz adulta para evitar intención médica, quirúrgica, infecciosa o de canto.
-
-```
 cirugia
 cirugía
 operacion
@@ -682,15 +540,6 @@ nodulo tiroideo
 nódulo tiroideo
 nodulos tiroideos
 nódulos tiroideos
-```
-
----
-
-## Docentes / profesionales de la voz
-
-Agregar si la campaña busca terapia vocal y no cursos preventivos masivos.
-
-```
 charla
 charlas
 taller
@@ -706,13 +555,32 @@ tríptico
 material educativo
 dia de la voz
 día de la voz
-```
-
----
-
-## Tartamudez / disfemia
-
-```
+adultos
+adulto
+adulto mayor
+tercera edad
+geriatria
+geriatría
+abogados
+abogado
+abogada
+locutores
+locutor
+locutora
+call center
+teleoperador
+teleoperadora
+acv
+ave
+ictus
+stroke
+afasia
+disfagia
+deglucion adultos
+deglución adultos
+parkinson
+alzheimer
+ela
 ejercicios
 ejercicios tartamudez
 trucos
@@ -730,18 +598,6 @@ autoayuda
 chistes
 memes
 frases
-```
-
----
-
-## Deglución / disfagia
-
-Usar con fuerza si se testea deglución online; muchos casos requieren manejo médico presencial.
-
-```
-urgencia
-urgencias
-emergencia
 aspiracion
 aspiración
 neumonia
@@ -766,13 +622,6 @@ maniobra heimlich
 lactancia
 alimentacion bebe
 alimentación bebé
-```
-
----
-
-## Autismo / TEA
-
-```
 vacuna
 vacunas
 causa autismo
@@ -781,8 +630,6 @@ test tea gratis
 test autismo gratis
 grado autismo
 grados autismo
-certificado discapacidad
-credencial discapacidad
 ley tea
 subsidio
 pension discapacidad
@@ -793,38 +640,21 @@ aba gratis
 terapia aba
 pecs gratis
 pictogramas gratis
-```
-
----
-
-## Afasia / ACV
-
-```
 rehabilitacion hospitalaria
 rehabilitación hospitalaria
 kinesioterapia
 fisioterapia
-terapia ocupacional
 cuidador
 cuidadora
 residencia
 hogar adulto mayor
 pension invalidez
 pensión invalidez
-licencia medica
-licencia médica
 ictus sintomas
 ictus síntomas
 acv sintomas
 acv síntomas
 hemiplejia
-```
-
----
-
-## Lectoescritura / conciencia fonológica
-
-```
 cuento
 cuentos
 caligrafia
@@ -842,29 +672,916 @@ tarea
 tareas
 dislexia test gratis
 test dislexia gratis
-```
-
----
-
-## Fono genérica
-
-Agregar cuando se use un grupo amplio tipo `fonoaudiologa online`.
-
-```
-empleo
-sueldo
-universidad
-carrera
-fonasa
-cesfam
-hospital
-presencial
-domicilio
-barato
-economico
-económico
-gratis
-pdf
-que es
-qué es
-```
+oferta de empleo
+ofertas de empleo
+buscar trabajo
+busco trabajo
+oportunidad laboral
+oportunidades laborales
+contrato indefinido
+part time
+part-time
+media jornada
+jornada completa
+aviso clasificado
+avisos clasificados
+laborum
+trabajando.com
+computrabajo
+indeed
+glassdoor
+sueldos fonoaudiologia
+sueldos fonoaudiología
+salario
+salarios
+renta liquida
+renta líquida
+impuestos
+boleta honorarios
+inicio actividades
+sii
+codigo de etica
+código de ética
+colegio de fonoaudiologos
+colegio de fonoaudiólogos
+registro sanitario
+isp
+seremi
+conicyt
+fondecyt
+beca chile
+anid
+postdoctorado
+doctorado
+phd
+maestria
+maestría
+especialidad universitaria
+especialidades fonoaudiologia
+especialidades fonoaudiología
+congreso
+congresos
+simposio
+jornada cientifica
+jornada científica
+paper pubmed
+pubmed
+scielo
+researchgate
+citar
+citas apa
+apa
+norma vancouver
+bibliografia
+bibliografía
+referencias
+plagio
+turnitin
+powerpoint fonoaudiologia
+powerpoint fonoaudiología
+presentacion oral
+presentación oral
+exposicion
+exposición
+seminario
+seminarios
+taller universitario
+clase magistral
+apuntes fonoaudiologia
+apuntes fonoaudiología
+resumen fonoaudiologia
+resumen fonoaudiología
+mapa conceptual
+mapa mental
+flashcards
+anki
+quizlet
+kahoot
+pregunta de prueba
+preguntas de prueba
+ensayo universitario
+trabajo universitario
+tarea universitaria
+informe universitario
+monografia
+monografía
+tesis fonoaudiologia
+tesis fonoaudiología
+proyecto de titulo
+proyecto de título
+portafolio
+portafolio profesional
+competencias laborales
+perfil de egreso
+campo laboral
+campo ocupacional
+salida laboral
+salidas laborales
+donde estudiar fonoaudiologia
+dónde estudiar fonoaudiología
+mejores universidades fonoaudiologia
+mejores universidades fonoaudiología
+puntaje corte
+puntaje de corte
+nem
+ranking nem
+beca excelencia
+gratuidad 2026
+cae
+credito con garantia estatal
+crédito con garantía estatal
+arancel referencial
+arancel real
+matricula
+matrícula
+vacantes universidad
+admision especial
+admisión especial
+via de admision
+vía de admisión
+prais
+pega
+pega universitaria
+como se escribe
+cómo se escribe
+sinonimo
+sinónimo
+sinonimos
+sinónimos
+traduccion
+traducción
+traducir
+ingles
+inglés
+english
+en ingles
+en inglés
+diccionario
+rae
+wikipedia español
+wikihow
+how to
+how-to
+diy
+hazlo tu mismo
+hazlo tú mismo
+paso a paso
+tutorial
+tutoriales
+tips
+tip
+consejos caseros
+trucos caseros
+remedio casero voz
+remedios caseros voz
+remedio para la voz
+remedios para la voz
+remedio disfonia
+remedio disfonía
+cura disfonia
+cura disfonía
+como curar disfonia
+cómo curar disfonía
+como quitar disfonia
+cómo quitar disfonía
+como recuperar la voz rapido
+cómo recuperar la voz rápido
+recuperar voz en un dia
+recuperar voz en un día
+recuperar voz overnight
+voz ronca remedio
+voz ronca casero
+afonia remedio
+afonía remedio
+afonia casera
+afonía casera
+miel limon
+miel limón
+miel y limon
+miel y limón
+te de jengibre
+té de jengibre
+te con miel
+té con miel
+infusion garganta
+infusión garganta
+gárgaras con sal
+gargaras con sal
+gárgaras bicarbonato
+gargaras bicarbonato
+vapor de agua
+inhalar vapor
+humidificador
+aceite esencial
+aceites esenciales
+eucalipto
+menta
+propolis
+própolis
+spray garganta
+spray bucal
+pastilla para chupar
+pastillas para chupar
+caramelo mentolado
+vicks
+vapoRub
+nyquil
+mucosolvan
+bisolvon
+ambroxol
+codeina
+codeína
+jarabe para la tos
+antitussivo
+antitusivo
+antiinflamatorio
+antiinflamatorios
+prednisona
+prednisolona
+dexametasona
+betametasona
+omeprazol
+reflujo remedio
+gaviscon
+ranitidina
+automedicacion
+automedicación
+farmacia
+farmacias
+cruz verde
+salcobrand
+ahumada
+farmacia online
+comprar online
+amazon
+mercadolibre
+aliexpress
+app de voz
+apps de voz
+aplicacion de voz
+aplicación de voz
+entrenador de voz app
+voice training app
+vocular
+singsharp
+vanido
+smule
+karaoke app
+microfono usb
+micrófono usb
+interfaz de audio
+focusrite
+rode nt
+pop filter
+filtro antipop
+auriculares estudio
+monitor estudio
+plugin vocal
+autotune
+melodyne
+izotope
+rx voice
+remover ruido
+quitar ruido voz
+mejorar audio
+editar voz
+adobe audition
+audacity
+garageband
+davinci resolve
+capcut
+canva
+plantilla canva
+template
+templates
+stock photo
+imagen stock
+vector
+icono
+iconos
+png
+svg
+gif
+meme
+sticker
+stickers
+whatsapp sticker
+twitch
+podcast
+podcasts
+spotify
+netflix
+serie
+series
+pelicula
+película
+documental
+documentales
+canal youtube
+suscribirse
+like y suscribete
+like y suscríbete
+viral
+trending
+tendencia
+challenge
+reto viral
+tik tok
+reels instagram
+shorts
+youtube shorts
+live streaming
+directo
+en vivo youtube
+radiografia
+radiografía
+resonancia
+resonancia magnetica
+resonancia magnética
+tomografia
+tomografía
+scanner
+escáner
+ecografia
+ecografía
+analisis de sangre
+análisis de sangre
+examen de sangre
+laboratorio clinico
+laboratorio clínico
+hemograma
+pcr
+antigeno
+antígeno
+test covid
+hisopado
+quarantine
+cuarentena
+aislamiento
+licencia por enfermedad
+reposo medico
+reposo médico
+indicacion medica
+indicación médica
+orden medica
+orden médica
+derivacion
+derivación
+interconsulta
+epicrisis
+ficha clinica
+ficha clínica
+historia clinica
+historia clínica
+consentimiento informado
+protocolo clinico
+protocolo clínico
+guia clinica
+guía clínica
+minsal
+minsal chile
+ges
+auge
+ges auge
+canasta ges
+lista de espera
+lista espera
+hospital publico
+hospital público
+cesfam agenda
+tomar hora cesfam
+reserva hora hospital
+salud responde
+fonasa nivel
+bono consulta
+bono electronico
+bono electrónico
+compra de bono
+isapres
+cotizacion isapre
+cotización isapre
+plan isapre
+copago
+deducible
+reembolso
+liquidacion de reembolso
+liquidación de reembolso
+seguro de salud
+seguro complementarios
+metlife
+consolida
+bice vida
+sura
+colmena
+banmedica
+banmédica
+cruz blanca
+nueva masvida
+esencial
+vidatres
+consalud
+laringectomia
+laringectomía
+tiroidectomia
+tiroidectomía
+amigdalectomia
+amigdalectomía
+adenoidectomia
+adenoidectomía
+microcirugia laringea
+microcirugía laríngea
+fonocirugia
+fonocirugía
+inyeccion cuerdas vocales
+inyección cuerdas vocales
+acido hialuronico cuerdas
+ácido hialurónico cuerdas
+toxina botulinica voz
+toxina botulínica voz
+botox cuerdas vocales
+botox voz
+puncion
+punción
+anestesia general
+quirurgico
+quirúrgico
+postoperatorio
+post operatorio
+preoperatorio
+pre operatorio
+sala de recuperacion
+sala de recuperación
+uci vocal
+intubacion
+intubación
+extubacion
+extubación
+traquea
+tráquea
+estenosis laringea
+estenosis laríngea
+paralisis cuerdas vocales cirugia
+parálisis cuerdas vocales cirugía
+medico otorrino
+médico otorrino
+otorrinolaringologia
+otorrinolaringología
+cita otorrino
+hora otorrino
+agenda otorrino
+clases de canto online
+profesor canto online
+academia canto
+conservatorio
+conservatorio de musica
+conservatorio de música
+escuela de musica
+escuela de música
+licenciatura en musica
+licenciatura en música
+interpretacion musical
+interpretación musical
+canto lirico
+canto lírico
+opera
+ópera
+bel canto
+jazz vocal
+gospel
+coro
+coros
+coral
+ensayo coral
+partitura
+partituras
+solfeo
+teoria musical
+teoría musical
+afinacion
+afinación
+registro vocal canto
+agudos canto
+graves canto
+falsete
+vibrato
+melisma
+riffs and runs
+vocal fry canto
+scream vocal
+growl
+metal vocals
+death metal
+vocal coach online
+coaching para cantantes
+workshop canto
+masterclass canto
+audition
+audicion
+audición
+casting
+casting voz
+casting actores
+doblaje profesional
+escuela de doblaje
+locucion comercial
+locución comercial
+locucion radial
+locución radial
+curso de locucion
+curso de locución
+radio
+radiodifusion
+radiodifusión
+spot publicitario
+voice over
+voiceover
+narracion
+narración
+audiolibro
+audiolibros
+mindfulness
+meditacion
+meditación
+yoga
+yoga de la voz
+breathwork
+respiracion holistica
+respiración holística
+sanacion
+sanación
+energia
+energía
+chakra
+chakras
+reiki vocal
+constelaciones
+numerologia
+numerología
+horoscopo
+horóscopo
+carta astral
+videncia
+vidente
+brujo
+bruja
+hechizo
+hechizos
+amarre
+limpias
+limpia energetica
+limpia energética
+fonoaudiologo infantil
+fonoaudiólogo infantil
+fonoaudiologa infantil
+fonoaudióloga infantil
+terapia del lenguaje niños
+terapia del lenguaje ninos
+retraso del habla
+retraso del lenguaje
+trastorno del lenguaje
+tel
+tdl
+apraxia infantil
+dispraxia
+dislalia
+disglosia
+disartria infantil
+tartamudez infantil
+mutismo selectivo
+integracion escolar
+integración escolar
+pie
+proyecto de integracion
+proyecto de integración
+nee
+necesidades educativas
+educacion especial
+educación especial
+diferencial
+escuela especial
+aula de recursos
+adaptacion curricular
+adaptación curricular
+paa
+prueba de admision academica
+simulacro paes
+preuniversitario
+preu
+ensayo paes
+puntaje lenguaje
+comprension lectora
+comprensión lectora
+velocidad lectora
+lectura comprensiva
+conciencia fonologica ejercicios
+conciencia fonológica ejercicios
+metodo silabico
+método silábico
+abecedario
+vocales
+silabas
+sílabas
+letras
+aprender a leer
+aprender a escribir
+caligrafia niños
+caligrafía niños
+motricidad fina
+estimulacion temprana
+estimulación temprana
+sala cuna chile
+junji
+integra
+chile crece contigo
+chilecrececontigo
+control sano
+carnet de control
+vacunatorio
+carnet vacunas
+pni
+examen de audicion
+examen de audición
+prueba de audicion
+prueba de audición
+screening auditivo
+tamizaje auditivo
+potenciales evocados
+otoemisiones
+oae
+berá
+bera
+hipoacusia neurosensorial
+hipoacusia conductiva
+sordera subita
+sordera súbita
+perdida auditiva
+pérdida auditiva
+bajar audicion
+bajar audición
+no oigo
+no escucho
+zumbido oido
+zumbido oído
+acufeno tratamiento
+acúfeno tratamiento
+tinnitus cure
+audifono precio
+audífono precio
+audifonos chile
+audífonos chile
+gaes
+amplifon
+audioactiva
+centro auditivo
+laboratorio auditivo
+molde auditivo
+pila audifono
+pila audífono
+disfagia orofaringea
+disfagia orofaríngea
+disfagia esofagica
+disfagia esofágica
+trastorno deglucion
+trastorno deglución
+evaluacion deglucion
+evaluación deglución
+videofluoroscopia
+fibroscopia deglucion
+fibroscopia deglución
+espesante
+espesantes
+nectar
+néctar
+consistencia pudding
+dieta disfagia
+alimentacion por sonda
+alimentación por sonda
+peg
+gastrostomia endoscopica
+gastrostomía endoscópica
+ngt
+sng
+atragantamiento bebe
+atragantamiento bebé
+primeros auxilios atragantamiento
+parkinson voz
+parkinson habla
+alzheimer habla
+demencia
+demencias
+ela habla
+esclerosis
+esclerosis multiple
+esclerosis múltiple
+huntington
+miastenia
+miastenia gravis
+paralisis cerebral
+parálisis cerebral
+tea adultos
+autismo adultos
+asperger
+sindrome de asperger
+síndrome de asperger
+tdah adultos
+deficit atencional adultos
+déficit atencional adultos
+rehab neurológica
+rehab neurologica
+neurorehabilitacion
+neurorehabilitación
+centro de rehabilitacion
+centro de rehabilitación
+clinica de rehabilitacion
+clínica de rehabilitación
+demanda
+demandar
+abogado negligencia
+malpractice
+negligencia medica
+negligencia médica
+indemnizacion
+indemnización
+seguro responsabilidad
+reclamo
+reclamos
+sernac
+superintendencia de salud
+denuncia
+denunciar
+juicio
+tribunal
+corte
+poder judicial
+crypto
+criptomoneda
+bitcoin
+nft
+forex
+trading
+apuestas
+casino
+apuesta online
+ganar dinero
+trabajo desde casa
+multinivel
+mlm
+piramide
+pirámide
+estafa
+estafas
+phishing
+hack
+hackear
+password
+contraseña
+vpn gratis
+netflix gratis
+spotify gratis
+cuenta gratis
+crack
+keygen
+warez
+torrent
+piratear
+pirateria
+piratería
+descarga gratis
+pdf gratis
+epub
+mobi
+visa
+pasaporte
+embajada
+consulado
+turismo
+hotel
+vuelos
+pasajes
+booking
+airbnb
+tripadvisor
+españa fonoaudiologia
+españa fonoaudiología
+mexico fonoaudiologia
+méxico fonoaudiología
+argentina fonoaudiologia
+argentina fonoaudiología
+colombia fonoaudiologia
+colombia fonoaudiología
+peru fonoaudiologia
+perú fonoaudiología
+madrid fonoaudiologo
+madrid fonoaudiólogo
+barcelona fonoaudiologo
+barcelona fonoaudiólogo
+buenos aires fonoaudiologo
+buenos aires fonoaudiólogo
+lima fonoaudiologo
+lima fonoaudiólogo
+bogota fonoaudiologo
+bogotá fonoaudiólogo
+cdmx fonoaudiologo
+cdmx fonoaudiólogo
+lo mas barato
+lo más barato
+mas economico
+más económico
+precio bajo
+precios bajos
+oferta 2x1
+2x1
+promo
+promociones
+cupon descuento
+cupón descuento
+codigo descuento
+código descuento
+black friday
+cyber monday
+cyberday
+prime day
+envio gratis
+envío gratis
+gratis chile
+sin pagar
+demo gratis
+prueba gratis
+trial
+freemium
+open source
+codigo abierto
+código abierto
+foto
+fotos
+imagen
+imagenes
+imágenes
+dibujo
+dibujos
+esquema
+esquemas
+anatomia cuerdas vocales
+anatomía cuerdas vocales
+diagrama laringe
+laringe anatomia
+laringe anatomía
+cuerdas vocales imagen
+cuerdas vocales foto
+infografia
+infografía
+poster
+póster
+afiche informativo
+triptico informativo
+tríptico informativo
+folleto
+folletos
+powerpoint sintomas
+powerpoint síntomas
+ppt sintomas
+ppt síntomas
+osteopata
+osteópata
+quiropraxia
+quiropraxista
+acupuntura
+acupunturista
+homeopata
+homeópata
+naturopata
+naturópata
+herbolario
+farmacia homeopatica
+farmacia homeopática
+centro holistico
+centro holístico
+spa
+masajes
+masaje
+relajacion
+relajación
+aromaterapia
+cromoterapia
+hipnoterapia
+hipnosis clinica
+hipnosis clínica
+soporte tecnico
+soporte técnico
+servicio tecnico
+servicio técnico
+reparacion
+reparación
+garantia
+garantía
+manual de usuario
+firmware
+driver
+drivers
+windows
+macos
+android
+iphone
+samsung
+huawei
+xiaomi

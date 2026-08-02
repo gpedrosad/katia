@@ -269,7 +269,18 @@ Landing: `/voz-online/paralisis-cordal-rehabilitacion-online`
 "fonoaudiologa por videollamada"
 "terapia fonoaudiologica online adultos"
 "consulta fonoaudiologo online"
+"fonoaudiologa online"
+"fonoaudiologo online"
+"fonoaudiologia online"
+"fonoaudiologa chile online"
+"terapia fonoaudiologica online"
+"fonoaudiologa videollamada"
+"fonoaudiologo por videollamada"
+"consulta fonoaudiologica online"
 ```
+
+Landing Ads: `/ads/fono-adultos-online`  
+Docs: `ads/02-fono-adultos-online/README.md`
 
 ---
 

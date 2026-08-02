@@ -13,7 +13,7 @@ export default function AdsLayout({ children }: { children: React.ReactNode }) {
             {BUSINESS_NAME}
           </Link>
           <span className="text-xs font-medium text-stone-500">
-            Voz online · Chile
+            Online · Chile
           </span>
         </div>
       </header>

@@ -1,7 +1,8 @@
 # Patrón landing Google Ads
 
-Usar para cada cluster. Ejemplo vivo: `/ads/voz-disfonia-online`.  
-Craft Impeccable (2026-08-01): [`01-voz-disfonia-online/CRAFT.md`](./01-voz-disfonia-online/CRAFT.md).
+Usar para cada cluster. Ejemplos vivos: `/ads/voz-disfonia-online`, `/ads/fono-adultos-online`.  
+Craft Impeccable (voz): [`01-voz-disfonia-online/CRAFT.md`](./01-voz-disfonia-online/CRAFT.md).  
+Docs fono adultos: [`02-fono-adultos-online/README.md`](./02-fono-adultos-online/README.md).
 
 ---
 
@@ -178,3 +179,5 @@ app/ads/_components/AdsPatientQuotes.tsx
 | “online” / “videollamada” | visible above the fold |
 | Final URL | `https://www.katialafono.cl/ads/{slug}` |
 | Negativas | `GOOGLEADS/google-ads-negativas-online.md` |
+| Playbook Search | `GOOGLEADS/google-ads-search-campana-playbook.md` |
+| Keywords ranking | `GOOGLEADS/google-ads-keywords-online-ranking.md` |

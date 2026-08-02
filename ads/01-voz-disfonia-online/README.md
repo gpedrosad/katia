@@ -16,6 +16,29 @@
 **H2:** Tratamiento Disfonía · Videollamada  
 **H2:** Todo Chile  
 **Desc:** Fonoaudióloga Katia Domínguez. Ayuda con tu voz por WhatsApp.  
+**URL:** `https://www.katialafono.cl/ads/voz-disfonia-online`  
+**Playbook campaña:** [`../GOOGLEADS/google-ads-search-campana-playbook.md`](../GOOGLEADS/google-ads-search-campana-playbook.md)
+
+### Títulos RSA (≤30 caracteres) — 2026-08-02
+
+```
+Terapia de Voz Online
+Tratamiento Disfonía Online
+Voz Online por Videollamada
+Fonoaudióloga de Voz Online
+Rehabilitación Vocal Online
+Atiende en Todo Chile
+Agenda Hoy por WhatsApp
+```
+
+### Descripciones RSA (≤90 caracteres) — 2026-08-02
+
+```
+Fonoaudióloga Katia Domínguez. Terapia de voz y disfonía por videollamada en todo Chile.
+¿Voz ronca o cansada? Evaluación online y plan a tu medida. Escríbenos por WhatsApp.
+Rehabilitación vocal sin traslados. Atención por videollamada. Te respondemos hoy.
+Valoración 5,0 en Google. Agenda tu terapia de voz online y empieza a cuidar tu voz.
+```
 
 ## CTAs (copy)
 
