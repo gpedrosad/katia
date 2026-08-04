@@ -63,7 +63,21 @@ Valoración 5,0 en Google. Empieza tu terapia de fatiga vocal online hoy.
 "voz cansada al hablar tratamiento"
 ```
 
+## Servicios a promocionar (≤25 caracteres)
+
+URL de cada uno: `https://www.katialafono.cl/ads/fatiga-vocal-online`
+
+```
+Tratamiento fatiga vocal
+Voz cansada online
+Terapia vocal cansancio
+Evaluación vocal online
+Cuidado de la voz
+Consulta por videollamada
+```
+
 ## Notas
 
 - Prioridad por conversión (dolor funcional), no por volumen de síntoma genérico.
 - Negativas: `gratis`, `ejercicios pdf`, `remedio casero`, `que es`, `qué es`.
+- Al armar el grupo en UI: keywords + RSA + **servicios** (playbook).

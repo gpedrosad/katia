@@ -1,6 +1,6 @@
 # Playbook: crear campaña Search (Ads online)
 
-**Actualizado:** 2026-08-02  
+**Actualizado:** 2026-08-04  
 **Cuenta:** Katialafono `2147001598`  
 **Uso:** cada vez que abras un cluster nuevo, pide al agente: *“campaña Search para cluster X según playbook”*.
 
@@ -32,10 +32,11 @@ Orden de clusters: `google-ads-keywords-online-ranking.md`.
 ### Grupo
 | Campo | Valor |
 |-------|--------|
-| Nombre | Igual al cluster (ej. `Voz disfonía online`) |
+| Nombre | Igual al cluster (ej. `fatiga-vocal`) |
 | URL final | `https://www.katialafono.cl/ads/{slug}` |
 | Keywords | Bloque del ranking del cluster (frase) |
-| Negativas | Base cuenta + bloque del cluster (adultos/voz, infantil, etc.) → `google-ads-negativas-online.md` |
+| Negativas | Base cuenta + extras del cluster → `google-ads-negativas-online.md` |
+| Servicios a promocionar | **Siempre** entregar 4–6 nombres ≤25 caracteres + misma URL del grupo (asset Servicios / “servicios para promocionar”) |
 
 ### RSA (anuncio)
 | Pieza | Regla |
@@ -45,10 +46,10 @@ Orden de clusters: `google-ads-keywords-online-ranking.md`.
 | Message-match | H1/H2 del README del cluster (`ads/NN-slug/README.md`) |
 | CTA implícito | WhatsApp / videollamada / online Chile |
 
-### Assets de negocio (cuenta)
+### Assets de negocio (cuenta / grupo)
 | Campo | Valor |
 |-------|--------|
-| Único / servicio | Copy corto del cluster (ver README Ads) |
+| Servicios a promocionar | Lista corta del cluster en `ads/NN-slug/README.md` · máx. **25** caracteres c/u · URL = landing Ads del grupo |
 | Tel | `+56995497838` solo si mides llamadas |
 | GBP | Ficha Katia (Maps cid) |
 | Tag sitio | Ya en web · doc `google-ads-tag-conversiones.md` |
@@ -58,13 +59,28 @@ Orden de clusters: `google-ads-keywords-online-ranking.md`.
 ```
 Según GOOGLEADS/google-ads-search-campana-playbook.md y el cluster {NOMBRE}:
 1) Keywords frase a pegar
-2) Negativas (qué bloques del md)
+2) Negativas (lista corta a agregar / ya cubiertas)
 3) URL final
 4) 7–15 títulos RSA ≤30 caracteres
 5) 2–4 descripciones ≤90 caracteres
-6) Checklist UI resumido
+6) Servicios a promocionar: 4–6 nombres ≤25 caracteres + URL del grupo
+7) Checklist UI resumido
 No mutar la API Ads hasta que lo pida.
 ```
+
+## Entregable al armar un grupo (obligatorio)
+
+Cada vez que se prepare un conjunto de anuncios, el agente debe pegar:
+
+1. Nombre del grupo  
+2. URL final  
+3. Keywords (frase)  
+4. Títulos RSA  
+5. Descripciones RSA  
+6. **Servicios a promocionar** (4–6 · ≤25)  
+7. Negativas extra del cluster (si aplica)  
+
+Documentar (1)–(6) también en `ads/NN-slug/README.md`.
 
 ## Fuentes por cluster
 
@@ -72,7 +88,7 @@ No mutar la API Ads hasta que lo pida.
 |------|--------|
 | Keywords + ranking | `google-ads-keywords-online-ranking.md` |
 | Negativas | `google-ads-negativas-online.md` |
-| Landing / H1 anuncio | `ads/NN-slug/README.md` + `ads/PATRON-LANDING.md` |
+| Landing / RSA / servicios | `ads/NN-slug/README.md` + `ads/PATRON-LANDING.md` |
 | Tag / conversión | `google-ads-tag-conversiones.md` |
 | API lectura | `google-ads-api-setup.md` · `npm run google-ads:report` |
 

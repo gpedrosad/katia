@@ -112,7 +112,7 @@ Ejemplo voz: `reviewIndexes={[5, 4, 0, 1, 2, 3]}`.
 | Copy CTA | Cluster-specific; voz: hero/sticky “Quiero ayuda con mi voz” · final “Empezar por WhatsApp” |
 | Foto | `/katia-ads-hero.jpg` |
 | Geo | país (Chile), **sin ciudades** en H1 |
-| Docs cluster | `ads/NN-slug/README.md` (+ `CRAFT.md` si aplica) |
+| Docs cluster | `ads/NN-slug/README.md` (+ `CRAFT.md` si aplica) — incluir RSA, keywords y **servicios a promocionar** ≤25 |
 
 ---
 
@@ -166,7 +166,7 @@ app/ads/_components/AdsPatientQuotes.tsx
 [ ] AdsStickyCta + sin CTA mid
 [ ] FAQ ×3
 [ ] WA_MSG: cluster + "llegué por Google"
-[ ] ads/{NN}-{slug}/README.md
+[ ] ads/{NN}-{slug}/README.md (RSA + keywords + **servicios a promocionar** ≤25)
 [ ] Probar desktop (grilla 6) + mobile (2 reseñas + sticky)
 ```
 

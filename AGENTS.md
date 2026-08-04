@@ -89,7 +89,7 @@ npm run pagespeed:report
 | Landings Ads | `ads/PATRON-LANDING.md` (reseñas + `GoogleMark`) · craft `ads/01-voz-disfonia-online/CRAFT.md` |
 | Tag / conversiones Ads | `GOOGLEADS/google-ads-tag-conversiones.md` · `AW-18364805586` · tel `+56995497838` |
 | Ads API (lectura) | `GOOGLEADS/google-ads-api-setup.md` · `npm run google-ads:report` · customer `2147001598` |
-| Playbook campaña Search | `GOOGLEADS/google-ads-search-campana-playbook.md` |
+| Playbook campaña Search | `GOOGLEADS/google-ads-search-campana-playbook.md` (grupo = keywords + RSA + **servicios ≤25**) |
 | GSC informe | `npm run gsc:report:md` → `docs/gsc-informe-*.md` |
 
 ## Reglas de trabajo
