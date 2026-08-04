@@ -1,8 +1,9 @@
 # Patrón landing Google Ads
 
-Usar para cada cluster. Ejemplos vivos: `/ads/voz-disfonia-online`, `/ads/fono-adultos-online`.  
+Usar para cada cluster. Ejemplos vivos: `/ads/voz-disfonia-online`, `/ads/fono-adultos-online`, `/ads/fatiga-vocal-online`.  
 Craft Impeccable (voz): [`01-voz-disfonia-online/CRAFT.md`](./01-voz-disfonia-online/CRAFT.md).  
-Docs fono adultos: [`02-fono-adultos-online/README.md`](./02-fono-adultos-online/README.md).
+Docs fono adultos: [`02-fono-adultos-online/README.md`](./02-fono-adultos-online/README.md).  
+Docs fatiga vocal: [`04-fatiga-vocal-online/README.md`](./04-fatiga-vocal-online/README.md).
 
 ---
 

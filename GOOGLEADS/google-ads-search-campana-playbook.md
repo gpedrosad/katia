@@ -13,7 +13,7 @@ Keywords: **solo frase** `"..."`.
 Geo: **Chile**. Red: **solo Búsqueda**.
 
 Orden de clusters: `google-ads-keywords-online-ranking.md`.  
-**Landings Ads:** Voz / disfonía → `/ads/voz-disfonia-online` · Docentes → `/ads/terapia-vocal-docentes-online` · Fono adultos → `/ads/fono-adultos-online`.
+**Landings Ads:** Voz / disfonía → `/ads/voz-disfonia-online` · Docentes → `/ads/docentes-voz` · Fono adultos → `/ads/fono-adultos-online` · Fatiga → `/ads/fatiga-vocal-online`.
 
 ## Checklist creación (UI Google Ads)
 

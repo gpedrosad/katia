@@ -33,6 +33,7 @@ Actualizado: **2026-08-01**
 - Tag Google Ads: `AW-18364805586` + conversión Contacto `AW-18364805586/rBy6CNrQsNocENLjgrVE` en clic WhatsApp · doc `GOOGLEADS/google-ads-tag-conversiones.md`
 - Ads API (lectura): customer `2147001598` (acceso directo; no LOGIN MCC) · `.secrets` symlink · `npm run google-ads:report` · doc `GOOGLEADS/google-ads-api-setup.md`
 - Playbook Search: `GOOGLEADS/google-ads-search-campana-playbook.md` (1 campaña/cluster; frase; landing `/ads/...`)
+- Informe Ads (2026-08-04): `docs/google-ads-informe-2026-08-04.md` — 56 imp / 3 clics / 2 conv · gana `fono-adultos` · ~90% IS perdido por presupuesto · negativizar AI_MAX (integramedica, etc.)
 - Skill: `.agents/skills/impeccable` (`animate` / `distill` / `polish` / `optimize`)
 
 ## GSC / SEO orgánico (último corte)

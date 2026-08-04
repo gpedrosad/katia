@@ -111,7 +111,9 @@ Landing SEO: `/voz-online/terapia-vocal-docentes-profesores`
 "voz cansada al hablar tratamiento"
 ```
 
-Landing: `/voz-online/fatiga-vocal-tratamiento-online`
+Landing Ads: `/ads/fatiga-vocal-online`  
+Landing SEO: `/voz-online/fatiga-vocal-tratamiento-online`  
+Docs: `ads/04-fatiga-vocal-online/README.md`
 
 ---
 
