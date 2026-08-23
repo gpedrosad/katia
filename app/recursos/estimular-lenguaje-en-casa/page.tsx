@@ -36,13 +36,16 @@ const faqs = [
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Cómo Estimular el Lenguaje en Casa | Guía para Padres",
+  title:
+    "Cómo Estimular el Lenguaje en Casa | Actividades por Edad — Fonoaudióloga",
   description:
-    "Ideas simples para estimular el lenguaje en casa según la edad del niño. Juegos, rutinas y qué evitar si habla poco o le cuesta expresarse.",
+    "Actividades simples para estimular el lenguaje en casa según la edad del niño (1–5 años). Juegos, rutinas y errores comunes. Guía de una fonoaudióloga con +20 años.",
   keywords: [
     "estimular lenguaje en casa",
+    "terapia de lenguaje en casa",
     "cómo ayudar a mi hijo a hablar",
-    "ejercicios de lenguaje para niños",
+    "actividades para estimular el lenguaje",
+    "ejercicios de lenguaje para niños en casa",
     "estimulación del lenguaje infantil",
   ],
   ogType: "article",
@@ -53,7 +56,7 @@ const articleJsonLd = {
   "@type": "Article",
   headline: "Cómo estimular el lenguaje en casa sin presionar a tu hijo",
   description:
-    "Guía práctica con ideas para estimular el lenguaje infantil en el hogar según la edad del niño.",
+    "Guía práctica con actividades para estimular el lenguaje infantil en el hogar según la edad del niño (1 a 5 años).",
   author: {
     "@type": "Person",
     name: "Katia Domínguez",
@@ -68,7 +71,7 @@ const articleJsonLd = {
     "@id": `${SITE_URL}${PAGE_PATH}`,
   },
   datePublished: "2026-05-20",
-  dateModified: "2026-05-20",
+  dateModified: "2026-08-23",
 };
 
 const faqJsonLd = {

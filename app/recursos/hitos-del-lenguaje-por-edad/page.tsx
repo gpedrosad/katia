@@ -13,6 +13,11 @@ const WHATSAPP_HREF = whatsappUrl(
 
 const faqs = [
   {
+    question: "¿A qué edad empiezan a hablar los bebés?",
+    answer:
+      "La mayoría de los bebés dice sus primeras palabras con significado (como «mamá» o «agua») entre los 11 y 14 meses. Antes de eso balbucean con entonación y usan gestos. Si a los 15–18 meses no dice ninguna palabra con significado, es recomendable consultar.",
+  },
+  {
     question: "¿Es normal que mi hijo de 2 años hable poco?",
     answer:
       "Algunos niños de 2 años hablan menos que otros y alcanzan a sus pares con el tiempo. Sin embargo, a esa edad suele esperarse un vocabulario de unas 50 palabras y frases de dos palabras. Si habla muy poco, no se entiende en casa o no combina palabras, conviene observar con atención y considerar una evaluación.",
@@ -36,14 +41,17 @@ const faqs = [
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Hitos del Lenguaje por Edad | Guía para Padres",
+  title:
+    "¿A qué edad hablan los niños? Hitos del lenguaje por edad — Katia Domínguez",
   description:
-    "Qué esperar del lenguaje de un niño a los 12 meses, 2 años, 3 años, 4 años y 5 años. Guía práctica con señales de alerta.",
+    "A los 12 meses dicen sus primeras palabras, a los 2 años unas 50 palabras y frases de 2 palabras. Guía con hitos por edad y señales de alerta de una fonoaudióloga con +20 años.",
   keywords: [
+    "a qué edad hablan los niños",
+    "a qué edad empiezan a hablar los bebés",
     "hitos del lenguaje por edad",
+    "cuántas palabras dice un niño de 2 años",
     "desarrollo del lenguaje infantil",
-    "qué debe decir un niño por edad",
-    "lenguaje 2 años",
+    "cuándo hablan los bebés",
   ],
   ogType: "article",
 });
@@ -51,9 +59,9 @@ export const metadata = buildPageMetadata({
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Hitos del lenguaje por edad: qué esperar y cuándo consultar",
+  headline: "¿A qué edad empiezan a hablar los niños? Hitos del lenguaje por edad",
   description:
-    "Guía práctica sobre el desarrollo del lenguaje infantil por edad, con señales de alerta y cuándo pedir evaluación fonoaudiológica.",
+    "Guía de una fonoaudióloga sobre cuándo hablan los niños: hitos por edad (12 meses a 5 años), señales de alerta y cuándo evaluar.",
   author: {
     "@type": "Person",
     name: "Katia Domínguez",
@@ -68,7 +76,7 @@ const articleJsonLd = {
     "@id": `${SITE_URL}${PAGE_PATH}`,
   },
   datePublished: "2026-05-20",
-  dateModified: "2026-05-20",
+  dateModified: "2026-08-23",
 };
 
 const faqJsonLd = {
@@ -112,12 +120,13 @@ export default function HitosDelLenguajePorEdadPage() {
                 Desarrollo del lenguaje
               </span>
               <h1 className="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl">
-                Hitos del lenguaje por edad: qué esperar y cuándo consultar
+                ¿A qué edad empiezan a hablar los niños?
               </h1>
               <p className="text-xl text-gray-600">
-                Cada niño tiene su propio ritmo, pero existen hitos orientativos
-                que ayudan a saber qué suele ocurrir en cada etapa y cuándo
-                conviene pedir orientación en{" "}
+                A los 12 meses la mayoría dice sus primeras palabras; a los 2
+                años, unas 50 palabras y frases de dos palabras. Cada niño tiene
+                su ritmo, pero existen hitos orientativos que ayudan a saber
+                cuándo consultar a una fonoaudióloga en{" "}
                 <strong>Chillán, Ñuble</strong>.
               </p>
             </header>

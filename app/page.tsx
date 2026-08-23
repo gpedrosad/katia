@@ -36,9 +36,9 @@ const WHATSAPP_LINK =
   "https://wa.me/56995497838?text=Hola%2C%20quiero%20agendar%20una%20hora";
 const PAGE_PATH = "/";
 const HOME_TITLE =
-  "Fonoaudióloga Infantil Chillán | Diagnóstico en 60 min";
+  "Fonoaudióloga en Chillán — Katia Domínguez | Evaluación infantil + informe";
 const HOME_DESCRIPTION =
-  "¿Tu hijo habla poco o no se entiende? Evaluación presencial con informe y plan. +20 años, U. de Chile. Agenda por WhatsApp hoy.";
+  "Fonoaudióloga y fonoaudióloga infantil en Chillán, Ñuble. Evaluación del lenguaje con informe y plan de tratamiento. +20 años, U. de Chile. Agenda por WhatsApp.";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
@@ -46,9 +46,10 @@ export const metadata = buildPageMetadata({
   description: HOME_DESCRIPTION,
   keywords: [
     "fonoaudióloga Chillán",
-    "fonoaudiología Chillán",
     "fonoaudiólogo Chillán",
-    "evaluación fonoaudiológica infantil",
+    "fonoaudiología Chillán",
+    "fonoaudiología infantil Chillán",
+    "evaluación fonoaudiológica infantil Chillán",
     "terapia de lenguaje Chillán",
   ],
 });
@@ -133,15 +134,16 @@ export default function Home() {
                   Fonoaudióloga en Chillán
                 </h1>
                 <p className="mb-4 text-2xl font-medium text-rose-600 sm:text-3xl">
-                  Katia Domínguez
+                  Katia Domínguez — Fonoaudiología infantil y de voz
                 </p>
                 <p
                   data-speakable
                   className="mb-8 text-xl leading-relaxed text-gray-600"
                 >
-                  Especialista en evaluación y tratamiento de trastornos del
-                  lenguaje y comunicación en niños. Más de 20 años de
-                  experiencia. Atención presencial en Chillán.
+                  Fonoaudióloga con más de 20 años de experiencia clínica en
+                  Chillán, Ñuble. Evaluación, diagnóstico y tratamiento de
+                  trastornos del lenguaje, habla y comunicación en niños.
+                  También atención de voz online para todo Chile.
                 </p>
 
                 {/* CTAs */}

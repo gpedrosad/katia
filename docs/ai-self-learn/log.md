@@ -4,6 +4,42 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 
 ---
 
+## 2026-08-23
+
+- SEO/GEO | Análisis 90d GSC: 180 queries, 243 combos query+page, 7 oportunidades priorizadas | Canvas `gsc-seo-geo-opportunities`
+- SEO | Home: title "Fonoaudióloga en Chillán — Katia Domínguez | Evaluación infantil + informe" · keywords +fonoaudiólogo +fonoaudiología infantil | CTR SERP mejorado
+- SEO | Hitos: H1 → "¿A qué edad empiezan a hablar los niños?" · title captura "a qué edad hablan" (pos ~2, sin página ad-hoc hasta ahora) | Captar long-tail informacional
+- SEO | TEL: title → "TEL: ¿Se Cura?" · H1 responde la pregunta directamente · keywords "tel se cura" | Pos ~8 con 40 imp
+- SEO | PIE: FAQ JSON-LD schema añadido · title + keywords optimizados | 125 imp / 9 clics, facilitar rich results
+- SEO | Estimular en casa: title "Actividades por Edad" · keywords +terapia de lenguaje en casa | Captar padres informacionales
+- SEO | Voz hub: title "Especialista en Voz Online — Disfonía, Nódulos, Fatiga" · keywords explícitos | Intención comercial cercana al top
+- SEO | Evaluación: title "60 min + Informe" · FAQ nueva "¿Qué es?" + "¿A qué edad evaluar?" · FAQ schema ampliado | Pos 29, contenido para escalar
+- Ads | OAuth renovado OK · informe 30d: 319 imp / 34 clic / $29.394 / 6 conv | `docs/google-ads-informe-2026-08-23.md`
+- Ads | **0 conv desde 7 ago** · ~$20.9k gastados sin lead nuevo | Urgente cortar gasto muerto
+- Ads | `docentes-voz` $8.611 / 9 clic / 0 conv · `fonoaudiologia online` $8.743 / 10 / 0 | Pausar o bajar fuerte
+- Ads | AI Max OFF · presupuesto $5.000 · IS 30% · lost budget 64% · lost rank 6% · LIMITED | Cuello otra vez presupuesto, pero sin conversión
+- Ads | Motor que convierte: `fono-adultos` 5/6 · `fatiga-vocal` 1 · `voz-disfonia` 0 clic | Mantener foco adultos
+- Ads | **Mutaciones aplicadas (23 ago):** RSA swap (819480015118 ON, 820647565901 OFF) · pausados docentes-voz + voz-disfonia · bidding → Manual CPC (eCPC OFF) · 4 keywords EXACT (fonoaudiologo/a online $1500, fonoaudiología online $1500, fatiga vocal tratamiento $1200) · bid `fonoaudiologia online` bajado $500 · 8 negativas nuevas agregadas
+
+## 2026-08-11
+
+- Ads | RSA `fono-adultos` nuevo `820647565901` (15 títulos query-match); anterior `819480015118` PAUSED | Lista en `ads/02-fono-adultos-online/README.md`
+- Ads | AI Max apagado en `search-adultos-online` (`enable_ai_max=false`) | Primero OPTED_OUT `TEXT_ASSET_AUTOMATION` (bundling REQUIRED bloqueaba el off)
+- Ads | Revisión all-time: 150 imp / 13 clics / 6 conv / $9.870 · 0 conv nuevas desde 7 ago | `docs/google-ads-informe-2026-08-11.md`
+- Ads | Cuello: ya no presupuesto (0% lost) sino BIDDING_STRATEGY_LIMITED · rank lost 21,6% · IS 78% | Revisar techo CPC / puja
+- Ads | `fonoaudiologia online` 3 clic / $2.281 / 0 conv | Vigilar o bajar puja keyword
+- Ads | `docentes-voz` sigue $1.924 / 0 conv (sin pausar) | Pendiente decisión
+
+## 2026-08-06
+
+- Ads | Negativas frase API en `search-adultos-online`: clinica alemana, clínica alemana, indisa, santa maria/maría, davila/dávila, redsalud | Mutación OK (humano pidió)
+- Ads | Informe API 7d/30d iguales: 89 imp / 9 clics / 5 conv / $6.571 | `docs/google-ads-informe-2026-08-06.md`
+- Ads | Presupuesto diario subió a $5.000; IS 12,8% · 85% perdido por presupuesto | Aún cuello de botella
+- Ads | `fono-adultos` 5/5 conv (CPA ~$929); keywords `fonoaudiologa/o online` | Mantener foco
+- Ads | `docentes-voz` $1.924 / 0 conv | Pausar o bajar CPC
+- Ads | Negativas AI_MAX (integramedica, etc.) del 4 ago aún visibles | Aplicar en campaña
+- Ads | OAuth refresh ~7d (app testing) | Re-auth con `npm run google-ads:auth` cuando `invalid_grant`
+
 ## 2026-08-01
 
 - GBP | `g.page/r/CQTz_OxX_3IBEAE` redirige a google.com (roto) | Reemplazado por `maps?cid=8785110851903218280` (ficha con 42 reseñas, verificado en browser)

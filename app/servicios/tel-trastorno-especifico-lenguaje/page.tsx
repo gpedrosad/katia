@@ -12,15 +12,18 @@ const WHATSAPP_HREF = whatsappUrl("Hola, quiero consultar por TEL");
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Tratamiento TEL en Chillán | Trastorno Específico del Lenguaje",
+  title: "TEL: ¿Se Cura? Tratamiento del Trastorno Específico del Lenguaje — Chillán",
   description:
-    "Tratamiento especializado del Trastorno Específico del Lenguaje (TEL) en niños en Chillán. Diagnóstico, terapia intensiva y apoyo escolar. Fonoaudióloga con +20 años de experiencia.",
-  keywords: ["TEL Chillán",
-    "trastorno específico del lenguaje",
+    "El TEL no se cura pero mejora mucho con terapia intensiva. Diagnóstico, tratamiento y apoyo escolar para niños con Trastorno Específico del Lenguaje (TDL) en Chillán. +20 años de experiencia.",
+  keywords: [
+    "TEL se cura",
+    "trastorno específico del lenguaje se cura",
     "TEL tratamiento",
-    "fonoaudióloga TEL Chillán",
+    "TEL Chillán",
     "trastorno del desarrollo del lenguaje",
-    "TDL tratamiento",],
+    "TDL tratamiento",
+    "fonoaudióloga TEL Chillán",
+  ],
 });
 
 const characteristics = [
@@ -125,11 +128,13 @@ export default function TELPage() {
                   💬 Trastorno del neurodesarrollo
                 </span>
                 <h1 className="mb-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
-                  Tratamiento del TEL en Chillán
+                  TEL: ¿se cura? Tratamiento en Chillán
                 </h1>
                 <p className="mb-6 text-xl text-gray-600">
-                  Trastorno Específico del Lenguaje: diagnóstico, terapia
-                  intensiva y coordinación con el colegio para apoyar a tu hijo.
+                  El Trastorno Específico del Lenguaje no desaparece solo, pero
+                  con terapia intensiva y temprana los niños mejoran
+                  significativamente. Diagnóstico, tratamiento y coordinación
+                  escolar en Chillán.
                 </p>
                 <ul className="mb-8 space-y-3 text-gray-700">
                   <li className="flex items-start gap-3">

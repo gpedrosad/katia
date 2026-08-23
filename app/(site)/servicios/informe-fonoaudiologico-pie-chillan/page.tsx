@@ -24,9 +24,18 @@ const faqItems = [
 
 export const metadata = buildPageMetadata({
   path: "/servicios/informe-fonoaudiologico-pie-chillan",
-  title: "Informe Fonoaudiológico para PIE y Escuelas de Lenguaje | Chillán",
+  title:
+    "Informe Fonoaudiológico PIE y Escuelas de Lenguaje — Chillán | Katia Domínguez",
   description:
-    "Informes fonoaudiológicos válidos para Programa de Integración Escolar (PIE) y postulación a escuelas de lenguaje en Chillán. Diagnóstico con test estandarizados.",
+    "Informes fonoaudiológicos con test estandarizados (TEPROSIF-R, TECAL, STSG) para PIE y escuelas de lenguaje en Chillán. Decreto 170. Evaluación en 60 min + informe. Agenda por WhatsApp.",
+  keywords: [
+    "informe fonoaudiológico PIE",
+    "informe fonoaudiológico escuela de lenguaje",
+    "evaluación PIE Chillán",
+    "informe fonoaudiologico",
+    "decreto 170 informe",
+    "fonoaudióloga PIE Chillán",
+  ],
 });
 
 export default function InformePiePage() {
@@ -50,11 +59,28 @@ export default function InformePiePage() {
     areaServed: "Chillán, Región de Ñuble",
   };
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <main className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
         <Breadcrumbs

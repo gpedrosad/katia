@@ -13,15 +13,20 @@ const WHATSAPP_HREF = whatsappUrl("Hola, quiero agendar una evaluación fonoaudi
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Evaluación Fonoaudiológica en Chillán | Diagnóstico de Lenguaje",
+  title:
+    "Evaluación Fonoaudiológica Infantil en Chillán — 60 min + Informe | Katia Domínguez",
   description:
-    "Evaluación fonoaudiológica completa en Chillán para niños. Diagnóstico de lenguaje, habla y comunicación con informe detallado. Primera consulta con plan de tratamiento. Agendar hora.",
-  keywords: ["evaluación fonoaudiológica Chillán",
+    "¿Qué es una evaluación fonoaudiológica? Sesión de 60 min en Chillán con test estandarizados, diagnóstico del lenguaje y habla, informe escrito y plan de tratamiento. +20 años, U. de Chile. Agenda hoy.",
+  keywords: [
+    "evaluación fonoaudiológica",
+    "evaluación fonoaudiológica infantil",
+    "evaluación fonoaudiológica Chillán",
+    "qué es una evaluación fonoaudiológica",
     "diagnóstico lenguaje niños",
-    "evaluación del habla",
-    "fonoaudióloga evaluación Chillán",
+    "evaluación del habla infantil",
     "test de lenguaje infantil",
-    "informe fonoaudiológico",],
+    "informe fonoaudiológico",
+  ],
 });
 
 const evaluationIncludes = [
@@ -88,6 +93,14 @@ const faqJsonLd = {
   mainEntity: [
     {
       "@type": "Question",
+      name: "¿Qué es una evaluación fonoaudiológica?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Es un proceso clínico en el que una fonoaudióloga aplica pruebas estandarizadas y observación para determinar si un niño tiene un trastorno del lenguaje, habla o comunicación. Incluye entrevista a padres, evaluación directa y un informe con diagnóstico y plan de tratamiento.",
+      },
+    },
+    {
+      "@type": "Question",
       name: "¿Cuánto dura una evaluación fonoaudiológica?",
       acceptedAnswer: {
         "@type": "Answer",
@@ -108,6 +121,14 @@ const faqJsonLd = {
       acceptedAnswer: {
         "@type": "Answer",
         text: "El informe sirve para conocer las fortalezas y dificultades de tu hijo, obtener un diagnóstico claro, presentar en el colegio para apoyo o adecuaciones, y como base para el plan de tratamiento.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿A qué edad se puede hacer una evaluación fonoaudiológica?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Se puede evaluar desde los 18-24 meses si hay señales de alerta. No existe una edad mínima estricta: si la familia o el pediatra tienen dudas sobre el desarrollo comunicativo, conviene consultar sin esperar.",
       },
     },
   ],
@@ -408,6 +429,22 @@ export default function EvaluacionFonoaudiologicaPage() {
               Preguntas frecuentes sobre la evaluación
             </h2>
             <div className="space-y-4">
+              <details className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm" open>
+                <summary className="flex cursor-pointer items-start justify-between gap-4 font-semibold text-gray-900">
+                  <span>¿Qué es una evaluación fonoaudiológica?</span>
+                  <span className="flex-shrink-0 text-rose-500 transition-transform group-open:rotate-180">
+                    ▼
+                  </span>
+                </summary>
+                <p className="mt-4 text-gray-600">
+                  Es un proceso clínico en el que una fonoaudióloga aplica
+                  pruebas estandarizadas y observación para determinar si un niño
+                  tiene un trastorno del lenguaje, habla o comunicación. Incluye
+                  entrevista a padres, evaluación directa y un informe con
+                  diagnóstico y plan de tratamiento.
+                </p>
+              </details>
+
               <details className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
                 <summary className="flex cursor-pointer items-start justify-between gap-4 font-semibold text-gray-900">
                   <span>¿Cuánto dura una evaluación fonoaudiológica?</span>
@@ -464,6 +501,21 @@ export default function EvaluacionFonoaudiologicaPage() {
                   El valor de la evaluación incluye la sesión completa y el
                   informe escrito. Escríbeme por WhatsApp y te envío la
                   información de precios actualizada.
+                </p>
+              </details>
+
+              <details className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+                <summary className="flex cursor-pointer items-start justify-between gap-4 font-semibold text-gray-900">
+                  <span>¿A qué edad se puede evaluar a un niño?</span>
+                  <span className="flex-shrink-0 text-rose-500 transition-transform group-open:rotate-180">
+                    ▼
+                  </span>
+                </summary>
+                <p className="mt-4 text-gray-600">
+                  Se puede evaluar desde los 18-24 meses si hay señales de
+                  alerta. No existe una edad mínima estricta: si la familia o el
+                  pediatra tienen dudas sobre el desarrollo comunicativo,
+                  conviene consultar sin esperar.
                 </p>
               </details>
             </div>
