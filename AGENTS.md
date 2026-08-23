@@ -33,7 +33,8 @@ app/
   page.tsx                         # Home
   fonoaudiologa-ninos-chillan/     # Landing SEO pilar infantil
   chillan/[slug]/                 # Landings patología (datos en patologias.ts)
-  ads/voz-disfonia-online/         # Landing Ads (noindex) — ver ads/PATRON-LANDING.md
+  ads/voz-disfonia-online/         # Landing Ads online (noindex) — ver ads/PATRON-LANDING.md
+  ads/fono-presencial-chillan/     # Landing Ads presencial Chillán (noindex)
   chillan/lenguaje-infantil/       # Redirect / SEO (no ads)
   servicios/                       # Servicios generales
   glosario/                        # Definiciones + FAQ
@@ -89,6 +90,7 @@ npm run pagespeed:report
 | Landings Ads | `ads/PATRON-LANDING.md` (reseñas + `GoogleMark`) · craft `ads/01-voz-disfonia-online/CRAFT.md` |
 | Tag / conversiones Ads | `GOOGLEADS/google-ads-tag-conversiones.md` · `AW-18364805586` · tel `+56995497838` |
 | Ads API (lectura) | `GOOGLEADS/google-ads-api-setup.md` · `npm run google-ads:report` · customer `2147001598` |
+| Ads AI Max OFF | Si está ON → `npm run google-ads:disable-ai-max` (doc en api-setup § AI Max) |
 | Playbook campaña Search | `GOOGLEADS/google-ads-search-campana-playbook.md` (grupo = keywords + RSA + **servicios ≤25**) |
 | GSC informe | `npm run gsc:report:md` → `docs/gsc-informe-*.md` |
 

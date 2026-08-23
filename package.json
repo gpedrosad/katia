@@ -14,7 +14,9 @@
     "gsc:checklist": "node --env-file=.env.local scripts/gsc-checklist.mjs",
     "google-ads:auth": "node --env-file=.env.local scripts/google-ads-auth.mjs",
     "google-ads:list-accounts": "node --env-file=.env.local scripts/google-ads-auth.mjs --list-accounts",
-    "google-ads:report": "node --env-file=.env.local scripts/google-ads-report.mjs"
+    "google-ads:report": "node --env-file=.env.local scripts/google-ads-report.mjs",
+    "google-ads:disable-ai-max": "node --env-file=.env.local scripts/google-ads-disable-ai-max.mjs",
+    "google-ads:create-fono-presencial": "node --env-file=.env.local scripts/google-ads-create-fono-presencial.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^1.6.1",

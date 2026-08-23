@@ -1,6 +1,6 @@
 # INDEX — hechos densos (leer primero)
 
-Actualizado: **2026-08-01**
+Actualizado: **2026-08-23**
 
 ## Identidad / NAP
 
@@ -24,6 +24,7 @@ Actualizado: **2026-08-01**
 ## Ads / landings
 
 - Ejemplo: `/ads/voz-disfonia-online` · patrón `ads/PATRON-LANDING.md` · craft `ads/01-voz-disfonia-online/CRAFT.md`
+- Presencial Ads: `/ads/fono-presencial-chillan` · **solo niños** · campaña `24172404146` **PAUSED** · presupuesto **$2.000/día** · grupo `201984702120` · RSA `822009115409` · geo presencia Chillán/Chillán Viejo · header “Infantil · Chillán”
 - Reseñas Ads: siempre `AdsGoogleBadge` + `AdsGoogleReviews` (`AdsGoogleTrust.tsx`) con SVG **GoogleMark**; desktop ~6 / mobile 2; datos en `lib/google-reviews.ts`
 - Motion: solo hero (CSS `.ads-landing`); foto sin fade opacity (LCP)
 - UI: señales en lista; pasos numerados; sin CTA mid; sticky WhatsApp mobile; FAQ ×3; 1 línea “Por qué Katia”
@@ -33,7 +34,12 @@ Actualizado: **2026-08-01**
 - Tag Google Ads: `AW-18364805586` + conversión Contacto `AW-18364805586/rBy6CNrQsNocENLjgrVE` en clic WhatsApp · doc `GOOGLEADS/google-ads-tag-conversiones.md`
 - Ads API (lectura): customer `2147001598` (acceso directo; no LOGIN MCC) · `.secrets` symlink · `npm run google-ads:report` · doc `GOOGLEADS/google-ads-api-setup.md`
 - Playbook Search: `GOOGLEADS/google-ads-search-campana-playbook.md` (1 campaña/cluster; frase; landing `/ads/...`)
-- Informe Ads (2026-08-04): `docs/google-ads-informe-2026-08-04.md` — 56 imp / 3 clics / 2 conv · gana `fono-adultos` · ~90% IS perdido por presupuesto · negativizar AI_MAX (integramedica, etc.)
+- Ads RSA `fono-adultos`: activo `820647565901` (15 títulos, 2026-08-11) · pausado `819480015118` · doc `ads/02-fono-adultos-online/README.md`
+- Ads AI Max: **OFF** deseado en Search · si vuelve ON → `npm run google-ads:disable-ai-max` · procedimiento `GOOGLEADS/google-ads-api-setup.md` § AI Max (OPTED_OUT text automation antes si bundling REQUIRED)
+- Informe Ads (2026-08-23): `docs/google-ads-informe-2026-08-23.md` — 30d 319 imp / 34 clic / 6 conv / $29.394 · **0 conv desde 7 ago** (~$20.9k gastados) · AI Max OFF · LIMITED (budget lost 64% · rank 6%) · IS 30% · pausar candidato `docentes-voz` ($8.611/0) · keyword cara `fonoaudiologia online` ($8.743/10/0)
+- Informe Ads (2026-08-11): `docs/google-ads-informe-2026-08-11.md` — all-time 150/13/6/$9.870 CPA~$1.645 · LIMITED ranking · IS 78%
+- Informe Ads (2026-08-06): `docs/google-ads-informe-2026-08-06.md` — 104/11/6/$8.523 · IS 13%/85% presupuesto
+- OAuth Ads renovado **2026-08-23** (`npm run google-ads:auth`); MCP oficial `google-ads-mcp` en `~/.cursor/mcp.json`
 - Skill: `.agents/skills/impeccable` (`animate` / `distill` / `polish` / `optimize`)
 
 ## GSC / SEO orgánico (último corte)

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AdsLayoutBadge } from "@/app/ads/_components/AdsLayoutBadge";
 import { BUSINESS_NAME } from "@/lib/site";
 
 export default function AdsLayout({ children }: { children: React.ReactNode }) {
@@ -12,9 +13,7 @@ export default function AdsLayout({ children }: { children: React.ReactNode }) {
           >
             {BUSINESS_NAME}
           </Link>
-          <span className="text-xs font-medium text-stone-500">
-            Online · Chile
-          </span>
+          <AdsLayoutBadge />
         </div>
       </header>
       {children}

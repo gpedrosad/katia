@@ -6,6 +6,7 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 
 ## 2026-08-23
 
+- Ads | Landing presencial `/ads/fono-presencial-chillan` + campaña `24172404146` PAUSED · budget $2.000/día · +keywords locales | Activar tras deploy; grupo `201984702120`
 - SEO/GEO | Análisis 90d GSC: 180 queries, 243 combos query+page, 7 oportunidades priorizadas | Canvas `gsc-seo-geo-opportunities`
 - SEO | Home: title "Fonoaudióloga en Chillán — Katia Domínguez | Evaluación infantil + informe" · keywords +fonoaudiólogo +fonoaudiología infantil | CTR SERP mejorado
 - SEO | Hitos: H1 → "¿A qué edad empiezan a hablar los niños?" · title captura "a qué edad hablan" (pos ~2, sin página ad-hoc hasta ahora) | Captar long-tail informacional

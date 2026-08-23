@@ -1,6 +1,6 @@
 # Patrón landing Google Ads
 
-Usar para cada cluster. Ejemplos vivos: `/ads/voz-disfonia-online`, `/ads/fono-adultos-online`, `/ads/fatiga-vocal-online`.  
+Usar para cada cluster. Ejemplos vivos: `/ads/voz-disfonia-online`, `/ads/fono-adultos-online`, `/ads/fatiga-vocal-online`, `/ads/fono-presencial-chillan`.  
 Craft Impeccable (voz): [`01-voz-disfonia-online/CRAFT.md`](./01-voz-disfonia-online/CRAFT.md).  
 Docs fono adultos: [`02-fono-adultos-online/README.md`](./02-fono-adultos-online/README.md).  
 Docs fatiga vocal: [`04-fatiga-vocal-online/README.md`](./04-fatiga-vocal-online/README.md).
@@ -111,7 +111,7 @@ Ejemplo voz: `reviewIndexes={[5, 4, 0, 1, 2, 3]}`.
 | CTAs en página | hero (`#ads-cta-hero`) + final (`#ads-cta-final`) + sticky mobile. **Sin** CTA mid |
 | Copy CTA | Cluster-specific; voz: hero/sticky “Quiero ayuda con mi voz” · final “Empezar por WhatsApp” |
 | Foto | `/katia-ads-hero.jpg` |
-| Geo | país (Chile), **sin ciudades** en H1 |
+| Geo | Online: país (Chile), **sin ciudades** en H1. Presencial: ciudad **sí** en H1 (`/ads/fono-presencial-chillan`) |
 | Docs cluster | `ads/NN-slug/README.md` (+ `CRAFT.md` si aplica) — incluir RSA, keywords y **servicios a promocionar** ≤25 |
 
 ---
@@ -123,7 +123,7 @@ Ejemplo voz: `reviewIndexes={[5, 4, 0, 1, 2, 3]}`.
 3. **Cómo funciona** — 3 pasos **numerados**, sin CTA mid  
 4. **Por qué Katia** — 1 línea credencial  
 5. **Reseñas Google** — `AdsGoogleReviews` (índices del cluster; ver sección arriba)  
-6. **FAQ** — `AdsFaq` · **3** preguntas frías (online≈presencial, Chile, primer paso)  
+6. **FAQ** — `AdsFaq` · **3** preguntas frías (online: online≈presencial, Chile, primer paso · presencial: dónde, a quién, primer paso)  
 7. **CTA final** — `#ads-cta-final`  
 8. **Sticky mobile** — `AdsStickyCta`
 

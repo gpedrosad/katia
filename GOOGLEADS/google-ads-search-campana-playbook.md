@@ -13,7 +13,7 @@ Keywords: **solo frase** `"..."`.
 Geo: **Chile**. Red: **solo Búsqueda**.
 
 Orden de clusters: `google-ads-keywords-online-ranking.md`.  
-**Landings Ads:** Voz / disfonía → `/ads/voz-disfonia-online` · Docentes → `/ads/docentes-voz` · Fono adultos → `/ads/fono-adultos-online` · Fatiga → `/ads/fatiga-vocal-online`.
+**Landings Ads:** Voz / disfonía → `/ads/voz-disfonia-online` · Docentes → `/ads/docentes-voz` · Fono adultos → `/ads/fono-adultos-online` · Fatiga → `/ads/fatiga-vocal-online` · Presencial Chillán → `/ads/fono-presencial-chillan`.
 
 ## Checklist creación (UI Google Ads)
 
@@ -26,8 +26,13 @@ Orden de clusters: `google-ads-keywords-online-ranking.md`.
 | Geo | Chile |
 | Idioma | Español |
 | Redes | Solo Búsqueda (sin Display / sin partners si quieres más control) |
+| AI Max | **OFF** (si está ON → `npm run google-ads:disable-ai-max` · doc `google-ads-api-setup.md`) |
 | Presupuesto inicio | $8.000–$15.000 CLP/día (ajustar) |
 | Puja | Maximizar conversiones (tras datos) o CPC manual al inicio |
+
+**Excepción local presencial:** segmentar por **presencia** en la zona atendida,
+no por presencia o interés. Para Chillán usar los geos documentados en
+`ads/05-fono-presencial-chillan/README.md` y activar solo después del deploy.
 
 ### Grupo
 | Campo | Valor |
@@ -98,4 +103,5 @@ Documentar (1)–(6) también en `ads/NN-slug/README.md`.
 - Final URL = home (usar `/ads/...`)
 - Mezclar adultos e infantil en un grupo
 - Negativizar `online` / `videollamada` / `virtual` en campañas online
+- Dejar **AI Max ON** (basura AI_MAX en search terms)
 - Mutar campañas por API sin pedido explícito
