@@ -46,6 +46,14 @@ const CAMPAIGN_ID = "24172404146";
 const AD_GROUP_ID = "201984702120";
 const BUDGET_ID = "15813234161";
 
+/** Lunes a jueves, 00:00–24:00. Sin viernes ni fin de semana. */
+const AD_SCHEDULE_DAYS = [
+  enums.DayOfWeek.MONDAY,
+  enums.DayOfWeek.TUESDAY,
+  enums.DayOfWeek.WEDNESDAY,
+  enums.DayOfWeek.THURSDAY,
+];
+
 const GEO_TARGETS = [
   { id: "9048036", label: "Chillan · City" },
   { id: "9228298", label: "Chillan · Municipality" },
@@ -258,6 +266,36 @@ const listExistingKeywords = async (customer) => {
   );
 };
 
+const adScheduleOp = (campaignResourceName, day) => ({
+  entity: "campaign_criterion",
+  operation: "create",
+  resource: {
+    campaign: campaignResourceName,
+    ad_schedule: {
+      day_of_week: day,
+      start_hour: 0,
+      start_minute: enums.MinuteOfHour.ZERO,
+      end_hour: 24,
+      end_minute: enums.MinuteOfHour.ZERO,
+    },
+  },
+});
+
+const listExistingScheduleDays = async (customer) => {
+  const rows = await customer.query(`
+    SELECT campaign_criterion.ad_schedule.day_of_week
+    FROM campaign_criterion
+    WHERE campaign.id = ${CAMPAIGN_ID}
+      AND campaign_criterion.type = AD_SCHEDULE
+      AND campaign_criterion.status != REMOVED
+  `);
+  return new Set(
+    rows
+      .map((row) => row.campaign_criterion?.ad_schedule?.day_of_week)
+      .filter(Boolean),
+  );
+};
+
 const keywordCreateOp = (text, adGroupResourceName) => {
   const policyName = POLICY_EXEMPTIONS.get(text);
   return {
@@ -281,7 +319,8 @@ const keywordCreateOp = (text, adGroupResourceName) => {
   };
 };
 
-const buildUpdateOperations = (missingKeywords) => {
+const buildUpdateOperations = (missingKeywords, missingDays) => {
+  const campaignResourceName = ResourceNames.campaign(CUSTOMER_ID, CAMPAIGN_ID);
   const operations = [
     {
       entity: "campaign_budget",
@@ -294,6 +333,7 @@ const buildUpdateOperations = (missingKeywords) => {
     ...missingKeywords.map((text) =>
       keywordCreateOp(text, ResourceNames.adGroup(CUSTOMER_ID, AD_GROUP_ID)),
     ),
+    ...missingDays.map((day) => adScheduleOp(campaignResourceName, day)),
   ];
   return operations;
 };
@@ -303,15 +343,19 @@ const updateExisting = async (customer) => {
   const missingKeywords = KEYWORDS.filter(
     (text) => !existingKeywords.has(text.toLowerCase()),
   );
-  const operations = buildUpdateOperations(missingKeywords);
+  const existingDays = await listExistingScheduleDays(customer);
+  const missingDays = AD_SCHEDULE_DAYS.filter((day) => !existingDays.has(day));
+  const operations = buildUpdateOperations(missingKeywords, missingDays);
 
   console.log(
     `\nCampaña existente ${CAMPAIGN_NAME} (${CAMPAIGN_ID})\n` +
       `Presupuesto objetivo: $${DAILY_BUDGET_CLP.toLocaleString("es-CL")} CLP/día\n` +
+      `Horario: lunes a jueves (sin viernes ni fin de semana)\n` +
       `Keywords nuevas: ${missingKeywords.length}\n` +
       (missingKeywords.length
         ? `  ${missingKeywords.join("\n  ")}\n`
-        : "  (ninguna; ya estaban todas)\n"),
+        : "  (ninguna; ya estaban todas)\n") +
+      `Días de anuncio nuevos: ${missingDays.length || "ninguno"}\n`,
   );
 
   if (!APPLY && !VALIDATE_ONLY) {
@@ -350,8 +394,13 @@ const updateExisting = async (customer) => {
   if (stillMissing.length) {
     throw new Error(`Faltaron keywords: ${stillMissing.join(", ")}`);
   }
+  const daysAfter = await listExistingScheduleDays(customer);
+  const stillMissingDays = AD_SCHEDULE_DAYS.filter((day) => !daysAfter.has(day));
+  if (stillMissingDays.length) {
+    throw new Error(`Faltaron días de anuncio: ${stillMissingDays.join(", ")}`);
+  }
   console.log(
-    `✓ Actualizado: presupuesto $${DAILY_BUDGET_CLP.toLocaleString("es-CL")} · keywords ${after.size}\n`,
+    `✓ Actualizado: presupuesto $${DAILY_BUDGET_CLP.toLocaleString("es-CL")} · keywords ${after.size} · lun–jue\n`,
   );
 };
 
@@ -415,6 +464,7 @@ const buildOperations = () => {
         negative: false,
       },
     })),
+    ...AD_SCHEDULE_DAYS.map((day) => adScheduleOp(campaignResourceName, day)),
     ...NEGATIVE_KEYWORDS.map((text) => ({
       entity: "campaign_criterion",
       operation: "create",

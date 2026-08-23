@@ -3,7 +3,7 @@
 **Actualizado:** 2026-08-11  
 **Cuenta:** Katialafono · `GOOGLE_ADS_CUSTOMER_ID=2147001598`  
 **Campaña Search:** `search-adultos-online` · `24093796310`  
-**Campaña local pausada:** `search-fono-presencial-chillan` · `24172404146`  
+**Campaña local:** `search-fono-presencial-chillan` · `24172404146` (**ENABLED** 2026-08-23)  
 **MCC:** Gonzalo Pedrosa · `8057859597` (existe; **no** poner como `LOGIN_CUSTOMER_ID` para Katialafono — el OAuth tiene acceso **directo** a `2147001598`; con login MCC la API responde permission denied)  
 **Credenciales:** mismas que `/Users/gonzalo/gonzalopedrosa` vía symlink `.secrets`
 

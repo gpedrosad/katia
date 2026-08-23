@@ -24,7 +24,7 @@ Actualizado: **2026-08-23**
 ## Ads / landings
 
 - Ejemplo: `/ads/voz-disfonia-online` · patrón `ads/PATRON-LANDING.md` · craft `ads/01-voz-disfonia-online/CRAFT.md`
-- Presencial Ads: `/ads/fono-presencial-chillan` · **solo niños** · campaña `24172404146` **PAUSED** · presupuesto **$2.000/día** · grupo `201984702120` · RSA `822009115409` · geo presencia Chillán/Chillán Viejo · header “Infantil · Chillán”
+- Presencial Ads: `/ads/fono-presencial-chillan` · **solo niños** · campaña `24172404146` **ENABLED** · $2.000/día · horario **lun–jue** · geo presencia Chillán/Chillán Viejo · RSA `821895167715` (URL `?gads=1`; el RSA `822009115409` quedó DISAPPROVED por 404 al crear)
 - Reseñas Ads: siempre `AdsGoogleBadge` + `AdsGoogleReviews` (`AdsGoogleTrust.tsx`) con SVG **GoogleMark**; desktop ~6 / mobile 2; datos en `lib/google-reviews.ts`
 - Motion: solo hero (CSS `.ads-landing`); foto sin fade opacity (LCP)
 - UI: señales en lista; pasos numerados; sin CTA mid; sticky WhatsApp mobile; FAQ ×3; 1 línea “Por qué Katia”

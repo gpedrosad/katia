@@ -15,9 +15,10 @@
 | Campo | Valor |
 |-------|-------|
 | Campaña | `search-fono-presencial-chillan` · `24172404146` |
-| Estado inicial | **PAUSED** — activar solo tras desplegar y revisar presupuesto |
+| Estado | **ENABLED** (2026-08-23) · $2.000/día · lun–jue |
 | Grupo | `fono-presencial-chillan` · `201984702120` |
-| RSA | `822009115409` · 15 títulos + 4 descripciones |
+| RSA activo | `821895167715` · URL `…/fono-presencial-chillan?gads=1` (revisión) |
+| RSA pausado | `822009115409` · DISAPPROVED `DESTINATION_NOT_WORKING` (404 al crear) |
 | Budget | `15813234161` |
 | Tipo / red | Search · solo Google Search · sin partners · sin Display |
 | Conversión | `Contacto` · WhatsApp · `7705733210` · principal |
@@ -27,15 +28,14 @@
 | Ubicación | Presencia física en Chillán ciudad/comuna + Chillán Viejo |
 | Geos | `9048036`, `9228298`, `9244397` |
 | AI Max | **OFF** |
-| Horario Ads | Sin restricción inicial; revisar con datos reales |
+| Horario Ads | **Lunes a jueves** (00:00–24:00). Sin viernes ni fin de semana |
 | Política salud | Search contextual, sin audiencias; exención API explícita para keyword marcada |
 
 La campaña se crea pausada con `npm run google-ads:create-fono-presencial -- --apply`.
 El script primero valida toda la mutación, es idempotente y verifica la configuración final.
 Para validar sin crear: `npm run google-ads:create-fono-presencial -- --validate-only`.
 
-Creada y verificada por API el **2026-08-23**. La URL de producción aún debe
-desplegarse antes de activar la campaña.
+Creada el **2026-08-23** y activada el mismo día. Landing en prod (`200`).
 
 ## Anuncio
 
