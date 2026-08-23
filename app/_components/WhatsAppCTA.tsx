@@ -31,7 +31,7 @@ export function WhatsAppCTA({
       rel="noopener noreferrer"
       onClick={handleClick}
       tabIndex={tabIndex}
-      className={`inline-flex items-center justify-center gap-2 rounded-full bg-green-500 px-8 py-5 text-lg font-bold text-white shadow-xl transition-all hover:scale-105 hover:bg-green-600 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-green-300 ${className}`}
+      className={`inline-flex items-center justify-center gap-2 rounded-full bg-green-700 px-8 py-5 text-lg font-bold text-white shadow-xl transition-all hover:scale-105 hover:bg-green-800 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-green-300 ${className}`}
     >
       <svg
         className="h-6 w-6 flex-shrink-0"

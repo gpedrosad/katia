@@ -56,6 +56,7 @@ export function AdsGoogleBadge({ className = "" }: { className?: string }) {
       href={GOOGLE_PROFILE_HREF}
       target="_blank"
       rel="noopener noreferrer"
+      aria-label={`Google, ${GOOGLE_REVIEWS_AGGREGATE.ratingValue} de 5, ${GOOGLE_REVIEWS_AGGREGATE.reviewCount} reseñas`}
       className={`inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-sm shadow-sm ring-1 ring-stone-200/80 transition-colors hover:bg-stone-50 ${className}`}
     >
       <GoogleMark className="h-4 w-4 shrink-0" />

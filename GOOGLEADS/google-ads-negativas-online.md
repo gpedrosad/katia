@@ -1080,6 +1080,15 @@ nueva masvida
 esencial
 vidatres
 consalud
+redsalud
+red salud
+clinica alemana
+clínica alemana
+indisa
+santa maria
+santa maría
+davila
+dávila
 laringectomia
 laringectomía
 tiroidectomia
