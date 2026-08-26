@@ -150,10 +150,18 @@ export default function EstimularLenguajeEnCasaPage() {
                 </li>
                 <li>
                   <Link
-                    href="/servicios/terapia-lenguaje-infantil"
+                    href="/sintomas/hijo-habla-poco-edad-chillan"
                     className="font-medium text-rose-600 underline"
                   >
-                    Terapia de lenguaje infantil
+                    Mi hijo de 2 años habla poco
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/sintomas/hijo-no-arma-frases-chillan"
+                    className="font-medium text-rose-600 underline"
+                  >
+                    Mi hijo de 2 años no forma frases
                   </Link>
                 </li>
                 <li>

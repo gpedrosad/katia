@@ -31,9 +31,9 @@ const PAGE_PATH = "/servicios";
 const WHATSAPP_LINK =
   "https://wa.me/56995497838?text=Hola%2C%20quiero%20consultar%20por%20sus%20servicios";
 const PAGE_TITLE =
-  "Fonoaudiología Infantil en Chillán: Servicios y Agenda";
+  "Terapia de Lenguaje y Fonoaudiología Infantil | Chillán";
 const PAGE_DESCRIPTION =
-  "Evaluación, terapia de lenguaje, habla, TEL, TEA y lectoescritura. Elige el servicio adecuado para tu hijo y agenda por WhatsApp.";
+  "Servicios para niños que hablan poco, no arman frases, pronuncian mal o necesitan evaluación fonoaudiológica en Chillán.";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
@@ -53,10 +53,10 @@ const services = [
   {
     href: "/servicios/terapia-lenguaje-infantil",
     emoji: "👶",
-    title: "Terapia de lenguaje infantil",
+    title: "Terapia de lenguaje en Chillán",
     description:
-      "Evaluación y tratamiento de trastornos del lenguaje en niños de 2 a 10 años. Enfoque lúdico y personalizado.",
-    keywords: ["niños 2-10 años", "lenguaje expresivo", "comprensión"],
+      "Para niños que hablan poco, no arman frases o tienen vocabulario limitado.",
+    keywords: ["niños 2-10 años", "lenguaje expresivo", "no arma frases"],
   },
   {
     href: "/servicios/trastornos-del-habla",
@@ -144,15 +144,15 @@ export default function ServiciosPage() {
             />
             <div className="mb-12 text-center">
               <h1 className="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl">
-                Servicios de fonoaudiología en Chillán
+                Terapia de lenguaje y fonoaudiología infantil en Chillán
               </h1>
               <p
                 data-speakable
                 className="mx-auto max-w-2xl text-lg text-gray-600"
               >
-                Más de 20 años de experiencia en evaluación y tratamiento de
-                trastornos del lenguaje, habla y comunicación. Atención
-                presencial para niños en Chillán.
+                Más de 20 años de experiencia en evaluación y tratamiento para
+                niños que hablan poco, no arman frases, pronuncian mal o tienen
+                dificultades de comunicación. Atención presencial en Chillán.
               </p>
             </div>
 
@@ -181,6 +181,18 @@ export default function ServiciosPage() {
                 className="font-medium text-rose-600 underline"
               >
                 glosario (dislalia, TEL…)
+              </Link>
+              . Para dudas frecuentes por edad:{" "}
+              <Link href="/sintomas/hijo-no-arma-frases-chillan" className="font-medium text-rose-600 underline">
+                2 años no forma frases
+              </Link>
+              ,{" "}
+              <Link href="/sintomas/hijo-habla-poco-edad-chillan" className="font-medium text-rose-600 underline">
+                habla poco para su edad
+              </Link>{" "}
+              y{" "}
+              <Link href="/sintomas/nino-pronuncia-mal-chillan" className="font-medium text-rose-600 underline">
+                no se le entiende al hablar
               </Link>
               .
             </p>

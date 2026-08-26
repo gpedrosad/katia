@@ -4,6 +4,14 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 
 ---
 
+## 2026-08-26
+
+- SEO | SERP scrape infantil Chile 63/207 keywords (Apify scraperlink, gl=CL) · opp cualitativa 0–100 sin volumen/CPC/DA | Informe `docs/seo-oportunidades-serp-infantil-chile-2026-08-26.md`
+- SEO | Top opp 93 LOW: `mi hijo de 2 años no forma frases` + `niño de 2 años no habla` · 19 LOW · 8 locales Chillán | Reforzar síntoma/hitos; no páginas Fonasa/precio sin confirmar
+- GSC | Corte 90d `2026-05-25`→`2026-08-23`: 88 clics / 4.074 imp / CTR 2,16% / pos 7,6 | Crece visibilidad; cuello principal = CTR y ajuste query→landing
+- SEO | `terapia de lenguaje chillán` opp 69 LOW; ruta exacta `/servicios/terapia-de-lenguaje-infantil-chillan` está vacía/redirigida a `/servicios/terapia-lenguaje-infantil` por `next.config.ts` | No tratarla como página standalone al analizar GSC
+- SEO | Ejecutado sprint CTR/query-match: home, pilar niños, servicios, agendar, sobre, terapia/evaluación lenguaje, retraso, fonológico y síntomas padre 2-4 años | Titles/H1/FAQ/enlaces internos apuntan a `2 años no habla/no forma frases`, `habla poco`, `3-4 no se le entiende`
+
 ## 2026-08-23
 
 - Ads | Campaña `24172404146` `search-fono-presencial-chillan` → **ENABLED** | Landing prod 200; RSA viejo `822009115409` DISAPPROVED `DESTINATION_NOT_WORKING`; RSA nuevo `821895167715` URL `?gads=1` en revisión

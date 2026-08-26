@@ -36,9 +36,9 @@ const WHATSAPP_LINK =
   "https://wa.me/56995497838?text=Hola%2C%20quiero%20agendar%20una%20hora";
 const PAGE_PATH = "/";
 const HOME_TITLE =
-  "Fonoaudióloga en Chillán — Katia Domínguez | Evaluación infantil + informe";
+  "Fonoaudióloga Infantil en Chillán | Terapia de Lenguaje";
 const HOME_DESCRIPTION =
-  "Fonoaudióloga y fonoaudióloga infantil en Chillán, Ñuble. Evaluación del lenguaje con informe y plan de tratamiento. +20 años, U. de Chile. Agenda por WhatsApp.";
+  "Katia Domínguez, fonoaudióloga infantil en Chillán. Terapia de lenguaje y habla, evaluación con informe y +20 años de experiencia. Agenda por WhatsApp.";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
@@ -58,9 +58,9 @@ const services = [
   {
     href: "/servicios/terapia-lenguaje-infantil",
     emoji: "👶",
-    title: "Terapia de lenguaje infantil",
+    title: "Terapia de lenguaje en Chillán",
     description:
-      "Evaluación y tratamiento de trastornos del lenguaje en niños de 2 a 10 años.",
+      "Para niños que hablan poco, no arman frases o tienen retraso del lenguaje.",
   },
   {
     href: "/servicios/trastornos-del-habla",
@@ -131,18 +131,19 @@ export default function Home() {
               {/* Content */}
               <div className="text-center lg:text-left">
                 <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tight text-gray-900 sm:text-6xl">
-                  Fonoaudióloga en Chillán
+                  Fonoaudióloga infantil en Chillán
                 </h1>
                 <p className="mb-4 text-2xl font-medium text-rose-600 sm:text-3xl">
-                  Katia Domínguez — Fonoaudiología infantil y de voz
+                  Terapia de lenguaje, habla y evaluación con informe
                 </p>
                 <p
                   data-speakable
                   className="mb-8 text-xl leading-relaxed text-gray-600"
                 >
                   Fonoaudióloga con más de 20 años de experiencia clínica en
-                  Chillán, Ñuble. Evaluación, diagnóstico y tratamiento de
-                  trastornos del lenguaje, habla y comunicación en niños.
+                  Chillán, Ñuble. Evaluación, diagnóstico y tratamiento para
+                  niños que hablan poco, no arman frases, pronuncian mal o no se
+                  hacen entender.
                   También atención de voz online para todo Chile.
                 </p>
 
@@ -241,6 +242,21 @@ export default function Home() {
                 Ver todos los servicios →
               </Link>
             </div>
+            <p className="mx-auto mt-6 max-w-3xl text-center text-sm leading-relaxed text-gray-600">
+              Si buscas orientación por edad, revisa{" "}
+              <Link href="/sintomas/hijo-habla-poco-edad-chillan" className="font-medium text-rose-600 underline">
+                mi hijo de 2 años habla poco
+              </Link>
+              ,{" "}
+              <Link href="/sintomas/hijo-no-arma-frases-chillan" className="font-medium text-rose-600 underline">
+                mi hijo de 2 años no forma frases
+              </Link>{" "}
+              o{" "}
+              <Link href="/sintomas/nino-pronuncia-mal-chillan" className="font-medium text-rose-600 underline">
+                mi hijo de 3 años no se le entiende
+              </Link>
+              .
+            </p>
           </div>
         </section>
 
@@ -344,33 +360,33 @@ export default function Home() {
             </div>
             <div className="grid gap-4 sm:grid-cols-3">
               <Link
-                href="/glosario"
+                href="/sintomas/hijo-no-arma-frases-chillan"
                 className="rounded-xl border-2 border-gray-100 bg-gray-50 p-6 text-center transition-colors hover:border-rose-200"
               >
                 <span className="mb-3 block text-3xl">📖</span>
-                <h3 className="font-semibold text-gray-900">Glosario</h3>
+                <h3 className="font-semibold text-gray-900">2 años no forma frases</h3>
                 <p className="mt-2 text-sm text-gray-600">
-                  Términos fonoaudiológicos explicados
+                  Señales por edad y cuándo evaluar
                 </p>
               </Link>
               <Link
-                href="/recursos"
+                href="/sintomas/hijo-habla-poco-edad-chillan"
                 className="rounded-xl border-2 border-gray-100 bg-gray-50 p-6 text-center transition-colors hover:border-rose-200"
               >
                 <span className="mb-3 block text-3xl">📚</span>
-                <h3 className="font-semibold text-gray-900">Guías</h3>
+                <h3 className="font-semibold text-gray-900">Habla poco</h3>
                 <p className="mt-2 text-sm text-gray-600">
-                  Señales de alerta y consejos
+                  Qué mirar a los 18 meses, 2 y 3 años
                 </p>
               </Link>
               <Link
-                href="/recursos/primera-evaluacion-fonoaudiologica-infantil"
+                href="/sintomas/nino-pronuncia-mal-chillan"
                 className="rounded-xl border-2 border-gray-100 bg-gray-50 p-6 text-center transition-colors hover:border-rose-200"
               >
                 <span className="mb-3 block text-3xl">📋</span>
-                <h3 className="font-semibold text-gray-900">Primera consulta</h3>
+                <h3 className="font-semibold text-gray-900">No se le entiende</h3>
                 <p className="mt-2 text-sm text-gray-600">
-                  Qué esperar de la evaluación
+                  Pronunciación y habla poco clara
                 </p>
               </Link>
             </div>

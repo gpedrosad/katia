@@ -14,9 +14,9 @@ const WHATSAPP_LINK = whatsappUrl("Hola, quiero agendar una evaluación con Kati
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Katia Domínguez | Fonoaudióloga Infantil Chillán (+20 años)",
+  title: "Katia Domínguez, Fonoaudióloga Infantil en Chillán",
   description:
-    "Titulada U. de Chile. +20 años en lenguaje, habla y lectoescritura. Atención presencial en Chillán: conoce su enfoque y agenda evaluación.",
+    "Fonoaudióloga U. de Chile con +20 años en lenguaje, habla, TEL y lectoescritura infantil. Atención presencial en Chillán.",
   keywords: [
     "Katia Domínguez",
     "fonoaudióloga Chillán",
@@ -120,7 +120,7 @@ export default function SobrePage() {
             <Breadcrumbs items={[{ label: "Inicio", href: "/" }, { label: "Sobre Katia" }]} />
             <span className="mb-4 mt-6 inline-block rounded-full bg-rose-100 px-4 py-2 text-sm font-medium text-rose-700">Fonoaudióloga infantil</span>
             <h1 className="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl">Katia Domínguez, fonoaudióloga infantil en Chillán</h1>
-            <p className="mb-6 text-xl text-gray-600">Más de 20 años de experiencia acompañando a niños y familias en evaluación y tratamiento de lenguaje, habla, TEL, TEA y lectoescritura.</p>
+            <p className="mb-6 text-xl text-gray-600">Más de 20 años de experiencia acompañando a niños que hablan poco, no arman frases, pronuncian mal o necesitan evaluación de lenguaje, habla, TEL, TEA y lectoescritura.</p>
             <ul className="mb-8 space-y-3 text-gray-700">
               <li className="flex gap-3"><span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">✓</span><span>Atención presencial en Chillán</span></li>
               <li className="flex gap-3"><span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">✓</span><span>Experiencia clínica con infancia y etapa escolar</span></li>

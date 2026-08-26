@@ -1,6 +1,6 @@
 # INDEX — hechos densos (leer primero)
 
-Actualizado: **2026-08-23**
+Actualizado: **2026-08-26**
 
 ## Identidad / NAP
 
@@ -44,11 +44,13 @@ Actualizado: **2026-08-23**
 
 ## GSC / SEO orgánico (último corte)
 
-- Informe: `docs/gsc-informe-2026-07-17.md` · canvas evaluación 17 jul
-- 28d (19 jun–17 jul): 25 clics · 1.247 imp · CTR 2,00% · pos 8,1
-- Titles/metas P0 desplegados **9 jul**; impacto aún prematuro (~8d al corte)
-- Mayor desperdicio: URLs pos ~2–3 con 0% CTR (`/servicios`, `/agendar`, `/retraso`)
-- Home CTR 1,22%→1,35%; `/sobre-katia` 1,14%→2,00%; pilar niños 0% / 195 imp
+- SERP infantil CL 2026-08-26: `docs/seo-oportunidades-serp-infantil-chile-2026-08-26.md` · 63/207 keywords con scrape (144 cortadas por cuota Apify) · **no** es volumen/CPC/DA
+- Mejor opp **93** LOW: `mi hijo de 2 años no forma frases` / `niño de 2 años no habla` (directorios + intl.) · 19 LOW · 8 locales Chillán
+- Usar: reforzar síntoma/hitos existentes; **no** 63 URLs nuevas; **no** Fonasa/precio sin dato en `lib/site.ts`
+- Informe GSC: `docs/gsc-informe-2026-08-23.md` · 90d (25 may–23 ago): **88 clics** · **4.074 imp** · CTR **2,16%** · pos **7,6**
+- Cuello SEO 2026-08-23: visibilidad sube (+71% imp), pero CTR bajo en home/pilar/servicios/agendar/sobre/tratamientos; priorizar snippets + query→landing
+- Hecho 2026-08-26: sprint CTR/query-match aplicado en home/pilar/servicios/agendar/sobre/tratamientos/síntomas; pedir indexación post-deploy y medir 14-21 días
+- Ruta local `terapia de lenguaje chillán`: `/servicios/terapia-de-lenguaje-infantil-chillan` está vacía/redirigida a `/servicios/terapia-lenguaje-infantil`; no analizarla como página standalone
 - Auth GSC: OAuth en `.secrets/gsc-oauth-token.json` · `npm run gsc:report:md` · site `sc-domain:katialafono.cl`
 - Contador sitemap 0/84 = **falsa alarma** (páginas indexadas por otros medios)
 

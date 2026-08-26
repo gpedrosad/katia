@@ -12,9 +12,9 @@ const WHATSAPP_LINK = whatsappUrl(WHATSAPP_MESSAGE);
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Evaluación del Lenguaje Infantil en Chillán | Fonoaudióloga",
+  title: "Evaluación de lenguaje infantil | Niño habla poco Chillán",
   description:
-    "Evaluación del lenguaje infantil en Chillán para niños que hablan poco, no arman frases o no comprenden bien. Incluye informe y orientación clínica.",
+    "Evaluación del lenguaje infantil en Chillán para niños que hablan poco, no arman frases o no comprenden bien. Incluye informe y orientación.",
   keywords: [
     "evaluación del lenguaje infantil Chillán",
     "evaluación del lenguaje niños Chillán",
@@ -144,8 +144,8 @@ export default function EvaluacionLenguajeInfantilPage() {
               Evaluación del lenguaje infantil en Chillán
             </h1>
             <p data-speakable className="mb-6 text-xl text-gray-600">
-              Para niños que hablan poco, arman frases cortas, entienden menos de
-              lo esperado o presentan dudas en su desarrollo del lenguaje.
+              Para niños que hablan poco, no arman frases, entienden menos de lo
+              esperado o presentan dudas en su desarrollo del lenguaje.
             </p>
             <ul className="mb-8 space-y-3 text-gray-700">
               <li className="flex gap-3">

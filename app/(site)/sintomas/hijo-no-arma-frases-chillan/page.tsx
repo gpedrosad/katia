@@ -10,10 +10,10 @@ const WHATSAPP_LINK = whatsappUrl("Hola, mi hijo no arma frases y me preocupa. B
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Mi hijo no arma frases | Chillán",
+  title: "Mi hijo de 2 años no forma frases | Chillán",
   description:
-    "¿Tu hijo solo dice palabras sueltas? Hitos por edad, causas posibles y qué hacer. Fonoaudióloga infantil en Chillán. Evaluación y terapia de lenguaje.",
-  keywords: ["fonoaudióloga Chillán", "fonoaudiología infantil", "hijo no arma frases chillan"],
+    "Si tu hijo de 2 años no forma frases o solo dice palabras sueltas, revisa hitos, señales y cuándo evaluar en Chillán.",
+  keywords: ["fonoaudióloga Chillán", "fonoaudiología infantil", "mi hijo de 2 años no forma frases", "niño no forma frases"],
 });
 
 const signalsByAge = [
@@ -32,6 +32,8 @@ const actionsNow = [
 ];
 
 const faqs = [
+  { q: "¿Qué hago si mi hijo de 2 años no forma frases?", a: "Observa si combina dos palabras con intención, como «mamá ven» o «más pan». Si solo usa palabras sueltas o gestos, conviene evaluar lenguaje expresivo y comprensión." },
+  { q: "¿Un niño de 2 años que no habla puede mejorar solo?", a: "Algunos niños avanzan con estimulación, pero si a los 2 años no hay frases de dos palabras o hay pocas palabras, es mejor evaluar temprano y no esperar varios meses sin orientación." },
   { q: "¿A qué edad debería armar frases?", a: "Entre 18-24 meses suelen aparecer frases de dos palabras; a los 3 años, oraciones más largas." },
   { q: "¿Es normal que un niño de 3 años no arme frases?", a: "No es lo esperado. Conviene evaluar retraso del lenguaje o TEL." },
   { q: "¿Qué técnicas usan en terapia?", a: "Expansión, modelado, recast y juego simbólico con objetivos graduales." },
@@ -42,8 +44,8 @@ const medicalWebPageJsonLd = {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
   "@id": `${SITE_URL}${PAGE_PATH}#webpage`,
-  name: "¿Tu hijo no arma frases? Cuándo consultar en Chillán",
-  description: "¿Tu hijo solo dice palabras sueltas? Hitos por edad, causas posibles y qué hacer. Fonoaudióloga infantil en Chillán. Evaluación y terapia de lenguaje.",
+  name: "Mi hijo de 2 años no forma frases: cuándo consultar en Chillán",
+  description: "Si tu hijo de 2 años no forma frases o solo dice palabras sueltas, revisa hitos, señales y cuándo evaluar en Chillán.",
   medicalSpecialty: "SpeechTherapy",
   about: { "@type": "MedicalCondition", name: "Retraso del lenguaje expresivo" },
 };
@@ -83,13 +85,13 @@ export default function HijoNoArmaFrasesPage() {
               Estructura del lenguaje
             </span>
             <h1 className="mb-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
-              ¿Tu hijo no arma frases? Cuándo consultar en Chillán
+              Mi hijo de 2 años no forma frases: cuándo consultar en Chillán
             </h1>
             <p
               data-speakable
               className="mb-6 text-xl leading-relaxed text-gray-600"
             >
-              Pasar de palabras sueltas a frases es un hito clave entre los 18 y 36 meses. Si tu hijo nombra objetos pero no combina («más pan», «mamá ven»), puede necesitar apoyo en lenguaje expresivo.
+              Pasar de palabras sueltas a frases es un hito clave entre los 18 y 36 meses. Si tu hijo de 2 años nombra objetos pero no combina («más pan», «mamá ven»), puede necesitar apoyo en lenguaje expresivo.
             </p>
             <ul className="mb-8 space-y-3 text-gray-700">
               <li className="flex items-start gap-3">
@@ -145,7 +147,16 @@ export default function HijoNoArmaFrasesPage() {
             <h2 className="mb-6 text-center text-3xl font-bold text-gray-900">
               ¿Qué puede estar pasando?
             </h2>
-            <p className="mb-8 text-center text-gray-600">Consulta <a href="/tratamientos/retraso-del-lenguaje-chillan">retraso del lenguaje</a>, <a href="/tratamientos/tel-trastorno-especifico-lenguaje-chillan">TEL</a>, <a href="/glosario/tel">glosario</a>, <a href="/chillan/retraso-del-lenguaje">Chillán</a>, <a href="/servicios/terapia-lenguaje-infantil">terapia de lenguaje</a> y <a href="/servicios/evaluacion-fonoaudiologica">evaluación</a>.</p>
+            <p className="mb-8 text-center text-gray-600">
+              Consulta{" "}
+              <Link href="/tratamientos/retraso-del-lenguaje-chillan">retraso del lenguaje</Link>
+              ,{" "}
+              <Link href="/tratamientos/tel-trastorno-especifico-lenguaje-chillan">TEL</Link>
+              , <Link href="/glosario/tel">glosario</Link>,{" "}
+              <Link href="/chillan/retraso-del-lenguaje">Chillán</Link>,{" "}
+              <Link href="/servicios/terapia-lenguaje-infantil">terapia de lenguaje</Link>{" "}
+              y <Link href="/servicios/evaluacion-fonoaudiologica">evaluación</Link>.
+            </p>
           </div>
         </section>
 

@@ -10,9 +10,9 @@ const WHATSAPP_LINK = whatsappUrl("Hola, me preocupa que mi hijo no habla bien. 
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "¿Mi hijo no habla bien? | Señales Chillán",
+  title: "Mi hijo no habla bien o no se le entiende | Chillán",
   description:
-    "Si tu hijo no habla bien para su edad, conoce señales de alerta y cuándo consultar fonoaudióloga en Chillán. Orientación presencial y evaluación infantil.",
+    "Señales si tu hijo no habla bien, habla como bebé o no se le entiende a los 3 o 4 años. Evaluación infantil en Chillán.",
   keywords: ["fonoaudióloga Chillán", "fonoaudiología infantil", "mi hijo no habla bien chillan"],
 });
 
@@ -32,6 +32,8 @@ const actionsNow = [
 ];
 
 const faqs = [
+  { q: "¿Qué hago si mi hijo de 3 años no se le entiende?", a: "A los 3 años debería mejorar la claridad y hacerse entender en contextos familiares. Si extraños entienden poco, o el niño evita hablar por frustración, conviene evaluar habla y lenguaje." },
+  { q: "¿Es alerta que mi hijo de 4 años hable como bebé?", a: "Puede ser una señal si persisten frases muy simples, errores de sonidos o baja claridad. La evaluación diferencia lenguaje, habla, dislalia o trastorno fonológico." },
   { q: "¿Cuándo preocuparme si mi hijo no habla bien?", a: "Si a los 2 años no hay frases de dos palabras, a los 3 no arma oraciones simples, o si no lo entienden fuera de casa, conviene evaluar." },
   { q: "¿Es solo pronunciación o también lenguaje?", a: "Puede ser habla (sonidos), lenguaje (palabras y frases) o ambos. La evaluación separa perfiles." },
   { q: "¿Qué NO decirle al niño?", a: "Evita «habla más despacio», «no seas tímido» o corregir cada palabra; favorece turnos y escucha activa." },
@@ -83,13 +85,13 @@ export default function MiHijoNoHablaBienPage() {
               Señales de alerta
             </span>
             <h1 className="mb-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
-              ¿Mi hijo no habla bien? Cuándo consultar en Chillán
+              Mi hijo no habla bien o no se le entiende: cuándo consultar en Chillán
             </h1>
             <p
               data-speakable
               className="mb-6 text-xl leading-relaxed text-gray-600"
             >
-              Frases como «ya va a hablar» o «es más callado» pueden retrasar una consulta necesaria. Si tu hijo habla poco, no se entiende o se frustra al comunicarse, estas señales te ayudan a decidir el siguiente paso con calma.
+              Frases como «ya va a hablar» o «es más callado» pueden retrasar una consulta necesaria. Si tu hijo habla poco, habla como bebé, no se entiende o se frustra al comunicarse, estas señales te ayudan a decidir el siguiente paso con calma.
             </p>
             <ul className="mb-8 space-y-3 text-gray-700">
               <li className="flex items-start gap-3">
@@ -145,7 +147,19 @@ export default function MiHijoNoHablaBienPage() {
             <h2 className="mb-6 text-center text-3xl font-bold text-gray-900">
               ¿Qué puede estar pasando?
             </h2>
-            <p className="mb-8 text-center text-gray-600">Puede haber <a href="/tratamientos/retraso-del-lenguaje-chillan">retraso del lenguaje</a>, <a href="/tratamientos/retraso-del-habla-chillan">retraso del habla</a> o <a href="/tratamientos/apraxia-del-habla-infantil-chillan">apraxia</a>. Mira <a href="/fonoaudiologa-ninos-chillan">lenguaje infantil en Chillán</a>, <a href="/glosario/tel">glosario TEL</a>, <a href="/servicios/terapia-lenguaje-infantil">terapia de lenguaje</a> y <a href="/servicios/evaluacion-fonoaudiologica">evaluación</a>.</p>
+            <p className="mb-8 text-center text-gray-600">
+              Puede haber{" "}
+              <Link href="/tratamientos/retraso-del-lenguaje-chillan">retraso del lenguaje</Link>
+              ,{" "}
+              <Link href="/tratamientos/retraso-del-habla-chillan">retraso del habla</Link>{" "}
+              o{" "}
+              <Link href="/tratamientos/apraxia-del-habla-infantil-chillan">apraxia</Link>.
+              Mira{" "}
+              <Link href="/fonoaudiologa-ninos-chillan">lenguaje infantil en Chillán</Link>
+              , <Link href="/glosario/tel">glosario TEL</Link>,{" "}
+              <Link href="/servicios/terapia-lenguaje-infantil">terapia de lenguaje</Link>{" "}
+              y <Link href="/servicios/evaluacion-fonoaudiologica">evaluación</Link>.
+            </p>
           </div>
         </section>
 

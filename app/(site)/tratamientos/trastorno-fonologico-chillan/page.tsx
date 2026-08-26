@@ -10,9 +10,9 @@ const WHATSAPP_LINK = whatsappUrl("Hola, busco ayuda por trastorno fonológico e
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Tratamiento Trastorno Fonológico | Chillán",
+  title: "Mi hijo no pronuncia bien | Trastorno fonológico Chillán",
   description:
-    "Terapia fonoaudiológica para trastorno fonológico en niños en Chillán. Conciencia fonológica, pares mínimos y habla inteligible. Evaluación presencial con pruebas clínicas.",
+    "Si a tu hijo de 3 o 4 años no se le entiende, evaluamos pronunciación y trastorno fonológico en Chillán. Terapia presencial infantil.",
   keywords: [
     "trastorno fonológico niños",
     "fonoaudiología Chillán",
@@ -38,6 +38,8 @@ const benefits = [
 ];
 
 const faqs = [
+  { q: "¿Qué pasa si mi hijo de 3 años no se le entiende?", a: "A los 3 años debería hacerse entender al menos por la familia y avanzar en claridad con personas cercanas. Si cuesta entenderlo fuera de casa o simplifica muchas palabras, conviene evaluar habla y fonología." },
+  { q: "¿Y si mi hijo habla como bebé a los 4 años?", a: "Puede haber inmadurez articulatoria, dislalia o un patrón fonológico persistente. La evaluación permite distinguir si el problema está en producir un sonido o en organizar los sonidos dentro de las palabras." },
   { q: "¿Trastorno fonológico y dislalia son lo mismo?", a: "No siempre. En dislalia el niño no logra articular un sonido; en trastorno fonológico puede articularlo aislado pero lo «desordena» al hablar. La evaluación diferencia ambos." },
   { q: "¿Qué es la conciencia fonológica?", a: "Es la capacidad de manipular sonidos: rimar, segmentar sílabas, identificar el sonido inicial. Es clave en terapia fonológica y en aprendizaje lector." },
   { q: "¿Se usa TEPROSIF-R?", a: "Sí, según edad y motivo de consulta podemos aplicar TEPROSIF-R u otras pruebas para perfilar el trastorno y documentar avances." },
@@ -90,15 +92,15 @@ export default function TrastornoFonologicoPage() {
               Fonología y habla inteligible
             </span>
             <h1 className="mb-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
-              Tratamiento del trastorno fonológico en Chillán
+              Mi hijo no pronuncia bien: trastorno fonológico en Chillán
             </h1>
             <p
               data-speakable
               className="mb-6 text-xl leading-relaxed text-gray-600"
             >
-              En el trastorno fonológico el niño puede producir sonidos aislados,
-              pero su cerebro los organiza mal al armar palabras: omite, cambia o
-              simplifica de forma sistemática. En Chillán trabajamos conciencia
+              Si tu hijo de 3 o 4 años habla como bebé, cambia sonidos o no se le
+              entiende fuera de casa, puede haber un trastorno fonológico. En
+              Chillán trabajamos conciencia
               fonológica, pares mínimos y automatización en conversación real.
             </p>
             <ul className="mb-8 space-y-3 text-gray-700">

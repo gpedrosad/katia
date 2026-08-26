@@ -12,9 +12,9 @@ const WHATSAPP_LINK = whatsappUrl(
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Mi hijo habla poco para su edad | Chillán",
+  title: "Mi hijo de 2 años habla poco | Chillán",
   description:
-    "¿Tu hijo habla muy poco para su edad? Señales por etapa, cuándo evaluar y qué hacer. Orientación fonoaudiológica presencial en Chillán. Agenda por WhatsApp.",
+    "Si tu hijo de 2 años habla poco, dice pocas palabras o no combina frases, revisa señales por edad y cuándo evaluar en Chillán.",
   keywords: [
     "hijo habla poco",
     "vocabulario limitado niño",
@@ -40,6 +40,8 @@ const actionsNow = [
 ];
 
 const faqs = [
+  { q: "¿Qué hago si mi hijo de 2 años habla poco?", a: "Revisa si usa cerca de 50 palabras, si combina dos palabras y si comprende instrucciones simples. Si está muy por debajo o no progresa, conviene agendar evaluación de lenguaje." },
+  { q: "¿Es lo mismo hablar poco que no formar frases?", a: "No siempre. Un niño puede tener pocas palabras o tener vocabulario suficiente pero no combinarlas. Ambas señales orientan la evaluación del lenguaje expresivo." },
   { q: "¿Cuántas palabras debería decir a los 2 años?", a: "Se esperan alrededor de 50 palabras y frases de dos palabras («más leche», «papá ven»). Si está muy por debajo, conviene evaluar." },
   { q: "¿Es verdad que los varones hablan más tarde?", a: "Hay variabilidad, pero las diferencias no suelen ser enormes. Si el retraso es marcado, no conviene esperar solo por el género." },
   { q: "¿Puede ser TEL?", a: "Un vocabulario muy limitado persistente puede asociarse a retraso del lenguaje o TEL. La evaluación fonoaudiológica diferencia perfiles." },
@@ -91,7 +93,7 @@ export default function HablaPocoPage() {
               Vocabulario y expresión
             </span>
             <h1 className="mb-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
-              ¿Tu hijo habla poco para su edad?
+              Mi hijo de 2 años habla poco: cuándo consultar
             </h1>
             <p
               data-speakable

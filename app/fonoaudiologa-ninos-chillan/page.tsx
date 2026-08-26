@@ -11,9 +11,9 @@ import { StickyWhatsApp } from "../chillan/lenguaje-infantil/_components/StickyW
 const PAGE_PATH = "/fonoaudiologa-ninos-chillan";
 const WHATSAPP_HREF = whatsappUrl("Hola, quiero agendar una evaluación de lenguaje para mi hijo/a");
 const PAGE_TITLE =
-  "Terapia de Lenguaje para Niños en Chillán | Eval. 60 min";
+  "Fonoaudióloga para Niños en Chillán | Lenguaje y Habla";
 const PAGE_DESCRIPTION =
-  "Habla poco, no pronuncia bien o le cuesta leer: diagnóstico con informe en 60 min. Especialista infantil presencial. Agenda por WhatsApp.";
+  "Si tu hijo habla poco, no arma frases o pronuncia mal, agenda evaluación infantil en Chillán con informe y plan de terapia.";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
@@ -171,9 +171,9 @@ const webPageJsonLd = {
 const concerns = [
   {
     emoji: "🗣️",
-    title: "Habla poco para su edad",
+    title: "Habla poco o no habla a los 2 años",
     description:
-      "Tu hijo dice menos palabras de las esperadas o le cuesta formar oraciones completas.",
+      "Tu hijo dice menos palabras de las esperadas o todavía no combina frases simples.",
   },
   {
     emoji: "👂",
@@ -183,9 +183,9 @@ const concerns = [
   },
   {
     emoji: "😤",
-    title: "Se frustra al comunicarse",
+    title: "No arma frases",
     description:
-      "Se enoja o hace pataletas porque no logra expresar lo que quiere o necesita.",
+      "Usa palabras sueltas, se frustra o no logra explicar lo que quiere.",
   },
   {
     emoji: "🔤",
@@ -236,9 +236,9 @@ const therapySteps = [
 
 const guiasPorTema = [
   { href: "/sintomas/mi-hijo-no-habla-bien-chillan", label: "Mi hijo no habla bien" },
-  { href: "/sintomas/nino-pronuncia-mal-chillan", label: "Niño pronuncia mal" },
-  { href: "/sintomas/hijo-habla-poco-edad-chillan", label: "Hijo habla poco para su edad" },
-  { href: "/sintomas/hijo-no-arma-frases-chillan", label: "Hijo no arma frases" },
+  { href: "/sintomas/nino-pronuncia-mal-chillan", label: "Mi hijo de 3 años no se le entiende" },
+  { href: "/sintomas/hijo-habla-poco-edad-chillan", label: "Mi hijo de 2 años habla poco" },
+  { href: "/sintomas/hijo-no-arma-frases-chillan", label: "Mi hijo de 2 años no forma frases" },
   { href: "/sintomas/nino-no-entiende-instrucciones-chillan", label: "Niño no entiende instrucciones" },
   { href: "/sintomas/nino-tartamudea-chillan", label: "Niño tartamudea" },
   { href: "/tratamientos/dislalia-infantil-chillan", label: "Tratamiento dislalia infantil" },
@@ -323,15 +323,15 @@ export default function FonoaudiologaNinosChillanPage() {
 
                 {/* H1 Principal - Keyword principal */}
                 <h1 className="mb-4 text-4xl font-bold leading-tight tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
-                  Fonoaudióloga en Chillán para niños
+                  Fonoaudióloga infantil en Chillán para niños
                 </h1>
 
                 <p
                   data-speakable
                   className="mb-6 text-xl leading-relaxed text-gray-700 sm:text-2xl"
                 >
-                  Evaluación y terapia de lenguaje y habla para niños de 2 a 10
-                  años
+                  Evaluación y terapia de lenguaje y habla para niños que hablan
+                  poco, no arman frases o no se hacen entender.
                 </p>
 
                 {/* Bullets de beneficios */}

@@ -12,9 +12,9 @@ const WHATSAPP_LINK = whatsappUrl(
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Retraso del Lenguaje en Niños | Chillán · Habla Poco",
+  title: "Mi hijo habla poco: retraso del lenguaje | Chillán",
   description:
-    "Si tu hijo comprende pero habla poco o no arma frases, evaluamos en Chillán y armamos un plan. Terapia presencial. Agenda por WhatsApp.",
+    "Si tu hijo de 2 años no habla, habla poco o no arma frases, evaluamos retraso del lenguaje en Chillán y armamos un plan.",
   keywords: [
     "retraso del lenguaje niños Chillán",
     "mi hijo no habla",
@@ -56,6 +56,14 @@ const benefits = [
 ];
 
 const faqs = [
+  {
+    q: "¿Qué hago si mi hijo de 2 años no habla?",
+    a: "Si a los 2 años dice muy pocas palabras, no combina dos palabras o se comunica casi solo con gestos, conviene evaluar lenguaje expresivo y comprensión. No significa un diagnóstico automático, pero sí es una señal para consultar.",
+  },
+  {
+    q: "¿Es señal de retraso si mi hijo de 2 años no forma frases?",
+    a: "Puede serlo. Entre los 18 y 24 meses suelen aparecer combinaciones simples como «mamá agua» o «más pan». Si siguen solo palabras sueltas, una evaluación ayuda a definir si hay retraso del lenguaje o TEL/TDL.",
+  },
   {
     q: "¿En qué se diferencia retraso del lenguaje y retraso del habla?",
     a: "El lenguaje incluye vocabulario, frases y comprensión. El habla es cómo se articulan los sonidos. Un niño puede tener buen lenguaje pero pronunciar mal, o al revés. La evaluación lo aclara.",
@@ -121,15 +129,15 @@ export default function RetrasoLenguajePage() {
               Niños de 18 meses a 8 años
             </span>
             <h1 className="mb-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
-              Tratamiento para retraso del lenguaje en Chillán
+              Mi hijo habla poco o no arma frases: retraso del lenguaje en Chillán
             </h1>
             <p
               data-speakable
               className="mb-6 text-xl leading-relaxed text-gray-600"
             >
               El retraso del lenguaje es una de las consultas más frecuentes en
-              fonoaudiología infantil: el niño comprende, pero habla poco, no arma
-              frases o se frustra al comunicarse. En Chillán trabajamos con un
+              fonoaudiología infantil: el niño puede hablar poco, no formar
+              frases a los 2 años o frustrarse al comunicarse. En Chillán trabajamos con un
               enfoque lúdico y planificado para favorecer su expresión.
             </p>
             <ul className="mb-8 space-y-3 text-gray-700">

@@ -141,10 +141,10 @@ export default function HitosDelLenguajePorEdadPage() {
               <ul className="flex flex-col gap-2 text-sm sm:flex-row sm:flex-wrap">
                 <li>
                   <Link
-                    href="/sintomas/mi-hijo-no-habla-bien-chillan"
+                    href="/sintomas/hijo-no-arma-frases-chillan"
                     className="font-medium text-rose-600 underline"
                   >
-                    Mi hijo no habla bien
+                    Mi hijo de 2 años no forma frases
                   </Link>
                 </li>
                 <li>
@@ -152,7 +152,15 @@ export default function HitosDelLenguajePorEdadPage() {
                     href="/sintomas/hijo-habla-poco-edad-chillan"
                     className="font-medium text-rose-600 underline"
                   >
-                    Habla poco para su edad
+                    Mi hijo de 2 años habla poco
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/sintomas/mi-hijo-no-habla-bien-chillan"
+                    className="font-medium text-rose-600 underline"
+                  >
+                    Mi hijo de 3 años no se le entiende
                   </Link>
                 </li>
                 <li>

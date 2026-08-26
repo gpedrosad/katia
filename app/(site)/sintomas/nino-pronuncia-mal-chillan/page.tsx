@@ -10,9 +10,9 @@ const WHATSAPP_LINK = whatsappUrl("Hola, mi hijo pronuncia mal y busco fonoaudi�
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Niño pronuncia mal | Fonoaudiología Chillán",
+  title: "Mi hijo no pronuncia bien | Fonoaudiología Chillán",
   description:
-    "¿Tu hijo pronuncia mal letras o palabras? Causas frecuentes, señales por edad y cuándo ir al fonoaudiólogo en Chillán. Terapia de articulación presencial.",
+    "Si tu hijo pronuncia mal, habla como bebé o no se le entiende a los 3 o 4 años, revisa señales y evaluación en Chillán.",
   keywords: ["fonoaudióloga Chillán", "fonoaudiología infantil", "nino pronuncia mal chillan"],
 });
 
@@ -32,6 +32,8 @@ const actionsNow = [
 ];
 
 const faqs = [
+  { q: "¿Qué hago si mi hijo habla como bebé?", a: "Si ya tiene 3 o 4 años y mantiene muchos sonidos simplificados, conviene evaluar si hay dislalia, trastorno fonológico o inmadurez articulatoria persistente." },
+  { q: "¿Cuándo consultar si mi hijo no pronuncia bien?", a: "Consulta si a los 4 o 5 años cuesta entenderlo, omite muchos sonidos o evita hablar por vergüenza. La evaluación define si necesita terapia del habla." },
   { q: "¿Por qué mi hijo pronuncia mal?", a: "Causas frecuentes: dislalia, trastorno fonológico, frenillo corto o inmadurez motora del habla. La evaluación define cuál aplica." },
   { q: "¿Es normal no decir la «r» a los 4?", a: "Puede ser, pero si hay muchos sonidos afectados e inteligibilidad baja, conviene intervenir." },
   { q: "¿La terapia duele?", a: "No. Usamos juegos, soplo y praxias; el niño aprende posiciones articulatorias de forma lúdica." },
@@ -83,13 +85,13 @@ export default function NinoPronunciaMalPage() {
               Pronunciación infantil
             </span>
             <h1 className="mb-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
-              ¿Tu hijo pronuncia mal? Guía para padres en Chillán
+              Mi hijo no pronuncia bien o habla como bebé: guía en Chillán
             </h1>
             <p
               data-speakable
               className="mb-6 text-xl leading-relaxed text-gray-600"
             >
-              Algunos sonidos maduran tarde (la «r» suele consolidarse entre 4 y 6 años), pero si a los 4-5 años varios sonidos fallan y cuesta entenderlo, merece una evaluación. Te explico señales y pasos concretos.
+              Algunos sonidos maduran tarde (la «r» suele consolidarse entre 4 y 6 años), pero si a los 3-5 años varios sonidos fallan, habla como bebé o cuesta entenderlo, merece una evaluación. Te explico señales y pasos concretos.
             </p>
             <ul className="mb-8 space-y-3 text-gray-700">
               <li className="flex items-start gap-3">
@@ -145,7 +147,16 @@ export default function NinoPronunciaMalPage() {
             <h2 className="mb-6 text-center text-3xl font-bold text-gray-900">
               ¿Qué puede estar pasando?
             </h2>
-            <p className="mb-8 text-center text-gray-600">Revisa <a href="/tratamientos/dislalia-infantil-chillan">dislalia</a>, <a href="/tratamientos/trastorno-fonologico-chillan">trastorno fonológico</a>, <a href="/glosario/dislalia">glosario</a>, <a href="/chillan/dislalia">dislalia en Chillán</a>, <a href="/servicios/terapia-del-habla-infantil-chillan">terapia del habla</a> y <a href="/servicios/evaluacion-fonoaudiologica">evaluación</a>.</p>
+            <p className="mb-8 text-center text-gray-600">
+              Revisa{" "}
+              <Link href="/tratamientos/dislalia-infantil-chillan">dislalia</Link>
+              ,{" "}
+              <Link href="/tratamientos/trastorno-fonologico-chillan">trastorno fonológico</Link>
+              , <Link href="/glosario/dislalia">glosario</Link>,{" "}
+              <Link href="/chillan/dislalia">dislalia en Chillán</Link>,{" "}
+              <Link href="/servicios/terapia-del-habla-infantil-chillan">terapia del habla</Link>{" "}
+              y <Link href="/servicios/evaluacion-fonoaudiologica">evaluación</Link>.
+            </p>
           </div>
         </section>
 

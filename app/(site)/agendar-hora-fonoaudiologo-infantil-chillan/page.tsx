@@ -29,9 +29,9 @@ const faqItems = [
 
 export const metadata = buildPageMetadata({
   path: "/agendar-hora-fonoaudiologo-infantil-chillan",
-  title: "Agendar Evaluación Fonoaudiológica Chillán | WhatsApp",
+  title: "Agendar Fonoaudióloga Infantil en Chillán | WhatsApp",
   description:
-    "Reserva por WhatsApp: edad del niño y motivo. Respondemos en menos de 24 h hábiles. Evaluación infantil presencial en Chillán.",
+    "Agenda por WhatsApp evaluación infantil en Chillán para lenguaje, habla, pronunciación, TEL o informe escolar. Respuesta en horario hábil.",
 });
 
 export default function AgendarHoraPage() {
@@ -69,17 +69,17 @@ export default function AgendarHoraPage() {
         
         <article className="prose prose-rose mx-auto max-w-none lg:prose-lg">
           <h1 className="text-4xl font-extrabold text-rose-950">
-            Agenda hora con fonoaudióloga infantil en Chillán
+            Agendar hora con fonoaudióloga infantil en Chillán
           </h1>
           <p className="lead font-medium text-gray-700" data-speakable>
-            Agenda tu evaluación presencial por WhatsApp. Atiendo en Chillán a familias de Ñuble que buscan orientación temprana en lenguaje, habla y comunicación infantil.
+            Agenda tu evaluación presencial por WhatsApp. Atiendo en Chillán a familias de Ñuble que buscan orientación por lenguaje, habla, pronunciación o informe fonoaudiológico infantil.
           </p>
 
           <div className="bg-rose-50 p-8 rounded-2xl my-10 border border-rose-100 shadow-sm max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold mt-0 text-rose-900">Pasos para Agendar tu Hora</h2>
             <ul className="text-left text-rose-800 font-medium">
               <li>1. Escríbenos informando la edad del niño o niña.</li>
-              <li>2. Describe brevemente el motivo (&quot;<Link href="/sintomas/mi-hijo-no-habla-bien-chillan">no habla bien</Link>&quot;, &quot;pide evaluación para el PIE del colegio&quot;, etc).</li>
+              <li>2. Describe brevemente el motivo (&quot;<Link href="/sintomas/hijo-no-arma-frases-chillan">mi hijo de 2 años no forma frases</Link>&quot;, &quot;<Link href="/sintomas/nino-pronuncia-mal-chillan">no se le entiende al hablar</Link>&quot;, &quot;pide evaluación para el PIE del colegio&quot;, etc).</li>
               <li>3. Te ofreceremos alternativas de horario compatibles con la vida escolar.</li>
             </ul>
             
