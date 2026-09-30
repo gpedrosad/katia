@@ -15,10 +15,10 @@
 | Campo | Valor |
 |-------|-------|
 | Campaña | `search-fono-presencial-chillan` · `24172404146` |
-| Estado | **ENABLED** (2026-08-23) · $2.000/día · lun–jue |
+| Estado | **ENABLED** (2026-09-06) · $1.000/día · lun–jue · online PAUSED |
 | Grupo | `fono-presencial-chillan` · `201984702120` |
-| RSA activo | `821895167715` · URL `…/fono-presencial-chillan?gads=1` (revisión) |
-| RSA pausado | `822009115409` · DISAPPROVED `DESTINATION_NOT_WORKING` (404 al crear) |
+| RSA activo | `821895167715` · URL `…/fono-presencial-chillan?gads=1` · **APPROVED** |
+| RSA pausado | `822009115409` · 404 histórico (ya no desaprobado; se deja pausado) |
 | Budget | `15813234161` |
 | Tipo / red | Search · solo Google Search · sin partners · sin Display |
 | Conversión | `Contacto` · WhatsApp · `7705733210` · principal |
@@ -168,9 +168,49 @@ profesores
 cantante
 canto
 otorrino
+otorrinolaringólogo
 psicólogo
 psicóloga
 terapeuta ocupacional
+cesfam
+hospital
+consultorio
+anamnesis
+pauta
+pauta krefft
+macarena krefft
+krefft
+protocolo
+screening
+tamizaje
+rúbrica
+escala de lenguaje
+pefe
+teprosif
+plon
+teledi
+celf
+idel
+baremo
+batería
+manual de aplicación
+```
+
+### Negativas frase (search terms + competidores)
+
+```
+comunicados
+centro fonoaudiológico integral
+andes salud
+andessalud
+doctoralia
+test para apraxia
+test de apraxia
+test apraxia
+pefe de
+apraxia intervención
+intervención apraxia
+apraxia del habla infantil intervención
 ```
 
 ## Servicios a promocionar (≤25 caracteres)

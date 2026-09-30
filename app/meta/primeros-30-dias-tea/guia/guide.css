@@ -1,0 +1,394 @@
+.tea-guide {
+  --tea-ink: #292928;
+  --tea-paper: #f7f7f7;
+  --tea-white: #ffffff;
+  --tea-mint: #91e3b1;
+  --tea-mint-dark: #397552;
+  --tea-sage: #d1e7c4;
+  --tea-muted: #60605d;
+  --tea-border: #dcdcdc;
+  background: #ecece8;
+  color: var(--tea-ink);
+  font-family: var(--font-tea-sans), system-ui, sans-serif;
+  counter-reset: guide-page 1;
+}
+
+.tea-guide *,
+.tea-guide *::before,
+.tea-guide *::after {
+  box-sizing: border-box;
+}
+
+.tea-guide a {
+  color: var(--tea-mint-dark);
+  overflow-wrap: anywhere;
+}
+
+.tea-guide-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 12px 16px;
+  background: rgb(236 236 232 / 92%);
+  backdrop-filter: blur(12px);
+}
+
+.tea-guide-toolbar a,
+.tea-guide-toolbar button {
+  min-height: 42px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--tea-ink);
+  color: var(--tea-white);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.tea-guide-toolbar a {
+  background: transparent;
+  color: var(--tea-ink);
+}
+
+.tea-guide-sheet {
+  width: min(210mm, calc(100% - 24px));
+  min-height: 297mm;
+  margin: 18px auto;
+  padding: 18mm 18mm 22mm;
+  background: var(--tea-white);
+  box-shadow: 0 18px 40px rgb(41 41 40 / 12%);
+}
+
+.tea-guide-sheet:not(.tea-guide-cover) {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  counter-increment: guide-page;
+}
+
+.tea-guide-cover {
+  display: flex;
+  flex-direction: column;
+  background: var(--tea-ink);
+  color: var(--tea-paper);
+}
+
+.tea-guide-kicker {
+  display: inline-flex;
+  width: fit-content;
+  margin: 0 0 28px;
+  padding: 7px 14px 6px;
+  border-radius: 999px;
+  background: var(--tea-mint);
+  color: var(--tea-ink);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tea-guide-cover h1 {
+  margin: 0;
+  font-size: clamp(2.8rem, 8vw, 3.7rem);
+  font-weight: 650;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.tea-guide-cover h1 em {
+  display: block;
+  font-family: var(--font-tea-serif), Georgia, serif;
+  font-style: normal;
+  font-weight: 750;
+  text-transform: none;
+}
+
+.tea-guide-cover > p {
+  max-width: 34em;
+  margin: 22px 0 0;
+  color: rgb(247 247 247 / 82%);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.tea-guide-swoosh {
+  display: block;
+  width: min(420px, 86%);
+  margin: 72px 0 auto;
+  fill: none;
+  stroke: var(--tea-mint);
+  stroke-linecap: round;
+  stroke-width: 4;
+}
+
+.tea-guide-cover-foot {
+  display: grid;
+  grid-template-columns: 1fr minmax(180px, 230px);
+  gap: 28px;
+  align-items: end;
+  margin-top: 48px;
+}
+
+.tea-guide-cover-foot strong {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 650;
+}
+
+.tea-guide-cover-foot p {
+  margin: 8px 0 0;
+  color: #c9c9c6;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.tea-guide-mapcard {
+  padding: 22px 20px 18px;
+  border-radius: 16px;
+  background: var(--tea-sage);
+  color: var(--tea-ink);
+}
+
+.tea-guide-mapcard strong {
+  font-size: 13px;
+  letter-spacing: 0.06em;
+}
+
+.tea-guide-mapcard p {
+  margin: 10px 0 16px;
+  color: var(--tea-ink);
+  font-size: 13px;
+}
+
+.tea-guide-mapcard span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 22px;
+}
+
+.tea-guide-mapcard span i {
+  width: 12px;
+  height: 12px;
+  flex: 0 0 auto;
+  border: 1.4px solid var(--tea-ink);
+  border-radius: 2px;
+}
+
+.tea-guide-mapcard span b {
+  flex: 1;
+  height: 1px;
+  background: rgb(41 41 40 / 28%);
+  font-size: 0;
+}
+
+.tea-guide-label {
+  margin: 0 0 14px;
+  color: var(--tea-mint-dark);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.tea-guide-sheet h2 {
+  margin: 0 0 16px;
+  font-size: clamp(1.7rem, 4vw, 2.05rem);
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.tea-guide-sheet > p,
+.tea-guide-copy {
+  max-width: 62ch;
+  margin: 0 0 18px;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.tea-guide-muted {
+  margin-top: auto;
+  color: var(--tea-muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.tea-guide-note {
+  margin: 8px 0 24px;
+  padding: 18px 20px 8px;
+  background: var(--tea-sage);
+}
+
+.tea-guide-note.tea-guide-note-soft {
+  background: var(--tea-paper);
+}
+
+.tea-guide-note h3,
+.tea-guide-sheet h3 {
+  margin: 0 0 10px;
+  font-family: var(--font-tea-serif), Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.tea-guide-note p {
+  margin: 0 0 12px;
+  font-size: 14.5px;
+  line-height: 1.5;
+}
+
+.tea-guide-checks {
+  display: grid;
+  gap: 14px;
+  margin: 8px 0 22px;
+  padding: 0;
+  list-style: none;
+}
+
+.tea-guide-checks li {
+  display: grid;
+  grid-template-columns: 16px 1fr;
+  gap: 12px;
+  align-items: start;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.tea-guide-checks i {
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  border: 1.5px solid var(--tea-ink);
+  border-radius: 3px;
+}
+
+.tea-guide-lines {
+  display: grid;
+  gap: 22px;
+  margin: 8px 0 0;
+}
+
+.tea-guide-lines span {
+  height: 1px;
+  background: var(--tea-border);
+}
+
+.tea-guide-table-wrap {
+  overflow-x: auto;
+  margin: 8px 0 28px;
+}
+
+.tea-guide-table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.tea-guide-table th {
+  padding: 10px 12px;
+  background: var(--tea-ink);
+  color: var(--tea-white);
+  font-weight: 700;
+  text-align: left;
+}
+
+.tea-guide-table td {
+  height: 72px;
+  padding: 10px 12px;
+  border: 1px solid var(--tea-border);
+  vertical-align: top;
+}
+
+.tea-guide-table td:first-child {
+  width: 64px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.tea-guide-resource {
+  margin: 0 0 22px;
+}
+
+.tea-guide-resource h3 {
+  margin-bottom: 6px;
+}
+
+.tea-guide-resource p {
+  margin: 0 0 6px;
+  font-size: 14.5px;
+  line-height: 1.5;
+}
+
+.tea-guide-resource a {
+  font-size: 13px;
+}
+
+.tea-guide-sheet-foot {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 28px;
+  border-top: 1px solid var(--tea-border);
+  color: var(--tea-muted);
+  font-size: 11px;
+}
+
+.tea-guide-sheet-foot span:last-child::before {
+  content: counter(guide-page);
+}
+
+@media (max-width: 720px) {
+  .tea-guide-sheet {
+    width: calc(100% - 16px);
+    min-height: 0;
+    margin: 10px auto;
+    padding: 28px 20px 24px;
+  }
+
+  .tea-guide-cover-foot {
+    grid-template-columns: 1fr;
+  }
+
+  .tea-guide-swoosh {
+    margin: 36px 0 8px;
+  }
+
+  .tea-guide-table {
+    min-width: 0;
+  }
+}
+
+@media print {
+  .tea-guide {
+    background: white;
+  }
+
+  .tea-guide-toolbar {
+    display: none;
+  }
+
+  .tea-guide-sheet {
+    width: auto;
+    min-height: 0;
+    margin: 0;
+    padding: 14mm 12mm 16mm;
+    box-shadow: none;
+    break-after: page;
+  }
+
+  .tea-guide-sheet:last-child {
+    break-after: auto;
+  }
+}

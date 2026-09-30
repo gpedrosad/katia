@@ -4,6 +4,27 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 
 ---
 
+## 2026-09-29
+
+- Meta | Funnel consciente del problema (no oferta): anuncio nombra el momento; landing educa/calma; CTA paso chico; consulta después | Landing **8,5/10** post-ajuste. Doc `app/meta/primeros-30-dias-tea/funnel-consciente-del-problema.md`
+- Meta | Ranking Reddit dolores post-TEA: #1 lenguaje/comunicación (~14) · #2 qué hago primero (~6) · #3 duelo/culpa · #4 elegir terapeuta | 5–11 casi solo títulos; no usarlos como insight cerrado. Doc `app/meta/primeros-30-dias-tea/dolores-padres-reddit.md`
+
+## 2026-09-10
+
+- Ads | Chillán 7–10 sep: 38 imp / 4 clic / $2.937 / **1 conv** (9 sep, `fonoaudiologo chillan`) | $1.000/día rinde; anamnesis/Comunicados no volvieron
+- Ads | Chillán +18 negativas (77→95): amplia pefe/teprosif/plon/celf + frase apraxia intervención / pefe de | Cierra tests clínicos nuevos (`pefe de 7 a 12 años`, `apraxia … intervención`)
+
+## 2026-09-06
+
+- Ads | Ambas campañas **PAUSED** · budget $1.000 c/u (antes $5.000 online / $2.000 presencial) | No sirven hasta reactivar; presencial también `BUDGET_CONSTRAINED`
+- Ads | Post-fix 24 ago–3 sep: online `fono-adultos` 74 imp / 6 clic / $6.082 / **1 conv** (31 ago, `fonoaudiologo online`) · presencial 73 / 10 / $9.296 / **2 conv** (27 y 31 ago) | CPA presencial ~$4.648; docentes-voz $0 post-pausa
+- Ads | RSA Chillán `821895167715` **APPROVED** · RSA viejo 404 sigue pausado · RSA fono-adultos que convierte (`819480015118`) ON | El rechazo era histórico; el anuncio nuevo sí pasó
+- Ads | Bid bajo en `fonoaudiologia online` funcionó: 18 imp / 0 clic / $0 post-23 | Dejó de quemar; exacta `fonoaudiologo online` sí trajo el lead
+- Ads | Search terms presencial basura: `anamnesis infantil…` $1.940/0 · marca `comunicados chillán` $539 · tests clínicos 0 clic | Negativizar anamnesis/pauta/test/competidor si se reabre
+- Ads | Chillán +25 negativas (52→77): amplia anamnesis/pauta/krefft/protocolo/cesfam/hospital + frase comunicados/andessalud/doctoralia/test apraxia | Cierra gasto clínico y de competidor
+- Ads | Chillán **ENABLED** $1.000/día · online sigue PAUSED | Un clic/día máx.; primer serve lunes 8 sep (lun–jue)
+- Ads | All-time: online 40 clic / $35.476 / 7 conv · presencial 10 / $9.296 / 2 | 9 WhatsApp totales; sequía 7–30 ago; 3 conv nuevas post-fix
+
 ## 2026-08-26
 
 - SEO | SERP scrape infantil Chile 63/207 keywords (Apify scraperlink, gl=CL) · opp cualitativa 0–100 sin volumen/CPC/DA | Informe `docs/seo-oportunidades-serp-infantil-chile-2026-08-26.md`

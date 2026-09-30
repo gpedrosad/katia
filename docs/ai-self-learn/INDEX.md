@@ -1,6 +1,6 @@
 # INDEX — hechos densos (leer primero)
 
-Actualizado: **2026-08-26**
+Actualizado: **2026-09-06**
 
 ## Identidad / NAP
 
@@ -24,7 +24,7 @@ Actualizado: **2026-08-26**
 ## Ads / landings
 
 - Ejemplo: `/ads/voz-disfonia-online` · patrón `ads/PATRON-LANDING.md` · craft `ads/01-voz-disfonia-online/CRAFT.md`
-- Presencial Ads: `/ads/fono-presencial-chillan` · **solo niños** · campaña `24172404146` **ENABLED** · $2.000/día · horario **lun–jue** · geo presencia Chillán/Chillán Viejo · RSA `821895167715` (URL `?gads=1`; el RSA `822009115409` quedó DISAPPROVED por 404 al crear)
+- Presencial Ads: `/ads/fono-presencial-chillan` · **solo niños** · campaña `24172404146` **ENABLED** (2026-09-06) · $1.000/día · LIMITED budget · horario **lun–jue** · geo presencia Chillán/Chillán Viejo · RSA `821895167715` **APPROVED** (`?gads=1`); el RSA `822009115409` sigue pausado (404 histórico)
 - Reseñas Ads: siempre `AdsGoogleBadge` + `AdsGoogleReviews` (`AdsGoogleTrust.tsx`) con SVG **GoogleMark**; desktop ~6 / mobile 2; datos en `lib/google-reviews.ts`
 - Motion: solo hero (CSS `.ads-landing`); foto sin fade opacity (LCP)
 - UI: señales en lista; pasos numerados; sin CTA mid; sticky WhatsApp mobile; FAQ ×3; 1 línea “Por qué Katia”
@@ -34,13 +34,17 @@ Actualizado: **2026-08-26**
 - Tag Google Ads: `AW-18364805586` + conversión Contacto `AW-18364805586/rBy6CNrQsNocENLjgrVE` en clic WhatsApp · doc `GOOGLEADS/google-ads-tag-conversiones.md`
 - Ads API (lectura): customer `2147001598` (acceso directo; no LOGIN MCC) · `.secrets` symlink · `npm run google-ads:report` · doc `GOOGLEADS/google-ads-api-setup.md`
 - Playbook Search: `GOOGLEADS/google-ads-search-campana-playbook.md` (1 campaña/cluster; frase; landing `/ads/...`)
-- Ads RSA `fono-adultos`: activo `820647565901` (15 títulos, 2026-08-11) · pausado `819480015118` · doc `ads/02-fono-adultos-online/README.md`
+- Ads RSA `fono-adultos`: activo `819480015118` (el que convierte) · pausado `820647565901` (0 conv / $12.8k) · doc `ads/02-fono-adultos-online/README.md`
+- Ads online: campaña `24093796310` **PAUSED** (2026-09-06) · budget $1.000 · grupos ON: `fono-adultos` + `fatiga-vocal` · pausados: `docentes-voz` + `voz-disfonia`
 - Ads AI Max: **OFF** deseado en Search · si vuelve ON → `npm run google-ads:disable-ai-max` · procedimiento `GOOGLEADS/google-ads-api-setup.md` § AI Max (OPTED_OUT text automation antes si bundling REQUIRED)
+- Corte Ads vivo (2026-09-06): ambas **PAUSED** · post-23 ago online 6 clic / $6.082 / 1 conv · presencial 10 clic / $9.296 / **2 conv** · all-time 9 conv / ~$44.8k
 - Informe Ads (2026-08-23): `docs/google-ads-informe-2026-08-23.md` — 30d 319 imp / 34 clic / 6 conv / $29.394 · **0 conv desde 7 ago** (~$20.9k gastados) · AI Max OFF · LIMITED (budget lost 64% · rank 6%) · IS 30% · pausar candidato `docentes-voz` ($8.611/0) · keyword cara `fonoaudiologia online` ($8.743/10/0)
 - Informe Ads (2026-08-11): `docs/google-ads-informe-2026-08-11.md` — all-time 150/13/6/$9.870 CPA~$1.645 · LIMITED ranking · IS 78%
 - Informe Ads (2026-08-06): `docs/google-ads-informe-2026-08-06.md` — 104/11/6/$8.523 · IS 13%/85% presupuesto
 - OAuth Ads renovado **2026-08-23** (`npm run google-ads:auth`); MCP oficial `google-ads-mcp` en `~/.cursor/mcp.json`
 - Skill: `.agents/skills/impeccable` (`animate` / `distill` / `polish` / `optimize`)
+- Meta TEA: ranking Reddit de dolores post-diagnóstico — #1 lenguaje/comunicación (~14 hilos); 1–4 con texto; 5–11 casi solo títulos (confirmar con familias) · doc `app/meta/primeros-30-dias-tea/dolores-padres-reddit.md` (2026-09-29)
+- Meta TEA: funnel **consciente del problema** (no oferta) · landing **8,5/10** post-ajuste (H1 30 días, tipos de ayuda, FAQ emocional) · doc `app/meta/primeros-30-dias-tea/funnel-consciente-del-problema.md` (2026-09-29)
 
 ## GSC / SEO orgánico (último corte)
 

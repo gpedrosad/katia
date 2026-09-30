@@ -1,0 +1,1175 @@
+.tea-landing {
+  --tea-ink: #292928;
+  --tea-paper: #f7f7f7;
+  --tea-white: #ffffff;
+  --tea-mint: #91e3b1;
+  --tea-mint-dark: #397552;
+  --tea-sage: #d1e7c4;
+  --tea-purple: #713988;
+  --tea-border: #dcdcdc;
+  --tea-muted: #60605d;
+  overflow: clip;
+  background: var(--tea-paper);
+  color: var(--tea-ink);
+  font-family: var(--font-tea-sans), system-ui, sans-serif;
+}
+
+.tea-landing *,
+.tea-landing *::before,
+.tea-landing *::after {
+  box-sizing: border-box;
+}
+
+.tea-landing a {
+  color: inherit;
+}
+
+.tea-shell {
+  width: min(1380px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.tea-hero {
+  position: relative;
+  min-height: 790px;
+  padding: 48px 0 120px;
+  background: var(--tea-ink);
+  color: var(--tea-paper);
+}
+
+.tea-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--tea-mint);
+  color: var(--tea-ink) !important;
+  font-weight: 820;
+  letter-spacing: 0.025em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.tea-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.04fr) minmax(380px, 0.96fr);
+  align-items: center;
+  gap: clamp(56px, 8vw, 120px);
+  min-height: 625px;
+  padding: 54px 5vw 32px;
+}
+
+.tea-hero-copy {
+  position: relative;
+  z-index: 4;
+  max-width: 690px;
+  animation: tea-copy-arrive 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.tea-topic {
+  display: inline-block;
+  margin: 0 0 24px;
+  padding: 6px 12px 5px;
+  border-radius: 2px;
+  background: var(--tea-mint);
+  color: var(--tea-ink);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.tea-hero h1 {
+  max-width: 650px;
+  margin: 0;
+  color: var(--tea-paper);
+  font-size: clamp(4.5rem, 7.3vw, 7rem);
+  font-weight: 650;
+  letter-spacing: -0.035em;
+  line-height: 0.92;
+  text-wrap: balance;
+}
+
+.tea-hero-accent {
+  font-family: var(--font-tea-serif), Georgia, serif;
+  font-weight: 750;
+}
+
+.tea-landing h1,
+.tea-landing h2,
+.tea-landing h3 {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+.tea-handmark {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+.tea-handmark-text {
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-tea-serif), Georgia, serif;
+  font-weight: 750;
+}
+
+.tea-handmark svg {
+  position: absolute;
+  z-index: 1;
+  overflow: visible;
+  fill: none;
+  stroke: var(--tea-mint);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+.tea-hero-accent {
+  font-family: var(--font-tea-serif), Georgia, serif;
+  font-weight: 750;
+}
+
+.tea-handmark-circle svg {
+  top: 50%;
+  left: 50%;
+  width: calc(100% + 0.24em);
+  height: calc(100% + 0.4em);
+  transform: translate(-47%, -42%);
+  stroke-width: 4.5;
+}
+
+.tea-handmark-underline svg {
+  bottom: -0.11em;
+  left: -0.03em;
+  width: calc(100% + 0.06em);
+  height: 0.34em;
+  stroke-width: 4;
+}
+
+.tea-lead {
+  max-width: 610px;
+  margin: 38px 0 0;
+  color: rgb(247 247 247 / 82%);
+  font-size: clamp(1.1rem, 1.6vw, 1.34rem);
+  line-height: 1.48;
+}
+
+.tea-hero-action {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 34px;
+}
+
+.tea-hero-action p,
+.tea-final-meta {
+  margin: 0;
+  color: rgb(247 247 247 / 58%);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.tea-button {
+  min-height: 54px;
+  gap: 10px;
+  padding: 0 26px;
+  font-size: 14px;
+}
+
+.tea-button svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2;
+}
+
+.tea-guide-stage {
+  position: relative;
+  width: min(430px, 100%);
+  height: 540px;
+  justify-self: center;
+  perspective: 1100px;
+  animation: tea-guide-settle 900ms cubic-bezier(0.16, 1, 0.3, 1) 120ms both;
+}
+
+.tea-paper {
+  position: absolute;
+  width: 334px;
+  height: 472px;
+  border-radius: 9px 16px 16px 9px;
+}
+
+.tea-paper-back {
+  top: 28px;
+  left: 66px;
+  border: 1px solid rgb(41 41 40 / 16%);
+  background: var(--tea-sage);
+  box-shadow: 18px 28px 50px rgb(0 0 0 / 21%);
+  transform: rotate(7deg);
+}
+
+.tea-paper-front {
+  top: 14px;
+  left: 38px;
+  display: flex;
+  flex-direction: column;
+  padding: 34px 34px 28px;
+  background: var(--tea-white);
+  box-shadow: 14px 25px 60px rgb(0 0 0 / 34%);
+  color: var(--tea-ink);
+  transform: rotate(-2deg);
+}
+
+.tea-paper-front::before {
+  position: absolute;
+  inset: 18px auto 18px 18px;
+  width: 1px;
+  background: var(--tea-border);
+  content: "";
+}
+
+.tea-cover-tag {
+  align-self: flex-start;
+  padding: 5px 9px 4px;
+  border-radius: 2px;
+  background: var(--tea-ink);
+  color: var(--tea-white);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.tea-cover-title {
+  margin: 28px 0 0;
+  font-size: 52px;
+  font-weight: 650;
+  letter-spacing: -0.04em;
+  line-height: 0.94;
+}
+
+.tea-cover-title span {
+  position: relative;
+  font-family: var(--font-tea-serif), Georgia, serif;
+  font-weight: 760;
+}
+
+.tea-cover-title span::after {
+  position: absolute;
+  right: -7px;
+  bottom: 2px;
+  left: -4px;
+  z-index: -1;
+  height: 15px;
+  background: var(--tea-mint);
+  content: "";
+  transform: rotate(-1.5deg);
+}
+
+.tea-cover-copy {
+  max-width: 230px;
+  margin: 22px 0 0;
+  color: var(--tea-muted);
+  font-size: 14px;
+  line-height: 1.42;
+}
+
+.tea-cover-list {
+  display: grid;
+  gap: 11px;
+  margin-top: 28px;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.tea-cover-list div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.tea-cover-list span {
+  width: 13px;
+  height: 13px;
+  border: 1.5px solid var(--tea-ink);
+  border-radius: 3px;
+}
+
+.tea-cover-author {
+  margin: auto 0 0;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.tea-pencil-note {
+  position: absolute;
+  right: -7px;
+  bottom: 24px;
+  width: 160px;
+  color: var(--tea-mint);
+  font-family: var(--font-tea-serif), Georgia, serif;
+  font-size: 16px;
+  font-style: italic;
+  transform: rotate(-5deg);
+}
+
+.tea-pencil-note svg {
+  width: 126px;
+  margin: -5px 0 0 4px;
+  fill: none;
+  stroke: currentcolor;
+  stroke-linecap: round;
+  stroke-width: 2;
+}
+
+.tea-curve {
+  position: absolute;
+  right: -5%;
+  bottom: -1px;
+  left: -5%;
+  height: 84px;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  background: var(--tea-white);
+  transform: translateY(51%);
+}
+
+.tea-thesis {
+  padding: 140px 0 120px;
+  background: var(--tea-white);
+}
+
+.tea-thesis-grid {
+  display: grid;
+  grid-template-columns: 1.08fr 0.72fr;
+  align-items: start;
+  gap: 10vw;
+}
+
+.tea-thesis h2,
+.tea-section-heading h2,
+.tea-preview h2,
+.tea-author h2,
+.tea-faq h2,
+.tea-final h2 {
+  margin: 0;
+  font-size: clamp(2.7rem, 4.7vw, 4.7rem);
+  font-weight: 630;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+  text-wrap: balance;
+}
+
+.tea-thesis h2 .tea-handmark svg,
+.tea-final h2 .tea-handmark svg {
+  stroke: var(--tea-purple);
+}
+
+.tea-thesis-grid > div {
+  padding-top: 12px;
+}
+
+.tea-thesis-grid p {
+  margin: 0;
+  color: var(--tea-muted);
+  font-size: 18px;
+  line-height: 1.62;
+}
+
+.tea-thesis-grid .tea-thesis-strong {
+  margin-top: 24px;
+  color: var(--tea-ink);
+  font-weight: 730;
+}
+
+.tea-included {
+  padding: 112px 0 126px;
+  background: var(--tea-paper);
+}
+
+.tea-section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 48px;
+  margin-bottom: 80px;
+}
+
+.tea-section-heading h2 {
+  max-width: 720px;
+}
+
+.tea-section-heading > p {
+  max-width: 420px;
+  margin: 0 0 8px;
+  color: var(--tea-muted);
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.tea-route {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 42px;
+}
+
+.tea-route-line {
+  position: absolute;
+  top: 34px;
+  right: 10%;
+  left: 10%;
+  height: 2px;
+  background: var(--tea-border);
+}
+
+.tea-route-item {
+  position: relative;
+  z-index: 2;
+}
+
+.tea-route-index {
+  display: inline-flex;
+  width: 70px;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--tea-ink);
+  border-radius: 50%;
+  background: var(--tea-paper);
+}
+
+.tea-route-index svg {
+  width: 25px;
+  height: 25px;
+  stroke-width: 1.55;
+}
+
+.tea-route-index span {
+  position: absolute;
+  top: -9px;
+  left: 50px;
+  padding: 2px 6px;
+  background: var(--tea-mint);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.tea-route-item h3 {
+  margin: 28px 0 12px;
+  font-family: var(--font-tea-serif), Georgia, serif;
+  font-size: 25px;
+  line-height: 1.12;
+}
+
+.tea-route-item p {
+  margin: 0;
+  color: var(--tea-muted);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.tea-preview {
+  padding: 120px 0;
+  background: var(--tea-sage);
+}
+
+.tea-preview-grid {
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  align-items: center;
+  gap: clamp(60px, 9vw, 140px);
+}
+
+.tea-preview-copy > p {
+  max-width: 520px;
+  margin: 26px 0 0;
+  color: #455149;
+  font-size: 18px;
+  line-height: 1.58;
+}
+
+.tea-preview-copy ul {
+  display: grid;
+  gap: 14px;
+  margin: 32px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tea-preview-copy li {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  font-size: 15px;
+  font-weight: 680;
+  line-height: 1.45;
+}
+
+.tea-preview-copy li svg {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  margin-top: 1px;
+  stroke-width: 2;
+}
+
+.tea-workbook {
+  position: relative;
+  min-height: 530px;
+  padding: 48px 54px;
+  border-radius: 14px;
+  background: var(--tea-white);
+  box-shadow: 15px 23px 42px rgb(41 41 40 / 14%);
+  transform: rotate(1.2deg);
+}
+
+.tea-workbook::after {
+  position: absolute;
+  inset: 16px 16px 16px auto;
+  width: 1px;
+  background: var(--tea-border);
+  content: "";
+}
+
+.tea-workbook-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--tea-mint-dark);
+  font-size: 11px;
+  font-weight: 820;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tea-workbook-topline svg {
+  width: 21px;
+  height: 21px;
+}
+
+.tea-workbook h3 {
+  max-width: 480px;
+  margin: 34px 0 38px;
+  font-family: var(--font-tea-serif), Georgia, serif;
+  font-size: clamp(2rem, 3vw, 3.25rem);
+  line-height: 1.02;
+}
+
+.tea-workbook-row {
+  display: grid;
+  grid-template-columns: 18px auto 1fr;
+  align-items: center;
+  gap: 11px;
+  min-height: 45px;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.tea-checkbox {
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid var(--tea-ink);
+  border-radius: 3px;
+}
+
+.tea-workbook-row i {
+  height: 1px;
+  background: var(--tea-border);
+}
+
+.tea-workbook > p {
+  margin: 34px 0 14px;
+  font-family: var(--font-tea-serif), Georgia, serif;
+  font-size: 18px;
+  font-weight: 720;
+}
+
+.tea-writing-lines {
+  display: grid;
+  gap: 18px;
+}
+
+.tea-writing-lines span {
+  height: 1px;
+  background: var(--tea-border);
+}
+
+.tea-author {
+  padding: 120px 0;
+  background: var(--tea-white);
+}
+
+.tea-author-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.72fr) minmax(0, 1.28fr);
+  align-items: center;
+  gap: clamp(56px, 8vw, 118px);
+}
+
+.tea-author-photo {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 20px;
+  background: var(--tea-sage);
+  box-shadow: 10px 18px 32px rgb(41 41 40 / 12%);
+}
+
+.tea-author-photo::after {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgb(41 41 40 / 8%);
+  border-radius: inherit;
+  content: "";
+  pointer-events: none;
+}
+
+.tea-author-name {
+  display: inline-block;
+  margin: 0 0 24px;
+  padding: 5px 10px 4px;
+  border-radius: 2px;
+  background: var(--tea-ink);
+  color: var(--tea-white);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tea-author-copy > p:not(.tea-author-name) {
+  max-width: 690px;
+  margin: 28px 0 0;
+  color: var(--tea-muted);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.tea-author-copy .tea-boundary {
+  padding: 23px 26px;
+  border: 1.5px solid var(--tea-border);
+  border-radius: 15px;
+  background: var(--tea-paper);
+  color: var(--tea-ink) !important;
+  font-size: 15px !important;
+}
+
+.tea-faq {
+  padding: 118px 0;
+  background: var(--tea-paper);
+}
+
+.tea-faq-grid {
+  display: grid;
+  grid-template-columns: 0.65fr 1.35fr;
+  gap: 9vw;
+}
+
+.tea-faq h2 {
+  position: sticky;
+  top: 32px;
+  align-self: start;
+  font-size: clamp(2.7rem, 4.2vw, 4.2rem);
+}
+
+.tea-faq-list {
+  display: grid;
+  gap: 12px;
+}
+
+.tea-faq details {
+  overflow: hidden;
+  border: 1.5px solid var(--tea-border);
+  border-radius: 16px;
+  background: var(--tea-white);
+}
+
+.tea-faq summary {
+  position: relative;
+  min-height: 64px;
+  padding: 20px 58px 20px 22px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 720;
+  list-style: none;
+  overflow-wrap: break-word;
+}
+
+.tea-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.tea-faq summary::before,
+.tea-faq summary::after {
+  position: absolute;
+  top: 31px;
+  right: 23px;
+  width: 16px;
+  height: 1.5px;
+  background: var(--tea-purple);
+  content: "";
+  transition: transform 200ms ease;
+}
+
+.tea-faq summary::after {
+  transform: rotate(90deg);
+}
+
+.tea-faq details[open] summary::after {
+  transform: rotate(0deg);
+}
+
+.tea-faq details p {
+  margin: 0;
+  padding: 0 58px 24px 22px;
+  color: var(--tea-muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.tea-final {
+  padding: 126px 0;
+  background: var(--tea-mint);
+}
+
+.tea-final-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.tea-final-note {
+  margin: 0 0 26px;
+  font-size: 16px;
+  font-weight: 720;
+}
+
+.tea-final h2 {
+  max-width: min(920px, 100%);
+  font-size: clamp(3.2rem, 6vw, 6rem);
+  line-height: 0.98;
+}
+
+.tea-final h2 .tea-handmark svg {
+  stroke: var(--tea-white);
+}
+
+.tea-final .tea-button {
+  margin-top: 48px;
+  background: var(--tea-ink);
+  color: var(--tea-white) !important;
+}
+
+.tea-final-meta {
+  margin-top: 16px;
+  color: rgb(41 41 40 / 66%);
+}
+
+.tea-footer {
+  padding: 52px 0 42px;
+  background: var(--tea-ink);
+  color: var(--tea-white);
+}
+
+.tea-footer-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+}
+
+.tea-footer p {
+  max-width: 620px;
+  margin: 0;
+  color: rgb(247 247 247 / 70%);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.tea-footer strong {
+  color: var(--tea-mint);
+  font-size: 16px;
+}
+
+.tea-mobile-download {
+  display: none;
+}
+
+.tea-button:focus-visible,
+.tea-mobile-download a:focus-visible,
+.tea-faq summary:focus-visible {
+  outline: 3px solid var(--tea-mint);
+  outline-offset: 4px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .tea-button:hover {
+    box-shadow:
+      5px 7px 18px rgb(0 0 0 / 24%),
+      3px 3px 0 var(--tea-white);
+    transform: translate(-4px, -4px);
+  }
+
+  .tea-final .tea-button:hover {
+    box-shadow:
+      5px 7px 18px rgb(0 0 0 / 18%),
+      3px 3px 0 var(--tea-white);
+  }
+}
+
+@keyframes tea-copy-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes tea-guide-settle {
+  from {
+    transform: translateY(16px) rotate(2deg);
+  }
+
+  to {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@media (max-width: 980px) {
+  .tea-hero {
+    min-height: auto;
+    padding-bottom: 96px;
+  }
+
+  .tea-hero-grid {
+    grid-template-columns: 1fr 0.8fr;
+    gap: 34px;
+    min-height: 620px;
+    padding-inline: 0;
+  }
+
+  .tea-paper {
+    width: 274px;
+    height: 388px;
+  }
+
+  .tea-paper-front {
+    left: 16px;
+    padding: 28px 27px 24px;
+  }
+
+  .tea-paper-back {
+    left: 38px;
+  }
+
+  .tea-cover-title {
+    font-size: 43px;
+  }
+
+  .tea-route {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 58px 46px;
+  }
+
+  .tea-route-line {
+    display: none;
+  }
+
+  .tea-author-grid {
+    grid-template-columns: minmax(280px, 0.75fr) 1.25fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .tea-shell {
+    width: min(100% - 36px, 680px);
+  }
+
+  .tea-hero {
+    padding-top: 32px;
+  }
+
+  .tea-hero-grid {
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 54px;
+    padding: 54px 0 12px;
+  }
+
+  .tea-topic {
+    margin-bottom: 19px;
+    font-size: 10px;
+  }
+
+  .tea-hero h1 {
+    font-size: clamp(3.05rem, 13.5vw, 4.4rem);
+    line-height: 0.96;
+  }
+
+  .tea-lead {
+    margin-top: 29px;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .tea-hero-action {
+    display: block;
+    margin-top: 28px;
+  }
+
+  .tea-button {
+    width: 100%;
+    min-height: 56px;
+    padding-inline: 18px;
+    font-size: 13px;
+  }
+
+  .tea-hero-action p {
+    margin-top: 12px;
+    text-align: center;
+  }
+
+  .tea-guide-stage {
+    width: 310px;
+    height: 430px;
+  }
+
+  .tea-paper {
+    width: 252px;
+    height: 356px;
+  }
+
+  .tea-paper-front {
+    top: 12px;
+    left: 12px;
+    padding: 25px 26px 21px;
+  }
+
+  .tea-paper-back {
+    top: 25px;
+    left: 35px;
+  }
+
+  .tea-cover-title {
+    margin-top: 22px;
+    font-size: 39px;
+  }
+
+  .tea-cover-copy {
+    margin-top: 17px;
+    font-size: 12px;
+  }
+
+  .tea-cover-list {
+    gap: 8px;
+    margin-top: 19px;
+    font-size: 10px;
+  }
+
+  .tea-cover-list span {
+    width: 11px;
+    height: 11px;
+  }
+
+  .tea-pencil-note {
+    right: -16px;
+    bottom: 20px;
+    font-size: 14px;
+  }
+
+  .tea-curve {
+    height: 56px;
+  }
+
+  .tea-thesis,
+  .tea-included,
+  .tea-preview,
+  .tea-author,
+  .tea-faq,
+  .tea-final {
+    padding-block: 88px;
+  }
+
+  .tea-thesis-grid,
+  .tea-preview-grid,
+  .tea-author-grid,
+  .tea-faq-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .tea-thesis h2,
+  .tea-section-heading h2,
+  .tea-preview h2,
+  .tea-author h2,
+  .tea-faq h2,
+  .tea-final h2 {
+    font-size: clamp(2.35rem, 10.8vw, 3.35rem);
+  }
+
+  .tea-handmark-underline {
+    white-space: normal;
+  }
+
+  .tea-thesis-grid > div {
+    padding-top: 0;
+  }
+
+  .tea-thesis-grid p,
+  .tea-preview-copy > p,
+  .tea-author-copy > p:not(.tea-author-name) {
+    font-size: 17px;
+  }
+
+  .tea-section-heading {
+    display: block;
+    margin-bottom: 54px;
+  }
+
+  .tea-section-heading > p {
+    margin-top: 24px;
+  }
+
+  .tea-route {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .tea-route-item {
+    display: grid;
+    grid-template-columns: 58px 1fr;
+    gap: 20px;
+    padding: 22px 0;
+    border-top: 1px solid var(--tea-border);
+  }
+
+  .tea-route-item:last-child {
+    border-bottom: 1px solid var(--tea-border);
+  }
+
+  .tea-route-index {
+    width: 54px;
+    height: 54px;
+  }
+
+  .tea-route-index svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .tea-route-index span {
+    top: -7px;
+    left: 37px;
+  }
+
+  .tea-route-item h3 {
+    margin: 3px 0 8px;
+    font-size: 22px;
+  }
+
+  .tea-workbook {
+    min-height: 460px;
+    padding: 34px 27px;
+    transform: rotate(0.6deg);
+  }
+
+  .tea-workbook h3 {
+    margin: 28px 0;
+    font-size: clamp(1.75rem, 8.4vw, 2.15rem);
+  }
+
+  .tea-author-photo {
+    width: min(100%, 390px);
+  }
+
+  .tea-faq h2 {
+    position: static;
+  }
+
+  .tea-button,
+  .tea-mobile-download a {
+    letter-spacing: 0.02em;
+  }
+
+  .tea-footer {
+    padding-bottom: 110px;
+  }
+
+  .tea-footer-inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .tea-mobile-download {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+    display: block;
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+    border-top: 1px solid rgb(41 41 40 / 14%);
+    background: rgb(247 247 247 / 96%);
+    backdrop-filter: blur(14px);
+  }
+
+  .tea-mobile-download a {
+    display: flex;
+    min-height: 50px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 12px;
+    border-radius: 999px;
+    background: var(--tea-ink);
+    color: var(--tea-white);
+    font-size: 11px;
+    font-weight: 820;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .tea-mobile-download svg {
+    width: 17px;
+    height: 17px;
+  }
+}
+
+@media (max-width: 420px) {
+  .tea-guide-stage {
+    transform: translateX(-2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tea-hero-copy,
+  .tea-guide-stage {
+    animation: none;
+  }
+
+  .tea-button,
+  .tea-faq summary::after {
+    transition: none;
+  }
+}
+
+@media print {
+  .tea-mobile-download {
+    display: none;
+  }
+}

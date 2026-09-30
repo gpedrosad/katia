@@ -155,11 +155,57 @@ const NEGATIVE_KEYWORDS = [
   "cantante",
   "canto",
   "otorrino",
+  "otorrinolaringologo",
+  "otorrinolaringólogo",
   "psicologo",
   "psicólogo",
   "psicologa",
   "psicóloga",
   "terapeuta ocupacional",
+  "cesfam",
+  "hospital",
+  "consultorio",
+  "anamnesis",
+  "pauta",
+  "pauta krefft",
+  "macarena krefft",
+  "krefft",
+  "protocolo",
+  "screening",
+  "tamizaje",
+  "rubrica",
+  "rúbrica",
+  "escala de lenguaje",
+  "pefe",
+  "teprosif",
+  "plon",
+  "teledi",
+  "celf",
+  "idel",
+  "baremo",
+  "bateria",
+  "batería",
+  "manual de aplicacion",
+  "manual de aplicación",
+];
+
+const NEGATIVE_KEYWORDS_PHRASE = [
+  "comunicados",
+  "centro fonoaudiologico integral",
+  "centro fonoaudiológico integral",
+  "andes salud",
+  "andessalud",
+  "doctoralia",
+  "test para apraxia",
+  "test de apraxia",
+  "test apraxia",
+  "pefe de",
+  "apraxia intervencion",
+  "apraxia intervención",
+  "intervencion apraxia",
+  "intervención apraxia",
+  "apraxia del habla infantil intervencion",
+  "apraxia del habla infantil intervención",
 ];
 
 const HEADLINES = [
@@ -477,6 +523,18 @@ const buildOperations = () => {
         negative: true,
       },
     })),
+    ...NEGATIVE_KEYWORDS_PHRASE.map((text) => ({
+      entity: "campaign_criterion",
+      operation: "create",
+      resource: {
+        campaign: campaignResourceName,
+        keyword: {
+          text,
+          match_type: enums.KeywordMatchType.PHRASE,
+        },
+        negative: true,
+      },
+    })),
     {
       entity: "ad_group",
       operation: "create",
@@ -519,7 +577,7 @@ Presupuesto: $${DAILY_BUDGET_CLP.toLocaleString("es-CL")} CLP/día
 CPC máx.: $${MAX_CPC_CLP.toLocaleString("es-CL")} CLP
 Geos: ${GEO_TARGETS.map((geo) => `${geo.label} (${geo.id})`).join(", ")}
 Keywords frase: ${KEYWORDS.length}
-Negativas amplias: ${NEGATIVE_KEYWORDS.length}
+Negativas amplias: ${NEGATIVE_KEYWORDS.length} · frase: ${NEGATIVE_KEYWORDS_PHRASE.length}
 RSA: ${HEADLINES.length} títulos + ${DESCRIPTIONS.length} descripciones
 Operaciones atómicas: ${operationCount}
 `);
