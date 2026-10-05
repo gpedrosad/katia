@@ -29,9 +29,9 @@ const faqItems = [
 
 export const metadata = buildPageMetadata({
   path: "/agendar-hora-fonoaudiologo-infantil-chillan",
-  title: "Agendar Fonoaudióloga Infantil en Chillán | WhatsApp",
+  title: "Agendar Hora Fonoaudiólogo Infantil en Chillán | Respuesta en 24h",
   description:
-    "Agenda por WhatsApp evaluación infantil en Chillán para lenguaje, habla, pronunciación, TEL o informe escolar. Respuesta en horario hábil.",
+    "Agenda tu hora de fonoaudiología infantil en Chillán por WhatsApp. Evaluación de lenguaje, habla, pronunciación, TEL e informe PIE. Te respondemos el mismo día, horario flexible para familias.",
 });
 
 export default function AgendarHoraPage() {
@@ -94,7 +94,7 @@ export default function AgendarHoraPage() {
           <section className="text-left mt-16 border-t pt-8">
             <h3 className="text-xl font-bold text-gray-900">Información sobre la Evaluación en Consulta</h3>
             <p>
-              Toda intervención inicia invariablemente por una <Link href="/servicios/evaluacion-fonoaudiologica">evaluación fonoaudiológica pormenorizada</Link>. En caso de que tú o el profesor sospechen de alguna condición como Tel, Disfasia, <Link href="/tratamientos/retraso-del-lenguaje-chillan">retrasos en la comprensión</Link>, prepararemos baterías evaluativas estandarizadas aplicables presencialmente.
+              Toda intervención inicia invariablemente por una <Link href="/servicios/evaluacion-fonoaudiologica">evaluación fonoaudiológica pormenorizada</Link>. En caso de que tú o el profesor sospechen de alguna condición como TEL, Disfasia, <Link href="/tratamientos/retraso-del-lenguaje-chillan">retrasos en la comprensión</Link>, prepararemos baterías evaluativas estandarizadas aplicables presencialmente. También puedes revisar los <Link href="/recursos/hitos-del-lenguaje-por-edad" className="font-medium text-rose-600 underline">hitos del lenguaje por edad</Link> para orientarte sobre el desarrollo esperado de tu hijo.
             </p>
           </section>
 

@@ -10,10 +10,10 @@ const WHATSAPP_LINK = whatsappUrl("Hola, necesito evaluación o tratamiento por 
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Tratamiento TEL (Trastorno del Lenguaje) | Chillán",
+  title: "Tratamiento TEL en Chillán | Trastorno Específico del Lenguaje Infantil",
   description:
-    "Fonoaudiología especializada en TEL y TDL en niños en Chillán. Evaluación con pruebas estandarizadas, informes PIE y terapia de lenguaje presencial.",
-  keywords: ["TEL niños Chillán", "trastorno específico del lenguaje", "TDL infantil", "fonoaudióloga PIE", "terapia lenguaje"],
+    "Fonoaudióloga especializada en TEL (Trastorno Específico del Lenguaje) en niños en Chillán. Evaluación con pruebas estandarizadas, informe PIE y terapia de lenguaje presencial. El TEL afecta al 7% de los niños. Agenda tu evaluación.",
+  keywords: ["TEL niños Chillán", "trastorno específico del lenguaje", "TDL infantil", "fonoaudióloga PIE", "terapia lenguaje", "TEL Chillán", "tratamiento TEL"],
 });
 
 const signalsByAge = [

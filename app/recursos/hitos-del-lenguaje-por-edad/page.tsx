@@ -42,9 +42,9 @@ const faqs = [
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
   title:
-    "¿A qué edad hablan los niños? Hitos del lenguaje por edad — Katia Domínguez",
+    "¿A qué edad hablan los niños? Hitos del lenguaje 0-5 años | Fonoaudióloga",
   description:
-    "A los 12 meses dicen sus primeras palabras, a los 2 años unas 50 palabras y frases de 2 palabras. Guía con hitos por edad y señales de alerta de una fonoaudióloga con +20 años.",
+    "A los 12 meses primeras palabras, a los 2 años unas 50 palabras y frases de 2 palabras. Guía con hitos del lenguaje por edad, señales de alerta y cuándo consultar. Por Katia Domínguez, fonoaudióloga con +20 años en Chillán.",
   keywords: [
     "a qué edad hablan los niños",
     "a qué edad empiezan a hablar los bebés",
@@ -52,6 +52,7 @@ export const metadata = buildPageMetadata({
     "cuántas palabras dice un niño de 2 años",
     "desarrollo del lenguaje infantil",
     "cuándo hablan los bebés",
+    "a qué edad hablan los bebés",
   ],
   ogType: "article",
 });
@@ -187,6 +188,10 @@ export default function HitosDelLenguajePorEdadPage() {
                 Esta guía resume qué suele comprender y decir un niño en distintas
                 edades. No reemplaza una evaluación profesional, pero puede ayudarte
                 a observar con más claridad y decidir si es momento de consultar.
+                Si detectas señales de alerta, puedes{" "}
+                <Link href="/agendar-hora-fonoaudiologo-infantil-chillan" className="font-medium text-rose-600 underline">
+                  agendar una hora de evaluación en Chillán
+                </Link>.
               </p>
 
               <h2>12 meses</h2>
@@ -341,7 +346,14 @@ export default function HitosDelLenguajePorEdadPage() {
                   <strong>Pedir evaluación si hay varias señales:</strong> una
                   consulta fonoaudiológica no significa que «algo esté mal»; aclara
                   si hay retraso, trastorno o solo un ritmo distinto, y qué apoyo
-                  conviene.
+                  conviene. Revisa los servicios de{" "}
+                  <Link href="/servicios" className="font-medium text-rose-600 underline">
+                    fonoaudiología infantil en Chillán
+                  </Link>{" "}
+                  o aprende sobre el{" "}
+                  <Link href="/tratamientos/retraso-del-lenguaje-chillan" className="font-medium text-rose-600 underline">
+                    tratamiento de retraso del lenguaje
+                  </Link>.
                 </li>
               </ol>
 

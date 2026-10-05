@@ -12,15 +12,17 @@ const WHATSAPP_LINK = whatsappUrl(
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Mi hijo habla poco: retraso del lenguaje | Chillán",
+  title: "Retraso del Lenguaje en Chillán | Mi hijo de 2 años no habla o habla poco",
   description:
-    "Si tu hijo de 2 años no habla, habla poco o no arma frases, evaluamos retraso del lenguaje en Chillán y armamos un plan.",
+    "¿Tu hijo de 2 años no habla, habla poco o no arma frases? Tratamiento de retraso del lenguaje infantil en Chillán: evaluación fonoaudiológica, terapia de lenguaje presencial y plan personalizado. La intervención temprana mejora resultados.",
   keywords: [
     "retraso del lenguaje niños Chillán",
     "mi hijo no habla",
+    "mi hijo de 2 años no habla",
     "terapia lenguaje infantil",
     "fonoaudióloga Chillán",
     "retraso lenguaje expresivo",
+    "niño habla poco",
   ],
 });
 

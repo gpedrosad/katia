@@ -10,15 +10,17 @@ const WHATSAPP_LINK = whatsappUrl("Hola, busco ayuda por trastorno fonológico e
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Mi hijo no pronuncia bien | Trastorno fonológico Chillán",
+  title: "Trastorno Fonológico en Chillán | Mi hijo no se le entiende al hablar",
   description:
-    "Si a tu hijo de 3 o 4 años no se le entiende, evaluamos pronunciación y trastorno fonológico en Chillán. Terapia presencial infantil.",
+    "¿Tu hijo de 3-4 años no se le entiende o habla como bebé? Tratamiento de trastorno fonológico en Chillán: evaluación y terapia para niños con dificultades de pronunciación. Terapia presencial con conciencia fonológica.",
   keywords: [
     "trastorno fonológico niños",
     "fonoaudiología Chillán",
     "conciencia fonológica",
     "habla ininteligible",
     "terapia fonológica",
+    "niño no se le entiende",
+    "pronunciación infantil",
   ],
 });
 

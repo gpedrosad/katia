@@ -11,9 +11,9 @@ import { StickyWhatsApp } from "../chillan/lenguaje-infantil/_components/StickyW
 const PAGE_PATH = "/fonoaudiologa-ninos-chillan";
 const WHATSAPP_HREF = whatsappUrl("Hola, quiero agendar una evaluación de lenguaje para mi hijo/a");
 const PAGE_TITLE =
-  "Fonoaudióloga para Niños en Chillán | Lenguaje y Habla";
+  "Fonoaudióloga Infantil en Chillán | Especialista en Niños";
 const PAGE_DESCRIPTION =
-  "Si tu hijo habla poco, no arma frases o pronuncia mal, agenda evaluación infantil en Chillán con informe y plan de terapia.";
+  "Fonoaudióloga especialista en niños en Chillán. Si tu hijo habla poco, no arma frases o pronuncia mal, agenda evaluación fonoaudiológica infantil con informe y plan de terapia. +20 años de experiencia.";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,

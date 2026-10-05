@@ -13,22 +13,22 @@ const homeFaqItems = [
   {
     question: "¿Dónde está la consulta de fonoaudiología infantil en Chillán?",
     answer:
-      "Atención presencial en Chillán, Región de Ñuble. Coordina tu hora por WhatsApp; respondemos en horario hábil de lunes a viernes (10:00–18:00).",
+      "Atención presencial en Chillán, Región de Ñuble. Coordina tu hora por WhatsApp; respondemos en horario hábil de lunes a viernes (10:00–18:00). También atendemos familias de San Carlos, Bulnes, Coihueco y otras comunas de Ñuble.",
   },
   {
-    question: "¿Qué problemas trata la fonoaudióloga para niños?",
+    question: "¿Qué problemas trata una fonoaudióloga infantil?",
     answer:
-      "Retraso del lenguaje y del habla, dislalia, trastorno fonológico, TEL, dificultades de comprensión, lectoescritura y apoyo comunicativo en TEA.",
+      "Retraso del lenguaje y del habla, dislalia, trastorno fonológico, TEL (Trastorno Específico del Lenguaje), dificultades de comprensión, lectoescritura, pronunciación y apoyo comunicativo en TEA. También evaluaciones para informe PIE.",
   },
   {
-    question: "¿Cómo es la primera consulta en Chillán?",
+    question: "¿Cómo es la primera consulta con el fonoaudiólogo?",
     answer:
-      "Inicia con evaluación fonoaudiológica de aproximadamente 60 minutos, pruebas según edad e informe con diagnóstico y plan de tratamiento.",
+      "Inicia con evaluación fonoaudiológica de aproximadamente 60 minutos: pruebas estandarizadas según edad, observación del niño e informe detallado con diagnóstico y plan de tratamiento personalizado.",
   },
   {
-    question: "¿A qué edad conviene evaluar el lenguaje?",
+    question: "¿A qué edad conviene evaluar el lenguaje de mi hijo?",
     answer:
-      "La ASHA señala que los trastornos del lenguaje afectan alrededor del 7% de los escolares; si hay dudas antes de los 3 años o el colegio lo solicita, conviene evaluar sin esperar. Fuente: https://www.asha.org/public/speech/disorders/language-disorders/",
+      "Si tu hijo de 2 años no forma frases, habla poco para su edad, no se le entiende al hablar o el colegio recomienda evaluación, es momento de consultar. La ASHA señala que los trastornos del lenguaje afectan alrededor del 7% de los escolares; la intervención temprana mejora resultados. Fuente: https://www.asha.org/public/speech/disorders/language-disorders/",
   },
 ];
 
@@ -36,9 +36,9 @@ const WHATSAPP_LINK =
   "https://wa.me/56995497838?text=Hola%2C%20quiero%20agendar%20una%20hora";
 const PAGE_PATH = "/";
 const HOME_TITLE =
-  "Fonoaudióloga Infantil en Chillán | Terapia de Lenguaje";
+  "Fonoaudióloga en Chillán | Evaluación y Terapia de Lenguaje Infantil";
 const HOME_DESCRIPTION =
-  "Katia Domínguez, fonoaudióloga infantil en Chillán. Terapia de lenguaje y habla, evaluación con informe y +20 años de experiencia. Agenda por WhatsApp.";
+  "Fonoaudióloga infantil en Chillán con +20 años de experiencia. Evaluación fonoaudiológica con informe, terapia de lenguaje y habla para niños. Agenda tu hora por WhatsApp y te respondo en menos de 24 horas.";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
@@ -254,6 +254,14 @@ export default function Home() {
               o{" "}
               <Link href="/sintomas/nino-pronuncia-mal-chillan" className="font-medium text-rose-600 underline">
                 mi hijo de 3 años no se le entiende
+              </Link>
+              . También puedes consultar los{" "}
+              <Link href="/recursos/hitos-del-lenguaje-por-edad" className="font-medium text-rose-600 underline">
+                hitos del lenguaje por edad
+              </Link>{" "}
+              o{" "}
+              <Link href="/agendar-hora-fonoaudiologo-infantil-chillan" className="font-medium text-rose-600 underline">
+                agendar una hora
               </Link>
               .
             </p>

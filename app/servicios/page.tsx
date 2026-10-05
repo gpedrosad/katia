@@ -31,9 +31,9 @@ const PAGE_PATH = "/servicios";
 const WHATSAPP_LINK =
   "https://wa.me/56995497838?text=Hola%2C%20quiero%20consultar%20por%20sus%20servicios";
 const PAGE_TITLE =
-  "Terapia de Lenguaje y Fonoaudiología Infantil | Chillán";
+  "Servicios de Fonoaudiología Infantil en Chillán | Terapia de Lenguaje";
 const PAGE_DESCRIPTION =
-  "Servicios para niños que hablan poco, no arman frases, pronuncian mal o necesitan evaluación fonoaudiológica en Chillán.";
+  "Servicios de fonoaudiología para niños en Chillán: terapia de lenguaje y habla, evaluación fonoaudiológica con informe, TEL, dificultades de pronunciación y lectoescritura. +20 años de experiencia. Agenda por WhatsApp.";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
@@ -189,12 +189,20 @@ export default function ServiciosPage() {
               ,{" "}
               <Link href="/sintomas/hijo-habla-poco-edad-chillan" className="font-medium text-rose-600 underline">
                 habla poco para su edad
-              </Link>{" "}
-              y{" "}
+              </Link>
+              ,{" "}
               <Link href="/sintomas/nino-pronuncia-mal-chillan" className="font-medium text-rose-600 underline">
                 no se le entiende al hablar
               </Link>
-              .
+              , o consulta los{" "}
+              <Link href="/recursos/hitos-del-lenguaje-por-edad" className="font-medium text-rose-600 underline">
+                hitos del lenguaje por edad
+              </Link>
+              . Puedes{" "}
+              <Link href="/agendar-hora-fonoaudiologo-infantil-chillan" className="font-medium text-rose-600 underline">
+                agendar una hora
+              </Link>{" "}
+              en cualquier momento.
             </p>
 
             {/* CTA Section */}
