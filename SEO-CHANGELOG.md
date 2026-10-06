@@ -20,6 +20,163 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-10-06: SEO Lote 2 — CTR en voz online, recursos y síntomas
+
+### Contexto
+
+**Datos GSC (90 días al 2026-10-05):**
+- **86 clics totales**
+- **6.118 impresiones**
+- **CTR promedio: 1,4%**
+- Posición promedio: ~7,6
+
+**Problema detectado:** URLs de voz online, recursos y síntomas con impresiones pero CTR bajo o cero clics. Queries específicas sin captura (ej. "el tel se cura", "mi hijo de 2 años no forma frases").
+
+**Objetivo:** Mejorar CTR optimizando titles para responder queries directas, descriptions con pasos concretos y keywords con variantes sin tilde.
+
+### Páginas optimizadas
+
+#### 1. `/voz-online/fonoaudiologa-voz-antofagasta`
+**Métricas GSC previas:** 453 imp, CTR 0,88%
+
+**Cambios:**
+- **Title:** `"Fonoaudióloga de Voz Online desde Antofagasta | Terapia Vocal"` — aclara "desde Antofagasta" + "terapia de voz online"
+- **Keywords:** Añadido "fonoaudiólogo Antofagasta" y variantes locales
+- **Description:** Explicita "100% por videollamada sin traslados"
+
+**Objetivo CTR:** > 2% en 21 días
+
+---
+
+#### 2. `/recursos/estimular-lenguaje-en-casa`
+**Métricas GSC previas:** 283 imp, pos 15
+
+**Cambios:**
+- **Title:** `"¿Cómo Empezar a Estimular el Lenguaje en Casa? Guía Práctica"` — responde query "cómo empezar"
+- **Description:** Paso a paso + errores que evitar (no interrogar, no corregir todo)
+- **Keywords:** Añadido "cómo empezar a estimular el lenguaje"
+
+**Objetivo CTR:** > 2,5% en 21 días
+
+---
+
+#### 3. `/voz-online/fonoaudiologa-de-voz-online`
+**Métricas GSC previas:** 219 imp
+
+**Cambios:**
+- **Title:** `"Fonoaudióloga de Voz Online — Todo Chile, 100% por Videollamada"` — refuerza cobertura + modalidad
+- **Description:** Añadido "100% online por videollamada para todo Chile" + "sin traslados, agenda flexible"
+- **Keywords:** Añadido "terapia de voz online todo Chile" y "videollamada fonoaudióloga"
+
+**Objetivo CTR:** > 2% en 21 días
+
+---
+
+#### 4. `/sobre-katia-dominguez-fonoaudiologa-chillan`
+**Métricas GSC previas:** 218 imp, pos 5,6
+
+**Cambios:**
+- **Keywords:** Añadido "fonoaudiólogo Chillán" (variante masculina)
+- **Nota:** Credenciales "+20 años" ya existentes en description, no se inventaron datos
+
+**Objetivo CTR:** > 3% en 21 días (posición top)
+
+---
+
+#### 5. `/servicios/evaluacion-fonoaudiologica`
+
+**Cambios:**
+- **Keywords:** Añadido "evaluacion fonoaudiologica" (sin tilde) + "informe para el colegio"
+- **Description:** Reforzado "informe escrito para el colegio" (dato que ya existía en contenido)
+
+**Objetivo CTR:** > 2% en 21 días
+
+---
+
+#### 6. `/servicios/tel-trastorno-especifico-lenguaje`
+**Métricas GSC previas:** 73 imp, 0 clics  
+**Query real:** "el tel se cura" (pos 9)
+
+**Cambios:**
+- **Title:** `"TEL: ¿Se Cura? Tratamiento del Trastorno Específico del Lenguaje"` — responde query directa
+- **Description:** Explicita "no se cura pero mejora mucho con terapia intensiva"
+
+**Objetivo CTR:** > 3% en 21 días (capturar query específica)
+
+---
+
+#### 7. `/sintomas/nino-no-entiende-instrucciones-chillan`
+**Métricas GSC previas:** pos 5, 0 clics
+
+**Cambios:**
+- **Title:** `"Niño no entiende instrucciones: ¿Comprensión o atención?"` — plantea distinción clave
+- **Description:** "Puede ser déficit de comprensión o atención" + cuándo evaluar
+
+**Objetivo CTR:** > 4% en 21 días (posición top 5)
+
+---
+
+#### 8. `/sintomas/mi-hijo-no-habla-bien-chillan`
+**Métricas GSC previas:** pos 6, 0 clics
+
+**Cambios:**
+- **Title:** `"Mi hijo no habla bien: ¿Cuándo consultar?"` — responde preocupación principal
+- **Description:** "no se le entiende, habla como bebé" + señales por edad
+- **Keywords:** Añadido "no se le entiende al hablar" y "habla como bebé"
+
+**Objetivo CTR:** > 4% en 21 días (posición top 6)
+
+---
+
+#### 9. `/sintomas/hijo-no-arma-frases-chillan`
+**Métricas GSC previas:** pos 5,6, 0 clics
+
+**Cambios:**
+- **Title:** `"Mi hijo de 2 años no forma frases: solo «mamá ven», «más pan»"` — edad específica + ejemplos concretos
+- **Description:** "palabras sueltas como «mamá ven» o «más pan»" (ejemplos reales que usan padres)
+
+**Objetivo CTR:** > 5% en 21 días (posición top, intent muy específico)
+
+---
+
+### Otras mejoras transversales
+
+1. **Keywords con variantes sin tilde:** "evaluacion fonoaudiologica", "fonoaudiólogo" (masculino) en páginas clave
+2. **Titles con preguntas directas:** "¿Cuándo consultar?", "¿Se cura?", "¿Comprensión o atención?" capturan queries informacionales
+3. **Descriptions con ejemplos concretos:** Frases específicas que padres usan ("mamá ven", "más pan", "habla como bebé")
+
+### Métricas a monitorear (GSC)
+
+**Periodo de medición:** 14-21 días post-indexación
+
+**KPIs Lote 2:**
+1. **CTR general del sitio:** objetivo > 2% (baseline 1,4%)
+2. **CTR `/servicios/tel-trastorno-especifico-lenguaje`:** objetivo > 3% (capturar "el tel se cura")
+3. **CTR `/sintomas/hijo-no-arma-frases-chillan`:** objetivo > 5% (posición top + intent específico)
+4. **Clics totales:** objetivo +25% sobre baseline de 86 clics/90d
+
+**URLs a seguir de cerca:**
+- `/servicios/tel-trastorno-especifico-lenguaje` (73 imp, query "el tel se cura" pos 9 → esperado 2-3 clics)
+- `/sintomas/hijo-no-arma-frases-chillan` (pos 5,6 → esperado 3-4 clics con CTR 5%)
+- `/voz-online/fonoaudiologa-voz-antofagasta` (453 imp → esperado 9 clics con CTR 2%)
+
+### Siguientes pasos
+
+1. **Post-deploy:**
+   - Solicitar indexación manual en GSC para las 9 URLs optimizadas
+   - Validar que los cambios de metadata se reflejan en SERPs (inspeccionar URL)
+
+2. **Monitoreo:**
+   - Revisar GSC en 7 días (tendencia temprana)
+   - Revisar GSC en 14-21 días (medición completa)
+   - Comparar queries con 0 clics vs nuevas queries con clics
+
+3. **Lote 3 (futuro):**
+   - Páginas tratamientos locales con impresiones (ej. TEL, retraso del lenguaje)
+   - Optimización de URLs con > 15 impresiones y CTR < 1%
+
+---
+
 ## 2026-10-05: SEO Lote 1 — CTR y query-match en URLs prioritarias
 
 ### Contexto

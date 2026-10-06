@@ -20,6 +20,7 @@ export const metadata = buildPageMetadata({
   keywords: [
     "Katia Domínguez",
     "fonoaudióloga Chillán",
+    "fonoaudiólogo Chillán",
     "fonoaudióloga infantil Chillán",
     "fonoaudióloga niños Chillán",
   ],

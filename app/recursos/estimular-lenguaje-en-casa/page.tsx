@@ -37,10 +37,11 @@ const faqs = [
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
   title:
-    "Cómo Estimular el Lenguaje en Casa | Actividades por Edad — Fonoaudióloga",
+    "¿Cómo Empezar a Estimular el Lenguaje en Casa? Guía Práctica",
   description:
-    "Actividades simples para estimular el lenguaje en casa según la edad del niño (1–5 años). Juegos, rutinas y errores comunes. Guía de una fonoaudióloga con +20 años.",
+    "Guía paso a paso para estimular el lenguaje en casa según edad (1–5 años): qué hacer, qué evitar (no interrogar, no corregir todo) y cuándo evaluar. Fonoaudióloga +20 años.",
   keywords: [
+    "cómo empezar a estimular el lenguaje",
     "estimular lenguaje en casa",
     "terapia de lenguaje en casa",
     "cómo ayudar a mi hijo a hablar",

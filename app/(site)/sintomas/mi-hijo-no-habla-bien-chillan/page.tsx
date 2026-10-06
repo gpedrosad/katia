@@ -10,10 +10,18 @@ const WHATSAPP_LINK = whatsappUrl("Hola, me preocupa que mi hijo no habla bien. 
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Mi hijo no habla bien o no se le entiende | Chillán",
+  title: "Mi hijo no habla bien: ¿Cuándo consultar? — Chillán",
   description:
-    "Señales si tu hijo no habla bien, habla como bebé o no se le entiende a los 3 o 4 años. Evaluación infantil en Chillán.",
-  keywords: ["fonoaudióloga Chillán", "fonoaudiología infantil", "mi hijo no habla bien chillan"],
+    "¿Tu hijo no se le entiende, habla como bebé o no habla bien? Señales por edad, qué hacer y cuándo evaluar. Fonoaudióloga infantil en Chillán.",
+  keywords: [
+    "mi hijo no habla bien",
+    "no se le entiende al hablar",
+    "habla como bebé",
+    "niño no se le entiende",
+    "fonoaudióloga Chillán",
+    "fonoaudiología infantil",
+    "mi hijo no habla bien chillan",
+  ],
 });
 
 const signalsByAge = [

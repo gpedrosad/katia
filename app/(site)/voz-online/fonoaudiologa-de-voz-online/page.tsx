@@ -8,13 +8,15 @@ import { buildPageMetadata } from "@/lib/seo";
 export const metadata = buildPageMetadata({
   path: "/voz-online/fonoaudiologa-de-voz-online",
   title:
-    "Fonoaudióloga Especialista en Voz Online — Disfonía, Nódulos, Fatiga Vocal",
+    "Fonoaudióloga de Voz Online — Todo Chile, 100% por Videollamada",
   description:
-    "Fonoaudióloga especialista en trastornos de la voz con atención 100% online para todo Chile. Tratamiento de disfonía, nódulos, fatiga vocal y rehabilitación post-cirugía. +20 años de experiencia, U. de Chile.",
+    "Terapia de voz 100% online por videollamada para todo Chile: disfonía, nódulos, fatiga vocal, rehabilitación post-cirugía. Sin traslados, agenda flexible. Fonoaudióloga U. de Chile, +20 años.",
   keywords: [
     "fonoaudióloga especialista en voz",
     "fonoaudióloga de voz online",
     "especialista en voz Chile",
+    "terapia de voz online todo Chile",
+    "videollamada fonoaudióloga",
     "tratamiento disfonía online",
     "nódulos vocales tratamiento",
     "fatiga vocal tratamiento",

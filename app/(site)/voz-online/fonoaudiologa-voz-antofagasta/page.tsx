@@ -20,9 +20,16 @@ const faqItems = [
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/fonoaudiologa-voz-antofagasta",
-  title: "Fonoaudióloga especialista en Voz en Antofagasta | Online",
+  title: "Fonoaudióloga de Voz Online desde Antofagasta | Terapia Vocal",
   description:
-    "¿Tu voz te duele tras días de turnos en Antofagasta? Diagnóstico y rehabilitación vocal intensiva experta desde tu propia pantalla en el Norte.",
+    "Terapia de voz online desde Antofagasta: disfonía, fatiga vocal, nódulos. Atención 100% por videollamada sin traslados. Fonoaudióloga U. de Chile.",
+  keywords: [
+    "fonoaudióloga voz Antofagasta",
+    "fonoaudiólogo Antofagasta",
+    "terapia vocal online Antofagasta",
+    "fonoaudióloga de voz online",
+    "tratamiento disfonía online",
+  ],
 });
 
 export default function FonoaudiologaVozAntofagastaPage() {

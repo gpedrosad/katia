@@ -14,11 +14,12 @@ const WHATSAPP_HREF = whatsappUrl("Hola, quiero agendar una evaluación fonoaudi
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
   title:
-    "Evaluación Fonoaudiológica Infantil en Chillán — 60 min + Informe | Katia Domínguez",
+    "Evaluación Fonoaudiológica Infantil en Chillán — 60 min + Informe",
   description:
-    "¿Qué es una evaluación fonoaudiológica? Sesión de 60 min en Chillán con test estandarizados, diagnóstico del lenguaje y habla, informe escrito y plan de tratamiento. +20 años, U. de Chile. Agenda hoy.",
+    "Evaluación fonoaudiológica en Chillán: 60 min, test estandarizados, diagnóstico de lenguaje y habla, informe escrito para el colegio y plan de tratamiento. +20 años, U. de Chile.",
   keywords: [
     "evaluación fonoaudiológica",
+    "evaluacion fonoaudiologica",
     "evaluación fonoaudiológica infantil",
     "evaluación fonoaudiológica Chillán",
     "qué es una evaluación fonoaudiológica",
@@ -26,6 +27,7 @@ export const metadata = buildPageMetadata({
     "evaluación del habla infantil",
     "test de lenguaje infantil",
     "informe fonoaudiológico",
+    "informe para el colegio",
   ],
 });
 

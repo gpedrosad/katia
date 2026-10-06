@@ -10,10 +10,17 @@ const WHATSAPP_LINK = whatsappUrl("Hola, mi hijo no entiende instrucciones y me 
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Niño no entiende instrucciones | Chillán",
+  title: "Niño no entiende instrucciones: ¿Comprensión o atención? — Chillán",
   description:
-    "¿Tu hijo no sigue instrucciones o parece no entender? Señales de problema de comprensión y qué hacer. Evaluación fonoaudiológica presencial en Chillán.",
-  keywords: ["fonoaudióloga Chillán", "fonoaudiología infantil", "nino no entiende instrucciones chillan"],
+    "¿Tu hijo no sigue instrucciones? Puede ser déficit de comprensión o atención. Señales por edad, qué hacer y cuándo evaluar. Fonoaudióloga en Chillán.",
+  keywords: [
+    "niño no entiende instrucciones",
+    "niño no comprende",
+    "déficit comprensión del lenguaje",
+    "fonoaudióloga Chillán",
+    "fonoaudiología infantil",
+    "nino no entiende instrucciones chillan",
+  ],
 });
 
 const signalsByAge = [
