@@ -7,9 +7,16 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/terapia-vocal-docentes-profesores",
-  title: "Terapia Vocal para Docentes y Profesores | Online Chile",
+  title: "Terapia Vocal para Docentes Online | Salva tu voz de profesor",
   description:
-    "¿Llegas al viernes sin voz por las clases? Terapia vocal online exclusiva para docentes. Salva tus cuerdas vocales desde casa con fonoaudióloga experta.",
+    "58% de docentes desarrollará trastorno de voz. Terapia fonoaudiológica online para profesores: técnica vocal, proyección sin gritar, prevención disfonía. Chile.",
+  keywords: [
+    "terapia vocal docentes",
+    "voz profesores",
+    "fonoaudióloga especialista en voz",
+    "disfonía docente",
+    "terapia voz profesores online",
+  ],
 });
 
 const faqItems = [
@@ -27,6 +34,16 @@ const faqItems = [
     question: "¿La terapia vocal online sirve para docentes de colegio?",
     answer:
       "Sí. Los ejercicios se adaptan al aula real: proyección sin gritar, calentamiento antes de clases y descansos vocales entre jornadas, con horarios compatibles con la rutina escolar.",
+  },
+  {
+    question: "¿Cuánto dura la terapia vocal para profesores?",
+    answer:
+      "Un programa típico dura 8-12 semanas con sesiones semanales. Se enseña técnica de respiración, apoyo, proyección y estrategias específicas para el aula.",
+  },
+  {
+    question: "¿Qué pasa si no trato la disfonía docente?",
+    answer:
+      "El mal uso crónico puede llevar a nódulos vocales, edema de Reinke o licencias médicas recurrentes. En casos extremos, profesores deben cambiar de profesión por no poder usar la voz.",
   },
 ];
 

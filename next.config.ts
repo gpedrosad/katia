@@ -104,6 +104,11 @@ const nextConfig: NextConfig = {
         destination: "/servicios/dificultades-lectoescritura",
         permanent: true,
       },
+      {
+        source: "/servicios/informe-fonoaudiológico-pie-chillan",
+        destination: "/servicios/informe-fonoaudiologico-pie-chillan",
+        permanent: true,
+      },
     ];
   },
 };

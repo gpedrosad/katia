@@ -7,9 +7,16 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/rehabilitacion-vocal-profesionales-voz",
-  title: "Rehabilitación Vocal para Profesionales de la Voz | Online Chile",
+  title: "Rehabilitación de la Voz en Profesionales | Online Chile",
   description:
-    "¿Eres locutor, cantante o animador y tu voz empezó a fallar? Entrenamiento y rehabilitación vocal online exclusiva para profesionales en Chile.",
+    "¿Eres locutor, cantante o profesor y tu voz falla? Rehabilitación vocal online para recuperar resistencia y proyección. Fonoaudióloga especialista voz Chile.",
+  keywords: [
+    "rehabilitación vocal",
+    "rehabilitacion de la voz en profesionales",
+    "fonoaudióloga especialista en voz",
+    "voz profesionales online",
+    "terapia voz cantantes",
+  ],
 });
 
 const faqItems = [
@@ -27,6 +34,16 @@ const faqItems = [
     question: "¿Cuánto dura un programa para profesionales de la voz?",
     answer:
       "Varía según la lesión: desde 6 semanas en disfonía funcional hasta varios meses si hay nódulos o cirugía previa.",
+  },
+  {
+    question: "¿Qué incluye la rehabilitación de la voz en profesionales?",
+    answer:
+      "Evaluación vocal, ejercicios de respiración y apoyo, técnica de proyección, higiene vocal, calentamiento y enfriamiento vocal, y adaptación a demandas específicas del trabajo.",
+  },
+  {
+    question: "¿Puedo seguir trabajando durante la rehabilitación vocal?",
+    answer:
+      "Depende de la lesión. En muchos casos se modifica la carga vocal mientras se entrena, evitando reposo absoluto salvo indicación médica estricta.",
   },
 ];
 

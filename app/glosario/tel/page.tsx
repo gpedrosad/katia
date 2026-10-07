@@ -58,16 +58,16 @@ const faqs = [
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "¿Qué es el TEL? | Trastorno Específico del Lenguaje Explicado",
+  title: "Definición TEL (TDL) | Qué es el Trastorno del Desarrollo del Lenguaje",
   description:
-    "El TEL (TDL) es un trastorno del desarrollo del lenguaje en niños. Definición, síntomas y tratamiento en Chillán, Ñuble, Chile. Evaluación fonoaudiológica.",
+    "TEL o TDL: trastorno del neurodesarrollo que afecta lenguaje sin causa aparente. Diferencias con retraso simple. Definición breve, tipos y cuándo sospechar.",
   keywords: [
     "qué es TEL",
-    "trastorno específico del lenguaje",
-    "TEL definición",
-    "TEL en niños",
-    "síntomas TEL",
-    "tratamiento TEL",
+    "definición TEL",
+    "TEL significado",
+    "TDL definición",
+    "qué significa TEL",
+    "diferencia TEL y retraso lenguaje",
   ],
   ogType: "article",
 });
@@ -125,46 +125,45 @@ export default function TELGlosarioPage() {
 
             <header className="mb-8">
               <span className="mb-4 inline-block rounded-full bg-rose-100 px-4 py-2 text-sm font-medium text-rose-700">
-                Trastornos del lenguaje
+                Definición
               </span>
               <h1 className="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl">
-                ¿Qué es el TEL?
+                ¿Qué es el TEL (TDL)?
               </h1>
               <p className="text-xl text-gray-600">
-                El <strong>TEL</strong> (o <strong>TDL</strong>) es un trastorno
-                del desarrollo del lenguaje en niños con inteligencia normal.
-                Guía para familias en <strong>Chillán, Chile</strong>.
+                <strong>Definición breve:</strong> El <strong>TEL</strong> (también llamado <strong>TDL</strong>) es un trastorno 
+                del neurodesarrollo que afecta el desarrollo del lenguaje sin causa aparente como sordera o discapacidad intelectual.
               </p>
             </header>
 
             <nav
-              aria-label="Atención fonoaudiológica en Chillán"
-              className="mb-8 rounded-2xl border border-rose-200 bg-white p-5"
+              aria-label="Evaluación y tratamiento TEL en Chillán"
+              className="mb-8 rounded-2xl border border-rose-200 bg-rose-50 p-5"
             >
-              <p className="mb-3 text-sm font-semibold text-rose-800">
-                ¿Buscas evaluación o terapia TEL en Chillán?
+              <p className="mb-3 text-base font-semibold text-rose-900">
+                → Si buscas <strong>tratamiento TEL en Chillán</strong>, ve a:
               </p>
               <ul className="flex flex-col gap-2 text-sm sm:flex-row sm:flex-wrap">
                 <li>
                   <Link
-                    href="/chillan/tel"
-                    className="font-medium text-rose-600 underline"
+                    href="/tratamientos/tel-trastorno-especifico-lenguaje-chillan"
+                    className="font-semibold text-rose-700 underline hover:text-rose-800"
                   >
-                    TEL en Chillán
+                    Tratamiento TEL Chillán →
                   </Link>
                 </li>
                 <li>
                   <Link
                     href="/servicios/tel-trastorno-especifico-lenguaje"
-                    className="font-medium text-rose-600 underline"
+                    className="font-medium text-rose-600 underline hover:text-rose-700"
                   >
-                    Servicio TEL
+                    ¿Se cura el TEL?
                   </Link>
                 </li>
                 <li>
                   <Link
                     href="/agendar-hora-fonoaudiologo-infantil-chillan"
-                    className="font-medium text-rose-600 underline"
+                    className="font-medium text-rose-600 underline hover:text-rose-700"
                   >
                     Agendar evaluación
                   </Link>

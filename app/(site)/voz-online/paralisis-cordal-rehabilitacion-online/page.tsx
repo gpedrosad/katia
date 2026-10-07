@@ -6,9 +6,16 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/paralisis-cordal-rehabilitacion-online",
-  title: "Parálisis de Cuerda Vocal: Rehabilitación Online | Chile",
+  title: "Parálisis Cordal: Rehabilitación Vocal Online | ¿Se recupera?",
   description:
-    "Rehabilitación fonoaudiológica online para parálisis de cuerda vocal unilateral y bilateral. Recupera función vocal con terapia especializada a todo Chile.",
+    "Rehabilitación fonoaudiológica online para parálisis de cuerda vocal. 6-12 meses con terapia mejoran cierre glótico post-cirugía o viral. Fonoaudióloga especialista voz.",
+  keywords: [
+    "parálisis cuerda vocal",
+    "parálisis cordal",
+    "rehabilitación vocal online",
+    "fonoaudióloga especialista en voz",
+    "terapia voz online Chile",
+  ],
 });
 
 const faqItems = [
@@ -27,6 +34,16 @@ const faqItems = [
     answer:
       "Depende de la causa: parálisis post-viral puede mejorar en semanas o meses; post-quirúrgica requiere seguimiento prolongado y a veces inyección o cirugía.",
   },
+  {
+    question: "¿Qué ejercicios se hacen para parálisis cordal?",
+    answer:
+      "Empujes laríngeos controlados, fonación en tubos de resonancia, ejercicios de flujo y esfuerzo vocal (LSVT, VFE), y técnicas de voz confidencial para mejorar el cierre glótico.",
+  },
+  {
+    question: "¿La parálisis de cuerda vocal se cura?",
+    answer:
+      "En muchos casos post-quirúrgicos y virales, el nervio puede recuperarse parcial o totalmente en 6-12 meses. La terapia vocal es fundamental durante ese período para optimizar la función disponible.",
+  },
 ];
 
 export default function ParalisisCordalPage() {
@@ -44,11 +61,28 @@ export default function ParalisisCordalPage() {
     },
   };
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <main className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
         <Breadcrumbs
@@ -67,8 +101,17 @@ export default function ParalisisCordalPage() {
             La parálisis de cuerda vocal ocurre cuando una (unilateral) o ambas
             (bilateral) cuerdas vocales no se mueven correctamente. Esto
             produce una voz soplada, débil, con escasa proyección y, en
-            algunos casos, dificultad para tragar. La rehabilitación
-            fonoaudiológica es esencial para recuperar función vocal.
+            algunos casos, dificultad para tragar. <strong>La rehabilitación
+            fonoaudiológica online es altamente efectiva</strong> para recuperar función vocal
+            en 6-12 meses en casos post-quirúrgicos y virales.
+          </p>
+          <p className="not-prose mb-6">
+            <Link
+              href="/voz-online/fonoaudiologa-de-voz-online"
+              className="font-medium text-slate-600 underline hover:text-slate-800"
+            >
+              ← Ver todos los servicios de voz online
+            </Link>
           </p>
           <p className="not-prose my-4 rounded-xl border border-slate-200 bg-slate-50/80 p-4 text-sm text-slate-900">
             <strong>Dato:</strong> La parálisis recurrente unilateral es la

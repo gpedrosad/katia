@@ -6,9 +6,16 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/voz-ronca-causas-tratamiento",
-  title: "Voz Ronca: Causas y Tratamiento Online | Fonoaudióloga Chile",
+  title: "Voz Ronca: ¿Por qué y qué hacer? Tratamiento Online Chile",
   description:
-    "¿Llevas días o semanas con la voz ronca? Conoce las causas y accede a tratamiento fonoaudiológico online desde cualquier ciudad de Chile.",
+    "Ronquera persistente (>2 semanas) sin resfriado requiere evaluación. Causas: mal uso vocal, laringitis, reflujo, nódulos. Tratamiento fonoaudiológico online.",
+  keywords: [
+    "voz ronca",
+    "por qué tengo la voz ronca",
+    "tratamiento voz ronca",
+    "fonoaudióloga especialista en voz",
+    "disfonía tratamiento online",
+  ],
 });
 
 const faqItems = [
@@ -26,6 +33,16 @@ const faqItems = [
     question: "¿Se puede tratar la voz ronca online?",
     answer:
       "Sí en casos funcionales y en rehabilitación post-diagnóstico. Primero se realiza evaluación vocal online; si hay sospecha de lesión orgánica, se coordina con otorrinolaringología.",
+  },
+  {
+    question: "¿Qué hacer si tengo voz ronca todo el tiempo?",
+    answer:
+      "Primero descartar causas orgánicas con otorrinolaringólogo (nasofibrolaringoscopía). Luego, terapia vocal para corregir técnica y eliminar hábitos dañinos: carraspeo, gritar, tensión laríngea.",
+  },
+  {
+    question: "¿La voz ronca crónica es grave?",
+    answer:
+      "Puede serlo. Una ronquera de semanas o meses puede indicar nódulos, pólipos, edema de Reinke o, en casos raros, lesiones más serias. La evaluación temprana es clave.",
   },
 ];
 

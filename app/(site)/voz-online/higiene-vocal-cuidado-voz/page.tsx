@@ -6,9 +6,16 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/higiene-vocal-cuidado-voz",
-  title: "Higiene Vocal: Cómo Cuidar tu Voz | Fonoaudióloga Online Chile",
+  title: "Higiene Vocal: Cómo Cuidar tu Voz Todos los Días",
   description:
-    "Guía de higiene vocal y cuidado de la voz para profesionales y cantantes. Consejos prácticos y asesoría fonoaudiológica online para todo Chile.",
+    "10 reglas de oro para cuidar tu voz: hidratación, evitar carraspear, descansos vocales. Asesoría fonoaudióloga especialista online para Chile.",
+  keywords: [
+    "higiene vocal",
+    "cómo cuidar la voz",
+    "cuidado de la voz",
+    "fonoaudióloga especialista en voz",
+    "consejos voz profesionales",
+  ],
 });
 
 const faqItems = [
@@ -25,7 +32,17 @@ const faqItems = [
   {
     question: "¿Carraspear daña la voz?",
     answer:
-      "Sí. Carrasear golpea las cuerdas vocales y puede generar edema. Mejor tragar saliva, beber agua o hacer un bostezo suave.",
+      "Sí. Carraspear golpea las cuerdas vocales y puede generar edema. Mejor tragar saliva, beber agua o hacer un bostezo suave.",
+  },
+  {
+    question: "¿Qué alimentos son malos para la voz?",
+    answer:
+      "Alcohol, cafeína en exceso, comidas muy condimentadas y productos lácteos antes de uso vocal intenso pueden aumentar la mucosidad o deshidratar.",
+  },
+  {
+    question: "¿Cómo descansar la voz correctamente?",
+    answer:
+      "Evita hablar en exceso fuera del trabajo, reduce el volumen en ambientes ruidosos, y respeta silencios vocales de 10-15 minutos cada 90 minutos de uso intenso.",
   },
 ];
 

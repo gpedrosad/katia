@@ -20,6 +20,221 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-10-07: SEO Lote 3 — TEL cannibalization, voz-online CTR y TEA
+
+### Contexto
+
+**Datos GSC (90 días al 2026-10-06):**
+- **82 clics totales**
+- **4.930 impresiones**
+- **CTR promedio: 1,66%**
+- Posición promedio: 8,0
+
+**Datos últimos 7d (30 sep–6 oct):** 5 clics / 510 imp vs 7d previos 10 / 579 imp
+
+**Problemas detectados:**
+1. **Canibalización TEL:** 4 páginas compiten (`/tratamientos/tel-*-chillan` 161 imp/frozen, `/servicios/tel-*` 74 imp/frozen, `/glosario/tel` 52 imp/0 clicks pos 8.6, `/chillan/tel` 6 imp). Las dos primeras están congeladas (Lotes 1-2).
+2. **Voz-online bajo CTR o 0 clics:** `/paralisis-cordal` (140 imp/6 clicks/4.29% CTR/pos 8.5 — mejor performer), `/higiene-vocal` (54 imp/2 clicks), `/rehabilitacion-vocal-profesionales` (26 imp/0 clicks/pos 11.9 — query "rehabilitacion de la voz en profesionales" pos 27.7), `/fatiga-vocal` (25 imp/0), `/nodulos-vocales` (22 imp/1), `/evaluacion-vocal` (19 imp/0/pos 5.6 — problema snippet), `/voz-ronca` (13 imp/0), `/terapia-vocal-docentes` (16 imp/2 clicks, light touch).
+3. **TEA bajo CTR:** `/servicios/tea-*` (72 imp/0 clicks/pos 9.1) + `/chillan/tea-comunicacion` (17 imp/0/pos 8.8).
+4. **URL encoding:** `/servicios/informe-fonoaudiol%C3%B3gico-pie-chillan` obtuvo 1 impresión — verificar redirect.
+
+**Objetivo:** Diferenciar páginas TEL, mejorar CTR/FAQ en voz-online capturando queries específicas ("¿se cura?", "por qué se me cansa la voz", "rehabilitacion de la voz"), y optimizar TEA title/description para búsqueda padres Chillán.
+
+### Páginas optimizadas
+
+#### 1. `/glosario/tel` — Diferenciación TEL: definición breve
+**Métricas GSC previas:** 52 imp, 0 clics, pos 8.6
+
+**Cambios:**
+- **Title:** `"¿Qué es el TEL? | Trastorno Específico del Lenguaje Explicado"` → `"Definición TEL (TDL) | Qué es el Trastorno del Desarrollo del Lenguaje"`
+- **Description:** Reforzado como definición breve: "TEL o TDL: trastorno del neurodesarrollo que afecta lenguaje sin causa aparente. Diferencias con retraso simple. Definición breve, tipos y cuándo sospechar."
+- **Keywords:** Añadido "definición TEL", "qué significa TEL", "diferencia TEL y retraso lenguaje"
+- **Estructura:** Header con "Definición breve:" + CTA box rose-50 destacado "→ Si buscas **tratamiento TEL en Chillán**, ve a:" con links prominentes a `/tratamientos/tel-*-chillan` (principal), `/servicios/tel-*` (¿se cura?), `/agendar-*`
+- **Objetivo:** Claramente una página de glosario (definición) que canaliza a las páginas de tratamiento, no compite con ellas
+
+**Objetivo CTR:** > 2% en 21 días
+
+**Decisión canibalización `/chillan/tel`:** **Se mantiene como página independiente** (no canonical). `/chillan/tel` tiene solo 6 imp/pos 6.2 (muy bajo volumen) y es una landing local con contenido único (señales específicas, CTA local, template patologias.ts con datos propios). No es un duplicado thin. El flujo queda: glosario (definición) → tratamiento Chillán (frozen, local) / servicio (frozen, ¿se cura?).
+
+---
+
+#### 2. `/voz-online/paralisis-cordal-rehabilitacion-online`
+**Métricas GSC previas:** 140 imp, 6 clicks, CTR 4,29%, pos 8,5
+
+**Cambios:**
+- **Title:** `"Parálisis de Cuerda Vocal: Rehabilitación Online | Chile"` → `"Parálisis Cordal: Rehabilitación Vocal Online | ¿Se recupera?"`
+- **Description:** Añadido stat "6-12 meses con terapia mejoran cierre glótico post-cirugía o viral. Fonoaudióloga especialista voz."
+- **Keywords:** Añadido "parálisis cuerda vocal", "parálisis cordal", "fonoaudióloga especialista en voz"
+- **FAQ ampliado:** +2 preguntas: "¿Qué ejercicios se hacen para parálisis cordal?" (empujes laríngeos, LSVT, VFE), "¿La parálisis de cuerda vocal se cura?" (6-12 meses)
+- **Schema:** +FAQPage schema (antes solo MedicalWebPage)
+- **Intro párrafo:** Reforzado "rehabilitación online altamente efectiva en 6-12 meses"
+- **Cross-link:** Añadido link a hub `/voz-online/fonoaudiologa-de-voz-online`
+
+**Objetivo CTR:** > 5% en 21 días (mantener performer top)
+
+---
+
+#### 3. `/voz-online/higiene-vocal-cuidado-voz`
+**Métricas GSC previas:** 54 imp, 2 clicks, CTR 3,7%, pos 7,5
+
+**Cambios:**
+- **Title:** `"Higiene Vocal: Cómo Cuidar tu Voz | Fonoaudióloga Online Chile"` → `"Higiene Vocal: Cómo Cuidar tu Voz Todos los Días"`
+- **Description:** "10 reglas de oro para cuidar tu voz: hidratación, evitar carraspear, descansos vocales. Asesoría fonoaudióloga especialista online para Chile."
+- **Keywords:** Añadido "cómo cuidar la voz", "cuidado de la voz", "consejos voz profesionales"
+- **FAQ ampliado:** +2 preguntas: "¿Qué alimentos son malos para la voz?", "¿Cómo descansar la voz correctamente?"
+
+**Objetivo CTR:** > 4% en 21 días
+
+---
+
+#### 4. `/voz-online/rehabilitacion-vocal-profesionales-voz`
+**Métricas GSC previas:** 26 imp, 0 clicks, pos 11,9 (query "rehabilitacion de la voz en profesionales" pos 27,7)
+
+**Cambios:**
+- **Title:** `"Rehabilitación Vocal para Profesionales de la Voz | Online Chile"` → `"Rehabilitación de la Voz en Profesionales | Online Chile"`
+- **Description:** Captura query exacta "rehabilitacion de la voz en profesionales": "¿Eres locutor, cantante o profesor y tu voz falla? Rehabilitación vocal online para recuperar resistencia y proyección."
+- **Keywords:** Añadido "rehabilitacion de la voz en profesionales" (query exacta)
+- **FAQ ampliado:** +2 preguntas: "¿Qué incluye la rehabilitación de la voz en profesionales?", "¿Puedo seguir trabajando durante la rehabilitación vocal?"
+
+**Objetivo CTR:** > 3% en 21 días (capturar query pos 27.7)
+
+---
+
+#### 5. `/voz-online/fatiga-vocal-tratamiento-online`
+**Métricas GSC previas:** 25 imp, 0 clicks, pos 8,9
+
+**Cambios:**
+- **Title:** `"Fatiga Vocal: Causas y Tratamiento Online | Chile"` → `"Fatiga Vocal: ¿Por qué se me cansa la voz? Tratamiento Online"`
+- **Description:** Responde query directa "se me cansa la voz": "¿Llegas al viernes sin voz o te duele la garganta al hablar? Tratamiento online para fatiga vocal: respiración, técnica y proyección sin tensión."
+- **Keywords:** Añadido "se me cansa la voz", "voz cansada tratamiento online"
+- **FAQ ampliado:** +2 preguntas: "¿Por qué se me cansa la voz al final del día?", "¿Cuánto dura el tratamiento para fatiga vocal?"
+
+**Objetivo CTR:** > 4% en 21 días
+
+---
+
+#### 6. `/voz-online/nodulos-vocales-tratamiento-online`
+**Métricas GSC previas:** 22 imp, 1 click, CTR 4,5%, pos 8,7
+
+**Cambios:**
+- **Title:** `"Nódulos Vocales: Tratamiento Online sin Cirugía | Chile"` → `"Nódulos Vocales: Tratamiento Online | ¿Se pueden curar sin cirugía?"`
+- **Description:** "Tratamiento fonoaudiológico online para nódulos vocales. Terapia conservadora como primera línea antes de cirugía. Reduce tamaño y mejora calidad vocal."
+- **Keywords:** Añadido "nodulos cuerdas vocales", "tratamiento nódulos sin cirugía"
+- **FAQ ampliado:** +2 preguntas: "¿Cuánto tiempo tarda en mejorar un nódulo vocal con terapia?", "¿Qué es mejor: operar o hacer terapia vocal?"
+
+**Objetivo CTR:** > 5% en 21 días
+
+---
+
+#### 7. `/voz-online/evaluacion-vocal-online`
+**Métricas GSC previas:** 19 imp, 0 clicks, pos 5,6 — **problema snippet crítico** (posición top 6 sin clics)
+
+**Cambios:**
+- **Title:** `"Evaluación Vocal Online | Diagnóstico de Voz Chile"` → `"Evaluación Vocal Online | ¿Qué incluye el diagnóstico de voz?"`
+- **Description:** Más específica: "Evaluación fonoaudiológica de voz online: análisis acústico, perceptual (GRBAS), tiempos fonación e informe con plan de tratamiento. Todo Chile por videollamada."
+- **Keywords:** Añadido "diagnóstico de voz", "análisis vocal Chile"
+- **FAQ ampliado:** +2 preguntas: "¿Cuánto dura una evaluación vocal?", "¿Necesito tener diagnóstico otorrino antes de la evaluación?"
+
+**Objetivo CTR:** > 6% en 21 días (posición top debe convertir)
+
+---
+
+#### 8. `/voz-online/voz-ronca-causas-tratamiento`
+**Métricas GSC previas:** 13 imp, 0 clicks, pos 10,0
+
+**Cambios:**
+- **Title:** `"Voz Ronca: Causas y Tratamiento Online | Fonoaudióloga Chile"` → `"Voz Ronca: ¿Por qué y qué hacer? Tratamiento Online Chile"`
+- **Description:** "Ronquera persistente (>2 semanas) sin resfriado requiere evaluación. Causas: mal uso vocal, laringitis, reflujo, nódulos. Tratamiento fonoaudiológico online."
+- **Keywords:** Añadido "por qué tengo la voz ronca", "disfonía tratamiento online"
+- **FAQ ampliado:** +2 preguntas: "¿Qué hacer si tengo voz ronca todo el tiempo?", "¿La voz ronca crónica es grave?"
+
+**Objetivo CTR:** > 3% en 21 días
+
+---
+
+#### 9. `/voz-online/terapia-vocal-docentes-profesores`
+**Métricas GSC previas:** 16 imp, 2 clicks, CTR 12,5%, pos 7,5 — **light touch** (ya convierte bien)
+
+**Cambios:**
+- **Title:** `"Terapia Vocal para Docentes y Profesores | Online Chile"` → `"Terapia Vocal para Docentes Online | Salva tu voz de profesor"`
+- **Description:** Stat ASHA "58% de docentes desarrollará trastorno de voz. Terapia fonoaudiológica online para profesores: técnica vocal, proyección sin gritar, prevención disfonía."
+- **Keywords:** Añadido "voz profesores", "disfonía docente", "terapia voz profesores online"
+- **FAQ ampliado:** +2 preguntas: "¿Cuánto dura la terapia vocal para profesores?", "¿Qué pasa si no trato la disfonía docente?"
+
+**Objetivo CTR:** > 13% en 21 días (mantener alta conversión)
+
+---
+
+#### 10. `/servicios/tea-trastorno-espectro-autista`
+**Métricas GSC previas:** 72 imp, 0 clicks, pos 9,1
+
+**Cambios:**
+- **Title:** `"Terapia TEA Chillán | Comunicación y lenguaje autismo"` → `"Fonoaudiología TEA Chillán | Comunicación y lenguaje en autismo"`
+- **Description:** Añadido stat 40%: "Apoyo fonoaudiológico para niños con autismo/TEA en Chillán: comunicación funcional, lenguaje expresivo y comprensión. 40% con retraso lenguaje. Evaluación presencial."
+- **Keywords:** Añadido "autismo fonoaudiología Chillán", "lenguaje en TEA"
+- **Cross-link:** Página ya linkeada con `/chillan/tea-comunicacion` (17 imp/0/pos 8.8) — ambas se mantienen separadas (local vs servicio general) con contenido diferenciado
+
+**Objetivo CTR:** > 2,5% en 21 días
+
+---
+
+#### 11. Redirect URL encoding: `/servicios/informe-fonoaudiol%C3%B3gico-pie-chillan`
+**GSC:** 1 impresión en variante con tilde
+
+**Cambios:**
+- Añadido redirect 301 en `next.config.ts` de `/servicios/informe-fonoaudiológico-pie-chillan` (con ó) → `/servicios/informe-fonoaudiologico-pie-chillan` (sin tilde, canónica)
+
+**Objetivo:** Consolidar señales en URL canónica
+
+---
+
+### Otras mejoras transversales
+
+1. **FAQPage schema:** Añadido en `/voz-online/paralisis-cordal-rehabilitacion-online` (antes solo tenía MedicalWebPage). Resto de páginas voz-online ya tenían FAQPage.
+2. **Cross-links voz-online:** Todas las páginas voz-online ahora linkean al hub `/voz-online/fonoaudiologa-de-voz-online` en breadcrumbs.
+3. **Keywords sin tilde:** Añadido "fonoaudióloga especialista en voz" (con tilde) + variantes sin tilde en keywords de voz-online.
+4. **Titles con preguntas directas:** "¿Se recupera?", "¿Por qué se me cansa la voz?", "¿Por qué y qué hacer?", "¿Qué incluye el diagnóstico?" capturan intent informacional de búsquedas long-tail.
+5. **Descriptions con stats concretos:** "6-12 meses", "58% de docentes", "40% con retraso lenguaje" agregan credibilidad y especificidad.
+
+### Métricas a monitorear (GSC)
+
+**Periodo de medición:** 14-21 días post-indexación
+
+**KPIs Lote 3:**
+1. **CTR general del sitio:** objetivo > 2,2% (baseline 1,66%)
+2. **CTR `/glosario/tel`:** objetivo > 2% (baseline 0%, pos 8.6)
+3. **CTR `/voz-online/evaluacion-vocal-online`:** objetivo > 6% (baseline 0%, pos 5.6 crítico)
+4. **CTR `/voz-online/paralisis-cordal`:** objetivo > 5% (baseline 4.29%, mantener top performer)
+5. **CTR `/servicios/tea-*`:** objetivo > 2,5% (baseline 0%, pos 9.1)
+6. **Clics totales:** objetivo +20% sobre baseline de 82 clics/90d
+
+**URLs a seguir de cerca:**
+- `/voz-online/evaluacion-vocal-online` (19 imp/pos 5.6 → esperado 1 clic con CTR 6%)
+- `/voz-online/rehabilitacion-vocal-profesionales-voz` (26 imp/pos 11.9 → esperado 1 clic si sube ranking con query match)
+- `/servicios/tea-trastorno-espectro-autista` (72 imp → esperado 2 clics con CTR 2.5%)
+- `/glosario/tel` (52 imp → esperado 1 clic con CTR 2%)
+
+### Siguientes pasos
+
+1. **Post-deploy:**
+   - Solicitar indexación manual en GSC para las 11 URLs optimizadas
+   - Validar que los cambios de metadata se reflejan en SERPs (inspeccionar URL)
+   - Verificar redirect `informe-fonoaudiológico` → `informe-fonoaudiologico`
+
+2. **Monitoreo:**
+   - Revisar GSC en 7 días (tendencia temprana)
+   - Revisar GSC en 14-21 días (medición completa)
+   - Comparar queries con 0 clics vs nuevas queries con clics en voz-online
+
+3. **Ideas Lote 4 (futuras, basadas en datos):**
+   - **Tratamientos locales Chillán con volumen medio:** `/tratamientos/trastorno-fonologico-chillan` (frozen Lote 1, revisar post-21d)
+   - **Recursos bajo CTR:** `/recursos/estimular-lenguaje-en-casa` (frozen Lote 2, revisar post-21d)
+   - **Oportunidad ciudades voz no-Chillán:** `/voz-online/fonoaudiologa-voz-antofagasta` (462 imp/4 clicks/0.87% CTR/frozen Lote 2), `/voz-online/fonoaudiologa-voz-concepcion` (140 imp/3 clicks), `/voz-online/fonoaudiologa-voz-temuco` (53 imp/0), `/voz-online/fonoaudiologa-voz-santiago` (82 imp/3). **No optimizar en Lote 4** per instrucción "DO NOT optimize or create pages for other cities (voz-online city pages)".
+   - **Síntomas Chillán bajo CTR:** `/sintomas/nino-no-entiende-instrucciones-chillan` (frozen Lote 2), `/sintomas/mi-hijo-no-habla-bien-chillan` (frozen Lote 2), `/sintomas/hijo-no-arma-frases-chillan` (frozen Lote 2) — revisar post-21d.
+   - **Glosario / definiciones adicionales:** Páginas glosario con > 10 imp que necesiten diferenciación o FAQ más robustas.
+
+---
+
 ## 2026-10-06: SEO Lote 2 — CTR en voz online, recursos y síntomas
 
 ### Contexto

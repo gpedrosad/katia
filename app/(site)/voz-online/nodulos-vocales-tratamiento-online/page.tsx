@@ -7,9 +7,16 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/nodulos-vocales-tratamiento-online",
-  title: "Nódulos Vocales: Tratamiento Online sin Cirugía | Chile",
+  title: "Nódulos Vocales: Tratamiento Online | ¿Se pueden curar sin cirugía?",
   description:
-    "¿Te diagnosticaron nódulos y temes operarte? Evita la cirugía con tratamiento fonoaudiológico online. Rehabilitación vocal conservadora directa a tu hogar.",
+    "Tratamiento fonoaudiológico online para nódulos vocales. Terapia conservadora como primera línea antes de cirugía. Reduce tamaño y mejora calidad vocal. Chile.",
+  keywords: [
+    "nódulos vocales",
+    "nodulos cuerdas vocales",
+    "tratamiento nódulos sin cirugía",
+    "fonoaudióloga especialista en voz",
+    "terapia vocal online Chile",
+  ],
 });
 
 const faqItems = [
@@ -27,6 +34,16 @@ const faqItems = [
     question: "¿Por qué reaparecen los nódulos después de operarse?",
     answer:
       "Porque la causa suele ser el mal uso vocal. Sin cambiar el patrón de habla, la fricción en las cuerdas vuelve a generar lesión.",
+  },
+  {
+    question: "¿Cuánto tiempo tarda en mejorar un nódulo vocal con terapia?",
+    answer:
+      "Depende del tamaño y cronicidad. Con terapia intensiva (2 sesiones semanales) se puede ver mejoría entre 8-16 semanas. Los nódulos pequeños y recientes responden más rápido.",
+  },
+  {
+    question: "¿Qué es mejor: operar o hacer terapia vocal?",
+    answer:
+      "Las guías clínicas recomiendan terapia vocal como primera línea. La cirugía se indica cuando no hay respuesta tras 3-6 meses de terapia adecuada, o cuando hay lesión muy grande que impide funcionamiento vocal.",
   },
 ];
 

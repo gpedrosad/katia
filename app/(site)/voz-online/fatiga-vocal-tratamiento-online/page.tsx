@@ -7,9 +7,16 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/fatiga-vocal-tratamiento-online",
-  title: "Fatiga Vocal: Causas y Tratamiento Online | Chile",
+  title: "Fatiga Vocal: ¿Por qué se me cansa la voz? Tratamiento Online",
   description:
-    "¿Llegas al viernes sin voz? Tratamiento online para la fatiga vocal. Aprende a hablar sin cansancio ni tensión. Evaluación remota para todo Chile.",
+    "¿Llegas al viernes sin voz o te duele la garganta al hablar? Tratamiento online para fatiga vocal: respiración, técnica y proyección sin tensión. Chile.",
+  keywords: [
+    "fatiga vocal",
+    "se me cansa la voz",
+    "tratamiento fatiga vocal",
+    "fonoaudióloga especialista en voz",
+    "voz cansada tratamiento online",
+  ],
 });
 
 const faqItems = [
@@ -27,6 +34,16 @@ const faqItems = [
     question: "¿La fatiga vocal siempre termina en nódulos?",
     answer:
       "No siempre, pero el mal uso crónico aumenta el riesgo de edema, disfonía y nódulos. Intervenir a tiempo suele evitar cirugía.",
+  },
+  {
+    question: "¿Por qué se me cansa la voz al final del día?",
+    answer:
+      "Por tensión laríngea, respiración superficial, volumen inadecuado o mala higiene vocal. La terapia enseña técnicas de proyección y apoyo respiratorio que reducen el esfuerzo.",
+  },
+  {
+    question: "¿Cuánto dura el tratamiento para fatiga vocal?",
+    answer:
+      "Entre 6-12 semanas de sesiones semanales suelen ser suficientes para aprender técnica, corregir hábitos y recuperar resistencia vocal.",
   },
 ];
 

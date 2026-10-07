@@ -6,9 +6,16 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/evaluacion-vocal-online",
-  title: "Evaluación Vocal Online | Diagnóstico de Voz Chile",
+  title: "Evaluación Vocal Online | ¿Qué incluye el diagnóstico de voz?",
   description:
-    "Evaluación fonoaudiológica de la voz online para adultos en todo Chile. Análisis acústico, perceptual y funcional de tu voz desde tu hogar.",
+    "Evaluación fonoaudiológica de voz online: análisis acústico, perceptual (GRBAS), tiempos fonación e informe con plan de tratamiento. Todo Chile por videollamada.",
+  keywords: [
+    "evaluación vocal online",
+    "diagnóstico de voz",
+    "fonoaudióloga especialista en voz",
+    "evaluación fonoaudiológica voz",
+    "análisis vocal Chile",
+  ],
 });
 
 const faqItems = [
@@ -26,6 +33,16 @@ const faqItems = [
     question: "¿La evaluación online es válida clínicamente?",
     answer:
       "Sí para adultos con trastornos funcionales de la voz. La literatura de telefonoaudiología respalda evaluación perceptiva y acústica remota; si se sospecha lesión orgánica, se deriva a nasofibrolaringoscopía.",
+  },
+  {
+    question: "¿Cuánto dura una evaluación vocal?",
+    answer:
+      "Entre 45-60 minutos. Incluye historia clínica, pruebas de voz, análisis en vivo y devolución de resultados con recomendaciones iniciales.",
+  },
+  {
+    question: "¿Necesito tener diagnóstico otorrino antes de la evaluación?",
+    answer:
+      "No es obligatorio. La evaluación fonoaudiológica identifica patrones de uso vocal. Si se sospecha lesión estructural, se sugiere nasofibrolaringoscopía con otorrinolaringólogo.",
   },
 ];
 
