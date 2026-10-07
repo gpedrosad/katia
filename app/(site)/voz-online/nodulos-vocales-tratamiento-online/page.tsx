@@ -38,12 +38,12 @@ const faqItems = [
   {
     question: "¿Cuánto tiempo tarda en mejorar un nódulo vocal con terapia?",
     answer:
-      "Depende del tamaño y cronicidad. Con terapia intensiva (2 sesiones semanales) se puede ver mejoría entre 8-16 semanas. Los nódulos pequeños y recientes responden más rápido.",
+      "Depende del tamaño y cronicidad. Los nódulos pequeños y recientes responden más rápido. El plan de tratamiento se ajusta según la evolución individual.",
   },
   {
     question: "¿Qué es mejor: operar o hacer terapia vocal?",
     answer:
-      "Las guías clínicas recomiendan terapia vocal como primera línea. La cirugía se indica cuando no hay respuesta tras 3-6 meses de terapia adecuada, o cuando hay lesión muy grande que impide funcionamiento vocal.",
+      "Las guías clínicas recomiendan terapia vocal como primera línea. La cirugía se indica cuando no hay respuesta tras un período adecuado de terapia, o cuando hay lesión muy grande que impide funcionamiento vocal.",
   },
 ];
 

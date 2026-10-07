@@ -42,7 +42,7 @@ const faqItems = [
   {
     question: "¿Cómo descansar la voz correctamente?",
     answer:
-      "Evita hablar en exceso fuera del trabajo, reduce el volumen en ambientes ruidosos, y respeta silencios vocales de 10-15 minutos cada 90 minutos de uso intenso.",
+      "Evita hablar en exceso fuera del trabajo, reduce el volumen en ambientes ruidosos, y respeta períodos de reposo vocal regular después de uso intenso.",
   },
 ];
 

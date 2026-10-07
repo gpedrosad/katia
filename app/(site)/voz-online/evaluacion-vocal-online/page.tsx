@@ -37,7 +37,7 @@ const faqItems = [
   {
     question: "¿Cuánto dura una evaluación vocal?",
     answer:
-      "Entre 45-60 minutos. Incluye historia clínica, pruebas de voz, análisis en vivo y devolución de resultados con recomendaciones iniciales.",
+      "La duración varía según el caso. Incluye historia clínica, pruebas de voz, análisis en vivo y devolución de resultados con recomendaciones iniciales.",
   },
   {
     question: "¿Necesito tener diagnóstico otorrino antes de la evaluación?",

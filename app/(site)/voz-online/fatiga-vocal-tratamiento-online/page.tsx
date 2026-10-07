@@ -43,7 +43,7 @@ const faqItems = [
   {
     question: "¿Cuánto dura el tratamiento para fatiga vocal?",
     answer:
-      "Entre 6-12 semanas de sesiones semanales suelen ser suficientes para aprender técnica, corregir hábitos y recuperar resistencia vocal.",
+      "La duración depende de cada caso y de la severidad de los hábitos vocales. El plan se define en la evaluación inicial según tus necesidades específicas.",
   },
 ];
 

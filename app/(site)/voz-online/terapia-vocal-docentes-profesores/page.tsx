@@ -38,7 +38,7 @@ const faqItems = [
   {
     question: "¿Cuánto dura la terapia vocal para profesores?",
     answer:
-      "Un programa típico dura 8-12 semanas con sesiones semanales. Se enseña técnica de respiración, apoyo, proyección y estrategias específicas para el aula.",
+      "La duración se define según las necesidades de cada docente. Se enseña técnica de respiración, apoyo, proyección y estrategias específicas para el aula.",
   },
   {
     question: "¿Qué pasa si no trato la disfonía docente?",

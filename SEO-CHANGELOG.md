@@ -81,7 +81,7 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 - **Title:** `"Higiene Vocal: Cómo Cuidar tu Voz | Fonoaudióloga Online Chile"` → `"Higiene Vocal: Cómo Cuidar tu Voz Todos los Días"`
 - **Description:** "10 reglas de oro para cuidar tu voz: hidratación, evitar carraspear, descansos vocales. Asesoría fonoaudióloga especialista online para Chile."
 - **Keywords:** Añadido "cómo cuidar la voz", "cuidado de la voz", "consejos voz profesionales"
-- **FAQ ampliado:** +2 preguntas: "¿Qué alimentos son malos para la voz?", "¿Cómo descansar la voz correctamente?"
+- **FAQ ampliado:** +2 preguntas: "¿Qué alimentos son malos para la voz?", "¿Cómo descansar la voz correctamente?" (respuesta genérica)
 
 **Objetivo CTR:** > 4% en 21 días
 
@@ -107,7 +107,7 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 - **Title:** `"Fatiga Vocal: Causas y Tratamiento Online | Chile"` → `"Fatiga Vocal: ¿Por qué se me cansa la voz? Tratamiento Online"`
 - **Description:** Responde query directa "se me cansa la voz": "¿Llegas al viernes sin voz o te duele la garganta al hablar? Tratamiento online para fatiga vocal: respiración, técnica y proyección sin tensión."
 - **Keywords:** Añadido "se me cansa la voz", "voz cansada tratamiento online"
-- **FAQ ampliado:** +2 preguntas: "¿Por qué se me cansa la voz al final del día?", "¿Cuánto dura el tratamiento para fatiga vocal?"
+- **FAQ ampliado:** +2 preguntas: "¿Por qué se me cansa la voz al final del día?", "¿Cuánto dura el tratamiento para fatiga vocal?" (respuesta genérica)
 
 **Objetivo CTR:** > 4% en 21 días
 
@@ -120,7 +120,7 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 - **Title:** `"Nódulos Vocales: Tratamiento Online sin Cirugía | Chile"` → `"Nódulos Vocales: Tratamiento Online | ¿Se pueden curar sin cirugía?"`
 - **Description:** "Tratamiento fonoaudiológico online para nódulos vocales. Terapia conservadora como primera línea antes de cirugía. Reduce tamaño y mejora calidad vocal."
 - **Keywords:** Añadido "nodulos cuerdas vocales", "tratamiento nódulos sin cirugía"
-- **FAQ ampliado:** +2 preguntas: "¿Cuánto tiempo tarda en mejorar un nódulo vocal con terapia?", "¿Qué es mejor: operar o hacer terapia vocal?"
+- **FAQ ampliado:** +2 preguntas: "¿Cuánto tiempo tarda en mejorar un nódulo vocal con terapia?" (respuesta genérica), "¿Qué es mejor: operar o hacer terapia vocal?"
 
 **Objetivo CTR:** > 5% en 21 días
 
@@ -133,7 +133,7 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 - **Title:** `"Evaluación Vocal Online | Diagnóstico de Voz Chile"` → `"Evaluación Vocal Online | ¿Qué incluye el diagnóstico de voz?"`
 - **Description:** Más específica: "Evaluación fonoaudiológica de voz online: análisis acústico, perceptual (GRBAS), tiempos fonación e informe con plan de tratamiento. Todo Chile por videollamada."
 - **Keywords:** Añadido "diagnóstico de voz", "análisis vocal Chile"
-- **FAQ ampliado:** +2 preguntas: "¿Cuánto dura una evaluación vocal?", "¿Necesito tener diagnóstico otorrino antes de la evaluación?"
+- **FAQ ampliado:** +2 preguntas: "¿Cuánto dura una evaluación vocal?" (respuesta genérica), "¿Necesito tener diagnóstico otorrino antes de la evaluación?"
 
 **Objetivo CTR:** > 6% en 21 días (posición top debe convertir)
 
@@ -159,7 +159,7 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 - **Title:** `"Terapia Vocal para Docentes y Profesores | Online Chile"` → `"Terapia Vocal para Docentes Online | Salva tu voz de profesor"`
 - **Description:** Stat ASHA "58% de docentes desarrollará trastorno de voz. Terapia fonoaudiológica online para profesores: técnica vocal, proyección sin gritar, prevención disfonía."
 - **Keywords:** Añadido "voz profesores", "disfonía docente", "terapia voz profesores online"
-- **FAQ ampliado:** +2 preguntas: "¿Cuánto dura la terapia vocal para profesores?", "¿Qué pasa si no trato la disfonía docente?"
+- **FAQ ampliado:** +2 preguntas: "¿Cuánto dura la terapia vocal para profesores?" (respuesta genérica), "¿Qué pasa si no trato la disfonía docente?"
 
 **Objetivo CTR:** > 13% en 21 días (mantener alta conversión)
 
@@ -229,7 +229,6 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 3. **Ideas Lote 4 (futuras, basadas en datos):**
    - **Tratamientos locales Chillán con volumen medio:** `/tratamientos/trastorno-fonologico-chillan` (frozen Lote 1, revisar post-21d)
    - **Recursos bajo CTR:** `/recursos/estimular-lenguaje-en-casa` (frozen Lote 2, revisar post-21d)
-   - **Oportunidad ciudades voz no-Chillán:** `/voz-online/fonoaudiologa-voz-antofagasta` (462 imp/4 clicks/0.87% CTR/frozen Lote 2), `/voz-online/fonoaudiologa-voz-concepcion` (140 imp/3 clicks), `/voz-online/fonoaudiologa-voz-temuco` (53 imp/0), `/voz-online/fonoaudiologa-voz-santiago` (82 imp/3). **No optimizar en Lote 4** per instrucción "DO NOT optimize or create pages for other cities (voz-online city pages)".
    - **Síntomas Chillán bajo CTR:** `/sintomas/nino-no-entiende-instrucciones-chillan` (frozen Lote 2), `/sintomas/mi-hijo-no-habla-bien-chillan` (frozen Lote 2), `/sintomas/hijo-no-arma-frases-chillan` (frozen Lote 2) — revisar post-21d.
    - **Glosario / definiciones adicionales:** Páginas glosario con > 10 imp que necesiten diferenciación o FAQ más robustas.
 
