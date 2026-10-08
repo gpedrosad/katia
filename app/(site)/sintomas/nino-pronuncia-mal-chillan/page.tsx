@@ -10,10 +10,10 @@ const WHATSAPP_LINK = whatsappUrl("Hola, mi hijo pronuncia mal y busco fonoaudi�
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Mi hijo no pronuncia bien | Fonoaudiología Chillán",
+  title: "Mi hijo no se le entiende al hablar | Pronuncia mal Chillán",
   description:
-    "Si tu hijo pronuncia mal, habla como bebé o no se le entiende a los 3 o 4 años, revisa señales y evaluación en Chillán.",
-  keywords: ["fonoaudióloga Chillán", "fonoaudiología infantil", "nino pronuncia mal chillan"],
+    "¿Tu hijo habla como bebé o no se le entiende a los 3-4 años? Señales de problemas de articulación por edad, cuándo consultar y evaluación en Chillán.",
+  keywords: ["mi hijo no se le entiende al hablar", "niño pronuncia mal", "habla como bebé", "fonoaudióloga Chillán", "problemas de pronunciación"],
 });
 
 const signalsByAge = [

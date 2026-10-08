@@ -18,6 +18,12 @@ const DESCRIPTION_OVERRIDES: Record<string, string> = {
     "Apoyo fonoaudiológico para niños con TEA: lenguaje, comunicación funcional y habilidades sociales. Evaluación presencial en Chillán. Escribe por WhatsApp.",
   "apraxia-del-habla":
     "Errores inconsistentes al hablar y esfuerzo visible: puede ser apraxia. Evaluación especializada en Chillán con plan claro. Agenda por WhatsApp.",
+  dislalia:
+    "¿Tu hijo omite sonidos o dice 'tasa' por casa? Señales de dislalia por edad en Chillán. Evaluación presencial con fonoaudióloga especialista. Agenda por WhatsApp.",
+  dislexia:
+    "La dislexia tiene base en lenguaje oral (conciencia fonológica). Evaluación fonoaudiológica en Chillán para dificultades de lectura y bases del lenguaje. Agenda por WhatsApp.",
+  lectoescritura:
+    "Problemas de lectura o escritura suelen tener base en lenguaje oral. Evaluación y tratamiento fonoaudiológico en Chillán para conciencia fonológica y lectoescritura. WhatsApp.",
 };
 
 const TITLE_OVERRIDES: Record<string, string> = {
@@ -25,6 +31,9 @@ const TITLE_OVERRIDES: Record<string, string> = {
   "tea-comunicacion": "TEA y autismo Chillán | Comunicación infantil",
   "apraxia-del-habla":
     "Apraxia del Habla Infantil Chillán | Eval. Especializada",
+  dislalia: "Dislalia en Chillán | Señales y cuándo consultar",
+  dislexia: "Dislexia y Fonoaudiología Chillán | Evaluación Lectura",
+  lectoescritura: "Dificultades de Lectoescritura Chillán | Base Lenguaje",
 };
 
 const KEYWORD_OVERRIDES: Record<string, string[]> = {

@@ -12,15 +12,15 @@ const WHATSAPP_HREF = whatsappUrl("Hola, quiero consultar por terapia de lenguaj
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Terapia de Lenguaje en Chillán | Fonoaudióloga Infantil",
+  title: "Terapia de Lenguaje Infantil Chillán | Especialista Niños",
   description:
-    "Terapia de lenguaje para niños que hablan poco, no arman frases o tienen vocabulario limitado. Atención infantil presencial en Chillán.",
+    "Especialista en terapia de lenguaje para niños en Chillán: retraso del lenguaje, vocabulario limitado, no arma frases. Evaluación, plan personalizado y participación activa de padres.",
   keywords: ["terapia de lenguaje infantil Chillán",
+    "especialista en terapia de lenguaje para niños",
     "fonoaudióloga para niños Chillán",
     "retraso del lenguaje niños",
-    "terapia del lenguaje niños",
-    "fonoaudiología infantil Chillán",
-    "tratamiento lenguaje niños",],
+    "terapia del lenguaje niños Chillán",
+    "fonoaudiología infantil Chillán",],
 });
 
 const signals = [

@@ -10,10 +10,10 @@ const WHATSAPP_LINK = whatsappUrl("Hola, busco ayuda con dislalia o pronunciaci�
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Tratamiento Dislalia Infantil | Chillán",
+  title: "Tratamiento Dislalia Infantil Chillán | Terapia Pronunciación",
   description:
-    "Terapia fonoaudiológica para dislalia y problemas de pronunciación en niños en Chillán. Rotacismo, sigmatismo y más. Evaluación presencial y plan personalizado.",
-  keywords: ["dislalia infantil Chillán", "terapia pronunciación niños", "rotacismo niños", "fonoaudióloga Chillán"],
+    "Tratamiento especializado de dislalia infantil en Chillán: rotacismo, sigmatismo y problemas de articulación. Fonoaudióloga con postítulo en trastornos fonológicos. Agenda tu evaluación.",
+  keywords: ["dislalia infantil Chillán", "tratamiento dislalia Chillán", "terapia pronunciación niños Chillán", "rotacismo niños", "fonoaudióloga Chillán", "problemas articulación"],
 });
 
 const signalsByAge = [
@@ -93,10 +93,8 @@ export default function DislaliaInfantilPage() {
 
         <section className="bg-teal-50 px-4 py-12 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center text-gray-600">
-            <p>
-              Más en <Link href="/glosario/dislalia" className="font-semibold text-teal-600 underline">glosario: dislalia</Link>,{" "}
-              <Link href="/chillan/dislalia" className="font-semibold text-teal-600 underline">dislalia en Chillán</Link>,{" "}
-              <Link href="/servicios/terapia-del-habla-infantil-chillan" className="font-semibold text-teal-600 underline">terapia del habla</Link> y{" "}
+            <p className="text-lg">
+              <strong>Esta es la página principal de tratamiento de dislalia en Chillán.</strong> Para definición corta: <Link href="/glosario/dislalia" className="font-semibold text-teal-600 underline">glosario de dislalia</Link>. Para señales específicas locales: <Link href="/chillan/dislalia" className="font-semibold text-teal-600 underline">dislalia en Chillán</Link>. Más info en <Link href="/servicios/trastornos-del-habla" className="font-semibold text-teal-600 underline">trastornos del habla</Link> y{" "}
               <Link href="/servicios/evaluacion-fonoaudiologica" className="font-semibold text-teal-600 underline">evaluación fonoaudiológica</Link>.
             </p>
           </div>

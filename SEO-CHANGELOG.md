@@ -20,6 +20,281 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-10-08: SEO Lote 4 — Dislalia, tartamudez, lectoescritura, apraxia, síntomas e informe PIE
+
+### Contexto
+
+**Datos GSC (90 días 2026-07-10 al 2026-10-07):**
+- **81 clics totales**
+- **4.923 impresiones**
+- **CTR promedio: 1,65%**
+- Posición promedio: 8,0
+
+**Datos últimos 7 días completos (30 sep–6 oct):** 5 clics / 577 imp vs 7d previos (23–29 sep): 10 / 579 imp
+
+**Problemas detectados:**
+1. **Canibalización dislalia:** 3 páginas (`/tratamientos/dislalia-infantil-chillan` 35 imp/0 clicks pos 22.6, `/chillan/dislalia` 13 imp pos 20.5, `/glosario/dislalia` 12 imp pos 8.3) compitiendo sin intents diferenciados.
+2. **Tartamudez:** `/sintomas/nino-tartamudea-chillan` (41 imp/2 clicks pos 9.6) necesita match con queries de padres ("tartamudez en niños de 2 a 3 años"); `/chillan/disfemia` (38 imp/6 clicks pos 5) va bien, solo light touch.
+3. **Lectoescritura/dislexia cluster sin diferenciación:** `/servicios/dificultades-lectoescritura` (48 imp/1 click pos 6.5 — snippet opportunity), `/chillan/dislexia` (52 imp pos 15.7), `/chillan/lectoescritura` (10 imp pos 12.7), `/glosario/dislexia` (11 imp).
+4. **Apraxia:** `/tratamientos/apraxia-del-habla-infantil-chillan` (20 imp pos 8.8) y `/chillan/apraxia-del-habla` (16 imp/2 clicks pos 4.5 — light touch en esta).
+5. **Informe PIE:** `/servicios/informe-fonoaudiologico-pie-chillan` (88 imp/3 clicks pos 6.7) — query principal "informe fonoaudiológico" pos 11.
+6. **Síntomas snippets:** `/sintomas/hijo-habla-poco-edad-chillan` (36 imp pos 4.1/1 click) y `/sintomas/nino-pronuncia-mal-chillan` (19 imp pos 12.7) necesitan titles como búsquedas de padres.
+7. **Servicios therapy:** `/servicios/terapia-lenguaje-infantil` (33 imp pos 14.8, query "especialista en terapia de lenguaje para niños") y `/servicios/trastornos-del-habla` (12 imp pos 48.6) necesitan sharpen.
+8. **Primera evaluación:** `/recursos/primera-evaluacion-fonoaudiologica-infantil` (27 imp, 13 en últimos 7d, pos 8.5) — query "qué esperar en la primera evaluación fonoaudiológica de tu hijo".
+
+**Objetivo:** Diferenciar intents en clusters (dislalia, lectoescritura), mejorar titles/descriptions con wording de padres, añadir FAQ donde falte, cross-links estratégicos y evitar canibalización.
+
+### Páginas optimizadas
+
+#### 1. `/tratamientos/dislalia-infantil-chillan` — Página principal de tratamiento dislalia
+**Métricas GSC previas:** 35 imp, 0 clics, pos 22.6
+
+**Cambios:**
+- **Title:** `"Tratamiento Dislalia Infantil | Chillán"` → `"Tratamiento Dislalia Infantil Chillán | Terapia Pronunciación"`
+- **Description:** Añadido "postítulo en trastornos fonológicos", más específica con rotacismo/sigmatismo
+- **Keywords:** Añadido "tratamiento dislalia Chillán", "problemas articulación"
+- **Cross-link section:** Añadido texto explicativo clarificando que **esta es la página principal de tratamiento**, con links diferenciados a `/glosario/dislalia` (definición corta) y `/chillan/dislalia` (señales locales)
+
+**Objetivo CTR:** > 2% en 21 días (subir desde pos 22.6)
+
+---
+
+#### 2. `/glosario/dislalia` — Definición breve que canaliza a tratamiento
+**Métricas GSC previas:** 12 imp, pos 8.3
+
+**Cambios:**
+- **Title:** `"¿Qué es la Dislalia? | Causas, Síntomas y Tratamiento"` → `"Definición Dislalia | ¿Qué es y cómo se trata?"`
+- **Description:** Reforzado como "definición breve", añadido "diferencia dislalia y trastorno fonológico"
+- **Keywords:** Añadido "definición dislalia", "qué significa dislalia", "diferencia dislalia y trastorno fonológico"
+- **CTA box prominente:** Añadido box rose-50 destacado al inicio con "→ Si buscas **tratamiento de dislalia en Chillán**, ve a:" con links prominentes a `/tratamientos/dislalia-infantil-chillan` (principal, negrita), `/chillan/dislalia` (señales), `/agendar-*`
+- **Objetivo:** Página de glosario (definición) que funnela a las páginas de tratamiento, no compite
+
+**Objetivo CTR:** > 3% en 21 días
+
+**Decisión canibalización:** **Se mantienen las 3 páginas independientes** con intents diferenciados: `/glosario/dislalia` = definición breve → `/tratamientos/dislalia-infantil-chillan` = tratamiento especializado principal → `/chillan/dislalia` = señales locales específicas de cuándo llevar. Cross-links claros entre ellas.
+
+---
+
+#### 3. `/chillan/dislalia` — Señales locales (patologias.ts)
+**Métricas GSC previas:** 13 imp, pos 20.5
+
+**Cambios:**
+- **Title override:** Añadido `"Dislalia en Chillán | Señales y cuándo consultar"`
+- **Description override:** `"¿Tu hijo omite sonidos o dice 'tasa' por casa? Señales de dislalia por edad en Chillán. Evaluación presencial con fonoaudióloga especialista. Agenda por WhatsApp."`
+- **Objetivo:** Diferenciarse como página de señales locales, complementa tratamiento
+
+**Objetivo CTR:** > 2,5% en 21 días
+
+---
+
+#### 4. `/sintomas/nino-tartamudea-chillan` — Wording padres + FAQ edad
+**Métricas GSC previas:** 41 imp, 2 clicks, pos 9.6
+
+**Cambios:**
+- **Title:** `"Mi hijo tartamudea | Evaluación Chillán"` → `"Mi hijo tartamudea | ¿Es normal o preocupante? Chillán"`
+- **Description:** Añadido edad específica "2-3 años", "cuándo es disfluencia normal y cuándo consultar"
+- **Keywords:** Añadido "tartamudez en niños de 2 a 3 años", "disfluencia normal"
+- **FAQ ampliado:** +2 preguntas: "¿Qué tipo de disfluencias son normales en niños pequeños?" (repetir palabras enteras sin tensión vs repeticiones de sonidos con esfuerzo), "¿A qué edad debería preocuparme?" (guidance general sin números específicos)
+- **Cross-link:** Añadido link a `/chillan/disfemia`
+
+**Objetivo CTR:** > 4% en 21 días (capturar queries padres con hijos 2-3 años)
+
+---
+
+#### 5. `/servicios/dificultades-lectoescritura` — Snippet opportunity
+**Métricas GSC previas:** 48 imp, 1 click, pos 6.5
+
+**Cambios:**
+- **Title:** `"Dificultades de Lectura y Escritura en Chillán | Fonoaudióloga"` → `"Dificultades de Lectura y Escritura Chillán | Fonoaudiología"`
+- **Description:** Más específica "conciencia fonológica, decodificación, fluidez y comprensión lectora. Base del lenguaje oral para leer y escribir"
+- **Keywords:** Añadido "comprensión lectora niños", cambiado "dislexia tratamiento Chillán" por "conciencia fonológica Chillán" (diferenciación)
+- **FAQ ampliado:** +1 pregunta "¿Qué relación tiene la lectura con el lenguaje oral?" (explicación bases lingüísticas)
+
+**Objetivo CTR:** > 5% en 21 días (posición top 6 debe convertir más, snippet opportunity)
+
+---
+
+#### 6. `/chillan/dislexia` — Evaluación dislexia Chillán (patologias.ts)
+**Métricas GSC previas:** 52 imp, pos 15.7
+
+**Cambios:**
+- **Title override:** Añadido `"Dislexia y Fonoaudiología Chillán | Evaluación Lectura"`
+- **Description override:** `"La dislexia tiene base en lenguaje oral (conciencia fonológica). Evaluación fonoaudiológica en Chillán para dificultades de lectura y bases del lenguaje. Agenda por WhatsApp."`
+- **Objetivo:** Diferenciarse como página de evaluación/tratamiento local de dislexia vs servicio general de lectoescritura
+
+**Objetivo CTR:** > 2% en 21 días, subir ranking con query "fonoaudiologia dislexia"
+
+---
+
+#### 7. `/chillan/lectoescritura` — Base lenguaje (patologias.ts)
+**Métricas GSC previas:** 10 imp, pos 12.7
+
+**Cambios:**
+- **Title override:** Añadido `"Dificultades de Lectoescritura Chillán | Base Lenguaje"`
+- **Description override:** `"Problemas de lectura o escritura suelen tener base en lenguaje oral. Evaluación y tratamiento fonoaudiológico en Chillán para conciencia fonológica y lectoescritura. WhatsApp."`
+- **Objetivo:** Enfoque en bases del lenguaje oral, complementa servicio general
+
+**Objetivo CTR:** > 2,5% en 21 días
+
+---
+
+#### 8. `/glosario/dislexia` — Definición dislexia (terminos.ts)
+**Métricas GSC previas:** 11 imp
+
+**Cambios:**
+- **metaTitle:** `"¿Qué es la Dislexia? | Lectura, Lenguaje y Fonoaudiología"` → `"Definición Dislexia | ¿Qué es y cómo ayuda la fonoaudiología?"`
+- **metaDescription:** Reforzado "definición de dislexia", "señales, diferencias"
+- **keywords:** Añadido "dislexia definición", "fonoaudiología dislexia"
+- **subtitle:** Añadido "Definición breve:"
+- **Objetivo:** Claramente definición que explica rol de fonoaudiología
+
+**Objetivo CTR:** > 3% en 21 días
+
+**Decisión canibalización lectoescritura:** **Se mantienen las 4 páginas independientes** con intents diferenciados: `/glosario/dislexia` = definición → `/chillan/dislexia` = evaluación/tratamiento dislexia local → `/servicios/dificultades-lectoescritura` = servicio general de lectoescritura → `/chillan/lectoescritura` = base lenguaje oral. Cross-links entre ellas.
+
+---
+
+#### 9. `/tratamientos/apraxia-del-habla-infantil-chillan` — Tratamiento apraxia
+**Métricas GSC previas:** 20 imp, pos 8.8
+
+**Cambios:**
+- **Title:** `"Apraxia del Habla Infantil | Tratamiento Chillán"` → `"Tratamiento Apraxia del Habla Infantil Chillán | CAS"`
+- **Description:** Más específica "errores inconsistentes, esfuerzo visible al hablar. Evaluación diferencial y terapia de aprendizaje motor presencial"
+- **Keywords:** Añadido "tratamiento apraxia habla Chillán", "errores inconsistentes habla"
+
+**Objetivo CTR:** > 3% en 21 días
+
+**Nota:** `/chillan/apraxia-del-habla` (16 imp, 2 clicks, pos 4.5) ya funciona bien — NO se editó (light touch, mantener performer).
+
+---
+
+#### 10. `/servicios/informe-fonoaudiologico-pie-chillan` — Informe PIE colegio
+**Métricas GSC previas:** 88 imp, 3 clicks, pos 6.7 (query "informe fonoaudiológico" pos 11)
+
+**Cambios:**
+- **Title:** `"Informe Fonoaudiológico PIE y Escuelas de Lenguaje — Chillán | Katia Domínguez"` → `"Informe Fonoaudiológico para PIE Chillán | Colegio Decreto 170"`
+- **Description:** Match query exacta "informe fonoaudiológico para PIE", añadido "informe para colegio"
+- **Keywords:** Añadido "informe fonoaudiológico para PIE", "informe para colegio"
+- **FAQ ampliado:** +1 pregunta "¿El informe es válido para cualquier colegio en Chillán?" (sí, Decreto 170 válido toda región)
+
+**Objetivo CTR:** > 5% en 21 días (posición 6.7 top, query específica "informe fonoaudiológico para PIE")
+
+---
+
+#### 11. `/sintomas/hijo-habla-poco-edad-chillan` — Snippet wording padres
+**Métricas GSC previas:** 36 imp, pos 4.1, 1 click
+
+**Cambios:**
+- **Title:** `"Mi hijo de 2 años habla poco | Chillán"` → `"Mi hijo de 2 años habla poco: ¿es normal? | Chillán"`
+- **Description:** Más específica con pregunta directa "¿Tu hijo de 2 años habla poco o dice pocas palabras?", añadido "qué hacer mientras tanto"
+- **Keywords:** Añadido "mi hijo de 2 años habla poco", "hijo habla poco para su edad"
+
+**Objetivo CTR:** > 6% en 21 días (posición top 4 debe convertir muy bien)
+
+**Cross-links:** Ya enlaza bien a `/tratamientos/retraso-del-lenguaje-chillan` (frozen), no se alteró ese link.
+
+---
+
+#### 12. `/sintomas/nino-pronuncia-mal-chillan` — Wording "no se le entiende"
+**Métricas GSC previas:** 19 imp, pos 12.7
+
+**Cambios:**
+- **Title:** `"Mi hijo no pronuncia bien | Fonoaudiología Chillán"` → `"Mi hijo no se le entiende al hablar | Pronuncia mal Chillán"`
+- **Description:** Wording coloquial padres "habla como bebé o no se le entiende a los 3-4 años"
+- **Keywords:** Añadido "mi hijo no se le entiende al hablar", "habla como bebé"
+
+**Objetivo CTR:** > 4% en 21 días (capturar wording específico padres)
+
+**Cross-links:** Ya enlaza bien a `/tratamientos/dislalia-infantil-chillan` y `/tratamientos/trastorno-fonologico-chillan` (ambos frozen), no se alteraron esos links.
+
+---
+
+#### 13. `/servicios/terapia-lenguaje-infantil` — Especialista niños
+**Métricas GSC previas:** 33 imp, pos 14.8 (query "especialista en terapia de lenguaje para niños")
+
+**Cambios:**
+- **Title:** `"Terapia de Lenguaje en Chillán | Fonoaudióloga Infantil"` → `"Terapia de Lenguaje Infantil Chillán | Especialista Niños"`
+- **Description:** Captura query exacta "Especialista en terapia de lenguaje para niños en Chillán"
+- **Keywords:** Añadido "especialista en terapia de lenguaje para niños"
+
+**Objetivo CTR:** > 3% en 21 días (subir desde pos 14.8 con query match)
+
+---
+
+#### 14. `/servicios/trastornos-del-habla` — Sharpen title
+**Métricas GSC previas:** 12 imp, pos 48.6
+
+**Cambios:**
+- **Title:** `"Tratamiento de Trastornos del Habla en Chillán | Dislalia, Pronunciación"` → `"Trastornos del Habla Chillán | Dislalia, Articulación"`
+- **Description:** Añadido "postítulo en trastornos fonológicos", más específica con apraxia y disartria
+- **Keywords:** Añadido "trastornos fonológicos Chillán", "articulación del habla infantil"
+
+**Objetivo CTR:** > 2% en 21 días (muy bajo ranking, optimización de base)
+
+---
+
+#### 15. `/recursos/primera-evaluacion-fonoaudiologica-infantil` — Match query
+**Métricas GSC previas:** 27 imp (13 en últimos 7d), pos 8.5
+
+**Cambios:**
+- **Title:** `"Primera Evaluación Fonoaudiológica Infantil | Qué Esperar"` → `"Qué esperar en la primera evaluación fonoaudiológica de tu hijo"`
+- **Description:** Match query exacta "qué esperar en la primera evaluación fonoaudiológica de tu hijo", más detallada "(60-90 min), qué llevar, cómo es la sesión, qué incluye el informe y qué pasa después"
+- **Keywords:** Añadido "qué esperar en la primera evaluación fonoaudiológica", "qué esperar evaluación fonoaudiológica de tu hijo"
+
+**Objetivo CTR:** > 4% en 21 días (rising, posición 8.5, capturar query long-tail)
+
+**Cross-links:** Ya enlaza bien a servicios de evaluación, no se alteraron.
+
+---
+
+### Otras mejoras transversales
+
+1. **Diferenciación de intents:** Cada cluster (dislalia, lectoescritura) tiene roles claros: glosario = definición → tratamiento = página principal → chillan = señales locales.
+2. **Cross-links estratégicos:** Links claros entre páginas del mismo cluster con texto explicativo.
+3. **Titles con wording de padres:** "mi hijo de 2 años habla poco", "no se le entiende al hablar", "¿es normal o preocupante?"
+4. **Descriptions específicas:** Edad, señales concretas, capturan queries long-tail.
+5. **FAQ con guidance general:** Sin inventar números, respuestas no-numéricas sobre cuándo preocuparse.
+
+### Métricas a monitorear (GSC)
+
+**Periodo de medición:** 14-21 días post-indexación
+
+**KPIs Lote 4:**
+1. **CTR general del sitio:** objetivo > 2% (baseline 1,65%)
+2. **CTR `/sintomas/hijo-habla-poco-edad-chillan`:** objetivo > 6% (baseline pos 4.1, debe convertir muy bien)
+3. **CTR `/servicios/dificultades-lectoescritura`:** objetivo > 5% (baseline pos 6.5, snippet opportunity)
+4. **CTR `/servicios/informe-fonoaudiologico-pie-chillan`:** objetivo > 5% (baseline pos 6.7, query específica)
+5. **CTR `/glosario/dislalia`:** objetivo > 3% (baseline pos 8.3, definición que funnela)
+6. **Clics totales:** objetivo +15% sobre baseline de 81 clics/90d
+
+**URLs a seguir de cerca:**
+- `/tratamientos/dislalia-infantil-chillan` (35 imp/pos 22.6 → subir ranking con diferenciación)
+- `/sintomas/hijo-habla-poco-edad-chillan` (36 imp/pos 4.1 → ~2 clics esperados con CTR 6%)
+- `/servicios/dificultades-lectoescritura` (48 imp/pos 6.5 → ~2-3 clics con CTR 5%)
+- `/servicios/informe-fonoaudiologico-pie-chillan` (88 imp → ~4-5 clics con CTR 5%)
+- `/sintomas/nino-tartamudea-chillan` (41 imp → ~2 clics con CTR 4%)
+
+### Siguientes pasos
+
+1. **Post-deploy:**
+   - Solicitar indexación manual en GSC para las 15 URLs optimizadas
+   - Validar que los cambios de metadata se reflejan en SERPs (inspeccionar URL)
+   - Verificar cross-links funcionan correctamente
+
+2. **Monitoreo:**
+   - Revisar GSC en 7 días (tendencia temprana)
+   - Revisar GSC en 14-21 días (medición completa)
+   - Comparar queries con 0 clics vs nuevas queries con clics
+   - Monitorear si la diferenciación dislalia/lectoescritura reduce canibalización
+
+3. **Ideas Lote 5 (basadas en datos, esperar post-21d):**
+   - **Síntomas adicionales:** Revisar otros `/sintomas/*-chillan` con impresiones > 15 que no se tocaron en Lotes 1-4.
+   - **Recursos bajo CTR:** Revisar `/recursos/*` con volumen que no se optimizaron aún.
+   - **Queries emergentes:** Analizar GSC post-Lote 4 para identificar nuevas queries con impresiones pero sin clics.
+   - **Glosario adicional:** Otros términos en `/glosario/[slug]` (terminos.ts) con > 10 imp que necesiten diferenciación o FAQ más robustas.
+
+---
+
 ## 2026-10-07: SEO Lote 3 — TEL cannibalization, voz-online CTR y TEA
 
 ### Contexto

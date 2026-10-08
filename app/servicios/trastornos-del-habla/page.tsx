@@ -12,15 +12,15 @@ const WHATSAPP_HREF = whatsappUrl("Hola, quiero consultar por trastornos del hab
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Tratamiento de Trastornos del Habla en Chillán | Dislalia, Pronunciación",
+  title: "Trastornos del Habla Chillán | Dislalia, Articulación",
   description:
-    "Tratamiento de trastornos del habla en niños en Chillán: dislalia, problemas de pronunciación, articulación y trastornos fonológicos. Fonoaudióloga con +20 años de experiencia.",
+    "Tratamiento especializado de trastornos del habla en Chillán: dislalia, trastorno fonológico, apraxia y disartria. Fonoaudióloga con postítulo en trastornos fonológicos. Evaluación y terapia presencial.",
   keywords: ["trastornos del habla Chillán",
     "dislalia tratamiento Chillán",
-    "problemas de pronunciación niños",
+    "problemas de pronunciación niños Chillán",
     "fonoaudióloga habla Chillán",
-    "trastornos fonológicos",
-    "articulación del habla",],
+    "trastornos fonológicos Chillán",
+    "articulación del habla infantil",],
 });
 
 const disorders = [

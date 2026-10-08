@@ -58,16 +58,17 @@ const faqs = [
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "¿Qué es la Dislalia? | Causas, Síntomas y Tratamiento",
+  title: "Definición Dislalia | ¿Qué es y cómo se trata?",
   description:
-    "La dislalia es la dificultad para pronunciar sonidos en niños. Definición, tipos y tratamiento en Chillán, Ñuble, Chile. Fonoaudióloga con +20 años de experiencia.",
+    "Definición breve de dislalia: dificultad para articular fonemas (omitir, sustituir o distorsionar sonidos). Tipos, causas y cuándo buscar tratamiento fonoaudiológico en Chillán.",
   keywords: [
     "qué es dislalia",
     "dislalia definición",
-    "dislalia tratamiento",
+    "definición dislalia",
+    "qué significa dislalia",
     "tipos de dislalia",
     "dislalia en niños",
-    "pronunciación incorrecta",
+    "diferencia dislalia y trastorno fonológico",
   ],
   ogType: "article",
 });
@@ -147,32 +148,34 @@ export default function DislaliaPage() {
 
             <nav
               aria-label="Atención fonoaudiológica en Chillán"
-              className="mb-8 rounded-2xl border border-rose-200 bg-white p-5"
+              className="mb-8 rounded-2xl border border-rose-200 bg-rose-50 p-6"
             >
-              <p className="mb-3 text-sm font-semibold text-rose-800">
-                ¿Buscas evaluación o terapia en Chillán?
-              </p>
-              <ul className="flex flex-col gap-2 text-sm sm:flex-row sm:flex-wrap">
-                <li>
+              <h2 className="mb-3 text-lg font-bold text-rose-900">
+                → Si buscas <strong>tratamiento de dislalia en Chillán</strong>, ve a:
+              </h2>
+              <ul className="space-y-2">
+                <li className="text-base">
+                  <Link
+                    href="/tratamientos/dislalia-infantil-chillan"
+                    className="font-bold text-rose-700 underline hover:text-rose-800"
+                  >
+                    Tratamiento especializado de dislalia infantil en Chillán
+                  </Link>{" "}
+                  <span className="text-gray-700">(página principal de tratamiento)</span>
+                </li>
+                <li className="text-base">
                   <Link
                     href="/chillan/dislalia"
-                    className="font-medium text-rose-600 underline"
+                    className="font-medium text-rose-600 underline hover:text-rose-700"
                   >
-                    Tratamiento dislalia en Chillán
-                  </Link>
+                    Señales de dislalia en Chillán
+                  </Link>{" "}
+                  <span className="text-sm text-gray-600">(cuándo llevar al fonoaudiólogo)</span>
                 </li>
-                <li>
-                  <Link
-                    href="/fonoaudiologa-ninos-chillan"
-                    className="font-medium text-rose-600 underline"
-                  >
-                    Fonoaudióloga infantil
-                  </Link>
-                </li>
-                <li>
+                <li className="text-base">
                   <Link
                     href="/agendar-hora-fonoaudiologo-infantil-chillan"
-                    className="font-medium text-rose-600 underline"
+                    className="font-medium text-rose-600 underline hover:text-rose-700"
                   >
                     Agendar evaluación
                   </Link>

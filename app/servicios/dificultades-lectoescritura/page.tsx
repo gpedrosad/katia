@@ -12,15 +12,15 @@ const WHATSAPP_HREF = whatsappUrl("Hola, quiero consultar por dificultades de le
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Dificultades de Lectura y Escritura en Chillán | Fonoaudióloga",
+  title: "Dificultades de Lectura y Escritura Chillán | Fonoaudiología",
   description:
-    "Tratamiento de dificultades de lectura y escritura en niños en Chillán. Ayuda con problemas de lectoescritura, conciencia fonológica y dislexia. Fonoaudióloga con +20 años de experiencia.",
+    "Apoyo fonoaudiológico para dificultades de lectura y escritura en Chillán: conciencia fonológica, decodificación, fluidez y comprensión lectora. Base del lenguaje oral para leer y escribir.",
   keywords: ["dificultades lectoescritura Chillán",
-    "problemas de lectura niños",
-    "dislexia tratamiento Chillán",
+    "problemas de lectura niños Chillán",
+    "conciencia fonológica Chillán",
     "fonoaudióloga lectoescritura",
-    "conciencia fonológica",
-    "aprender a leer dificultades",],
+    "aprender a leer dificultades",
+    "comprensión lectora niños",],
 });
 
 const signs = [
@@ -374,6 +374,18 @@ export default function LectoescrituraPage() {
                   tratamiento. Generalmente se ven mejoras en 3-6 meses con
                   sesiones semanales y práctica en casa. Casos más severos
                   requieren intervención más prolongada.
+                </p>
+              </details>
+
+              <details className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+                <summary className="flex cursor-pointer items-start justify-between gap-4 font-semibold text-gray-900">
+                  <span>¿Qué relación tiene la lectura con el lenguaje oral?</span>
+                  <span className="flex-shrink-0 text-rose-500 transition-transform group-open:rotate-180">
+                    ▼
+                  </span>
+                </summary>
+                <p className="mt-4 text-gray-600">
+                  La lectura se apoya en habilidades del lenguaje oral: conciencia fonológica (identificar sonidos), vocabulario (conocer el significado de palabras) y comprensión oral (entender estructuras). Muchas dificultades de lectura tienen raíz en estas bases lingüísticas.
                 </p>
               </details>
             </div>

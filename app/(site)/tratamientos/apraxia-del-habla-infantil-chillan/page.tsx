@@ -10,15 +10,16 @@ const WHATSAPP_LINK = whatsappUrl("Hola, sospecho apraxia del habla en mi hijo. 
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Apraxia del Habla Infantil | Tratamiento Chillán",
+  title: "Tratamiento Apraxia del Habla Infantil Chillán | CAS",
   description:
-    "Diagnóstico y tratamiento de apraxia del habla infantil (CAS) en Chillán. Tu hijo sabe qué decir pero le cuesta coordinar los movimientos para hablar. Terapia presencial.",
+    "Tratamiento especializado de apraxia del habla infantil (CAS) en Chillán: errores inconsistentes, esfuerzo visible al hablar. Evaluación diferencial y terapia de aprendizaje motor presencial.",
   keywords: [
-    "apraxia del habla infantil",
+    "apraxia del habla infantil Chillán",
+    "tratamiento apraxia habla Chillán",
     "CAS niños Chillán",
     "terapia motricidad del habla",
     "fonoaudióloga Chillán",
-    "niño no imita sonidos",
+    "errores inconsistentes habla",
   ],
 });
 

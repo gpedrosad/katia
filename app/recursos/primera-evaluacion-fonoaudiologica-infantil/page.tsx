@@ -36,12 +36,13 @@ const faqs = [
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Primera Evaluación Fonoaudiológica Infantil | Qué Esperar",
+  title: "Qué esperar en la primera evaluación fonoaudiológica de tu hijo",
   description:
-    "Qué esperar de la primera evaluación fonoaudiológica infantil: cuánto dura, qué llevar, qué incluye el informe y cómo se decide el tratamiento.",
+    "Guía completa de la primera evaluación fonoaudiológica infantil: cuánto dura (60-90 min), qué llevar, cómo es la sesión, qué incluye el informe y qué pasa después en Chillán.",
   keywords: [
+    "qué esperar en la primera evaluación fonoaudiológica",
     "primera evaluación fonoaudiológica infantil",
-    "qué esperar evaluación fonoaudiológica",
+    "qué esperar evaluación fonoaudiológica de tu hijo",
     "qué llevar a evaluación del lenguaje",
     "informe fonoaudiológico niños",
   ],

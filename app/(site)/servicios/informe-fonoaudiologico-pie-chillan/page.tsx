@@ -20,19 +20,25 @@ const faqItems = [
     answer:
       "Para PIE y escuelas de lenguaje se requiere evaluación con test y diagnóstico fonoaudiológico. La ASHA estima que ~7% de niños en edad escolar presentan trastornos del lenguaje; documentarlo facilita acceso a apoyos. Fuente: https://www.asha.org/public/speech/disorders/language-disorders/",
   },
+  {
+    question: "¿El informe es válido para cualquier colegio en Chillán?",
+    answer:
+      "Sí. Los informes que elaboro cumplen con los requisitos del Decreto 170 del Ministerio de Educación y son aceptados por colegios con PIE en Chillán, San Carlos, Bulnes, Coihueco y toda la región de Ñuble.",
+  },
 ];
 
 export const metadata = buildPageMetadata({
   path: "/servicios/informe-fonoaudiologico-pie-chillan",
   title:
-    "Informe Fonoaudiológico PIE y Escuelas de Lenguaje — Chillán | Katia Domínguez",
+    "Informe Fonoaudiológico para PIE Chillán | Colegio Decreto 170",
   description:
-    "Informes fonoaudiológicos con test estandarizados (TEPROSIF-R, TECAL, STSG) para PIE y escuelas de lenguaje en Chillán. Decreto 170. Evaluación en 60 min + informe. Agenda por WhatsApp.",
+    "Informe fonoaudiológico para PIE y escuelas de lenguaje en Chillán. Test estandarizados (TEPROSIF-R, TECAL, STSG) válidos para colegio. Evaluación 60 min + informe Decreto 170. WhatsApp.",
   keywords: [
-    "informe fonoaudiológico PIE",
-    "informe fonoaudiológico escuela de lenguaje",
+    "informe fonoaudiológico para PIE",
+    "informe fonoaudiológico Chillán",
+    "informe fonoaudiologico PIE",
     "evaluación PIE Chillán",
-    "informe fonoaudiologico",
+    "informe para colegio",
     "decreto 170 informe",
     "fonoaudióloga PIE Chillán",
   ],

@@ -12,11 +12,12 @@ const WHATSAPP_LINK = whatsappUrl(
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Mi hijo de 2 años habla poco | Chillán",
+  title: "Mi hijo de 2 años habla poco: ¿es normal? | Chillán",
   description:
-    "Si tu hijo de 2 años habla poco, dice pocas palabras o no combina frases, revisa señales por edad y cuándo evaluar en Chillán.",
+    "¿Tu hijo de 2 años habla poco o dice pocas palabras? Señales por edad de vocabulario limitado, cuándo evaluar con fonoaudióloga en Chillán y qué hacer mientras tanto.",
   keywords: [
-    "hijo habla poco",
+    "mi hijo de 2 años habla poco",
+    "hijo habla poco para su edad",
     "vocabulario limitado niño",
     "fonoaudióloga Chillán",
     "retraso del lenguaje",
