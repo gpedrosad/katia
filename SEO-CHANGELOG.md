@@ -20,6 +20,207 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-10-09: SEO Lote 5 — Recursos hub, TEA comunicación, páginas de baja visibilidad y nuevo glosario
+
+### Contexto
+
+**Datos GSC (90 días 2026-07-11 al 2026-10-08):**
+- **82 clics totales**
+- **5.004 impresiones**
+- **CTR promedio: 1,6%**
+- Posición promedio: 8,0
+
+**Datos últimos 7 días (2026-10-02 al 10-08):** 2 clics / 521 imp / pos 8,1 vs 7 días previos (9-25 al 10-01): 9 clics / 589 imp / pos 8,2
+
+**Páginas congeladas (Lotes 1-4):** Home, pilar infantil, todos los recursos, agendar-hora, servicios principales, sobre-katia, todos los tratamientos previos (TEL, dislalia, trastorno fonológico, retraso del lenguaje, apraxia), glosario/tel/dislalia/dislexia, todos /chillan/* excepto tea-comunicacion, todos /sintomas/* excepto mi-hijo-no-comprende, todas /voz-online/*.
+
+**Problema detectado:** 
+1. `/recursos` (43 imp, pos 11.8, 1 click): hub sin schema CollectionPage ni intro optimizada para "guías/recursos fonoaudiología infantil padres".
+2. `/chillan/tea-comunicacion` (18 imp, pos 9, 0 clicks): query "katya dominguez" aterriza aquí; necesita diferenciación vs servicio general TEA, title/description para padres buscando "comunicación lenguaje niños TEA/autismo Chillán", FAQs específicas.
+3. **Páginas de baja visibilidad (1-7 imp cada una):** test-de-lenguaje, terapia-del-habla, evaluacion-del-lenguaje, conciencia-fonologica (servicios Chillán), retraso-del-habla (tratamiento), mi-hijo-no-comprende (síntoma) — algunas sin diferenciación clara vs páginas congeladas.
+4. **Queries logopeda:** "logopeda" (35 imp), "logopedia" (27), "logopeda infantil" (5) aterrizan en home con 0 clicks — necesitan página glosario explicando término España vs Chile.
+
+**Objetivo:** Sharpear hub recursos con schema, diferenciar TEA local, optimizar páginas de baja visibilidad con titles/descriptions únicos (o marcar consolidación si canibalizan), capturar queries "logopeda" con nuevo glosario.
+
+### Páginas optimizadas
+
+#### 1. `/recursos` — Hub recursos padres
+**Métricas GSC previas:** 43 imp, pos 11.8, 1 click
+
+**Cambios:**
+- **Title:** `"Guías lenguaje infantil | Recursos para padres Chillán"` → `"Recursos y Guías Fonoaudiología Infantil | Padres Chillán"`
+- **Description:** Expandida con "Guías prácticas de fonoaudiología infantil para padres en Chillán: hitos del lenguaje por edad, señales de alerta, estimulación en casa y preparación para la primera consulta. Todo gratuito."
+- **H1:** `"Recursos para padres"` → `"Recursos y guías para padres"`
+- **Intro:** Reescrita con "Guías prácticas de fonoaudiología infantil para padres en Chillán: cuándo preocuparse, cómo estimular en casa y qué esperar de la evaluación fonoaudiológica."
+- **Keywords:** Añadido "recursos fonoaudiología padres Chillán", "guías fonoaudiología infantil", "recursos padres fonoaudióloga"
+- **Schema:** Añadido `CollectionPage` JSON-LD con hasPart apuntando a cada guía (hitos, señales alerta, estimular en casa, primera evaluación)
+
+**Objetivo CTR:** > 3% en 21 días (hub debe convertir mejor con schema y descripción específica)
+
+---
+
+#### 2. `/chillan/tea-comunicacion` — Landing local TEA
+**Métricas GSC previas:** 18 imp, pos 9, 0 clicks (query "katya dominguez" aterriza aquí)
+
+**Cambios:**
+- **Title override:** `"TEA y autismo Chillán | Comunicación infantil"` → `"Comunicación y Lenguaje en Niños con TEA | Chillán"`
+- **Description override:** Mejorada "Comunicación y lenguaje en niños con TEA/autismo en Chillán: apoyo fonoaudiológico presencial para lenguaje funcional, pragmática y habilidades sociales. 40% tiene retraso significativo. Agenda WhatsApp."
+- **FAQs específicas:** Añadidas 3 preguntas al schema FAQPage: "¿Qué trabaja la fonoaudióloga con niños con TEA en Chillán?", "¿A qué edad conviene iniciar terapia fonoaudiológica en niños con TEA?", "¿El tratamiento es solo para niños con TEA que no hablan?"
+- **Glosario link:** Actualizado de `/glosario` genérico a `/glosario/tea` (definición específica)
+- **Objetivo:** Claramente diferenciado de `/servicios/tea-trastorno-espectro-autista` (local Chillán, práctico, señales + agendar vs servicio general nacional)
+
+**Objetivo CTR:** > 3% en 21 días (posición 9, diferenciación local + FAQs específicas deben capturar query)
+
+---
+
+#### 3. Páginas de baja visibilidad — Diferenciación y optimización
+
+##### `/servicios/test-de-lenguaje-infantil-chillan`
+**Métricas GSC previas:** < 7 imp
+
+**Cambios:**
+- **Title:** `"Test de Lenguaje para Niños en Chillán | Evaluación Formal"` → `"Test de Lenguaje Infantil en Chillán | TECAL, TEPROSIF-R, STSG"`
+- **Description:** Más específica con nombres de test "TEPROSIF-R fonología, TECAL comprensión, STSG gramática. Informe válido para PIE y escuelas de lenguaje."
+- **Keywords:** Añadido "test de lenguaje infantil Chillán", "TECAL Chillán", "TEPROSIF-R Chillán", "test lenguaje PIE", "informe fonoaudiológico PIE"
+- **Objetivo:** Intent claro = aplicación formal de test (diferente de evaluación general)
+
+**Decisión:** **Se mantiene independiente** — intent distinto (test formales TECAL/TEPROSIF vs evaluación fonoaudiológica integral).
+
+---
+
+##### `/servicios/evaluacion-del-lenguaje-infantil-chillan`
+**Métricas GSC previas:** < 7 imp
+
+**Cambios:**
+- **Title:** `"Evaluación de lenguaje infantil | Niño habla poco Chillán"` → `"Evaluación Lenguaje Infantil Chillán | Vocabulario y Comprensión"`
+- **Description:** Reforzada diferencia con evaluación fonoaudiológica integral: "Evaluación específica del lenguaje (no habla) en Chillán: vocabulario, comprensión, frases, morfosintaxis. Para niños que hablan poco, no arman frases o entienden menos. Con informe."
+- **Keywords:** Añadido "evaluación lenguaje expresivo comprensivo", "vocabulario niños Chillán", "niño habla poco evaluación"
+- **Objetivo:** Diferenciarse como evaluación **específica del lenguaje** (no habla/voz/deglución)
+
+**Decisión:** **Se mantiene independiente** — intent distinto vs `/servicios/evaluacion-fonoaudiologica` (general, incluye habla/voz/deglución). Cross-links claros entre ambas en contenido.
+
+---
+
+##### `/servicios/terapia-del-habla-infantil-chillan`
+**Métricas GSC previas:** < 7 imp
+
+**Cambios:**
+- **Title:** `"Terapia del Habla Infantil en Chillán | Fonoaudióloga Especialista"` → `"Terapia del Habla Infantil Chillán | Articulación y Pronunciación"`
+- **Description:** Clarificada diferencia habla vs lenguaje: "Terapia del habla (no lenguaje) en Chillán: articulación, pronunciación, claridad, fluidez. Tratamiento presencial de cómo produce los sonidos. Fonoaudióloga infantil."
+- **Keywords:** Añadido "terapia del habla infantil Chillán", "articulación niños Chillán", "pronunciación infantil", "claridad del habla", "terapia articulatoria"
+- **Objetivo:** Diferenciarse como terapia **del habla** (articulación, claridad) vs terapia de lenguaje (vocabulario, frases)
+
+**Decisión:** **Se mantiene independiente** — intent distinto vs `/servicios/trastornos-del-habla` (condiciones específicas vs proceso terapéutico).
+
+---
+
+##### `/servicios/conciencia-fonologica-chillan`
+**Métricas GSC previas:** < 7 imp
+
+**Cambios:**
+- **Title:** `"Conciencia Fonológica en Niños | Fonoaudióloga en Chillán"` → `"Conciencia Fonológica Niños Chillán | Base para Leer y Escribir"`
+- **Description:** Reforzada "Evaluación y estimulación de conciencia fonológica en Chillán: habilidad clave para lectoescritura exitosa. Rimas, sílabas, fonemas. Fonoaudióloga infantil presencial."
+- **Keywords:** Añadido "conciencia fonológica Chillán", "estimulación conciencia fonológica", "base lectoescritura", "rimas niños Chillán", "fonoaudióloga lectura"
+
+**Decisión:** **Se mantiene independiente** — intent único (pre-lectoescritura, habilidad fonológica específica).
+
+---
+
+##### `/tratamientos/retraso-del-habla-chillan`
+**Métricas GSC previas:** < 7 imp
+
+**Cambios:**
+- **Title:** `"Terapia Retraso del Habla en Niños | Chillán"` → `"Retraso del Habla Chillán | Niño no se le entiende al hablar"`
+- **Description:** Wording padres "Tratamiento retraso del habla en niños en Chillán: cuando habla poco, se le entiende mal o articula con dificultad. Evaluación y terapia presencial. Mejoramos claridad."
+- **Keywords:** Añadido "niño no se le entiende al hablar", "claridad del habla niños"
+
+**Decisión:** **Se mantiene independiente** — intent distinto vs `/tratamientos/retraso-del-lenguaje-chillan` (frozen). **Habla vs lenguaje son áreas diferentes:** habla = producción/articulación/claridad; lenguaje = vocabulario/frases/comprensión. No es canibalización.
+
+---
+
+##### `/sintomas/mi-hijo-no-comprende-chillan`
+**Métricas GSC previas:** < 7 imp
+
+**Cambios:**
+- **Title:** `"¿Mi hijo no comprende? | Señales Chillán"` → `"Mi hijo no comprende bien | Lenguaje comprensivo Chillán"`
+- **Description:** Diferenciada de instrucciones simples: "Si tu hijo no comprende preguntas, relatos o conversaciones para su edad (más allá de instrucciones simples), conoce señales de alerta. Consulta fonoaudióloga Chillán."
+- **Keywords:** Añadido "niño no entiende preguntas", "lenguaje comprensivo"
+- **Objetivo:** Intento leve de diferenciación vs `/sintomas/nino-no-entiende-instrucciones-chillan` (frozen) — esta página es comprensión general (preguntas, relatos); la congelada es instrucciones específicas
+
+**Decisión:** **Candidato a consolidación** — overlap significativo con `/sintomas/nino-no-entiende-instrucciones-chillan`. Gonzalo debe evaluar si vale la pena mantener ambas o consolidar en una sola página "comprensión/instrucciones". Diferenciac leve aplicada en copy para medir si captura query distinta ("no comprende" general vs "no entiende instrucciones" específica).
+
+---
+
+#### 4. `/glosario/logopeda` — Nuevo término (captura queries España)
+**Métricas GSC previas:** Queries existentes en home: "logopeda" (35 imp), "logopedia" (27), "logopeda infantil" (5), 0 clicks
+
+**Cambios:**
+- **Nueva página creada:** `/glosario/logopeda`
+- **Title:** `"¿Qué es Logopeda? | Logopedia vs Fonoaudiología"`
+- **Description:** `"Logopeda y logopedia son términos usados en España para lo que en Chile llamamos fonoaudiólogo y fonoaudiología. Misma profesión, nombres diferentes."`
+- **Keywords:** `"logopeda"`, `"logopedia"`, `"logopeda infantil"`, `"diferencia logopeda fonoaudiólogo"`, `"logopeda España Chile"`
+- **Contenido:** Definición breve explicando que logopeda = término España, fonoaudiólogo = término Chile/Latinoamérica. Misma formación, distinto nombre. Si estás en Chile buscas "fonoaudiólogo infantil Chillán".
+- **Links internos:** A `/fonoaudiologa-ninos-chillan` (pilar) y `/agendar-hora-fonoaudiologo-infantil-chillan` (CTA). Añadir links **desde** esta página hacia frozen está OK; no editamos las frozen para linkear a esta.
+- **Sitemap:** Ya incluido automáticamente vía `getGlosarioTermUrls()` en `app/sitemap.ts`
+
+**Objetivo CTR:** > 2% en 21 días (capturar queries "logopeda" que buscan información desde España/otros países y explicar nomenclatura Chile)
+
+---
+
+### Candidatos a consolidación (para Gonzalo)
+
+1. **`/sintomas/mi-hijo-no-comprende-chillan`** vs **`/sintomas/nino-no-entiende-instrucciones-chillan`** (frozen):
+   - Overlap significativo en intent: ambas sobre comprensión infantil.
+   - Diferenciación leve aplicada: "no comprende" = general (preguntas, relatos); "no entiende instrucciones" = específico (seguir órdenes).
+   - Evaluar post-Lote 5 si vale la pena dos páginas o consolidar en una sola.
+
+### Otras mejoras transversales
+
+1. **Schema CollectionPage en hub:** `/recursos` ahora tiene schema que lista las 4 guías como hasPart (mejor señal para Google sobre estructura de contenido).
+2. **FAQs específicas TEA:** Añadidas al schema existing de `/chillan/tea-comunicacion` (3 preguntas únicas sobre pragmática, intervención temprana, perfiles verbales/no verbales).
+3. **Diferenciación habla vs lenguaje reforzada:** En titles/descriptions de evaluacion-del-lenguaje, terapia-del-habla, retraso-del-habla clarificamos que lenguaje ≠ habla (vocabulario/frases vs articulación/sonidos).
+4. **Cross-links desde páginas nuevas:** logopeda glosario linkea a pilar y agendar; servicios Chillán ya tienen links a evaluacion general/terapias principales (no editamos frozen para linkear desde ellas).
+
+### Métricas a monitorear (GSC)
+
+**Periodo de medición:** 14-21 días post-indexación (desde 2026-10-09)
+
+**KPIs Lote 5:**
+1. **CTR general del sitio:** objetivo > 1,8% (baseline 1,6%)
+2. **CTR `/recursos`:** objetivo > 3% (baseline 1 click/43 imp ≈ 2,3% — mejorar con schema y descripción)
+3. **CTR `/chillan/tea-comunicacion`:** objetivo > 3% (baseline 0%, pos 9 — FAQs + diferenciación local deben activar)
+4. **CTR `/glosario/logopeda`:** objetivo > 2% (nueva, capturar 35+27+5 = 67 imp totales de queries "logopeda")
+5. **Impresiones páginas de baja visibilidad:** objetivo +50% sobre baseline < 7 imp (optimización de titles debe subir visibilidad)
+
+**URLs a seguir de cerca:**
+- `/recursos` (43 imp → esperado 1-2 clics con CTR 3%)
+- `/chillan/tea-comunicacion` (18 imp → esperado 1 clic con CTR 3%)
+- `/glosario/logopeda` (nueva, esperado capturar queries "logopeda*" con ~1-2 clics iniciales)
+- `/servicios/test-de-lenguaje-infantil-chillan` (< 7 imp → medir si sube con titles específicos de test TECAL/TEPROSIF)
+- `/tratamientos/retraso-del-habla-chillan` (< 7 imp → medir si captura queries "niño no se le entiende" diferenciado de retraso lenguaje)
+
+**Consolidación candidato a revisar:**
+- `/sintomas/mi-hijo-no-comprende-chillan` vs `/sintomas/nino-no-entiende-instrucciones-chillan`: revisar en 21 días si hay diferenciación de queries o si consolidan en una sola página.
+
+### Siguientes pasos
+
+1. **Post-deploy:**
+   - Solicitar indexación manual en GSC para 9 URLs optimizadas + 1 nueva (logopeda)
+   - Validar que los cambios de metadata se reflejan en SERPs (inspeccionar URL)
+   - Verificar schema CollectionPage de recursos en validador Google
+
+2. **Monitoreo:**
+   - Revisar GSC en 7 días (tendencia temprana de impresiones en páginas de baja visibilidad)
+   - Revisar GSC en 14-21 días (medición completa CTR + queries capturadas por logopeda)
+   - Evaluar candidato consolidación mi-hijo-no-comprende vs nino-no-entiende-instrucciones
+
+3. **Ideas Lote 6 (futuras, post-21d):**
+   - Si páginas baja visibilidad no suben: considerar noindex o redirect a página principal similar (si confirma canibalización post-data).
+   - Si `/glosario/logopeda` captura bien queries "logopeda*": considerar otros términos internacionales (ej. "speech therapist" redirigido a pilar con anchor en idioma).
+   - Revisar otras páginas `/servicios/*-chillan` no tocadas en Lotes 1-5 con > 10 imp sin clics.
+
+---
+
 ## 2026-10-08: SEO Lote 4 — Dislalia, tartamudez, lectoescritura, apraxia, síntomas e informe PIE
 
 ### Contexto

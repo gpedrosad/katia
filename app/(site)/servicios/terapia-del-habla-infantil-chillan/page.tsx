@@ -5,9 +5,16 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/servicios/terapia-del-habla-infantil-chillan",
-  title: "Terapia del Habla Infantil en Chillán | Fonoaudióloga Especialista",
+  title: "Terapia del Habla Infantil Chillán | Articulación y Pronunciación",
   description:
-    "Terapia del habla para niños en Chillán. Tratamiento presencial de problemas articulatorios, fluidez y pronunciación con fonoaudióloga pediátrica.",
+    "Terapia del habla (no lenguaje) en Chillán: articulación, pronunciación, claridad, fluidez. Tratamiento presencial de cómo produce los sonidos. Fonoaudióloga infantil.",
+  keywords: [
+    "terapia del habla infantil Chillán",
+    "articulación niños Chillán",
+    "pronunciación infantil",
+    "claridad del habla",
+    "terapia articulatoria",
+  ],
 });
 
 export default function TerapiaHablaInfantilPage() {

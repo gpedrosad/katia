@@ -6,15 +6,16 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/recursos",
-  title: "Guías lenguaje infantil | Recursos para padres Chillán",
+  title: "Recursos y Guías Fonoaudiología Infantil | Padres Chillán",
   description:
-    "Señales de alerta, hitos del lenguaje y estimulación en casa. Recursos gratuitos de fonoaudióloga infantil en Chillán. Evalúa cuándo consultar.",
+    "Guías prácticas de fonoaudiología infantil para padres en Chillán: hitos del lenguaje por edad, señales de alerta, estimulación en casa y preparación para la primera consulta. Todo gratuito.",
   keywords: [
-    "recursos fonoaudiología padres",
+    "recursos fonoaudiología padres Chillán",
+    "guías fonoaudiología infantil",
     "guías desarrollo lenguaje",
     "señales alerta habla niños",
     "ejercicios lenguaje casa",
-    "estimular lenguaje niños",
+    "recursos padres fonoaudióloga",
   ],
 });
 
@@ -83,12 +84,32 @@ const faqJsonLd = {
   })),
 };
 
+const collectionJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://www.katialafono.cl/recursos#collection",
+  name: "Recursos y guías para padres",
+  description: "Guías prácticas de fonoaudiología infantil para padres en Chillán.",
+  url: "https://www.katialafono.cl/recursos",
+  hasPart: guides.map((g) => ({
+    "@type": "WebPage",
+    "@id": `https://www.katialafono.cl${g.href}`,
+    name: g.title,
+    description: g.description,
+    url: `https://www.katialafono.cl${g.href}`,
+  })),
+};
+
 export default function RecursosPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
       />
       <Header />
       <main className="min-h-screen bg-gradient-to-b from-rose-50 to-white">
@@ -99,11 +120,10 @@ export default function RecursosPage() {
             />
             <div className="mb-12 text-center">
               <h1 className="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl">
-                Recursos para padres
+                Recursos y guías para padres
               </h1>
               <p className="mx-auto max-w-2xl text-lg text-gray-600">
-                Información práctica para entender y apoyar el desarrollo del
-                lenguaje y habla de tu hijo.
+                Guías prácticas de fonoaudiología infantil para padres en Chillán: cuándo preocuparse, cómo estimular en casa y qué esperar de la evaluación fonoaudiológica.
               </p>
             </div>
 

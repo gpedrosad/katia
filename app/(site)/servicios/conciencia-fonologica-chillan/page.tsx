@@ -24,9 +24,16 @@ const faqItems = [
 
 export const metadata = buildPageMetadata({
   path: "/servicios/conciencia-fonologica-chillan",
-  title: "Conciencia Fonológica en Niños | Fonoaudióloga en Chillán",
+  title: "Conciencia Fonológica Niños Chillán | Base para Leer y Escribir",
   description:
-    "Evaluación y estimulación de conciencia fonológica para niños en Chillán. Base fundamental para una lectoescritura exitosa. Fonoaudióloga pediátrica.",
+    "Evaluación y estimulación de conciencia fonológica en Chillán: habilidad clave para lectoescritura exitosa. Rimas, sílabas, fonemas. Fonoaudióloga infantil presencial.",
+  keywords: [
+    "conciencia fonológica Chillán",
+    "estimulación conciencia fonológica",
+    "base lectoescritura",
+    "rimas niños Chillán",
+    "fonoaudióloga lectura",
+  ],
 });
 
 export default function ConcienciaFonologicaPage() {

@@ -12,15 +12,15 @@ const WHATSAPP_LINK = whatsappUrl(
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Terapia Retraso del Habla en Niños | Chillán",
+  title: "Retraso del Habla Chillán | Niño no se le entiende al hablar",
   description:
-    "Tratamiento fonoaudiológico del retraso del habla infantil en Chillán. Mejoramos articulación, claridad y confianza al hablar. Evaluación y terapia presencial.",
+    "Tratamiento retraso del habla en niños en Chillán: cuando habla poco, se le entiende mal o articula con dificultad. Evaluación y terapia presencial. Mejoramos claridad.",
   keywords: [
-    "retraso del habla niños",
-    "terapia del habla Chillán",
-    "niño no pronuncia bien",
-    "fonoaudióloga infantil",
-    "articulación infantil",
+    "retraso del habla niños Chillán",
+    "niño no se le entiende al hablar",
+    "articulación infantil Chillán",
+    "terapia del habla",
+    "claridad del habla niños",
   ],
 });
 

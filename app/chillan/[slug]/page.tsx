@@ -15,7 +15,7 @@ const DESCRIPTION_SUFFIX =
 const DESCRIPTION_OVERRIDES: Record<string, string> = {
   tel: "Dificultad para comprender, expresarse o armar frases puede ser TEL/TDL. Evaluación fonoaudiológica infantil en Chillán con orientación escolar. WhatsApp.",
   "tea-comunicacion":
-    "Apoyo fonoaudiológico para niños con TEA: lenguaje, comunicación funcional y habilidades sociales. Evaluación presencial en Chillán. Escribe por WhatsApp.",
+    "Comunicación y lenguaje en niños con TEA/autismo en Chillán: apoyo fonoaudiológico presencial para lenguaje funcional, pragmática y habilidades sociales. 40% tiene retraso significativo. Agenda WhatsApp.",
   "apraxia-del-habla":
     "Errores inconsistentes al hablar y esfuerzo visible: puede ser apraxia. Evaluación especializada en Chillán con plan claro. Agenda por WhatsApp.",
   dislalia:
@@ -28,7 +28,7 @@ const DESCRIPTION_OVERRIDES: Record<string, string> = {
 
 const TITLE_OVERRIDES: Record<string, string> = {
   tel: "TEL en niños Chillán | ¿Habla poco o no se entiende?",
-  "tea-comunicacion": "TEA y autismo Chillán | Comunicación infantil",
+  "tea-comunicacion": "Comunicación y Lenguaje en Niños con TEA | Chillán",
   "apraxia-del-habla":
     "Apraxia del Habla Infantil Chillán | Eval. Especializada",
   dislalia: "Dislalia en Chillán | Señales y cuándo consultar",
@@ -171,35 +171,64 @@ export default async function PatologiaChillanPage({
     speakable: true,
   });
 
+  const baseFaqs = [
+    {
+      "@type": "Question" as const,
+      name: `¿Qué es ${patologiaLabel}?`,
+      acceptedAnswer: {
+        "@type": "Answer" as const,
+        text: `${p.descripcion}${statSnippet(slug)}`,
+      },
+    },
+    {
+      "@type": "Question" as const,
+      name: "¿Dónde se atiende en Chillán?",
+      acceptedAnswer: {
+        "@type": "Answer" as const,
+        text: "Atención presencial en Chillán. La evaluación dura aproximadamente 60 minutos e incluye informe con diagnóstico y plan de tratamiento. Se agenda por WhatsApp al +56995497838.",
+      },
+    },
+    {
+      "@type": "Question" as const,
+      name: "¿Cuándo llevar al fonoaudiólogo en Chillán?",
+      acceptedAnswer: {
+        "@type": "Answer" as const,
+        text: `Consulta si tu hijo presenta señales persistentes para su edad relacionadas con ${patologiaLabel.toLowerCase()}. Revisa definición y causas en el glosario (${SITE_URL}${p.glosarioHref}) o agenda evaluación presencial en Chillán (${SITE_URL}/agendar-hora-fonoaudiologo-infantil-chillan).`,
+      },
+    },
+  ];
+
+  const teaSpecificFaqs = slug === "tea-comunicacion" ? [
+    {
+      "@type": "Question" as const,
+      name: "¿Qué trabaja la fonoaudióloga con niños con TEA en Chillán?",
+      acceptedAnswer: {
+        "@type": "Answer" as const,
+        text: "Trabajamos comunicación funcional (pedir, comentar, rechazar), lenguaje expresivo y comprensivo, pragmática (uso social del lenguaje) y, cuando corresponde, sistemas aumentativos o alternativos de comunicación.",
+      },
+    },
+    {
+      "@type": "Question" as const,
+      name: "¿A qué edad conviene iniciar terapia fonoaudiológica en niños con TEA?",
+      acceptedAnswer: {
+        "@type": "Answer" as const,
+        text: "Cuanto antes, mejor. La intervención temprana favorece el desarrollo de la comunicación, reduce la frustración familiar y del niño, y mejora las habilidades sociales a futuro.",
+      },
+    },
+    {
+      "@type": "Question" as const,
+      name: "¿El tratamiento es solo para niños con TEA que no hablan?",
+      acceptedAnswer: {
+        "@type": "Answer" as const,
+        text: "No. Algunos niños con TEA hablan bien pero tienen dificultades pragmáticas (uso social del lenguaje, turnos conversacionales, lenguaje literal). La fonoaudióloga trabaja ambos perfiles: quienes tienen poco lenguaje verbal y quienes necesitan mejorar el uso funcional del lenguaje.",
+      },
+    },
+  ] : [];
+
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: `¿Qué es ${patologiaLabel}?`,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `${p.descripcion}${statSnippet(slug)}`,
-        },
-      },
-      {
-        "@type": "Question",
-        name: "¿Dónde se atiende en Chillán?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Atención presencial en Chillán. La evaluación dura aproximadamente 60 minutos e incluye informe con diagnóstico y plan de tratamiento. Se agenda por WhatsApp al +56995497838.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "¿Cuándo llevar al fonoaudiólogo en Chillán?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `Consulta si tu hijo presenta señales persistentes para su edad relacionadas con ${patologiaLabel.toLowerCase()}. Revisa definición y causas en el glosario (${SITE_URL}${p.glosarioHref}) o agenda evaluación presencial en Chillán (${SITE_URL}/agendar-hora-fonoaudiologo-infantil-chillan).`,
-        },
-      },
-    ],
+    mainEntity: [...baseFaqs, ...teaSpecificFaqs],
   };
 
   return (

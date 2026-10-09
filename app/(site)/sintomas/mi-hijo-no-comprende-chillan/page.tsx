@@ -10,10 +10,10 @@ const WHATSAPP_LINK = whatsappUrl("Hola, me preocupa que mi hijo no comprende bi
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "¿Mi hijo no comprende? | Señales Chillán",
+  title: "Mi hijo no comprende bien | Lenguaje comprensivo Chillán",
   description:
-    "Si tu hijo no comprende instrucciones o preguntas para su edad, conoce señales de alerta y cuándo consultar fonoaudióloga en Chillán.",
-  keywords: ["mi hijo no comprende chillan", "niño no entiende instrucciones", "comprensión lenguaje infantil", "fonoaudióloga Chillán"],
+    "Si tu hijo no comprende preguntas, relatos o conversaciones para su edad (más allá de instrucciones simples), conoce señales de alerta. Consulta fonoaudióloga Chillán.",
+  keywords: ["mi hijo no comprende Chillán", "comprensión lenguaje infantil", "niño no entiende preguntas", "lenguaje comprensivo", "fonoaudióloga Chillán"],
 });
 
 const signalsByAge = [

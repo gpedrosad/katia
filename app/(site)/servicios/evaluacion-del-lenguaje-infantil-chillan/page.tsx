@@ -12,14 +12,15 @@ const WHATSAPP_LINK = whatsappUrl(WHATSAPP_MESSAGE);
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Evaluación de lenguaje infantil | Niño habla poco Chillán",
+  title: "Evaluación Lenguaje Infantil Chillán | Vocabulario y Comprensión",
   description:
-    "Evaluación del lenguaje infantil en Chillán para niños que hablan poco, no arman frases o no comprenden bien. Incluye informe y orientación.",
+    "Evaluación específica del lenguaje (no habla) en Chillán: vocabulario, comprensión, frases, morfosintaxis. Para niños que hablan poco, no arman frases o entienden menos. Con informe.",
   keywords: [
     "evaluación del lenguaje infantil Chillán",
-    "evaluación del lenguaje niños Chillán",
-    "habla poco evaluación",
+    "evaluación lenguaje expresivo comprensivo",
+    "vocabulario niños Chillán",
     "comprensión lenguaje niños",
+    "niño habla poco evaluación",
   ],
 });
 

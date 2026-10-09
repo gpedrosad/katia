@@ -24,9 +24,16 @@ const faqItems = [
 
 export const metadata = buildPageMetadata({
   path: "/servicios/test-de-lenguaje-infantil-chillan",
-  title: "Test de Lenguaje para Niños en Chillán | Evaluación Formal",
+  title: "Test de Lenguaje Infantil en Chillán | TECAL, TEPROSIF-R, STSG",
   description:
-    "Aplicación de test de lenguaje formales e informales en Chillán (TEPROSIF-R, TECAL, STSG). Evaluaciones requisito para escuelas de lenguaje.",
+    "Aplicación de test formales de lenguaje para niños en Chillán (TEPROSIF-R fonología, TECAL comprensión, STSG gramática). Informe válido para PIE y escuelas de lenguaje.",
+  keywords: [
+    "test de lenguaje infantil Chillán",
+    "TECAL Chillán",
+    "TEPROSIF-R Chillán",
+    "test lenguaje PIE",
+    "informe fonoaudiológico PIE",
+  ],
 });
 
 export default function TestLenguajePage() {

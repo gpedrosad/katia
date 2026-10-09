@@ -727,6 +727,61 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
       "https://www.asha.org/public/speech/disorders/articulation-and-phonology/",
     sourceLabel: "ASHA — Articulation and Phonology",
   },
+  {
+    slug: "logopeda",
+    term: "Logopeda / Logopedia",
+    shortDescription:
+      "Término usado principalmente en España para fonoaudiólogo/fonoaudiología.",
+    category: "Terminología",
+    metaTitle: "¿Qué es Logopeda? | Logopedia vs Fonoaudiología",
+    metaDescription:
+      "Logopeda y logopedia son términos usados en España para lo que en Chile llamamos fonoaudiólogo y fonoaudiología. Misma profesión, nombres diferentes.",
+    keywords: [
+      "logopeda",
+      "logopedia",
+      "logopeda infantil",
+      "diferencia logopeda fonoaudiólogo",
+      "logopeda España Chile",
+    ],
+    headline: "¿Qué es un logopeda?",
+    subtitle:
+      "Logopeda es el término que se usa principalmente en España para referirse a lo que en Chile llamamos fonoaudiólogo.",
+    definitionParagraphs: [
+      "Logopeda (o logopedia, como disciplina) es el nombre que se utiliza en España y algunos otros países de Europa para la profesión que en Chile, Argentina y la mayoría de países de Latinoamérica se conoce como fonoaudiólogo o fonoaudiología.",
+      "Es la misma profesión: un logopeda y un fonoaudiólogo trabajan la comunicación, el lenguaje, el habla, la voz y la deglución. La diferencia es solo de terminología regional, no de formación ni de práctica clínica.",
+    ],
+    commonSigns: [
+      "Logopeda = término en España",
+      "Fonoaudiólogo/a = término en Chile, Argentina, Uruguay, Colombia",
+      "Speech-Language Pathologist (SLP) = término en inglés (EE.UU., Canadá)",
+      "Misma formación universitaria, distinto nombre según el país",
+    ],
+    whenToConsult: [
+      "Si buscas atención en Chile, pregunta por «fonoaudiólogo infantil» o «fonoaudióloga»",
+      "Si buscas información en internet y encuentras contenido sobre «logopedia», es aplicable también a fonoaudiología",
+      "Si estás en Chillán y tu hijo necesita apoyo con lenguaje o habla, consulta a una fonoaudióloga especialista en niños",
+    ],
+    faqs: [
+      {
+        question: "¿Logopeda y fonoaudiólogo es lo mismo?",
+        answer:
+          "Sí, es la misma profesión. Logopeda es el término usado en España; fonoaudiólogo es el término usado en Chile y la mayoría de Latinoamérica.",
+      },
+      {
+        question: "¿En Chile se dice logopeda o fonoaudiólogo?",
+        answer:
+          "En Chile se dice fonoaudiólogo o fonoaudióloga. El término logopeda no se usa comúnmente en el país.",
+      },
+      {
+        question: "¿Qué hace un logopeda/fonoaudiólogo infantil?",
+        answer:
+          "Evalúa y trata dificultades de comunicación, lenguaje, habla, pronunciación, lectoescritura y voz en niños. Trabaja con retraso del lenguaje, TEL, dislalia, tartamudez, dificultades de lectura y más.",
+      },
+    ],
+    relatedSlugs: ["tel", "dislalia", "retraso-del-lenguaje"],
+    servicioHref: "/fonoaudiologa-ninos-chillan",
+    whatsappText: "Hola, quiero consultar por fonoaudiología infantil en Chillán",
+  },
 ];
 
 export const GLOSARIO_CATEGORIES = [

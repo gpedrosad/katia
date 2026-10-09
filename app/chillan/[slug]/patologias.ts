@@ -145,7 +145,7 @@ export const PATOLOGIAS = [
       "Dificultad para seguir turnos de conversación",
     ],
     servicioHref: "/servicios/tea-trastorno-espectro-autista",
-    glosarioHref: "/glosario",
+    glosarioHref: "/glosario/tea",
     whatsappText: "Hola, quiero consultar por TEA y comunicación",
   },
   {
