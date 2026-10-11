@@ -8,14 +8,15 @@ const PAGE_PATH = "/comparaciones/dislalia-vs-trastorno-fonologico";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Dislalia vs Trastorno Fonológico | Diferencias y Cuándo Consultar",
+  title: "Diferencia entre Dislalia y Trastorno Fonológico | Tabla Comparativa",
   description:
-    "Comparación clínica entre dislalia y trastorno fonológico: definición, tabla de diferencias, señales de alarma y cuándo llevar al niño al fonoaudiólogo en Chillán.",
+    "¿Cuál es la diferencia entre dislalia y trastorno fonológico? Tabla comparativa, ejemplos, señales por edad y cuándo consultar fonoaudióloga en Chillán.",
   keywords: [
+    "diferencia entre dislalia y trastorno fonológico",
     "dislalia vs trastorno fonológico",
     "diferencia dislalia trastorno fonológico",
+    "comparación dislalia trastorno fonológico",
     "problemas de pronunciación niños",
-    "trastorno fonológico niños",
   ],
   ogType: "article",
 });

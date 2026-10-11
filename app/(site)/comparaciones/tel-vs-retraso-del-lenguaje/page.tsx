@@ -8,14 +8,15 @@ const PAGE_PATH = "/comparaciones/tel-vs-retraso-del-lenguaje";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "TEL vs Retraso del Lenguaje | Diferencias y Cuándo Consultar",
+  title: "Diferencia entre TEL y Retraso del Lenguaje | ¿Es transitorio o persistente?",
   description:
-    "Comparación entre TEL (trastorno del desarrollo del lenguaje) y retraso del lenguaje: tabla de diferencias, señales de alarma y cuándo evaluar a tu hijo en Chillán.",
+    "¿Cuál es la diferencia entre TEL y retraso del lenguaje? Tabla comparativa, evolución, prevalencia y cuándo evaluar con fonoaudióloga en Chillán.",
   keywords: [
+    "diferencia entre TEL y retraso del lenguaje",
     "TEL vs retraso del lenguaje",
-    "diferencia TEL retraso lenguaje",
-    "trastorno específico del lenguaje niños",
-    "retraso del lenguaje infantil",
+    "TEL TDL diferencia retraso",
+    "trastorno específico del lenguaje vs retraso",
+    "cuándo TEL cuándo retraso lenguaje",
   ],
   ogType: "article",
 });

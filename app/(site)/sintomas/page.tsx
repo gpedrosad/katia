@@ -6,9 +6,16 @@ const PAGE_PATH = "/sintomas";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Síntomas frecuentes en niños | Fonoaudiología Chillán",
+  title: "Síntomas Frecuentes en Niños | Mi hijo no habla bien, pronuncia mal...",
   description:
-    "Guías por síntoma: hijo que habla poco, pronuncia mal, no arma frases, tartamudez y más. Orientación y cuándo agendar evaluación en Chillán.",
+    "Guías por síntoma: hijo habla poco, pronuncia mal, no arma frases, no entiende instrucciones, tartamudea. Señales, causas y cuándo evaluar en Chillán.",
+  keywords: [
+    "síntomas lenguaje niños",
+    "mi hijo no habla bien",
+    "niño pronuncia mal",
+    "hijo no arma frases",
+    "síntomas habla infantil",
+  ],
 });
 
 const sintomas = [

@@ -12,13 +12,14 @@ const WHATSAPP_LINK = whatsappUrl(WHATSAPP_MESSAGE);
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Evaluación Fonoaudiológica Infantil en Chillán | Lenguaje y Habla",
+  title: "Evaluación Fonoaudiológica Infantil Chillán | Lenguaje, Habla, Lectura",
   description:
-    "Evaluación fonoaudiológica infantil en Chillán para niños con dificultad en lenguaje, habla o lectoescritura. Incluye informe y recomendaciones.",
+    "Evaluación fonoaudiológica completa en Chillán: lenguaje (vocabulario, frases, comprensión), habla (articulación), fluidez, lectoescritura. Con informe para colegio/PIE.",
   keywords: [
     "evaluación fonoaudiológica infantil Chillán",
-    "evaluación del lenguaje niños Chillán",
-    "evaluación del habla infantil",
+    "evaluación lenguaje habla niños",
+    "evaluación completa lenguaje Chillán",
+    "informe fonoaudiológico PIE",
     "fonoaudióloga evaluación Chillán",
   ],
 });

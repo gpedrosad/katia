@@ -12,14 +12,15 @@ const WHATSAPP_LINK = whatsappUrl(WHATSAPP_MESSAGE);
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Evaluación del Habla Infantil en Chillán | Pronunciación",
+  title: "Evaluación del Habla Infantil Chillán | Articulación y Pronunciación",
   description:
-    "Evaluación del habla infantil en Chillán para niños con dificultad para pronunciar, hablar claro o hacerse entender. Incluye informe y orientación.",
+    "Evaluación específica del habla en Chillán: articulación, fonología, inteligibilidad, fluidez. Para niños con dislalia, trastorno fonológico o habla poco clara. Con informe.",
   keywords: [
     "evaluación del habla infantil Chillán",
+    "evaluación articulación niños",
     "evaluación pronunciación niños",
     "niño pronuncia mal evaluación",
-    "fonoaudióloga habla Chillán",
+    "evaluación fonología Chillán",
   ],
 });
 

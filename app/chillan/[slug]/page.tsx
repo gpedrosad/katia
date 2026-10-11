@@ -24,6 +24,10 @@ const DESCRIPTION_OVERRIDES: Record<string, string> = {
     "La dislexia tiene base en lenguaje oral (conciencia fonológica). Evaluación fonoaudiológica en Chillán para dificultades de lectura y bases del lenguaje. Agenda por WhatsApp.",
   lectoescritura:
     "Problemas de lectura o escritura suelen tener base en lenguaje oral. Evaluación y tratamiento fonoaudiológico en Chillán para conciencia fonológica y lectoescritura. WhatsApp.",
+  "retraso-del-habla":
+    "Habla poco o se le entiende mal para su edad: señales de retraso del habla en Chillán. Evaluación fonoaudiológica, articulación y claridad. Agenda por WhatsApp.",
+  "trastorno-fonologico":
+    "Patrones de error en varios sonidos (omite, sustituye, simplifica): trastorno fonológico. Evaluación especializada en Chillán. Postítulo fonología. WhatsApp.",
 };
 
 const TITLE_OVERRIDES: Record<string, string> = {
@@ -34,6 +38,8 @@ const TITLE_OVERRIDES: Record<string, string> = {
   dislalia: "Dislalia en Chillán | Señales y cuándo consultar",
   dislexia: "Dislexia y Fonoaudiología Chillán | Evaluación Lectura",
   lectoescritura: "Dificultades de Lectoescritura Chillán | Base Lenguaje",
+  "retraso-del-habla": "Retraso del Habla Chillán | Niño habla poco o no se le entiende",
+  "trastorno-fonologico": "Trastorno Fonológico Chillán | Patrones de error en sonidos",
 };
 
 const KEYWORD_OVERRIDES: Record<string, string[]> = {
@@ -50,6 +56,20 @@ const KEYWORD_OVERRIDES: Record<string, string[]> = {
     "comunicación infantil TEA",
     "autismo comunicación niños",
     "fonoaudióloga autismo Chillán",
+  ],
+  "retraso-del-habla": [
+    "retraso del habla Chillán",
+    "niño habla poco edad",
+    "habla tardía Chillán",
+    "no se le entiende al hablar",
+    "claridad del habla niños",
+  ],
+  "trastorno-fonologico": [
+    "trastorno fonológico Chillán",
+    "patrones fonológicos",
+    "errores fonológicos niños",
+    "fonoaudióloga trastorno fonológico",
+    "postítulo fonología",
   ],
 };
 

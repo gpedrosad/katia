@@ -7,9 +7,17 @@ const PAGE_PATH = "/chillan";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Patologías del lenguaje y habla en Chillán",
+  title: "Tratamiento por Patología en Chillán | Fonoaudiología Infantil",
   description:
-    "Tratamiento fonoaudiológico en Chillán por patología: dislalia, TEL, retraso del lenguaje, dislexia, tartamudez, TEA y más. Evaluación y terapia presencial.",
+    "Tratamiento fonoaudiológico en Chillán por patología: dislalia, TEL/TDL, retraso lenguaje/habla, trastorno fonológico, apraxia, dislexia, tartamudez, TEA. Presencial +20 años.",
+  keywords: [
+    "tratamiento dislalia Chillán",
+    "TEL Chillán",
+    "retraso del lenguaje Chillán",
+    "trastorno fonológico Chillán",
+    "apraxia Chillán",
+    "fonoaudióloga patologías infantiles",
+  ],
 });
 
 export default function ChillanPatologiasHubPage() {

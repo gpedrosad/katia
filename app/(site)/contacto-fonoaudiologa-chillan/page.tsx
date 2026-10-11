@@ -23,14 +23,15 @@ const WHATSAPP_LINK = whatsappUrl(
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Contacto Fonoaudióloga en Chillán | Agenda por WhatsApp",
+  title: "Contacto Fonoaudióloga Infantil Chillán | WhatsApp y Horarios",
   description:
-    "Contacto y agenda con fonoaudióloga infantil en Chillán. Horarios, ubicación, qué llevar a la consulta y cómo reservar evaluación.",
+    "Contacto fonoaudióloga infantil en Chillán: WhatsApp 9 9549 7838, horario lunes-viernes 10:00-18:00. Cómo agendar evaluación, qué llevar, ubicación presencial Ñuble.",
   keywords: [
     "contacto fonoaudióloga Chillán",
     "agendar fonoaudiólogo infantil Chillán",
-    "hora fonoaudiólogo infantil Chillán",
-    "consulta fonoaudiología Chillán",
+    "WhatsApp fonoaudióloga Chillán",
+    "horario fonoaudióloga infantil",
+    "fonoaudióloga presencial Chillán",
   ],
 });
 

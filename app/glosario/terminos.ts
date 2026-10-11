@@ -213,14 +213,15 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     shortDescription:
       "Patrones sistemáticos de errores en los sonidos del habla.",
     category: "Trastornos del habla",
-    metaTitle: "¿Qué es el Trastorno Fonológico? | Definición y Tratamiento",
+    metaTitle: "¿Qué es el Trastorno Fonológico? | Patrones de error del habla",
     metaDescription:
-      "Qué es el trastorno fonológico: patrones de errores en los sonidos del habla, señales de alerta y cuándo consultar a un fonoaudiólogo.",
+      "Definición de trastorno fonológico: patrones sistemáticos de errores en sonidos (omisiones, sustituciones). Señales, diferencia con dislalia y cuándo evaluar.",
     keywords: [
-      "trastorno fonológico",
       "qué es trastorno fonológico",
+      "trastorno fonológico definición",
       "errores fonológicos niños",
-      "fonología infantil",
+      "diferencia trastorno fonológico y dislalia",
+      "patrones fonológicos",
     ],
     headline: "¿Qué es el trastorno fonológico?",
     subtitle:
@@ -271,14 +272,16 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     shortDescription:
       "Desarrollo del lenguaje más lento de lo esperado para la edad.",
     category: "Trastornos del lenguaje",
-    metaTitle: "¿Qué es el Retraso del Lenguaje? | Señales y Cuándo Consultar",
+    metaTitle: "¿Qué es el Retraso del Lenguaje? | Definición, señales y hitos",
     metaDescription:
-      "Qué es el retraso del lenguaje en niños: definición, señales de alerta, diferencia con el TEL y cuándo acudir a fonoaudiología.",
+      "Definición de retraso del lenguaje: desarrollo más lento (vocabulario, frases, comprensión). Señales por edad, diferencia con TEL, cuándo es transitorio.",
     keywords: [
-      "retraso del lenguaje",
+      "qué es retraso del lenguaje",
+      "retraso del lenguaje definición",
       "niño habla poco",
-      "desarrollo del lenguaje",
+      "desarrollo del lenguaje lento",
       "hitos del lenguaje",
+      "diferencia retraso lenguaje y TEL",
     ],
     headline: "¿Qué es el retraso del lenguaje?",
     subtitle:
@@ -329,14 +332,16 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     shortDescription:
       "Habilidad para identificar y manipular los sonidos del lenguaje.",
     category: "Habilidades",
-    metaTitle: "¿Qué es la Conciencia Fonológica? | Base para Leer y Escribir",
+    metaTitle: "¿Qué es la Conciencia Fonológica? | Rimas, sílabas y fonemas",
     metaDescription:
-      "Qué es la conciencia fonológica, por qué es clave para la lectura, señales de dificultad y cuándo evaluarla en niños.",
+      "Definición de conciencia fonológica: habilidad para reconocer sonidos (rimas, sílabas, fonemas) sin leer. Base de lectoescritura, cómo evaluarla y estimularla.",
     keywords: [
-      "conciencia fonológica",
+      "qué es conciencia fonológica",
+      "conciencia fonológica definición",
       "rimas niños",
       "base lectoescritura",
       "sonidos del lenguaje",
+      "pre-lectura fonología",
     ],
     headline: "¿Qué es la conciencia fonológica?",
     subtitle:
@@ -387,14 +392,16 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     shortDescription:
       "Otro nombre histórico para el Trastorno Específico del Lenguaje (TEL).",
     category: "Trastornos del lenguaje",
-    metaTitle: "¿Qué es la Disfasia? | Relación con el TEL y el TDL",
+    metaTitle: "¿Qué es la Disfasia? | Término antiguo para TEL/TDL",
     metaDescription:
-      "Qué es la disfasia, su relación con el TEL/TDL, síntomas y cuándo consultar a un fonoaudiólogo infantil.",
+      "Definición de disfasia: nombre tradicional del TEL/TDL (trastorno del lenguaje sin causa aparente). Relación con TEL, síntomas y tratamiento.",
     keywords: [
       "qué es disfasia",
+      "disfasia definición",
       "disfasia infantil",
       "disfasia y TEL",
-      "trastorno del lenguaje",
+      "disfasia es TEL",
+      "diferencia disfasia TEL",
     ],
     headline: "¿Qué es la disfasia?",
     subtitle:
@@ -445,14 +452,16 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     shortDescription:
       "Dificultad para hablar por debilidad de los músculos del habla.",
     category: "Trastornos del habla",
-    metaTitle: "¿Qué es la Disartria? | Causas y Tratamiento del Habla",
+    metaTitle: "¿Qué es la Disartria? | Alteración neuromuscular del habla",
     metaDescription:
-      "Qué es la disartria: habla poco clara por alteración neuromuscular. Señales, causas y rol de la fonoaudiología.",
+      "Definición de disartria: habla poco clara por alteración de músculos (labios, lengua, mandíbula). Diferencia con dislalia, señales y tratamiento.",
     keywords: [
       "qué es disartria",
+      "disartria definición",
       "disartria infantil",
       "habla poco clara",
       "músculos del habla",
+      "diferencia disartria dislalia",
     ],
     headline: "¿Qué es la disartria?",
     subtitle:
@@ -501,14 +510,16 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     shortDescription:
       "Dificultad para planificar los movimientos necesarios para hablar.",
     category: "Trastornos del habla",
-    metaTitle: "¿Qué es la Apraxia del Habla Infantil? | Síntomas y Tratamiento",
+    metaTitle: "¿Qué es la Apraxia del Habla Infantil? | AHS Definición",
     metaDescription:
-      "Qué es la apraxia del habla infantil (AHS): errores inconsistentes, señales de alerta y tratamiento fonoaudiológico.",
+      "Definición de apraxia del habla infantil (AHS): dificultad para programar movimientos del habla, errores inconsistentes. Señales, diagnóstico y tratamiento.",
     keywords: [
-      "apraxia del habla infantil",
-      "AHS",
+      "qué es apraxia del habla infantil",
+      "apraxia del habla definición",
+      "AHS definición",
       "errores inconsistentes habla",
       "planificación motora del habla",
+      "apraxia infantil",
     ],
     headline: "¿Qué es la apraxia del habla?",
     subtitle:
@@ -559,11 +570,13 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     shortDescription:
       "Alteración de la fluidez del habla con repeticiones o bloqueos.",
     category: "Trastornos del habla",
-    metaTitle: "¿Qué es la Disfemia? | Tartamudez en Niños Explicada",
+    metaTitle: "¿Qué es la Disfemia? | Tartamudez Definición y Señales",
     metaDescription:
-      "Qué es la disfemia o tartamudez: repeticiones, bloqueos, cuándo consultar e importancia de la intervención temprana.",
+      "Definición de disfemia (tartamudez): alteración de fluidez con repeticiones, prolongaciones, bloqueos. Cuándo es normal, cuándo intervenir temprano.",
     keywords: [
-      "disfemia",
+      "qué es disfemia",
+      "disfemia definición",
+      "disfemia tartamudez",
       "tartamudez niños",
       "fluidez del habla",
       "tratamiento tartamudez",
@@ -676,14 +689,16 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     shortDescription:
       "Ejercicios de los músculos de la boca, lengua y cara.",
     category: "Intervención",
-    metaTitle: "¿Qué son las Praxias Orofaciales? | Ejercicios del Habla",
+    metaTitle: "¿Qué son las Praxias Orofaciales? | Ejercicios boca y lengua",
     metaDescription:
-      "Qué son las praxias orofaciales: ejercicios para fortalecer y coordinar labios, lengua y mandíbula en terapia del habla.",
+      "Definición de praxias orofaciales: ejercicios para fortalecer labios, lengua, mandíbula. Cuándo se usan, cómo ayudan en dislalia y apraxia.",
     keywords: [
-      "praxias orofaciales",
+      "qué son praxias orofaciales",
+      "praxias orofaciales definición",
       "ejercicios lengua labios",
       "terapia del habla",
       "motricidad orofacial",
+      "praxias para habla",
     ],
     headline: "¿Qué son las praxias orofaciales?",
     subtitle:

@@ -11,13 +11,15 @@ const WHATSAPP_LINK = whatsappUrl(
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Retraso del Habla vs Retraso del Lenguaje | Diferencias",
+  title: "Diferencia entre Retraso del Habla y Retraso del Lenguaje | Tabla",
   description:
-    "Diferencias entre retraso del habla y retraso del lenguaje: señales, ejemplos y cuándo conviene evaluar a tu hijo en Chillán.",
+    "¿Cuál es la diferencia entre retraso del habla y del lenguaje? Tabla comparativa: pronunciación vs vocabulario/frases, ejemplos, señales y evaluación en Chillán.",
   keywords: [
+    "diferencia entre retraso del habla y lenguaje",
     "retraso del habla vs retraso del lenguaje",
-    "diferencia retraso del habla y lenguaje",
-    "habla poco vs lenguaje",
+    "diferencia habla y lenguaje",
+    "habla poco vs lenguaje limitado",
+    "pronunciación vs vocabulario niños",
   ],
   ogType: "article",
 });

@@ -20,6 +20,322 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-10-11: SEO Lote 6 — Comparaciones, glosario zero-imp, hubs y páginas sin impresiones
+
+### Contexto
+
+**Datos GSC (90 días 2026-07-11 al 2026-10-08):**
+- **85 clics totales**
+- **5.112 impresiones**
+- **CTR promedio: 1,66%**
+- Posición promedio: 8,0
+
+**Datos últimos 7 días (10-02 al 10-08):** 5 clics / 629 imp / pos 7,95 vs 7 días previos 9 / 589 / pos 8,2
+
+**Páginas congeladas (Lotes 1-5):** Home, pilar infantil, todos los recursos previos, agendar-hora, servicios principales (evaluacion-fonoaudiologica, tel, terapia-lenguaje-infantil, trastornos-del-habla, tea, dificultades-lectoescritura, test-de-lenguaje, evaluacion-lenguaje, terapia-del-habla, conciencia-fonologica, informe-pie), sobre-katia, todos los tratamientos previos (tel, dislalia, trastorno-fonologico, retraso-lenguaje, retraso-habla, apraxia), glosario dinámicos previos (dislalia, tel, retraso-habla, tea, trastorno-fonologico, retraso-lenguaje, conciencia-fonologica, disfasia, disartria, apraxia-del-habla, disfemia, dislexia, praxias-orofaciales, logopeda), todos /chillan/* previos (dislalia, tel, apraxia, dislexia, lectoescritura, disfemia, tea-comunicacion), todos /sintomas/* previos (mi-hijo-no-habla-bien, nino-pronuncia-mal, hijo-habla-poco-edad, hijo-no-arma-frases, nino-no-entiende-instrucciones, nino-tartamudea, mi-hijo-no-comprende), voz-online previos (todos excepto tratamiento-disfonia).
+
+**Problema detectado:** Hub `/comparaciones` y páginas hijas con **0 impresiones en 90 días**. Múltiples términos glosario (trastorno-fonologico, retraso-lenguaje, conciencia-fonologica, disfasia, disartria, apraxia, disfemia, praxias, tdl) con **0 impresiones**. Páginas de servicio (`/recursos/senales-alerta`, `/servicios/estimulacion-temprana-chillan`, `/evaluacion-del-habla-infantil-chillan`, `/evaluacion-fonoaudiologica-infantil-chillan`, `/contacto-fonoaudiologa-chillan`), hubs `/chillan` y `/sintomas`, y patologías chillan `retraso-del-habla` y `trastorno-fonologico` sin impresiones. `/voz-online/tratamiento-disfonia-online` no trabajado en lotes previos.
+
+**Objetivo:** Activar páginas con 0 impresiones mediante títulos query-matched ("diferencia entre X y Y", "¿Qué es X?"), descriptions con ejemplos concretos, FAQs con FAQPage schema, tablas comparativas, enlaces internos a páginas de servicio/tratamiento y contenido diferenciado por intent (definición vs tratamiento vs señales).
+
+### Páginas optimizadas
+
+#### 1. `/comparaciones` — Hub comparaciones
+**Métricas GSC previas:** 0 imp en 90 días
+
+**Cambios:**
+- **Title:** `"Comparaciones clínicas | Fonoaudiología infantil Chillán"` → `"Diferencia entre... | Comparaciones Fonoaudiología Infantil Chillán"`
+- **Description:** Expandida con "Diferencia entre dislalia y trastorno fonológico, TEL vs retraso del lenguaje, retraso del habla vs lenguaje. Tabla comparativa, señales y cuándo consultar en Chillán."
+- **Keywords:** Añadido "diferencia entre dislalia trastorno fonológico", "TEL vs retraso del lenguaje", "retraso del habla vs retraso del lenguaje", "comparación fonoaudiología"
+- **H1:** Reforzado con pregunta "¿Cuál es la diferencia entre...?"
+- **Objetivo:** Capturar queries "diferencia entre X y Y" con hub claro
+
+**Objetivo CTR:** > 2% en 21 días (nueva, activar con query match)
+
+---
+
+#### 2. `/comparaciones/dislalia-vs-trastorno-fonologico`
+**Métricas GSC previas:** 0 imp
+
+**Cambios:**
+- **Title:** `"Dislalia vs Trastorno Fonológico | Diferencias y Cuándo Consultar"` → `"Diferencia entre Dislalia y Trastorno Fonológico | Tabla Comparativa"`
+- **Description:** Query exacta "¿Cuál es la diferencia entre dislalia y trastorno fonológico? Tabla comparativa, ejemplos, señales por edad y cuándo consultar fonoaudióloga en Chillán."
+- **Keywords:** Añadido "diferencia entre dislalia y trastorno fonológico", "comparación dislalia trastorno fonológico"
+- **Contenido:** Tabla comparativa ya presente, FAQPage schema ya presente, enlaces internos OK
+- **Objetivo:** Capturar queries "diferencia entre dislalia y trastorno fonológico"
+
+**Objetivo CTR:** > 3% en 21 días
+
+---
+
+#### 3. `/comparaciones/tel-vs-retraso-del-lenguaje`
+**Métricas GSC previas:** 0 imp
+
+**Cambios:**
+- **Title:** `"TEL vs Retraso del Lenguaje | Diferencias y Cuándo Consultar"` → `"Diferencia entre TEL y Retraso del Lenguaje | ¿Es transitorio o persistente?"`
+- **Description:** Query "¿Cuál es la diferencia entre TEL y retraso del lenguaje? Tabla comparativa, evolución, prevalencia y cuándo evaluar con fonoaudióloga en Chillán."
+- **Keywords:** Añadido "diferencia entre TEL y retraso del lenguaje", "cuándo TEL cuándo retraso lenguaje"
+- **Objetivo:** Diferenciación transitorio (retraso) vs persistente (TEL)
+
+**Objetivo CTR:** > 3% en 21 días
+
+---
+
+#### 4. `/comparaciones/retraso-del-habla-vs-retraso-del-lenguaje`
+**Métricas GSC previas:** 0 imp
+
+**Cambios:**
+- **Title:** `"Retraso del Habla vs Retraso del Lenguaje | Diferencias"` → `"Diferencia entre Retraso del Habla y Retraso del Lenguaje | Tabla"`
+- **Description:** Query "¿Cuál es la diferencia entre retraso del habla y del lenguaje? Tabla comparativa: pronunciación vs vocabulario/frases, ejemplos, señales y evaluación en Chillán."
+- **Keywords:** Añadido "diferencia entre retraso del habla y lenguaje", "pronunciación vs vocabulario niños"
+- **Objetivo:** Tabla clarifica pronunciación (habla) vs vocabulario/comprensión (lenguaje)
+
+**Objetivo CTR:** > 3% en 21 días
+
+---
+
+#### 5. Glosario términos — Titles "¿Qué es X?" y descriptions con definición
+**Métricas GSC previas:** 0 imp en 90 días cada uno
+
+**Cambios globales:**
+- **Patrón title:** Cambiado a formato "¿Qué es X? | [aspecto diferenciador]" para capturar featured snippets
+- **Patrón description:** Iniciado con "Definición de X:" seguido de características, diferencias y cuándo evaluar
+- **Keywords:** Añadido "qué es X", "X definición", "definición X" y diferenciaciones clave
+
+**Términos optimizados:**
+- `/glosario/trastorno-fonologico`: Title "¿Qué es el Trastorno Fonológico? | Patrones de error del habla"; description con "patrones sistemáticos de errores (omisiones, sustituciones)", diferencia con dislalia
+- `/glosario/retraso-del-lenguaje`: Title "¿Qué es el Retraso del Lenguaje? | Definición, señales y hitos"; description con "desarrollo más lento (vocabulario, frases, comprensión)", diferencia con TEL
+- `/glosario/conciencia-fonologica`: Title "¿Qué es la Conciencia Fonológica? | Rimas, sílabas y fonemas"; description con "habilidad para reconocer sonidos sin leer", base lectoescritura
+- `/glosario/disfasia`: Title "¿Qué es la Disfasia? | Término antiguo para TEL/TDL"; description con "nombre tradicional del TEL", relación con TDL
+- `/glosario/disartria`: Title "¿Qué es la Disartria? | Alteración neuromuscular del habla"; description con "alteración de músculos (labios, lengua)", diferencia con dislalia
+- `/glosario/apraxia-del-habla`: Title "¿Qué es la Apraxia del Habla Infantil? | AHS Definición"; description con "dificultad para programar movimientos", errores inconsistentes
+- `/glosario/disfemia`: Title "¿Qué es la Disfemia? | Tartamudez Definición y Señales"; description con "alteración de fluidez (repeticiones, prolongaciones, bloqueos)", cuándo intervenir
+- `/glosario/praxias-orofaciales`: Title "¿Qué son las Praxias Orofaciales? | Ejercicios boca y lengua"; description con "ejercicios para fortalecer labios, lengua", cuándo se usan
+- `/glosario/tdl` (no editable, estático): Ya optimizado en glosario/tdl/page.tsx previo
+
+**Objetivo CTR:** > 2,5% en 21 días (definiciones orientadas a snippets)
+
+---
+
+#### 6. `/recursos/senales-de-alerta-del-lenguaje-y-habla`
+**Métricas GSC previas:** 0 imp
+
+**Cambios:**
+- **Title:** `"Señales de Alerta del Lenguaje y el Habla en Niños"` → `"Señales de Alerta del Lenguaje y Habla en Niños por Edad | Chillán"`
+- **Description:** Expandida con "Señales de alerta del lenguaje y habla por edad (0-5 años): cuándo no responde al nombre, no arma frases, pronuncia mal. Checklist y cuándo evaluar en Chillán."
+- **Keywords:** Añadido "señales de alerta habla por edad", "niño no responde al nombre", "no arma frases edad"
+- **Contenido:** Ya tiene listas por edad (0-2, 2-3, 4-5 años), checklist práctico y FAQ con FAQPage schema
+- **Objetivo:** Capturar queries "señales de alerta lenguaje" por edad específica
+
+**Objetivo CTR:** > 3% en 21 días
+
+---
+
+#### 7. `/servicios/estimulacion-temprana-del-lenguaje-chillan`
+**Métricas GSC previas:** 0 imp
+
+**Cambios:**
+- **Title:** `"Estimulación Temprana del Lenguaje en Chillán | 0 a 3 Años"` → `"Estimulación Temprana del Lenguaje Chillán | Profesional 0-3 Años"`
+- **Description:** Reforzado "Estimulación profesional del lenguaje para bebés y niños 0-3 años en Chillán. Intervención fonoaudiológica presencial: balbuceo, primeras palabras, comprensión."
+- **Keywords:** Añadido "estimulación del lenguaje profesional", "bebé no balbucea", "fonoaudióloga 0-3 años Chillán"
+- **Objetivo:** Diferenciarse de guía DIY `/recursos/estimular-lenguaje-en-casa` (pos 34, 55 imp en lote anterior); esta es servicio profesional
+
+**Objetivo CTR:** > 2% en 21 días
+
+---
+
+#### 8. `/servicios/evaluacion-del-habla-infantil-chillan`
+**Métricas GSC previas:** 0 imp
+
+**Cambios:**
+- **Title:** `"Evaluación del Habla Infantil en Chillán | Pronunciación"` → `"Evaluación del Habla Infantil Chillán | Articulación y Pronunciación"`
+- **Description:** Más específica "Evaluación específica del habla en Chillán: articulación, fonología, inteligibilidad, fluidez. Para niños con dislalia, trastorno fonológico o habla poco clara. Con informe."
+- **Keywords:** Añadido "evaluación articulación niños", "evaluación fonología Chillán"
+- **Objetivo:** Diferenciarse como evaluación específica del habla (no lenguaje general)
+
+**Decisión:** **Se mantiene independiente** de `/servicios/evaluacion-fonoaudiologica` (general, lenguaje+habla+lectura, tocada en Lote 2) y `/evaluacion-fonoaudiologica-infantil-chillan` (general infantil, optimizada aquí). Intent distinto: esta es solo habla/articulación.
+
+**Objetivo CTR:** > 2,5% en 21 días
+
+---
+
+#### 9. `/evaluacion-fonoaudiologica-infantil-chillan`
+**Métricas GSC previas:** 0 imp
+
+**Cambios:**
+- **Title:** `"Evaluación Fonoaudiológica Infantil en Chillán | Lenguaje y Habla"` → `"Evaluación Fonoaudiológica Infantil Chillán | Lenguaje, Habla, Lectura"`
+- **Description:** Reforzada como completa "Evaluación fonoaudiológica completa en Chillán: lenguaje (vocabulario, frases, comprensión), habla (articulación), fluidez, lectoescritura. Con informe para colegio/PIE."
+- **Keywords:** Añadido "evaluación completa lenguaje Chillán", "informe fonoaudiológico PIE"
+- **Objetivo:** Evaluación completa (lenguaje + habla + lectura), diferente de evaluación específica del habla
+
+**Decisión:** **Se mantiene independiente** de `/servicios/evaluacion-fonoaudiologica` (servicio general sin geo, tocada en Lote 2) y `/servicios/evaluacion-del-habla-infantil-chillan` (solo habla, optimizada aquí). Intent distinto: esta es completa infantil en Chillán.
+
+**Candidato consolidación:** Revisar post-Lote 6 si `/evaluacion-fonoaudiologica-infantil-chillan` y `/servicios/evaluacion-fonoaudiologica` (frozen) canibalizan. Diferenciación: una es geo Chillán infantil, otra es servicio general. Por ahora se mantienen separadas con cross-links claros.
+
+**Objetivo CTR:** > 2,5% en 21 días
+
+---
+
+#### 10. `/contacto-fonoaudiologa-chillan`
+**Métricas GSC previas:** 0 imp
+
+**Cambios:**
+- **Title:** `"Contacto Fonoaudióloga en Chillán | Agenda por WhatsApp"` → `"Contacto Fonoaudióloga Infantil Chillán | WhatsApp y Horarios"`
+- **Description:** Más específica con datos reales "Contacto fonoaudióloga infantil en Chillán: WhatsApp 9 9549 7838, horario lunes-viernes 10:00-18:00. Cómo agendar evaluación, qué llevar, ubicación presencial Ñuble."
+- **Keywords:** Añadido "WhatsApp fonoaudióloga Chillán", "horario fonoaudióloga infantil", "fonoaudióloga presencial Chillán"
+- **Contenido:** Ya incluye LocalBusiness/MedicalBusiness schema con datos de `lib/site.ts` (NAP, horario, WhatsApp)
+- **Objetivo:** Página de contacto clara con info práctica (horarios, cómo agendar, qué llevar)
+
+**Objetivo CTR:** > 2% en 21 días
+
+---
+
+#### 11. `/chillan/retraso-del-habla`
+**Métricas GSC previas:** 0 imp
+
+**Cambios (overrides en chillan/[slug]/page.tsx):**
+- **Title override:** Añadido `"Retraso del Habla Chillán | Niño habla poco o no se le entiende"`
+- **Description override:** `"Habla poco o se le entiende mal para su edad: señales de retraso del habla en Chillán. Evaluación fonoaudiológica, articulación y claridad. Agenda por WhatsApp."`
+- **Keywords override:** Añadido "niño habla poco edad", "no se le entiende al hablar", "claridad del habla niños"
+- **Objetivo:** Diferenciarse de `/chillan/retraso-del-lenguaje` (frozen Lote 1): habla = pronunciación/claridad, lenguaje = vocabulario/frases
+
+**Objetivo CTR:** > 2% en 21 días
+
+---
+
+#### 12. `/chillan/trastorno-fonologico`
+**Métricas GSC previas:** 0 imp
+
+**Cambios (overrides en chillan/[slug]/page.tsx):**
+- **Title override:** Añadido `"Trastorno Fonológico Chillán | Patrones de error en sonidos"`
+- **Description override:** `"Patrones de error en varios sonidos (omite, sustituye, simplifica): trastorno fonológico. Evaluación especializada en Chillán. Postítulo fonología. WhatsApp."`
+- **Keywords override:** Añadido "patrones fonológicos", "errores fonológicos niños", "postítulo fonología"
+- **Objetivo:** Diferenciarse de `/tratamientos/trastorno-fonologico-chillan` (frozen Lote 1) y `/glosario/trastorno-fonologico` (optimizado aquí): página local con señales específicas y CTA
+
+**Objetivo CTR:** > 2% en 21 días
+
+---
+
+#### 13. `/chillan` — Hub patologías Chillán
+**Métricas GSC previas:** 0 imp
+
+**Cambios:**
+- **Title:** `"Patologías del lenguaje y habla en Chillán"` → `"Tratamiento por Patología en Chillán | Fonoaudiología Infantil"`
+- **Description:** Expandida con "Tratamiento fonoaudiológico en Chillán por patología: dislalia, TEL/TDL, retraso lenguaje/habla, trastorno fonológico, apraxia, dislexia, tartamudez, TEA. Presencial +20 años."
+- **Keywords:** Añadido "tratamiento dislalia Chillán", "TEL Chillán", "trastorno fonológico Chillán", "fonoaudióloga patologías infantiles"
+- **Objetivo:** Hub claro de tratamiento por patología en Chillán
+
+**Objetivo CTR:** > 2% en 21 días
+
+---
+
+#### 14. `/sintomas` — Hub síntomas
+**Métricas GSC previas:** 0 imp
+
+**Cambios:**
+- **Title:** `"Síntomas frecuentes en niños | Fonoaudiología Chillán"` → `"Síntomas Frecuentes en Niños | Mi hijo no habla bien, pronuncia mal..."`
+- **Description:** Expandida con ejemplos "Guías por síntoma: hijo habla poco, pronuncia mal, no arma frases, no entiende instrucciones, tartamudea. Señales, causas y cuándo evaluar en Chillán."
+- **Keywords:** Añadido "mi hijo no habla bien", "niño pronuncia mal", "hijo no arma frases", "síntomas habla infantil"
+- **Objetivo:** Hub de síntomas con wording de padres
+
+**Objetivo CTR:** > 2% en 21 días
+
+---
+
+#### 15. `/voz-online/tratamiento-disfonia-online`
+**Métricas GSC previas:** 0 imp (no trabajado en lotes previos)
+
+**Cambios:**
+- **Title:** `"Tratamiento de Disfonía Online | Fonoaudióloga Chile"` → `"Tratamiento Disfonía Online Chile | ¿Ronquera persistente?"`
+- **Description:** Query "Tratamiento de disfonía online para todo Chile: voz ronca, áspera o tensa que persiste. Rehabilitación vocal 100% por videollamada. Agenda evaluación hoy."
+- **Keywords:** Añadido "disfonía tratamiento", "voz ronca tratamiento", "rehabilitación vocal online Chile"
+- **Contenido:** Ya tiene FAQPage schema, testimonios, tipos de disfonía y proceso online
+- **Objetivo:** Capturar queries "disfonía tratamiento" / "tratamiento disfonía online"
+
+**Objetivo CTR:** > 2,5% en 21 días
+
+---
+
+#### 16. Redirect URL encoding — `/servicios/informe-fonoaudiológico-pie-chillan`
+**GSC:** 1 impresión en variante con tilde (ya reportado en Lote 3)
+
+**Verificación:** Redirect 301 ya presente en `next.config.ts` línea 108-111:
+```typescript
+{
+  source: "/servicios/informe-fonoaudiológico-pie-chillan",
+  destination: "/servicios/informe-fonoaudiologico-pie-chillan",
+  permanent: true,
+},
+```
+
+**Acción:** Ya resuelto. No requiere cambios.
+
+---
+
+### Otras mejoras transversales
+
+1. **Títulos query-matched:** Hub `/comparaciones` y páginas hijas con "Diferencia entre X y Y" para capturar featured snippets comparativos
+2. **Glosario definiciones:** Formato "¿Qué es X?" en titles para snippets informativos; descriptions iniciadas con "Definición de X:"
+3. **Diferenciación intent:** Evaluación habla (articulación específica) vs evaluación completa (lenguaje+habla+lectura) vs servicio general evaluacion-fonoaudiologica (frozen)
+4. **Estimulación profesional vs DIY:** `/servicios/estimulacion-temprana-chillan` (servicio) claramente diferenciada de `/recursos/estimular-lenguaje-en-casa` (guía padres, frozen)
+5. **Hubs activados:** `/comparaciones`, `/chillan` y `/sintomas` con keywords de páginas hijas y wording de padres
+6. **Datos reales en contacto:** WhatsApp, horarios, ubicación desde `lib/site.ts` (no inventados)
+7. **Cross-links:** Comparaciones → glosario + tratamiento; glosario → tratamiento Chillán + servicio; chillan patologías → glosario + servicio
+8. **FAQPage schema:** Ya presente en todas las comparaciones y glosario; contenido específico por página
+
+### Candidatos a consolidación (para Gonzalo)
+
+1. **`/evaluacion-fonoaudiologica-infantil-chillan`** vs **`/servicios/evaluacion-fonoaudiologica`** (frozen Lote 2):
+   - Posible overlap: ambas son evaluación completa de lenguaje y habla
+   - Diferenciación aplicada: una es geo Chillán infantil específica; otra es servicio general sin geo
+   - Evaluar post-Lote 6 si vale la pena dos páginas o consolidar en una sola con variaciones geo
+   - Por ahora se mantienen separadas con cross-links claros
+
+### Métricas a monitorear (GSC)
+
+**Periodo de medición:** 14-21 días post-indexación (desde 2026-10-11)
+
+**KPIs Lote 6:**
+1. **CTR general del sitio:** objetivo > 1,8% (baseline 1,66%)
+2. **Impresiones páginas 0-imp:** objetivo > 10 imp cada una en 21 días (baseline 0, activación)
+3. **CTR `/comparaciones/*` (hub + 3 hijas):** objetivo > 2,5% (nuevas, query "diferencia entre")
+4. **CTR glosario optimizados (8 términos):** objetivo > 2,5% (definiciones snippet)
+5. **CTR `/recursos/senales-alerta`:** objetivo > 3% (checklist por edad)
+6. **CTR hubs (`/chillan`, `/sintomas`):** objetivo > 2% (activación)
+7. **Clics totales:** objetivo estable o +5% sobre baseline 85 clics/90d (páginas nuevas sumando)
+
+**URLs a seguir de cerca:**
+- `/comparaciones/dislalia-vs-trastorno-fonologico` (esperado 1-2 imp iniciales, CTR 2,5%)
+- `/comparaciones/tel-vs-retraso-del-lenguaje` (esperado 1-2 imp, CTR 2,5%)
+- `/comparaciones/retraso-del-habla-vs-retraso-del-lenguaje` (esperado 1-2 imp, CTR 2,5%)
+- Glosario `/trastorno-fonologico`, `/retraso-lenguaje`, `/conciencia-fonologica` (esperado 2-5 imp cada uno, snippets)
+- `/recursos/senales-de-alerta-del-lenguaje-y-habla` (esperado 5-10 imp, checklist)
+- `/servicios/estimulacion-temprana-del-lenguaje-chillan` (esperado 3-5 imp, servicio profesional)
+- `/contacto-fonoaudiologa-chillan` (esperado 2-3 imp, contacto local)
+- `/voz-online/tratamiento-disfonia-online` (esperado 3-5 imp, query "disfonía tratamiento")
+
+### Siguientes pasos
+
+1. **Post-deploy:**
+   - Solicitar indexación manual en GSC para las 30+ URLs optimizadas (comparaciones, glosario, servicios, hubs)
+   - Validar que los cambios de metadata se reflejan en SERPs (inspeccionar URL)
+   - Verificar que tablas comparativas renderizan correctamente en mobile
+
+2. **Monitoreo:**
+   - Revisar GSC en 7 días (primeras impresiones de páginas 0-imp)
+   - Revisar GSC en 14-21 días (medición completa activación)
+   - Comparar impresiones 0 → X para cada página optimizada
+   - Monitorear si query "diferencia entre X y Y" captura comparaciones
+
+3. **Ideas Lote 7 (post-21d, esperar medición):**
+   - Si páginas 0-imp siguen sin impresiones: revisar canonical, sitemap, estructura de URL
+   - Si `/comparaciones` activa bien: considerar más comparaciones (ej. "apraxia vs dislalia", "trastorno fonológico vs retraso del habla")
+   - Si glosario snippets capturan: añadir DefinedTerm schema explícito (no presente en formato actual)
+   - Revisar candidato consolidación `/evaluacion-fonoaudiologica-infantil-chillan` vs `/servicios/evaluacion-fonoaudiologica`
+   - Otras páginas sitemap con 0 imp aún no tocadas (si las hay)
+
+---
+
 ## 2026-10-09: SEO Lote 5 — Recursos hub, TEA comunicación, páginas de baja visibilidad y nuevo glosario
 
 ### Contexto

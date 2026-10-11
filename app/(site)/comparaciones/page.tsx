@@ -6,9 +6,15 @@ const PAGE_PATH = "/comparaciones";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Comparaciones clínicas | Fonoaudiología infantil Chillán",
+  title: "Diferencia entre... | Comparaciones Fonoaudiología Infantil Chillán",
   description:
-    "Guías comparativas para padres: diferencias entre dislalia y trastorno fonológico, TEL vs retraso del lenguaje, y cuándo consultar al fonoaudiólogo.",
+    "Diferencia entre dislalia y trastorno fonológico, TEL vs retraso del lenguaje, retraso del habla vs lenguaje. Tabla comparativa, señales y cuándo consultar en Chillán.",
+  keywords: [
+    "diferencia entre dislalia trastorno fonológico",
+    "TEL vs retraso del lenguaje",
+    "retraso del habla vs retraso del lenguaje",
+    "comparación fonoaudiología",
+  ],
 });
 
 const comparaciones = [
@@ -43,12 +49,10 @@ export default function ComparacionesHubPage() {
       />
       <header className="mb-10 text-center">
         <h1 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
-          Comparaciones clínicas para padres
+          ¿Cuál es la diferencia entre...? Comparaciones fonoaudiológicas
         </h1>
         <p className="text-lg text-gray-600">
-          Cuando dos diagnósticos o síntomas se parecen, estas guías aclaran
-          diferencias, señales de alarma y el siguiente paso recomendado en
-          Chillán.
+          Cuando dos condiciones suenan parecidas, estas guías te explican las diferencias con tablas claras, señales prácticas y cuándo conviene consultar en Chillán.
         </p>
       </header>
       <ul className="grid gap-4 sm:grid-cols-2">

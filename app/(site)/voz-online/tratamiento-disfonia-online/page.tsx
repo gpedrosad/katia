@@ -7,9 +7,16 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/tratamiento-disfonia-online",
-  title: "Tratamiento de Disfonía Online | Fonoaudióloga Chile",
+  title: "Tratamiento Disfonía Online Chile | ¿Ronquera persistente?",
   description:
-    "¿Llevas semanas con voz ronca o áspera? No esperes más. Tratamiento fonoaudiológico de disfonía online para todo Chile. Agenda tu evaluación hoy.",
+    "Tratamiento de disfonía online para todo Chile: voz ronca, áspera o tensa que persiste. Rehabilitación vocal 100% por videollamada. Agenda evaluación hoy.",
+  keywords: [
+    "tratamiento disfonía online",
+    "disfonía tratamiento",
+    "voz ronca tratamiento",
+    "rehabilitación vocal online Chile",
+    "fonoaudióloga voz online",
+  ],
 });
 
 const faqItems = [

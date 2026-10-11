@@ -36,14 +36,16 @@ const faqs = [
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Señales de Alerta del Lenguaje y el Habla en Niños",
+  title: "Señales de Alerta del Lenguaje y Habla en Niños por Edad | Chillán",
   description:
-    "Conoce las señales de alerta del lenguaje y habla en niños: cuándo esperar, cuándo observar y cuándo pedir evaluación fonoaudiológica.",
+    "Señales de alerta del lenguaje y habla en niños por edad (0-5 años): cuándo no responde al nombre, no arma frases, pronuncia mal. Checklist y cuándo evaluar en Chillán.",
   keywords: [
     "señales de alerta lenguaje niños",
-    "señales de alerta habla niños",
+    "señales de alerta habla por edad",
     "cuándo preocuparse por el habla",
     "cuándo consultar fonoaudiólogo",
+    "niño no responde al nombre",
+    "no arma frases edad",
   ],
   ogType: "article",
 });
