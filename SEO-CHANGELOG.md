@@ -20,6 +20,103 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-10-12: SEO Lote 7 — Segundo pase data-driven en páginas Lote 1 (7 días) + linking interno
+
+### Contexto
+
+**Datos GSC (90 días 2026-07-15 al 2026-10-12):**
+- **87 clics totales**
+- **5.146 impresiones**
+- **CTR promedio: 1,7%**
+- **Posición promedio: 8,0**
+
+**Datos últimos 7 días (2026-10-06 al 2026-10-12):** 7 clics / 542 imp / pos 8,2 vs 7 días previos (2026-09-29 al 2026-10-05): 6 clics / 605 imp / pos 7,5
+
+**Páginas congeladas (Lotes 2-6, desde 2026-10-06):** Mantener sin cambios para medir impacto. Solo optimizar páginas Lote 1 (2026-10-05, ahora con 7 días de indexación) y agregar enlaces desde Lote 1.
+
+**Problema detectado:**
+1. `/recursos/hitos-del-lenguaje-por-edad`: 451 imp en 90d, **0 clics**, pos ~9-10 en query principal "a que edad hablan los niños" (173 imp, pos 9.9). Múltiples variantes ("a qué edad hablan los bebés", "cuantas palabras por edad", "cuando hablan fluido", "primeras palabras"). Necesita respuesta directa para featured snippet, tabla de hitos, secciones matching queries y FAQ expandido.
+2. `/fonoaudiologa-ninos-chillan`: Compite con home en queries genéricas ("fonoaudiólogo", "fonoaudióloga") pero rankea mal en su query objetivo "fonoaudiología infantil" (pos 17-26) y "fonoaudiólogo infantil chillán". Necesita diferenciación clara hacia fonoaudiología infantil.
+3. **Linking interno:** Páginas Lote 1 no enlazan suficientemente entre sí ni a páginas de comparación Lote 6.
+
+**Objetivo:** Mejorar ranking y CTR en hitos (objetivo top 5, > 1% CTR), diferenciar pilar infantil hacia su query objetivo, fortalecer red de enlaces internos desde Lote 1.
+
+### Páginas optimizadas
+
+#### 1. `/recursos/hitos-del-lenguaje-por-edad`
+**Métricas GSC previas:** 451 imp en 90d, 0 clics, pos 9.9 (query "a que edad hablan los niños" 173 imp)
+
+**Cambios:**
+- **Contenido:**
+  - Agregada **caja de respuesta rápida** al inicio: "Los niños suelen decir sus primeras palabras entre los 11 y 14 meses, a los 2 años combinan unas 50 palabras en frases de dos palabras…" (optimizada para featured snippet)
+  - Agregada **tabla resumen de hitos** con columnas: Edad / Palabras aproximadas / Frases-Comprensión / Inteligibilidad (12m, 18m, 2a, 3a, 4a, 5a)
+  - Agregada sección **"¿A qué edad los niños hablan bien (con fluidez)?"** matching query variant
+  - Agregada sección **"¿Cuántas palabras debería decir mi hijo por edad?"** con lista por edad (12m: 1-2 palabras; 18m: 10-20; 2a: ~50; 2.5a: 200-300; 3a: 500-1000; 4-5a: miles)
+- **FAQ:** Agregadas preguntas adicionales: "¿A los cuántos años habla un niño?", "¿A qué edad los niños dicen sus primeras palabras?" (matching variantes de búsqueda)
+- **Schema:** Actualizado `dateModified` a 2026-10-12
+- **Title/description:** Mantenidos (ya optimizados en Lote 1)
+
+**Objetivo CTR:** > 1% en 21 días, objetivo ranking top 5 para query principal
+
+---
+
+#### 2. `/fonoaudiologa-ninos-chillan`
+**Métricas GSC previas:** 185 imp, 0 clics en query objetivo "fonoaudiología infantil" (pos 17.6)
+
+**Cambios:**
+- **Title:** `"Fonoaudióloga Infantil en Chillán | Especialista en Niños"` → `"Fonoaudiología Infantil en Chillán | Fonoaudióloga Especialista en Niños"` (query objetivo al inicio)
+- **Description:** Expandida con "fonoaudiología infantil en Chillán: evaluación y terapia de lenguaje, habla, pronunciación, lectoescritura, TEL y TDL para niños…"
+- **H1:** `"Fonoaudióloga infantil en Chillán para niños"` → `"Fonoaudiología infantil en Chillán"` (foco en query objetivo)
+- **Contenido:**
+  - Agregada sección completa **"¿Qué es la fonoaudiología infantil?"** con 4 bloques: Lenguaje (comprensión/expresión), Habla y pronunciación, Lectoescritura, TEL/TDL y otras dificultades
+  - Cada bloque enlaza a páginas de tratamiento/servicio relevantes (retraso-lenguaje, TEL, dislalia, trastorno-fonologico, retraso-habla, apraxia, lectoescritura, conciencia-fonologica, dislexia, TEA, informe PIE)
+
+**Objetivo ranking:** Mejorar de pos 17-26 a top 10 en "fonoaudiología infantil (Chillán)" en 21 días
+
+---
+
+#### 3. Linking interno desde páginas Lote 1
+
+**Cambios en home (`/`):**
+- Agregado enlace contextual a `/fonoaudiologa-ninos-chillan` con anchor "fonoaudiología infantil en Chillán" en sección About
+- Ya existía enlace a `/recursos/hitos-del-lenguaje-por-edad` en sección servicios
+
+**Cambios en `/servicios`:**
+- Agregados enlaces a comparaciones Lote 6 en párrafo relacionados: `/comparaciones/dislalia-vs-trastorno-fonologico`, `/comparaciones/retraso-del-habla-vs-retraso-del-lenguaje`, `/comparaciones/tel-vs-retraso-del-lenguaje`
+- Ya existía enlace a hitos del lenguaje
+
+**Cambios en `/tratamientos/retraso-del-lenguaje-chillan`:**
+- Agregados 3 enlaces en sección "Recursos relacionados":
+  - `/recursos/hitos-del-lenguaje-por-edad` (Hitos del lenguaje)
+  - `/comparaciones/tel-vs-retraso-del-lenguaje` (TEL vs Retraso lenguaje)
+  - `/comparaciones/retraso-del-habla-vs-retraso-del-lenguaje` (Habla vs Lenguaje)
+
+**Cambios en `/tratamientos/trastorno-fonologico-chillan`:**
+- Agregados 2 enlaces en sección "Recursos relacionados":
+  - `/recursos/hitos-del-lenguaje-por-edad` (Hitos del lenguaje)
+  - `/comparaciones/dislalia-vs-trastorno-fonologico` (Dislalia vs Trastorno fonológico)
+
+**Páginas editadas sin cambio de metadata:** `/` (home), `/servicios`, `/tratamientos/retraso-del-lenguaje-chillan`, `/tratamientos/trastorno-fonologico-chillan`
+
+### Métricas esperadas
+
+**Objetivos de medición 14-21 días (post-indexación ~2026-10-19 al 2026-10-26):**
+
+- **`/recursos/hitos-del-lenguaje-por-edad`:**
+  - CTR > 1% (actual: 0%)
+  - Ranking top 5 para "a que edad hablan los niños" (actual: pos 9.9)
+  - Al menos 3-5 clics semanales
+- **`/fonoaudiologa-ninos-chillan`:**
+  - Ranking < 10 para "fonoaudiología infantil" (actual: pos 17.6)
+  - Al menos 1 clic en query objetivo
+- **Comparaciones Lote 6:**
+  - Activación con primeras impresiones (actualmente 0 imp)
+- **Totales sitio:**
+  - Mantener o mejorar 7 clics / 542 imp semanales
+  - Consolidar pos 8.0 o mejorar
+
+---
+
 ## 2026-10-11: SEO Lote 6 — Comparaciones, glosario zero-imp, hubs y páginas sin impresiones
 
 ### Contexto

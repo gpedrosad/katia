@@ -330,6 +330,27 @@ export default function RetrasoLenguajePage() {
                 <span className="text-2xl">👶</span>
                 <p className="mt-2 font-medium text-gray-900">Habla poco para su edad</p>
               </Link>
+              <Link
+                href="/recursos/hitos-del-lenguaje-por-edad"
+                className="rounded-xl border border-gray-200 p-4 text-center transition-colors hover:border-rose-300 hover:bg-rose-50"
+              >
+                <span className="text-2xl">📊</span>
+                <p className="mt-2 font-medium text-gray-900">Hitos del lenguaje</p>
+              </Link>
+              <Link
+                href="/comparaciones/tel-vs-retraso-del-lenguaje"
+                className="rounded-xl border border-gray-200 p-4 text-center transition-colors hover:border-rose-300 hover:bg-rose-50"
+              >
+                <span className="text-2xl">🔍</span>
+                <p className="mt-2 font-medium text-gray-900">TEL vs Retraso lenguaje</p>
+              </Link>
+              <Link
+                href="/comparaciones/retraso-del-habla-vs-retraso-del-lenguaje"
+                className="rounded-xl border border-gray-200 p-4 text-center transition-colors hover:border-rose-300 hover:bg-rose-50"
+              >
+                <span className="text-2xl">⚖️</span>
+                <p className="mt-2 font-medium text-gray-900">Habla vs Lenguaje</p>
+              </Link>
             </div>
           </div>
         </section>

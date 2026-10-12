@@ -258,6 +258,14 @@ export default function TrastornoFonologicoPage() {
                 <span className="text-2xl">🗣️</span>
                 <p className="mt-2 font-medium text-gray-900">Pronuncia mal</p>
               </Link>
+              <Link href="/recursos/hitos-del-lenguaje-por-edad" className="rounded-xl border border-gray-200 p-4 text-center transition-colors hover:border-orange-300 hover:bg-orange-50">
+                <span className="text-2xl">📊</span>
+                <p className="mt-2 font-medium text-gray-900">Hitos del lenguaje</p>
+              </Link>
+              <Link href="/comparaciones/dislalia-vs-trastorno-fonologico" className="rounded-xl border border-gray-200 p-4 text-center transition-colors hover:border-orange-300 hover:bg-orange-50">
+                <span className="text-2xl">🔍</span>
+                <p className="mt-2 font-medium text-gray-900">Dislalia vs Trastorno fonológico</p>
+              </Link>
             </div>
           </div>
         </section>

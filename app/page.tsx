@@ -288,7 +288,11 @@ export default function Home() {
               <p className="mb-6 text-lg leading-relaxed text-gray-700">
                 Soy <strong>Katia Domínguez</strong>, fonoaudióloga con más de
                 20 años de experiencia en evaluación y tratamiento de
-                trastornos de la comunicación en niños.
+                trastornos de la comunicación en niños. Ofrezco servicios especializados de{" "}
+                <Link href="/fonoaudiologa-ninos-chillan" className="font-medium text-rose-600 underline hover:text-rose-700">
+                  fonoaudiología infantil en Chillán
+                </Link>
+                {" "}con evaluaciones completas, terapias personalizadas y seguimiento continuo.
               </p>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start gap-3">

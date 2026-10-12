@@ -18,6 +18,11 @@ const faqs = [
       "La mayoría de los bebés dice sus primeras palabras con significado (como «mamá» o «agua») entre los 11 y 14 meses. Antes de eso balbucean con entonación y usan gestos. Si a los 15–18 meses no dice ninguna palabra con significado, es recomendable consultar.",
   },
   {
+    question: "¿A los cuántos años habla un niño?",
+    answer:
+      "Los niños empiezan a decir palabras alrededor del año (11–14 meses). A los 2 años combinan palabras en frases simples. El desarrollo se acelera entre los 2 y 3 años, cuando pasan de frases cortas a oraciones completas. No hay una única edad «correcta», pero existen hitos que orientan si el desarrollo va dentro de lo esperado.",
+  },
+  {
     question: "¿Es normal que mi hijo de 2 años hable poco?",
     answer:
       "Algunos niños de 2 años hablan menos que otros y alcanzan a sus pares con el tiempo. Sin embargo, a esa edad suele esperarse un vocabulario de unas 50 palabras y frases de dos palabras. Si habla muy poco, no se entiende en casa o no combina palabras, conviene observar con atención y considerar una evaluación.",
@@ -26,6 +31,11 @@ const faqs = [
     question: "¿Cuántas palabras debería decir a los 2 años?",
     answer:
       "Como referencia orientativa, muchos niños de 2 años dicen alrededor de 50 palabras o más y empiezan a juntar dos palabras, como «mamá agua» o «más pan». No se trata de un número exacto: importa también si comprende, se comunica con gestos y si progresa mes a mes.",
+  },
+  {
+    question: "¿A qué edad los niños dicen sus primeras palabras?",
+    answer:
+      "Las primeras palabras con significado suelen aparecer entre los 11 y 14 meses. Algunos niños dicen su primera palabra a los 10 meses, otros a los 15. Si a los 18 meses tu hijo no dice ninguna palabra, es momento de consultar con una fonoaudióloga.",
   },
   {
     question: "¿Cuándo preocuparse por el lenguaje?",
@@ -77,7 +87,7 @@ const articleJsonLd = {
     "@id": `${SITE_URL}${PAGE_PATH}`,
   },
   datePublished: "2026-05-20",
-  dateModified: "2026-08-23",
+  dateModified: "2026-10-12",
 };
 
 const faqJsonLd = {
@@ -123,10 +133,13 @@ export default function HitosDelLenguajePorEdadPage() {
               <h1 className="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl">
                 ¿A qué edad empiezan a hablar los niños?
               </h1>
+              <div className="mb-6 rounded-2xl border-2 border-rose-200 bg-rose-50 p-6">
+                <p className="text-lg font-semibold text-gray-900">
+                  <strong>Respuesta rápida:</strong> Los niños suelen decir sus primeras palabras entre los 11 y 14 meses, a los 2 años combinan unas 50 palabras en frases de dos palabras, y a los 3 años hablan en oraciones más completas que extraños entienden en gran parte. Cada niño tiene su ritmo, pero estos hitos orientan cuándo consultar.
+                </p>
+              </div>
               <p className="text-xl text-gray-600">
-                A los 12 meses la mayoría dice sus primeras palabras; a los 2
-                años, unas 50 palabras y frases de dos palabras. Cada niño tiene
-                su ritmo, pero existen hitos orientativos que ayudan a saber
+                Cada niño tiene su ritmo, pero existen hitos orientativos que ayudan a saber
                 cuándo consultar a una fonoaudióloga en{" "}
                 <strong>Chillán, Ñuble</strong>.
               </p>
@@ -192,6 +205,61 @@ export default function HitosDelLenguajePorEdadPage() {
                 <Link href="/agendar-hora-fonoaudiologo-infantil-chillan" className="font-medium text-rose-600 underline">
                   agendar una hora de evaluación en Chillán
                 </Link>.
+              </p>
+
+              <h2>Tabla resumen de hitos del lenguaje por edad</h2>
+              <div className="not-prose my-6 overflow-x-auto">
+                <table className="w-full border-collapse rounded-lg border border-gray-200 bg-white text-sm">
+                  <thead>
+                    <tr className="bg-rose-100">
+                      <th className="border border-gray-200 px-4 py-3 text-left font-semibold text-gray-900">Edad</th>
+                      <th className="border border-gray-200 px-4 py-3 text-left font-semibold text-gray-900">Palabras aproximadas</th>
+                      <th className="border border-gray-200 px-4 py-3 text-left font-semibold text-gray-900">Frases / Comprensión</th>
+                      <th className="border border-gray-200 px-4 py-3 text-left font-semibold text-gray-900">Inteligibilidad</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-gray-700">
+                    <tr>
+                      <td className="border border-gray-200 px-4 py-3 font-medium">12 meses</td>
+                      <td className="border border-gray-200 px-4 py-3">1–2 palabras con significado</td>
+                      <td className="border border-gray-200 px-4 py-3">Responde al nombre, comprende «no», gestos simples</td>
+                      <td className="border border-gray-200 px-4 py-3">Balbuceo con entonación</td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-200 px-4 py-3 font-medium">18 meses</td>
+                      <td className="border border-gray-200 px-4 py-3">10–20 palabras o más</td>
+                      <td className="border border-gray-200 px-4 py-3">Sigue instrucciones simples («dame la pelota»)</td>
+                      <td className="border border-gray-200 px-4 py-3">Familia entiende gran parte</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-200 px-4 py-3 font-medium">2 años</td>
+                      <td className="border border-gray-200 px-4 py-3">~50 palabras o más</td>
+                      <td className="border border-gray-200 px-4 py-3">Frases de 2 palabras («mamá agua», «más pan»)</td>
+                      <td className="border border-gray-200 px-4 py-3">Familia entiende la mayoría</td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-200 px-4 py-3 font-medium">3 años</td>
+                      <td className="border border-gray-200 px-4 py-3">Vocabulario amplio</td>
+                      <td className="border border-gray-200 px-4 py-3">Oraciones de 3–4 palabras, responde preguntas simples</td>
+                      <td className="border border-gray-200 px-4 py-3">Extraños entienden al menos 75%</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-200 px-4 py-3 font-medium">4 años</td>
+                      <td className="border border-gray-200 px-4 py-3">Vocabulario variado</td>
+                      <td className="border border-gray-200 px-4 py-3">Oraciones completas, relata experiencias</td>
+                      <td className="border border-gray-200 px-4 py-3">La mayoría se entiende claramente</td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-200 px-4 py-3 font-medium">5 años</td>
+                      <td className="border border-gray-200 px-4 py-3">Amplio y preciso</td>
+                      <td className="border border-gray-200 px-4 py-3">Relatos con secuencia (inicio, desarrollo, final)</td>
+                      <td className="border border-gray-200 px-4 py-3">Entendido por la mayoría de personas</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-sm italic text-gray-600">
+                Nota: Estas cifras son referencias aproximadas. Existe variabilidad normal en el desarrollo; lo importante es observar progreso y detectar señales de alerta.
               </p>
 
               <h2>12 meses</h2>
@@ -318,6 +386,33 @@ export default function HitosDelLenguajePorEdadPage() {
                 <strong>Señal de alerta principal:</strong> dificultad para contar
                 experiencias, errores de pronunciación persistentes o problemas para
                 seguir el ritmo del lenguaje en el aula.
+              </p>
+
+              <h2>¿A qué edad los niños hablan bien (con fluidez)?</h2>
+              <p>
+                El concepto de hablar «bien» o con fluidez es gradual. Alrededor de los 3 años, la mayoría de los niños
+                forma oraciones completas que extraños entienden en gran parte. A los 4–5 años, el habla suele ser fluida,
+                con narrativas coherentes y la mayoría de los sonidos bien articulados. Sin embargo, es normal que algunos
+                sonidos complejos (como la /r/ fuerte) se consoliden recién hacia los 5–6 años. Si a los 4 años tu hijo
+                tiene dificultades persistentes para expresarse con claridad o su habla es poco inteligible, conviene
+                evaluar.
+              </p>
+
+              <h2>¿Cuántas palabras debería decir mi hijo por edad?</h2>
+              <p>
+                Estas son cifras orientativas basadas en referencias del desarrollo típico:
+              </p>
+              <ul>
+                <li><strong>12 meses:</strong> 1–2 palabras con significado («mamá», «agua», «no»)</li>
+                <li><strong>18 meses:</strong> 10–20 palabras o más, en crecimiento rápido</li>
+                <li><strong>2 años:</strong> Alrededor de 50 palabras; empieza a combinar dos palabras</li>
+                <li><strong>2 años y medio:</strong> 200–300 palabras aproximadamente</li>
+                <li><strong>3 años:</strong> 500–1000 palabras; vocabulario amplio y en expansión</li>
+                <li><strong>4–5 años:</strong> Miles de palabras; incorpora vocabulario escolar y social</li>
+              </ul>
+              <p>
+                Recuerda que lo más importante no es el número exacto, sino que el niño progrese de forma consistente,
+                use el lenguaje de manera funcional y muestre comprensión creciente del entorno.
               </p>
 
               <h2>Señales de alerta que no conviene esperar</h2>

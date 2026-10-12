@@ -182,6 +182,18 @@ export default function ServiciosPage() {
               >
                 glosario (dislalia, TEL…)
               </Link>
+              . Si tienes dudas sobre diferencias clínicas, revisa{" "}
+              <Link href="/comparaciones/dislalia-vs-trastorno-fonologico" className="font-medium text-rose-600 underline">
+                dislalia vs trastorno fonológico
+              </Link>
+              ,{" "}
+              <Link href="/comparaciones/retraso-del-habla-vs-retraso-del-lenguaje" className="font-medium text-rose-600 underline">
+                retraso del habla vs lenguaje
+              </Link>{" "}
+              o{" "}
+              <Link href="/comparaciones/tel-vs-retraso-del-lenguaje" className="font-medium text-rose-600 underline">
+                TEL vs retraso del lenguaje
+              </Link>
               . Para dudas frecuentes por edad:{" "}
               <Link href="/sintomas/hijo-no-arma-frases-chillan" className="font-medium text-rose-600 underline">
                 2 años no forma frases

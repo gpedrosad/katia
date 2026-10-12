@@ -11,9 +11,9 @@ import { StickyWhatsApp } from "../chillan/lenguaje-infantil/_components/StickyW
 const PAGE_PATH = "/fonoaudiologa-ninos-chillan";
 const WHATSAPP_HREF = whatsappUrl("Hola, quiero agendar una evaluación de lenguaje para mi hijo/a");
 const PAGE_TITLE =
-  "Fonoaudióloga Infantil en Chillán | Especialista en Niños";
+  "Fonoaudiología Infantil en Chillán | Fonoaudióloga Especialista en Niños";
 const PAGE_DESCRIPTION =
-  "Fonoaudióloga especialista en niños en Chillán. Si tu hijo habla poco, no arma frases o pronuncia mal, agenda evaluación fonoaudiológica infantil con informe y plan de terapia. +20 años de experiencia.";
+  "Fonoaudiología infantil en Chillán: evaluación y terapia de lenguaje, habla, pronunciación, lectoescritura, TEL y TDL para niños. Si tu hijo habla poco, no arma frases o pronuncia mal, agenda evaluación con informe y plan de terapia. +20 años de experiencia.";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
@@ -323,15 +323,14 @@ export default function FonoaudiologaNinosChillanPage() {
 
                 {/* H1 Principal - Keyword principal */}
                 <h1 className="mb-4 text-4xl font-bold leading-tight tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
-                  Fonoaudióloga infantil en Chillán para niños
+                  Fonoaudiología infantil en Chillán
                 </h1>
 
                 <p
                   data-speakable
                   className="mb-6 text-xl leading-relaxed text-gray-700 sm:text-2xl"
                 >
-                  Evaluación y terapia de lenguaje y habla para niños que hablan
-                  poco, no arman frases o no se hacen entender.
+                  Evaluación y terapia especializada de lenguaje, habla, pronunciación y lectoescritura para niños. Si tu hijo habla poco, no arma frases o no se hace entender, agenda evaluación con informe y plan de tratamiento personalizado.
                 </p>
 
                 {/* Bullets de beneficios */}
@@ -458,6 +457,101 @@ export default function FonoaudiologaNinosChillanPage() {
               <p className="mt-3 text-sm text-gray-600">
                 Te respondo con una orientación inicial sin compromiso
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* What is Fonoaudiología Infantil Section */}
+        <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl">
+            <div className="mb-10 text-center">
+              <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
+                ¿Qué es la fonoaudiología infantil?
+              </h2>
+              <p className="mx-auto max-w-2xl text-lg text-gray-600">
+                La fonoaudiología infantil se especializa en prevenir, evaluar y tratar trastornos del lenguaje, habla, pronunciación y lectoescritura en niños desde los primeros meses hasta la adolescencia.
+              </p>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2">
+              <div className="rounded-xl border border-rose-100 bg-rose-50 p-6">
+                <h3 className="mb-3 text-xl font-semibold text-gray-900">
+                  Lenguaje (comprensión y expresión)
+                </h3>
+                <p className="mb-3 text-gray-700">
+                  Vocabulario, comprensión, formación de frases, relatos y habilidades para contar experiencias.
+                </p>
+                <ul className="space-y-1 text-sm text-gray-600">
+                  <li>
+                    → <Link href="/tratamientos/retraso-del-lenguaje-chillan" className="font-medium text-rose-600 underline hover:text-rose-700">Retraso del lenguaje</Link>
+                  </li>
+                  <li>
+                    → <Link href="/tratamientos/tel-trastorno-especifico-lenguaje-chillan" className="font-medium text-rose-600 underline hover:text-rose-700">TEL / TDL (Trastorno Específico del Lenguaje)</Link>
+                  </li>
+                  <li>
+                    → <Link href="/servicios/terapia-lenguaje-infantil" className="font-medium text-rose-600 underline hover:text-rose-700">Terapia de lenguaje infantil</Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="rounded-xl border border-rose-100 bg-rose-50 p-6">
+                <h3 className="mb-3 text-xl font-semibold text-gray-900">
+                  Habla y pronunciación
+                </h3>
+                <p className="mb-3 text-gray-700">
+                  Articulación de sonidos, claridad al hablar y corrección de errores de pronunciación.
+                </p>
+                <ul className="space-y-1 text-sm text-gray-600">
+                  <li>
+                    → <Link href="/tratamientos/dislalia-infantil-chillan" className="font-medium text-rose-600 underline hover:text-rose-700">Dislalia (errores de pronunciación)</Link>
+                  </li>
+                  <li>
+                    → <Link href="/tratamientos/trastorno-fonologico-chillan" className="font-medium text-rose-600 underline hover:text-rose-700">Trastorno fonológico</Link>
+                  </li>
+                  <li>
+                    → <Link href="/tratamientos/retraso-del-habla-chillan" className="font-medium text-rose-600 underline hover:text-rose-700">Retraso del habla</Link>
+                  </li>
+                  <li>
+                    → <Link href="/tratamientos/apraxia-del-habla-infantil-chillan" className="font-medium text-rose-600 underline hover:text-rose-700">Apraxia del habla infantil</Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="rounded-xl border border-rose-100 bg-rose-50 p-6">
+                <h3 className="mb-3 text-xl font-semibold text-gray-900">
+                  Lectoescritura
+                </h3>
+                <p className="mb-3 text-gray-700">
+                  Conciencia fonológica, habilidades pre-lectoras, lectura, escritura y comprensión lectora.
+                </p>
+                <ul className="space-y-1 text-sm text-gray-600">
+                  <li>
+                    → <Link href="/servicios/dificultades-lectoescritura" className="font-medium text-rose-600 underline hover:text-rose-700">Dificultades de lectoescritura</Link>
+                  </li>
+                  <li>
+                    → <Link href="/servicios/conciencia-fonologica" className="font-medium text-rose-600 underline hover:text-rose-700">Conciencia fonológica</Link>
+                  </li>
+                  <li>
+                    → <Link href="/chillan/dislexia" className="font-medium text-rose-600 underline hover:text-rose-700">Dislexia y fonoaudiología</Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="rounded-xl border border-rose-100 bg-rose-50 p-6">
+                <h3 className="mb-3 text-xl font-semibold text-gray-900">
+                  TEL, TDL y otras dificultades
+                </h3>
+                <p className="mb-3 text-gray-700">
+                  Trastornos persistentes del lenguaje, apoyo en TEA (Trastorno del Espectro Autista) y evaluaciones PIE.
+                </p>
+                <ul className="space-y-1 text-sm text-gray-600">
+                  <li>
+                    → <Link href="/tratamientos/tel-trastorno-especifico-lenguaje-chillan" className="font-medium text-rose-600 underline hover:text-rose-700">TEL / TDL en Chillán</Link>
+                  </li>
+                  <li>
+                    → <Link href="/servicios/tea-trastorno-espectro-autista" className="font-medium text-rose-600 underline hover:text-rose-700">Apoyo en TEA (comunicación)</Link>
+                  </li>
+                  <li>
+                    → <Link href="/servicios/informe-fonoaudiologico-pie-chillan" className="font-medium text-rose-600 underline hover:text-rose-700">Informe fonoaudiológico PIE</Link>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
