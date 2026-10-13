@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SITE_URL, whatsappUrl } from "@/lib/site";
 import { buildPageMetadata } from "@/lib/seo";
 import { Breadcrumbs } from "../../_components/Breadcrumbs";
@@ -12,11 +13,16 @@ const WHATSAPP_HREF = whatsappUrl("Hola, quiero consultar por TEL");
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "TEL: ¿Se Cura? Tratamiento del Trastorno Específico del Lenguaje — Chillán",
+  title: "¿El TEL Se Cura? Diagnóstico y Tratamiento | Chillán",
   description:
-    "El TEL no se cura pero mejora mucho con terapia intensiva. Diagnóstico, tratamiento y apoyo escolar para niños con Trastorno Específico del Lenguaje (TDL) en Chillán. +20 años de experiencia.",
+    "¿El TEL se cura? No desaparece, pero mejora mucho con terapia intensiva. Qué es el TEL, diagnóstico (TDL) y tratamiento en Chillán. +20 años de experiencia.",
   keywords: [
+    "el tel se cura",
     "TEL se cura",
+    "tel",
+    "tel diagnostico",
+    "tel diagnóstico",
+    "trastorno específico del lenguaje",
     "trastorno específico del lenguaje se cura",
     "TEL tratamiento",
     "TEL Chillán",
@@ -96,6 +102,14 @@ const faqJsonLd = {
         text: "El tratamiento del TEL suele ser prolongado, generalmente de 1-3 años dependiendo de la severidad. Se requieren sesiones regulares (1-2 por semana) y trabajo constante en casa y en el colegio para lograr avances significativos.",
       },
     },
+    {
+      "@type": "Question",
+      name: "¿Cómo se diagnostica el TEL?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "El diagnóstico del TEL se hace con una evaluación fonoaudiológica especializada: entrevista a la familia, observación clínica y pruebas específicas de lenguaje. Se confirma cuando hay dificultades persistentes de lenguaje sin una causa evidente como pérdida auditiva, discapacidad intelectual o daño neurológico, y con inteligencia general conservada.",
+      },
+    },
   ],
 };
 
@@ -128,8 +142,18 @@ export default function TELPage() {
                   💬 Trastorno del neurodesarrollo
                 </span>
                 <h1 className="mb-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
-                  TEL: ¿se cura? Tratamiento en Chillán
+                  ¿El TEL se cura? Diagnóstico y tratamiento en Chillán
                 </h1>
+                <div className="mb-6 rounded-2xl border-2 border-rose-200 bg-rose-50 p-5">
+                  <p className="text-lg font-semibold text-gray-900">
+                    <strong>Respuesta rápida:</strong> El TEL no se cura: es una
+                    condición que acompaña a la persona. Con terapia intensiva y
+                    temprana los niños mejoran mucho sus habilidades
+                    lingüísticas y desarrollan estrategias compensatorias. El
+                    diagnóstico se hace con evaluación fonoaudiológica
+                    especializada.
+                  </p>
+                </div>
                 <p className="mb-6 text-xl text-gray-600">
                   El Trastorno Específico del Lenguaje no desaparece solo, pero
                   con terapia intensiva y temprana los niños mejoran
@@ -232,6 +256,48 @@ export default function TELPage() {
               ))}
             </div>
 
+            <div className="mt-10 rounded-2xl border border-rose-100 bg-white p-6 shadow-sm">
+              <h2 className="mb-3 text-2xl font-bold text-gray-900">
+                ¿Cómo se diagnostica el TEL?
+              </h2>
+              <p className="text-gray-700">
+                El <strong>diagnóstico del TEL</strong> (también llamado TDL) se
+                hace con una evaluación fonoaudiológica especializada:
+                entrevista a la familia, observación clínica y pruebas
+                específicas de lenguaje. Se confirma cuando el niño tiene
+                dificultades persistentes de lenguaje{" "}
+                <strong>sin una causa evidente</strong> como pérdida auditiva,
+                discapacidad intelectual o daño neurológico, y con inteligencia
+                general conservada.
+              </p>
+              <p className="mt-3 text-gray-600">
+                No es lo mismo que un retraso del lenguaje transitorio: el TEL
+                es persistente y requiere intervención especializada. Una{" "}
+                <Link
+                  href="/servicios/evaluacion-fonoaudiologica"
+                  className="font-medium text-rose-600 underline"
+                >
+                  evaluación fonoaudiológica
+                </Link>{" "}
+                diferencia ambos perfiles. Para la definición clínica puedes
+                leer el{" "}
+                <Link
+                  href="/glosario/tel"
+                  className="font-medium text-rose-600 underline"
+                >
+                  glosario de TEL
+                </Link>{" "}
+                y la{" "}
+                <Link
+                  href="/comparaciones/tel-vs-retraso-del-lenguaje"
+                  className="font-medium text-rose-600 underline"
+                >
+                  diferencia entre TEL y retraso del lenguaje
+                </Link>
+                .
+              </p>
+            </div>
+
             <div className="mt-10 text-center">
               <WhatsAppCTA href={WHATSAPP_HREF}>
                 Consultar mi caso por WhatsApp
@@ -318,6 +384,23 @@ export default function TELPage() {
               Preguntas frecuentes sobre TEL
             </h2>
             <div className="space-y-4">
+              <details className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm" open>
+                <summary className="flex cursor-pointer items-start justify-between gap-4 font-semibold text-gray-900">
+                  <span>¿Qué es el TEL o Trastorno Específico del Lenguaje?</span>
+                  <span className="flex-shrink-0 text-rose-500 transition-transform group-open:rotate-180">
+                    ▼
+                  </span>
+                </summary>
+                <p className="mt-4 text-gray-600">
+                  El TEL es un trastorno del neurodesarrollo que afecta la
+                  adquisición y desarrollo del lenguaje sin que exista una causa
+                  evidente como pérdida auditiva, discapacidad intelectual o
+                  daño neurológico. También se llama TDL (Trastorno del
+                  Desarrollo del Lenguaje). Afecta aproximadamente al 7% de los
+                  niños.
+                </p>
+              </details>
+
               <details className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
                 <summary className="flex cursor-pointer items-start justify-between gap-4 font-semibold text-gray-900">
                   <span>¿El TEL se cura con tratamiento?</span>
@@ -348,6 +431,24 @@ export default function TELPage() {
                   1-3 años dependiendo de la severidad. Se requieren sesiones
                   regulares (1-2 por semana) y trabajo constante en casa y en el
                   colegio para lograr avances significativos.
+                </p>
+              </details>
+
+              <details className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+                <summary className="flex cursor-pointer items-start justify-between gap-4 font-semibold text-gray-900">
+                  <span>¿Cómo se diagnostica el TEL?</span>
+                  <span className="flex-shrink-0 text-rose-500 transition-transform group-open:rotate-180">
+                    ▼
+                  </span>
+                </summary>
+                <p className="mt-4 text-gray-600">
+                  El diagnóstico del TEL se hace con una evaluación
+                  fonoaudiológica especializada: entrevista a la familia,
+                  observación clínica y pruebas específicas de lenguaje. Se
+                  confirma cuando hay dificultades persistentes de lenguaje sin
+                  una causa evidente como pérdida auditiva, discapacidad
+                  intelectual o daño neurológico, y con inteligencia general
+                  conservada.
                 </p>
               </details>
 
@@ -392,7 +493,7 @@ export default function TELPage() {
               Servicios relacionados
             </h2>
             <div className="grid gap-4 sm:grid-cols-3">
-              <a
+              <Link
                 href="/servicios/terapia-lenguaje-infantil"
                 className="rounded-xl border border-gray-200 bg-white p-4 text-center transition-colors hover:border-rose-300"
               >
@@ -400,8 +501,26 @@ export default function TELPage() {
                 <p className="mt-2 font-medium text-gray-900">
                   Terapia de lenguaje infantil
                 </p>
-              </a>
-              <a
+              </Link>
+              <Link
+                href="/glosario/tel"
+                className="rounded-xl border border-gray-200 bg-white p-4 text-center transition-colors hover:border-rose-300"
+              >
+                <span className="text-2xl">📖</span>
+                <p className="mt-2 font-medium text-gray-900">
+                  ¿Qué es el TEL?
+                </p>
+              </Link>
+              <Link
+                href="/comparaciones/tel-vs-retraso-del-lenguaje"
+                className="rounded-xl border border-gray-200 bg-white p-4 text-center transition-colors hover:border-rose-300"
+              >
+                <span className="text-2xl">⚖️</span>
+                <p className="mt-2 font-medium text-gray-900">
+                  TEL vs retraso del lenguaje
+                </p>
+              </Link>
+              <Link
                 href="/servicios/tea-trastorno-espectro-autista"
                 className="rounded-xl border border-gray-200 bg-white p-4 text-center transition-colors hover:border-rose-300"
               >
@@ -409,8 +528,8 @@ export default function TELPage() {
                 <p className="mt-2 font-medium text-gray-900">
                   TEA y comunicación
                 </p>
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/servicios/dificultades-lectoescritura"
                 className="rounded-xl border border-gray-200 bg-white p-4 text-center transition-colors hover:border-rose-300"
               >
@@ -418,7 +537,7 @@ export default function TELPage() {
                 <p className="mt-2 font-medium text-gray-900">
                   Lectoescritura
                 </p>
-              </a>
+              </Link>
             </div>
           </div>
         </section>

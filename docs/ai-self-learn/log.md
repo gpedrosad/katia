@@ -4,6 +4,11 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 
 ---
 
+## 2026-10-13
+
+- SEO | Lote 8 segundo pase páginas Lote 2 (estimular casa, TEL servicio, voz online nacional, evaluación, sobre Katia, 3 síntomas) | Query-match title/H1/FAQ/snippet; sin inventar datos; no se tocaron Lotes 3-7 ni city pages. Changelog `SEO-CHANGELOG.md`
+- GSC | Corte 90d 2026-07-15→2026-10-12: 87 clic / 5.146 imp / CTR 1,7% / pos 8,0 · 7d 7/542 pos 8,2 | Fresh pull 10-13 bloqueado: OAuth `invalid_grant` → `npm run gsc:auth` antes del próximo informe
+
 ## 2026-09-29
 
 - Meta | Funnel consciente del problema (no oferta): anuncio nombra el momento; landing educa/calma; CTA paso chico; consulta después | Landing **8,5/10** post-ajuste. Doc `app/meta/primeros-30-dias-tea/funnel-consciente-del-problema.md`

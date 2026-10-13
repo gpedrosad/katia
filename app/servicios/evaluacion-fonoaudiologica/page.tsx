@@ -13,10 +13,9 @@ const WHATSAPP_HREF = whatsappUrl("Hola, quiero agendar una evaluación fonoaudi
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title:
-    "Evaluación Fonoaudiológica Infantil en Chillán — 60 min + Informe",
+  title: "Evaluación Fonoaudiológica: Qué Es, 60 min e Informe | Chillán",
   description:
-    "Evaluación fonoaudiológica en Chillán: 60 min, test estandarizados, diagnóstico de lenguaje y habla, informe escrito para el colegio y plan de tratamiento. +20 años, U. de Chile.",
+    "Evaluación fonoaudiológica en Chillán: qué es, 60 minutos, test estandarizados, diagnóstico de lenguaje y habla, informe escrito para el colegio y plan de tratamiento. +20 años, U. de Chile.",
   keywords: [
     "evaluación fonoaudiológica",
     "evaluacion fonoaudiologica",
@@ -165,8 +164,19 @@ export default function EvaluacionFonoaudiologicaPage() {
                   📋 Primera consulta
                 </span>
                 <h1 className="mb-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
-                  Evaluación fonoaudiológica en Chillán
+                  Evaluación fonoaudiológica: qué es y cómo se hace en Chillán
                 </h1>
+                <div className="mb-6 rounded-2xl border-2 border-rose-200 bg-rose-50 p-5">
+                  <p className="text-lg font-semibold text-gray-900">
+                    <strong>Respuesta rápida:</strong> Una evaluación
+                    fonoaudiológica es un proceso clínico de unos 60 minutos en
+                    el que se aplican pruebas estandarizadas y observación para
+                    ver si hay un trastorno de lenguaje, habla o comunicación.
+                    Incluye entrevista a padres, evaluación directa del niño e
+                    informe escrito para el colegio, con diagnóstico y plan de
+                    tratamiento.
+                  </p>
+                </div>
                 <p className="mb-6 text-xl text-gray-600">
                   Evaluación completa del lenguaje, habla y comunicación de tu
                   hijo. Incluye informe detallado y plan de tratamiento
@@ -226,6 +236,17 @@ export default function EvaluacionFonoaudiologicaPage() {
         {/* What's Included */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
+            <h2 className="mb-4 text-center text-3xl font-bold text-gray-900">
+              ¿Qué es una evaluación fonoaudiológica?
+            </h2>
+            <p className="mb-10 text-center text-lg text-gray-600">
+              Es un proceso clínico en el que una fonoaudióloga aplica pruebas
+              estandarizadas y observación para determinar si un niño tiene un
+              trastorno del lenguaje, habla o comunicación. Incluye entrevista
+              a padres, evaluación directa y un informe con diagnóstico y plan
+              de tratamiento. Se puede evaluar desde los 18-24 meses si hay
+              señales de alerta; no existe una edad mínima estricta.
+            </p>
             <h2 className="mb-4 text-center text-3xl font-bold text-gray-900">
               ¿Qué incluye la evaluación fonoaudiológica?
             </h2>

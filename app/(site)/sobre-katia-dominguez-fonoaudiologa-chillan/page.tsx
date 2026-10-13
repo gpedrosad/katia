@@ -3,7 +3,12 @@ import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 import { StickyWhatsApp } from "@/app/_components/StickyWhatsApp";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import { buildPageMetadata } from "@/lib/seo";
-import { SITE_URL, whatsappUrl } from "@/lib/site";
+import {
+  BUSINESS_HOURS,
+  SITE_URL,
+  whatsappUrl,
+} from "@/lib/site";
+import { GOOGLE_REVIEWS_AGGREGATE } from "@/lib/google-reviews";
 import {
   MEDICAL_BUSINESS_ID,
   buildMedicalBusinessJsonLd,
@@ -14,13 +19,15 @@ const WHATSAPP_LINK = whatsappUrl("Hola, quiero agendar una evaluación con Kati
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Katia Domínguez, Fonoaudióloga Infantil en Chillán",
+  title: "Katia Domínguez, Fonoaudióloga en Chillán | Fonoaudiólogo Infantil",
   description:
-    "Fonoaudióloga U. de Chile con +20 años en lenguaje, habla, TEL y lectoescritura infantil. Atención presencial en Chillán.",
+    "Katia Domínguez, fonoaudióloga infantil en Chillán (también te encuentran como fonoaudiólogo Chillán). U. de Chile, +20 años en lenguaje, habla, TEL y lectoescritura. Atención presencial.",
   keywords: [
     "Katia Domínguez",
-    "fonoaudióloga Chillán",
+    "katia dominguez",
     "fonoaudiólogo Chillán",
+    "fonoaudiologo chillan",
+    "fonoaudióloga Chillán",
     "fonoaudióloga infantil Chillán",
     "fonoaudióloga niños Chillán",
   ],
@@ -59,6 +66,14 @@ const signals = [
 ];
 
 const faqs = [
+  {
+    q: "¿Quién es Katia Domínguez?",
+    a: "Katia Domínguez es fonoaudióloga infantil en Chillán, titulada de la Universidad de Chile, con postítulo en trastorno fonológico y más de 20 años de experiencia clínica en lenguaje, habla, TEL y lectoescritura. Atención presencial de lunes a viernes.",
+  },
+  {
+    q: "¿Hay fonoaudiólogo en Chillán para niños?",
+    a: "Sí. Si buscas fonoaudiólogo en Chillán para evaluación o terapia infantil, Katia Domínguez atiende de forma presencial en Chillán, Región de Ñuble: lenguaje, habla, TEL, pronunciación y lectoescritura.",
+  },
   {
     q: "¿Katia Domínguez atiende niños en Chillán?",
     a: "Sí, la atención es presencial en Chillán, Región de Ñuble. Atiendo niños en edad preescolar y escolar con dificultades de lenguaje, habla y lectoescritura.",
@@ -121,11 +136,11 @@ export default function SobrePage() {
             <Breadcrumbs items={[{ label: "Inicio", href: "/" }, { label: "Sobre Katia" }]} />
             <span className="mb-4 mt-6 inline-block rounded-full bg-rose-100 px-4 py-2 text-sm font-medium text-rose-700">Fonoaudióloga infantil</span>
             <h1 className="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl">Katia Domínguez, fonoaudióloga infantil en Chillán</h1>
-            <p className="mb-6 text-xl text-gray-600">Más de 20 años de experiencia acompañando a niños que hablan poco, no arman frases, pronuncian mal o necesitan evaluación de lenguaje, habla, TEL, TEA y lectoescritura.</p>
+            <p className="mb-6 text-xl text-gray-600">Más de 20 años de experiencia acompañando a niños que hablan poco, no arman frases, pronuncian mal o necesitan evaluación de lenguaje, habla, TEL, TEA y lectoescritura. Si buscas fonoaudiólogo en Chillán para niños, la atención es presencial.</p>
             <ul className="mb-8 space-y-3 text-gray-700">
-              <li className="flex gap-3"><span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">✓</span><span>Atención presencial en Chillán</span></li>
-              <li className="flex gap-3"><span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">✓</span><span>Experiencia clínica con infancia y etapa escolar</span></li>
-              <li className="flex gap-3"><span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">✓</span><span>Informe y plan de tratamiento cuando corresponde</span></li>
+              <li className="flex gap-3"><span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">✓</span><span>Fonoaudióloga titulada Universidad de Chile, postítulo en trastorno fonológico</span></li>
+              <li className="flex gap-3"><span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">✓</span><span>Atención presencial en Chillán, {BUSINESS_HOURS.daysLabel} de {BUSINESS_HOURS.opens} a {BUSINESS_HOURS.closes}</span></li>
+              <li className="flex gap-3"><span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">✓</span><span>Informe y plan de tratamiento cuando corresponde · {GOOGLE_REVIEWS_AGGREGATE.ratingValue} en Google ({GOOGLE_REVIEWS_AGGREGATE.reviewCount} reseñas)</span></li>
             </ul>
             <WhatsAppCTA href={WHATSAPP_LINK}>Agendar evaluación por WhatsApp</WhatsAppCTA>
           </div>
@@ -171,8 +186,9 @@ export default function SobrePage() {
           <div className="mx-auto max-w-4xl">
             <h2 className="mb-6 text-center text-3xl font-bold text-gray-900">Formación y experiencia clínica</h2>
             <div className="mx-auto max-w-3xl space-y-4 text-gray-600">
-              <p>Katia Domínguez es fonoaudióloga con más de 20 años de experiencia clínica en evaluación y tratamiento de trastornos del lenguaje, habla y lectoescritura en población infantil.</p>
+              <p>Katia Domínguez es fonoaudióloga titulada de la Universidad de Chile, con postítulo en trastorno fonológico y más de 20 años de experiencia clínica en evaluación y tratamiento de trastornos del lenguaje, habla y lectoescritura en población infantil.</p>
               <p>Ha trabajado con niños en edad preescolar y escolar, abordando desde retrasos simples del habla hasta cuadros más complejos como TEL/TDL, trastornos fonológicos y dificultades de comunicación asociadas a TEA.</p>
+              <p>Si buscas fonoaudiólogo en Chillán, la atención es presencial en la comuna, {BUSINESS_HOURS.daysLabel} de {BUSINESS_HOURS.opens} a {BUSINESS_HOURS.closes}. El horario y el contacto se coordinan por WhatsApp.</p>
               <p>Su enfoque combina evaluación rigurosa, trabajo coordinado con la familia y el colegio, y un lenguaje claro para que las familias entiendan qué le pasa a su hijo y qué se puede hacer.</p>
             </div>
           </div>

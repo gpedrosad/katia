@@ -15,7 +15,9 @@ export const metadata = buildPageMetadata({
     "¿Tu hijo de 2 años no forma frases o solo dice palabras sueltas como «mamá ven» o «más pan»? Hitos esperados, señales y cuándo evaluar en Chillán.",
   keywords: [
     "mi hijo de 2 años no forma frases",
+    "hijo no arma frases",
     "niño no forma frases",
+    "niño de 2 años no habla",
     "hijo de 2 años solo palabras sueltas",
     "fonoaudióloga Chillán",
     "fonoaudiología infantil",
@@ -93,6 +95,15 @@ export default function HijoNoArmaFrasesPage() {
             <h1 className="mb-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
               Mi hijo de 2 años no forma frases: cuándo consultar en Chillán
             </h1>
+            <div className="mb-6 rounded-2xl border-2 border-sky-200 bg-sky-50 p-5">
+              <p className="text-lg font-semibold text-gray-900">
+                <strong>Respuesta rápida:</strong> Entre los 18 y 24 meses
+                suelen aparecer frases de dos palabras («mamá ven», «más pan»).
+                Si tu hijo de 2 años solo usa palabras sueltas o gestos, o a
+                los 3 años no arma oraciones simples, conviene evaluar lenguaje
+                expresivo y comprensión —no esperar varios meses sin orientación.
+              </p>
+            </div>
             <p
               data-speakable
               className="mb-6 text-xl leading-relaxed text-gray-600"
@@ -153,13 +164,35 @@ export default function HijoNoArmaFrasesPage() {
             <h2 className="mb-6 text-center text-3xl font-bold text-gray-900">
               ¿Qué puede estar pasando?
             </h2>
+            <p className="mb-4 text-center text-gray-600">
+              Que un niño de 2 años no forme frases puede ser:
+            </p>
+            <ul className="mx-auto mb-8 max-w-2xl space-y-3 text-gray-700">
+              <li>
+                <strong>Retraso expresivo:</strong> nombra objetos pero no
+                combina dos palabras con intención («mamá ven», «más pan»).
+              </li>
+              <li>
+                <strong>Retraso del lenguaje más amplio:</strong> también cuesta
+                la comprensión, no solo las frases.
+              </li>
+              <li>
+                <strong>TEL:</strong> si el desfase es persistente y no se
+                explica por audición o desarrollo general, conviene diferenciarlo
+                de un retraso transitorio.
+              </li>
+            </ul>
             <p className="mb-8 text-center text-gray-600">
-              Consulta{" "}
+              En casa puedes expandir lo que dice (si dice «agua», modela
+              «quiero agua») sin exigir repetición inmediata; eso no reemplaza
+              una evaluación. Consulta{" "}
               <Link href="/tratamientos/retraso-del-lenguaje-chillan">retraso del lenguaje</Link>
               ,{" "}
               <Link href="/tratamientos/tel-trastorno-especifico-lenguaje-chillan">TEL</Link>
               , <Link href="/glosario/tel">glosario</Link>,{" "}
               <Link href="/chillan/retraso-del-lenguaje">Chillán</Link>,{" "}
+              <Link href="/recursos/estimular-lenguaje-en-casa">estimulación del lenguaje en casa</Link>
+              ,{" "}
               <Link href="/servicios/terapia-lenguaje-infantil">terapia de lenguaje</Link>{" "}
               y <Link href="/servicios/evaluacion-fonoaudiologica">evaluación</Link>.
             </p>
@@ -232,9 +265,9 @@ export default function HijoNoArmaFrasesPage() {
                 <span className="text-2xl">📖</span>
                 <p className="mt-2 font-medium text-gray-900">Glosario TEL</p>
               </Link>
-              <Link href="/sintomas/hijo-no-arma-frases-chillan" className="rounded-xl border border-gray-200 p-4 text-center transition-colors hover:border-sky-300 hover:bg-sky-50">
-                <span className="text-2xl">📝</span>
-                <p className="mt-2 font-medium text-gray-900">No arma frases</p>
+              <Link href="/sintomas/mi-hijo-no-habla-bien-chillan" className="rounded-xl border border-gray-200 p-4 text-center transition-colors hover:border-sky-300 hover:bg-sky-50">
+                <span className="text-2xl">🗣️</span>
+                <p className="mt-2 font-medium text-gray-900">No habla bien</p>
               </Link>
             </div>
           </div>

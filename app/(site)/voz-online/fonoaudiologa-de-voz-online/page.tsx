@@ -7,12 +7,17 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/fonoaudiologa-de-voz-online",
-  title:
-    "Fonoaudióloga de Voz Online — Todo Chile, 100% por Videollamada",
+  title: "Fonoaudióloga Especialista en Voz Online | Todo Chile",
   description:
-    "Terapia de voz 100% online por videollamada para todo Chile: disfonía, nódulos, fatiga vocal, rehabilitación post-cirugía. Sin traslados, agenda flexible. Fonoaudióloga U. de Chile, +20 años.",
+    "Fonoaudióloga especialista en voz, 100% online por videollamada para todo Chile. Disfonía, nódulos, fatiga vocal. Fonoaudióloga online / fonoaudiólogo online, sin traslados. U. de Chile, +20 años.",
   keywords: [
+    "fonoaudiólogo especialista en voz",
     "fonoaudióloga especialista en voz",
+    "fonoaudiologo online",
+    "fonoaudióloga online",
+    "fonoaudiologa online",
+    "fonoaudiologia voz",
+    "fonoaudiología especialista en voz",
     "fonoaudióloga de voz online",
     "especialista en voz Chile",
     "terapia de voz online todo Chile",
@@ -24,6 +29,16 @@ export const metadata = buildPageMetadata({
 });
 
 const faqItems = [
+  {
+    question: "¿Qué hace una fonoaudióloga especialista en voz?",
+    answer:
+      "Una fonoaudióloga especialista en voz evalúa y trata trastornos vocales: disfonía, nódulos, fatiga vocal, rehabilitación post-cirugía e higiene vocal para docentes y profesionales de la voz. En esta consulta el trabajo es 100% online por videollamada, para adultos en todo Chile.",
+  },
+  {
+    question: "¿Puedo atenderme con una fonoaudióloga online desde cualquier ciudad de Chile?",
+    answer:
+      "Sí. El servicio de fonoaudióloga online / fonoaudiólogo online de voz está disponible para todo Chile: Santiago, regiones y localidades sin especialista en voz cercano. Sin traslados y con agenda flexible.",
+  },
   {
     question: "¿Qué trastornos de la voz se pueden tratar online?",
     answer:
@@ -82,8 +97,11 @@ export default function FonoaudiologaVozOnlinePage() {
         <article className="prose prose-sky lg:prose-lg max-w-none">
           <header className="mb-12 rounded-3xl bg-gradient-to-br from-sky-50 to-indigo-50 px-8 py-12 text-center text-sky-950">
             <h1 className="mb-4 text-4xl font-extrabold tracking-tight sm:text-5xl">
-              ¿Sientes que tu voz te abandona cuando más la necesitas?
+              Fonoaudióloga especialista en voz online para todo Chile
             </h1>
+            <p className="mx-auto mb-4 max-w-3xl text-2xl font-semibold leading-snug text-sky-900">
+              ¿Sientes que tu voz te abandona cuando más la necesitas?
+            </p>
             <p
               className="mx-auto max-w-3xl text-xl leading-relaxed text-sky-800/80"
               data-speakable
@@ -112,6 +130,26 @@ export default function FonoaudiologaVozOnlinePage() {
               <p className="text-sm font-medium text-sky-700">🗓️ Agenda abierta. Cupos limitados para pacientes nuevos este mes.</p>
             </div>
           </header>
+
+          <section className="my-12">
+            <h2 className="text-3xl font-bold text-sky-900 border-b pb-4">
+              Fonoaudióloga especialista en voz, 100% online
+            </h2>
+            <p className="text-gray-700 leading-relaxed">
+              Katia Domínguez es fonoaudióloga especialista en voz. La consulta
+              es <strong>fonoaudióloga online</strong> (fonoaudiólogo online) por
+              videollamada, para adultos en todo Chile: disfonía, nódulos,
+              fatiga vocal y rehabilitación post-cirugía. Sin traslados, con
+              agenda flexible.
+            </p>
+            <p className="text-gray-700 leading-relaxed mt-4">
+              Si buscas fonoaudiología de voz con una especialista, el trabajo
+              es por videollamada: evaluación vocal, ejercicios guiados e
+              higiene vocal para docentes y profesionales de la voz. La
+              tele-rehabilitación en adultos tiene resultados comparables a la
+              presencial cuando se usan protocolos estandarizados.
+            </p>
+          </section>
 
           <section className="my-12">
             <h2 className="text-3xl font-bold text-sky-900 border-b pb-4">

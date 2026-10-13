@@ -1,6 +1,6 @@
 # INDEX — hechos densos (leer primero)
 
-Actualizado: **2026-09-06**
+Actualizado: **2026-10-13**
 
 ## Identidad / NAP
 
@@ -57,6 +57,8 @@ Actualizado: **2026-09-06**
 - Ruta local `terapia de lenguaje chillán`: `/servicios/terapia-de-lenguaje-infantil-chillan` está vacía/redirigida a `/servicios/terapia-lenguaje-infantil`; no analizarla como página standalone
 - Auth GSC: OAuth en `.secrets/gsc-oauth-token.json` · `npm run gsc:report:md` · site `sc-domain:katialafono.cl`
 - Contador sitemap 0/84 = **falsa alarma** (páginas indexadas por otros medios)
+- Lote 8 (2026-10-13): segundo pase páginas Lote 2 · GSC 90d 07-15..10-12: **87 clic / 5.146 imp / CTR 1,7% / pos 8,0** · pull 10-13 no posible (`invalid_grant`) · changelog `SEO-CHANGELOG.md` · `pendiente:` indexar 8 URLs y medir 14-21 días
+- Congeladas post-Lote 8: Lotes 3-7 + city pages voz-online + `/ads` + `/sitelink` + relacionadas TEL/evaluación listadas en el brief
 
 ## Stack / convenciones
 

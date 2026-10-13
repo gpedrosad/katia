@@ -95,6 +95,15 @@ export default function MiHijoNoHablaBienPage() {
             <h1 className="mb-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
               Mi hijo no habla bien o no se le entiende: cuándo consultar en Chillán
             </h1>
+            <div className="mb-6 rounded-2xl border-2 border-amber-200 bg-amber-50 p-5">
+              <p className="text-lg font-semibold text-gray-900">
+                <strong>Respuesta rápida:</strong> Si no se le entiende al
+                hablar, habla como bebé o extraños entienden poco, conviene
+                evaluar. A los 3 años extraños deberían entender gran parte; a
+                los 2 años se esperan frases de dos palabras. Puede ser habla
+                (sonidos), lenguaje (palabras y frases) o ambos.
+              </p>
+            </div>
             <p
               data-speakable
               className="mb-6 text-xl leading-relaxed text-gray-600"
@@ -155,6 +164,25 @@ export default function MiHijoNoHablaBienPage() {
             <h2 className="mb-6 text-center text-3xl font-bold text-gray-900">
               ¿Qué puede estar pasando?
             </h2>
+            <p className="mb-4 text-center text-gray-600">
+              «Mi hijo no habla bien» cubre varias situaciones distintas:
+            </p>
+            <ul className="mx-auto mb-8 max-w-2xl space-y-3 text-gray-700">
+              <li>
+                <strong>No se le entiende al hablar:</strong> extraños entienden
+                poco; puede ser pronunciación (dislalia, trastorno fonológico)
+                o también lenguaje.
+              </li>
+              <li>
+                <strong>Habla como bebé:</strong> frases muy simples o errores
+                de sonidos que no mejoran con la edad.
+              </li>
+              <li>
+                <strong>Habla vs lenguaje:</strong> el habla son los sonidos;
+                el lenguaje son palabras, frases y comprensión. A veces es
+                ambos.
+              </li>
+            </ul>
             <p className="mb-8 text-center text-gray-600">
               Puede haber{" "}
               <Link href="/tratamientos/retraso-del-lenguaje-chillan">retraso del lenguaje</Link>
@@ -165,6 +193,8 @@ export default function MiHijoNoHablaBienPage() {
               Mira{" "}
               <Link href="/fonoaudiologa-ninos-chillan">lenguaje infantil en Chillán</Link>
               , <Link href="/glosario/tel">glosario TEL</Link>,{" "}
+              <Link href="/recursos/estimular-lenguaje-en-casa">estimulación del lenguaje en casa</Link>
+              ,{" "}
               <Link href="/servicios/terapia-lenguaje-infantil">terapia de lenguaje</Link>{" "}
               y <Link href="/servicios/evaluacion-fonoaudiologica">evaluación</Link>.
             </p>

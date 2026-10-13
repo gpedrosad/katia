@@ -20,6 +20,131 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-10-13: SEO Lote 8 — Segundo pase data-driven en páginas Lote 2 (7 días)
+
+### Contexto
+
+**Datos GSC (90 días 2026-07-15 al 2026-10-12, dataState=all; pull 10-13 no posible por OAuth expirado):**
+- **87 clics totales**
+- **5.146 impresiones**
+- **CTR promedio: 1,7%**
+- **Posición promedio: 8,0**
+
+**Datos últimos 7 días (2026-10-06 al 2026-10-12):** 7 clics / 542 imp / pos 8,2 vs 7 días previos: 6 / 605 / pos 7,5
+
+**Páginas congeladas (Lotes 3-7, city pages de voz-online, `/ads`, `/sitelink`):** Sin cambios. Relacionadas TEL/evaluación listadas en el brief tampoco se editaron (`/tratamientos/tel-trastorno-especifico-lenguaje-chillan`, `/glosario/tel`, `/comparaciones/tel-vs-retraso-del-lenguaje`, `/evaluacion-fonoaudiologica-infantil-chillan`, `/recursos/primera-evaluacion-fonoaudiologica-infantil`).
+
+**Problema detectado (páginas Lote 2, ~7 días post-cambio):**
+1. `/recursos/estimular-lenguaje-en-casa`: 302 imp / 4 clics / pos 14,8. Query «estimulación del lenguaje» 55 imp pos 34; cluster «cómo hacer/empezar terapia de lenguaje en casa» pos 9-16 con 0 clics.
+2. `/servicios/tel-trastorno-especifico-lenguaje`: 82 imp / 0 clics / pos 10,7. «el tel se cura» 22 imp pos 9,4; «tel diagnostico» sin captura.
+3. `/voz-online/fonoaudiologa-de-voz-online`: 262 imp / 9 clics / pos 8,6; 7d 0/35. Queries «fonoaudiólogo especialista en voz», «fonoaudiologo online», «fonoaudiologia voz». H1 previo no tenía keyword.
+4. `/servicios/evaluacion-fonoaudiologica`: 119 imp / 1 clic / pos 9,9. Query exacta «evaluacion fonoaudiologica» 36 imp pos 18.
+5. `/sobre-katia-dominguez-fonoaudiologa-chillan`: 208 imp / 3 clics / pos 6,5. «katia dominguez» pos 11 (home gana); «fonoaudiologo chillan» pos 55.
+6. Síntomas Lote 2 con casi nulas impresiones: `/sintomas/nino-no-entiende-instrucciones-chillan` (42 imp pos 5,4), `/sintomas/mi-hijo-no-habla-bien-chillan` (28 imp pos 5,8), `/sintomas/hijo-no-arma-frases-chillan` (26 imp pos 5,8).
+
+**Objetivo:** Query-match on-page (title/H1/H2/FAQ/snippet) sin inventar datos clínicos, duraciones ni NAP. Medir 14-21 días post-indexación.
+
+### Páginas optimizadas
+
+#### 1. `/recursos/estimular-lenguaje-en-casa`
+**Métricas GSC previas:** 302 imp 90d, 4 clics, pos 14,8; 7d 0/25
+
+**Cambios:**
+- **Title:** `"¿Cómo Empezar a Estimular el Lenguaje en Casa? Guía Práctica"` → `"Estimulación del Lenguaje en Casa | Terapia de Lenguaje"`
+- **Description / H1:** Incluyen «estimulación del lenguaje» y «cómo hacer terapia de lenguaje en casa»
+- **Contenido:** Caja de respuesta rápida; H2 «¿Qué es la estimulación del lenguaje?» y «¿Cómo hacer terapia de lenguaje en casa?» (reutiliza pautas ya existentes: seguir atención, modelar, expandir, no interrogar)
+- **FAQ:** Añadidas las 3 queries GSC; se mantiene el dato ya publicado de 15-20 minutos (no se inventó duración nueva)
+- **Schema:** `dateModified` 2026-10-13
+- **Enlaces:** Terapia de lenguaje infantil + evaluación
+
+**Objetivo:** Bajar de pos ~34 en «estimulación del lenguaje» y capturar el cluster «terapia de lenguaje en casa» (CTR > 2%)
+
+---
+
+#### 2. `/servicios/tel-trastorno-especifico-lenguaje`
+**Métricas GSC previas:** 82 imp, 0 clics, pos 10,7 — «el tel se cura» 0/22 pos 9,4
+
+**Cambios:**
+- **Title:** `"TEL: ¿Se Cura? Tratamiento del Trastorno Específico del Lenguaje — Chillán"` → `"¿El TEL Se Cura? Diagnóstico y Tratamiento | Chillán"`
+- **Description / H1 / caja de respuesta:** «El TEL no se cura» + mejora con terapia intensiva (copy ya existente)
+- **Contenido:** Sección «¿Cómo se diagnostica el TEL?» con hechos ya en la página (evaluación, sin causa evidente, inteligencia conservada)
+- **FAQ + schema:** «¿Qué es el TEL?» visible; «¿Cómo se diagnostica el TEL?»
+- **Enlaces:** A `/glosario/tel` y `/comparaciones/tel-vs-retraso-del-lenguaje` (páginas no editadas)
+- **No se añadieron** porcentajes, duraciones ni tests nuevos; se conservan 7% y 1-3 años ya publicados
+
+**Objetivo CTR:** > 3% en «el tel se cura»; visibilidad en «tel diagnostico»
+
+---
+
+#### 3. `/voz-online/fonoaudiologa-de-voz-online`
+**Métricas GSC previas:** 262 imp, 9 clics, pos 8,6; 7d 0/35
+
+**Cambios:**
+- **Title:** `"Fonoaudióloga de Voz Online — Todo Chile, 100% por Videollamada"` → `"Fonoaudióloga Especialista en Voz Online | Todo Chile"`
+- **H1:** De copy emocional sin keyword a `"Fonoaudióloga especialista en voz online para todo Chile"` (el gancho emocional queda como subtítulo)
+- **Keywords / body:** «fonoaudiólogo especialista en voz», «fonoaudiologo online», «fonoaudióloga online», «fonoaudiologia voz»
+- **FAQ:** Qué hace una especialista en voz; atención online en todo Chile
+- **No se editaron** landings de ciudad (`/voz-online/fonoaudiologa-voz-*`)
+
+**Objetivo:** Subir «fonoaudiologo online» (pos ~20) y «especialista en voz» (pos ~11); CTR > 3%
+
+---
+
+#### 4. `/servicios/evaluacion-fonoaudiologica`
+**Métricas GSC previas:** 119 imp, 1 clic, pos 9,9 — query exacta pos 18,1 (36 imp)
+
+**Cambios:**
+- **Title:** `"Evaluación Fonoaudiológica Infantil en Chillán — 60 min + Informe"` → `"Evaluación Fonoaudiológica: Qué Es, 60 min e Informe | Chillán"`
+- **H1:** `"Evaluación fonoaudiológica: qué es y cómo se hace en Chillán"`
+- **Contenido:** Caja de respuesta + H2 «¿Qué es una evaluación fonoaudiológica?» (60 min, informe para el colegio: datos ya en FAQ)
+- **No se editaron** `/evaluacion-fonoaudiologica-infantil-chillan` ni `/recursos/primera-evaluacion-fonoaudiologica-infantil`
+
+**Objetivo ranking:** Top 10 en «evaluacion fonoaudiologica» (desde pos ~18)
+
+---
+
+#### 5. `/sobre-katia-dominguez-fonoaudiologa-chillan`
+**Métricas GSC previas:** 208 imp, 3 clics, pos 6,5 — «fonoaudiologo chillan» pos 55
+
+**Cambios:**
+- **Title:** `"Katia Domínguez, Fonoaudióloga Infantil en Chillán"` → `"Katia Domínguez, Fonoaudióloga en Chillán | Fonoaudiólogo Infantil"`
+- **Keywords:** «katia dominguez» sin tilde; «fonoaudiologo chillan»
+- **Cuerpo:** U. de Chile + postítulo en trastorno fonológico (ya en home); horario lun–vie 10:00–18:00 desde `lib/site.ts`; 5,0 / 42 reseñas desde `lib/google-reviews.ts`
+- **FAQ:** «¿Quién es Katia Domínguez?»; «¿Hay fonoaudiólogo en Chillán para niños?»
+- **No se inventó** calle, precios ni credenciales nuevas
+
+**Objetivo:** Visibilidad en «fonoaudiologo chillan» (desde pos 55); marca «katia dominguez» sin canibalizar de más la home
+
+---
+
+#### 6–8. Síntomas Lote 2 (baja impresión, pos ~5-6)
+
+**`/sintomas/nino-no-entiende-instrucciones-chillan`** (42 imp): caja de respuesta comprensión vs atención; H2 «qué puede estar pasando» con contenido (ya no solo un párrafo de links); FAQ «¿Qué hago si mi hijo no entiende lo que le digo?»
+
+**`/sintomas/mi-hijo-no-habla-bien-chillan`** (28 imp): caja de respuesta; bloques «no se le entiende» / «habla como bebé» / habla vs lenguaje (hechos ya en FAQ)
+
+**`/sintomas/hijo-no-arma-frases-chillan`** (26 imp): caja de respuesta con hito 18-24 meses ya publicado; se corrigió el enlace interno que apuntaba a sí mismo → `/sintomas/mi-hijo-no-habla-bien-chillan`; enlace a estimular en casa
+
+**Objetivo:** Ampliar cobertura de queries hermanas (impresiones) manteniendo pos top ~5-6; CTR > 3%
+
+### Métricas esperadas
+
+**Medición 14-21 días (post-indexación ~2026-10-27 al 2026-11-03):**
+
+- `/recursos/estimular-lenguaje-en-casa`: pos < 20 en «estimulación del lenguaje»; ≥1 clic en cluster «terapia de lenguaje en casa»
+- `/servicios/tel-trastorno-especifico-lenguaje`: ≥1 clic en «el tel se cura»
+- `/voz-online/fonoaudiologa-de-voz-online`: pos < 15 en «fonoaudiologo online» / «especialista en voz»
+- `/servicios/evaluacion-fonoaudiologica`: pos < 12 en «evaluacion fonoaudiologica»
+- `/sobre-katia-dominguez-fonoaudiologa-chillan`: impresiones en «fonoaudiologo chillan»
+- Totales sitio: mantener o mejorar 7 clics / 542 imp semanales
+
+### Siguientes pasos
+
+1. Solicitar indexación GSC de las 8 URLs
+2. No tocar estas páginas ni las de Lotes 3-7 hasta el siguiente corte (~14-21 días)
+
+---
+
 ## 2026-10-12: SEO Lote 7 — Segundo pase data-driven en páginas Lote 1 (7 días) + linking interno
 
 ### Contexto

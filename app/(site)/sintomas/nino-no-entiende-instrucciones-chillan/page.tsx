@@ -15,6 +15,8 @@ export const metadata = buildPageMetadata({
     "¿Tu hijo no sigue instrucciones? Puede ser déficit de comprensión o atención. Señales por edad, qué hacer y cuándo evaluar. Fonoaudióloga en Chillán.",
   keywords: [
     "niño no entiende instrucciones",
+    "niño no sigue instrucciones",
+    "mi hijo no entiende lo que le digo",
     "niño no comprende",
     "déficit comprensión del lenguaje",
     "fonoaudióloga Chillán",
@@ -39,7 +41,8 @@ const actionsNow = [
 ];
 
 const faqs = [
-  { q: "¿Es falta de atención o de comprensión?", a: "Solo una evaluación fonoaudiológica puede separar ambas; a veces coexisten." },
+  { q: "¿Es falta de atención o de comprensión?", a: "Cuando un niño no entiende instrucciones puede ser déficit de comprensión del lenguaje, atención, o ambas. Solo una evaluación fonoaudiológica puede separarlas; a veces coexisten." },
+  { q: "¿Qué hago si mi hijo no entiende lo que le digo?", a: "Combina palabra + gesto, da una instrucción a la vez y en un entorno calmado, y pídele que muestre la acción. Si a los 2-3 años no responde a órdenes simples o a los 4 falla en dos pasos, conviene evaluar lenguaje receptivo." },
   { q: "¿Puede ser TEL receptivo?", a: "Sí. El TEL puede afectar principalmente lo que el niño entiende." },
   { q: "¿Qué pasa en el colegio?", a: "Sin comprensión adecuada, falla seguir rutinas, cuentos e instrucciones de la profesora." },
   { q: "¿Mejora con terapia?", a: "Sí, con objetivos en vocabulario, morfosintaxis comprensiva y estrategias en aula y casa." },
@@ -92,6 +95,15 @@ export default function NinoNoEntiendeInstruccionesPage() {
             <h1 className="mb-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
               ¿Tu hijo no entiende instrucciones? Ayuda en Chillán
             </h1>
+            <div className="mb-6 rounded-2xl border-2 border-red-200 bg-red-50 p-5">
+              <p className="text-lg font-semibold text-gray-900">
+                <strong>Respuesta rápida:</strong> Si tu hijo no entiende
+                instrucciones, puede ser comprensión del lenguaje, atención, o
+                ambas. No es lo mismo «no quiere» que «no entiende». Una
+                evaluación fonoaudiológica diferencia ambos y orienta si hay
+                retraso o TEL receptivo.
+              </p>
+            </div>
             <p
               data-speakable
               className="mb-6 text-xl leading-relaxed text-gray-600"
@@ -152,7 +164,38 @@ export default function NinoNoEntiendeInstruccionesPage() {
             <h2 className="mb-6 text-center text-3xl font-bold text-gray-900">
               ¿Qué puede estar pasando?
             </h2>
-            <p className="mb-8 text-center text-gray-600">Revisa <a href="/tratamientos/tel-trastorno-especifico-lenguaje-chillan">TEL</a>, <a href="/glosario/tel">glosario</a>, <a href="/chillan/tel">TEL en Chillán</a>, <a href="/servicios/terapia-lenguaje-infantil">terapia de lenguaje</a> y <a href="/servicios/evaluacion-fonoaudiologica">evaluación</a>.</p>
+            <p className="mb-6 text-center text-gray-600">
+              Un niño que no entiende instrucciones no siempre es «desobediente». Puede haber:
+            </p>
+            <ul className="mx-auto mb-8 max-w-2xl space-y-3 text-gray-700">
+              <li>
+                <strong>Déficit de comprensión:</strong> no alcanza a procesar
+                las palabras, la gramática o instrucciones de dos pasos.
+              </li>
+              <li>
+                <strong>Atención:</strong> escucha pero no se concentra; a veces
+                coexisten comprensión y atención.
+              </li>
+              <li>
+                <strong>TEL receptivo:</strong> el trastorno específico del
+                lenguaje puede afectar sobre todo lo que el niño entiende.
+              </li>
+            </ul>
+            <p className="mb-8 text-center text-gray-600">
+              Revisa{" "}
+              <Link href="/tratamientos/tel-trastorno-especifico-lenguaje-chillan">TEL</Link>
+              ,{" "}
+              <Link href="/glosario/tel">glosario</Link>
+              ,{" "}
+              <Link href="/chillan/tel">TEL en Chillán</Link>
+              ,{" "}
+              <Link href="/servicios/terapia-lenguaje-infantil">terapia de lenguaje</Link>
+              ,{" "}
+              <Link href="/recursos/estimular-lenguaje-en-casa">estimulación del lenguaje en casa</Link>
+              {" "}y{" "}
+              <Link href="/servicios/evaluacion-fonoaudiologica">evaluación</Link>
+              .
+            </p>
           </div>
         </section>
 
