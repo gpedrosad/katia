@@ -6,9 +6,9 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/evaluacion-vocal-online",
-  title: "Evaluación Vocal Online | ¿Qué incluye el diagnóstico de voz?",
+  title: "Evaluación Vocal Online | Qué incluye el diagnóstico",
   description:
-    "Evaluación fonoaudiológica de voz online: análisis acústico, perceptual (GRBAS), tiempos fonación e informe con plan de tratamiento. Todo Chile por videollamada.",
+    "Qué incluye la evaluación vocal online: anamnesis, GRBAS, análisis acústico, tiempos de fonación e informe con plan. Todo Chile, por videollamada.",
   keywords: [
     "evaluación vocal online",
     "diagnóstico de voz",
@@ -59,11 +59,24 @@ export default function EvaluacionVocalOnlinePage() {
     },
   };
 
+  const pageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "Evaluación vocal online: qué incluye",
+    dateModified: "2026-10-15",
+    description:
+      "Qué incluye la evaluación vocal online: anamnesis, análisis perceptual, acústico y funcional, e informe con plan.",
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}
       />
       <main className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
         <Breadcrumbs
@@ -76,13 +89,20 @@ export default function EvaluacionVocalOnlinePage() {
 
         <article className="prose prose-violet lg:prose-lg max-w-none">
           <h1 className="text-4xl font-extrabold text-violet-950">
-            Evaluación Vocal Online: Diagnóstico de Voz para Todo Chile
+            ¿Qué incluye la evaluación vocal online?
           </h1>
-          <p className="lead font-medium text-gray-700" data-speakable>
-            Una evaluación vocal completa es el primer paso para entender qué le
-            pasa a tu voz. Realizamos diagnósticos fonoaudiológicos por
-            videollamada con protocolos clínicos validados, sin necesidad de
-            trasladarte.
+          <div className="not-prose my-6 rounded-2xl border-2 border-violet-200 bg-violet-50 p-5">
+            <p className="text-lg font-semibold text-violet-950" data-speakable>
+              <strong>Respuesta rápida:</strong> Una evaluación vocal online
+              incluye anamnesis, análisis perceptual (GRBAS o CAPE-V), registro
+              acústico, pruebas funcionales (tiempos máximos de fonación y
+              relación s/z) e informe con plan de tratamiento. Se hace por
+              videollamada en todo Chile.
+            </p>
+          </div>
+          <p className="lead font-medium text-gray-700">
+            Es el primer paso para entender qué le pasa a tu voz, con protocolos
+            clínicos, sin que tengas que trasladarte.
           </p>
           <p className="not-prose my-4 rounded-xl border border-violet-200 bg-violet-50/80 p-4 text-sm text-violet-900">
             <strong>Dato:</strong> Revisiones sistemáticas reportan concordancia
@@ -183,6 +203,21 @@ export default function EvaluacionVocalOnlinePage() {
                 chequeo preventivo.
               </li>
             </ul>
+            <p>
+              Si la queja es ronquera, parte por{" "}
+              <Link href="/voz-online/voz-ronca-causas-tratamiento" className="font-semibold text-violet-700">
+                voz ronca: causas y qué hacer
+              </Link>
+              . Si se agota al hablar,{" "}
+              <Link href="/voz-online/fatiga-vocal-tratamiento-online" className="font-semibold text-violet-700">
+                fatiga vocal
+              </Link>
+              . Si hay un diagnóstico de nódulos,{" "}
+              <Link href="/voz-online/nodulos-vocales-tratamiento-online" className="font-semibold text-violet-700">
+                tratamiento de nódulos
+              </Link>
+              .
+            </p>
           </section>
 
           <GeoFAQ

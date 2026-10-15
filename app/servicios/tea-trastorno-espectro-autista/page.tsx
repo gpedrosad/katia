@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SITE_URL, whatsappUrl } from "@/lib/site";
 import { buildPageMetadata } from "@/lib/seo";
 import { Breadcrumbs } from "../../_components/Breadcrumbs";
@@ -12,9 +13,9 @@ const WHATSAPP_HREF = whatsappUrl("Hola, quiero consultar por TEA y comunicació
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Fonoaudiología TEA Chillán | Comunicación y lenguaje en autismo",
+  title: "Fonoaudiología para TEA en Chillán | Lenguaje",
   description:
-    "Apoyo fonoaudiológico para niños con autismo/TEA en Chillán: comunicación funcional, lenguaje expresivo y comprensión. 40% con retraso lenguaje. Evaluación presencial.",
+    "¿Tu hijo tiene autismo y le cuesta comunicarse? Fonoaudiología para TEA en Chillán: lenguaje y pragmática. Cerca del 40% tiene retraso de lenguaje.",
   keywords: [
     "TEA Chillán",
     "autismo fonoaudiología Chillán",
@@ -81,6 +82,7 @@ const jsonLd = {
     name: "Chillán",
   },
   serviceType: "Fonoaudiología para TEA",
+  dateModified: "2026-10-15",
 };
 
 const faqJsonLd = {
@@ -109,6 +111,22 @@ const faqJsonLd = {
       acceptedAnswer: {
         "@type": "Answer",
         text: "El abordaje del TEA es multidisciplinario. Coordino con otros profesionales (psicólogos, terapeutas ocupacionales, neurólogos) cuando es necesario, y siempre con la familia y el colegio.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Trabaja con niños no verbales?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sí. Con niños que no usan lenguaje verbal, trabajamos sistemas alternativos de comunicación como gestos, intercambio de imágenes o comunicadores, según lo que sea más funcional para cada niño.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué puede esperar una familia en la primera consulta de TEA en Chillán?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Una evaluación del perfil comunicativo, objetivos funcionales para tu hijo y coordinación contigo. Si corresponde, también con el colegio u otros profesionales. La atención de este servicio es presencial en Chillán.",
       },
     },
   ],
@@ -143,8 +161,25 @@ export default function TEAPage() {
                   🧩 Trastorno del Espectro Autista
                 </span>
                 <h1 className="mb-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
-                  Fonoaudiología para TEA en Chillán
+                  Fonoaudiología para niños con TEA en Chillán
                 </h1>
+                <div className="mb-6 rounded-2xl border-2 border-rose-200 bg-white p-5">
+                  <p className="text-lg font-semibold text-gray-900">
+                    <strong>Respuesta rápida:</strong> La fonoaudiología para
+                    TEA en Chillán trabaja comunicación funcional, lenguaje y
+                    uso social del lenguaje (pragmática). No todos los niños
+                    con autismo la necesitan, pero cerca del 40% tiene un
+                    retraso significativo del lenguaje.
+                  </p>
+                  <p className="mt-3 text-sm">
+                    <Link
+                      href="/chillan/tea-comunicacion"
+                      className="font-semibold text-rose-700 underline"
+                    >
+                      TEA y comunicación en Chillán
+                    </Link>
+                  </p>
+                </div>
                 <p className="mb-6 text-xl text-gray-600">
                   Apoyo en comunicación y lenguaje para niños con Trastorno del
                   Espectro Autista. Desarrollo de habilidades funcionales y
@@ -350,6 +385,32 @@ export default function TEAPage() {
                   cada niño.
                 </p>
               </details>
+
+              <details className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+                <summary className="flex cursor-pointer items-start justify-between gap-4 font-semibold text-gray-900">
+                  <span>
+                    ¿Qué puede esperar una familia en la primera consulta de TEA
+                    en Chillán?
+                  </span>
+                  <span className="flex-shrink-0 text-rose-500 transition-transform group-open:rotate-180">
+                    ▼
+                  </span>
+                </summary>
+                <p className="mt-4 text-gray-600">
+                  Una evaluación del perfil comunicativo, objetivos funcionales
+                  para tu hijo y coordinación contigo. Si corresponde, también
+                  con el colegio u otros profesionales. La atención de este
+                  servicio es presencial en Chillán. Las señales locales están
+                  en{" "}
+                  <Link
+                    href="/chillan/tea-comunicacion"
+                    className="font-medium text-rose-600 underline"
+                  >
+                    TEA y comunicación en Chillán
+                  </Link>
+                  .
+                </p>
+              </details>
             </div>
           </div>
         </section>
@@ -360,7 +421,16 @@ export default function TEAPage() {
             <h2 className="mb-8 text-center text-2xl font-bold text-gray-900">
               Servicios relacionados
             </h2>
-            <div className="grid gap-4 sm:grid-cols-3">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              <Link
+                href="/chillan/tea-comunicacion"
+                className="rounded-xl border border-gray-200 bg-white p-4 text-center transition-colors hover:border-rose-300"
+              >
+                <span className="text-2xl">📍</span>
+                <p className="mt-2 font-medium text-gray-900">
+                  TEA y comunicación en Chillán
+                </p>
+              </Link>
               <a
                 href="/servicios/tel-trastorno-especifico-lenguaje"
                 className="rounded-xl border border-gray-200 bg-white p-4 text-center transition-colors hover:border-rose-300"

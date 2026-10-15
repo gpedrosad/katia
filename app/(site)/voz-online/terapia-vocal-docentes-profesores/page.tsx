@@ -51,6 +51,7 @@ export default function TerapiaVocalDocentesPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    dateModified: "2026-10-15",
     mainEntity: faqItems.map((item) => ({
       "@type": "Question",
       name: item.question,
@@ -84,6 +85,24 @@ export default function TerapiaVocalDocentesPage() {
             >
               Ser profesor y quedarte sin voz no es un &quot;gafe del oficio&quot; aceptable. Es una alerta roja de que estás destruyendo tu herramienta de trabajo vital. Sal de la estadística aprendiendo a usar tu voz sin dañarte.
             </p>
+            <div className="not-prose mx-auto mt-4 max-w-3xl rounded-2xl border-2 border-emerald-200 bg-white p-5 text-left text-base text-emerald-950">
+              <p>
+                <strong>Respuesta rápida:</strong> La terapia vocal para docentes es online y enseña a proyectar sin gritar, con higiene vocal y calentamiento antes de clases, en horarios compatibles con la jornada escolar.
+              </p>
+              <p className="mt-3 text-sm">
+                <Link href="/voz-online/higiene-vocal-cuidado-voz" className="font-semibold underline">
+                  Higiene vocal
+                </Link>
+                {" · "}
+                <Link href="/voz-online/rehabilitacion-vocal-profesionales-voz" className="font-semibold underline">
+                  Rehabilitación para profesionales
+                </Link>
+                {" · "}
+                <Link href="/voz-online/fatiga-vocal-tratamiento-online" className="font-semibold underline">
+                  Fatiga vocal
+                </Link>
+              </p>
+            </div>
             <p className="mx-auto mt-4 max-w-2xl text-sm text-emerald-800">
               <strong>Dato:</strong> La ASHA estima que hasta el 58% de los docentes desarrollará un trastorno de la voz durante su carrera profesional.
               <cite className="mt-1 block text-xs text-emerald-700 not-italic">

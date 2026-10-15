@@ -10,10 +10,18 @@ const WHATSAPP_LINK = whatsappUrl("Hola, necesito evaluación o tratamiento por 
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Tratamiento TEL en Chillán | Trastorno Específico del Lenguaje Infantil",
+  title: "Tratamiento del TEL en Chillán | Cómo es la terapia",
   description:
-    "Fonoaudióloga especializada en TEL (Trastorno Específico del Lenguaje) en niños en Chillán. Evaluación con pruebas estandarizadas, informe PIE y terapia de lenguaje presencial. El TEL afecta al 7% de los niños. Agenda tu evaluación.",
-  keywords: ["TEL niños Chillán", "trastorno específico del lenguaje", "TDL infantil", "fonoaudióloga PIE", "terapia lenguaje", "TEL Chillán", "tratamiento TEL"],
+    "Tratamiento del TEL en Chillán: cómo es la terapia, qué puedes esperar y cómo se diagnostica. Presencial, con informe para el colegio. Agenda por WhatsApp.",
+  keywords: [
+    "tratamiento del TEL en Chillán",
+    "tratamiento TEL Chillán",
+    "tel diagnostico",
+    "TEL niños Chillán",
+    "terapia de lenguaje TEL",
+    "escuela de lenguaje",
+    "fonoaudióloga TEL Chillán",
+  ],
 });
 
 const signalsByAge = [
@@ -32,10 +40,26 @@ const benefits = [
 ];
 
 const faqs = [
-  { q: "¿Qué es el TEL?", a: "Es un trastorno del desarrollo del lenguaje sin otra discapacidad de base. Afecta cómo el niño entiende y/o expresa el lenguaje. También se conoce como TDL (trastorno del desarrollo del lenguaje)." },
-  { q: "¿El TEL se cura?", a: "No desaparece de un día para otro, pero con intervención temprana y sostenida muchos niños logran avances importantes en comunicación, comprensión y rendimiento escolar." },
-  { q: "¿Qué pruebas usan en la evaluación?", a: "Según la edad y la consulta, aplicamos instrumentos como TEPROSIF-R, TECAL o STSG, además de observación clínica y entrevista con la familia." },
-  { q: "¿Sirve el informe para el colegio?", a: "Sí. Elaboramos informes fonoaudiológicos que pueden aportar al proceso PIE o a las adaptaciones curriculares que requiera el niño." },
+  {
+    q: "¿Cómo es el tratamiento del TEL en Chillán?",
+    a: "Es terapia fonoaudiológica presencial. Empieza con una evaluación y sigue con un plan de lenguaje (fonología, morfosintaxis y pragmática), guía para la familia e informe para el colegio si lo necesitas.",
+  },
+  {
+    q: "¿Qué puedes esperar de la terapia del TEL?",
+    a: "Avances en comunicación, comprensión y rendimiento escolar cuando la intervención es temprana y sostenida. El proceso suele ser prolongado: en general de 1 a 3 años, con 1 o 2 sesiones por semana, según la severidad.",
+  },
+  {
+    q: "¿Cómo se diagnostica el TEL?",
+    a: "Con evaluación fonoaudiológica: entrevista, observación y pruebas según la edad, como TEPROSIF-R, TECAL o STSG. Se considera TEL cuando hay dificultades persistentes de lenguaje sin otra causa evidente y con inteligencia conservada.",
+  },
+  {
+    q: "¿La terapia particular es una escuela de lenguaje?",
+    a: "No. La terapia particular es atención en consulta. Una escuela de lenguaje es un establecimiento educacional. El informe de la evaluación puede servir para postular a una escuela de lenguaje o para el PIE.",
+  },
+  {
+    q: "¿Sirve el informe para el colegio?",
+    a: "Sí. Elaboramos informes fonoaudiológicos que pueden aportar al proceso PIE o a las adaptaciones curriculares que requiera el niño.",
+  },
 ];
 
 const serviceJsonLd = {
@@ -43,7 +67,9 @@ const serviceJsonLd = {
   "@type": "Service",
   "@id": `${SITE_URL}${PAGE_PATH}#service`,
   name: "Tratamiento TEL (Trastorno Específico del Lenguaje)",
-  description: "Evaluación y terapia fonoaudiológica para TEL/TDL en niños en Chillán.",
+  description:
+    "Tratamiento fonoaudiológico presencial del TEL en Chillán: evaluación, terapia de lenguaje e informe para el colegio.",
+  dateModified: "2026-10-15",
   provider: { "@type": "Person", name: "Katia Domínguez", jobTitle: "Fonoaudióloga" },
   areaServed: { "@type": "City", name: "Chillán" },
 };
@@ -64,9 +90,14 @@ export default function TratamientoTELPage() {
           <div className="mx-auto max-w-4xl">
             <Breadcrumbs items={[{ label: "Inicio", href: "/" }, { label: "Tratamientos", href: "/fonoaudiologa-ninos-chillan" }, { label: "TEL" }]} />
             <span className="mb-4 mt-6 inline-block rounded-full bg-purple-100 px-4 py-2 text-sm font-medium text-purple-700">TEL / TDL</span>
-            <h1 className="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl">Tratamiento TEL en Chillán</h1>
+            <h1 className="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl">Tratamiento del TEL en Chillán</h1>
+            <div className="mb-6 rounded-2xl border-2 border-purple-200 bg-white p-5 text-left">
+              <p className="text-lg font-semibold text-gray-900">
+                <strong>Respuesta rápida:</strong> El tratamiento del TEL en Chillán es terapia fonoaudiológica presencial. Empieza con una evaluación (según la edad, pruebas como TEPROSIF-R, TECAL o STSG) y sigue con un plan de lenguaje: fonología, morfosintaxis y pragmática, más guía para la casa e informe para el colegio si lo necesitas.
+              </p>
+            </div>
             <p data-speakable className="mb-6 text-xl text-gray-600">
-              El Trastorno Específico del Lenguaje (TEL) afecta cómo el niño organiza oraciones, comprende instrucciones o expresa ideas, sin que exista otra discapacidad intelectual o sensorial de base. En consulta presencial diseñamos un plan basado en evidencia y en la realidad escolar chilena.
+              En consulta presencial armamos el plan según cómo tu hijo comprende y se expresa, y según la realidad escolar chilena. La definición breve del TEL está en el glosario; si la pregunta es si se cura, esa respuesta está en la página de servicio.
             </p>
             <WhatsAppCTA href={WHATSAPP_LINK} className="bg-purple-600 hover:bg-purple-700 ring-purple-300">Agendar evaluación TEL</WhatsAppCTA>
           </div>
@@ -88,6 +119,55 @@ export default function TratamientoTELPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="mb-6 text-3xl font-bold text-gray-900">Cómo es la terapia del TEL</h2>
+            <p className="mb-6 text-lg text-gray-600">
+              Esto es lo que puedes esperar en la consulta de Chillán. Las frecuencias y plazos son los mismos que ya publicamos en el servicio de TEL: no son una promesa para un niño en particular.
+            </p>
+            <ul className="space-y-4 text-gray-700">
+              <li className="rounded-xl border border-purple-100 p-4">
+                <strong>Evaluación.</strong> Entrevista, observación y pruebas según la edad (TEPROSIF-R, TECAL o STSG).
+              </li>
+              <li className="rounded-xl border border-purple-100 p-4">
+                <strong>Plan de lenguaje.</strong> Fonología, morfosintaxis y pragmática, según el perfil de tu hijo.
+              </li>
+              <li className="rounded-xl border border-purple-100 p-4">
+                <strong>Sesiones.</strong> En general 1 o 2 por semana. El proceso suele ser prolongado, de 1 a 3 años, según la severidad.
+              </li>
+              <li className="rounded-xl border border-purple-100 p-4">
+                <strong>Casa y colegio.</strong> Estrategias para las rutinas diarias e informe útil para el PIE o para adaptaciones escolares.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section className="bg-purple-50 px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="mb-6 text-3xl font-bold text-gray-900">Terapia particular y escuela de lenguaje</h2>
+            <p className="text-lg text-gray-700">
+              Esta página es de <strong>tratamiento fonoaudiológico particular en Chillán</strong>. Una escuela de lenguaje es un establecimiento educacional: para postular se pide un diagnóstico formal. En la consulta elaboramos el informe, también útil para el PIE. No es lo mismo que atenderse en una escuela de lenguaje.
+            </p>
+            <p className="mt-4 text-gray-700">
+              Si el colegio te pidió el documento, revisa el{" "}
+              <Link href="/servicios/informe-fonoaudiologico-pie-chillan" className="font-semibold text-purple-700 underline">
+                informe fonoaudiológico para PIE y escuelas de lenguaje
+              </Link>
+              . La definición breve está en el{" "}
+              <Link href="/glosario/tel" className="font-semibold text-purple-700 underline">glosario de TEL</Link>
+              . Si preguntas si el TEL se cura, la respuesta está en{" "}
+              <Link href="/servicios/tel-trastorno-especifico-lenguaje" className="font-semibold text-purple-700 underline">
+                ¿el TEL se cura?
+              </Link>
+              . La diferencia con un retraso simple está en{" "}
+              <Link href="/comparaciones/tel-vs-retraso-del-lenguaje" className="font-semibold text-purple-700 underline">
+                TEL vs retraso del lenguaje
+              </Link>
+              .
+            </p>
           </div>
         </section>
 

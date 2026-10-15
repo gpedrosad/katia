@@ -13,7 +13,7 @@ const DESCRIPTION_MAX_LENGTH = 155;
 const DESCRIPTION_SUFFIX =
   " Evaluación y terapia en Chillán. Agenda por WhatsApp.";
 const DESCRIPTION_OVERRIDES: Record<string, string> = {
-  tel: "Dificultad para comprender, expresarse o armar frases puede ser TEL/TDL. Evaluación fonoaudiológica infantil en Chillán con orientación escolar. WhatsApp.",
+  tel: "TEL en Chillán: señales, evaluación presencial y hacia dónde seguir (definición y tratamiento). Hub local. Agenda por WhatsApp.",
   "tea-comunicacion":
     "Comunicación y lenguaje en niños con TEA/autismo en Chillán: apoyo fonoaudiológico presencial para lenguaje funcional, pragmática y habilidades sociales. 40% tiene retraso significativo. Agenda WhatsApp.",
   "apraxia-del-habla":
@@ -31,7 +31,7 @@ const DESCRIPTION_OVERRIDES: Record<string, string> = {
 };
 
 const TITLE_OVERRIDES: Record<string, string> = {
-  tel: "TEL en niños Chillán | ¿Habla poco o no se entiende?",
+  tel: "TEL en Chillán | Evaluación y terapia local",
   "tea-comunicacion": "Comunicación y Lenguaje en Niños con TEA | Chillán",
   "apraxia-del-habla":
     "Apraxia del Habla Infantil Chillán | Eval. Especializada",
@@ -44,11 +44,11 @@ const TITLE_OVERRIDES: Record<string, string> = {
 
 const KEYWORD_OVERRIDES: Record<string, string[]> = {
   tel: [
+    "TEL en Chillán",
     "TEL Chillán",
     "TDL Chillán",
-    "fonoaudióloga TEL Chillán",
-    "evaluación TEL infantil",
-    "terapia lenguaje TEL",
+    "evaluación TEL Chillán",
+    "tratamiento TEL Chillán",
   ],
   "tea-comunicacion": [
     "TEA Chillán",
@@ -179,6 +179,7 @@ export default async function PatologiaChillanPage({
     },
     areaServed: { "@type": "City", name: "Chillán" },
     serviceType: p.titulo,
+    ...(slug === "tel" ? { dateModified: "2026-10-15" } : {}),
   };
 
   const patologiaLabel = p.titulo.split(" en ")[0];
@@ -245,10 +246,32 @@ export default async function PatologiaChillanPage({
     },
   ] : [];
 
+  const telSpecificFaqs =
+    slug === "tel"
+      ? [
+          {
+            "@type": "Question" as const,
+            name: "¿Esta página explica el tratamiento del TEL?",
+            acceptedAnswer: {
+              "@type": "Answer" as const,
+              text: "No. Esta es la página local de TEL en Chillán: señales y cómo pedir la evaluación presencial. La definición breve está en el glosario y cómo es la terapia está en la página de tratamiento del TEL en Chillán.",
+            },
+          },
+          {
+            "@type": "Question" as const,
+            name: "¿Dónde sigo si quiero la definición o la terapia?",
+            acceptedAnswer: {
+              "@type": "Answer" as const,
+              text: "Definición breve: glosario de TEL. Tratamiento (cómo es la terapia, qué puedes esperar): tratamiento del TEL en Chillán. Si la pregunta es si el TEL se cura, esa respuesta está en la página de servicio.",
+            },
+          },
+        ]
+      : [];
+
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [...baseFaqs, ...teaSpecificFaqs],
+    mainEntity: [...baseFaqs, ...teaSpecificFaqs, ...telSpecificFaqs],
   };
 
   return (
@@ -294,6 +317,36 @@ export default async function PatologiaChillanPage({
                   </p>
                 </article>
                 <p className="mb-8 text-lg text-gray-600">{p.descripcion}</p>
+                {slug === "tel" ? (
+                  <div className="mb-8 rounded-2xl border-2 border-rose-200 bg-white p-5 text-left">
+                    <p className="text-lg font-semibold text-gray-900">
+                      <strong>Respuesta rápida:</strong> Esta página es el hub
+                      local de TEL en Chillán. La definición breve está en el
+                      glosario y el tratamiento (cómo es la terapia) está en la
+                      página de tratamiento. La atención es presencial:
+                      evaluación de unos 60 minutos con informe.
+                    </p>
+                    <p className="mt-3 text-sm text-rose-800">
+                      <Link href="/glosario/tel" className="font-semibold underline">
+                        Definición de TEL
+                      </Link>
+                      {" · "}
+                      <Link
+                        href="/tratamientos/tel-trastorno-especifico-lenguaje-chillan"
+                        className="font-semibold underline"
+                      >
+                        Tratamiento del TEL en Chillán
+                      </Link>
+                      {" · "}
+                      <Link
+                        href="/servicios/tel-trastorno-especifico-lenguaje"
+                        className="font-semibold underline"
+                      >
+                        ¿El TEL se cura?
+                      </Link>
+                    </p>
+                  </div>
+                ) : null}
                 <ul className="mb-8 space-y-3 text-left text-gray-700">
                   <li className="flex items-start gap-3">
                     <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">
@@ -423,6 +476,53 @@ export default async function PatologiaChillanPage({
                   presencial en Chillán.
                 </p>
               </details>
+              {slug === "tel" ? (
+                <>
+                  <details className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+                    <summary className="flex cursor-pointer items-start justify-between gap-4 font-semibold text-gray-900">
+                      <span>¿Esta página explica el tratamiento del TEL?</span>
+                      <span className="flex-shrink-0 text-rose-500 transition-transform group-open:rotate-180">
+                        ▼
+                      </span>
+                    </summary>
+                    <p className="mt-4 text-gray-600">
+                      No. Esta es la página local: señales y cómo pedir la
+                      evaluación presencial. Cómo es la terapia está en{" "}
+                      <Link
+                        href="/tratamientos/tel-trastorno-especifico-lenguaje-chillan"
+                        className="font-medium text-rose-600 underline"
+                      >
+                        tratamiento del TEL en Chillán
+                      </Link>
+                      . La definición breve está en el{" "}
+                      <Link href="/glosario/tel" className="font-medium text-rose-600 underline">
+                        glosario
+                      </Link>
+                      .
+                    </p>
+                  </details>
+                  <details className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+                    <summary className="flex cursor-pointer items-start justify-between gap-4 font-semibold text-gray-900">
+                      <span>¿Dónde sigo si quiero la definición o la terapia?</span>
+                      <span className="flex-shrink-0 text-rose-500 transition-transform group-open:rotate-180">
+                        ▼
+                      </span>
+                    </summary>
+                    <p className="mt-4 text-gray-600">
+                      Definición breve: glosario de TEL. Tratamiento: página de
+                      tratamiento del TEL en Chillán. Si la pregunta es si el TEL
+                      se cura, esa respuesta está en la{" "}
+                      <Link
+                        href="/servicios/tel-trastorno-especifico-lenguaje"
+                        className="font-medium text-rose-600 underline"
+                      >
+                        página de servicio
+                      </Link>
+                      .
+                    </p>
+                  </details>
+                </>
+              ) : null}
             </div>
           </div>
         </section>
@@ -439,9 +539,13 @@ export default async function PatologiaChillanPage({
                 className="rounded-xl border border-gray-200 bg-white p-6 transition-colors hover:border-rose-300 hover:bg-rose-50/50"
               >
                 <span className="mb-2 block text-2xl">🏥</span>
-                <h3 className="font-semibold text-gray-900">Servicio completo</h3>
+                <h3 className="font-semibold text-gray-900">
+                  {slug === "tel" ? "¿El TEL se cura?" : "Servicio completo"}
+                </h3>
                 <p className="mt-1 text-sm text-gray-600">
-                  Conoce el tratamiento detallado y el proceso
+                  {slug === "tel"
+                    ? "La respuesta está en la página de servicio"
+                    : "Conoce el tratamiento detallado y el proceso"}
                 </p>
               </Link>
               <Link
@@ -454,6 +558,20 @@ export default async function PatologiaChillanPage({
                   Definición, causas y tratamiento
                 </p>
               </Link>
+              {slug === "tel" ? (
+                <Link
+                  href="/tratamientos/tel-trastorno-especifico-lenguaje-chillan"
+                  className="rounded-xl border border-gray-200 bg-white p-6 transition-colors hover:border-rose-300 hover:bg-rose-50/50 sm:col-span-2"
+                >
+                  <span className="mb-2 block text-2xl">💬</span>
+                  <h3 className="font-semibold text-gray-900">
+                    Tratamiento del TEL en Chillán
+                  </h3>
+                  <p className="mt-1 text-sm text-gray-600">
+                    Cómo es la terapia y qué puedes esperar
+                  </p>
+                </Link>
+              ) : null}
             </div>
           </div>
         </section>

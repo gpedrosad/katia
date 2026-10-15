@@ -7,9 +7,9 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/nodulos-vocales-tratamiento-online",
-  title: "Nódulos Vocales: Tratamiento Online | ¿Se pueden curar sin cirugía?",
+  title: "Nódulos Vocales: ¿Se curan sin cirugía? | Online",
   description:
-    "Tratamiento fonoaudiológico online para nódulos vocales. Terapia conservadora como primera línea antes de cirugía. Reduce tamaño y mejora calidad vocal. Chile.",
+    "¿Se pueden curar los nódulos vocales sin cirugía? Terapia vocal online como primera línea. Mejora la calidad de la voz. Chile.",
   keywords: [
     "nódulos vocales",
     "nodulos cuerdas vocales",
@@ -62,6 +62,7 @@ export default function NodulosVocalesPage() {
         name: "Terapia Vocal Conservadora",
       },
     },
+    dateModified: "2026-10-15",
   };
 
   return (
@@ -82,8 +83,17 @@ export default function NodulosVocalesPage() {
         <article className="prose prose-amber lg:prose-lg max-w-none">
           <header className="mb-10 text-center">
             <h1 className="text-4xl font-extrabold text-amber-950 mb-6">
-              ¿Te diagnosticaron Nódulos Vocales y temes una cirugía?
+              ¿Se pueden tratar los nódulos vocales sin cirugía?
             </h1>
+            <div className="not-prose mx-auto mb-6 max-w-3xl rounded-2xl border-2 border-amber-200 bg-amber-50 p-5 text-left">
+              <p className="text-lg font-semibold text-amber-950">
+                <strong>Respuesta rápida:</strong> No siempre hay que operar.
+                En muchos casos la terapia vocal es la primera línea: busca
+                reducir el tamaño del nódulo y mejorar la calidad de la voz. La
+                cirugía queda para cuando no hay respuesta o el otorrino la
+                indica.
+              </p>
+            </div>
             <p
               className="lead font-medium text-gray-700 max-w-3xl mx-auto"
               data-speakable
@@ -174,6 +184,25 @@ export default function NodulosVocalesPage() {
             </p>
             <p className="mt-4">
               Si las excusas para cuidarte han sido la falta de tiempo, la tele-rehabilitación es exactamente lo que necesitas para recuperar la salud de tus cuerdas.
+            </p>
+            <p className="mt-4">
+              La ronquera que no se va está en{" "}
+              <Link href="/voz-online/voz-ronca-causas-tratamiento" className="font-semibold text-amber-700">
+                voz ronca
+              </Link>
+              . Los hábitos que evitan que vuelvan están en{" "}
+              <Link href="/voz-online/higiene-vocal-cuidado-voz" className="font-semibold text-amber-700">
+                higiene vocal
+              </Link>
+              . Si la voz se agota antes de la lesión, mira{" "}
+              <Link href="/voz-online/fatiga-vocal-tratamiento-online" className="font-semibold text-amber-700">
+                fatiga vocal
+              </Link>
+              . Para partir, pide una{" "}
+              <Link href="/voz-online/evaluacion-vocal-online" className="font-semibold text-amber-700">
+                evaluación vocal online
+              </Link>
+              .
             </p>
           </section>
 

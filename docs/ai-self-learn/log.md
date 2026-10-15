@@ -4,6 +4,11 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 
 ---
 
+## 2026-10-15
+
+- SEO | Lote 9 segundo pase Lote 3 (glosario TEL, chillan/tel, TEA, 8 voz-online no-ciudad) + agendar (164 imp/0/pos 6,4) + tratamiento TEL Chillán (142 imp/0/pos 9,7) | Title/H1/FAQ/snippet con hechos ya publicados; no city pages, no ads, no Lotes 4-8. Changelog `SEO-CHANGELOG.md`
+- GSC | Corte 90d 2026-07-17→2026-10-14: 87 clic / 5.335 imp / pos 8,1 · 7d 10-08..10-14: 10/597 vs 7d previos 2/609 | `pendiente:` indexar 13 URLs y medir ~2026-10-29..11-05
+
 ## 2026-10-13
 
 - SEO | Lote 8 segundo pase páginas Lote 2 (estimular casa, TEL servicio, voz online nacional, evaluación, sobre Katia, 3 síntomas) | Query-match title/H1/FAQ/snippet; sin inventar datos; no se tocaron Lotes 3-7 ni city pages. Changelog `SEO-CHANGELOG.md`

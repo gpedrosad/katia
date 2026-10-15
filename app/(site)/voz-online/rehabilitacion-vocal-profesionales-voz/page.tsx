@@ -7,12 +7,14 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/rehabilitacion-vocal-profesionales-voz",
-  title: "Rehabilitación de la Voz en Profesionales | Online Chile",
+  title: "Rehabilitación de la Voz en Profesionales | Online",
   description:
-    "¿Eres locutor, cantante o profesor y tu voz falla? Rehabilitación vocal online para recuperar resistencia y proyección. Fonoaudióloga especialista voz Chile.",
+    "Rehabilitación de la voz en profesionales, online en Chile. Cantantes, locutores y profesores: resistencia, proyección y qué pasa al impostar la voz.",
   keywords: [
     "rehabilitación vocal",
     "rehabilitacion de la voz en profesionales",
+    "impostar voz",
+    "impostar la voz",
     "fonoaudióloga especialista en voz",
     "voz profesionales online",
     "terapia voz cantantes",
@@ -45,6 +47,11 @@ const faqItems = [
     answer:
       "Depende de la lesión. En muchos casos se modifica la carga vocal mientras se entrena, evitando reposo absoluto salvo indicación médica estricta.",
   },
+  {
+    question: "¿Qué es impostar la voz?",
+    answer:
+      "En esta página, impostar la voz es forzar un tono que no es el tuyo, por ejemplo un grave artificial. En profesionales ese hábito cansa las cuerdas. La rehabilitación entrena proyección y técnica sin esa tensión.",
+  },
 ];
 
 export default function RehabilitacionVocalProfesionalesPage() {
@@ -63,6 +70,7 @@ export default function RehabilitacionVocalProfesionalesPage() {
       "@type": "Country",
       name: "Chile",
     },
+    dateModified: "2026-10-15",
   };
 
   return (
@@ -83,8 +91,19 @@ export default function RehabilitacionVocalProfesionalesPage() {
         <article className="prose prose-indigo lg:prose-lg max-w-none">
           <header className="mb-10 text-center">
             <h1 className="text-4xl font-extrabold text-indigo-950 mb-6">
-              Si vives de tu voz, no puedes permitirte que te abandone
+              Rehabilitación de la voz en profesionales
             </h1>
+            <div className="not-prose mx-auto mb-6 max-w-3xl rounded-2xl border-2 border-indigo-200 bg-indigo-50 p-5 text-left">
+              <p className="text-lg font-semibold text-indigo-950">
+                <strong>Respuesta rápida:</strong> La rehabilitación de la voz
+                en profesionales es terapia vocal online para quien usa la voz
+                como herramienta de trabajo: cantantes, locutores, actores y
+                profesores. Busca recuperar resistencia y proyección. Impostar
+                la voz —forzar un tono que no es el tuyo, por ejemplo un grave
+                artificial— cansa las cuerdas; el trabajo es técnica sin esa
+                tensión.
+              </p>
+            </div>
             <p
               className="lead font-medium text-gray-700 max-w-3xl mx-auto"
               data-speakable
@@ -160,6 +179,30 @@ export default function RehabilitacionVocalProfesionalesPage() {
               />
             </div>
           </section>
+
+          <p>
+            Si la voz se cansa al final del día, revisa{" "}
+            <Link href="/voz-online/fatiga-vocal-tratamiento-online" className="font-semibold text-indigo-700">
+              fatiga vocal
+            </Link>
+            . Si hay callos en las cuerdas,{" "}
+            <Link href="/voz-online/nodulos-vocales-tratamiento-online" className="font-semibold text-indigo-700">
+              nódulos vocales
+            </Link>
+            . Los hábitos diarios están en{" "}
+            <Link href="/voz-online/higiene-vocal-cuidado-voz" className="font-semibold text-indigo-700">
+              higiene vocal
+            </Link>{" "}
+            y el caso de la sala de clases en{" "}
+            <Link href="/voz-online/terapia-vocal-docentes-profesores" className="font-semibold text-indigo-700">
+              terapia vocal para docentes
+            </Link>
+            . El primer paso sigue siendo la{" "}
+            <Link href="/voz-online/evaluacion-vocal-online" className="font-semibold text-indigo-700">
+              evaluación vocal online
+            </Link>
+            .
+          </p>
 
           <GeoFAQ
             items={faqItems}

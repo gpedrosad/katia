@@ -20,6 +20,224 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-10-15: SEO Lote 9 — Segundo pase data-driven en páginas Lote 3 + 2 páginas Lote 1
+
+### Contexto
+
+**Datos GSC (90 días 2026-07-17 al 2026-10-14, dataState=all, pull 2026-10-15):**
+- **87 clics totales**
+- **5.335 impresiones**
+- **CTR promedio: 1,6%**
+- **Posición promedio: 8,1**
+
+**Datos últimos 7 días (2026-10-08 al 2026-10-14):** 10 clics / 597 imp vs 7 días previos (2026-10-01 al 2026-10-07): 2 clics / 609 imp
+
+**Páginas congeladas (Lotes 4-8, 2026-10-08 al 2026-10-13):** Sin cambios. En particular home, `/servicios`, `/fonoaudiologa-ninos-chillan`, `/recursos/hitos-del-lenguaje-por-edad`, `/tratamientos/retraso-del-lenguaje-chillan`, `/tratamientos/trastorno-fonologico-chillan`, páginas Lote 8 (`/recursos/estimular-lenguaje-en-casa`, `/servicios/tel-trastorno-especifico-lenguaje`, `/voz-online/fonoaudiologa-de-voz-online`, `/servicios/evaluacion-fonoaudiologica`, `/sobre-katia-dominguez-fonoaudiologa-chillan`, 3 síntomas) y el resto de Lotes 4-6. Solo se enlazó hacia ellas.
+
+**No se editaron** landings de ciudad (`/voz-online/fonoaudiologa-voz-*`), `/ads/*` ni `/sitelink/*`.
+
+**Problema detectado:**
+1. `/agendar-hora-fonoaudiologo-infantil-chillan`: 164 imp / 0 clics / pos 6,4 (7d 7 vs 3). Posición de clic sin clics: el snippet no dice qué es la primera hora.
+2. `/tratamientos/tel-trastorno-especifico-lenguaje-chillan`: 142 imp / 0 clics / pos 9,7. Queries «tel» 21 imp pos 20,3; «tel diagnostico» 2 imp pos 8,5; «escuela de lenguaje chillan» 1 imp pos 1. Tenía que quedar como página de tratamiento local, distinta del servicio (¿se cura?, congelado) y del glosario (definición).
+3. `/glosario/tel` 46 imp / 0 / pos 8,6 y `/chillan/tel` 7 imp / 0 / pos 6,0: roles todavía poco explícitos en el snippet.
+4. `/servicios/tea-trastorno-espectro-autista`: 78 imp / 1 clic / pos 10,4. Faltaba enlace visible a `/chillan/tea-comunicacion` y FAQ de padres.
+5. Voz online no-ciudad (Lote 3, ~8 días): parálisis cordal 149 imp / 5 clics / pos 8,8 (light touch); higiene 65 / 2 / 7,5; rehabilitación profesionales 28 / 0 / 11,8 («rehabilitacion de la voz en profesionales» pos 27,7, «impostar voz» pos 8); fatiga 27 / 0 / 8,9; nódulos 23 / 1 / 8,3; evaluación vocal 16 / 0 / 6,0 (snippet); voz ronca 14 / 0 / 10,1; docentes 16 / 2 / 7,6 (light touch).
+
+**Objetivo:** Query-match de title/H1/snippet y FAQ con hechos ya publicados. Medir ~2026-10-29 al 2026-11-05.
+
+### Páginas optimizadas
+
+#### 1. `/agendar-hora-fonoaudiologo-infantil-chillan`
+**Métricas GSC previas:** 164 imp, 0 clics, pos 6,4
+
+**Cambios:**
+- **Title:** `"Agendar Hora Fonoaudiólogo Infantil en Chillán | Respuesta en 24h"` → `"Agendar Hora Fonoaudiólogo Infantil en Chillán"`
+- **Description:** De copy genérico de WhatsApp a primera cita = evaluación (60-90 min), informe y plan, lun–vie 10:00–18:00 (`lib/site.ts` + guía de primera evaluación ya publicada)
+- **H1:** `"Agendar hora fonoaudiólogo infantil en Chillán"`
+- **Contenido:** Caja de respuesta rápida; pasos en tú; sección «Qué ocurre en la primera cita»
+- **FAQ + FAQPage:** Cómo agendar, qué incluye la primera hora, qué llevar, comunas de Ñuble, horario
+- **Schema:** `ContactPage` con `dateModified` 2026-10-15 y horario lun–vie
+- **Enlaces:** `/recursos/primera-evaluacion-fonoaudiologica-infantil` y `/servicios/evaluacion-fonoaudiologica`
+
+**Objetivo:** CTR > 2% en pos ~6 (hoy 0%)
+
+---
+
+#### 2. `/tratamientos/tel-trastorno-especifico-lenguaje-chillan`
+**Métricas GSC previas:** 142 imp, 0 clics, pos 9,7
+
+**Cambios:**
+- **Title:** `"Tratamiento TEL en Chillán | Trastorno Específico del Lenguaje Infantil"` → `"Tratamiento del TEL en Chillán | Cómo es la terapia"`
+- **Description / H1:** Foco en tratamiento local, no en la definición
+- **Contenido:** Caja de respuesta; sección «Cómo es la terapia» (evaluación, plan, 1-2 sesiones/semana y 1-3 años ya publicados en el servicio/glosario, casa y colegio); sección «Terapia particular y escuela de lenguaje» (no se afirma que Katia trabaje en una escuela; el informe para postular ya está en la página de informe PIE)
+- **FAQ:** Cómo es el tratamiento, qué esperar, cómo se diagnostica, diferencia con escuela de lenguaje, informe escolar. Se sacó «¿El TEL se cura?» de esta FAQ para no competir con `/servicios/tel-trastorno-especifico-lenguaje`
+- **Schema:** `dateModified` 2026-10-15
+- **Enlaces:** glosario, `/chillan/tel`, servicio «¿se cura?», comparación TEL vs retraso, informe PIE
+
+**Objetivo:** ≥1 clic; bajar «tel» desde pos ~20; el snippet de «escuela de lenguaje chillan» debe decir que esta página no es una escuela
+
+---
+
+#### 3. `/glosario/tel`
+**Métricas GSC previas:** 46 imp, 0 clics, pos 8,6
+
+**Cambios (light):**
+- **Title:** `"Definición TEL (TDL) | Qué es el Trastorno del Desarrollo del Lenguaje"` → `"¿Qué es el TEL? Definición breve (TDL)"`
+- **Description:** Definición corta + 7% ya publicado + envío al tratamiento
+- **Lead:** Deja explícito que el tratamiento en Chillán está en otra página
+- **Enlaces:** Tarjeta a tratamiento Chillán y a `/comparaciones/tel-vs-retraso-del-lenguaje`. El CTA superior a «¿Se cura el TEL?» se mantiene
+- **Schema:** `dateModified` 2026-10-15
+- **WhatsApp:** pasa por `whatsappUrl()` (mismo número)
+
+**Objetivo CTR:** > 2%
+
+---
+
+#### 4. `/chillan/tel`
+**Métricas GSC previas:** 7 imp, 0 clics, pos 6,0
+
+**Cambios (light, solo el slug `tel` en `patologias.ts` y overrides/bloques `slug === "tel"`):**
+- **Title:** `"TEL en niños Chillán | ¿Habla poco o no se entiende?"` → `"TEL en Chillán | Evaluación y terapia local"`
+- **Description:** Hub local: señales, evaluación, definición y tratamiento en otras páginas
+- **H1:** `"TEL en Chillán"`
+- **Contenido:** Caja de respuesta que separa hub / glosario / tratamiento; FAQ visibles alineadas al schema
+- **Schema:** `dateModified` 2026-10-15 solo en este slug
+- **No cambió** el HTML de los otros slugs de `/chillan/[slug]`
+
+**Objetivo:** Mantener pos ~6 y que el snippet no compita con glosario ni con tratamiento
+
+---
+
+#### 5. `/servicios/tea-trastorno-espectro-autista`
+**Métricas GSC previas:** 78 imp, 1 clic, pos 10,4
+
+**Cambios:**
+- **Title:** `"Fonoaudiología TEA Chillán | Comunicación y lenguaje en autismo"` → `"Fonoaudiología para TEA en Chillán | Lenguaje"`
+- **Description:** Pregunta de padres + 40% ya publicado
+- **H1:** `"Fonoaudiología para niños con TEA en Chillán"`
+- **Contenido:** Caja de respuesta; FAQ de la primera consulta en Chillán; la FAQ de niños no verbales entra al `FAQPage` (ya estaba visible)
+- **Enlace:** `/chillan/tea-comunicacion` en la caja, en la FAQ y en relacionados
+- **Schema:** `dateModified` 2026-10-15
+
+**Objetivo CTR:** > 2,5%
+
+---
+
+#### 6. `/voz-online/paralisis-cordal-rehabilitacion-online` (light touch)
+**Métricas GSC previas:** 149 imp, 5 clics, pos 8,8
+
+**Cambios:** Title, description y H1 sin cambio. `dateModified` 2026-10-15. Se quitó el `FAQPage` duplicado (quedó uno). Enlace a `/voz-online/voz-ronca-causas-tratamiento`.
+
+**Objetivo:** Mantener CTR (hoy ~3,4%)
+
+---
+
+#### 7. `/voz-online/higiene-vocal-cuidado-voz`
+**Métricas GSC previas:** 65 imp, 2 clics, pos 7,5
+
+**Cambios:**
+- **Title:** `"Higiene Vocal: Cómo Cuidar tu Voz Todos los Días"` → `"¿Cómo Cuidar la Voz? Higiene Vocal Día a Día"`
+- **H1:** `"¿Cómo cuidar la voz? Higiene vocal"` + caja de respuesta (hábitos ya listados en la página)
+- **Enlaces:** rehabilitación de profesionales y terapia para docentes
+- **Schema:** `dateModified` 2026-10-15
+
+**Objetivo CTR:** > 4%
+
+---
+
+#### 8. `/voz-online/rehabilitacion-vocal-profesionales-voz`
+**Métricas GSC previas:** 28 imp, 0 clics, pos 11,8
+
+**Cambios:**
+- **Title:** `"Rehabilitación de la Voz en Profesionales | Online Chile"` → `"Rehabilitación de la Voz en Profesionales | Online"`
+- **H1:** De gancho emocional a `"Rehabilitación de la voz en profesionales"` (el gancho queda como bajada)
+- **Contenido:** Caja de respuesta + FAQ «¿Qué es impostar la voz?» usando el sentido ya escrito en la página (forzar un tono, p. ej. grave artificial)
+- **Enlaces:** fatiga, nódulos, higiene, docentes, evaluación
+- **Schema:** `dateModified` 2026-10-15
+
+**Objetivo:** Subir «rehabilitacion de la voz en profesionales» desde pos ~28; CTR > 3%
+
+---
+
+#### 9. `/voz-online/fatiga-vocal-tratamiento-online`
+**Métricas GSC previas:** 27 imp, 0 clics, pos 8,9
+
+**Cambios:**
+- **Title:** `"Fatiga Vocal: ¿Por qué se me cansa la voz? Tratamiento Online"` → `"¿Por qué se me cansa la voz? Fatiga vocal online"`
+- **H1:** `"¿Por qué se me cansa la voz?"` + caja con la definición ya publicada
+- **Enlaces:** higiene, nódulos, docentes, evaluación
+- **Schema:** `dateModified` 2026-10-15
+
+**Objetivo CTR:** > 3%
+
+---
+
+#### 10. `/voz-online/nodulos-vocales-tratamiento-online`
+**Métricas GSC previas:** 23 imp, 1 clic, pos 8,3
+
+**Cambios:**
+- **Title:** `"Nódulos Vocales: Tratamiento Online | ¿Se pueden curar sin cirugía?"` → `"Nódulos Vocales: ¿Se curan sin cirugía? | Online"`
+- **H1:** `"¿Se pueden tratar los nódulos vocales sin cirugía?"` + caja (terapia como primera línea, hecho ya en la FAQ)
+- **Enlaces:** voz ronca, higiene, fatiga, evaluación
+- **Schema:** `dateModified` 2026-10-15
+
+**Objetivo CTR:** > 4%
+
+---
+
+#### 11. `/voz-online/evaluacion-vocal-online`
+**Métricas GSC previas:** 16 imp, 0 clics, pos 6,0
+
+**Cambios:**
+- **Title:** `"Evaluación Vocal Online | ¿Qué incluye el diagnóstico de voz?"` → `"Evaluación Vocal Online | Qué incluye el diagnóstico"`
+- **Description / H1 / caja:** La primera frase lista anamnesis, GRBAS/CAPE-V, acústico, tiempos de fonación, s/z e informe (ya estaba en la FAQ, no en el H1)
+- **Enlaces:** voz ronca, fatiga, nódulos
+- **Schema:** `WebPage` `dateModified` 2026-10-15
+
+**Objetivo CTR:** > 4% en pos ~6 (hoy 0%)
+
+---
+
+#### 12. `/voz-online/voz-ronca-causas-tratamiento`
+**Métricas GSC previas:** 14 imp, 0 clics, pos 10,1
+
+**Cambios:**
+- **Title:** `"Voz Ronca: ¿Por qué y qué hacer? Tratamiento Online Chile"` → `"¿Por qué tengo la voz ronca? Causas y qué hacer"`
+- **H1:** `"¿Por qué tengo la voz ronca?"` + caja (vibración asimétrica, >2 semanas, causas ya listadas)
+- **Enlaces:** fatiga y docentes
+- **Schema:** `dateModified` 2026-10-15
+
+**Objetivo CTR:** > 3%
+
+---
+
+#### 13. `/voz-online/terapia-vocal-docentes-profesores` (light touch)
+**Métricas GSC previas:** 16 imp, 2 clics, pos 7,6
+
+**Cambios:** Title y H1 sin cambio (ya convierten). Caja de respuesta con lo que ya dice la FAQ (proyección sin gritar, higiene, calentamiento, horario escolar). Enlaces a higiene, rehabilitación de profesionales y fatiga. `dateModified` 2026-10-15. Se conserva el 58% ASHA ya publicado.
+
+**Objetivo:** Mantener CTR alto (> 10%)
+
+### Métricas esperadas
+
+**Medición ~2026-10-29 al 2026-11-05 (14-21 días post-indexación):**
+
+- `/agendar-hora-fonoaudiologo-infantil-chillan`: ≥1 clic (CTR > 2% sobre ~164 imp/90d)
+- `/tratamientos/tel-trastorno-especifico-lenguaje-chillan`: ≥1 clic; pos < 15 en «tel»
+- `/glosario/tel`: ≥1 clic
+- `/servicios/tea-trastorno-espectro-autista`: ≥2 clics
+- `/voz-online/evaluacion-vocal-online`: ≥1 clic
+- `/voz-online/paralisis-cordal-rehabilitacion-online`: no perder los ~5 clics / 90d
+- Totales sitio: mantener o mejorar 10 clics / 597 imp semanales
+
+### Siguientes pasos
+
+1. Pedir indexación en GSC de las 13 URLs
+2. No reescribir estas páginas ni las de Lotes 4-8 hasta el corte (~2026-10-29)
+3. Lote 10 candidato: páginas con impresiones que este lote no tocó (ver ideas en el informe del lote, no en URLs de ciudad ni ads)
+
+---
+
 ## 2026-10-13: SEO Lote 8 — Segundo pase data-driven en páginas Lote 2 (7 días)
 
 ### Contexto

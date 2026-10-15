@@ -7,9 +7,9 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/fatiga-vocal-tratamiento-online",
-  title: "Fatiga Vocal: ¿Por qué se me cansa la voz? Tratamiento Online",
+  title: "¿Por qué se me cansa la voz? Fatiga vocal online",
   description:
-    "¿Llegas al viernes sin voz o te duele la garganta al hablar? Tratamiento online para fatiga vocal: respiración, técnica y proyección sin tensión. Chile.",
+    "Fatiga vocal: por qué se te cansa la voz al final del día y cómo tratarla online. Respiración, técnica y proyección sin tensión. Chile.",
   keywords: [
     "fatiga vocal",
     "se me cansa la voz",
@@ -51,6 +51,7 @@ export default function FatigaVocalPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    dateModified: "2026-10-15",
     mainEntity: faqItems.map((item) => ({
       "@type": "Question",
       name: item.question,
@@ -76,8 +77,16 @@ export default function FatigaVocalPage() {
         <article className="prose prose-orange lg:prose-lg max-w-none">
           <header className="mb-10 text-center">
             <h1 className="text-4xl font-extrabold text-orange-950 mb-6">
-              ¿Tu voz es una lucha cada tarde? Domina la Fatiga Vocal
+              ¿Por qué se me cansa la voz?
             </h1>
+            <div className="not-prose mx-auto mb-6 max-w-3xl rounded-2xl border-2 border-orange-200 bg-white p-5 text-left">
+              <p className="text-lg font-semibold text-orange-950">
+                <strong>Respuesta rápida:</strong> La fatiga vocal es cansancio,
+                debilidad o esfuerzo al hablar, sobre todo al final del día.
+                Suele venir de un uso vocal ineficiente. El tratamiento online
+                trabaja respiración, técnica y proyección sin tensión.
+              </p>
+            </div>
             <p
               className="lead font-medium text-gray-700 max-w-3xl mx-auto"
               data-speakable
@@ -166,6 +175,25 @@ export default function FatigaVocalPage() {
             </p>
             <p className="mt-4">
               Aprenderemos técnica respiratoria costo-diafragmática orientada al habla sostenible, para que proyectes desde el abdomen y no destruyéndote la laringe.
+            </p>
+            <p className="mt-4">
+              Los hábitos de base están en{" "}
+              <Link href="/voz-online/higiene-vocal-cuidado-voz" className="font-semibold text-orange-700">
+                higiene vocal
+              </Link>
+              . Si ya hay lesión, revisa{" "}
+              <Link href="/voz-online/nodulos-vocales-tratamiento-online" className="font-semibold text-orange-700">
+                nódulos vocales
+              </Link>
+              . Si das clases,{" "}
+              <Link href="/voz-online/terapia-vocal-docentes-profesores" className="font-semibold text-orange-700">
+                terapia vocal para docentes
+              </Link>
+              . El punto de partida es la{" "}
+              <Link href="/voz-online/evaluacion-vocal-online" className="font-semibold text-orange-700">
+                evaluación vocal online
+              </Link>
+              .
             </p>
           </section>
 

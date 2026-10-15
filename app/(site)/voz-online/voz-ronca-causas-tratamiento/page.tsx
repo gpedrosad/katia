@@ -6,9 +6,9 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/voz-ronca-causas-tratamiento",
-  title: "Voz Ronca: ¿Por qué y qué hacer? Tratamiento Online Chile",
+  title: "¿Por qué tengo la voz ronca? Causas y qué hacer",
   description:
-    "Ronquera persistente (>2 semanas) sin resfriado requiere evaluación. Causas: mal uso vocal, laringitis, reflujo, nódulos. Tratamiento fonoaudiológico online.",
+    "Voz ronca: por qué aparece y qué hacer si dura más de 2 semanas. Causas frecuentes y tratamiento fonoaudiológico online en Chile.",
   keywords: [
     "voz ronca",
     "por qué tengo la voz ronca",
@@ -50,6 +50,7 @@ export default function VozRoncaPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    dateModified: "2026-10-15",
     mainEntity: faqItems.map((item) => ({
       "@type": "Question",
       name: item.question,
@@ -74,8 +75,16 @@ export default function VozRoncaPage() {
 
         <article className="prose prose-pink lg:prose-lg max-w-none">
           <h1 className="text-4xl font-extrabold text-pink-950">
-            ¿Por Qué Tengo la Voz Ronca? Causas y Tratamiento Online
+            ¿Por qué tengo la voz ronca?
           </h1>
+          <div className="not-prose my-6 rounded-2xl border-2 border-pink-200 bg-pink-50 p-5">
+            <p className="text-lg font-semibold text-pink-950">
+              <strong>Respuesta rápida:</strong> La voz ronca aparece cuando las
+              cuerdas vocales no vibran de forma simétrica. Si dura más de 2
+              semanas sin resfriado, conviene evaluación. Causas frecuentes:
+              mal uso vocal, laringitis, reflujo y nódulos.
+            </p>
+          </div>
           <p className="lead font-medium text-gray-700" data-speakable>
             La voz ronca (o disfónica) es una de las consultas más frecuentes en
             fonoaudiología de voz. Una ronquera que no se va después de un
@@ -204,6 +213,17 @@ export default function VozRoncaPage() {
               resuelve la ronquera en pocas semanas. Si sospechamos una lesión
               orgánica, te derivaremos a otorrinolaringología para una
               nasofibroscopía antes de continuar.
+            </p>
+            <p>
+              Si el cansancio llega antes que la ronquera, revisa{" "}
+              <Link href="/voz-online/fatiga-vocal-tratamiento-online" className="font-semibold text-pink-700">
+                fatiga vocal
+              </Link>
+              . Si das clases, la{" "}
+              <Link href="/voz-online/terapia-vocal-docentes-profesores" className="font-semibold text-pink-700">
+                terapia vocal para docentes
+              </Link>{" "}
+              trabaja la proyección en sala.
             </p>
           </section>
 

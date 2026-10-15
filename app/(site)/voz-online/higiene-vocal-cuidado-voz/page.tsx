@@ -6,9 +6,9 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/higiene-vocal-cuidado-voz",
-  title: "Higiene Vocal: Cómo Cuidar tu Voz Todos los Días",
+  title: "¿Cómo Cuidar la Voz? Higiene Vocal Día a Día",
   description:
-    "10 reglas de oro para cuidar tu voz: hidratación, evitar carraspear, descansos vocales. Asesoría fonoaudióloga especialista online para Chile.",
+    "Higiene vocal: cómo cuidar la voz cada día (hidratación, no carraspear, descanso). 10 reglas y cuándo pedir evaluación online en Chile.",
   keywords: [
     "higiene vocal",
     "cómo cuidar la voz",
@@ -50,6 +50,7 @@ export default function HigieneVocalPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    dateModified: "2026-10-15",
     mainEntity: faqItems.map((item) => ({
       "@type": "Question",
       name: item.question,
@@ -74,8 +75,16 @@ export default function HigieneVocalPage() {
 
         <article className="prose prose-teal lg:prose-lg max-w-none">
           <h1 className="text-4xl font-extrabold text-teal-950">
-            Higiene Vocal: Cómo Cuidar tu Voz Correctamente
+            ¿Cómo cuidar la voz? Higiene vocal
           </h1>
+          <div className="not-prose my-6 rounded-2xl border-2 border-teal-200 bg-teal-50 p-5">
+            <p className="text-lg font-semibold text-teal-950">
+              <strong>Respuesta rápida:</strong> La higiene vocal son los
+              hábitos que protegen las cuerdas: hidratarte, no carraspear, no
+              gritar y descansar la voz. Es la base de cualquier tratamiento y
+              no reemplaza la terapia si ya hay disfonía, fatiga o nódulos.
+            </p>
+          </div>
           <p className="lead font-medium text-gray-700" data-speakable>
             La higiene vocal son los hábitos diarios que protegen tus cuerdas
             vocales y previenen el deterioro de la voz. Es la base de cualquier
@@ -213,7 +222,22 @@ export default function HigieneVocalPage() {
             >
               evaluación vocal online
             </Link>{" "}
-            y te entrego un protocolo a medida.
+            y te entrego un protocolo a medida. Si usas la voz en el trabajo,
+            mira también la{" "}
+            <Link
+              href="/voz-online/rehabilitacion-vocal-profesionales-voz"
+              className="font-semibold text-teal-600"
+            >
+              rehabilitación de la voz en profesionales
+            </Link>{" "}
+            y la{" "}
+            <Link
+              href="/voz-online/terapia-vocal-docentes-profesores"
+              className="font-semibold text-teal-600"
+            >
+              terapia vocal para docentes
+            </Link>
+            .
           </p>
 
           <GeoFAQ

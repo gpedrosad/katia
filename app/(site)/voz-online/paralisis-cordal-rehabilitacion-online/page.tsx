@@ -50,6 +50,7 @@ export default function ParalisisCordalPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
+    dateModified: "2026-10-15",
     name: "Parálisis de Cuerda Vocal - Rehabilitación Online",
     medicalSpecialty: "SpeechTherapy",
     about: {
@@ -202,8 +203,17 @@ export default function ParalisisCordalPage() {
             para establecer tu línea base.
           </p>
 
+          <p>
+            Si además hay ronquera persistente, revisa{" "}
+            <Link href="/voz-online/voz-ronca-causas-tratamiento" className="font-semibold text-slate-700">
+              voz ronca
+            </Link>
+            .
+          </p>
+
           <GeoFAQ
             items={faqItems}
+            includeJsonLd={false}
             className="not-prose my-12 rounded-2xl border border-slate-200 bg-slate-50/40 p-8"
           />
 

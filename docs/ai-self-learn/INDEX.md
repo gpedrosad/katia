@@ -1,6 +1,6 @@
 # INDEX — hechos densos (leer primero)
 
-Actualizado: **2026-10-13**
+Actualizado: **2026-10-15**
 
 ## Identidad / NAP
 
@@ -58,7 +58,8 @@ Actualizado: **2026-10-13**
 - Auth GSC: OAuth en `.secrets/gsc-oauth-token.json` · `npm run gsc:report:md` · site `sc-domain:katialafono.cl`
 - Contador sitemap 0/84 = **falsa alarma** (páginas indexadas por otros medios)
 - Lote 8 (2026-10-13): segundo pase páginas Lote 2 · GSC 90d 07-15..10-12: **87 clic / 5.146 imp / CTR 1,7% / pos 8,0** · pull 10-13 no posible (`invalid_grant`) · changelog `SEO-CHANGELOG.md` · `pendiente:` indexar 8 URLs y medir 14-21 días
-- Congeladas post-Lote 8: Lotes 3-7 + city pages voz-online + `/ads` + `/sitelink` + relacionadas TEL/evaluación listadas en el brief
+- Lote 9 (2026-10-15): segundo pase Lote 3 + agendar + tratamiento TEL Chillán · GSC 90d 07-17..10-14: **87 clic / 5.335 imp / pos 8,1** · 7d 10/597 vs 2/609 · changelog `SEO-CHANGELOG.md` · `pendiente:` indexar 13 URLs y medir ~2026-10-29..11-05
+- Congeladas post-Lote 9: Lotes 4-8 + city pages voz-online + `/ads` + `/sitelink` + páginas Lote 9 hasta el corte
 
 ## Stack / convenciones
 

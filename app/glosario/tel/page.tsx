@@ -4,11 +4,10 @@ import { Footer } from "../../_components/Footer";
 import { Header } from "../../_components/Header";
 import { WhatsAppCTA } from "../../_components/WhatsAppCTA";
 import { buildPageMetadata } from "@/lib/seo";
-import { SITE_URL } from "@/lib/site";
+import { whatsappUrl } from "@/lib/site";
 
 const PAGE_PATH = "/glosario/tel";
-const WHATSAPP_LINK =
-  "https://wa.me/56995497838?text=Hola%2C%20quiero%20consultar%20por%20TEL";
+const WHATSAPP_LINK = whatsappUrl("Hola, quiero consultar por TEL");
 const ASHA_URL =
   "https://www.asha.org/public/speech/disorders/Developmental-Language-Disorders/";
 const ASHA_LABEL = "ASHA — Developmental Language Disorder";
@@ -58,9 +57,9 @@ const faqs = [
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Definición TEL (TDL) | Qué es el Trastorno del Desarrollo del Lenguaje",
+  title: "¿Qué es el TEL? Definición breve (TDL)",
   description:
-    "TEL o TDL: trastorno del neurodesarrollo que afecta lenguaje sin causa aparente. Diferencias con retraso simple. Definición breve, tipos y cuándo sospechar.",
+    "Definición breve del TEL (TDL): trastorno del lenguaje sin causa aparente. Afecta cerca del 7% de los niños. El tratamiento en Chillán está en otra página.",
   keywords: [
     "qué es TEL",
     "definición TEL",
@@ -84,7 +83,7 @@ const jsonLd = {
     jobTitle: "Fonoaudióloga",
   },
   datePublished: "2024-06-01",
-  dateModified: "2026-05-20",
+  dateModified: "2026-10-15",
 };
 
 const faqJsonLd = {
@@ -130,9 +129,10 @@ export default function TELGlosarioPage() {
               <h1 className="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl">
                 ¿Qué es el TEL (TDL)?
               </h1>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-gray-600" data-speakable>
                 <strong>Definición breve:</strong> El <strong>TEL</strong> (también llamado <strong>TDL</strong>) es un trastorno 
                 del neurodesarrollo que afecta el desarrollo del lenguaje sin causa aparente como sordera o discapacidad intelectual.
+                Si buscas el tratamiento en Chillán, está en otra página: esta es solo la definición.
               </p>
             </header>
 
@@ -337,14 +337,25 @@ export default function TELGlosarioPage() {
                   </p>
                 </Link>
                 <Link
-                  href="/servicios/tel-trastorno-especifico-lenguaje"
+                  href="/tratamientos/tel-trastorno-especifico-lenguaje-chillan"
                   className="rounded-xl border border-gray-200 bg-white p-4 transition-colors hover:border-rose-300"
                 >
                   <h3 className="font-semibold text-gray-900">
-                    Tratamiento TEL en Chillán
+                    Tratamiento del TEL en Chillán
                   </h3>
                   <p className="text-sm text-gray-600">
-                    Servicio especializado de tratamiento.
+                    Cómo es la terapia presencial y qué puedes esperar.
+                  </p>
+                </Link>
+                <Link
+                  href="/comparaciones/tel-vs-retraso-del-lenguaje"
+                  className="rounded-xl border border-gray-200 bg-white p-4 transition-colors hover:border-rose-300"
+                >
+                  <h3 className="font-semibold text-gray-900">
+                    TEL vs retraso del lenguaje
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    En qué se diferencian, sin confundir los términos.
                   </p>
                 </Link>
               </div>
