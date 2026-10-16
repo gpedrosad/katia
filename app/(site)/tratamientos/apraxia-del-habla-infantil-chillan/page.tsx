@@ -10,15 +10,14 @@ const WHATSAPP_LINK = whatsappUrl("Hola, sospecho apraxia del habla en mi hijo. 
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Tratamiento Apraxia del Habla Infantil Chillán | CAS",
+  title: "Tratamiento de Apraxia del Habla en Chillán",
   description:
-    "Tratamiento especializado de apraxia del habla infantil (CAS) en Chillán: errores inconsistentes, esfuerzo visible al hablar. Evaluación diferencial y terapia de aprendizaje motor presencial.",
+    "Cómo es el tratamiento de la apraxia del habla infantil en Chillán: aprendizaje motor y práctica en casa. Las señales locales están en otra página.",
   keywords: [
     "apraxia del habla infantil Chillán",
     "tratamiento apraxia habla Chillán",
     "CAS niños Chillán",
     "terapia motricidad del habla",
-    "fonoaudióloga Chillán",
     "errores inconsistentes habla",
   ],
 });
@@ -39,6 +38,7 @@ const benefits = [
 ];
 
 const faqs = [
+  { q: "¿Esta página es el tratamiento o las señales?", a: "Es el tratamiento: aprendizaje motor, práctica frecuente y rutinas en casa. Las señales locales (errores inconsistentes y esfuerzo al hablar) están en la página de apraxia del habla en Chillán." },
   { q: "¿Qué es la apraxia del habla infantil?", a: "Es un trastorno neurológico de programación motora del habla: el niño sabe lo que quiere decir, pero el cerebro no coordina bien los movimientos para producir sonidos y palabras. No es falta de inteligencia ni «flojera»." },
   { q: "¿Cómo se diferencia de la dislalia?", a: "En dislalia hay errores más estables en sonidos concretos. En apraxia los intentos son inconsistentes, la imitación falla y suele haber búsqueda articulatoria. La evaluación especializada lo define." },
   { q: "¿Cuántas sesiones por semana necesita?", a: "Suele recomendarse alta frecuencia (a menudo 2-3 veces por semana al inicio) más práctica diaria breve. Ajustamos según edad, severidad y disponibilidad familiar." },
@@ -54,6 +54,7 @@ const serviceJsonLd = {
   provider: { "@type": "Person", name: "Katia Domínguez", jobTitle: "Fonoaudióloga" },
   areaServed: { "@type": "City", name: "Chillán" },
   serviceType: "Terapia de motricidad del habla",
+  dateModified: "2026-10-16",
 };
 
 const faqJsonLd = {
@@ -91,17 +92,20 @@ export default function ApraxiaHablaPage() {
               Apraxia del habla infantil (CAS)
             </span>
             <h1 className="mb-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
-              Apraxia del habla infantil: tratamiento en Chillán
+              Tratamiento de la apraxia del habla infantil en Chillán
             </h1>
-            <p
+            <div
               data-speakable
-              className="mb-6 text-xl leading-relaxed text-gray-600"
+              className="mb-6 rounded-2xl border border-slate-200 bg-white p-5 text-lg leading-relaxed text-gray-700"
             >
-              La apraxia del habla infantil es un trastorno de programación motora:
-              tu hijo sabe lo que quiere decir, pero le cuesta coordinar labios,
-              lengua y mandíbula para producir sonidos de forma consistente. No es
-              flojera ni baja inteligencia; requiere terapia especializada.
-            </p>
+              <p>
+                <strong>Respuesta rápida:</strong> El tratamiento es de
+                aprendizaje motor: repeticiones variadas, sesiones consistentes
+                y práctica breve en casa. Tu hijo sabe lo que quiere decir, pero
+                le cuesta coordinar labios, lengua y mandíbula. Las señales
+                locales están en otra página.
+              </p>
+            </div>
             <ul className="mb-8 space-y-3 text-gray-700">
               <li className="flex items-start gap-3">
                 <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">✓</span>
@@ -176,8 +180,10 @@ export default function ApraxiaHablaPage() {
               Más información en el{" "}
               <Link href="/glosario/praxias-orofaciales" className="font-semibold text-slate-600 underline">glosario</Link>,{" "}
               <Link href="/chillan/apraxia-del-habla" className="font-semibold text-slate-600 underline">apraxia en Chillán</Link>{" "}
-              y{" "}
+              (señales) y{" "}
               <Link href="/servicios/terapia-del-habla-infantil-chillan" className="font-semibold text-slate-600 underline">terapia del habla</Link>.{" "}
+              La atención general está en{" "}
+              <Link href="/fonoaudiologa-ninos-chillan" className="font-semibold text-slate-600 underline">fonoaudiología infantil en Chillán</Link>.{" "}
               Agenda una{" "}
               <Link href="/servicios/evaluacion-fonoaudiologica" className="font-semibold text-slate-600 underline">evaluación especializada</Link>.
             </p>

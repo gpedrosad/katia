@@ -629,16 +629,15 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     shortDescription:
       "Dificultad específica para aprender a leer de origen neurobiológico.",
     category: "Lectoescritura",
-    metaTitle: "Definición Dislexia | ¿Qué es y cómo ayuda la fonoaudiología?",
+    metaTitle: "¿Qué es la dislexia? | Definición breve",
     metaDescription:
-      "Definición de dislexia: dificultad específica de lectura con base en lenguaje oral (conciencia fonológica, vocabulario). Señales, diferencias y cuándo evaluar con fonoaudióloga.",
+      "Definición breve de dislexia: dificultad específica para aprender a leer, con base en el lenguaje oral. En Chillán, la evaluación está en otra página.",
     keywords: [
       "qué es dislexia",
       "dislexia definición",
       "dislexia niños",
       "dificultad para leer",
-      "lectoescritura",
-      "fonoaudiología dislexia",
+      "qué significa dislexia",
     ],
     headline: "¿Qué es la dislexia?",
     subtitle:

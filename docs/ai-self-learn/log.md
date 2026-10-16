@@ -4,6 +4,11 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 
 ---
 
+## 2026-10-16
+
+- SEO | Lote 10 segundo pase Lote 4 (dislalia ×3, lectoescritura/dislexia ×4, informe PIE, apraxia ×2, 3 síntomas, terapia de lenguaje, disfemia solo enlaces) | Roles y snippets con hechos ya publicados; redirect del informe: source con ó no matchea `%C3%B3`, se agregó el path codificado (308); no city pages, no ads, no Lotes 5-9. Changelog `SEO-CHANGELOG.md`
+- GSC | Corte 90d 2026-07-18→2026-10-15: 87 clic / 5.407 imp / pos 8,1 · 7d 10-09..10-15: 8/587 vs 7d previos 5/629 | `pendiente:` indexar 15 URLs y medir ~2026-10-30..11-06
+
 ## 2026-10-15
 
 - SEO | Lote 9 segundo pase Lote 3 (glosario TEL, chillan/tel, TEA, 8 voz-online no-ciudad) + agendar (164 imp/0/pos 6,4) + tratamiento TEL Chillán (142 imp/0/pos 9,7) | Title/H1/FAQ/snippet con hechos ya publicados; no city pages, no ads, no Lotes 4-8. Changelog `SEO-CHANGELOG.md`

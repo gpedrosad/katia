@@ -29,10 +29,9 @@ const faqItems = [
 
 export const metadata = buildPageMetadata({
   path: "/servicios/informe-fonoaudiologico-pie-chillan",
-  title:
-    "Informe Fonoaudiológico para PIE Chillán | Colegio Decreto 170",
+  title: "Informe Fonoaudiológico | Qué es y quién lo pide",
   description:
-    "Informe fonoaudiológico para PIE y escuelas de lenguaje en Chillán. Test estandarizados (TEPROSIF-R, TECAL, STSG) válidos para colegio. Evaluación 60 min + informe Decreto 170. WhatsApp.",
+    "Documento de la evaluación (test y plan) que piden el colegio para el PIE, una escuela de lenguaje o el pediatra. Se elabora en Chillán. WhatsApp.",
   keywords: [
     "informe fonoaudiológico para PIE",
     "informe fonoaudiológico Chillán",
@@ -63,6 +62,7 @@ export default function InformePiePage() {
       },
     },
     areaServed: "Chillán, Región de Ñuble",
+    dateModified: "2026-10-16",
   };
 
   const faqJsonLd = {
@@ -99,9 +99,36 @@ export default function InformePiePage() {
 
         <article className="prose prose-violet lg:prose-lg max-w-none">
           <h1 className="text-4xl font-extrabold text-violet-950">
-            Informe Fonoaudiológico para PIE y Escuelas de Lenguaje en Chillán
+            Informe fonoaudiológico: qué es y quién lo pide
           </h1>
-          <p className="lead font-medium text-gray-700" data-speakable>
+          <div
+            className="not-prose my-6 rounded-2xl border border-violet-200 bg-violet-50 p-5 text-gray-800"
+            data-speakable
+          >
+            <p>
+              <strong>Respuesta rápida:</strong> Un informe fonoaudiológico
+              documenta la evaluación (anamnesis, unos 60 minutos, test como
+              TEPROSIF-R, TECAL o STSG, y un plan) que piden el colegio para el
+              PIE, una escuela de lenguaje o el pediatra. En Chillán se elabora
+              según el Decreto 170.
+            </p>
+            <p className="mt-3 text-sm">
+              <Link
+                href="/fonoaudiologa-ninos-chillan"
+                className="font-semibold text-violet-700 underline"
+              >
+                Fonoaudiología infantil en Chillán
+              </Link>
+              {" · "}
+              <Link
+                href="/servicios/evaluacion-fonoaudiologica"
+                className="font-semibold text-violet-700 underline"
+              >
+                Evaluación fonoaudiológica
+              </Link>
+            </p>
+          </div>
+          <p className="lead font-medium text-gray-700">
             ¿El colegio o jardín infantil te pidió un informe fonoaudiológico
             para ingresar al <strong>Programa de Integración Escolar (PIE)</strong>{" "}
             o postular a una <strong>escuela de lenguaje</strong>? Realizamos

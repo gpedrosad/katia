@@ -4,11 +4,10 @@ import { Footer } from "../../_components/Footer";
 import { Header } from "../../_components/Header";
 import { WhatsAppCTA } from "../../_components/WhatsAppCTA";
 import { buildPageMetadata } from "@/lib/seo";
-import { SITE_URL } from "@/lib/site";
+import { SITE_URL, whatsappUrl } from "@/lib/site";
 
 const PAGE_PATH = "/glosario/dislalia";
-const WHATSAPP_LINK =
-  "https://wa.me/56995497838?text=Hola%2C%20quiero%20consultar%20por%20dislalia";
+const WHATSAPP_LINK = whatsappUrl("Hola, quiero consultar por dislalia");
 const ASHA_URL =
   "https://www.asha.org/public/speech/disorders/articulation/";
 const ASHA_LABEL = "ASHA — Articulation";
@@ -58,9 +57,9 @@ const faqs = [
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Definición Dislalia | ¿Qué es y cómo se trata?",
+  title: "¿Qué es la dislalia? | Definición breve",
   description:
-    "Definición breve de dislalia: dificultad para articular fonemas (omitir, sustituir o distorsionar sonidos). Tipos, causas y cuándo buscar tratamiento fonoaudiológico en Chillán.",
+    "Definición breve de dislalia: omitir, sustituir o distorsionar sonidos. El tratamiento de la dislalia infantil en Chillán está en su página.",
   keywords: [
     "qué es dislalia",
     "dislalia definición",
@@ -76,9 +75,9 @@ export const metadata = buildPageMetadata({
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "¿Qué es la Dislalia? Causas, Síntomas y Tratamiento",
+  headline: "¿Qué es la dislalia?",
   description:
-    "Guía completa sobre la dislalia: definición, tipos, causas y tratamiento fonoaudiológico.",
+    "Definición breve de dislalia: dificultad para articular fonemas. El tratamiento en Chillán está en otra página.",
   author: {
     "@type": "Person",
     name: "Katia Domínguez",
@@ -93,7 +92,7 @@ const jsonLd = {
     "@id": `${SITE_URL}${PAGE_PATH}`,
   },
   datePublished: "2024-06-01",
-  dateModified: "2026-05-20",
+  dateModified: "2026-10-16",
 };
 
 const faqJsonLd = {
@@ -180,6 +179,14 @@ export default function DislaliaPage() {
                     Agendar evaluación
                   </Link>
                 </li>
+                <li className="text-base">
+                  <Link
+                    href="/fonoaudiologa-ninos-chillan"
+                    className="font-medium text-rose-600 underline hover:text-rose-700"
+                  >
+                    Fonoaudiología infantil en Chillán
+                  </Link>
+                </li>
               </ul>
             </nav>
 
@@ -255,33 +262,21 @@ export default function DislaliaPage() {
               </ul>
               <p>
                 Si después de los 5-6 años tu hijo sigue teniendo errores de
-                pronunciación, es recomendable consultar.
+                pronunciación, es recomendable consultar. Las señales locales
+                están en la página de dislalia en Chillán, no en esta definición.
               </p>
 
-              <h2>Tratamiento de la dislalia</h2>
-              <p>El tratamiento fonoaudiológico incluye:</p>
-              <ol>
-                <li>
-                  <strong>Evaluación:</strong> Identificar qué sonidos están
-                  afectados y por qué.
-                </li>
-                <li>
-                  <strong>Praxias orofaciales:</strong> Ejercicios para
-                  fortalecer y coordinar los músculos del habla.
-                </li>
-                <li>
-                  <strong>Enseñanza del sonido correcto:</strong> Mostrar cómo
-                  posicionar la lengua, labios y boca.
-                </li>
-                <li>
-                  <strong>Práctica sistemática:</strong> Primero en sílabas,
-                  luego palabras, oraciones y conversación.
-                </li>
-                <li>
-                  <strong>Generalización:</strong> Asegurar que use el sonido
-                  correctamente en la vida diaria.
-                </li>
-              </ol>
+              <h2>Dónde está el tratamiento</h2>
+              <p>
+                Esta entrada se queda en la definición. El plan (evaluación de
+                los sonidos, praxias, enseñanza del sonido y práctica hasta el
+                habla espontánea) está en la página de{" "}
+                <Link href="/tratamientos/dislalia-infantil-chillan">
+                  tratamiento de dislalia infantil en Chillán
+                </Link>
+                . Las señales por edad en la comuna están en{" "}
+                <Link href="/chillan/dislalia">dislalia en Chillán</Link>.
+              </p>
 
               <h2>Preguntas frecuentes</h2>
             </div>

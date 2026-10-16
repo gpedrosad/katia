@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SITE_URL, whatsappUrl } from "@/lib/site";
 import { buildPageMetadata } from "@/lib/seo";
 import { Breadcrumbs } from "../../_components/Breadcrumbs";
@@ -12,9 +13,9 @@ const WHATSAPP_HREF = whatsappUrl("Hola, quiero consultar por dificultades de le
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Dificultades de Lectura y Escritura Chillán | Fonoaudiología",
+  title: "Mi hijo no aprende a leer ni escribir | Chillán",
   description:
-    "Apoyo fonoaudiológico para dificultades de lectura y escritura en Chillán: conciencia fonológica, decodificación, fluidez y comprensión lectora. Base del lenguaje oral para leer y escribir.",
+    "¿Lee lento, confunde letras (b/d) o evita leer? Apoyo en Chillán: conciencia fonológica, decodificación y comprensión. La dislexia tiene su página.",
   keywords: ["dificultades lectoescritura Chillán",
     "problemas de lectura niños Chillán",
     "conciencia fonológica Chillán",
@@ -90,6 +91,7 @@ const jsonLd = {
     name: "Chillán",
   },
   serviceType: "Tratamiento de lectoescritura",
+  dateModified: "2026-10-16",
 };
 
 const faqJsonLd = {
@@ -152,13 +154,36 @@ export default function LectoescrituraPage() {
                   📚 Lectura y escritura
                 </span>
                 <h1 className="mb-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
-                  Dificultades de lectoescritura en Chillán
+                  Mi hijo no aprende a leer ni escribir
                 </h1>
-                <p className="mb-6 text-xl text-gray-600">
-                  ¿Tu hijo tiene problemas para aprender a leer o escribir?
-                  Evaluación y tratamiento especializado para mejorar sus
-                  habilidades.
-                </p>
+                <div className="mb-6 rounded-2xl border border-rose-200 bg-white p-5 text-gray-700">
+                  <p>
+                    <strong>Respuesta rápida:</strong> Si lee lento, confunde
+                    letras como b/d o evita leer, en Chillán se trabajan la
+                    conciencia fonológica, la decodificación y la comprensión.
+                    Esta es la página del apoyo de lectoescritura. La definición
+                    de dislexia y la página de fonoaudiología y dislexia están
+                    aparte. El diagnóstico formal de dislexia se hace con
+                    evaluaciones especializadas.
+                  </p>
+                  <p className="mt-3 text-sm">
+                    <Link href="/chillan/dislexia" className="font-semibold text-rose-700 underline">
+                      Fonoaudiología y dislexia en Chillán
+                    </Link>
+                    {" · "}
+                    <Link href="/glosario/dislexia" className="font-semibold text-rose-700 underline">
+                      Definición de dislexia
+                    </Link>
+                    {" · "}
+                    <Link href="/chillan/lectoescritura" className="font-semibold text-rose-700 underline">
+                      Base en el lenguaje oral
+                    </Link>
+                    {" · "}
+                    <Link href="/fonoaudiologa-ninos-chillan" className="font-semibold text-rose-700 underline">
+                      Fonoaudiología infantil en Chillán
+                    </Link>
+                  </p>
+                </div>
                 <ul className="mb-8 space-y-3 text-gray-700">
                   <li className="flex items-start gap-3">
                     <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">

@@ -51,14 +51,18 @@ export async function generateMetadata({
   };
 }
 
-function buildArticleJsonLd(termino: GlosarioTermino, pagePath: string) {
+function buildArticleJsonLd(
+  termino: GlosarioTermino,
+  pagePath: string,
+  dateModified: string,
+) {
   return {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: termino.headline,
     description: termino.metaDescription,
     datePublished: DATE_PUBLISHED,
-    dateModified: DATE_MODIFIED,
+    dateModified,
     author: {
       "@type": "Person",
       name: "Katia Domínguez",
@@ -104,7 +108,11 @@ export default async function GlosarioTermPage({ params }: PageProps) {
 
   const pagePath = `/glosario/${slug}`;
   const related = getRelatedTerminos(termino.relatedSlugs);
-  const articleJsonLd = buildArticleJsonLd(termino, pagePath);
+  const articleJsonLd = buildArticleJsonLd(
+    termino,
+    pagePath,
+    slug === "dislexia" ? "2026-10-16" : DATE_MODIFIED,
+  );
   const faqJsonLd = buildFaqJsonLd(termino);
 
   return (
@@ -174,6 +182,29 @@ export default async function GlosarioTermPage({ params }: PageProps) {
                   <li key={item}>{item}</li>
                 ))}
               </ul>
+
+              {slug === "dislexia" ? (
+                <p>
+                  Esta entrada es solo la definición. La evaluación local de
+                  las bases del lenguaje oral está en{" "}
+                  <Link href="/chillan/dislexia">
+                    fonoaudiología y dislexia en Chillán
+                  </Link>
+                  . Si leer o escribir cuesta, el apoyo está en{" "}
+                  <Link href="/servicios/dificultades-lectoescritura">
+                    dificultades de lectoescritura
+                  </Link>{" "}
+                  y la página local de la base oral en{" "}
+                  <Link href="/chillan/lectoescritura">
+                    lectoescritura en Chillán
+                  </Link>
+                  . La atención general está en{" "}
+                  <Link href="/fonoaudiologa-ninos-chillan">
+                    fonoaudiología infantil en Chillán
+                  </Link>
+                  .
+                </p>
+              ) : null}
 
               {termino.chillanSlug && (
                 <div className="not-prose my-8 rounded-xl border border-rose-200 bg-rose-50 p-6">

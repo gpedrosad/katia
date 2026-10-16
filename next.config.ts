@@ -109,6 +109,13 @@ const nextConfig: NextConfig = {
         destination: "/servicios/informe-fonoaudiologico-pie-chillan",
         permanent: true,
       },
+      // GSC guarda la URL con ó ya codificada (%C3%B3). url.parse no la decodifica,
+      // así que el source con el carácter no matchea el request.
+      {
+        source: "/servicios/informe-fonoaudiol%C3%B3gico-pie-chillan",
+        destination: "/servicios/informe-fonoaudiologico-pie-chillan",
+        permanent: true,
+      },
     ];
   },
 };

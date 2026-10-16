@@ -12,9 +12,9 @@ const WHATSAPP_LINK = whatsappUrl(
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Mi hijo de 2 años habla poco: ¿es normal? | Chillán",
+  title: "Mi hijo de 2 años habla poco: ¿es normal?",
   description:
-    "¿Tu hijo de 2 años habla poco o dice pocas palabras? Señales por edad de vocabulario limitado, cuándo evaluar con fonoaudióloga en Chillán y qué hacer mientras tanto.",
+    "A los 2 años se esperan unas 50 palabras y frases de dos («mamá agua»). Si habla mucho menos, mira las señales y cuándo evaluar en Chillán.",
   keywords: [
     "mi hijo de 2 años habla poco",
     "hijo habla poco para su edad",
@@ -57,6 +57,7 @@ const medicalWebPageJsonLd = {
   description: "Guía para padres sobre vocabulario limitado en la infancia y cuándo consultar fonoaudióloga en Chillán.",
   medicalSpecialty: "SpeechTherapy",
   about: { "@type": "MedicalCondition", name: "Retraso del lenguaje expresivo" },
+  dateModified: "2026-10-16",
 };
 
 const faqJsonLd = {
@@ -94,17 +95,19 @@ export default function HablaPocoPage() {
               Vocabulario y expresión
             </span>
             <h1 className="mb-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
-              Mi hijo de 2 años habla poco: cuándo consultar
+              Mi hijo de 2 años habla poco: ¿es normal?
             </h1>
-            <p
+            <div
               data-speakable
-              className="mb-6 text-xl leading-relaxed text-gray-600"
+              className="mb-6 rounded-2xl border border-indigo-200 bg-white p-5 text-lg leading-relaxed text-gray-700"
             >
-              Comparar con otros niños puede generar ansiedad, pero tu observación
-              importa: si en el jardín o en casa usa muchas menos palabras que sus
-              pares, conviene revisar hitos del lenguaje. En Chillán orientamos con
-              evaluación clínica y pautas concretas para la familia.
-            </p>
+              <p>
+                <strong>Respuesta rápida:</strong> A los 2 años se esperan
+                alrededor de 50 palabras y frases de dos, como «mamá agua». Si
+                tu hijo está muy por debajo o no progresa, conviene evaluar el
+                lenguaje.
+              </p>
+            </div>
             <ul className="mb-8 space-y-3 text-gray-700">
               <li className="flex items-start gap-3">
                 <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">✓</span>
@@ -172,7 +175,7 @@ export default function HablaPocoPage() {
               Lee el <Link href="/glosario/tel" className="font-semibold text-indigo-600 underline">glosario</Link>,{" "}
               <Link href="/chillan/retraso-del-lenguaje" className="font-semibold text-indigo-600 underline">retraso del lenguaje en Chillán</Link> y la{" "}
               <Link href="/servicios/terapia-lenguaje-infantil" className="font-semibold text-indigo-600 underline">terapia de lenguaje</Link>.{" "}
-              La <Link href="/servicios/evaluacion-fonoaudiologica" className="font-semibold text-indigo-600 underline">evaluación</Link> aclara el diagnóstico.
+              La <Link href="/servicios/evaluacion-fonoaudiologica" className="font-semibold text-indigo-600 underline">evaluación</Link> aclara el diagnóstico. La atención general está en la <Link href="/fonoaudiologa-ninos-chillan" className="font-semibold text-indigo-600 underline">fonoaudiología infantil en Chillán</Link>.
             </p>
           </div>
         </section>

@@ -10,9 +10,9 @@ const WHATSAPP_LINK = whatsappUrl("Hola, mi hijo pronuncia mal y busco fonoaudi�
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Mi hijo no se le entiende al hablar | Pronuncia mal Chillán",
+  title: "No se le entiende al hablar | Pronunciación Chillán",
   description:
-    "¿Tu hijo habla como bebé o no se le entiende a los 3-4 años? Señales de problemas de articulación por edad, cuándo consultar y evaluación en Chillán.",
+    "¿Habla como bebé, dice «tasa» por casa o cuesta entenderlo a los 3-4 años? Señales por edad y cuándo evaluar la pronunciación en Chillán.",
   keywords: ["mi hijo no se le entiende al hablar", "niño pronuncia mal", "habla como bebé", "fonoaudióloga Chillán", "problemas de pronunciación"],
 });
 
@@ -48,6 +48,7 @@ const medicalWebPageJsonLd = {
   description: "¿Tu hijo pronuncia mal letras o palabras? Causas frecuentes, señales por edad y cuándo ir al fonoaudiólogo en Chillán. Terapia de articulación presencial.",
   medicalSpecialty: "SpeechTherapy",
   about: { "@type": "MedicalCondition", name: "Trastornos de la articulación del habla" },
+  dateModified: "2026-10-16",
 };
 
 const faqJsonLd = {
@@ -85,14 +86,19 @@ export default function NinoPronunciaMalPage() {
               Pronunciación infantil
             </span>
             <h1 className="mb-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
-              Mi hijo no pronuncia bien o habla como bebé: guía en Chillán
+              No se le entiende al hablar
             </h1>
-            <p
+            <div
               data-speakable
-              className="mb-6 text-xl leading-relaxed text-gray-600"
+              className="mb-6 rounded-2xl border border-emerald-200 bg-white p-5 text-lg leading-relaxed text-gray-700"
             >
-              Algunos sonidos maduran tarde (la «r» suele consolidarse entre 4 y 6 años), pero si a los 3-5 años varios sonidos fallan, habla como bebé o cuesta entenderlo, merece una evaluación. Te explico señales y pasos concretos.
-            </p>
+              <p>
+                <strong>Respuesta rápida:</strong> Si a los 3 o 4 años habla
+                como bebé, dice «tasa» por casa o solo la familia le entiende,
+                conviene mirar la pronunciación por edad. El tratamiento de la
+                dislalia infantil está en su página.
+              </p>
+            </div>
             <ul className="mb-8 space-y-3 text-gray-700">
               <li className="flex items-start gap-3">
                 <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">✓</span>
@@ -155,7 +161,8 @@ export default function NinoPronunciaMalPage() {
               , <Link href="/glosario/dislalia">glosario</Link>,{" "}
               <Link href="/chillan/dislalia">dislalia en Chillán</Link>,{" "}
               <Link href="/servicios/terapia-del-habla-infantil-chillan">terapia del habla</Link>{" "}
-              y <Link href="/servicios/evaluacion-fonoaudiologica">evaluación</Link>.
+              y <Link href="/servicios/evaluacion-fonoaudiologica">evaluación</Link>.{" "}
+              La atención general está en la <Link href="/fonoaudiologa-ninos-chillan">fonoaudiología infantil en Chillán</Link>.
             </p>
           </div>
         </section>

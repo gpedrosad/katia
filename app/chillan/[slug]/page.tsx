@@ -19,11 +19,11 @@ const DESCRIPTION_OVERRIDES: Record<string, string> = {
   "apraxia-del-habla":
     "Errores inconsistentes al hablar y esfuerzo visible: puede ser apraxia. Evaluación especializada en Chillán con plan claro. Agenda por WhatsApp.",
   dislalia:
-    "¿Tu hijo omite sonidos o dice 'tasa' por casa? Señales de dislalia por edad en Chillán. Evaluación presencial con fonoaudióloga especialista. Agenda por WhatsApp.",
+    "Señales de dislalia en Chillán: omite sonidos o dice «tasa» por casa. El tratamiento está en su página. Cuándo consultar. Agenda por WhatsApp.",
   dislexia:
-    "La dislexia tiene base en lenguaje oral (conciencia fonológica). Evaluación fonoaudiológica en Chillán para dificultades de lectura y bases del lenguaje. Agenda por WhatsApp.",
+    "Fonoaudiología y dislexia en Chillán: se evalúan las bases del lenguaje oral, como la conciencia fonológica. Definición en el glosario.",
   lectoescritura:
-    "Problemas de lectura o escritura suelen tener base en lenguaje oral. Evaluación y tratamiento fonoaudiológico en Chillán para conciencia fonológica y lectoescritura. WhatsApp.",
+    "Si leer o escribir cuesta, muchas veces la base está en el lenguaje oral. Página local en Chillán. El servicio y la dislexia están en otras páginas.",
   "retraso-del-habla":
     "Habla poco o se le entiende mal para su edad: señales de retraso del habla en Chillán. Evaluación fonoaudiológica, articulación y claridad. Agenda por WhatsApp.",
   "trastorno-fonologico":
@@ -35,9 +35,9 @@ const TITLE_OVERRIDES: Record<string, string> = {
   "tea-comunicacion": "Comunicación y Lenguaje en Niños con TEA | Chillán",
   "apraxia-del-habla":
     "Apraxia del Habla Infantil Chillán | Eval. Especializada",
-  dislalia: "Dislalia en Chillán | Señales y cuándo consultar",
-  dislexia: "Dislexia y Fonoaudiología Chillán | Evaluación Lectura",
-  lectoescritura: "Dificultades de Lectoescritura Chillán | Base Lenguaje",
+  dislalia: "Dislalia en Chillán | Señales por edad",
+  dislexia: "Fonoaudiología y Dislexia en Chillán",
+  lectoescritura: "Lectoescritura en Chillán | Base del lenguaje",
   "retraso-del-habla": "Retraso del Habla Chillán | Niño habla poco o no se le entiende",
   "trastorno-fonologico": "Trastorno Fonológico Chillán | Patrones de error en sonidos",
 };
@@ -70,6 +70,62 @@ const KEYWORD_OVERRIDES: Record<string, string[]> = {
     "errores fonológicos niños",
     "fonoaudióloga trastorno fonológico",
     "postítulo fonología",
+  ],
+  dislalia: [
+    "dislalia en Chillán",
+    "señales de dislalia",
+    "cuándo consultar dislalia",
+    "niño omite sonidos",
+    "dice tasa por casa",
+  ],
+  dislexia: [
+    "fonoaudiología y dislexia",
+    "fonoaudiologia dislexia",
+    "dislexia Chillán",
+    "conciencia fonológica y dislexia",
+    "bases del lenguaje oral",
+  ],
+  lectoescritura: [
+    "lectoescritura Chillán",
+    "base del lenguaje oral",
+    "conciencia fonológica lectura",
+    "dificultades de lectura Chillán",
+  ],
+};
+
+const SCHEMA_DATE_MODIFIED: Record<string, string> = {
+  tel: "2026-10-15",
+  dislalia: "2026-10-16",
+  dislexia: "2026-10-16",
+  lectoescritura: "2026-10-16",
+  "apraxia-del-habla": "2026-10-16",
+  disfemia: "2026-10-16",
+};
+
+const EXTRA_FAQS: Record<string, { q: string; a: string }[]> = {
+  dislalia: [
+    {
+      q: "¿Esta página explica el tratamiento de la dislalia?",
+      a: "No. Aquí están las señales locales en Chillán: omite sonidos, dice «tasa» por casa, o la r y la s no salen a la edad esperada. La definición breve está en el glosario y el tratamiento de la dislalia infantil está en la página de tratamiento.",
+    },
+  ],
+  dislexia: [
+    {
+      q: "¿Qué cubre la fonoaudiología y la dislexia en esta página?",
+      a: "Se evalúan y trabajan las bases del lenguaje oral de la lectura, sobre todo la conciencia fonológica. El diagnóstico formal de dislexia se hace con evaluaciones especializadas. La definición breve está en el glosario y el apoyo general de lectura y escritura está en la página de servicio.",
+    },
+  ],
+  lectoescritura: [
+    {
+      q: "¿Esta página es el servicio de lectoescritura o la de dislexia?",
+      a: "Es la página local sobre la base en el lenguaje oral. El servicio general de dificultades de lectoescritura y la página de fonoaudiología y dislexia en Chillán están aparte.",
+    },
+  ],
+  "apraxia-del-habla": [
+    {
+      q: "¿Dónde está el tratamiento de la apraxia?",
+      a: "Las señales (errores inconsistentes y esfuerzo al hablar) están en esta página. Cómo es la terapia de aprendizaje motor está en la página de tratamiento de la apraxia del habla infantil en Chillán.",
+    },
   ],
 };
 
@@ -179,7 +235,9 @@ export default async function PatologiaChillanPage({
     },
     areaServed: { "@type": "City", name: "Chillán" },
     serviceType: p.titulo,
-    ...(slug === "tel" ? { dateModified: "2026-10-15" } : {}),
+    ...(SCHEMA_DATE_MODIFIED[slug]
+      ? { dateModified: SCHEMA_DATE_MODIFIED[slug] }
+      : {}),
   };
 
   const patologiaLabel = p.titulo.split(" en ")[0];
@@ -268,10 +326,16 @@ export default async function PatologiaChillanPage({
         ]
       : [];
 
+  const extraFaqs = (EXTRA_FAQS[slug] ?? []).map((faq) => ({
+    "@type": "Question" as const,
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer" as const, text: faq.a },
+  }));
+
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [...baseFaqs, ...teaSpecificFaqs, ...telSpecificFaqs],
+    mainEntity: [...baseFaqs, ...teaSpecificFaqs, ...telSpecificFaqs, ...extraFaqs],
   };
 
   return (
@@ -346,6 +410,165 @@ export default async function PatologiaChillanPage({
                       </Link>
                     </p>
                   </div>
+                ) : null}
+                {slug === "dislalia" ? (
+                  <div className="mb-8 rounded-2xl border-2 border-rose-200 bg-white p-5 text-left">
+                    <p className="text-lg font-semibold text-gray-900">
+                      <strong>Respuesta rápida:</strong> Esta página muestra
+                      señales de dislalia en Chillán y cuándo consultar. La
+                      definición breve está en el glosario y el tratamiento de
+                      la dislalia infantil está en su página.
+                    </p>
+                    <p className="mt-3 text-sm text-rose-800">
+                      <Link href="/glosario/dislalia" className="font-semibold underline">
+                        Definición de dislalia
+                      </Link>
+                      {" · "}
+                      <Link
+                        href="/tratamientos/dislalia-infantil-chillan"
+                        className="font-semibold underline"
+                      >
+                        Tratamiento de dislalia infantil en Chillán
+                      </Link>
+                      {" · "}
+                      <Link
+                        href="/fonoaudiologa-ninos-chillan"
+                        className="font-semibold underline"
+                      >
+                        Fonoaudiología infantil en Chillán
+                      </Link>
+                    </p>
+                  </div>
+                ) : null}
+                {slug === "dislexia" ? (
+                  <div className="mb-8 rounded-2xl border-2 border-rose-200 bg-white p-5 text-left">
+                    <p className="text-lg font-semibold text-gray-900">
+                      <strong>Respuesta rápida:</strong> Fonoaudiología y
+                      dislexia en Chillán significa evaluar las bases del
+                      lenguaje oral (conciencia fonológica, vocabulario y
+                      comprensión). El diagnóstico formal se hace con
+                      evaluaciones especializadas. La definición y el apoyo
+                      general de lectura están en otras páginas.
+                    </p>
+                    <p className="mt-3 text-sm text-rose-800">
+                      <Link href="/glosario/dislexia" className="font-semibold underline">
+                        Definición de dislexia
+                      </Link>
+                      {" · "}
+                      <Link
+                        href="/servicios/dificultades-lectoescritura"
+                        className="font-semibold underline"
+                      >
+                        Dificultades de lectoescritura
+                      </Link>
+                      {" · "}
+                      <Link
+                        href="/chillan/lectoescritura"
+                        className="font-semibold underline"
+                      >
+                        Lectoescritura en Chillán
+                      </Link>
+                      {" · "}
+                      <Link
+                        href="/fonoaudiologa-ninos-chillan"
+                        className="font-semibold underline"
+                      >
+                        Fonoaudiología infantil en Chillán
+                      </Link>
+                    </p>
+                  </div>
+                ) : null}
+                {slug === "lectoescritura" ? (
+                  <div className="mb-8 rounded-2xl border-2 border-rose-200 bg-white p-5 text-left">
+                    <p className="text-lg font-semibold text-gray-900">
+                      <strong>Respuesta rápida:</strong> Esta página local
+                      explica la base en el lenguaje oral. Si buscas el apoyo
+                      cuando tu hijo no aprende a leer o escribir, está en el
+                      servicio. Si buscas fonoaudiología y dislexia, está en su
+                      página.
+                    </p>
+                    <p className="mt-3 text-sm text-rose-800">
+                      <Link
+                        href="/servicios/dificultades-lectoescritura"
+                        className="font-semibold underline"
+                      >
+                        Mi hijo no aprende a leer ni escribir
+                      </Link>
+                      {" · "}
+                      <Link href="/chillan/dislexia" className="font-semibold underline">
+                        Fonoaudiología y dislexia en Chillán
+                      </Link>
+                      {" · "}
+                      <Link
+                        href="/glosario/dislexia"
+                        className="font-semibold underline"
+                      >
+                        Definición de dislexia
+                      </Link>
+                      {" · "}
+                      <Link
+                        href="/fonoaudiologa-ninos-chillan"
+                        className="font-semibold underline"
+                      >
+                        Fonoaudiología infantil en Chillán
+                      </Link>
+                    </p>
+                  </div>
+                ) : null}
+                {slug === "apraxia-del-habla" ? (
+                  <div className="mb-8 rounded-2xl border-2 border-rose-200 bg-white p-5 text-left">
+                    <p className="text-lg font-semibold text-gray-900">
+                      <strong>Respuesta rápida:</strong> Aquí están las señales
+                      locales: errores que cambian de un intento a otro y
+                      esfuerzo visible al hablar. Cómo es la terapia de
+                      aprendizaje motor está en la página de tratamiento.
+                    </p>
+                    <p className="mt-3 text-sm text-rose-800">
+                      <Link
+                        href="/tratamientos/apraxia-del-habla-infantil-chillan"
+                        className="font-semibold underline"
+                      >
+                        Tratamiento de apraxia del habla infantil en Chillán
+                      </Link>
+                      {" · "}
+                      <Link
+                        href="/glosario/apraxia-del-habla"
+                        className="font-semibold underline"
+                      >
+                        Definición de apraxia del habla
+                      </Link>
+                      {" · "}
+                      <Link
+                        href="/fonoaudiologa-ninos-chillan"
+                        className="font-semibold underline"
+                      >
+                        Fonoaudiología infantil en Chillán
+                      </Link>
+                    </p>
+                  </div>
+                ) : null}
+                {slug === "disfemia" ? (
+                  <p className="mb-8 text-left text-sm text-rose-800">
+                    Si tartamudea un niño pequeño, mira{" "}
+                    <Link
+                      href="/sintomas/nino-tartamudea-chillan"
+                      className="font-semibold underline"
+                    >
+                      tartamudez en niños de 2 a 3 años
+                    </Link>
+                    . La definición está en el{" "}
+                    <Link href="/glosario/disfemia" className="font-semibold underline">
+                      glosario de disfemia
+                    </Link>
+                    . La atención general está en{" "}
+                    <Link
+                      href="/fonoaudiologa-ninos-chillan"
+                      className="font-semibold underline"
+                    >
+                      fonoaudiología infantil en Chillán
+                    </Link>
+                    .
+                  </p>
                 ) : null}
                 <ul className="mb-8 space-y-3 text-left text-gray-700">
                   <li className="flex items-start gap-3">
@@ -523,6 +746,20 @@ export default async function PatologiaChillanPage({
                   </details>
                 </>
               ) : null}
+              {(EXTRA_FAQS[slug] ?? []).map((faq) => (
+                <details
+                  key={faq.q}
+                  className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm"
+                >
+                  <summary className="flex cursor-pointer items-start justify-between gap-4 font-semibold text-gray-900">
+                    <span>{faq.q}</span>
+                    <span className="flex-shrink-0 text-rose-500 transition-transform group-open:rotate-180">
+                      ▼
+                    </span>
+                  </summary>
+                  <p className="mt-4 text-gray-600">{faq.a}</p>
+                </details>
+              ))}
             </div>
           </div>
         </section>
@@ -540,12 +777,22 @@ export default async function PatologiaChillanPage({
               >
                 <span className="mb-2 block text-2xl">🏥</span>
                 <h3 className="font-semibold text-gray-900">
-                  {slug === "tel" ? "¿El TEL se cura?" : "Servicio completo"}
+                  {slug === "tel"
+                    ? "¿El TEL se cura?"
+                    : slug === "dislalia"
+                      ? "Tratamiento de dislalia infantil"
+                      : slug === "apraxia-del-habla"
+                        ? "Tratamiento de la apraxia"
+                        : "Servicio completo"}
                 </h3>
                 <p className="mt-1 text-sm text-gray-600">
                   {slug === "tel"
                     ? "La respuesta está en la página de servicio"
-                    : "Conoce el tratamiento detallado y el proceso"}
+                    : slug === "dislalia"
+                      ? "Página principal del tratamiento en Chillán"
+                      : slug === "apraxia-del-habla"
+                        ? "Cómo es la terapia de aprendizaje motor"
+                        : "Conoce el tratamiento detallado y el proceso"}
                 </p>
               </Link>
               <Link

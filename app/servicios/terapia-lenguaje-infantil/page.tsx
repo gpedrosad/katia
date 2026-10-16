@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SITE_URL, whatsappUrl } from "@/lib/site";
 import { buildPageMetadata } from "@/lib/seo";
 import { Breadcrumbs } from "../../_components/Breadcrumbs";
@@ -12,9 +13,9 @@ const WHATSAPP_HREF = whatsappUrl("Hola, quiero consultar por terapia de lenguaj
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Terapia de Lenguaje Infantil Chillán | Especialista Niños",
+  title: "Especialista en terapia de lenguaje para niños",
   description:
-    "Especialista en terapia de lenguaje para niños en Chillán: retraso del lenguaje, vocabulario limitado, no arma frases. Evaluación, plan personalizado y participación activa de padres.",
+    "Especialista en terapia de lenguaje para niños en Chillán. Retraso del lenguaje, pocas palabras y frases cortas. Evaluación y plan con los padres.",
   keywords: ["terapia de lenguaje infantil Chillán",
     "especialista en terapia de lenguaje para niños",
     "fonoaudióloga para niños Chillán",
@@ -90,6 +91,7 @@ const jsonLd = {
     "@type": "PeopleAudience",
     audienceType: "Niños de 2 a 10 años con dificultades del lenguaje",
   },
+  dateModified: "2026-10-16",
 };
 
 const faqJsonLd = {
@@ -152,12 +154,25 @@ export default function TerapiaLenguajeInfantilPage() {
                   👶 Niños de 2 a 10 años
                 </span>
                 <h1 className="mb-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
-                  Terapia de lenguaje infantil en Chillán
+                  Especialista en terapia de lenguaje para niños
                 </h1>
-                <p className="mb-6 text-xl text-gray-600">
-                  Ayudo a niños con retraso del lenguaje, vocabulario limitado y
-                  dificultades para expresarse. Enfoque lúdico y personalizado.
-                </p>
+                <div className="mb-6 rounded-2xl border border-rose-200 bg-white p-5 text-gray-700">
+                  <p>
+                    <strong>Respuesta rápida:</strong> Sí: la especialista en
+                    terapia de lenguaje para niños en Chillán es la
+                    fonoaudióloga. Trabaja retraso del lenguaje, pocas palabras
+                    y dificultad para armar frases, con evaluación, plan y
+                    participación de los padres.
+                  </p>
+                  <p className="mt-3 text-sm">
+                    <Link
+                      href="/fonoaudiologa-ninos-chillan"
+                      className="font-semibold text-rose-700 underline"
+                    >
+                      Fonoaudiología infantil en Chillán
+                    </Link>
+                  </p>
+                </div>
                 <ul className="mb-8 space-y-3 text-gray-700">
                   <li className="flex items-start gap-3">
                     <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">

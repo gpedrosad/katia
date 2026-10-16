@@ -10,10 +10,10 @@ const WHATSAPP_LINK = whatsappUrl("Hola, busco ayuda con dislalia o pronunciaci�
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Tratamiento Dislalia Infantil Chillán | Terapia Pronunciación",
+  title: "Tratamiento de Dislalia Infantil en Chillán",
   description:
-    "Tratamiento especializado de dislalia infantil en Chillán: rotacismo, sigmatismo y problemas de articulación. Fonoaudióloga con postítulo en trastornos fonológicos. Agenda tu evaluación.",
-  keywords: ["dislalia infantil Chillán", "tratamiento dislalia Chillán", "terapia pronunciación niños Chillán", "rotacismo niños", "fonoaudióloga Chillán", "problemas articulación"],
+    "Tratamiento de dislalia infantil en Chillán: la r, la s y otros sonidos, con praxias, juego y práctica en casa.",
+  keywords: ["dislalia infantil Chillán", "tratamiento dislalia Chillán", "terapia pronunciación niños Chillán", "rotacismo niños", "problemas articulación"],
 });
 
 const signalsByAge = [
@@ -32,6 +32,7 @@ const benefits = [
 ];
 
 const faqs = [
+  { q: "¿Esta es la página de tratamiento de la dislalia infantil?", a: "Sí. Aquí está el tratamiento en Chillán: evaluación de los sonidos, praxias, enseñanza con espejo y juego, y práctica hasta el habla espontánea. La definición breve está en el glosario y las señales locales en la página de dislalia en Chillán." },
   { q: "¿Qué es la dislalia?", a: "Es la dificultad para articular uno o más fonemas: el niño omite, sustituye o distorsiona sonidos. Puede persistir más allá de la edad esperada sin intervención." },
   { q: "¿A qué edad debería decir bien la «r»?", a: "La «r» fuerte suele consolidarse entre 4 y 6 años. Si a los 5-6 años sigue muy alterada y afecta la inteligibilidad, conviene evaluar." },
   { q: "¿La dislalia se corrige con terapia?", a: "En la mayoría de los casos sí, con un plan fonoaudiológico ordenado y práctica en casa. El tiempo depende de cuántos sonidos están involucrados." },
@@ -46,6 +47,7 @@ const serviceJsonLd = {
   description: "Terapia fonoaudiológica para corrección de errores de articulación en niños en Chillán.",
   provider: { "@type": "Person", name: "Katia Domínguez", jobTitle: "Fonoaudióloga" },
   areaServed: { "@type": "City", name: "Chillán" },
+  dateModified: "2026-10-16",
 };
 
 const faqJsonLd = {
@@ -65,9 +67,11 @@ export default function DislaliaInfantilPage() {
             <Breadcrumbs items={[{ label: "Inicio", href: "/" }, { label: "Tratamientos", href: "/fonoaudiologa-ninos-chillan" }, { label: "Dislalia" }]} />
             <span className="mb-4 mt-6 inline-block rounded-full bg-teal-100 px-4 py-2 text-sm font-medium text-teal-700">Pronunciación y articulación</span>
             <h1 className="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl">Tratamiento de dislalia infantil en Chillán</h1>
-            <p data-speakable className="mb-6 text-xl text-gray-600">
-              La dislalia es la dificultad para articular correctamente uno o varios sonidos. Si tu hijo pronuncia mal letras como la «r» o la «s» más allá de lo esperable para su edad, una terapia estructurada puede devolverle claridad y confianza al hablar.
-            </p>
+            <div data-speakable className="mb-6 rounded-2xl border border-teal-200 bg-white p-5 text-lg text-gray-700">
+              <p>
+                <strong>Respuesta rápida:</strong> El tratamiento de la dislalia infantil en Chillán enseña el sonido que falta (por ejemplo la «r» o la «s»): posición de lengua y labios, praxias, juego y práctica hasta el habla espontánea. Esta es la página de tratamiento.
+              </p>
+            </div>
             <WhatsAppCTA href={WHATSAPP_LINK} className="bg-teal-600 hover:bg-teal-700 ring-teal-300">Agendar evaluación</WhatsAppCTA>
           </div>
         </section>
@@ -94,7 +98,7 @@ export default function DislaliaInfantilPage() {
         <section className="bg-teal-50 px-4 py-12 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center text-gray-600">
             <p className="text-lg">
-              <strong>Esta es la página principal de tratamiento de dislalia en Chillán.</strong> Para definición corta: <Link href="/glosario/dislalia" className="font-semibold text-teal-600 underline">glosario de dislalia</Link>. Para señales específicas locales: <Link href="/chillan/dislalia" className="font-semibold text-teal-600 underline">dislalia en Chillán</Link>. Más info en <Link href="/servicios/trastornos-del-habla" className="font-semibold text-teal-600 underline">trastornos del habla</Link> y{" "}
+              <strong>Esta es la página principal de tratamiento de dislalia en Chillán.</strong> Para definición corta: <Link href="/glosario/dislalia" className="font-semibold text-teal-600 underline">glosario de dislalia</Link>. Para señales locales: <Link href="/chillan/dislalia" className="font-semibold text-teal-600 underline">dislalia en Chillán</Link>. Si buscas la atención general, mira la <Link href="/fonoaudiologa-ninos-chillan" className="font-semibold text-teal-600 underline">fonoaudiología infantil en Chillán</Link>. También: <Link href="/servicios/trastornos-del-habla" className="font-semibold text-teal-600 underline">trastornos del habla</Link> y{" "}
               <Link href="/servicios/evaluacion-fonoaudiologica" className="font-semibold text-teal-600 underline">evaluación fonoaudiológica</Link>.
             </p>
           </div>

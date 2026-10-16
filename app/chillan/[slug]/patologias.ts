@@ -7,16 +7,16 @@ export const PATOLOGIAS = [
   {
     slug: "dislalia",
     titulo: "Dislalia en Chillán",
-    subtitulo: "Tratamiento de problemas de pronunciación en niños",
+    subtitulo: "Señales locales y cuándo consultar",
     descripcion:
-      "¿Tu hijo pronuncia mal la r, la s o cambia sonidos? La dislalia es la dificultad para articular ciertos fonemas. En Chillán ofrecemos evaluación y terapia con ejercicios de articulación y praxias orofaciales.",
+      "¿Tu hijo omite sonidos o dice «tasa» por casa? Esta página reúne las señales de dislalia en Chillán. La definición breve está en el glosario y el tratamiento de la dislalia infantil está en su página.",
     senales: [
       "Omite sonidos (dice 'ato' en vez de 'gato')",
       "Sustituye sonidos (dice 'tasa' en vez de 'casa')",
       "Distorsiona la r, s, l u otros fonemas",
       "A los 5-6 años persisten errores que deberían estar superados",
     ],
-    servicioHref: "/servicios/trastornos-del-habla",
+    servicioHref: "/tratamientos/dislalia-infantil-chillan",
     glosarioHref: "/glosario/dislalia",
     whatsappText: "Hola, quiero consultar por dislalia",
   },
@@ -97,16 +97,16 @@ export const PATOLOGIAS = [
       "Mejor imitación que habla espontánea",
       "Pocas consonantes o vocales en el repertorio",
     ],
-    servicioHref: "/servicios/trastornos-del-habla",
-    glosarioHref: "/glosario",
+    servicioHref: "/tratamientos/apraxia-del-habla-infantil-chillan",
+    glosarioHref: "/glosario/apraxia-del-habla",
     whatsappText: "Hola, quiero consultar por apraxia del habla",
   },
   {
     slug: "dislexia",
-    titulo: "Dislexia y Fonoaudiología en Chillán",
-    subtitulo: "Evaluación y apoyo para dificultades de lectura",
+    titulo: "Fonoaudiología y Dislexia en Chillán",
+    subtitulo: "Evaluación de las bases del lenguaje oral para la lectura",
     descripcion:
-      "La dislexia tiene base en el lenguaje oral (conciencia fonológica). La fonoaudióloga evalúa y trabaja las bases necesarias para la lectura. En Chillán ofrecemos evaluación y tratamiento de dificultades de lectoescritura.",
+      "Fonoaudiología y dislexia en Chillán: se evalúan conciencia fonológica, vocabulario y comprensión oral. El diagnóstico formal de dislexia se hace con evaluaciones especializadas. La definición está en el glosario.",
     senales: [
       "Dificultad persistente para aprender a leer",
       "Confunde letras (b/d, p/q)",
@@ -114,7 +114,7 @@ export const PATOLOGIAS = [
       "Problemas de ortografía a pesar de esfuerzo",
     ],
     servicioHref: "/servicios/dificultades-lectoescritura",
-    glosarioHref: "/glosario",
+    glosarioHref: "/glosario/dislexia",
     whatsappText: "Hola, quiero consultar por dislexia",
   },
   {
@@ -130,7 +130,7 @@ export const PATOLOGIAS = [
       "Tensión o esfuerzo visible al hablar",
     ],
     servicioHref: "/servicios/trastornos-del-habla",
-    glosarioHref: "/glosario",
+    glosarioHref: "/glosario/disfemia",
     whatsappText: "Hola, quiero consultar por tartamudez",
   },
   {
@@ -151,10 +151,10 @@ export const PATOLOGIAS = [
   },
   {
     slug: "lectoescritura",
-    titulo: "Dificultades de Lectoescritura en Chillán",
-    subtitulo: "Evaluación y tratamiento de lectura y escritura",
+    titulo: "Lectoescritura en Chillán",
+    subtitulo: "La base suele estar en el lenguaje oral",
     descripcion:
-      "Muchas dificultades de lectura y escritura tienen base en el lenguaje oral: conciencia fonológica, vocabulario, comprensión. La fonoaudióloga evalúa y trata estas bases. Atención presencial en Chillán.",
+      "Muchas dificultades para leer o escribir parten del lenguaje oral: conciencia fonológica, vocabulario y comprensión. Esta es la página local. El servicio general y la fonoaudiología y dislexia están en otras páginas.",
     senales: [
       "Dificultad para aprender letras y sus sonidos",
       "Lee lento o con muchos errores",
@@ -162,7 +162,7 @@ export const PATOLOGIAS = [
       "Problemas de comprensión lectora",
     ],
     servicioHref: "/servicios/dificultades-lectoescritura",
-    glosarioHref: "/glosario",
+    glosarioHref: "/glosario/conciencia-fonologica",
     whatsappText: "Hola, quiero consultar por dificultades de lectoescritura",
   },
 ] as const;

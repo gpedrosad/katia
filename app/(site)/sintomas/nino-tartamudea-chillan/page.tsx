@@ -10,9 +10,9 @@ const WHATSAPP_LINK = whatsappUrl("Hola, mi hijo tartamudea y quisiera una evalu
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Mi hijo tartamudea | ¿Es normal o preocupante? Chillán",
+  title: "Tartamudez en niños de 2 a 3 años | ¿Es normal?",
   description:
-    "¿Tu hijo de 2-3 años repite sílabas o se traba? Señales por edad: cuándo es disfluencia normal y cuándo consultar por tartamudez. Evaluación de fluidez en Chillán.",
+    "¿Tu hijo de 2 a 3 años repite sílabas o se traba? Entre 2 y 5 años hay disfluencias normales. Cuándo consultar por tartamudez en Chillán.",
   keywords: ["niño tartamudea", "tartamudez en niños de 2 a 3 años", "disfluencia normal", "fonoaudióloga Chillán", "tartamudez infantil Chillán"],
 });
 
@@ -48,6 +48,7 @@ const medicalWebPageJsonLd = {
   description: "¿Tu hijo repite sílabas o se traba al hablar? Diferencia disfluencia normal y tartamudez. Qué hacer y evaluación de fluidez fonoaudiológica en Chillán.",
   medicalSpecialty: "SpeechTherapy",
   about: { "@type": "MedicalCondition", name: "Trastornos de la fluidez del habla" },
+  dateModified: "2026-10-16",
 };
 
 const faqJsonLd = {
@@ -85,14 +86,19 @@ export default function NinoTartamudeaPage() {
               Fluidez del habla
             </span>
             <h1 className="mb-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
-              ¿Tu hijo tartamudea? Cuándo actuar en Chillán
+              Tartamudez en niños de 2 a 3 años: ¿es normal?
             </h1>
-            <p
+            <div
               data-speakable
-              className="mb-6 text-xl leading-relaxed text-gray-600"
+              className="mb-6 rounded-2xl border border-yellow-200 bg-white p-5 text-lg leading-relaxed text-gray-700"
             >
-              Escuchar repeticiones o bloqueos puede angustiar a la familia. Entre los 2 y 5 años hay disfluencias normales del desarrollo, pero ciertas señales indican que conviene evaluar la fluidez del habla cuanto antes.
-            </p>
+              <p>
+                <strong>Respuesta rápida:</strong> Entre los 2 y 5 años puede
+                haber disfluencias normales, como repetir palabras enteras
+                («yo yo quiero») sin tensión. Consulta si hay repeticiones de
+                sonidos, bloqueos, tensión o si dura más de 6 meses.
+              </p>
+            </div>
             <ul className="mb-8 space-y-3 text-gray-700">
               <li className="flex items-start gap-3">
                 <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">✓</span>
@@ -115,7 +121,7 @@ export default function NinoTartamudeaPage() {
 
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
-            <p className="mb-8 text-center text-lg leading-relaxed text-gray-600">La <strong>ASHA</strong> recomienda consulta si las disfluencias duran más de 6 meses, hay tensión visible o el niño evita hablar. (<a href="https://www.asha.org/public/speech/disorders/stuttering/" target="_blank" rel="noopener noreferrer" className="font-medium text-yellow-600 underline">ASHA</a>). Más sobre <Link href="/chillan/disfemia" className="font-semibold text-yellow-600 underline">tartamudez en Chillán</Link>.</p>
+            <p className="mb-8 text-center text-lg leading-relaxed text-gray-600">La <strong>ASHA</strong> recomienda consulta si las disfluencias duran más de 6 meses, hay tensión visible o el niño evita hablar. (<a href="https://www.asha.org/public/speech/disorders/stuttering/" target="_blank" rel="noopener noreferrer" className="font-medium text-yellow-600 underline">ASHA</a>). Más sobre <Link href="/chillan/disfemia" className="font-semibold text-yellow-600 underline">tartamudez en Chillán</Link> y la <Link href="/fonoaudiologa-ninos-chillan" className="font-semibold text-yellow-600 underline">fonoaudiología infantil en Chillán</Link>.</p>
             <h2 className="mb-4 text-center text-3xl font-bold text-gray-900">
               Señales por edad
             </h2>
@@ -147,7 +153,7 @@ export default function NinoTartamudeaPage() {
             <h2 className="mb-6 text-center text-3xl font-bold text-gray-900">
               ¿Qué puede estar pasando?
             </h2>
-            <p className="mb-8 text-center text-gray-600">Más en <a href="/glosario/disfemia">glosario: disfemia</a>, <a href="/chillan/disfemia">tartamudez en Chillán</a>, <a href="/servicios/terapia-del-habla-infantil-chillan">terapia del habla</a> y <a href="/servicios/evaluacion-fonoaudiologica">evaluación</a>.</p>
+            <p className="mb-8 text-center text-gray-600">Más en <Link href="/glosario/disfemia">glosario: disfemia</Link>, <Link href="/chillan/disfemia">tartamudez en Chillán</Link>, <Link href="/servicios/terapia-del-habla-infantil-chillan">terapia del habla</Link> y <Link href="/servicios/evaluacion-fonoaudiologica">evaluación</Link>.</p>
           </div>
         </section>
 
