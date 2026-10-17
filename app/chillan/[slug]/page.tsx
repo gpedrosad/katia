@@ -15,7 +15,7 @@ const DESCRIPTION_SUFFIX =
 const DESCRIPTION_OVERRIDES: Record<string, string> = {
   tel: "TEL en Chillán: señales, evaluación presencial y hacia dónde seguir (definición y tratamiento). Hub local. Agenda por WhatsApp.",
   "tea-comunicacion":
-    "Comunicación y lenguaje en niños con TEA/autismo en Chillán: apoyo fonoaudiológico presencial para lenguaje funcional, pragmática y habilidades sociales. 40% tiene retraso significativo. Agenda WhatsApp.",
+    "Comunicación y lenguaje en niños con TEA en Chillán. Apoyo presencial. El 40% tiene retraso significativo del lenguaje. Agenda por WhatsApp.",
   "apraxia-del-habla":
     "Errores inconsistentes al hablar y esfuerzo visible: puede ser apraxia. Evaluación especializada en Chillán con plan claro. Agenda por WhatsApp.",
   dislalia:
@@ -25,9 +25,9 @@ const DESCRIPTION_OVERRIDES: Record<string, string> = {
   lectoescritura:
     "Si leer o escribir cuesta, muchas veces la base está en el lenguaje oral. Página local en Chillán. El servicio y la dislexia están en otras páginas.",
   "retraso-del-habla":
-    "Habla poco o se le entiende mal para su edad: señales de retraso del habla en Chillán. Evaluación fonoaudiológica, articulación y claridad. Agenda por WhatsApp.",
+    "Habla poco o se le entiende mal: señales de retraso del habla en Chillán. Evaluación de articulación y claridad. Agenda por WhatsApp.",
   "trastorno-fonologico":
-    "Patrones de error en varios sonidos (omite, sustituye, simplifica): trastorno fonológico. Evaluación especializada en Chillán. Postítulo fonología. WhatsApp.",
+    "Patrones de error (omite, sustituye, simplifica): trastorno fonológico en Chillán. Evaluación especializada. Agenda por WhatsApp.",
 };
 
 const TITLE_OVERRIDES: Record<string, string> = {
@@ -38,7 +38,7 @@ const TITLE_OVERRIDES: Record<string, string> = {
   dislalia: "Dislalia en Chillán | Señales por edad",
   dislexia: "Fonoaudiología y Dislexia en Chillán",
   lectoescritura: "Lectoescritura en Chillán | Base del lenguaje",
-  "retraso-del-habla": "Retraso del Habla Chillán | Niño habla poco o no se le entiende",
+  "retraso-del-habla": "Retraso del habla en Chillán | Habla poco",
   "trastorno-fonologico": "Trastorno Fonológico Chillán | Patrones de error en sonidos",
 };
 
@@ -606,7 +606,7 @@ export default async function PatologiaChillanPage({
               <div className="relative mx-auto w-full max-w-md lg:mx-0">
                 <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-rose-100 shadow-2xl">
                   <Image
-                    src="/KatiaDominguezFonoaudiologa.png"
+                    src="/KatiaDominguezFonoaudiologa.jpg"
                     alt={`Katia Domínguez - Fonoaudióloga especialista en ${p.titulo.split(" en ")[0]} en Chillán`}
                     fill
                     className="object-cover"

@@ -36,9 +36,9 @@ const WHATSAPP_LINK =
   "https://wa.me/56995497838?text=Hola%2C%20quiero%20agendar%20una%20hora";
 const PAGE_PATH = "/";
 const HOME_TITLE =
-  "Fonoaudióloga en Chillán | Evaluación y Terapia de Lenguaje Infantil";
+  "Fonoaudióloga infantil en Chillán | Katia Domínguez";
 const HOME_DESCRIPTION =
-  "Fonoaudióloga infantil en Chillán con +20 años de experiencia. Evaluación fonoaudiológica con informe, terapia de lenguaje y habla para niños. Agenda tu hora por WhatsApp y te respondo en menos de 24 horas.";
+  "Fonoaudióloga infantil en Chillán, +20 años. Evaluación con informe y terapia de lenguaje y habla para niños. Agenda por WhatsApp.";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
@@ -202,7 +202,7 @@ export default function Home() {
               <div className="relative mx-auto w-full max-w-md lg:mx-0">
                 <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-rose-100 shadow-2xl">
                   <Image
-                    src="/KatiaDominguezFonoaudiologa.png"
+                    src="/KatiaDominguezFonoaudiologa.jpg"
                     alt="Katia Domínguez - Fonoaudióloga en Chillán"
                     fill
                     className="object-cover"

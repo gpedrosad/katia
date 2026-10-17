@@ -13,9 +13,9 @@ const WHATSAPP_HREF = whatsappUrl("Hola, quiero agendar una evaluación fonoaudi
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Evaluación Fonoaudiológica: Qué Es, 60 min e Informe | Chillán",
+  title: "Evaluación fonoaudiológica en Chillán | 60 min",
   description:
-    "Evaluación fonoaudiológica en Chillán: qué es, 60 minutos, test estandarizados, diagnóstico de lenguaje y habla, informe escrito para el colegio y plan de tratamiento. +20 años, U. de Chile.",
+    "Evaluación fonoaudiológica en Chillán: 60 minutos, test estandarizados, diagnóstico de lenguaje y habla, informe para el colegio y plan. U. de Chile.",
   keywords: [
     "evaluación fonoaudiológica",
     "evaluacion fonoaudiologica",
@@ -220,7 +220,7 @@ export default function EvaluacionFonoaudiologicaPage() {
               <div className="relative mx-auto w-full max-w-md">
                 <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-rose-100 shadow-2xl">
                   <Image
-                    src="/KatiaDominguezFonoaudiologa.png"
+                    src="/KatiaDominguezFonoaudiologa.jpg"
                     alt="Katia Domínguez - Fonoaudióloga realizando evaluación en Chillán"
                     fill
                     className="object-cover"

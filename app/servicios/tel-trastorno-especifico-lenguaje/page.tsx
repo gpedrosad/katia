@@ -15,7 +15,7 @@ export const metadata = buildPageMetadata({
   path: PAGE_PATH,
   title: "¿El TEL Se Cura? Diagnóstico y Tratamiento | Chillán",
   description:
-    "¿El TEL se cura? No desaparece, pero mejora mucho con terapia intensiva. Qué es el TEL, diagnóstico (TDL) y tratamiento en Chillán. +20 años de experiencia.",
+    "¿El TEL se cura? No desaparece, pero mejora mucho con terapia. Qué es, diagnóstico (TDL) y tratamiento en Chillán.",
   keywords: [
     "el tel se cura",
     "TEL se cura",
@@ -199,7 +199,7 @@ export default function TELPage() {
               <div className="relative mx-auto w-full max-w-md">
                 <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-rose-100 shadow-2xl">
                   <Image
-                    src="/KatiaDominguezFonoaudiologa.png"
+                    src="/KatiaDominguezFonoaudiologa.jpg"
                     alt="Katia Domínguez - Fonoaudióloga especialista en TEL en Chillán"
                     fill
                     className="object-cover"

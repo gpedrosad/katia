@@ -12,7 +12,7 @@ export const metadata = buildPageMetadata({
   path: PAGE_PATH,
   title: "Mi hijo no comprende bien | Lenguaje comprensivo Chillán",
   description:
-    "Si tu hijo no comprende preguntas, relatos o conversaciones para su edad (más allá de instrucciones simples), conoce señales de alerta. Consulta fonoaudióloga Chillán.",
+    "Si tu hijo no comprende preguntas, relatos o conversaciones para su edad, revisa señales de alerta. Consulta fonoaudióloga en Chillán.",
   keywords: ["mi hijo no comprende Chillán", "comprensión lenguaje infantil", "niño no entiende preguntas", "lenguaje comprensivo", "fonoaudióloga Chillán"],
 });
 
@@ -145,7 +145,7 @@ export default function MiHijoNoComprendePage() {
             <h2 className="mb-6 text-center text-3xl font-bold text-gray-900">
               ¿Qué puede estar pasando?
             </h2>
-            <p className="mb-8 text-center text-gray-600">Puede haber <Link href="/tratamientos/retraso-del-lenguaje-chillan" className="font-medium text-amber-600 underline">retraso del lenguaje</Link>, <Link href="/chillan/tel" className="font-medium text-amber-600 underline">TDL/TEL</Link>, dificultades de <Link href="/glosario/comprension-verbal" className="font-medium text-amber-600 underline">comprensión verbal</Link> o factores auditivos. Mira <Link href="/fonoaudiologa-ninos-chillan" className="font-medium text-amber-600 underline">lenguaje infantil en Chillán</Link>, <Link href="/servicios/evaluacion-fonoaudiologica" className="font-medium text-amber-600 underline">evaluación</Link> y <Link href="/sintomas/nino-no-entiende-instrucciones-chillan" className="font-medium text-amber-600 underline">niño no entiende instrucciones</Link>.</p>
+            <p className="mb-8 text-center text-gray-600">Puede haber <Link href="/tratamientos/retraso-del-lenguaje-chillan" className="font-medium text-amber-600 underline">retraso del lenguaje</Link>, <Link href="/chillan/tel" className="font-medium text-amber-600 underline">TDL/TEL</Link>, dificultades de <Link href="/servicios/evaluacion-del-lenguaje-infantil-chillan" className="font-medium text-amber-600 underline">comprensión verbal</Link> o factores auditivos. Mira <Link href="/fonoaudiologa-ninos-chillan" className="font-medium text-amber-600 underline">lenguaje infantil en Chillán</Link>, <Link href="/servicios/evaluacion-fonoaudiologica" className="font-medium text-amber-600 underline">evaluación</Link> y <Link href="/sintomas/nino-no-entiende-instrucciones-chillan" className="font-medium text-amber-600 underline">niño no entiende instrucciones</Link>.</p>
           </div>
         </section>
 

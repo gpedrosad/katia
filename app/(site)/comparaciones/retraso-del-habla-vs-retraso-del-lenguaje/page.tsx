@@ -11,9 +11,9 @@ const WHATSAPP_LINK = whatsappUrl(
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Diferencia entre Retraso del Habla y Retraso del Lenguaje | Tabla",
+  title: "Retraso del habla vs del lenguaje | Diferencias",
   description:
-    "¿Cuál es la diferencia entre retraso del habla y del lenguaje? Tabla comparativa: pronunciación vs vocabulario/frases, ejemplos, señales y evaluación en Chillán.",
+    "Diferencia entre retraso del habla y del lenguaje: pronunciación versus vocabulario y frases. Señales y evaluación en Chillán.",
   keywords: [
     "diferencia entre retraso del habla y lenguaje",
     "retraso del habla vs retraso del lenguaje",

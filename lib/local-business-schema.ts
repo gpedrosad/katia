@@ -48,7 +48,6 @@ export function buildMedicalBusinessJsonLd({
     mainEntityOfPage: pageUrl,
     telephone: BUSINESS_PHONE_E164,
     image: `${SITE_URL}/opengraph-image`,
-    priceRange: "$$",
     address: {
       "@type": "PostalAddress",
       addressLocality: SERVICE_AREA_CITY,
@@ -95,5 +94,36 @@ export function buildMedicalBusinessJsonLd({
         }
       : {}),
     ...extra,
+  };
+}
+
+/** Servicio de voz online en otra ciudad. El negocio sigue siendo el de Chillán. */
+export function buildVoiceCityServiceJsonLd({
+  path,
+  city,
+  region,
+  description,
+}: {
+  path: string;
+  city: string;
+  region: string;
+  description: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Terapia de voz online",
+    serviceType: "Terapia de voz",
+    description,
+    url: `${SITE_URL}${path}`,
+    provider: { "@id": MEDICAL_BUSINESS_ID },
+    areaServed: {
+      "@type": "City",
+      name: city,
+      containedInPlace: {
+        "@type": "AdministrativeArea",
+        name: region,
+      },
+    },
   };
 }

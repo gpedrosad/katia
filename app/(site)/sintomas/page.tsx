@@ -6,7 +6,7 @@ const PAGE_PATH = "/sintomas";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Síntomas Frecuentes en Niños | Mi hijo no habla bien, pronuncia mal...",
+  title: "Síntomas de lenguaje y habla en niños | Chillán",
   description:
     "Guías por síntoma: hijo habla poco, pronuncia mal, no arma frases, no entiende instrucciones, tartamudea. Señales, causas y cuándo evaluar en Chillán.",
   keywords: [

@@ -116,7 +116,7 @@ export default function FatigaVocalPage() {
                 El peligro de acostumbrarse al dolor al hablar
               </h3>
               <p className="text-orange-800 mb-6 text-left">
-                Es como correr una maratón todos los días con los zapatos equivocados. Puedes hacerlo un tiempo, pero te lesionarás los músculos. La tensión descontrolada produce edema, disfonía y finalmente nódulos. La sesión online te entrega los "zapatos" correctos: técnica respiratoria y proyección.
+                Es como correr una maratón todos los días con los zapatos equivocados. Puedes hacerlo un tiempo, pero te lesionarás los músculos. La tensión descontrolada produce edema, disfonía y finalmente nódulos. La sesión online te entrega los &quot;zapatos&quot; correctos: técnica respiratoria y proyección.
               </p>
               <WhatsAppCTA
                 message="Hola, se me cansa mucho la voz diariamente y necesito ayuda via online."
@@ -139,13 +139,13 @@ export default function FatigaVocalPage() {
                 <strong>Lunes vs Viernes:</strong> Tu voz suena completamente diferente el fin de semana por el nivel de desgaste.
               </li>
               <li>
-                <strong>Esfuerzo extra:</strong> Sientes que debes "empujar" físicamente las palabras desde tu pecho para hablar en una reunión de zoom.
+                <strong>Esfuerzo extra:</strong> Sientes que debes &quot;empujar&quot; físicamente las palabras desde tu pecho para hablar en una reunión de zoom.
               </li>
               <li>
                 <strong>Tensión extrema:</strong> Los masajes en el cuello y hombros no bastan para quitar la pesadez que sientes al final de tu jornada.
               </li>
               <li>
-                <strong>Pérdida de volumen:</strong> Tu voz se "esconde" y ya nadie te logra escuchar en lugares con algo de ruido.
+                <strong>Pérdida de volumen:</strong> Tu voz se &quot;esconde&quot; y ya nadie te logra escuchar en lugares con algo de ruido.
               </li>
             </ul>
           </section>

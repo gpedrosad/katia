@@ -8,7 +8,7 @@ export const metadata = buildPageMetadata({
   path: "/recursos",
   title: "Recursos y Guías Fonoaudiología Infantil | Padres Chillán",
   description:
-    "Guías prácticas de fonoaudiología infantil para padres en Chillán: hitos del lenguaje por edad, señales de alerta, estimulación en casa y preparación para la primera consulta. Todo gratuito.",
+    "Guías para padres en Chillán: hitos del lenguaje, señales de alerta, estimulación en casa y qué esperar en la primera consulta.",
   keywords: [
     "recursos fonoaudiología padres Chillán",
     "guías fonoaudiología infantil",

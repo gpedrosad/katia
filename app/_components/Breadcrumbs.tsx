@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SITE_URL } from "@/lib/site";
 
 interface BreadcrumbItem {
   label: string;
@@ -17,7 +18,9 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
       "@type": "ListItem",
       position: index + 1,
       name: item.label,
-      item: item.href ? `https://www.katialafono.cl${item.href}` : undefined,
+      ...(item.href
+        ? { item: item.href === "/" ? `${SITE_URL}/` : `${SITE_URL}${item.href}` }
+        : {}),
     })),
   };
 
@@ -39,7 +42,7 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
                   /
                 </span>
               )}
-              {item.href ? (
+              {item.href && index < items.length - 1 ? (
                 <Link
                   href={item.href}
                   className="hover:text-rose-600 hover:underline"

@@ -3,6 +3,7 @@ import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import { TestimonialCard } from "@/app/_components/TestimonialCard";
 import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
+import { buildVoiceCityServiceJsonLd } from "@/lib/local-business-schema";
 import { GeoFAQ } from "@/app/_components/GeoFAQ";
 
 const faqItems = [
@@ -20,26 +21,19 @@ const faqItems = [
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/fonoaudiologa-voz-concepcion",
-  title: "Fonoaudióloga especialista en Voz en Concepción | Terapia Online",
+  title: "Fonoaudióloga de voz online en Concepción",
   description:
     "Atención online para residentes del Biobío. Fonoaudióloga experta en voz, nódulos y fatiga vocal. Recupérate sin salir de Concepción.",
 });
 
 export default function FonoaudiologaVozConcepcionPage() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "MedicalOrganization",
-    url: "https://www.katialafono.cl/voz-online/fonoaudiologa-voz-concepcion",
-    name: "Terapia de Voz Online - Atención Concepción",
-    description: "Evaluación y rehabilitación fonoaudiológica de la voz vía telemedicina para residentes de Concepción y región del Biobío.",
-    areaServed: {
-      "@type": "City",
-      name: "Concepción",
-      addressRegion: "Biobío",
-      addressCountry: "CL"
-    },
-    medicalSpecialty: "SpeechTherapy"
-  };
+  const jsonLd = buildVoiceCityServiceJsonLd({
+    path: "/voz-online/fonoaudiologa-voz-concepcion",
+    city: "Concepción",
+    region: "Biobío",
+    description:
+      "Evaluación y rehabilitación fonoaudiológica de la voz vía telemedicina para residentes de Concepción y región del Biobío.",
+  });
 
   return (
     <>

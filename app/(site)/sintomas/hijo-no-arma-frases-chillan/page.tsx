@@ -10,7 +10,7 @@ const WHATSAPP_LINK = whatsappUrl("Hola, mi hijo no arma frases y me preocupa. B
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Mi hijo de 2 años no forma frases: solo «mamá ven», «más pan»",
+  title: "Mi hijo de 2 años no forma frases | Chillán",
   description:
     "¿Tu hijo de 2 años no forma frases o solo dice palabras sueltas como «mamá ven» o «más pan»? Hitos esperados, señales y cuándo evaluar en Chillán.",
   keywords: [

@@ -52,9 +52,9 @@ const faqs = [
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
   title:
-    "¿A qué edad hablan los niños? Hitos del lenguaje 0-5 años | Fonoaudióloga",
+    "Hitos del lenguaje por edad (0 a 5 años)",
   description:
-    "A los 12 meses primeras palabras, a los 2 años unas 50 palabras y frases de 2 palabras. Guía con hitos del lenguaje por edad, señales de alerta y cuándo consultar. Por Katia Domínguez, fonoaudióloga con +20 años en Chillán.",
+    "A los 12 meses, primeras palabras; a los 2 años, unas 50 palabras y frases de dos. Hitos por edad, señales de alerta y cuándo consultar en Chillán.",
   keywords: [
     "a qué edad hablan los niños",
     "a qué edad empiezan a hablar los bebés",

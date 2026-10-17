@@ -6,9 +6,9 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/paralisis-cordal-rehabilitacion-online",
-  title: "Parálisis Cordal: Rehabilitación Vocal Online | ¿Se recupera?",
+  title: "Parálisis de cuerda vocal | Rehabilitación online",
   description:
-    "Rehabilitación fonoaudiológica online para parálisis de cuerda vocal. 6-12 meses con terapia mejoran cierre glótico post-cirugía o viral. Fonoaudióloga especialista voz.",
+    "Rehabilitación online de parálisis de cuerda vocal. Con terapia, el cierre glótico suele mejorar en 6 a 12 meses. Especialista en voz.",
   keywords: [
     "parálisis cuerda vocal",
     "parálisis cordal",

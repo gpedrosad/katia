@@ -36,9 +36,9 @@ const faqs = [
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Señales de Alerta del Lenguaje y Habla en Niños por Edad | Chillán",
+  title: "Señales de alerta del lenguaje y habla | Niños",
   description:
-    "Señales de alerta del lenguaje y habla en niños por edad (0-5 años): cuándo no responde al nombre, no arma frases, pronuncia mal. Checklist y cuándo evaluar en Chillán.",
+    "Señales de alerta del lenguaje y habla de 0 a 5 años: no responde al nombre, no arma frases o pronuncia mal. Cuándo evaluar en Chillán.",
   keywords: [
     "señales de alerta lenguaje niños",
     "señales de alerta habla por edad",

@@ -3,6 +3,7 @@ import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import { TestimonialCard } from "@/app/_components/TestimonialCard";
 import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
+import { buildVoiceCityServiceJsonLd } from "@/lib/local-business-schema";
 import { GeoFAQ } from "@/app/_components/GeoFAQ";
 
 const faqItems = [
@@ -20,26 +21,19 @@ const faqItems = [
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/fonoaudiologa-voz-santiago",
-  title: "Fonoaudióloga especialista en Voz en Santiago | Terapia Online",
+  title: "Fonoaudióloga de voz online en Santiago",
   description:
     "¿Buscas expertos en voz en Santiago? Terapia vocal online sin los tacos de la ciudad. Fonoaudióloga experta en nódulos, disfonía y fatiga. Agenda hoy.",
 });
 
 export default function FonoaudiologaVozSantiagoPage() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "MedicalOrganization",
-    url: "https://www.katialafono.cl/voz-online/fonoaudiologa-voz-santiago",
-    name: "Terapia de Voz Online - Atención Santiago",
-    description: "Evaluación y rehabilitación fonoaudiológica de la voz vía telemedicina para residentes de Santiago, RM.",
-    areaServed: {
-      "@type": "City",
-      name: "Santiago",
-      addressRegion: "Región Metropolitana",
-      addressCountry: "CL"
-    },
-    medicalSpecialty: "SpeechTherapy"
-  };
+  const jsonLd = buildVoiceCityServiceJsonLd({
+    path: "/voz-online/fonoaudiologa-voz-santiago",
+    city: "Santiago",
+    region: "Región Metropolitana",
+    description:
+      "Evaluación y rehabilitación fonoaudiológica de la voz vía telemedicina para residentes de Santiago, RM.",
+  });
 
   return (
     <>

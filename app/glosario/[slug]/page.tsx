@@ -2,6 +2,8 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "../../_components/Breadcrumbs";
+import { buildPageMetadata } from "@/lib/seo";
+import { SITE_URL, whatsappUrl } from "@/lib/site";
 import { Footer } from "../../_components/Footer";
 import { Header } from "../../_components/Header";
 import { WhatsAppCTA } from "../../_components/WhatsAppCTA";
@@ -12,8 +14,6 @@ import {
   type GlosarioTermino,
 } from "../terminos";
 
-const SITE_URL = "https://www.katialafono.cl";
-const WHATSAPP_BASE = "https://wa.me/56995497838";
 const DATE_PUBLISHED = "2024-01-15";
 const DATE_MODIFIED = "2026-05-20";
 
@@ -32,23 +32,13 @@ export async function generateMetadata({
   const termino = getTerminoBySlug(slug);
   if (!termino) return {};
 
-  const pagePath = `/glosario/${slug}`;
-
-  return {
+  return buildPageMetadata({
+    path: `/glosario/${slug}`,
     title: termino.metaTitle,
     description: termino.metaDescription,
     keywords: termino.keywords,
-    alternates: {
-      canonical: `${SITE_URL}${pagePath}`,
-    },
-    openGraph: {
-      title: termino.metaTitle,
-      description: termino.metaDescription,
-      url: `${SITE_URL}${pagePath}`,
-      type: "article",
-      locale: "es_CL",
-    },
-  };
+    ogType: "article",
+  });
 }
 
 function buildArticleJsonLd(
@@ -95,7 +85,7 @@ function buildFaqJsonLd(termino: GlosarioTermino) {
 }
 
 function whatsappHref(text: string) {
-  return `${WHATSAPP_BASE}?text=${encodeURIComponent(text)}`;
+  return whatsappUrl(text);
 }
 
 export default async function GlosarioTermPage({ params }: PageProps) {

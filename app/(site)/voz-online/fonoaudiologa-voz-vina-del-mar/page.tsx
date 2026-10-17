@@ -3,6 +3,7 @@ import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import { TestimonialCard } from "@/app/_components/TestimonialCard";
 import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
+import { buildVoiceCityServiceJsonLd } from "@/lib/local-business-schema";
 import { GeoFAQ } from "@/app/_components/GeoFAQ";
 
 const faqItems = [
@@ -26,20 +27,13 @@ export const metadata = buildPageMetadata({
 });
 
 export default function FonoaudiologaVozVinaDelMarPage() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "MedicalOrganization",
-    url: "https://www.katialafono.cl/voz-online/fonoaudiologa-voz-vina-del-mar",
-    name: "Terapia de Voz Online - Viña del Mar",
-    description: "Evaluación y rehabilitación fonoaudiológica de la voz vía telemedicina para pacientes en Viña del Mar, Valparaíso y alrededores.",
-    areaServed: {
-      "@type": "City",
-      name: "Viña del mar",
-      addressRegion: "Valparaíso",
-      addressCountry: "CL"
-    },
-    medicalSpecialty: "SpeechTherapy"
-  };
+  const jsonLd = buildVoiceCityServiceJsonLd({
+    path: "/voz-online/fonoaudiologa-voz-vina-del-mar",
+    city: "Viña del Mar",
+    region: "Valparaíso",
+    description:
+      "Evaluación y rehabilitación fonoaudiológica de la voz vía telemedicina para pacientes en Viña del Mar, Valparaíso y alrededores.",
+  });
 
   return (
     <>

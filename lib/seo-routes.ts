@@ -54,18 +54,6 @@ const SERVICIO_CHILLAN_SLUGS: { slug: string; label: string }[] = [
     label: "Informe fonoaudiológico PIE",
   },
   {
-    slug: "terapia-de-lenguaje-infantil-chillan",
-    label: "Terapia de lenguaje infantil",
-  },
-  {
-    slug: "terapia-tea-comunicacion-chillan",
-    label: "Terapia TEA / comunicación",
-  },
-  {
-    slug: "problemas-lectoescritura-chillan",
-    label: "Problemas de lectoescritura",
-  },
-  {
     slug: "evaluacion-del-lenguaje-infantil-chillan",
     label: "Evaluación del lenguaje infantil",
   },
@@ -146,10 +134,6 @@ export const SEO_ROUTE_SECTIONS: SeoRouteSection[] = [
       route(
         "/agendar-hora-fonoaudiologo-infantil-chillan",
         "Agendar hora fonoaudiólogo infantil"
-      ),
-      route(
-        "/evaluacion-fonoaudiologica-infantil-chillan",
-        "Evaluación fonoaudiológica infantil"
       ),
       route(
         "/servicios/evaluacion-del-lenguaje-infantil-chillan",

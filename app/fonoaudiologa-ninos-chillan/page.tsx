@@ -1,7 +1,9 @@
 import { SITE_URL, whatsappUrl } from "@/lib/site";
 import { buildPageMetadata } from "@/lib/seo";
+import { buildMedicalBusinessJsonLd } from "@/lib/local-business-schema";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 
 // Componentes compartidos
 import { ConcernCard } from "../chillan/lenguaje-infantil/_components/ConcernCard";
@@ -11,9 +13,9 @@ import { StickyWhatsApp } from "../chillan/lenguaje-infantil/_components/StickyW
 const PAGE_PATH = "/fonoaudiologa-ninos-chillan";
 const WHATSAPP_HREF = whatsappUrl("Hola, quiero agendar una evaluación de lenguaje para mi hijo/a");
 const PAGE_TITLE =
-  "Fonoaudiología Infantil en Chillán | Fonoaudióloga Especialista en Niños";
+  "Fonoaudiología infantil en Chillán | Katia Domínguez";
 const PAGE_DESCRIPTION =
-  "Fonoaudiología infantil en Chillán: evaluación y terapia de lenguaje, habla, pronunciación, lectoescritura, TEL y TDL para niños. Si tu hijo habla poco, no arma frases o pronuncia mal, agenda evaluación con informe y plan de terapia. +20 años de experiencia.";
+  "Fonoaudiología infantil en Chillán: evaluación y terapia de lenguaje, habla, pronunciación, lectoescritura, TEL y TDL. Informe y plan. +20 años.";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
@@ -35,77 +37,50 @@ export const metadata = buildPageMetadata({
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "@id": `${SITE_URL}${PAGE_PATH}#business`,
-  name: "Katia Domínguez",
-  description: PAGE_DESCRIPTION,
-  url: `${SITE_URL}${PAGE_PATH}`,
-  telephone: "+56995497838",
-  // TODO: Agregar dirección real cuando esté disponible
-  // address: {
-  //   "@type": "PostalAddress",
-  //   streetAddress: "Dirección",
-  //   addressLocality: "Chillán",
-  //   addressRegion: "Ñuble",
-  //   addressCountry: "CL"
-  // },
-  areaServed: {
-    "@type": "City",
-    name: "Chillán",
-    "@id": "https://www.wikidata.org/wiki/Q203222",
-  },
-  availableLanguage: {
-    "@type": "Language",
-    name: "Español",
-    alternateName: "es",
-  },
-  serviceType: [
-    "Fonoaudiología infantil",
-    "Terapia de lenguaje",
-    "Terapia del habla",
-    "Trastornos fonológicos",
-    "Dificultades de lectura y escritura",
-    "Evaluación fonoaudiológica",
-  ],
-  priceRange: "$$",
-  // TODO: Agregar redes sociales cuando estén disponibles
-  // sameAs: [
-  //   "https://www.instagram.com/...",
-  //   "https://www.facebook.com/..."
-  // ],
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Servicios de Fonoaudiología Infantil",
-    itemListElement: [
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Evaluación fonoaudiológica infantil",
-          description:
-            "Evaluación completa de lenguaje y habla para niños con informe detallado",
-        },
+  ...buildMedicalBusinessJsonLd({
+    description: PAGE_DESCRIPTION,
+    pageUrl: `${SITE_URL}${PAGE_PATH}`,
+    extra: {
+      availableLanguage: {
+        "@type": "Language",
+        name: "Español",
+        alternateName: "es",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Terapia de lenguaje",
-          description:
-            "Tratamiento de trastornos del lenguaje expresivo y comprensivo",
-        },
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Servicios de fonoaudiología infantil",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Evaluación fonoaudiológica infantil",
+              description:
+                "Evaluación completa de lenguaje y habla para niños con informe detallado",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Terapia de lenguaje",
+              description:
+                "Tratamiento de trastornos del lenguaje expresivo y comprensivo",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Terapia del habla",
+              description:
+                "Tratamiento de dificultades de pronunciación y trastornos fonológicos",
+            },
+          },
+        ],
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Terapia del habla",
-          description:
-            "Tratamiento de dificultades de pronunciación y trastornos fonológicos",
-        },
-      },
-    ],
-  },
+    },
+  }),
 };
 
 // FAQ Schema con estadísticas y formato GEO (+40% citabilidad IA)
@@ -314,6 +289,15 @@ export default function FonoaudiologaNinosChillanPage() {
         {/* Hero Section */}
         <section className="relative overflow-hidden px-4 pb-16 pt-12 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-6xl">
+            <Breadcrumbs
+              items={[
+                { label: "Inicio", href: "/" },
+                {
+                  label: "Fonoaudiología infantil en Chillán",
+                  href: "/fonoaudiologa-ninos-chillan",
+                },
+              ]}
+            />
             <div className="grid items-center gap-12 lg:grid-cols-2">
               {/* Text Content */}
               <div className="text-center lg:text-left">
@@ -378,7 +362,7 @@ export default function FonoaudiologaNinosChillanPage() {
               <div className="relative mx-auto w-full max-w-md lg:mx-0">
                 <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-rose-100 shadow-2xl">
                   <Image
-                    src="/KatiaDominguezFonoaudiologa.png"
+                    src="/KatiaDominguezFonoaudiologa.jpg"
                     alt="Katia Domínguez - Fonoaudióloga especialista en niños en Chillán"
                     fill
                     className="object-cover"
@@ -526,7 +510,7 @@ export default function FonoaudiologaNinosChillanPage() {
                     → <Link href="/servicios/dificultades-lectoescritura" className="font-medium text-rose-600 underline hover:text-rose-700">Dificultades de lectoescritura</Link>
                   </li>
                   <li>
-                    → <Link href="/servicios/conciencia-fonologica" className="font-medium text-rose-600 underline hover:text-rose-700">Conciencia fonológica</Link>
+                    → <Link href="/servicios/conciencia-fonologica-chillan" className="font-medium text-rose-600 underline hover:text-rose-700">Conciencia fonológica</Link>
                   </li>
                   <li>
                     → <Link href="/chillan/dislexia" className="font-medium text-rose-600 underline hover:text-rose-700">Dislexia y fonoaudiología</Link>
@@ -699,7 +683,7 @@ export default function FonoaudiologaNinosChillanPage() {
                 <div className="hidden md:block">
                   <div className="relative mx-auto aspect-square w-48 overflow-hidden rounded-full bg-rose-100 shadow-lg">
                     <Image
-                      src="/KatiaDominguezFonoaudiologa.png"
+                      src="/KatiaDominguezFonoaudiologa.jpg"
                       alt="Katia Domínguez - Fonoaudióloga infantil en Chillán"
                       fill
                       className="object-cover"

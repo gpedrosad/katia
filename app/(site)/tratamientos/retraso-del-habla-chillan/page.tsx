@@ -14,7 +14,7 @@ export const metadata = buildPageMetadata({
   path: PAGE_PATH,
   title: "Retraso del Habla Chillán | Niño no se le entiende al hablar",
   description:
-    "Tratamiento retraso del habla en niños en Chillán: cuando habla poco, se le entiende mal o articula con dificultad. Evaluación y terapia presencial. Mejoramos claridad.",
+    "Tratamiento del retraso del habla en Chillán: habla poco, se le entiende mal o articula con dificultad. Evaluación y terapia presencial.",
   keywords: [
     "retraso del habla niños Chillán",
     "niño no se le entiende al hablar",

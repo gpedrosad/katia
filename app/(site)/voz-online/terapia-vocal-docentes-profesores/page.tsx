@@ -7,9 +7,9 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/terapia-vocal-docentes-profesores",
-  title: "Terapia Vocal para Docentes Online | Salva tu voz de profesor",
+  title: "Terapia vocal para docentes | Online",
   description:
-    "58% de docentes desarrollará trastorno de voz. Terapia fonoaudiológica online para profesores: técnica vocal, proyección sin gritar, prevención disfonía. Chile.",
+    "El 58% de los docentes desarrolla un trastorno de voz. Terapia online para profesores: técnica vocal, proyección sin gritar y prevención de disfonía.",
   keywords: [
     "terapia vocal docentes",
     "voz profesores",
@@ -149,7 +149,7 @@ export default function TerapiaVocalDocentesPage() {
                 <strong>Silencio de fin de semana:</strong> El sábado y domingo te quedas mudo/a para poder apenas tener un hilo de voz el lunes por la mañana.
               </li>
               <li>
-                <strong>Falta de proyección:</strong> Gritas para ordenar el curso, la vena y el cuello se te marcan pero el volumen final en sala es bajo y lleno de "aire".
+                <strong>Falta de proyección:</strong> Gritas para ordenar el curso, la vena y el cuello se te marcan pero el volumen final en sala es bajo y lleno de &quot;aire&quot;.
               </li>
               <li>
                 <strong>Dolor como agujas:</strong> Las últimas horas de la jornada las das apretando los dientes del dolor en la garganta al pronunciar vocales.

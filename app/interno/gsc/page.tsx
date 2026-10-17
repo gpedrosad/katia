@@ -35,17 +35,23 @@ export default async function GscDashboardPage({ searchParams }: PageProps) {
     );
   }
 
+  let data: Awaited<ReturnType<typeof getGscDashboardData>> | null = null;
+  let message: string | null = null;
   try {
-    const data = await getGscDashboardData();
-    return <GscDashboard data={data} />;
+    data = await getGscDashboardData();
   } catch (error) {
-    const message = error instanceof Error ? error.message : "Error desconocido";
+    message = error instanceof Error ? error.message : "Error desconocido";
+  }
+
+  if (!data) {
     return (
       <main style={{ maxWidth: 560, margin: "4rem auto", padding: "0 1.5rem" }}>
         <h1 style={{ fontSize: "1.5rem", marginBottom: "1rem" }}>
           No se pudo cargar Search Console
         </h1>
-        <p style={{ color: "#666", lineHeight: 1.6, marginBottom: "1rem" }}>{message}</p>
+        <p style={{ color: "#666", lineHeight: 1.6, marginBottom: "1rem" }}>
+          {message ?? "Error desconocido"}
+        </p>
         <p style={{ fontSize: "0.875rem", color: "#999" }}>
           En local: <code>npm run gsc:auth</code> y revisa <code>GSC_SITE_URL</code> en{" "}
           <code>.env.local</code>.
@@ -53,4 +59,6 @@ export default async function GscDashboardPage({ searchParams }: PageProps) {
       </main>
     );
   }
+
+  return <GscDashboard data={data} />;
 }

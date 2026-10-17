@@ -8,7 +8,7 @@ const PAGE_PATH = "/comparaciones/tel-vs-retraso-del-lenguaje";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Diferencia entre TEL y Retraso del Lenguaje | ¿Es transitorio o persistente?",
+  title: "TEL y retraso del lenguaje | Diferencias",
   description:
     "¿Cuál es la diferencia entre TEL y retraso del lenguaje? Tabla comparativa, evolución, prevalencia y cuándo evaluar con fonoaudióloga en Chillán.",
   keywords: [
