@@ -20,6 +20,93 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-10-17: SEO Lote 11 — indexación, logopeda, conciencia fonológica y hub de trastornos del habla
+
+### Contexto
+
+**Datos GSC (90 días 2026-07-19 al 2026-10-16, dataState=all, pull 2026-10-17):**
+- **89 clics**
+- **5.469 impresiones**
+- **Posición promedio: 8,0**
+
+**Últimos 7 días (2026-10-10 al 2026-10-16):** 9 clics / 649 imp vs 7 días previos (2026-10-03 al 2026-10-09): 5 clics / 711 imp
+
+**URL Inspection (2026-10-17):** `/glosario/logopeda` descubierta, nunca rastreada. `/servicios/conciencia-fonologica-chillan` rastreada, sin indexar. `/servicios/trastornos-del-habla` indexada, 14 imp, pos 54,6; la query visible es «fonoaudiologo chillan» en pos 92. Queries «logopeda» (25 imp, pos 2,5), «logopedia» (29, pos 6,9) y «logopeda infantil» (5) caen en la home con 0 clics. Páginas Lote 5 indexadas con casi 0 imp: test (2), evaluación del lenguaje (3), terapia del habla (3), retraso del habla (1), mi hijo no comprende (7).
+
+**Sitemap GSC:** última descarga 2026-10-11 (85 URLs). El sitemap vivo ya lista más (126 al corte del brief).
+
+**Páginas congeladas:** no se editó home ni lo tocado por Lotes 6–10 ni por las rondas 1–2 (PRs #2–#5), salvo el alcance explícito de este lote. En particular no se editaron `/ads/*`, `/sitelink/*` ni landings de otras ciudades. El footer ya enlazaba los hubs nuevos; no se tocó.
+
+**Objetivo:** que Google tenga una página de logopeda que valga indexar, una conciencia fonológica distinta del glosario, un hub de trastornos del habla que descubra `/dislalia` y `/tartamudez`, y `lastmod` por página. Medir ~2026-10-31 al 2026-11-07.
+
+### Páginas optimizadas
+
+#### 1. `/glosario/logopeda`
+**Estado previo:** descubierta, sin indexar. La ficha del glosario dinámico era corta.
+
+**Cambios:**
+- **Página estática** (el template `[slug]` no se tocó; el slug sale de `STATIC_GLOSSARY_SLUGS`)
+- **Title:** `"¿Qué es un logopeda? | Logopedia infantil"`
+- **Description:** logopeda/logopedia = nombres de España; fonoaudiólogo/fonoaudiología en Chile; qué hace un logopeda infantil y cómo buscarlo
+- **H1:** «¿Qué es un logopeda?»
+- **Contenido:** logopeda vs logopedia, equivalente en Chile, qué trabaja en niños (hechos ya publicados), cómo buscarlo, cuándo consultar, horario desde `lib/site.ts`
+- **FAQ + FAQPage:** 6 preguntas visibles, el schema repite el mismo texto
+- **Enlaces:** pilar, `/lenguaje-infantil`, `/dislalia`, `/tartamudez`, agendar, qué hace un fonoaudiólogo infantil
+- **Enlazada desde** `/glosario`, `/servicios/trastornos-del-habla` y las tres páginas de servicio Lote 5 (indexadas)
+
+#### 2. `/servicios/conciencia-fonologica-chillan`
+**Estado previo:** rastreada, sin indexar. Se parecía al glosario.
+
+**Cambios:**
+- **No hay canonical ni 301.** La página queda como la evaluación y la estimulación en la consulta. La definición sigue en `/glosario/conciencia-fonologica`
+- **Title:** `"Conciencia fonológica en la consulta | Chillán"`
+- **H1:** «Evaluación de conciencia fonológica en Chillán»
+- **Contenido:** qué se mira en la sesión (rimas, sílabas, sonido inicial, cambiar un sonido), edad 4–5 años, enlace a lectoescritura y a las tres guías
+- **FAQ:** pregunta nueva de rol (esta no es la definición) más las dos de edad y la conexión con lectoescritura. Schema solo de lo visible
+- **Recomendación:** si en ~21 días sigue sin indexar, valorar canonical al glosario. No se hizo ahora
+
+#### 3. `/servicios/trastornos-del-habla`
+**Métricas GSC previas:** 14 imp, pos 54,6; query «fonoaudiologo chillan» pos 92
+
+**Cambios:**
+- **Title:** `"Trastornos del habla infantil | Dislalia y tartamudez"`
+- **Description / H1:** mapa de trastornos del habla infantil, no landing genérica de fonoaudiólogo en Chillán
+- **Intro:** la query de fonoaudióloga Chillán se manda al pilar; logopeda se manda al glosario
+- **Contenido:** tarjetas de dislalia, trastorno fonológico, apraxia, tartamudez/disfemia y disartria, cada una con enlaces a hub, tratamiento o glosario ya existentes
+- **FAQ:** las cuatro respuestas que ya estaban, más la pregunta de qué ordena la página. El schema cubre las cinco (antes el JSON-LD omitía una visible)
+- **Enlaces de descubrimiento:** `/dislalia`, `/tartamudez`, `/lenguaje-infantil`, terapia del habla, logopeda
+
+#### 4. Segundo pase de descubrimiento en páginas Lote 5
+Titles y descriptions se mantienen: ya nombran el intent. Se agregó un bloque «Guías relacionadas».
+
+- `/servicios/test-de-lenguaje-infantil-chillan`: lenguaje infantil, entiende y no habla, palabras sin frases, informe del colegio, solo una evaluación, logopeda
+- `/servicios/evaluacion-del-lenguaje-infantil-chillan`: lenguaje infantil, habla como bebé, palabras sin frases, gestos a palabras, cuándo consultar, logopeda
+- `/servicios/terapia-del-habla-infantil-chillan`: dislalia (hub, cambia sonidos, se entiende solo en casa), tartamudez (hub y qué hacer al trabarse), logopeda
+- `/tratamientos/retraso-del-habla-chillan`: dislalia, se entiende solo en casa, habla como bebé, corregir al hablar mal, tartamudez como caso distinto, guías de casa
+- `/sintomas/mi-hijo-no-comprende-chillan`: lenguaje infantil, entiende y no habla (caso contrario), otitis y audición, educadora, cuándo consultar, fono o psicólogo
+
+### Técnico
+
+- **Sitemap `lastmod`:** en producción todas las URLs salían con el mismo segundo (`2026-10-17T04:05:15Z`) porque `lastModified` usaba el mtime del checkout. Ahora es la fecha del último commit de cada `page.tsx`. Si el build no tiene ese historial, usa `lib/page-lastmod.json`. Si una URL tiene página concreta y template `[slug]`, gana la concreta (así `/glosario/logopeda` no hereda la fecha del glosario dinámico).
+- **Hubs ronda 1 y 2:** siguen en el sitemap (cada uno con su `page.tsx`) y en el footer. Además quedan enlazados desde páginas indexadas no congeladas (trastornos del habla y Lote 5).
+- **Apex:** `https://katialafono.cl` ya responde **308** a `https://www.katialafono.cl` (`next.config.ts`, host `katialafono.cl`). `http://katialafono.cl` responde **308** a `https://katialafono.cl/` (HTTPS de Vercel) y recién el siguiente salto llega a www. No se cambió código: el primer salto es del hosting.
+- **robots.txt:** sin cambios (`/seo-links`, `/interno`).
+
+### Recomendaciones para Gonzalo
+
+1. En GSC, pedir indexación de `/glosario/logopeda`, `/servicios/conciencia-fonologica-chillan`, `/servicios/trastornos-del-habla` y de los hubs de ronda 1–2 que siguen en «URL desconocida». Reenviar el sitemap (la última descarga es del 2026-10-11).
+2. En dominios de Vercel, redirigir el apex (http y https) directo a `https://www.katialafono.cl` para evitar la cadena de dos 308.
+3. No consolidar todavía conciencia fonológica ni «mi hijo no comprende» vs «no entiende instrucciones». Si conciencia sigue rastreada y sin indexar hacia el 2026-11-07, recién ahí un canonical al glosario.
+4. Medir ~14–21 días: impresiones de «logopeda» / «logopedia» en `/glosario/logopeda` (hoy 0 porque no está indexada) y si «fonoaudiologo chillan» deja de ser la query de trastornos del habla.
+
+### Métricas esperadas
+
+- Indexación de `/glosario/logopeda` y de `/servicios/conciencia-fonologica-chillan`.
+- `/servicios/trastornos-del-habla` deja de promediar pos ~50 por la query genérica de Chillán.
+- Impresiones en las guías de ronda 2 descubiertas desde estas páginas indexadas.
+
+---
+
 ## 2026-10-17: Ronda 2 — cobertura informativa para padres
 
 ### Contexto

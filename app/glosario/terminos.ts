@@ -31,6 +31,7 @@ export const STATIC_GLOSSARY_SLUGS = [
   "dislalia",
   "tel",
   "retraso-del-habla",
+  "logopeda",
 ] as const;
 
 export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
@@ -745,11 +746,11 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     slug: "logopeda",
     term: "Logopeda / Logopedia",
     shortDescription:
-      "Término usado principalmente en España para fonoaudiólogo/fonoaudiología.",
+      "Nombre de España para el fonoaudiólogo. En Chile se dice fonoaudiología.",
     category: "Terminología",
-    metaTitle: "¿Qué es Logopeda? | Logopedia vs Fonoaudiología",
+    metaTitle: "¿Qué es un logopeda? | Logopedia infantil",
     metaDescription:
-      "Logopeda y logopedia son términos usados en España para lo que en Chile llamamos fonoaudiólogo y fonoaudiología. Misma profesión, nombres diferentes.",
+      "Logopeda y logopedia son los nombres de España para el fonoaudiólogo y la fonoaudiología. Qué hace un logopeda infantil y cómo buscarlo en Chile.",
     keywords: [
       "logopeda",
       "logopedia",
@@ -762,13 +763,13 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
       "Logopeda es el término que se usa principalmente en España para referirse a lo que en Chile llamamos fonoaudiólogo.",
     definitionParagraphs: [
       "Logopeda (o logopedia, como disciplina) es el nombre que se utiliza en España y algunos otros países de Europa para la profesión que en Chile, Argentina y la mayoría de países de Latinoamérica se conoce como fonoaudiólogo o fonoaudiología.",
-      "Es la misma profesión: un logopeda y un fonoaudiólogo trabajan la comunicación, el lenguaje, el habla, la voz y la deglución. La diferencia es solo de terminología regional, no de formación ni de práctica clínica.",
+      "Es la misma profesión: comunicación, lenguaje, habla, voz y deglución. Cambia el nombre según el país.",
     ],
     commonSigns: [
       "Logopeda = término en España",
       "Fonoaudiólogo/a = término en Chile, Argentina, Uruguay, Colombia",
       "Speech-Language Pathologist (SLP) = término en inglés (EE.UU., Canadá)",
-      "Misma formación universitaria, distinto nombre según el país",
+      "Cambia el nombre según el país, no el trabajo",
     ],
     whenToConsult: [
       "Si buscas atención en Chile, pregunta por «fonoaudiólogo infantil» o «fonoaudióloga»",

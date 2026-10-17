@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
+import { RelatedGuides } from "@/app/_components/RelatedGuides";
 import { StickyWhatsApp } from "@/app/_components/StickyWhatsApp";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import { buildPageMetadata } from "@/lib/seo";
@@ -334,6 +335,35 @@ export default function EvaluacionLenguajeInfantilPage() {
 
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl">
+            <RelatedGuides
+              intro="Esta página es la evaluación del lenguaje en Chillán: vocabulario, comprensión y frases. Las guías describen la situación en casa. Si buscabas logopeda, en Chile se dice fonoaudiólogo."
+              items={[
+                {
+                  href: "/lenguaje-infantil",
+                  title: "Lenguaje infantil: guías para padres",
+                },
+                {
+                  href: "/lenguaje-infantil/habla-como-bebe",
+                  title: "Habla como bebé",
+                },
+                {
+                  href: "/lenguaje-infantil/dice-palabras-y-no-frases",
+                  title: "Dice palabras y no arma frases",
+                },
+                {
+                  href: "/guias-padres/de-los-gestos-a-las-palabras",
+                  title: "De los gestos a las palabras",
+                },
+                {
+                  href: "/preguntas/cuando-llevar-a-mi-hijo-al-fonoaudiologo",
+                  title: "¿Cuándo llevar a mi hijo al fonoaudiólogo?",
+                },
+                {
+                  href: "/glosario/logopeda",
+                  title: "¿Qué es un logopeda?",
+                },
+              ]}
+            />
             <h2 className="mb-10 text-center text-3xl font-bold text-gray-900">
               Preguntas frecuentes
             </h2>

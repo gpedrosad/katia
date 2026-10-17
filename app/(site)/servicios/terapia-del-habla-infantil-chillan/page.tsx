@@ -1,4 +1,5 @@
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
+import { RelatedGuides } from "@/app/_components/RelatedGuides";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
@@ -124,6 +125,27 @@ export default function TerapiaHablaInfantilPage() {
               es indispensable para definir el plan correcto.
             </p>
           </section>
+
+          <RelatedGuides
+            intro="Esta página es la terapia del habla: sonidos, claridad y fluidez. Las guías describen lo que oyes en casa. Si buscabas logopeda, en Chile se dice fonoaudiólogo."
+            items={[
+              { href: "/dislalia", title: "Dislalia: guías para padres" },
+              {
+                href: "/dislalia/cambia-sonidos-al-hablar",
+                title: "Cambia los sonidos al hablar",
+              },
+              {
+                href: "/dislalia/lo-entienden-en-casa-no-afuera",
+                title: "Lo entienden en casa y no afuera",
+              },
+              { href: "/tartamudez", title: "Tartamudez infantil: guías para padres" },
+              {
+                href: "/tartamudez/que-hacer-cuando-se-traba",
+                title: "Qué hacer cuando se traba",
+              },
+              { href: "/glosario/logopeda", title: "¿Qué es un logopeda?" },
+            ]}
+          />
 
           <div className="mt-12 flex justify-center">
             <WhatsAppCTA

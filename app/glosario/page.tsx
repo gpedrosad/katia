@@ -94,6 +94,17 @@ export default function GlosarioPage() {
                 <strong>Chillán, Región de Ñuble, Chile</strong>. Definiciones
                 claras de trastornos del lenguaje y del habla.
               </p>
+              <p className="mx-auto mt-4 max-w-2xl text-gray-700">
+                Si buscas logopeda o logopedia, en Chile esa profesión se llama
+                fonoaudiología. La explicación está en{" "}
+                <Link
+                  href="/glosario/logopeda"
+                  className="font-semibold text-rose-700 underline"
+                >
+                  qué es un logopeda
+                </Link>
+                .
+              </p>
             </div>
 
             <div className="mb-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">

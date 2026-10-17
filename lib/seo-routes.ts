@@ -208,6 +208,7 @@ export const SEO_ROUTE_SECTIONS: SeoRouteSection[] = [
       route("/glosario/dislalia", "Dislalia (página estática)"),
       route("/glosario/tel", "TEL (página estática)"),
       route("/glosario/retraso-del-habla", "Retraso del habla (página estática)"),
+      route("/glosario/logopeda", "Logopeda (página estática)"),
       route("/glosario/tdl", "TDL (trastorno del desarrollo del lenguaje)"),
       ...GLOSARIO_TERMINOS.map((t) => route(`/glosario/${t.slug}`, t.term)),
     ],

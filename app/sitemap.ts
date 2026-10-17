@@ -1,3 +1,4 @@
+import { execFileSync } from "child_process";
 import fs from "fs";
 import path from "path";
 import type { MetadataRoute } from "next";
@@ -94,6 +95,70 @@ function isNoIndex(urlPath: string, file: string): boolean {
   return false;
 }
 
+/**
+ * lastmod por archivo, no por mtime del checkout.
+ * En Vercel el clone deja el mismo mtime en casi todas las páginas y el
+ * sitemap publicaba «ahora» para cada URL. Preferimos la fecha del último
+ * commit del page.tsx; si el build no tiene ese historial, el JSON de respaldo.
+ */
+let gitDates: Map<string, Date> | null = null;
+let jsonDates: Map<string, string> | null = null;
+
+function loadGitDates(): Map<string, Date> {
+  if (gitDates) return gitDates;
+  const dates = new Map<string, Date>();
+  gitDates = dates;
+  try {
+    const out = execFileSync("git", ["log", "--pretty=format:%cI", "--name-only"], {
+      cwd: process.cwd(),
+      encoding: "utf8",
+      maxBuffer: 32 * 1024 * 1024,
+      stdio: ["ignore", "pipe", "ignore"],
+    });
+    let current: Date | null = null;
+    for (const raw of out.split("\n")) {
+      const line = raw.trim();
+      if (!line) continue;
+      if (/^\d{4}-\d{2}-\d{2}T/.test(line)) {
+        const parsed = new Date(line);
+        current = Number.isNaN(parsed.getTime()) ? null : parsed;
+        continue;
+      }
+      if (!current || dates.has(line)) continue;
+      dates.set(line, current);
+    }
+  } catch {
+    // Build sin git: queda el JSON.
+  }
+  return dates;
+}
+
+function loadJsonDates(): Map<string, string> {
+  if (jsonDates) return jsonDates;
+  const dates = new Map<string, string>();
+  jsonDates = dates;
+  try {
+    const file = path.join(process.cwd(), "lib/page-lastmod.json");
+    const data = JSON.parse(fs.readFileSync(file, "utf8")) as Record<string, string>;
+    for (const [key, value] of Object.entries(data)) dates.set(key, value);
+  } catch {
+    // Sin respaldo.
+  }
+  return dates;
+}
+
+function lastModifiedFor(file: string): Date {
+  const rel = path.relative(process.cwd(), file).split(path.sep).join("/");
+  const fromGit = loadGitDates().get(rel);
+  if (fromGit) return fromGit;
+  const fromJson = loadJsonDates().get(rel);
+  if (fromJson) {
+    const parsed = new Date(fromJson);
+    if (!Number.isNaN(parsed.getTime())) return parsed;
+  }
+  return fs.statSync(file).mtime;
+}
+
 function priorityFor(urlPath: string): number {
   if (urlPath === "/") return 1;
   const depth = urlPath.split("/").filter(Boolean).length;
@@ -129,7 +194,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const urlPath of expandPath(page.urlPath, page.file)) {
       if (urlPath.includes("[")) continue;
       if (REDIRECT_PATHS.has(urlPath)) continue;
-      if (!byPath.has(urlPath)) byPath.set(urlPath, page.file);
+      const prev = byPath.get(urlPath);
+      if (!prev) {
+        byPath.set(urlPath, page.file);
+        continue;
+      }
+      // Una page.tsx concreta (p. ej. /glosario/logopeda) gana al template [slug].
+      if (prev.includes("[") && !page.file.includes("[")) {
+        byPath.set(urlPath, page.file);
+      }
     }
   }
 
@@ -137,7 +210,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .sort(([a], [b]) => a.localeCompare(b, "es"))
     .map(([urlPath, file]) => ({
       url: urlPath === "/" ? SITE_URL : `${SITE_URL}${urlPath}`,
-      lastModified: fs.statSync(file).mtime,
+      lastModified: lastModifiedFor(file),
       changeFrequency: changeFrequencyFor(urlPath),
       priority: priorityFor(urlPath),
     }));

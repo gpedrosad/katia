@@ -1,5 +1,6 @@
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 import { GeoFAQ } from "@/app/_components/GeoFAQ";
+import { RelatedGuides } from "@/app/_components/RelatedGuides";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
@@ -86,6 +87,36 @@ export default function TestLenguajePage() {
               Tras aplicar los test de lenguaje en nuestra consulta, generamos un <strong>Informe Fonoaudiológico detallado</strong>. Este documento es válido para entregar en el colegio (por ingresos al Programa de Integración Escolar PIE) o para postulación a Escuelas de Lenguaje regulares en la comuna de Chillán y alrededores.
             </p>
           </div>
+
+          <RelatedGuides
+            intro="El test mide el lenguaje en la consulta. Estas guías sirven para nombrar la duda antes de pedir la hora. Si buscabas logopeda, en Chile se dice fonoaudiólogo."
+            items={[
+              {
+                href: "/lenguaje-infantil",
+                title: "Lenguaje infantil: guías para padres",
+              },
+              {
+                href: "/lenguaje-infantil/entiende-pero-no-habla",
+                title: "Entiende, pero casi no habla",
+              },
+              {
+                href: "/lenguaje-infantil/dice-palabras-y-no-frases",
+                title: "Dice palabras y no arma frases",
+              },
+              {
+                href: "/preguntas/el-colegio-pidio-un-informe",
+                title: "El colegio pidió un informe",
+              },
+              {
+                href: "/preguntas/puedo-pedir-solo-una-evaluacion",
+                title: "¿Puedo pedir solo una evaluación?",
+              },
+              {
+                href: "/glosario/logopeda",
+                title: "¿Qué es un logopeda?",
+              },
+            ]}
+          />
 
           <GeoFAQ
             items={faqItems}

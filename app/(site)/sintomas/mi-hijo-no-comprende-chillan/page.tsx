@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
+import { RelatedGuides } from "@/app/_components/RelatedGuides";
 import { StickyWhatsApp } from "@/app/_components/StickyWhatsApp";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import { buildPageMetadata } from "@/lib/seo";
@@ -198,6 +199,38 @@ export default function MiHijoNoComprendePage() {
         </section>
 
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl">
+            <RelatedGuides
+              intro="Esta página es cuando no comprende para su edad. Si entiende y casi no habla, es otra situación: esa guía está abajo."
+              items={[
+                {
+                  href: "/lenguaje-infantil",
+                  title: "Lenguaje infantil: guías para padres",
+                },
+                {
+                  href: "/lenguaje-infantil/entiende-pero-no-habla",
+                  title: "Entiende, pero casi no habla",
+                  note: "Es el caso contrario: comprende y dice poco.",
+                },
+                {
+                  href: "/guias-padres/otitis-audicion-y-lenguaje",
+                  title: "Otitis, audición y lenguaje",
+                },
+                {
+                  href: "/guias-padres/que-contarle-a-la-educadora",
+                  title: "Qué contarle a la educadora",
+                },
+                {
+                  href: "/preguntas/cuando-llevar-a-mi-hijo-al-fonoaudiologo",
+                  title: "¿Cuándo llevar a mi hijo al fonoaudiólogo?",
+                },
+                {
+                  href: "/preguntas/fonoaudiologo-o-psicologo",
+                  title: "¿Fonoaudiólogo o psicólogo?",
+                },
+              ]}
+            />
+          </div>
           <div className="mx-auto max-w-4xl">
             <h2 className="mb-8 text-center text-2xl font-bold text-gray-900">
               Recursos relacionados

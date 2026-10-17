@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
+import { RelatedGuides } from "@/app/_components/RelatedGuides";
 import { StickyWhatsApp } from "@/app/_components/StickyWhatsApp";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import { buildPageMetadata } from "@/lib/seo";
@@ -145,6 +146,34 @@ export default function RetrasoHablaPage() {
                 <p className="mt-4 text-gray-600">{f.a}</p>
               </details>
             ))}
+          </div>
+        </section>
+
+        <section className="bg-white px-4 py-12 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl">
+            <RelatedGuides
+              intro="Esta página es el tratamiento del retraso del habla en Chillán: se le entiende poco. Si se traba o repite, es otra guía."
+              items={[
+                { href: "/dislalia", title: "Dislalia: guías para padres" },
+                {
+                  href: "/dislalia/lo-entienden-en-casa-no-afuera",
+                  title: "Lo entienden en casa y no afuera",
+                },
+                {
+                  href: "/lenguaje-infantil/habla-como-bebe",
+                  title: "Habla como bebé",
+                },
+                {
+                  href: "/preguntas/conviene-corregir-cuando-habla-mal",
+                  title: "¿Conviene corregir cuando habla mal?",
+                },
+                {
+                  href: "/tartamudez",
+                  title: "Tartamudez: si se traba, no es lo mismo",
+                },
+                { href: "/guias-padres", title: "Guías para la casa" },
+              ]}
+            />
           </div>
         </section>
 
