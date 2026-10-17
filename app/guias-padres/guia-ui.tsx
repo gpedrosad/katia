@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { Footer } from "@/app/_components/Footer";
 import { Header } from "@/app/_components/Header";
+import { Portrait } from "@/app/_components/Portrait";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import { buildPageMetadata } from "@/lib/seo";
 import {
@@ -133,6 +134,9 @@ export function GuiaPage({
   whatsappHref,
   ctaLabel,
   showBackLink = true,
+  backHref = "/guias-padres",
+  backLabel = "← Volver a guías para padres",
+  imageAlt,
   children,
 }: {
   crumbs: Crumb[];
@@ -147,8 +151,15 @@ export function GuiaPage({
   whatsappHref: string;
   ctaLabel: string;
   showBackLink?: boolean;
+  backHref?: string;
+  backLabel?: string;
+  /** Alt único de la foto. Si se omite, se arma con el título de la guía. */
+  imageAlt?: string;
   children: ReactNode;
 }) {
+  const portraitAlt =
+    imageAlt ??
+    `Retrato de Katia Domínguez, fonoaudióloga infantil en Chillán, en la guía «${title}»`;
   return (
     <>
       {jsonLd.map((data, index) => (
@@ -195,6 +206,18 @@ export function GuiaPage({
               </h1>
               <p className="text-xl text-gray-600">{lead}</p>
             </header>
+
+            <figure className="mb-8">
+              <div className="relative mx-auto aspect-[4/5] w-full max-w-xs overflow-hidden rounded-3xl bg-rose-100">
+                <Portrait
+                  alt={portraitAlt}
+                  sizes="(max-width: 768px) 80vw, 320px"
+                />
+              </div>
+              <figcaption className="mt-2 text-center text-sm text-gray-500">
+                Katia Domínguez, fonoaudióloga infantil en Chillán.
+              </figcaption>
+            </figure>
 
             <nav
               aria-label="Enlaces relacionados"
@@ -282,10 +305,10 @@ export function GuiaPage({
             {showBackLink ? (
               <p className="mt-8 text-center text-sm">
                 <Link
-                  href="/guias-padres"
+                  href={backHref}
                   className="font-medium text-rose-600 underline"
                 >
-                  ← Volver a guías para padres
+                  {backLabel}
                 </Link>
               </p>
             ) : null}

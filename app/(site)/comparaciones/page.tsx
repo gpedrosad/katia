@@ -73,6 +73,17 @@ export default function ComparacionesHubPage() {
           </li>
         ))}
       </ul>
+      <p className="mt-8 text-gray-700">
+        Si la duda es de pronunciación en la casa, sigue en{" "}
+        <Link href="/dislalia" className="font-medium text-rose-700 underline">
+          las guías de dislalia
+        </Link>
+        . Si es de frases y palabras, en{" "}
+        <Link href="/lenguaje-infantil" className="font-medium text-rose-700 underline">
+          lenguaje infantil
+        </Link>
+        .
+      </p>
     </main>
   );
 }

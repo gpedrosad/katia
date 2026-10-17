@@ -1,7 +1,7 @@
 import { SITE_URL, whatsappUrl } from "@/lib/site";
 import { buildPageMetadata } from "@/lib/seo";
 import { buildMedicalBusinessJsonLd } from "@/lib/local-business-schema";
-import Image from "next/image";
+import { Portrait } from "@/app/_components/Portrait";
 import Link from "next/link";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 
@@ -210,6 +210,12 @@ const therapySteps = [
 ];
 
 const guiasPorTema = [
+  { href: "/lenguaje-infantil", label: "Guías de lenguaje infantil" },
+  { href: "/dislalia", label: "Guías de dislalia para padres" },
+  { href: "/tartamudez", label: "Guías de tartamudez" },
+  { href: "/lectoescritura", label: "Guías de lectoescritura" },
+  { href: "/preguntas", label: "Preguntas de padres" },
+  { href: "/guias-padres", label: "Guías para la casa" },
   { href: "/sintomas/mi-hijo-no-habla-bien-chillan", label: "Mi hijo no habla bien" },
   { href: "/sintomas/nino-pronuncia-mal-chillan", label: "Mi hijo de 3 años no se le entiende" },
   { href: "/sintomas/hijo-habla-poco-edad-chillan", label: "Mi hijo de 2 años habla poco" },
@@ -361,11 +367,8 @@ export default function FonoaudiologaNinosChillanPage() {
               {/* Image */}
               <div className="relative mx-auto w-full max-w-md lg:mx-0">
                 <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-rose-100 shadow-2xl">
-                  <Image
-                    src="/KatiaDominguezFonoaudiologa.jpg"
-                    alt="Katia Domínguez - Fonoaudióloga especialista en niños en Chillán"
-                    fill
-                    className="object-cover"
+                  <Portrait
+                    alt="Retrato de Katia Domínguez, fonoaudióloga especialista en lenguaje de niños, en Chillán"
                     priority
                     sizes="(max-width: 768px) 100vw, 400px"
                   />
@@ -682,11 +685,8 @@ export default function FonoaudiologaNinosChillanPage() {
                 </div>
                 <div className="hidden md:block">
                   <div className="relative mx-auto aspect-square w-48 overflow-hidden rounded-full bg-rose-100 shadow-lg">
-                    <Image
-                      src="/KatiaDominguezFonoaudiologa.jpg"
-                      alt="Katia Domínguez - Fonoaudióloga infantil en Chillán"
-                      fill
-                      className="object-cover"
+                    <Portrait
+                      alt="Foto de perfil de Katia Domínguez, fonoaudióloga infantil en Chillán"
                       sizes="192px"
                     />
                   </div>

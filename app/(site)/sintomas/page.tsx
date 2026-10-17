@@ -87,6 +87,31 @@ export default function SintomasHubPage() {
           </li>
         ))}
       </ul>
+      <nav aria-label="Guías relacionadas" className="mt-10 text-gray-700">
+        <h2 className="mb-3 text-xl font-semibold text-gray-900">
+          Guías para entender la duda
+        </h2>
+        <ul className="space-y-2">
+          <li>
+            <Link href="/lenguaje-infantil" className="font-medium text-rose-700 underline">
+              Lenguaje infantil
+            </Link>
+            : 18 meses, comprende y no habla, habla como bebé, palabras sin frases.
+          </li>
+          <li>
+            <Link href="/dislalia" className="font-medium text-rose-700 underline">
+              Dislalia
+            </Link>
+            : la ese, sonidos que cambian y un habla que solo se entiende en casa.
+          </li>
+          <li>
+            <Link href="/tartamudez" className="font-medium text-rose-700 underline">
+              Tartamudez
+            </Link>
+            : repeticiones, qué hacer cuando se traba y el silencio en el jardín.
+          </li>
+        </ul>
+      </nav>
     </main>
   );
 }

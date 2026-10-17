@@ -1,4 +1,10 @@
+import { DISLALIA_ARTICULOS } from "@/app/dislalia/articulos";
 import { GLOSARIO_TERMINOS } from "@/app/glosario/terminos";
+import { GUIAS_PADRES } from "@/app/guias-padres/guias";
+import { LECTOESCRITURA_ARTICULOS } from "@/app/lectoescritura/articulos";
+import { LENGUAJE_ARTICULOS } from "@/app/lenguaje-infantil/articulos";
+import { PREGUNTAS } from "@/app/preguntas/catalogo";
+import { TARTAMUDEZ_ARTICULOS } from "@/app/tartamudez/articulos";
 import { PATOLOGIAS } from "@/app/chillan/[slug]/patologias";
 
 export type SeoRoute = {
@@ -221,6 +227,54 @@ export const SEO_ROUTE_SECTIONS: SeoRouteSection[] = [
         "/recursos/primera-evaluacion-fonoaudiologica-infantil",
         "Primera evaluación fonoaudiológica infantil"
       ),
+    ],
+  },
+  {
+    id: "lenguaje-infantil",
+    title: "Lenguaje infantil (guías)",
+    routes: [
+      route("/lenguaje-infantil", "Hub lenguaje infantil"),
+      ...LENGUAJE_ARTICULOS.map((item) => route(item.href, item.title)),
+    ],
+  },
+  {
+    id: "dislalia-guias",
+    title: "Dislalia (guías)",
+    routes: [
+      route("/dislalia", "Hub dislalia"),
+      ...DISLALIA_ARTICULOS.map((item) => route(item.href, item.title)),
+    ],
+  },
+  {
+    id: "tartamudez-guias",
+    title: "Tartamudez (guías)",
+    routes: [
+      route("/tartamudez", "Hub tartamudez"),
+      ...TARTAMUDEZ_ARTICULOS.map((item) => route(item.href, item.title)),
+    ],
+  },
+  {
+    id: "lectoescritura-guias",
+    title: "Lectoescritura (guías)",
+    routes: [
+      route("/lectoescritura", "Hub lectoescritura"),
+      ...LECTOESCRITURA_ARTICULOS.map((item) => route(item.href, item.title)),
+    ],
+  },
+  {
+    id: "preguntas",
+    title: "Preguntas de padres",
+    routes: [
+      route("/preguntas", "Hub preguntas"),
+      ...PREGUNTAS.map((item) => route(item.href, item.question)),
+    ],
+  },
+  {
+    id: "guias-padres",
+    title: "Guías para padres",
+    routes: [
+      route("/guias-padres", "Hub guías para padres"),
+      ...GUIAS_PADRES.map((item) => route(item.href, item.title)),
     ],
   },
   {

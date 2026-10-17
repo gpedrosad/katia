@@ -106,7 +106,13 @@ function changeFrequencyFor(urlPath: string): MetadataRoute.Sitemap[0]["changeFr
   if (
     urlPath.startsWith("/glosario") ||
     urlPath.startsWith("/recursos") ||
-    urlPath.startsWith("/comparaciones")
+    urlPath.startsWith("/comparaciones") ||
+    urlPath.startsWith("/preguntas") ||
+    urlPath.startsWith("/guias-padres") ||
+    urlPath.startsWith("/lenguaje-infantil") ||
+    urlPath.startsWith("/dislalia") ||
+    urlPath.startsWith("/tartamudez") ||
+    urlPath.startsWith("/lectoescritura")
   ) {
     return "monthly";
   }

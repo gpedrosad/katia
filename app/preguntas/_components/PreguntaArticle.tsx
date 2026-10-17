@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 import { GeoFAQ, type GeoFAQItem } from "@/app/_components/GeoFAQ";
+import { Portrait } from "@/app/_components/Portrait";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import { PREGUNTAS } from "@/app/preguntas/catalogo";
 import { BUSINESS_HOURS } from "@/lib/site";
@@ -66,6 +67,18 @@ export function PreguntaArticle({
             {answer}
           </p>
         </header>
+
+        <figure className="mb-8">
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-xs overflow-hidden rounded-3xl bg-rose-100">
+            <Portrait
+              alt={`Retrato de Katia Domínguez, fonoaudióloga infantil en Chillán, junto a la respuesta: ${title}`}
+              sizes="(max-width: 768px) 80vw, 320px"
+            />
+          </div>
+          <figcaption className="mt-2 text-center text-sm text-gray-500">
+            Katia Domínguez, fonoaudióloga infantil en Chillán.
+          </figcaption>
+        </figure>
 
         <WhatsAppCTA message={whatsappMessage}>{ctaLabel}</WhatsAppCTA>
         <p className="mt-3 text-sm text-gray-600">

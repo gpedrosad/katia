@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Portrait } from "@/app/_components/Portrait";
 import Link from "next/link";
 import { SITE_URL, whatsappUrl } from "@/lib/site";
 import { buildPageMetadata } from "@/lib/seo";
@@ -179,6 +179,10 @@ export default function LectoescrituraPage() {
                       Base en el lenguaje oral
                     </Link>
                     {" · "}
+                    <Link href="/lectoescritura" className="font-semibold text-rose-700 underline">
+                      Guías de lectoescritura para padres
+                    </Link>
+                    {" · "}
                     <Link href="/fonoaudiologa-ninos-chillan" className="font-semibold text-rose-700 underline">
                       Fonoaudiología infantil en Chillán
                     </Link>
@@ -222,11 +226,8 @@ export default function LectoescrituraPage() {
               </div>
               <div className="relative mx-auto w-full max-w-md">
                 <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-rose-100 shadow-2xl">
-                  <Image
-                    src="/KatiaDominguezFonoaudiologa.jpg"
-                    alt="Katia Domínguez - Fonoaudióloga especialista en lectoescritura en Chillán"
-                    fill
-                    className="object-cover"
+                  <Portrait
+                    alt="Retrato de Katia Domínguez, fonoaudióloga especialista en lectoescritura en Chillán"
                     priority
                     sizes="(max-width: 768px) 100vw, 400px"
                   />

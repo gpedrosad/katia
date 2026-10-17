@@ -63,6 +63,7 @@ Actualizado: **2026-10-17**
 - Congeladas post-Lote 10: Lotes 5-9 + home + city pages voz-online + `/ads` + `/sitelink` + páginas Lote 10 hasta el corte
 
 - 2026-10-17: auditoría técnica (sitemap automático, metas ≤60/155, schema sin `priceRange`, `@id` `#business`). `pendiente:` validar sitemap en GSC post-deploy. Si existen `app/` y `src/app/`, Next solo usa `app/`.
+- 2026-10-17: ronda 2 de cobertura informativa (lenguaje infantil, dislalia, tartamudez, lectoescritura + más preguntas y guías). Sin páginas de otras ciudades, sin Fonasa ni precio. Doc `docs/seo-oportunidades-ronda2.md`. `pendiente:` indexar las URLs nuevas y medir ~14-21 días.
 
 ## Stack / convenciones
 

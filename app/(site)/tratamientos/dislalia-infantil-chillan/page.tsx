@@ -99,7 +99,7 @@ export default function DislaliaInfantilPage() {
           <div className="mx-auto max-w-4xl text-center text-gray-600">
             <p className="text-lg">
               <strong>Esta es la página principal de tratamiento de dislalia en Chillán.</strong> Para definición corta: <Link href="/glosario/dislalia" className="font-semibold text-teal-600 underline">glosario de dislalia</Link>. Para señales locales: <Link href="/chillan/dislalia" className="font-semibold text-teal-600 underline">dislalia en Chillán</Link>. Si buscas la atención general, mira la <Link href="/fonoaudiologa-ninos-chillan" className="font-semibold text-teal-600 underline">fonoaudiología infantil en Chillán</Link>. También: <Link href="/servicios/trastornos-del-habla" className="font-semibold text-teal-600 underline">trastornos del habla</Link> y{" "}
-              <Link href="/servicios/evaluacion-fonoaudiologica" className="font-semibold text-teal-600 underline">evaluación fonoaudiológica</Link>.
+              <Link href="/servicios/evaluacion-fonoaudiologica" className="font-semibold text-teal-600 underline">evaluación fonoaudiológica</Link>. Para dudas de padres (la ese, sonidos que cambian, solo se entiende en casa): <Link href="/dislalia" className="font-semibold text-teal-600 underline">guías de dislalia</Link>.
             </p>
           </div>
         </section>

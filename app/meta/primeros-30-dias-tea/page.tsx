@@ -278,10 +278,11 @@ export default function First30DaysTeaLanding() {
           <div className="tea-author-photo">
             <Image
               src="/katia-guia.png"
-              alt="Katia Domínguez, fonoaudióloga infantil"
+              alt="Retrato de Katia Domínguez, fonoaudióloga infantil, autora de la guía de los primeros 30 días"
               fill
               sizes="(max-width: 767px) 88vw, 420px"
               className="object-cover object-center"
+              loading="lazy"
             />
           </div>
           <div className="tea-author-copy">
