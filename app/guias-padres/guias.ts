@@ -35,4 +35,22 @@ export const GUIAS_PADRES = [
     summary:
       "Los oídos tapados cambian lo que tu hijo oye. Qué observar y por qué la fonoaudiología no trata la infección.",
   },
+  {
+    href: "/guias-padres/los-abuelos-dicen-que-ya-va-a-hablar",
+    title: "Los abuelos dicen que ya va a hablar",
+    summary:
+      "Cómo escuchar «ya se le va a soltar» sin dejar de mirar lo que tú ves en casa.",
+  },
+  {
+    href: "/guias-padres/de-los-gestos-a-las-palabras",
+    title: "De los gestos a las palabras",
+    summary:
+      "Si pide señalando, cómo ofrecer la palabra sin convertir el día en una clase.",
+  },
+  {
+    href: "/guias-padres/que-contarle-a-la-educadora",
+    title: "Qué contarle a la educadora",
+    summary:
+      "Ejemplos concretos para el jardín, sin etiquetas ni un diagnóstico armado en casa.",
+  },
 ] as const;

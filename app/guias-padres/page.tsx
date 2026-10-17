@@ -6,7 +6,7 @@ import { SITE_URL, whatsappUrl } from "@/lib/site";
 const PATH = "/guias-padres";
 const TITLE = "Guías de lenguaje infantil para padres";
 const DESCRIPTION =
-  "Guías para padres sobre pantallas, bilingüismo, chupete, cuentos, hermanos y oídos. Orientación general y cómo agendar en Chillán.";
+  "Guías para padres: pantallas, bilingüismo, hábitos, oídos, familia y jardín. Orientación general y cómo agendar en Chillán.";
 
 export const metadata = guiaMetadata({
   path: PATH,
@@ -47,7 +47,7 @@ export default function GuiasPadresPage() {
       ]}
       eyebrow="Para la casa"
       title="Guías para padres sobre el lenguaje infantil"
-      lead="Seis temas que suelen aparecer en la cocina, en el jardín y en el celular, y que no reemplazan una evaluación. Sirven para observar con más calma y decidir si conviene pedir hora."
+      lead="Temas que suelen aparecer en la cocina, en el jardín y en el celular, y que no reemplazan una evaluación. Sirven para observar con más calma y decidir si conviene pedir hora."
       related={[
         { href: "/fonoaudiologa-ninos-chillan", label: "Fonoaudiología infantil en Chillán" },
         { href: "/recursos", label: "Recursos que ya están publicados" },

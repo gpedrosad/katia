@@ -56,4 +56,24 @@ export const PREGUNTAS: readonly PreguntaResumen[] = [
     question: "¿Es tarde consultar en básica?",
     teaser: "Qué se puede mirar cuando ya hay lectura, escritura y sala de clases.",
   },
+  {
+    href: "/preguntas/fonoaudiologo-o-psicologo",
+    question: "¿Fonoaudiólogo o psicólogo para mi hijo?",
+    teaser: "Cuándo la duda es de habla y lenguaje, y cuándo también cabe el psicólogo.",
+  },
+  {
+    href: "/preguntas/hay-que-esperar-a-los-4-anos",
+    question: "¿Hay que esperar a los 4 años para consultar?",
+    teaser: "Por qué «esperemos a los 4» no es una regla para todas las dudas.",
+  },
+  {
+    href: "/preguntas/el-colegio-pidio-un-informe",
+    question: "El colegio pidió un informe fonoaudiológico",
+    teaser: "Qué es ese papel, qué no se redacta en la casa y cómo pedir la hora.",
+  },
+  {
+    href: "/preguntas/habla-en-casa-y-calla-en-el-jardin",
+    question: "Habla en casa y en el jardín se calla",
+    teaser: "El contraste entre la cocina y la sala, sin ponerle un diagnóstico.",
+  },
 ] as const;

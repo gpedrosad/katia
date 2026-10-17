@@ -153,7 +153,7 @@ export default function NinoTartamudeaPage() {
             <h2 className="mb-6 text-center text-3xl font-bold text-gray-900">
               ¿Qué puede estar pasando?
             </h2>
-            <p className="mb-8 text-center text-gray-600">Más en <Link href="/glosario/disfemia">glosario: disfemia</Link>, <Link href="/chillan/disfemia">tartamudez en Chillán</Link>, <Link href="/servicios/terapia-del-habla-infantil-chillan">terapia del habla</Link> y <Link href="/servicios/evaluacion-fonoaudiologica">evaluación</Link>.</p>
+            <p className="mb-8 text-center text-gray-600">Más en <Link href="/glosario/disfemia">glosario: disfemia</Link>, <Link href="/chillan/disfemia">tartamudez en Chillán</Link>, <Link href="/tartamudez">guías de tartamudez para padres</Link>, <Link href="/servicios/terapia-del-habla-infantil-chillan">terapia del habla</Link> y <Link href="/servicios/evaluacion-fonoaudiologica">evaluación</Link>.</p>
           </div>
         </section>
 

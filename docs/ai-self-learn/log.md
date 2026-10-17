@@ -7,6 +7,7 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 ## 2026-10-17
 
 - SEO técnico | Sitemap autodescubre `page.tsx` (excluye noindex, redirects y `[slug]` sin datos); títulos ≤60 y metas ≤155; canonical por página; BreadcrumbList en el pilar; schema negocio sin `priceRange` y un solo `@id` `#business`; foto hero JPG ~107 KB | `pendiente:` pedir indexación del sitemap en GSC post-deploy. Next usa `app/` si existe: rutas nuevas en `src/app/` no se sirven ni entran al sitemap.
+- SEO ronda 2 | Hubs nuevos `/lenguaje-infantil`, `/dislalia`, `/tartamudez`, `/lectoescritura` (3-4 guías c/u) + 4 preguntas y 3 guías de casa. Enlaces desde pilar, footer, recursos, síntomas y comparaciones. Retrato con alt por página, `sizes` y lazy fuera del LCP | Doc `docs/seo-oportunidades-ronda2.md`. `pendiente:` indexar URLs nuevas. No Fonasa, no precio, no otras ciudades.
 
 ## 2026-10-16
 

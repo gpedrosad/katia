@@ -20,6 +20,37 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-10-17: Ronda 2 — cobertura informativa para padres
+
+### Contexto
+
+- La ronda 1 ya publicó `/preguntas` y `/guias-padres`.
+- Esta ronda abre los clusters que aún no tenían hub informativo y suma páginas en preguntas y guías.
+- Sin datos clínicos nuevos, sin Fonasa, sin precio y sin páginas de otras ciudades.
+- Detalle de oportunidades que no se implementan ahora: `docs/seo-oportunidades-ronda2.md`.
+
+### Páginas nuevas
+
+- `/lenguaje-infantil` y 4 guías (18 meses, entiende y no habla, habla como bebé, palabras sin frases).
+- `/dislalia` y 3 guías (la S, cambia sonidos, solo se entiende en casa). La erre a los 4 sigue en `/preguntas`.
+- `/tartamudez` y 3 guías (repeticiones a los 3, qué hacer al trabarse, silencio en el jardín).
+- `/lectoescritura` y 3 guías (confunde letras, letras al revés, primero básico).
+- 4 preguntas: fono o psicólogo, esperar a los 4, informe del colegio, habla en casa y calla en el jardín.
+- 3 guías de casa: abuelos, gestos a palabras, qué contarle a la educadora.
+
+### Enlaces e imágenes
+
+- Enlaces desde el pilar, el footer, recursos, síntomas, comparaciones, terapia de lenguaje, dislalia (tratamiento) y tartamudez (síntoma).
+- Inventario en `lib/seo-routes.ts`. El sitemap las toma solas al existir `page.tsx`.
+- Retrato: alt descriptivo por página, `sizes`, carga diferida fuera del hero. El hero sigue con prioridad.
+
+### Métricas esperadas
+
+- Indexación de las URLs nuevas en GSC.
+- En ~14-21 días: impresiones en las queries de padre de cada guía, sin caídas fuertes de las landings Chillán que ya rankean el mismo tema.
+
+---
+
 ## 2026-10-16: SEO Lote 10 — Segundo pase data-driven en páginas Lote 4
 
 ### Contexto

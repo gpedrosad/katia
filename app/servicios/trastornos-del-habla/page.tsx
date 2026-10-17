@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Portrait } from "@/app/_components/Portrait";
 import Link from "next/link";
 import { SITE_URL, whatsappUrl } from "@/lib/site";
 import { buildPageMetadata } from "@/lib/seo";
@@ -174,11 +174,8 @@ export default function TrastornosHablaPage() {
               </div>
               <div className="relative mx-auto w-full max-w-md">
                 <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-rose-100 shadow-2xl">
-                  <Image
-                    src="/KatiaDominguezFonoaudiologa.jpg"
-                    alt="Katia Domínguez - Fonoaudióloga especialista en trastornos del habla en Chillán"
-                    fill
-                    className="object-cover"
+                  <Portrait
+                    alt="Retrato de Katia Domínguez, fonoaudióloga especialista en trastornos del habla en Chillán"
                     priority
                     sizes="(max-width: 768px) 100vw, 400px"
                   />

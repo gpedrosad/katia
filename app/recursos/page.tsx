@@ -186,6 +186,31 @@ export default function RecursosPage() {
               </div>
             </div>
 
+            <nav aria-label="Más guías" className="mb-16">
+              <h2 className="mb-6 text-2xl font-bold text-gray-900">
+                Más guías por tema
+              </h2>
+              <ul className="grid gap-3 sm:grid-cols-2">
+                {[
+                  ["/lenguaje-infantil", "Lenguaje infantil"],
+                  ["/dislalia", "Dislalia y pronunciación"],
+                  ["/tartamudez", "Tartamudez"],
+                  ["/lectoescritura", "Lectoescritura"],
+                  ["/preguntas", "Preguntas de padres"],
+                  ["/guias-padres", "Guías para la casa"],
+                ].map(([href, label]) => (
+                  <li key={href}>
+                    <Link
+                      href={href}
+                      className="block rounded-xl border border-gray-200 bg-white px-4 py-3 font-medium text-gray-900 hover:border-rose-300"
+                    >
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
             {/* Quick Links */}
             <div className="mb-16">
               <h2 className="mb-6 text-2xl font-bold text-gray-900">
