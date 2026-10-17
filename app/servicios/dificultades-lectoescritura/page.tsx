@@ -223,7 +223,7 @@ export default function LectoescrituraPage() {
               <div className="relative mx-auto w-full max-w-md">
                 <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-rose-100 shadow-2xl">
                   <Image
-                    src="/KatiaDominguezFonoaudiologa.png"
+                    src="/KatiaDominguezFonoaudiologa.jpg"
                     alt="Katia Domínguez - Fonoaudióloga especialista en lectoescritura en Chillán"
                     fill
                     className="object-cover"

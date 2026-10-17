@@ -3,6 +3,11 @@ import { GeoFAQ } from "@/app/_components/GeoFAQ";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
+import {
+  SERVICE_AREA_CITY,
+  SERVICE_AREA_COUNTRY,
+  SERVICE_AREA_REGION,
+} from "@/lib/site";
 
 const faqItems = [
   {
@@ -56,9 +61,9 @@ export default function InformePiePage() {
       jobTitle: "Fonoaudióloga",
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Chillán",
-        addressRegion: "Ñuble",
-        addressCountry: "CL",
+        addressLocality: SERVICE_AREA_CITY,
+        addressRegion: SERVICE_AREA_REGION,
+        addressCountry: SERVICE_AREA_COUNTRY,
       },
     },
     areaServed: "Chillán, Región de Ñuble",

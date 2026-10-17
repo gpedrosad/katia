@@ -98,7 +98,7 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     shortDescription:
       "Trastorno que afecta la adquisición del lenguaje sin causa aparente.",
     category: "Trastornos del lenguaje",
-    metaTitle: "¿Qué es el TEL? | Trastorno Específico del Lenguaje Explicado",
+    metaTitle: "¿Qué es el TEL? | Trastorno específico del lenguaje",
     metaDescription:
       "Qué es el TEL (Trastorno Específico del Lenguaje): causas, síntomas, diagnóstico y tratamiento. Guía para padres.",
     keywords: [
@@ -213,9 +213,9 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     shortDescription:
       "Patrones sistemáticos de errores en los sonidos del habla.",
     category: "Trastornos del habla",
-    metaTitle: "¿Qué es el Trastorno Fonológico? | Patrones de error del habla",
+    metaTitle: "¿Qué es el trastorno fonológico? | Errores",
     metaDescription:
-      "Definición de trastorno fonológico: patrones sistemáticos de errores en sonidos (omisiones, sustituciones). Señales, diferencia con dislalia y cuándo evaluar.",
+      "Trastorno fonológico: patrones de errores en los sonidos (omisiones y sustituciones). Diferencia con la dislalia y cuándo evaluar.",
     keywords: [
       "qué es trastorno fonológico",
       "trastorno fonológico definición",
@@ -272,7 +272,7 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     shortDescription:
       "Desarrollo del lenguaje más lento de lo esperado para la edad.",
     category: "Trastornos del lenguaje",
-    metaTitle: "¿Qué es el Retraso del Lenguaje? | Definición, señales y hitos",
+    metaTitle: "¿Qué es el retraso del lenguaje? | Señales",
     metaDescription:
       "Definición de retraso del lenguaje: desarrollo más lento (vocabulario, frases, comprensión). Señales por edad, diferencia con TEL, cuándo es transitorio.",
     keywords: [
@@ -334,7 +334,7 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     category: "Habilidades",
     metaTitle: "¿Qué es la Conciencia Fonológica? | Rimas, sílabas y fonemas",
     metaDescription:
-      "Definición de conciencia fonológica: habilidad para reconocer sonidos (rimas, sílabas, fonemas) sin leer. Base de lectoescritura, cómo evaluarla y estimularla.",
+      "Conciencia fonológica: reconocer sonidos (rimas, sílabas, fonemas) sin leer. Base de la lectoescritura y cómo evaluarla.",
     keywords: [
       "qué es conciencia fonológica",
       "conciencia fonológica definición",
@@ -512,7 +512,7 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     category: "Trastornos del habla",
     metaTitle: "¿Qué es la Apraxia del Habla Infantil? | AHS Definición",
     metaDescription:
-      "Definición de apraxia del habla infantil (AHS): dificultad para programar movimientos del habla, errores inconsistentes. Señales, diagnóstico y tratamiento.",
+      "Apraxia del habla infantil: dificultad para programar los movimientos del habla y errores inconsistentes. Señales y tratamiento.",
     keywords: [
       "qué es apraxia del habla infantil",
       "apraxia del habla definición",

@@ -153,13 +153,13 @@ export default function RehabilitacionVocalProfesionalesPage() {
             </h2>
             <ul className="space-y-4 mt-4 text-gray-800">
               <li>
-                <strong>Pérdida de Registro Superior:</strong> Antes llegabas a ese agudo cantando con holgura. Hoy la voz se "pica" o se quiebra a puro aire y dolor.
+                <strong>Pérdida de Registro Superior:</strong> Antes llegabas a ese agudo cantando con holgura. Hoy la voz se &quot;pica&quot; o se quiebra a puro aire y dolor.
               </li>
               <li>
                 <strong>Fatiga de Streaming Continuo:</strong> Creadores de contenido y podcasters cuyas sesiones de 4 horas los dejan totalmente destruidos.
               </li>
               <li>
-                <strong>Cansancio Falso por Monotonía:</strong> Locutores que están forzando sus cuerdas por "impostar" tonos bajos artificiales dañinos.
+                <strong>Cansancio Falso por Monotonía:</strong> Locutores que están forzando sus cuerdas por &quot;impostar&quot; tonos bajos artificiales dañinos.
               </li>
             </ul>
           </section>

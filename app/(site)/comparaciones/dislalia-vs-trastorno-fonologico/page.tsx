@@ -8,7 +8,7 @@ const PAGE_PATH = "/comparaciones/dislalia-vs-trastorno-fonologico";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Diferencia entre Dislalia y Trastorno Fonológico | Tabla Comparativa",
+  title: "Dislalia y trastorno fonológico | Diferencias",
   description:
     "¿Cuál es la diferencia entre dislalia y trastorno fonológico? Tabla comparativa, ejemplos, señales por edad y cuándo consultar fonoaudióloga en Chillán.",
   keywords: [

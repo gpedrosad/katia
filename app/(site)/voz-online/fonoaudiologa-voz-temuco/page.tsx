@@ -3,6 +3,7 @@ import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import { TestimonialCard } from "@/app/_components/TestimonialCard";
 import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
+import { buildVoiceCityServiceJsonLd } from "@/lib/local-business-schema";
 import { GeoFAQ } from "@/app/_components/GeoFAQ";
 
 const faqItems = [
@@ -26,20 +27,13 @@ export const metadata = buildPageMetadata({
 });
 
 export default function FonoaudiologaVozTemucoPage() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "MedicalOrganization",
-    url: "https://www.katialafono.cl/voz-online/fonoaudiologa-voz-temuco",
-    name: "Terapia de Voz Online - Temuco",
-    description: "Evaluación y rehabilitación fonoaudiológica de la voz vía telemedicina para residentes de Temuco y la región de La Araucanía.",
-    areaServed: {
-      "@type": "City",
-      name: "Temuco",
-      addressRegion: "La Araucanía",
-      addressCountry: "CL"
-    },
-    medicalSpecialty: "SpeechTherapy"
-  };
+  const jsonLd = buildVoiceCityServiceJsonLd({
+    path: "/voz-online/fonoaudiologa-voz-temuco",
+    city: "Temuco",
+    region: "La Araucanía",
+    description:
+      "Evaluación y rehabilitación fonoaudiológica de la voz vía telemedicina para residentes de Temuco y la región de La Araucanía.",
+  });
 
   return (
     <>
@@ -90,7 +84,7 @@ export default function FonoaudiologaVozTemucoPage() {
                 El frío de Temuco puede esconder daños serios como pólipos o nódulos
               </h3>
               <p className="text-green-800 mb-6 text-left">
-                Creer un "estoy afónico de frío" persistente tras 2 o 3 semanas no es normal. La disfonía continuada agrava los cuadros. La nueva recomendación mundial de atención indica iniciar <strong>terapia vocal intensiva</strong> desde espacios controlados, como tu hogar seguro.
+                Creer un &quot;estoy afónico de frío&quot; persistente tras 2 o 3 semanas no es normal. La disfonía continuada agrava los cuadros. La nueva recomendación mundial de atención indica iniciar <strong>terapia vocal intensiva</strong> desde espacios controlados, como tu hogar seguro.
               </p>
               <WhatsAppCTA
                 message="Hola, escribo desde Temuco y necesito evaluación para un problema de voz."

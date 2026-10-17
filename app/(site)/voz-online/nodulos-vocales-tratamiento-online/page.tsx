@@ -146,7 +146,7 @@ export default function NodulosVocalesPage() {
               </div>
               <div className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
                 <span className="text-xl inline-block mb-2">🎈</span>
-                <p className="font-medium text-gray-800">Sientes que no te alcanza el aire y hablas "soplado".</p>
+                <p className="font-medium text-gray-800">Sientes que no te alcanza el aire y hablas &quot;soplado&quot;.</p>
               </div>
               <div className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
                 <span className="text-xl inline-block mb-2">🔇</span>

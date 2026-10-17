@@ -53,7 +53,7 @@ export const metadata = buildPageMetadata({
   path: PAGE_PATH,
   title: "Estimulación del Lenguaje en Casa | Terapia de Lenguaje",
   description:
-    "Estimulación del lenguaje en casa y cómo hacer terapia de lenguaje en casa: paso a paso por edad (1–5 años), qué evitar (no interrogar, no corregir todo) y cuándo evaluar. Fonoaudióloga +20 años.",
+    "Cómo estimular el lenguaje en casa, paso a paso de 1 a 5 años: qué evitar (no interrogar ni corregir todo) y cuándo evaluar. Fonoaudióloga, +20 años.",
   keywords: [
     "estimulación del lenguaje",
     "cómo hacer terapia de lenguaje en casa",

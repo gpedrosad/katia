@@ -1,126 +1,138 @@
-import { MetadataRoute } from "next";
-import { GLOSARIO_TERMINOS } from "@/app/glosario/terminos";
+import fs from "fs";
+import path from "path";
+import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/site";
 
-/** Actualizar en deploys que toquen URLs del sitemap. */
-const LAST_MODIFIED = "2026-06-16";
+/**
+ * Rutas que responden 308. No deben aparecer como URL indexables.
+ * Mantener alineado con `redirects()` en next.config.ts.
+ */
+const REDIRECT_PATHS = new Set([
+  "/agendar",
+  "/chillan/lenguaje-infantil",
+  "/fonoaudiologia-infantil-chillan",
+  "/especialista-lenguaje-infantil-chillan",
+  "/fonoaudiologo-pediatrico-chillan",
+  "/evaluacion-fonoaudiologica-infantil-chillan",
+  "/servicios/terapia-de-lenguaje-infantil-chillan",
+  "/servicios/terapia-tea-comunicacion-chillan",
+  "/servicios/problemas-lectoescritura-chillan",
+  "/servicios/informe-fonoaudiológico-pie-chillan",
+  "/servicios/informe-fonoaudiol%C3%B3gico-pie-chillan",
+]);
 
-function getGlosarioTermUrls(): MetadataRoute.Sitemap {
-  return GLOSARIO_TERMINOS.map((t) => ({
-    url: `${SITE_URL}/glosario/${t.slug}`,
-    lastModified: LAST_MODIFIED,
-    changeFrequency: "monthly" as const,
-    priority: 0.6,
-  }));
+/** Prefijos que no se indexan aunque falte el noindex en el archivo. */
+const NOINDEX_PREFIXES = ["/ads", "/interno", "/seo-links", "/meta", "/sitelink"];
+
+function appDir(): string {
+  const root = process.cwd();
+  // Misma prioridad que Next: ./app gana sobre ./src/app.
+  const atRoot = path.join(root, "app");
+  if (fs.existsSync(atRoot)) return atRoot;
+  return path.join(root, "src", "app");
 }
 
-function entry(
-  path: string,
-  priority: number,
-  changeFrequency: MetadataRoute.Sitemap[0]["changeFrequency"] = "weekly"
-): MetadataRoute.Sitemap[0] {
-  return {
-    url: `${SITE_URL}${path}`,
-    lastModified: LAST_MODIFIED,
-    changeFrequency,
-    priority,
-  };
+function isRouteGroup(name: string): boolean {
+  return name.startsWith("(") && name.endsWith(")");
+}
+
+function walkPages(
+  dir: string,
+  segments: string[],
+  out: { urlPath: string; file: string }[],
+) {
+  if (!fs.existsSync(dir)) return;
+  for (const ent of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (ent.name.startsWith("_") || ent.name.startsWith(".")) continue;
+    const full = path.join(dir, ent.name);
+    if (ent.isDirectory()) {
+      if (ent.name.startsWith("@") || ent.name.startsWith("(") && !ent.name.endsWith(")")) {
+        continue;
+      }
+      const nextSegments = isRouteGroup(ent.name) ? segments : [...segments, ent.name];
+      walkPages(full, nextSegments, out);
+      continue;
+    }
+    if (!/^page\.(tsx|ts|jsx|js)$/.test(ent.name)) continue;
+    const urlPath = segments.length === 0 ? "/" : `/${segments.join("/")}`;
+    out.push({ urlPath, file: full });
+  }
+}
+
+function collectSlugs(dir: string): string[] {
+  const slugs = new Set<string>();
+  const parents = [dir, path.dirname(dir)];
+  for (const folder of parents) {
+    if (!fs.existsSync(folder)) continue;
+    for (const name of fs.readdirSync(folder)) {
+      const full = path.join(folder, name);
+      if (!fs.statSync(full).isFile()) continue;
+      if (!/\.(ts|tsx)$/.test(name) || name.startsWith("page.")) continue;
+      const text = fs.readFileSync(full, "utf8");
+      for (const match of text.matchAll(/\bslug:\s*["']([a-z0-9-]+)["']/g)) {
+        slugs.add(match[1]);
+      }
+    }
+  }
+  return [...slugs];
+}
+
+function expandPath(urlPath: string, file: string): string[] {
+  if (!urlPath.includes("[")) return [urlPath];
+  const slugs = collectSlugs(path.dirname(file));
+  if (slugs.length === 0) return [];
+  return slugs.map((slug) => urlPath.replace(/\[[^\]]+\]/g, slug));
+}
+
+function isNoIndex(urlPath: string, file: string): boolean {
+  if (NOINDEX_PREFIXES.some((prefix) => urlPath === prefix || urlPath.startsWith(`${prefix}/`))) {
+    return true;
+  }
+  const source = fs.readFileSync(file, "utf8");
+  if (source.includes("buildNoIndexMetadata")) return true;
+  if (/robots\s*:\s*\{[^}]*index\s*:\s*false/.test(source)) return true;
+  return false;
+}
+
+function priorityFor(urlPath: string): number {
+  if (urlPath === "/") return 1;
+  const depth = urlPath.split("/").filter(Boolean).length;
+  if (depth === 1) return 0.8;
+  if (depth === 2) return 0.7;
+  return 0.6;
+}
+
+function changeFrequencyFor(urlPath: string): MetadataRoute.Sitemap[0]["changeFrequency"] {
+  if (
+    urlPath.startsWith("/glosario") ||
+    urlPath.startsWith("/recursos") ||
+    urlPath.startsWith("/comparaciones")
+  ) {
+    return "monthly";
+  }
+  return "weekly";
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const secondaryServiciosSlugs = [
-    "test-de-lenguaje-infantil-chillan",
-    "terapia-del-habla-infantil-chillan",
-    "estimulacion-temprana-del-lenguaje-chillan",
-    "conciencia-fonologica-chillan",
-    "informe-fonoaudiologico-pie-chillan",
-  ];
+  const found: { urlPath: string; file: string }[] = [];
+  walkPages(appDir(), [], found);
 
-  const recursosSlugs = [
-    "hitos-del-lenguaje-por-edad",
-    "senales-de-alerta-del-lenguaje-y-habla",
-    "estimular-lenguaje-en-casa",
-    "primera-evaluacion-fonoaudiologica-infantil",
-  ];
+  const byPath = new Map<string, string>();
+  for (const page of found) {
+    if (isNoIndex(page.urlPath, page.file)) continue;
+    for (const urlPath of expandPath(page.urlPath, page.file)) {
+      if (urlPath.includes("[")) continue;
+      if (REDIRECT_PATHS.has(urlPath)) continue;
+      if (!byPath.has(urlPath)) byPath.set(urlPath, page.file);
+    }
+  }
 
-  return [
-    entry("/", 1.0, "monthly"),
-    entry("/fonoaudiologa-ninos-chillan", 0.9),
-    entry("/servicios", 0.9),
-    entry("/servicios/terapia-lenguaje-infantil", 0.8),
-    entry("/servicios/trastornos-del-habla", 0.8),
-    entry("/servicios/evaluacion-fonoaudiologica", 0.8),
-    entry("/servicios/tel-trastorno-especifico-lenguaje", 0.8),
-    entry("/servicios/tea-trastorno-espectro-autista", 0.8),
-    entry("/servicios/dificultades-lectoescritura", 0.8),
-    entry("/glosario", 0.7),
-    entry("/comparaciones", 0.75, "monthly"),
-    entry("/sintomas", 0.75, "monthly"),
-    entry("/chillan", 0.75, "monthly"),
-    entry("/comparaciones/dislalia-vs-trastorno-fonologico", 0.7, "monthly"),
-    entry("/comparaciones/tel-vs-retraso-del-lenguaje", 0.7, "monthly"),
-    entry(
-      "/comparaciones/retraso-del-habla-vs-retraso-del-lenguaje",
-      0.7,
-      "monthly"
-    ),
-    ...getGlosarioTermUrls(),
-    entry("/glosario/retraso-del-habla", 0.6, "monthly"),
-    entry("/glosario/tdl", 0.6, "monthly"),
-    entry("/recursos", 0.7),
-    ...recursosSlugs.map((slug) => entry(`/recursos/${slug}`, 0.65, "monthly")),
-    entry("/sobre-katia-dominguez-fonoaudiologa-chillan", 0.75, "monthly"),
-    entry("/contacto-fonoaudiologa-chillan", 0.75, "monthly"),
-    entry("/evaluacion-fonoaudiologica-infantil-chillan", 0.8, "monthly"),
-    entry("/servicios/evaluacion-del-lenguaje-infantil-chillan", 0.8, "monthly"),
-    entry("/servicios/evaluacion-del-habla-infantil-chillan", 0.8, "monthly"),
-    entry("/agendar-hora-fonoaudiologo-infantil-chillan", 0.75),
-    ...[
-      "retraso-del-lenguaje-chillan",
-      "retraso-del-habla-chillan",
-      "tel-trastorno-especifico-lenguaje-chillan",
-      "dislalia-infantil-chillan",
-      "trastorno-fonologico-chillan",
-      "apraxia-del-habla-infantil-chillan",
-    ].map((slug) => entry(`/tratamientos/${slug}`, 0.8)),
-    ...[
-      "mi-hijo-no-habla-bien-chillan",
-      "nino-pronuncia-mal-chillan",
-      "hijo-habla-poco-edad-chillan",
-      "hijo-no-arma-frases-chillan",
-      "nino-no-entiende-instrucciones-chillan",
-      "nino-tartamudea-chillan",
-      "mi-hijo-no-comprende-chillan",
-    ].map((slug) => entry(`/sintomas/${slug}`, 0.7)),
-    ...secondaryServiciosSlugs.map((slug) => entry(`/servicios/${slug}`, 0.8)),
-    ...[
-      "dislalia",
-      "retraso-del-lenguaje",
-      "retraso-del-habla",
-      "trastorno-fonologico",
-      "tel",
-      "apraxia-del-habla",
-      "dislexia",
-      "disfemia",
-      "tea-comunicacion",
-      "lectoescritura",
-    ].map((slug) => entry(`/chillan/${slug}`, 0.7, "monthly")),
-    ...[
-      "fonoaudiologa-de-voz-online",
-      "evaluacion-vocal-online",
-      "tratamiento-disfonia-online",
-      "nodulos-vocales-tratamiento-online",
-      "fatiga-vocal-tratamiento-online",
-      "rehabilitacion-vocal-profesionales-voz",
-      "terapia-vocal-docentes-profesores",
-      "paralisis-cordal-rehabilitacion-online",
-      "higiene-vocal-cuidado-voz",
-      "voz-ronca-causas-tratamiento",
-      "fonoaudiologa-voz-santiago",
-      "fonoaudiologa-voz-concepcion",
-      "fonoaudiologa-voz-vina-del-mar",
-      "fonoaudiologa-voz-temuco",
-      "fonoaudiologa-voz-antofagasta",
-    ].map((slug) => entry(`/voz-online/${slug}`, 0.8)),
-  ];
+  return [...byPath.entries()]
+    .sort(([a], [b]) => a.localeCompare(b, "es"))
+    .map(([urlPath, file]) => ({
+      url: urlPath === "/" ? SITE_URL : `${SITE_URL}${urlPath}`,
+      lastModified: fs.statSync(file).mtime,
+      changeFrequency: changeFrequencyFor(urlPath),
+      priority: priorityFor(urlPath),
+    }));
 }

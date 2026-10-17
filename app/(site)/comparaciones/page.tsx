@@ -6,9 +6,9 @@ const PAGE_PATH = "/comparaciones";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Diferencia entre... | Comparaciones Fonoaudiología Infantil Chillán",
+  title: "Comparaciones de fonoaudiología infantil | Chillán",
   description:
-    "Diferencia entre dislalia y trastorno fonológico, TEL vs retraso del lenguaje, retraso del habla vs lenguaje. Tabla comparativa, señales y cuándo consultar en Chillán.",
+    "Diferencias entre dislalia y trastorno fonológico, TEL y retraso del lenguaje, y habla vs lenguaje. Tablas y cuándo consultar en Chillán.",
   keywords: [
     "diferencia entre dislalia trastorno fonológico",
     "TEL vs retraso del lenguaje",

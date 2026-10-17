@@ -2,12 +2,13 @@ import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
+import { MEDICAL_BUSINESS_ID } from "@/lib/local-business-schema";
 
 export const metadata = buildPageMetadata({
   path: "/servicios/terapia-del-habla-infantil-chillan",
-  title: "Terapia del Habla Infantil Chillán | Articulación y Pronunciación",
+  title: "Terapia del habla infantil en Chillán",
   description:
-    "Terapia del habla (no lenguaje) en Chillán: articulación, pronunciación, claridad, fluidez. Tratamiento presencial de cómo produce los sonidos. Fonoaudióloga infantil.",
+    "Terapia del habla (no del lenguaje) en Chillán: articulación, pronunciación, claridad y fluidez. Tratamiento presencial de los sonidos.",
   keywords: [
     "terapia del habla infantil Chillán",
     "articulación niños Chillán",
@@ -24,16 +25,7 @@ export default function TerapiaHablaInfantilPage() {
     name: "Terapia del Habla Infantil",
     description:
       "Intervención fonoaudiológica presencial orientada a mejorar la articulación, fluidez y claridad del habla en niños.",
-    provider: {
-      "@type": "MedicalOrganization",
-      name: "Fonoaudióloga Infantil Chillán",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Chillán",
-        addressRegion: "Ñuble",
-        addressCountry: "CL",
-      },
-    },
+    provider: { "@id": MEDICAL_BUSINESS_ID },
   };
 
   return (

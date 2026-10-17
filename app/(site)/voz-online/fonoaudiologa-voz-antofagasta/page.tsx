@@ -3,6 +3,7 @@ import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import { TestimonialCard } from "@/app/_components/TestimonialCard";
 import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
+import { buildVoiceCityServiceJsonLd } from "@/lib/local-business-schema";
 import { GeoFAQ } from "@/app/_components/GeoFAQ";
 
 const faqItems = [
@@ -20,7 +21,7 @@ const faqItems = [
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/fonoaudiologa-voz-antofagasta",
-  title: "Fonoaudióloga de Voz Online desde Antofagasta | Terapia Vocal",
+  title: "Fonoaudióloga de voz online en Antofagasta",
   description:
     "Terapia de voz online desde Antofagasta: disfonía, fatiga vocal, nódulos. Atención 100% por videollamada sin traslados. Fonoaudióloga U. de Chile.",
   keywords: [
@@ -33,20 +34,13 @@ export const metadata = buildPageMetadata({
 });
 
 export default function FonoaudiologaVozAntofagastaPage() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "MedicalOrganization",
-    url: "https://www.katialafono.cl/voz-online/fonoaudiologa-voz-antofagasta",
-    name: "Terapia de Voz Online - Antofagasta",
-    description: "Evaluación y rehabilitación fonoaudiológica de la voz vía telemedicina para pacientes de Antofagasta y norte de Chile.",
-    areaServed: {
-      "@type": "City",
-      name: "Antofagasta",
-      addressRegion: "Antofagasta",
-      addressCountry: "CL"
-    },
-    medicalSpecialty: "SpeechTherapy"
-  };
+  const jsonLd = buildVoiceCityServiceJsonLd({
+    path: "/voz-online/fonoaudiologa-voz-antofagasta",
+    city: "Antofagasta",
+    region: "Antofagasta",
+    description:
+      "Evaluación y rehabilitación fonoaudiológica de la voz vía telemedicina para pacientes de Antofagasta y norte de Chile.",
+  });
 
   return (
     <>
@@ -97,7 +91,7 @@ export default function FonoaudiologaVozAntofagastaPage() {
                 La urgencia de frenar el desgaste progresivo en la garganta
               </h3>
               <p className="text-orange-800 mb-6 text-left">
-                Cuando una voz "picada" no sana por largos periodos ni bebiendo litro de fluidos, estás ante una <Link href="/voz-online/tratamiento-disfonia-online" className="text-orange-600 font-bold border-b border-orange-300">disfonía persistente</Link>. Telemedicina interactiva es el paso indicado, donde monitorearemos un riguroso plan de ejercicios de rehabilitación para restaurar la función perdida antes de un desenlace nodular.
+                Cuando una voz &quot;picada&quot; no sana por largos periodos ni bebiendo litro de fluidos, estás ante una <Link href="/voz-online/tratamiento-disfonia-online" className="text-orange-600 font-bold border-b border-orange-300">disfonía persistente</Link>. Telemedicina interactiva es el paso indicado, donde monitorearemos un riguroso plan de ejercicios de rehabilitación para restaurar la función perdida antes de un desenlace nodular.
               </p>
               <WhatsAppCTA
                 message="Hola, busco fonoaudióloga para la voz desde Antofagasta(Online)."

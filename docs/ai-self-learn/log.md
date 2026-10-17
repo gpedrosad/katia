@@ -4,6 +4,10 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 
 ---
 
+## 2026-10-17
+
+- SEO técnico | Sitemap autodescubre `page.tsx` (excluye noindex, redirects y `[slug]` sin datos); títulos ≤60 y metas ≤155; canonical por página; BreadcrumbList en el pilar; schema negocio sin `priceRange` y un solo `@id` `#business`; foto hero JPG ~107 KB | `pendiente:` pedir indexación del sitemap en GSC post-deploy. Next usa `app/` si existe: rutas nuevas en `src/app/` no se sirven ni entran al sitemap.
+
 ## 2026-10-16
 
 - SEO | Lote 10 segundo pase Lote 4 (dislalia ×3, lectoescritura/dislexia ×4, informe PIE, apraxia ×2, 3 síntomas, terapia de lenguaje, disfemia solo enlaces) | Roles y snippets con hechos ya publicados; redirect del informe: source con ó no matchea `%C3%B3`, se agregó el path codificado (308); no city pages, no ads, no Lotes 5-9. Changelog `SEO-CHANGELOG.md`

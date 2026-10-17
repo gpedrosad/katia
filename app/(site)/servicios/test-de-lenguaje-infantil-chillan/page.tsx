@@ -24,9 +24,9 @@ const faqItems = [
 
 export const metadata = buildPageMetadata({
   path: "/servicios/test-de-lenguaje-infantil-chillan",
-  title: "Test de Lenguaje Infantil en Chillán | TECAL, TEPROSIF-R, STSG",
+  title: "Test de lenguaje infantil en Chillán",
   description:
-    "Aplicación de test formales de lenguaje para niños en Chillán (TEPROSIF-R fonología, TECAL comprensión, STSG gramática). Informe válido para PIE y escuelas de lenguaje.",
+    "Test de lenguaje para niños en Chillán: TEPROSIF-R (fonología), TECAL (comprensión) y STSG (gramática). Informe para PIE y escuelas de lenguaje.",
   keywords: [
     "test de lenguaje infantil Chillán",
     "TECAL Chillán",
@@ -65,13 +65,13 @@ export default function TestLenguajePage() {
             Aplicación de Test de Lenguaje Infantil en Chillán
           </h1>
           <p className="lead font-medium text-gray-700" data-speakable>
-            ¿El colegio, jardín infantil o control sano pediatra te pidió "evaluar el lenguaje" de tu hijo? Llevamos a cabo baterías de test estandarizados en Chile exigidos por el Ministerio de Educación.
+            ¿El colegio, jardín infantil o control sano pediatra te pidió &quot;evaluar el lenguaje&quot; de tu hijo? Llevamos a cabo baterías de test estandarizados en Chile exigidos por el Ministerio de Educación.
           </p>
 
           <section>
             <h2 className="text-2xl font-bold mt-8 text-violet-900">¿Qué evaluamos exactamente de forma presencial?</h2>
             <p>
-              No basta con saber si el menor <Link href="/sintomas/mi-hijo-no-habla-bien-chillan">"habla o no habla"</Link>. Se deben medir diferentes dimensiones lingüísticas usando pruebas objetivas con puntajes comparados por rango de edad (Z-score).
+              No basta con saber si el menor <Link href="/sintomas/mi-hijo-no-habla-bien-chillan">&quot;habla o no habla&quot;</Link>. Se deben medir diferentes dimensiones lingüísticas usando pruebas objetivas con puntajes comparados por rango de edad (Z-score).
             </p>
             <ul>
               <li><strong>Test TEPROSIF-R:</strong> Mide los procesos fonológicos (cómo ordena los sonidos el cerebro).</li>

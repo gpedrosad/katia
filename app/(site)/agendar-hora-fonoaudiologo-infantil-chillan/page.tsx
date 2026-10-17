@@ -3,7 +3,8 @@ import { GeoFAQ } from "@/app/_components/GeoFAQ";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
-import { BUSINESS_HOURS } from "@/lib/site";
+import { BUSINESS_HOURS, BUSINESS_PHONE_E164 } from "@/lib/site";
+import { MEDICAL_BUSINESS_ID } from "@/lib/local-business-schema";
 
 const faqItems = [
   {
@@ -54,9 +55,10 @@ export default function AgendarHoraPage() {
       "Cómo agendar hora de fonoaudiología infantil en Chillán. La primera cita es una evaluación.",
     dateModified: "2026-10-15",
     mainEntity: {
-      "@type": "MedicalOrganization",
+      "@type": "MedicalBusiness",
+      "@id": MEDICAL_BUSINESS_ID,
       name: "Katia Domínguez",
-      jobTitle: "Fonoaudióloga",
+      telephone: BUSINESS_PHONE_E164,
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "Reservaciones y Horas Médicas",

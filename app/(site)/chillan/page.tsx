@@ -7,9 +7,9 @@ const PAGE_PATH = "/chillan";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Tratamiento por Patología en Chillán | Fonoaudiología Infantil",
+  title: "Patologías de lenguaje y habla en Chillán",
   description:
-    "Tratamiento fonoaudiológico en Chillán por patología: dislalia, TEL/TDL, retraso lenguaje/habla, trastorno fonológico, apraxia, dislexia, tartamudez, TEA. Presencial +20 años.",
+    "Tratamiento en Chillán por patología: dislalia, TEL, retraso del lenguaje y habla, fonológico, apraxia, dislexia y TEA. Presencial, +20 años.",
   keywords: [
     "tratamiento dislalia Chillán",
     "TEL Chillán",

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SITE_URL, whatsappUrl } from "@/lib/site";
 import { buildPageMetadata } from "@/lib/seo";
 import { Breadcrumbs } from "../../_components/Breadcrumbs";
@@ -14,7 +15,7 @@ export const metadata = buildPageMetadata({
   path: PAGE_PATH,
   title: "Trastornos del Habla Chillán | Dislalia, Articulación",
   description:
-    "Tratamiento especializado de trastornos del habla en Chillán: dislalia, trastorno fonológico, apraxia y disartria. Fonoaudióloga con postítulo en trastornos fonológicos. Evaluación y terapia presencial.",
+    "Trastornos del habla en Chillán: dislalia, fonológico, apraxia y disartria. Postítulo en fonología. Evaluación y terapia presencial.",
   keywords: ["trastornos del habla Chillán",
     "dislalia tratamiento Chillán",
     "problemas de pronunciación niños Chillán",
@@ -174,7 +175,7 @@ export default function TrastornosHablaPage() {
               <div className="relative mx-auto w-full max-w-md">
                 <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-rose-100 shadow-2xl">
                   <Image
-                    src="/KatiaDominguezFonoaudiologa.png"
+                    src="/KatiaDominguezFonoaudiologa.jpg"
                     alt="Katia Domínguez - Fonoaudióloga especialista en trastornos del habla en Chillán"
                     fill
                     className="object-cover"
@@ -361,7 +362,7 @@ export default function TrastornosHablaPage() {
               Servicios relacionados
             </h2>
             <div className="grid gap-4 sm:grid-cols-3">
-              <a
+              <Link
                 href="/servicios/terapia-lenguaje-infantil"
                 className="rounded-xl border border-gray-200 bg-white p-4 text-center transition-colors hover:border-rose-300"
               >
@@ -369,8 +370,8 @@ export default function TrastornosHablaPage() {
                 <p className="mt-2 font-medium text-gray-900">
                   Terapia de lenguaje infantil
                 </p>
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/servicios/evaluacion-fonoaudiologica"
                 className="rounded-xl border border-gray-200 bg-white p-4 text-center transition-colors hover:border-rose-300"
               >
@@ -378,8 +379,8 @@ export default function TrastornosHablaPage() {
                 <p className="mt-2 font-medium text-gray-900">
                   Evaluación fonoaudiológica
                 </p>
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/glosario/dislalia"
                 className="rounded-xl border border-gray-200 bg-white p-4 text-center transition-colors hover:border-rose-300"
               >
@@ -387,7 +388,7 @@ export default function TrastornosHablaPage() {
                 <p className="mt-2 font-medium text-gray-900">
                   ¿Qué es la dislalia?
                 </p>
-              </a>
+              </Link>
             </div>
           </div>
         </section>

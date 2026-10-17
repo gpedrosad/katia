@@ -5,9 +5,9 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/servicios/estimulacion-temprana-del-lenguaje-chillan",
-  title: "Estimulación Temprana del Lenguaje Chillán | Profesional 0-3 Años",
+  title: "Estimulación temprana del lenguaje | Chillán",
   description:
-    "Estimulación profesional del lenguaje para bebés y niños 0-3 años en Chillán. Intervención fonoaudiológica presencial: balbuceo, primeras palabras, comprensión.",
+    "Estimulación del lenguaje para bebés y niños de 0 a 3 años en Chillán: balbuceo, primeras palabras y comprensión. Presencial.",
   keywords: [
     "estimulación temprana del lenguaje Chillán",
     "estimulación del lenguaje profesional",

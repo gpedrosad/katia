@@ -12,9 +12,9 @@ const WHATSAPP_LINK = whatsappUrl(WHATSAPP_MESSAGE);
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Evaluación Fonoaudiológica Infantil Chillán | Lenguaje, Habla, Lectura",
+  title: "Evaluación fonoaudiológica infantil en Chillán",
   description:
-    "Evaluación fonoaudiológica completa en Chillán: lenguaje (vocabulario, frases, comprensión), habla (articulación), fluidez, lectoescritura. Con informe para colegio/PIE.",
+    "Evaluación fonoaudiológica en Chillán: lenguaje, habla, fluidez y lectoescritura. Con informe para el colegio o el PIE.",
   keywords: [
     "evaluación fonoaudiológica infantil Chillán",
     "evaluación lenguaje habla niños",
@@ -121,15 +121,7 @@ const jsonLd = {
       name: "Evaluación Fonoaudiológica Infantil en Chillán",
       description:
         "Evaluación integral del lenguaje, habla y lectoescritura en niños. Incluye informe y recomendaciones.",
-      provider: {
-        "@type": "MedicalBusiness",
-        "@id": `${SITE_URL}#medicalbusiness`,
-        name: "Katia Domínguez - Fonoaudióloga Infantil",
-        areaServed: {
-          "@type": "City",
-          name: "Chillán",
-        },
-      },
+      provider: { "@id": `${SITE_URL}/#business` },
       areaServed: {
         "@type": "City",
         name: "Chillán",
