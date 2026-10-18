@@ -175,8 +175,12 @@ export default function TELGlosarioPage() {
               <h2>Definición de TEL</h2>
               <p>
                 El <strong>TEL</strong> (Trastorno Específico del Lenguaje),
-                también llamado <strong>TDL</strong> (Trastorno del Desarrollo
-                del Lenguaje), es un trastorno del neurodesarrollo que afecta la
+                también llamado{" "}
+                <Link href="/glosario/tdl" className="font-semibold text-rose-600">
+                  TDL
+                </Link>{" "}
+                (trastorno del desarrollo del lenguaje), es un trastorno del
+                neurodesarrollo que afecta la
                 adquisición y desarrollo del lenguaje.
               </p>
               <p>Se diagnostica cuando:</p>
@@ -345,6 +349,17 @@ export default function TELGlosarioPage() {
                   </h3>
                   <p className="text-sm text-gray-600">
                     Cómo es la terapia presencial y qué puedes esperar.
+                  </p>
+                </Link>
+                <Link
+                  href="/glosario/tdl"
+                  className="rounded-xl border border-gray-200 bg-white p-4 transition-colors hover:border-rose-300"
+                >
+                  <h3 className="font-semibold text-gray-900">
+                    TDL (trastorno del desarrollo del lenguaje)
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    El nombre actual del TEL y en qué se diferencia de un retraso.
                   </p>
                 </Link>
                 <Link

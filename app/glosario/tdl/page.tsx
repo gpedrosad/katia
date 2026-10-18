@@ -103,7 +103,7 @@ const faqJsonLd = {
     name: faq.question,
     acceptedAnswer: {
       "@type": "Answer",
-      text: faq.acceptedAnswer,
+        text: faq.answer,
     },
   })),
 };
@@ -240,13 +240,34 @@ export default function TDLPage() {
                   className="font-semibold text-rose-600"
                 >
                   comparación TEL vs retraso del lenguaje
-                </Link>{" "}
-                y el artículo sobre{" "}
+                </Link>
+                , el artículo sobre{" "}
                 <Link
                   href="/glosario/tel"
                   className="font-semibold text-rose-600"
                 >
                   TEL
+                </Link>{" "}
+                y el nombre antiguo,{" "}
+                <Link
+                  href="/glosario/disfasia"
+                  className="font-semibold text-rose-600"
+                >
+                  disfasia
+                </Link>
+                . Las edades están en las{" "}
+                <Link
+                  href="/recursos/senales-de-alerta-del-lenguaje-y-habla"
+                  className="font-semibold text-rose-600"
+                >
+                  señales de alerta del lenguaje y el habla
+                </Link>
+                . Para escribir, usa el{" "}
+                <Link
+                  href="/contacto-fonoaudiologa-chillan"
+                  className="font-semibold text-rose-600"
+                >
+                  contacto en Chillán
                 </Link>
                 .
               </p>

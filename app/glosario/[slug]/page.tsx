@@ -173,6 +173,23 @@ export default async function GlosarioTermPage({ params }: PageProps) {
                 ))}
               </ul>
 
+              {termino.seeAlso && termino.seeAlso.length > 0 ? (
+                <p>
+                  Sigue en{" "}
+                  {termino.seeAlso.map((item, index) => (
+                    <span key={item.href}>
+                      {index === 0
+                        ? null
+                        : index === termino.seeAlso!.length - 1
+                          ? " y "
+                          : ", "}
+                      <Link href={item.href}>{item.label}</Link>
+                    </span>
+                  ))}
+                  .
+                </p>
+              ) : null}
+
               {slug === "dislexia" ? (
                 <p>
                   Esta entrada es solo la definición. La evaluación local de

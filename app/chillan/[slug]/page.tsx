@@ -25,9 +25,9 @@ const DESCRIPTION_OVERRIDES: Record<string, string> = {
   lectoescritura:
     "Si leer o escribir cuesta, muchas veces la base está en el lenguaje oral. Página local en Chillán. El servicio y la dislexia están en otras páginas.",
   "retraso-del-habla":
-    "Habla poco o se le entiende mal: señales de retraso del habla en Chillán. Evaluación de articulación y claridad. Agenda por WhatsApp.",
+    "Señales de retraso del habla en Chillán y cuándo consultar. El tratamiento está en su página. Distinto del retraso del lenguaje.",
   "trastorno-fonologico":
-    "Patrones de error (omite, sustituye, simplifica): trastorno fonológico en Chillán. Evaluación especializada. Agenda por WhatsApp.",
+    "Señales de trastorno fonológico en Chillán y cuándo consultar. El tratamiento está en su página. Distinto de la dislalia.",
 };
 
 const TITLE_OVERRIDES: Record<string, string> = {
@@ -38,8 +38,8 @@ const TITLE_OVERRIDES: Record<string, string> = {
   dislalia: "Dislalia en Chillán | Señales por edad",
   dislexia: "Fonoaudiología y Dislexia en Chillán",
   lectoescritura: "Lectoescritura en Chillán | Base del lenguaje",
-  "retraso-del-habla": "Retraso del habla en Chillán | Habla poco",
-  "trastorno-fonologico": "Trastorno Fonológico Chillán | Patrones de error en sonidos",
+  "retraso-del-habla": "Retraso del habla en Chillán | Señales",
+  "trastorno-fonologico": "Trastorno fonológico en Chillán | Señales",
 };
 
 const KEYWORD_OVERRIDES: Record<string, string[]> = {
@@ -59,17 +59,17 @@ const KEYWORD_OVERRIDES: Record<string, string[]> = {
   ],
   "retraso-del-habla": [
     "retraso del habla Chillán",
-    "niño habla poco edad",
-    "habla tardía Chillán",
+    "señales de retraso del habla",
+    "cuándo consultar retraso del habla",
+    "niño habla poco",
     "no se le entiende al hablar",
-    "claridad del habla niños",
   ],
   "trastorno-fonologico": [
     "trastorno fonológico Chillán",
+    "señales de trastorno fonológico",
+    "cuándo consultar trastorno fonológico",
     "patrones fonológicos",
     "errores fonológicos niños",
-    "fonoaudióloga trastorno fonológico",
-    "postítulo fonología",
   ],
   dislalia: [
     "dislalia en Chillán",
@@ -100,6 +100,8 @@ const SCHEMA_DATE_MODIFIED: Record<string, string> = {
   lectoescritura: "2026-10-16",
   "apraxia-del-habla": "2026-10-16",
   disfemia: "2026-10-16",
+  "retraso-del-habla": "2026-10-18",
+  "trastorno-fonologico": "2026-10-18",
 };
 
 const EXTRA_FAQS: Record<string, { q: string; a: string }[]> = {
@@ -127,6 +129,18 @@ const EXTRA_FAQS: Record<string, { q: string; a: string }[]> = {
       a: "Las señales (errores inconsistentes y esfuerzo al hablar) están en esta página. Cómo es la terapia de aprendizaje motor está en la página de tratamiento de la apraxia del habla infantil en Chillán.",
     },
   ],
+  "retraso-del-habla": [
+    {
+      q: "¿Esta página explica el tratamiento del retraso del habla?",
+      a: "No. Aquí están las señales en Chillán y cuándo consultar. Cómo es la terapia está en la página de tratamiento del retraso del habla en Chillán.",
+    },
+  ],
+  "trastorno-fonologico": [
+    {
+      q: "¿Esta página explica el tratamiento del trastorno fonológico?",
+      a: "No. Aquí están las señales en Chillán y cuándo consultar. Cómo es la terapia está en la página de tratamiento del trastorno fonológico en Chillán.",
+    },
+  ],
 };
 
 function statSnippet(slug: string): string {
@@ -135,6 +149,9 @@ function statSnippet(slug: string): string {
       return "";
     case "tea-comunicacion":
       return " Aproximadamente el 40% de los niños con TEA tiene retraso significativo del lenguaje.";
+    case "retraso-del-habla":
+    case "trastorno-fonologico":
+      return "";
     default:
       return " La intervención temprana mejora significativamente el pronóstico.";
   }
@@ -570,6 +587,70 @@ export default async function PatologiaChillanPage({
                     .
                   </p>
                 ) : null}
+                {slug === "retraso-del-habla" ? (
+                  <div className="mb-8 rounded-2xl border-2 border-rose-200 bg-white p-5 text-left">
+                    <p className="text-lg font-semibold text-gray-900">
+                      <strong>Respuesta rápida:</strong> Esta página reúne
+                      señales de retraso del habla en Chillán y cuándo
+                      consultar. Cómo es la terapia está en la página de
+                      tratamiento.
+                    </p>
+                    <p className="mt-3 text-sm text-rose-800">
+                      <Link
+                        href="/tratamientos/retraso-del-habla-chillan"
+                        className="font-semibold underline"
+                      >
+                        Tratamiento del retraso del habla en Chillán
+                      </Link>
+                      {" · "}
+                      <Link
+                        href="/glosario/retraso-del-habla"
+                        className="font-semibold underline"
+                      >
+                        Qué es el retraso del habla
+                      </Link>
+                      {" · "}
+                      <Link
+                        href="/comparaciones/retraso-del-habla-vs-retraso-del-lenguaje"
+                        className="font-semibold underline"
+                      >
+                        Diferencia entre retraso del habla y del lenguaje
+                      </Link>
+                    </p>
+                  </div>
+                ) : null}
+                {slug === "trastorno-fonologico" ? (
+                  <div className="mb-8 rounded-2xl border-2 border-rose-200 bg-white p-5 text-left">
+                    <p className="text-lg font-semibold text-gray-900">
+                      <strong>Respuesta rápida:</strong> Esta página reúne
+                      señales de trastorno fonológico en Chillán y cuándo
+                      consultar. Cómo es la terapia está en la página de
+                      tratamiento.
+                    </p>
+                    <p className="mt-3 text-sm text-rose-800">
+                      <Link
+                        href="/tratamientos/trastorno-fonologico-chillan"
+                        className="font-semibold underline"
+                      >
+                        Tratamiento del trastorno fonológico en Chillán
+                      </Link>
+                      {" · "}
+                      <Link
+                        href="/glosario/trastorno-fonologico"
+                        className="font-semibold underline"
+                      >
+                        Qué es el trastorno fonológico
+                      </Link>
+                      {" · "}
+                      <Link
+                        href="/comparaciones/dislalia-vs-trastorno-fonologico"
+                        className="font-semibold underline"
+                      >
+                        Diferencia entre dislalia y trastorno fonológico
+                      </Link>
+                    </p>
+                  </div>
+                ) : null}
                 <ul className="mb-8 space-y-3 text-left text-gray-700">
                   <li className="flex items-start gap-3">
                     <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">
@@ -638,6 +719,58 @@ export default async function PatologiaChillanPage({
                 </li>
               ))}
             </ul>
+            {slug === "retraso-del-habla" ? (
+              <p className="mb-8 text-center text-gray-700">
+                Si la duda es de palabras y frases, mira{" "}
+                <Link
+                  href="/glosario/retraso-del-lenguaje"
+                  className="font-medium text-rose-600 underline"
+                >
+                  qué es el retraso del lenguaje
+                </Link>{" "}
+                y las{" "}
+                <Link
+                  href="/recursos/senales-de-alerta-del-lenguaje-y-habla"
+                  className="font-medium text-rose-600 underline"
+                >
+                  señales de alerta del lenguaje y el habla
+                </Link>
+                . La hora se pide en{" "}
+                <Link
+                  href="/contacto-fonoaudiologa-chillan"
+                  className="font-medium text-rose-600 underline"
+                >
+                  contacto de la fonoaudióloga en Chillán
+                </Link>
+                .
+              </p>
+            ) : null}
+            {slug === "trastorno-fonologico" ? (
+              <p className="mb-8 text-center text-gray-700">
+                Si no sabes si es un sonido o un patrón, parte por la{" "}
+                <Link
+                  href="/servicios/evaluacion-del-habla-infantil-chillan"
+                  className="font-medium text-rose-600 underline"
+                >
+                  evaluación del habla infantil
+                </Link>{" "}
+                y las{" "}
+                <Link
+                  href="/recursos/senales-de-alerta-del-lenguaje-y-habla"
+                  className="font-medium text-rose-600 underline"
+                >
+                  señales de alerta del lenguaje y el habla
+                </Link>
+                . La hora se pide en{" "}
+                <Link
+                  href="/contacto-fonoaudiologa-chillan"
+                  className="font-medium text-rose-600 underline"
+                >
+                  contacto de la fonoaudióloga en Chillán
+                </Link>
+                .
+              </p>
+            ) : null}
             <div className="text-center">
               <WhatsAppCTA href={whatsappUrl}>
                 Consultar mi caso por WhatsApp
@@ -780,12 +913,18 @@ export default async function PatologiaChillanPage({
                       ? "Tratamiento de dislalia infantil"
                       : slug === "apraxia-del-habla"
                         ? "Tratamiento de la apraxia"
-                        : "Servicio completo"}
+                        : slug === "retraso-del-habla"
+                          ? "Tratamiento del retraso del habla"
+                          : slug === "trastorno-fonologico"
+                            ? "Tratamiento del trastorno fonológico"
+                            : "Servicio completo"}
                 </h3>
                 <p className="mt-1 text-sm text-gray-600">
                   {slug === "tel"
                     ? "La respuesta está en la página de servicio"
-                    : slug === "dislalia"
+                    : slug === "dislalia" ||
+                        slug === "retraso-del-habla" ||
+                        slug === "trastorno-fonologico"
                       ? "Página principal del tratamiento en Chillán"
                       : slug === "apraxia-del-habla"
                         ? "Cómo es la terapia de aprendizaje motor"

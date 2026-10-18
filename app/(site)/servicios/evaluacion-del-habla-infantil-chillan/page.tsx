@@ -14,13 +14,13 @@ export const metadata = buildPageMetadata({
   path: PAGE_PATH,
   title: "Evaluación del habla infantil en Chillán",
   description:
-    "Evaluación del habla en Chillán: articulación, fonología, inteligibilidad y fluidez. Dislalia, trastorno fonológico o habla poco clara. Con informe.",
+    "Evaluación del habla infantil en Chillán: pronunciación, articulación y claridad. Distinta de la del lenguaje y de la evaluación fonoaudiológica completa.",
   keywords: [
+    "evaluación del habla infantil",
     "evaluación del habla infantil Chillán",
-    "evaluación articulación niños",
     "evaluación pronunciación niños",
+    "evaluación articulación niños",
     "niño pronuncia mal evaluación",
-    "evaluación fonología Chillán",
   ],
 });
 
@@ -60,6 +60,10 @@ const faqs = [
   {
     q: "¿Cómo sé si es habla o lenguaje?",
     a: "El habla es cómo suena y se entiende la pronunciación; el lenguaje es vocabulario, frases y comprensión. Si la duda es de palabras y frases, conviene la evaluación del lenguaje; si es de sonidos, esta evaluación del habla.",
+  },
+  {
+    q: "¿En qué se diferencia de la evaluación completa?",
+    a: "Esta página es solo el habla: pronunciación, sonidos y si se le entiende. La evaluación del lenguaje infantil mira vocabulario, frases y comprensión. La evaluación fonoaudiológica completa junta lenguaje, habla y, si corresponde, lectura.",
   },
   {
     q: "¿A qué edad debería evaluarlo?",
@@ -121,8 +125,9 @@ export default function EvaluacionHablaInfantilPage() {
               Evaluación del habla infantil en Chillán
             </h1>
             <p data-speakable className="mb-6 text-xl text-gray-600">
-              Para niños a los que cuesta entenderles, pronuncian mal varios
-              sonidos o presentan dudas en articulación, fonología o fluidez.
+              Evaluación de la pronunciación en niños: sonidos, claridad y si
+              se le entiende fuera de la casa. No reemplaza la evaluación del
+              lenguaje ni la evaluación fonoaudiológica completa.
             </p>
             <WhatsAppCTA
               href={WHATSAPP_LINK}
@@ -149,13 +154,21 @@ export default function EvaluacionHablaInfantilPage() {
               ¿Qué revisa esta evaluación?
             </h2>
             <p className="mb-8 text-center text-lg text-gray-600">
-              Enfoque en articulación, fonología, inteligibilidad, fluidez y
-              praxias orofaciales —sin duplicar la{" "}
+              Enfoque en pronunciación, articulación, fonología, inteligibilidad,
+              fluidez y{" "}
+              <Link
+                href="/glosario/praxias-orofaciales"
+                className="font-medium text-sky-600 underline"
+              >
+                praxias orofaciales
+              </Link>
+              . Si necesitas lenguaje, habla y lectura en un solo informe, pide
+              la{" "}
               <Link
                 href="/servicios/evaluacion-fonoaudiologica"
                 className="font-medium text-sky-600 underline"
               >
-                evaluación fonoaudiológica general
+                evaluación fonoaudiológica completa
               </Link>
               .
             </p>
@@ -193,19 +206,19 @@ export default function EvaluacionHablaInfantilPage() {
               ))}
             </ul>
             <p className="mt-8 text-center text-gray-600">
-              Si el niño presenta patrones persistentes, revisa también{" "}
-              <Link
-                href="/chillan/dislalia"
-                className="font-medium text-sky-600 underline"
-              >
-                dislalia en Chillán
-              </Link>{" "}
-              y{" "}
+              Si el niño presenta patrones persistentes, mira las señales de{" "}
               <Link
                 href="/chillan/trastorno-fonologico"
                 className="font-medium text-sky-600 underline"
               >
-                trastorno fonológico
+                trastorno fonológico en Chillán
+              </Link>{" "}
+              y la{" "}
+              <Link
+                href="/comparaciones/dislalia-vs-trastorno-fonologico"
+                className="font-medium text-sky-600 underline"
+              >
+                diferencia entre dislalia y trastorno fonológico
               </Link>
               .
             </p>
@@ -219,33 +232,74 @@ export default function EvaluacionHablaInfantilPage() {
             </h2>
             <p className="text-lg text-gray-600">
               No siempre es lo mismo omitir un sonido, sustituir letras o hablar
-              poco claro. La evaluación del habla ayuda a diferenciar si se trata
-              de una{" "}
-              <Link
-                href="/glosario/dislalia"
-                className="font-medium text-sky-600 underline"
-              >
+              poco claro. La evaluación del habla ayuda a ver si se parece a la{" "}
+              <Link href="/dislalia" className="font-medium text-sky-600 underline">
                 dislalia
               </Link>
-              , un patrón fonológico más amplio o un retraso del habla, y qué
-              tratamiento conviene. Para un panorama de trastornos de
-              pronunciación, consulta{" "}
+              , a un{" "}
               <Link
-                href="/servicios/trastornos-del-habla"
+                href="/glosario/trastorno-fonologico"
                 className="font-medium text-sky-600 underline"
               >
-                trastornos del habla
+                trastorno fonológico
+              </Link>{" "}
+              o a un retraso del habla. El tratamiento del patrón de varios
+              sonidos está en{" "}
+              <Link
+                href="/tratamientos/trastorno-fonologico-chillan"
+                className="font-medium text-sky-600 underline"
+              >
+                trastorno fonológico en Chillán
               </Link>
               .
             </p>
             <p className="mt-4 text-lg text-gray-600">
               Si la duda principal es vocabulario, frases o comprensión, la ruta
-              adecuada es la{" "}
+              es la{" "}
               <Link
                 href="/servicios/evaluacion-del-lenguaje-infantil-chillan"
                 className="font-medium text-sky-600 underline"
               >
                 evaluación del lenguaje infantil
+              </Link>
+              . Si quieres las tres áreas en un informe, pide la{" "}
+              <Link
+                href="/servicios/evaluacion-fonoaudiologica"
+                className="font-medium text-sky-600 underline"
+              >
+                evaluación fonoaudiológica completa
+              </Link>
+              . La{" "}
+              <Link
+                href="/glosario/disartria"
+                className="font-medium text-sky-600 underline"
+              >
+                disartria
+              </Link>{" "}
+              y la{" "}
+              <Link
+                href="/glosario/disfemia"
+                className="font-medium text-sky-600 underline"
+              >
+                disfemia
+              </Link>{" "}
+              son otros perfiles del habla (músculos y fluidez), no un error de
+              un solo sonido.
+            </p>
+            <p className="mt-4 text-lg text-gray-600">
+              Para mirar edades antes de la hora, revisa las{" "}
+              <Link
+                href="/recursos/senales-de-alerta-del-lenguaje-y-habla"
+                className="font-medium text-sky-600 underline"
+              >
+                señales de alerta del lenguaje y el habla
+              </Link>
+              . La hora se coordina en{" "}
+              <Link
+                href="/contacto-fonoaudiologa-chillan"
+                className="font-medium text-sky-600 underline"
+              >
+                contacto de la fonoaudióloga en Chillán
               </Link>
               .
             </p>

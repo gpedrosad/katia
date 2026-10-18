@@ -20,6 +20,95 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-10-18: SEO Lote 12 — prioridad de rastreo en páginas Lote 6
+
+### Contexto
+
+**Datos GSC (90 días 2026-07-20 al 2026-10-17, dataState=all, pull 2026-10-18):**
+- **89 clics**
+- **5.490 impresiones**
+- **Posición promedio: 8,0**
+
+**Últimos 7 días (2026-10-11 al 2026-10-17):** 10 clics / 634 imp vs 7 días previos (2026-10-04 al 2026-10-10): 5 clics / 727 imp
+
+**URL Inspection (2026-10-18):** las 23 URLs del Lote 6 siguen en 0 impresiones a los 7 días. Descubiertas y sin indexar: `/comparaciones`, `/comparaciones/retraso-del-habla-vs-retraso-del-lenguaje`, glosario de retraso del lenguaje, conciencia fonológica, disartria, disfemia, praxias y TDL, y `/recursos/senales-de-alerta-del-lenguaje-y-habla`. Desconocidas para Google: `/comparaciones/dislalia-vs-trastorno-fonologico`, `/comparaciones/tel-vs-retraso-del-lenguaje`, `/glosario/trastorno-fonologico` y `/contacto-fonoaudiologa-chillan`. Indexadas pero sin recrawl desde antes del Lote 6: estimulación temprana (último rastreo 2026-08-28), evaluación del habla (2026-06-17), `/chillan/trastorno-fonologico` (2026-09-26) y `/chillan/retraso-del-habla` (2026-10-11).
+
+**Sitemap:** GSC lo bajó el 2026-10-11 (85 URLs). El sitemap vivo ya lista 126. Técnicas básicas en 200, index,follow y canonical propio. El cuello es prioridad de rastreo. Sin URLs nuevas.
+
+**Huérfana:** `/glosario/tdl` no tenía enlaces entrantes internos (solo a sí misma) y no salía en el índice del glosario.
+
+**Query:** «estimulación del lenguaje» (59 imp, pos 33,5, 90 días) cae en `/recursos/estimular-lenguaje-en-casa`. La página de servicio no recibía esa query.
+
+**Páginas congeladas:** no se editó el copy de home, Lotes 7–11, rondas 1–2, `/recursos/*`, `/tratamientos/*`, `/sintomas/*`, `/voz-online/*`, `/ads/*` ni `/sitelink/*`. Enlazar hacia ellas desde páginas de este lote sí. El hub `/glosario` no se reescribió: TDL entra porque el listado sale de `GLOSARIO_TERMINOS`.
+
+**Objetivo:** que Google descubra las páginas Lote 6 desde URLs que ya conoce, separar la estimulación profesional de la guía de casa, y que `/chillan/retraso-del-habla` y `/chillan/trastorno-fonologico` dejen de competir con los tratamientos. Medir ~2026-11-01 al 2026-11-08.
+
+### Páginas optimizadas
+
+#### 1. `/servicios/estimulacion-temprana-del-lenguaje-chillan`
+- **Title:** `"Estimulación del lenguaje infantil en Chillán"`
+- **Description:** servicio presencial de 0 a 3 años, distinto de la guía para casa
+- **H1:** «Estimulación del lenguaje infantil en Chillán»
+- **Contenido:** se sacó la frase de «estudios internacionales» (no hay fuente en el sitio). Quedan las edades que ya estaban (balbuceo, 12, 18 y 24 meses / 50 palabras). Sección nueva que separa la consulta de lo que se hace en casa
+- **FAQ + FAQPage:** 3 preguntas visibles, el schema repite el mismo texto
+- **Enlaces:** guía de casa, hitos, lenguaje infantil, señales de alerta, diferencia TEL vs retraso, retraso del lenguaje, TDL, agendar, contacto, evaluación del habla
+
+#### 2. `/servicios/evaluacion-del-habla-infantil-chillan`
+- **Title:** se mantiene «Evaluación del habla infantil en Chillán»
+- **Description:** pronunciación y claridad; distinta de la evaluación del lenguaje y de la evaluación fonoaudiológica completa
+- **H1:** se mantiene
+- **Contenido:** la intro dice que es la pronunciación, no el lenguaje ni la evaluación completa
+- **FAQ:** pregunta nueva de las tres evaluaciones. Schema solo de lo visible
+- **Enlaces:** praxias, evaluación fonoaudiológica completa (ancla con esas palabras), señales de trastorno fonológico, diferencia dislalia vs trastorno fonológico, `/dislalia`, glosario de trastorno fonológico, tratamiento, disartria, disfemia, señales de alerta, contacto
+
+#### 3. `/chillan/retraso-del-habla`
+- **Rol:** señales y cuándo consultar. El tratamiento queda en `/tratamientos/retraso-del-habla-chillan`
+- **Title:** `"Retraso del habla en Chillán | Señales"`
+- **H1:** «Retraso del habla en Chillán»
+- **Sin 301, noindex ni canonical**
+- **Enlaces:** tratamiento, glosario, diferencia habla vs lenguaje, retraso del lenguaje, señales de alerta, contacto
+
+#### 4. `/chillan/trastorno-fonologico`
+- **Rol:** señales y cuándo consultar. El tratamiento queda en `/tratamientos/trastorno-fonologico-chillan`
+- **Title:** `"Trastorno fonológico en Chillán | Señales"`
+- **H1:** «Trastorno fonológico en Chillán»
+- **Sin 301, noindex ni canonical**
+- **Enlaces:** tratamiento, glosario, diferencia con dislalia, evaluación del habla, señales de alerta, contacto
+
+#### 5. Huérfana `/glosario/tdl`
+- Entra al índice de `/glosario` por el listado de datos (el copy del hub no se reescribió) y queda en `STATIC_GLOSSARY_SLUGS` para no chocar con `[slug]`
+- Enlaces nuevos desde `/glosario/tel`, `/glosario/disfasia` y `/comparaciones/tel-vs-retraso-del-lenguaje`
+- **FAQ schema:** el JSON-LD usa el texto visible de cada respuesta. La cita ASHA sigue en la página, aparte
+
+#### 6. Segundo pase de comparaciones y glosario Lote 6
+- **Titles** con «diferencia entre» o «qué es» / «qué son», dentro de 60 caracteres
+- `/comparaciones`, las 3 hijas y los términos Lote 6 (trastorno fonológico, retraso del lenguaje, conciencia fonológica, disfasia, disartria, apraxia, disfemia, praxias) ganan enlaces contextuales a señales de alerta, contacto, TDL o la evaluación del habla, según el tema
+- WhatsApp de las comparaciones de dislalia y de TEL pasa por `whatsappUrl()`
+
+#### 7. `/contacto-fonoaudiologa-chillan`
+- **ContactPage** nuevo, con `mainEntity` al `@id` `#business`
+- El `MedicalBusiness` (subtipo de LocalBusiness) sigue saliendo de `lib/site.ts`: teléfono, Chillán, Ñuble, horario lun–vie 10:00–18:00. Sin calle
+- Enlace a las señales de alerta
+
+### Código muerto (no se borró)
+
+`app/(site)/evaluacion-fonoaudiologica-infantil-chillan/page.tsx` sigue en el repo, pero `next.config.ts` responde **308** a `/servicios/evaluacion-fonoaudiologica`. La pregunta de consolidación del Lote 6 ya está resuelta por ese redirect. La ruta está excluida del sitemap.
+
+### Recomendaciones para Gonzalo
+
+1. En GSC, pedir indexación de `/glosario/tdl`, las 3 comparaciones, los glosarios Lote 6 que siguen en «desconocida» o «descubierta, sin rastrear», `/recursos/senales-de-alerta-del-lenguaje-y-habla` y `/contacto-fonoaudiologa-chillan`. Reenviar el sitemap (la última descarga es del 2026-10-11).
+2. No consolidar todavía `/chillan/retraso-del-habla` ni `/chillan/trastorno-fonologico` con sus tratamientos. Si hacia el 2026-11-08 siguen en la misma query que `/tratamientos/*`, recién ahí un 301 o canonical al tratamiento.
+3. Medir si «estimulación del lenguaje» empieza a mostrarse en la página de servicio y no solo en la guía de casa.
+4. No borrar todavía el `page.tsx` de `/evaluacion-fonoaudiologica-infantil-chillan`: el 308 ya manda a `/servicios/evaluacion-fonoaudiologica`.
+
+### Métricas esperadas
+
+- Impresiones en las URLs Lote 6 que hoy están en 0 (objetivo: que Google las rastree).
+- «estimulación del lenguaje» asociada a `/servicios/estimulacion-temprana-del-lenguaje-chillan`.
+- `/chillan/retraso-del-habla` y `/chillan/trastorno-fonologico` dejan de competir con la página de tratamiento del mismo tema.
+
+---
+
 ## 2026-10-17: SEO Lote 11 — indexación, logopeda, conciencia fonológica y hub de trastornos del habla
 
 ### Contexto

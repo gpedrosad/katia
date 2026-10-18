@@ -11,7 +11,7 @@ const WHATSAPP_LINK = whatsappUrl(
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Retraso del habla vs del lenguaje | Diferencias",
+  title: "Diferencia entre retraso del habla y del lenguaje",
   description:
     "Diferencia entre retraso del habla y del lenguaje: pronunciación versus vocabulario y frases. Señales y evaluación en Chillán.",
   keywords: [
@@ -256,9 +256,9 @@ export default function RetrasoHablaVsRetrasoLenguajePage() {
                   href="/servicios/evaluacion-fonoaudiologica"
                   className="font-semibold text-rose-600"
                 >
-                  evaluación fonoaudiológica
+                  evaluación fonoaudiológica completa
                 </Link>{" "}
-                integral orienta el diagnóstico diferencial. Según el perfil,
+                orienta el diagnóstico diferencial. Según el perfil,
                 conviene profundizar con la{" "}
                 <Link
                   href="/servicios/evaluacion-del-lenguaje-infantil-chillan"
@@ -272,6 +272,27 @@ export default function RetrasoHablaVsRetrasoLenguajePage() {
                   className="font-semibold text-rose-600"
                 >
                   evaluación del habla infantil
+                </Link>
+                . Las señales locales están en{" "}
+                <Link
+                  href="/chillan/retraso-del-habla"
+                  className="font-semibold text-rose-600"
+                >
+                  retraso del habla en Chillán
+                </Link>
+                . Las edades, en las{" "}
+                <Link
+                  href="/recursos/senales-de-alerta-del-lenguaje-y-habla"
+                  className="font-semibold text-rose-600"
+                >
+                  señales de alerta del lenguaje y el habla
+                </Link>
+                . La hora se pide en{" "}
+                <Link
+                  href="/contacto-fonoaudiologa-chillan"
+                  className="font-semibold text-rose-600"
+                >
+                  contacto en Chillán
                 </Link>
                 . Puedes{" "}
                 <Link

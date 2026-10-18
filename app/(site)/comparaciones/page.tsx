@@ -6,9 +6,9 @@ const PAGE_PATH = "/comparaciones";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Comparaciones de fonoaudiología infantil | Chillán",
+  title: "Diferencia entre trastornos | Habla y lenguaje",
   description:
-    "Diferencias entre dislalia y trastorno fonológico, TEL y retraso del lenguaje, y habla vs lenguaje. Tablas y cuándo consultar en Chillán.",
+    "Diferencia entre dislalia y trastorno fonológico, TEL y retraso del lenguaje, y retraso del habla y del lenguaje. Chillán.",
   keywords: [
     "diferencia entre dislalia trastorno fonológico",
     "TEL vs retraso del lenguaje",
@@ -81,6 +81,29 @@ export default function ComparacionesHubPage() {
         . Si es de frases y palabras, en{" "}
         <Link href="/lenguaje-infantil" className="font-medium text-rose-700 underline">
           lenguaje infantil
+        </Link>
+        . Las definiciones están en{" "}
+        <Link href="/glosario/trastorno-fonologico" className="font-medium text-rose-700 underline">
+          qué es el trastorno fonológico
+        </Link>
+        ,{" "}
+        <Link href="/glosario/retraso-del-lenguaje" className="font-medium text-rose-700 underline">
+          qué es el retraso del lenguaje
+        </Link>{" "}
+        y{" "}
+        <Link href="/glosario/tdl" className="font-medium text-rose-700 underline">
+          qué es el TDL
+        </Link>
+        . Las edades están en las{" "}
+        <Link
+          href="/recursos/senales-de-alerta-del-lenguaje-y-habla"
+          className="font-medium text-rose-700 underline"
+        >
+          señales de alerta del lenguaje y el habla
+        </Link>
+        . Para escribir, usa el{" "}
+        <Link href="/contacto-fonoaudiologa-chillan" className="font-medium text-rose-700 underline">
+          contacto en Chillán
         </Link>
         .
       </p>

@@ -18,6 +18,8 @@ export type GlosarioTermino = {
   whenToConsult: string[];
   faqs: GlosarioFaq[];
   relatedSlugs: string[];
+  /** Enlaces contextuales fuera del glosario. Solo se muestran si existen. */
+  seeAlso?: { href: string; label: string }[];
   chillanSlug?: string;
   servicioHref?: string;
   whatsappText: string;
@@ -32,6 +34,7 @@ export const STATIC_GLOSSARY_SLUGS = [
   "tel",
   "retraso-del-habla",
   "logopeda",
+  "tdl",
 ] as const;
 
 export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
@@ -214,7 +217,7 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     shortDescription:
       "Patrones sistemáticos de errores en los sonidos del habla.",
     category: "Trastornos del habla",
-    metaTitle: "¿Qué es el trastorno fonológico? | Errores",
+    metaTitle: "¿Qué es el trastorno fonológico?",
     metaDescription:
       "Trastorno fonológico: patrones de errores en los sonidos (omisiones y sustituciones). Diferencia con la dislalia y cuándo evaluar.",
     keywords: [
@@ -260,6 +263,20 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
       },
     ],
     relatedSlugs: ["dislalia", "conciencia-fonologica"],
+    seeAlso: [
+      {
+        href: "/comparaciones/dislalia-vs-trastorno-fonologico",
+        label: "la diferencia entre dislalia y trastorno fonológico",
+      },
+      {
+        href: "/servicios/evaluacion-del-habla-infantil-chillan",
+        label: "la evaluación del habla infantil",
+      },
+      {
+        href: "/recursos/senales-de-alerta-del-lenguaje-y-habla",
+        label: "las señales de alerta del lenguaje y el habla",
+      },
+    ],
     chillanSlug: "trastorno-fonologico",
     servicioHref: "/servicios/trastornos-del-habla",
     whatsappText: "Hola, quiero consultar por trastorno fonológico",
@@ -273,7 +290,7 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     shortDescription:
       "Desarrollo del lenguaje más lento de lo esperado para la edad.",
     category: "Trastornos del lenguaje",
-    metaTitle: "¿Qué es el retraso del lenguaje? | Señales",
+    metaTitle: "¿Qué es el retraso del lenguaje?",
     metaDescription:
       "Definición de retraso del lenguaje: desarrollo más lento (vocabulario, frases, comprensión). Señales por edad, diferencia con TEL, cuándo es transitorio.",
     keywords: [
@@ -319,7 +336,21 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
           "Evalúa comprensión y expresión, identifica áreas afectadas y diseña un plan de intervención con objetivos claros para la familia y, si corresponde, el colegio.",
       },
     ],
-    relatedSlugs: ["tel", "tea"],
+    relatedSlugs: ["tel", "tdl"],
+    seeAlso: [
+      {
+        href: "/comparaciones/tel-vs-retraso-del-lenguaje",
+        label: "la diferencia entre TEL y retraso del lenguaje",
+      },
+      {
+        href: "/comparaciones/retraso-del-habla-vs-retraso-del-lenguaje",
+        label: "la diferencia entre retraso del habla y del lenguaje",
+      },
+      {
+        href: "/recursos/senales-de-alerta-del-lenguaje-y-habla",
+        label: "las señales de alerta del lenguaje y el habla",
+      },
+    ],
     chillanSlug: "retraso-del-lenguaje",
     servicioHref: "/servicios/terapia-lenguaje-infantil",
     whatsappText: "Hola, quiero consultar por retraso del lenguaje",
@@ -333,7 +364,7 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     shortDescription:
       "Habilidad para identificar y manipular los sonidos del lenguaje.",
     category: "Habilidades",
-    metaTitle: "¿Qué es la Conciencia Fonológica? | Rimas, sílabas y fonemas",
+    metaTitle: "¿Qué es la conciencia fonológica?",
     metaDescription:
       "Conciencia fonológica: reconocer sonidos (rimas, sílabas, fonemas) sin leer. Base de la lectoescritura y cómo evaluarla.",
     keywords: [
@@ -380,6 +411,16 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
       },
     ],
     relatedSlugs: ["dislexia", "trastorno-fonologico"],
+    seeAlso: [
+      {
+        href: "/servicios/conciencia-fonologica-chillan",
+        label: "la conciencia fonológica en la consulta",
+      },
+      {
+        href: "/contacto-fonoaudiologa-chillan",
+        label: "el contacto de la fonoaudióloga en Chillán",
+      },
+    ],
     chillanSlug: "lectoescritura",
     servicioHref: "/servicios/dificultades-lectoescritura",
     whatsappText: "Hola, quiero consultar por conciencia fonológica",
@@ -393,7 +434,7 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     shortDescription:
       "Otro nombre histórico para el Trastorno Específico del Lenguaje (TEL).",
     category: "Trastornos del lenguaje",
-    metaTitle: "¿Qué es la Disfasia? | Término antiguo para TEL/TDL",
+    metaTitle: "¿Qué es la disfasia? | Nombre antiguo del TEL",
     metaDescription:
       "Definición de disfasia: nombre tradicional del TEL/TDL (trastorno del lenguaje sin causa aparente). Relación con TEL, síntomas y tratamiento.",
     keywords: [
@@ -439,7 +480,17 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
           "Sí. El tratamiento es fonoaudiológico, prolongado e individualizado, con coordinación familiar y escolar.",
       },
     ],
-    relatedSlugs: ["tel", "retraso-del-lenguaje"],
+    relatedSlugs: ["tel", "tdl", "retraso-del-lenguaje"],
+    seeAlso: [
+      {
+        href: "/comparaciones/tel-vs-retraso-del-lenguaje",
+        label: "la diferencia entre TEL y retraso del lenguaje",
+      },
+      {
+        href: "/contacto-fonoaudiologa-chillan",
+        label: "el contacto de la fonoaudióloga en Chillán",
+      },
+    ],
     chillanSlug: "tel",
     servicioHref: "/servicios/tel-trastorno-especifico-lenguaje",
     whatsappText: "Hola, quiero consultar por disfasia o TEL",
@@ -500,6 +551,16 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
       },
     ],
     relatedSlugs: ["apraxia-del-habla", "praxias-orofaciales"],
+    seeAlso: [
+      {
+        href: "/servicios/evaluacion-del-habla-infantil-chillan",
+        label: "la evaluación del habla infantil",
+      },
+      {
+        href: "/contacto-fonoaudiologa-chillan",
+        label: "el contacto de la fonoaudióloga en Chillán",
+      },
+    ],
     servicioHref: "/servicios/trastornos-del-habla",
     whatsappText: "Hola, quiero consultar por disartria",
     sourceUrl: "https://www.asha.org/public/speech/disorders/dysarthria/",
@@ -511,7 +572,7 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     shortDescription:
       "Dificultad para planificar los movimientos necesarios para hablar.",
     category: "Trastornos del habla",
-    metaTitle: "¿Qué es la Apraxia del Habla Infantil? | AHS Definición",
+    metaTitle: "¿Qué es la apraxia del habla infantil?",
     metaDescription:
       "Apraxia del habla infantil: dificultad para programar los movimientos del habla y errores inconsistentes. Señales y tratamiento.",
     keywords: [
@@ -558,6 +619,16 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
       },
     ],
     relatedSlugs: ["disartria", "praxias-orofaciales"],
+    seeAlso: [
+      {
+        href: "/tratamientos/apraxia-del-habla-infantil-chillan",
+        label: "el tratamiento de la apraxia del habla en Chillán",
+      },
+      {
+        href: "/recursos/senales-de-alerta-del-lenguaje-y-habla",
+        label: "las señales de alerta del lenguaje y el habla",
+      },
+    ],
     chillanSlug: "apraxia-del-habla",
     servicioHref: "/servicios/trastornos-del-habla",
     whatsappText: "Hola, quiero consultar por apraxia del habla",
@@ -571,7 +642,7 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     shortDescription:
       "Alteración de la fluidez del habla con repeticiones o bloqueos.",
     category: "Trastornos del habla",
-    metaTitle: "¿Qué es la Disfemia? | Tartamudez Definición y Señales",
+    metaTitle: "¿Qué es la disfemia? | Tartamudez",
     metaDescription:
       "Definición de disfemia (tartamudez): alteración de fluidez con repeticiones, prolongaciones, bloqueos. Cuándo es normal, cuándo intervenir temprano.",
     keywords: [
@@ -618,6 +689,16 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
       },
     ],
     relatedSlugs: ["dislalia", "apraxia-del-habla"],
+    seeAlso: [
+      {
+        href: "/tartamudez",
+        label: "las guías de tartamudez",
+      },
+      {
+        href: "/contacto-fonoaudiologa-chillan",
+        label: "el contacto de la fonoaudióloga en Chillán",
+      },
+    ],
     chillanSlug: "disfemia",
     servicioHref: "/servicios/trastornos-del-habla",
     whatsappText: "Hola, quiero consultar por tartamudez",
@@ -689,7 +770,7 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     shortDescription:
       "Ejercicios de los músculos de la boca, lengua y cara.",
     category: "Intervención",
-    metaTitle: "¿Qué son las Praxias Orofaciales? | Ejercicios boca y lengua",
+    metaTitle: "¿Qué son las praxias orofaciales?",
     metaDescription:
       "Definición de praxias orofaciales: ejercicios para fortalecer labios, lengua, mandíbula. Cuándo se usan, cómo ayudan en dislalia y apraxia.",
     keywords: [
@@ -735,12 +816,63 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
           "Se adaptan a la edad y tolerancia del niño, desde preescolar en adelante, siempre con supervisión profesional.",
       },
     ],
-    relatedSlugs: ["dislalia", "apraxia-del-habla"],
+    relatedSlugs: ["dislalia", "apraxia-del-habla", "disartria"],
+    seeAlso: [
+      {
+        href: "/servicios/evaluacion-del-habla-infantil-chillan",
+        label: "la evaluación del habla infantil",
+      },
+      {
+        href: "/contacto-fonoaudiologa-chillan",
+        label: "el contacto de la fonoaudióloga en Chillán",
+      },
+    ],
     servicioHref: "/servicios/trastornos-del-habla",
     whatsappText: "Hola, quiero consultar por terapia del habla",
     sourceUrl:
       "https://www.asha.org/public/speech/disorders/articulation-and-phonology/",
     sourceLabel: "ASHA — Articulation and Phonology",
+  },
+  {
+    slug: "tdl",
+    term: "TDL (trastorno del desarrollo del lenguaje)",
+    shortDescription:
+      "Nombre actual del TEL: dificultades persistentes del lenguaje.",
+    category: "Trastornos del lenguaje",
+    metaTitle: "¿Qué es el TDL? | Trastorno del desarrollo del lenguaje",
+    metaDescription:
+      "Qué es el TDL (trastorno del desarrollo del lenguaje): el nombre actual del TEL. Señales y diferencia con el retraso del lenguaje.",
+    keywords: [
+      "qué es TDL",
+      "trastorno del desarrollo del lenguaje",
+      "TDL niños",
+      "TEL y TDL",
+    ],
+    headline: "¿Qué es el TDL (trastorno del desarrollo del lenguaje)?",
+    subtitle:
+      "El nombre actual del TEL: dificultades persistentes para comprender o usar el lenguaje.",
+    definitionParagraphs: [
+      "El TDL (trastorno del desarrollo del lenguaje) es la denominación actual de lo que antes se llamaba TEL. Describe dificultades persistentes para comprender o usar el lenguaje oral que no se explican por pérdida auditiva, discapacidad intelectual u otro daño neurológico.",
+    ],
+    commonSigns: [
+      "A los 3 años dice muy pocas palabras y no arma frases",
+      "Vocabulario muy limitado para la edad",
+      "Le cuesta seguir instrucciones simples",
+    ],
+    whenToConsult: [
+      "Si a los 3 años no arma frases",
+      "Si el colegio reporta dificultades de comprensión o expresión",
+    ],
+    faqs: [
+      {
+        question: "¿Qué significa TDL?",
+        answer:
+          "TDL es el trastorno del desarrollo del lenguaje. Es el término actual para lo que antes se llamaba TEL.",
+      },
+    ],
+    relatedSlugs: ["tel", "disfasia", "retraso-del-lenguaje"],
+    whatsappText:
+      "Hola, quiero consultar por TDL (trastorno del desarrollo del lenguaje) en mi hijo",
   },
   {
     slug: "logopeda",

@@ -13,6 +13,7 @@ import {
   whatsappUrl,
 } from "@/lib/site";
 import {
+  MEDICAL_BUSINESS_ID,
   buildMedicalBusinessJsonLd,
 } from "@/lib/local-business-schema";
 
@@ -62,6 +63,14 @@ const jsonLd = {
         "Contacto y agenda con fonoaudióloga infantil en Chillán. Horarios, ubicación y reserva de evaluación.",
       pageUrl: `${SITE_URL}${PAGE_PATH}`,
     }),
+    {
+      "@type": "ContactPage",
+      "@id": `${SITE_URL}${PAGE_PATH}#contact`,
+      url: `${SITE_URL}${PAGE_PATH}`,
+      name: "Contacto fonoaudióloga infantil en Chillán",
+      inLanguage: "es-CL",
+      mainEntity: { "@id": MEDICAL_BUSINESS_ID },
+    },
     {
       "@type": "FAQPage",
       mainEntity: faqs.map((f) => ({
@@ -175,7 +184,13 @@ export default function ContactoPage() {
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
             <h2 className="mb-6 text-3xl font-bold text-gray-900">Ubicación y cobertura</h2>
-            <p className="text-lg text-gray-600">Atención presencial en Chillán, Región de Ñuble. La ubicación exacta se comparte al coordinar la evaluación.</p>
+            <p className="text-lg text-gray-600">
+              Atención presencial en {SERVICE_AREA_CITY}, {SERVICE_AREA_REGION}. La ubicación exacta se comparte al coordinar la evaluación. Si aún no sabes si consultar, revisa las{" "}
+              <Link href="/recursos/senales-de-alerta-del-lenguaje-y-habla" className="font-semibold text-rose-600 underline">
+                señales de alerta del lenguaje y el habla
+              </Link>
+              .
+            </p>
           </div>
         </section>
 

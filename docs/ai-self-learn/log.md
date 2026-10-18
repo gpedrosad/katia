@@ -4,6 +4,10 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 
 ---
 
+## 2026-10-18
+
+- SEO Lote 12 | Cuello = rastreo, no robots. `/glosario/tdl` entra al índice del glosario y se enlaza desde TEL, disfasia y la comparación TEL vs retraso. Estimulación temprana se retargetea a «estimulación del lenguaje infantil en Chillán» y separa la consulta de la guía de casa. `/chillan/retraso-del-habla` y `/chillan/trastorno-fonologico` quedan como señales y entregan el tratamiento a `/tratamientos/*` (sin 301). Contacto gana ContactPage sobre el `#business` de `lib/site.ts` | Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar comparaciones, glosarios Lote 6, señales de alerta y contacto; reenviar sitemap. El `page.tsx` de `/evaluacion-fonoaudiologica-infantil-chillan` sigue, pero ya hay 308 a `/servicios/evaluacion-fonoaudiologica`.
+
 ## 2026-10-17
 
 - SEO Lote 11 | Cuello = descubrimiento/indexación. `/glosario/logopeda` pasa a página estática (logopeda = España, fonoaudiólogo = Chile). `/servicios/conciencia-fonologica-chillan` queda como la consulta, sin canonical ni 301. `/servicios/trastornos-del-habla` pasa a hub de dislalia, fonológico, apraxia, tartamudez y disartria. Lote 5 gana bloque «Guías relacionadas». `lastmod` del sitemap deja de ser el mtime del checkout | Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar logopeda, conciencia fonológica y hubs ronda 1–2; reenviar sitemap (GSC lo bajó el 2026-10-11, 85 URLs). Apex https ya 308 a www; http apex hace un salto extra en Vercel.

@@ -2,15 +2,15 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import { buildPageMetadata } from "@/lib/seo";
-import { SITE_URL } from "@/lib/site";
+import { SITE_URL, whatsappUrl } from "@/lib/site";
 
 const PAGE_PATH = "/comparaciones/tel-vs-retraso-del-lenguaje";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "TEL y retraso del lenguaje | Diferencias",
+  title: "Diferencia entre TEL y retraso del lenguaje",
   description:
-    "¿Cuál es la diferencia entre TEL y retraso del lenguaje? Tabla comparativa, evolución, prevalencia y cuándo evaluar con fonoaudióloga en Chillán.",
+    "Diferencia entre TEL y retraso del lenguaje: uno puede ser transitorio y el otro persiste. Tabla y cuándo evaluar en Chillán.",
   keywords: [
     "diferencia entre TEL y retraso del lenguaje",
     "TEL vs retraso del lenguaje",
@@ -315,6 +315,17 @@ export default function TelVsRetrasoLenguajePage() {
                 <Link href="/tratamientos/retraso-del-lenguaje-chillan">
                   retraso del lenguaje
                 </Link>
+                . El nombre actual del TEL está en{" "}
+                <Link href="/glosario/tdl">qué es el TDL</Link> y el nombre
+                antiguo en <Link href="/glosario/disfasia">qué es la disfasia</Link>
+                . Las edades están en las{" "}
+                <Link href="/recursos/senales-de-alerta-del-lenguaje-y-habla">
+                  señales de alerta del lenguaje y el habla
+                </Link>{" "}
+                y la hora se pide en{" "}
+                <Link href="/contacto-fonoaudiologa-chillan">
+                  contacto en Chillán
+                </Link>
                 .
               </p>
 
@@ -349,7 +360,11 @@ export default function TelVsRetrasoLenguajePage() {
                   retraso transitorio, TEL/TDL u otro perfil, y define el plan de
                   intervención.
                 </p>
-                <WhatsAppCTA href="https://wa.me/56995497838?text=Hola%2C%20quiero%20consultar%20por%20retraso%20de%20lenguaje%20o%20TEL%20en%20mi%20hijo">
+                <WhatsAppCTA
+                  href={whatsappUrl(
+                    "Hola, quiero consultar por retraso de lenguaje o TEL en mi hijo",
+                  )}
+                >
                   Consultar por WhatsApp
                 </WhatsAppCTA>
               </div>

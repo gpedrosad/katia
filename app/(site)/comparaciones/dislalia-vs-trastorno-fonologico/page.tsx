@@ -2,13 +2,13 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/app/_components/Breadcrumbs";
 import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import { buildPageMetadata } from "@/lib/seo";
-import { SITE_URL } from "@/lib/site";
+import { SITE_URL, whatsappUrl } from "@/lib/site";
 
 const PAGE_PATH = "/comparaciones/dislalia-vs-trastorno-fonologico";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Dislalia y trastorno fonológico | Diferencias",
+  title: "Diferencia entre dislalia y trastorno fonológico",
   description:
     "¿Cuál es la diferencia entre dislalia y trastorno fonológico? Tabla comparativa, ejemplos, señales por edad y cuándo consultar fonoaudióloga en Chillán.",
   keywords: [
@@ -331,6 +331,18 @@ export default function DislaliaVsTrastornoFonologicoPage() {
                 <Link href="/tratamientos/trastorno-fonologico-chillan">
                   trastorno fonológico
                 </Link>
+                . Si quieres la evaluación de la pronunciación, está en la{" "}
+                <Link href="/servicios/evaluacion-del-habla-infantil-chillan">
+                  evaluación del habla infantil
+                </Link>
+                . Las edades están en las{" "}
+                <Link href="/recursos/senales-de-alerta-del-lenguaje-y-habla">
+                  señales de alerta del lenguaje y el habla
+                </Link>{" "}
+                y la hora se pide en{" "}
+                <Link href="/contacto-fonoaudiologa-chillan">
+                  contacto en Chillán
+                </Link>
                 .
               </p>
 
@@ -365,7 +377,11 @@ export default function DislaliaVsTrastornoFonologicoPage() {
                   de dislalia, trastorno fonológico o ambos, y define el plan de
                   tratamiento.
                 </p>
-                <WhatsAppCTA href="https://wa.me/56995497838?text=Hola%2C%20quiero%20consultar%20por%20pronunciaci%C3%B3n%20de%20mi%20hijo%20(dislalia%20o%20trastorno%20fonol%C3%B3gico)">
+                <WhatsAppCTA
+                  href={whatsappUrl(
+                    "Hola, quiero consultar por pronunciación de mi hijo (dislalia o trastorno fonológico)",
+                  )}
+                >
                   Consultar por WhatsApp
                 </WhatsAppCTA>
               </div>
