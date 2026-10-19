@@ -20,6 +20,71 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-10-19: SEO Lote 13 — segundo pase de las páginas del Lote 7
+
+### Contexto
+
+**Datos GSC (90 días 2026-07-21 al 2026-10-18, sc-domain:katialafono.cl, pull 2026-10-19):**
+- **90 clics**
+- **5.495 impresiones**
+- **Posición promedio: 8,1**
+
+**Últimos 7 días (2026-10-12 al 2026-10-18):** 9 clics / 628 imp vs 7 días previos (2026-10-05 al 2026-10-11): 7 clics / 707 imp
+
+**URL Inspection (2026-10-19):** Google todavía no vio el Lote 7 (2026-10-12). Último rastreo: hitos 2026-09-21, `/fonoaudiologa-ninos-chillan` 2026-10-09, `/servicios` 2026-10-11, `/tratamientos/retraso-del-lenguaje-chillan` 2026-10-05, `/tratamientos/trastorno-fonologico-chillan` 2026-09-11. Home sí se rastreó el 2026-10-18. Todas indexadas.
+
+**Sitemap:** GSC (www) lo bajó el 2026-10-11 con 85 URLs. El sitemap vivo lista 126.
+
+**Query principal:** «a que edad hablan los niños» en hitos, 223 imp, 0 clics, pos 9,9. El title no contenía la consulta.
+
+**Páginas congeladas:** no se editó copy ni metadata de Lotes 8–12, `/chillan/*`, `/glosario/*`, `/comparaciones/*`, `/voz-online/*` (salvo el enlace al hub desde `/servicios`), `/ads/*` ni `/sitelink/*`. Enlazar hacia ellas sí.
+
+**Objetivo:** que el snippet de hitos responda la consulta, recuperar el hub `/servicios`, separar home y pilar en «fonoaudiología infantil», y marcar los dos tratamientos como páginas de terapia en Chillán. Medir ~2026-11-02 al 2026-11-09.
+
+### Páginas optimizadas
+
+#### 1. `/recursos/hitos-del-lenguaje-por-edad`
+- **Title:** `"¿A qué edad hablan los niños? Hitos del lenguaje por edad"` (57 caracteres; `buildPageMetadata` usa título absoluto, no agrega la marca)
+- **Description:** respuesta directa (11–14 meses) + tabla, señales de alerta y cuándo consultar
+- **H1:** «¿A qué edad hablan los niños?»
+- **Respuesta rápida:** párrafo de 53 palabras, justo bajo el H1, que empieza «Los niños empiezan a hablar…». Mismas edades que ya estaban en la página
+- **FAQ nuevas, con el mismo texto en FAQPage:** «¿A qué edad hablan los bebés?», «¿A qué edad hablan bien los niños?», «¿Hablan antes las niñas que los niños?» (sin cifra ni estudio)
+- **Bloque:** «¿Y si mi hijo no habla a esa edad?» hacia el tratamiento de retraso del lenguaje y las señales de alerta. También enlace al tratamiento del trastorno fonológico
+- **Schema:** Article y WebPage con `dateModified` 2026-10-19
+
+#### 2. `/fonoaudiologa-ninos-chillan`
+- **Title y H1:** se mantienen («Fonoaudiología infantil en Chillán»)
+- **FAQ visibles = FAQPage:** qué cubre, desde qué edad consultar, cómo es la primera evaluación en Chillán (60 min, informe y plan) y presencial vs voz online para adultos
+- **Enlaces:** agendar hora, evaluación, tratamiento del retraso del lenguaje y tratamiento del trastorno fonológico, con ancla descriptiva
+
+#### 3. `/` (home)
+- **Solo description.** Title y H1 se mantienen: «Fonoaudióloga infantil en Chillán»
+- La description nombra fonoaudióloga y fonoaudiología en Chillán, y la terapia de voz online en todo Chile. No se agregó «fonoaudiología infantil» al title ni al H1. No se tocó el layout
+
+#### 4. `/servicios`
+- **Title y H1:** «Servicios de fonoaudiología infantil en Chillán»
+- **Description** propia, distinta de home y del pilar
+- **Listado agrupado** con ancla descriptiva: evaluación, terapia del lenguaje, retraso del lenguaje, terapia del habla, trastornos del habla, trastorno fonológico, TEL, TEA, lectoescritura, informe PIE, conciencia fonológica, estimulación del lenguaje y el hub de voz online
+- **OfferCatalog** del `MedicalBusiness` repite esa lista visible
+
+#### 5. `/tratamientos/trastorno-fonologico-chillan` y `/tratamientos/retraso-del-lenguaje-chillan`
+- **Title y description:** se mantienen
+- **Intro** de cada una dice que es el tratamiento en Chillán: para quién, qué mira la evaluación y cómo son las sesiones
+- Retraso del lenguaje no vuelve a la consulta de edades: manda a hitos
+- Trastorno fonológico deja las señales en `/chillan/trastorno-fonologico` (ancla «señales y cuándo consultar»)
+- **FAQ** nueva en cada una, schema alineado al texto visible
+- **MedicalWebPage** + Service, `dateModified` 2026-10-19
+- Enlaces entrantes desde hitos, `/servicios` y el pilar
+
+### Métricas esperadas
+
+- CTR de «a que edad hablan los niños» en hitos (hoy 223 imp, 0 clics, pos 9,9).
+- Impresiones de `/servicios`, que venían cayendo (49, 45, 27, 13, 6, 6, 3).
+- Menos solape de «fonoaudiología infantil» entre home y el pilar.
+- Que Google vuelva a rastrear las dos páginas de tratamiento (último rastreo 2026-09-11 y 2026-10-05).
+
+---
+
 ## 2026-10-18: SEO Lote 12 — prioridad de rastreo en páginas Lote 6
 
 ### Contexto

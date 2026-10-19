@@ -6,14 +6,14 @@ import { Footer } from "../_components/Footer";
 import { Header } from "../_components/Header";
 import { WhatsAppCTA } from "../_components/WhatsAppCTA";
 import { buildPageMetadata } from "@/lib/seo";
-import { SITE_URL } from "@/lib/site";
+import { SITE_URL, whatsappUrl } from "@/lib/site";
 import { buildMedicalBusinessJsonLd } from "@/lib/local-business-schema";
 
 const faqItems = [
   {
     question: "¿Qué servicios de fonoaudiología ofrece en Chillán?",
     answer:
-      "Terapia de lenguaje infantil, trastornos del habla, evaluación fonoaudiológica con informe, TEL, apoyo comunicativo en TEA y dificultades de lectoescritura. Todo con atención presencial.",
+      "Evaluación fonoaudiológica, terapia del lenguaje, terapia del habla, TEL, apoyo en TEA, lectoescritura, informe PIE, conciencia fonológica y estimulación del lenguaje, de forma presencial en Chillán. La terapia de voz es online, para adultos, en todo Chile.",
   },
   {
     question: "¿Cómo elijo el servicio adecuado para mi hijo?",
@@ -28,12 +28,12 @@ const faqItems = [
 ];
 
 const PAGE_PATH = "/servicios";
-const WHATSAPP_LINK =
-  "https://wa.me/56995497838?text=Hola%2C%20quiero%20consultar%20por%20sus%20servicios";
-const PAGE_TITLE =
-  "Servicios de fonoaudiología infantil | Chillán";
+const WHATSAPP_LINK = whatsappUrl(
+  "Hola, quiero consultar por sus servicios",
+);
+const PAGE_TITLE = "Servicios de fonoaudiología infantil en Chillán";
 const PAGE_DESCRIPTION =
-  "Servicios para niños en Chillán: terapia de lenguaje y habla, evaluación con informe, TEL, pronunciación y lectoescritura. +20 años. Agenda por WhatsApp.";
+  "Servicios de fonoaudiología infantil en Chillán: evaluación, lenguaje, habla, TEL, TEA, lectoescritura, informe PIE y voz online.";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
@@ -49,56 +49,136 @@ export const metadata = buildPageMetadata({
   ],
 });
 
-const services = [
+const serviceGroups = [
   {
-    href: "/servicios/terapia-lenguaje-infantil",
-    emoji: "👶",
-    title: "Terapia de lenguaje en Chillán",
-    description:
-      "Para niños que hablan poco, no arman frases o tienen vocabulario limitado.",
-    keywords: ["niños 2-10 años", "lenguaje expresivo", "no arma frases"],
+    title: "Evaluación",
+    items: [
+      {
+        href: "/servicios/evaluacion-fonoaudiologica",
+        emoji: "📋",
+        title: "Evaluación fonoaudiológica en Chillán",
+        description:
+          "Evaluación de unos 60 minutos del lenguaje y el habla, con informe y plan de tratamiento.",
+      },
+    ],
   },
   {
-    href: "/servicios/trastornos-del-habla",
-    emoji: "🗣️",
-    title: "Trastornos del habla",
-    description:
-      "Tratamiento de dislalias, trastornos fonológicos y dificultades de pronunciación en niños y adolescentes.",
-    keywords: ["dislalia", "pronunciación", "articulación"],
+    title: "Terapia del lenguaje",
+    items: [
+      {
+        href: "/servicios/terapia-lenguaje-infantil",
+        emoji: "👶",
+        title: "Terapia del lenguaje infantil",
+        description:
+          "Para niños que hablan poco, no arman frases o tienen vocabulario limitado.",
+      },
+      {
+        href: "/tratamientos/retraso-del-lenguaje-chillan",
+        emoji: "💬",
+        title: "Tratamiento del retraso del lenguaje en Chillán",
+        description:
+          "Terapia presencial si habla poco, no forma frases o se frustra al comunicarse.",
+      },
+    ],
   },
   {
-    href: "/servicios/evaluacion-fonoaudiologica",
-    emoji: "📋",
-    title: "Evaluación fonoaudiológica",
-    description:
-      "Evaluación completa del lenguaje, habla y comunicación con informe detallado y plan de tratamiento.",
-    keywords: ["diagnóstico", "informe", "evaluación inicial"],
+    title: "Terapia del habla",
+    items: [
+      {
+        href: "/servicios/terapia-del-habla-infantil-chillan",
+        emoji: "🗣️",
+        title: "Terapia del habla infantil en Chillán",
+        description:
+          "Articulación, pronunciación y claridad. Es distinta de la terapia del lenguaje.",
+      },
+      {
+        href: "/servicios/trastornos-del-habla",
+        emoji: "🔤",
+        title: "Trastornos del habla",
+        description:
+          "Dislalia, trastorno fonológico, apraxia, tartamudez y disartria: qué distingue a cada uno.",
+      },
+      {
+        href: "/tratamientos/trastorno-fonologico-chillan",
+        emoji: "👂",
+        title: "Tratamiento del trastorno fonológico en Chillán",
+        description:
+          "Terapia presencial cuando no se le entiende o cambia los sonidos al hablar.",
+      },
+    ],
   },
   {
-    href: "/servicios/tel-trastorno-especifico-lenguaje",
-    emoji: "💬",
-    title: "TEL - Trastorno Específico del Lenguaje",
-    description:
-      "Diagnóstico y tratamiento especializado del Trastorno Específico del Lenguaje (TEL) en niños.",
-    keywords: ["TEL", "trastorno del desarrollo", "intervención temprana"],
+    title: "TEL y TEA",
+    items: [
+      {
+        href: "/servicios/tel-trastorno-especifico-lenguaje",
+        emoji: "💬",
+        title: "TEL — Trastorno Específico del Lenguaje",
+        description:
+          "Diagnóstico y tratamiento del Trastorno Específico del Lenguaje (TEL) en niños.",
+      },
+      {
+        href: "/servicios/tea-trastorno-espectro-autista",
+        emoji: "🧩",
+        title: "TEA y comunicación",
+        description:
+          "Apoyo en comunicación y lenguaje para niños con Trastorno del Espectro Autista (TEA).",
+      },
+    ],
   },
   {
-    href: "/servicios/tea-trastorno-espectro-autista",
-    emoji: "🧩",
-    title: "TEA y comunicación",
-    description:
-      "Apoyo en comunicación y lenguaje para niños con Trastorno del Espectro Autista (TEA).",
-    keywords: ["TEA", "autismo", "comunicación funcional"],
+    title: "Lectoescritura, informe PIE y conciencia fonológica",
+    items: [
+      {
+        href: "/servicios/dificultades-lectoescritura",
+        emoji: "📚",
+        title: "Dificultades de lectoescritura",
+        description:
+          "Evaluación y tratamiento cuando cuesta aprender a leer y a escribir.",
+      },
+      {
+        href: "/servicios/informe-fonoaudiologico-pie-chillan",
+        emoji: "📄",
+        title: "Informe fonoaudiológico para el PIE",
+        description:
+          "Documento de la evaluación que piden el colegio para el PIE, una escuela de lenguaje o el pediatra.",
+      },
+      {
+        href: "/servicios/conciencia-fonologica-chillan",
+        emoji: "🔤",
+        title: "Conciencia fonológica en la consulta",
+        description:
+          "Evaluación y estimulación en la consulta: rimas, sílabas y fonemas, antes de primero básico.",
+      },
+    ],
   },
   {
-    href: "/servicios/dificultades-lectoescritura",
-    emoji: "📚",
-    title: "Dificultades de lectoescritura",
-    description:
-      "Evaluación y tratamiento de dificultades en el aprendizaje de la lectura y escritura.",
-    keywords: ["lectura", "escritura", "aprendizaje"],
+    title: "Estimulación del lenguaje",
+    items: [
+      {
+        href: "/servicios/estimulacion-temprana-del-lenguaje-chillan",
+        emoji: "🌱",
+        title: "Estimulación del lenguaje infantil",
+        description:
+          "Servicio profesional de 0 a 3 años, presencial en Chillán. Distinto de la guía para hacer en casa.",
+      },
+    ],
+  },
+  {
+    title: "Voz online",
+    items: [
+      {
+        href: "/voz-online/fonoaudiologa-de-voz-online",
+        emoji: "🎙️",
+        title: "Terapia de voz online",
+        description:
+          "Para adultos, por videollamada, en todo Chile: disfonía, nódulos y fatiga vocal.",
+      },
+    ],
   },
 ];
+
+const services = serviceGroups.flatMap((group) => group.items);
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -108,7 +188,7 @@ const jsonLd = {
     extra: {
       hasOfferCatalog: {
         "@type": "OfferCatalog",
-        name: "Servicios de Fonoaudiología",
+        name: "Servicios de fonoaudiología infantil en Chillán",
         itemListElement: services.map((service, index) => ({
           "@type": "Offer",
           position: index + 1,
@@ -144,22 +224,34 @@ export default function ServiciosPage() {
             />
             <div className="mb-12 text-center">
               <h1 className="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl">
-                Terapia de lenguaje y fonoaudiología infantil en Chillán
+                Servicios de fonoaudiología infantil en Chillán
               </h1>
               <p
                 data-speakable
                 className="mx-auto max-w-2xl text-lg text-gray-600"
               >
-                Más de 20 años de experiencia en evaluación y tratamiento para
-                niños que hablan poco, no arman frases, pronuncian mal o tienen
-                dificultades de comunicación. Atención presencial en Chillán.
+                Atención presencial en Chillán: evaluación, terapia del lenguaje,
+                terapia del habla, TEL, TEA, lectoescritura, informe PIE,
+                conciencia fonológica y estimulación del lenguaje. La terapia de
+                voz es online, por videollamada, para adultos en todo Chile.
               </p>
             </div>
 
-            {/* Services Grid */}
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {services.map((service) => (
-                <ServiceCard key={service.href} {...service} />
+            <div className="space-y-12">
+              {serviceGroups.map((group, index) => (
+                <section key={group.title} aria-labelledby={`grupo-servicios-${index}`}>
+                  <h2
+                    id={`grupo-servicios-${index}`}
+                    className="mb-4 text-2xl font-bold text-gray-900"
+                  >
+                    {group.title}
+                  </h2>
+                  <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    {group.items.map((service) => (
+                      <ServiceCard key={service.href} {...service} />
+                    ))}
+                  </div>
+                </section>
               ))}
             </div>
 

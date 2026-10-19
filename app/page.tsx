@@ -38,7 +38,7 @@ const PAGE_PATH = "/";
 const HOME_TITLE =
   "Fonoaudióloga infantil en Chillán | Katia Domínguez";
 const HOME_DESCRIPTION =
-  "Fonoaudióloga infantil en Chillán, +20 años. Evaluación con informe y terapia de lenguaje y habla para niños. Agenda por WhatsApp.";
+  "Fonoaudióloga en Chillán (+20 años): fonoaudiología, evaluación y terapia para niños. Voz online en todo Chile. Agenda por WhatsApp.";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,

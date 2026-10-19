@@ -13,9 +13,24 @@ const WHATSAPP_HREF = whatsappUrl(
 
 const faqs = [
   {
+    question: "¿A qué edad hablan los bebés?",
+    answer:
+      "Los bebés empiezan a hablar con palabras con significado, como «mamá» o «agua», entre los 11 y 14 meses. Antes balbucean con entonación y usan gestos. Si a los 18 meses no dice ninguna palabra, conviene consultar.",
+  },
+  {
     question: "¿A qué edad empiezan a hablar los bebés?",
     answer:
       "La mayoría de los bebés dice sus primeras palabras con significado (como «mamá» o «agua») entre los 11 y 14 meses. Antes de eso balbucean con entonación y usan gestos. Si a los 15–18 meses no dice ninguna palabra con significado, es recomendable consultar.",
+  },
+  {
+    question: "¿A qué edad hablan bien los niños?",
+    answer:
+      "Hablar bien es gradual. Alrededor de los 3 años, muchos niños arman oraciones que extraños entienden en gran parte. A los 4 y 5 años el habla suele ser más fluida y se entiende con más claridad. Algunos sonidos, como la /r/ fuerte, pueden consolidarse hacia los 5 o 6 años. Si a los 4 años cuesta entender a tu hijo, conviene evaluar.",
+  },
+  {
+    question: "¿Hablan antes las niñas que los niños?",
+    answer:
+      "En esta guía no hay una edad distinta para niñas y para niños, ni una cifra que los separe. Los hitos son los mismos: primeras palabras entre los 11 y 14 meses, frases de dos palabras a los 2 años y oraciones más claras hacia los 3 años. Si tu hija o tu hijo se atrasa en varios de esos hitos, conviene consultar igual.",
   },
   {
     question: "¿A los cuántos años habla un niño?",
@@ -51,10 +66,9 @@ const faqs = [
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title:
-    "Hitos del lenguaje por edad (0 a 5 años)",
+  title: "¿A qué edad hablan los niños? Hitos del lenguaje por edad",
   description:
-    "A los 12 meses, primeras palabras; a los 2 años, unas 50 palabras y frases de dos. Hitos por edad, señales de alerta y cuándo consultar en Chillán.",
+    "Los niños empiezan a hablar entre los 11 y 14 meses. Tabla por edad, señales de alerta y cuándo consultar en Chillán.",
   keywords: [
     "a qué edad hablan los niños",
     "a qué edad empiezan a hablar los bebés",
@@ -70,9 +84,9 @@ export const metadata = buildPageMetadata({
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "¿A qué edad empiezan a hablar los niños? Hitos del lenguaje por edad",
+  headline: "¿A qué edad hablan los niños? Hitos del lenguaje por edad",
   description:
-    "Guía de una fonoaudióloga sobre cuándo hablan los niños: hitos por edad (12 meses a 5 años), señales de alerta y cuándo evaluar.",
+    "Los niños empiezan a hablar entre los 11 y 14 meses. Tabla por edad, señales de alerta y cuándo consultar en Chillán.",
   author: {
     "@type": "Person",
     name: "Katia Domínguez",
@@ -87,7 +101,18 @@ const articleJsonLd = {
     "@id": `${SITE_URL}${PAGE_PATH}`,
   },
   datePublished: "2026-05-20",
-  dateModified: "2026-10-12",
+  dateModified: "2026-10-19",
+};
+
+const webPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${SITE_URL}${PAGE_PATH}#webpage`,
+  url: `${SITE_URL}${PAGE_PATH}`,
+  name: "¿A qué edad hablan los niños? Hitos del lenguaje por edad",
+  description:
+    "Los niños empiezan a hablar entre los 11 y 14 meses. Tabla por edad, señales de alerta y cuándo consultar en Chillán.",
+  dateModified: "2026-10-19",
 };
 
 const faqJsonLd = {
@@ -112,6 +137,10 @@ export default function HitosDelLenguajePorEdadPage() {
       />
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <Header />
@@ -131,11 +160,14 @@ export default function HitosDelLenguajePorEdadPage() {
                 Desarrollo del lenguaje
               </span>
               <h1 className="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl">
-                ¿A qué edad empiezan a hablar los niños?
+                ¿A qué edad hablan los niños?
               </h1>
               <div className="mb-6 rounded-2xl border-2 border-rose-200 bg-rose-50 p-6">
+                <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-rose-700">
+                  Respuesta rápida
+                </p>
                 <p className="text-lg font-semibold text-gray-900">
-                  <strong>Respuesta rápida:</strong> Los niños suelen decir sus primeras palabras entre los 11 y 14 meses, a los 2 años combinan unas 50 palabras en frases de dos palabras, y a los 3 años hablan en oraciones más completas que extraños entienden en gran parte. Cada niño tiene su ritmo, pero estos hitos orientan cuándo consultar.
+                  Los niños empiezan a hablar con palabras con significado entre los 11 y 14 meses. A los 2 años suelen decir unas 50 palabras y frases de dos. A los 3 años arman oraciones que extraños entienden en gran parte. Hacia los 4 y 5 años el habla se entiende con más claridad.
                 </p>
               </div>
               <p className="text-xl text-gray-600">
@@ -261,6 +293,44 @@ export default function HitosDelLenguajePorEdadPage() {
               <p className="text-sm italic text-gray-600">
                 Nota: Estas cifras son referencias aproximadas. Existe variabilidad normal en el desarrollo; lo importante es observar progreso y detectar señales de alerta.
               </p>
+
+              <nav
+                aria-label="Si tu hijo no habla a esa edad"
+                className="not-prose my-8 rounded-2xl border-2 border-rose-200 bg-white p-6"
+              >
+                <h2 className="mb-3 text-2xl font-bold text-gray-900">
+                  ¿Y si mi hijo no habla a esa edad?
+                </h2>
+                <p className="mb-4 text-gray-700">
+                  Si se atrasa en varios hitos, el paso siguiente es el tratamiento en Chillán o revisar las señales de alerta. Si el problema es que no se le entiende al hablar, el tratamiento es el del trastorno fonológico.
+                </p>
+                <ul className="space-y-2 text-base">
+                  <li>
+                    <Link
+                      href="/tratamientos/retraso-del-lenguaje-chillan"
+                      className="font-medium text-rose-600 underline"
+                    >
+                      Tratamiento del retraso del lenguaje en Chillán
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/recursos/senales-de-alerta-del-lenguaje-y-habla"
+                      className="font-medium text-rose-600 underline"
+                    >
+                      Señales de alerta del lenguaje y el habla
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/tratamientos/trastorno-fonologico-chillan"
+                      className="font-medium text-rose-600 underline"
+                    >
+                      Tratamiento del trastorno fonológico en Chillán
+                    </Link>
+                  </li>
+                </ul>
+              </nav>
 
               <h2>12 meses</h2>
               <p>

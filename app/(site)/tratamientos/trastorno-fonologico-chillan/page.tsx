@@ -46,6 +46,7 @@ const faqs = [
   { q: "¿Qué es la conciencia fonológica?", a: "Es la capacidad de manipular sonidos: rimar, segmentar sílabas, identificar el sonido inicial. Es clave en terapia fonológica y en aprendizaje lector." },
   { q: "¿Se usa TEPROSIF-R?", a: "Sí, según edad y motivo de consulta podemos aplicar TEPROSIF-R u otras pruebas para perfilar el trastorno y documentar avances." },
   { q: "¿Puede estar ligado al TEL?", a: "Sí. A veces el trastorno fonológico forma parte de un TEL mixto o expresivo. Por eso evaluamos lenguaje global, no solo sonidos." },
+  { q: "¿Cómo es el tratamiento en Chillán?", a: "Es presencial. La evaluación fonológica revisa cómo organiza los sonidos y, según la edad, puede incluir pruebas clínicas como el TEPROSIF-R. En las sesiones trabajamos discriminación auditiva, pares mínimos, rimas y automatización en la conversación. Las señales y cuándo consultar están en otra página." },
 ];
 
 const serviceJsonLd = {
@@ -57,6 +58,19 @@ const serviceJsonLd = {
   provider: { "@type": "Person", name: "Katia Domínguez", jobTitle: "Fonoaudióloga" },
   areaServed: { "@type": "City", name: "Chillán" },
   serviceType: "Terapia fonológica infantil",
+};
+
+const medicalWebPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "@id": `${SITE_URL}${PAGE_PATH}#webpage`,
+  url: `${SITE_URL}${PAGE_PATH}`,
+  name: "Tratamiento del trastorno fonológico en Chillán",
+  description:
+    "Tratamiento presencial del trastorno fonológico en Chillán: para quién es, qué incluye la evaluación y cómo son las sesiones.",
+  dateModified: "2026-10-19",
+  medicalSpecialty: "SpeechTherapy",
+  about: { "@id": `${SITE_URL}${PAGE_PATH}#service` },
 };
 
 const faqJsonLd = {
@@ -72,6 +86,10 @@ const faqJsonLd = {
 export default function TrastornoFonologicoPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalWebPageJsonLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
@@ -100,10 +118,16 @@ export default function TrastornoFonologicoPage() {
               data-speakable
               className="mb-6 text-xl leading-relaxed text-gray-600"
             >
-              Si tu hijo de 3 o 4 años habla como bebé, cambia sonidos o no se le
-              entiende fuera de casa, puede haber un trastorno fonológico. En
-              Chillán trabajamos conciencia
-              fonológica, pares mínimos y automatización en conversación real.
+              Esta página es el tratamiento del trastorno fonológico en Chillán,
+              para niños a quienes no se les entiende, cambian sonidos o
+              simplifican palabras, por ejemplo a los 3 o 4 años. La evaluación
+              fonológica revisa cómo organiza los sonidos y, según la edad, puede
+              incluir pruebas clínicas. Las sesiones son presenciales: conciencia
+              fonológica, pares mínimos y automatización en la conversación. Las{" "}
+              <Link href="/chillan/trastorno-fonologico" className="font-medium text-orange-700 underline">
+                señales y cuándo consultar
+              </Link>{" "}
+              están en otra página.
             </p>
             <ul className="mb-8 space-y-3 text-gray-700">
               <li className="flex items-start gap-3">
@@ -177,7 +201,7 @@ export default function TrastornoFonologicoPage() {
               <Link href="/tratamientos/dislalia-infantil-chillan" className="font-semibold text-orange-600 underline">dislalia</Link>{" "}
               de patrón fonológico. Consulta el{" "}
               <Link href="/glosario/trastorno-fonologico" className="font-semibold text-orange-600 underline">glosario</Link>,{" "}
-              <Link href="/chillan/trastorno-fonologico" className="font-semibold text-orange-600 underline">trastorno fonológico en Chillán</Link>{" "}
+              <Link href="/chillan/trastorno-fonologico" className="font-semibold text-orange-600 underline">señales y cuándo consultar</Link>{" "}
               y la{" "}
               <Link href="/servicios/conciencia-fonologica-chillan" className="font-semibold text-orange-600 underline">conciencia fonológica</Link>.{" "}
               La{" "}

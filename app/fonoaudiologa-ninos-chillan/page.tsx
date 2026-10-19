@@ -83,44 +83,62 @@ const jsonLd = {
   }),
 };
 
-// FAQ Schema con estadísticas y formato GEO (+40% citabilidad IA)
+const pillarFaqs = [
+  {
+    question: "¿Qué cubre la fonoaudiología infantil?",
+    answer:
+      "Cubre prevenir, evaluar y tratar el lenguaje, el habla, la pronunciación y la lectoescritura, desde los primeros meses hasta la adolescencia. En Chillán también incluye TEL, apoyo comunicativo en TEA e informe para el PIE.",
+  },
+  {
+    question: "¿A qué edad debo llevar a mi hijo al fonoaudiólogo?",
+    answer:
+      "Puedes consultar desde los 18 meses si notas que tu hijo no dice palabras, o a cualquier edad si observas dificultades en el lenguaje, habla o pronunciación. Mientras más temprano se detecte un problema, mejores son los resultados.",
+  },
+  {
+    question: "¿Cómo es la primera evaluación en Chillán?",
+    answer:
+      "Es presencial y dura unos 60 minutos: pruebas de lenguaje y habla, y un informe con diagnóstico y plan de tratamiento. La coordinas por WhatsApp; respondo el mismo día, de lunes a viernes.",
+  },
+  {
+    question: "¿La fonoaudiología infantil es presencial o online?",
+    answer:
+      "La fonoaudiología infantil de esta consulta es presencial en Chillán. La terapia de voz, para adultos, es online por videollamada en todo Chile.",
+  },
+  {
+    question: "¿Cuántas sesiones de terapia son necesarias?",
+    answer:
+      "Depende del diagnóstico. Algunos casos de trastornos del habla mejoran en 3-6 meses (12-24 sesiones), otros requieren más tiempo. En la evaluación inicial te daré un estimado según el caso de tu hijo.",
+  },
+  {
+    question: "¿Cómo sé si mi hijo tiene un trastorno del habla o del lenguaje?",
+    answer:
+      "Algunas señales incluyen: habla poco para su edad, no sigue instrucciones simples, pronuncia mal varios sonidos, se frustra al comunicarse, o tiene dificultades de lectura y escritura. Una evaluación profesional puede determinar si existe un trastorno y cuál es el mejor tratamiento.",
+  },
+  {
+    question: "¿Trabaja con niños con TEL o TEA?",
+    answer:
+      "Sí, trabajo con niños con Trastorno Específico del Lenguaje (TEL) y también con niños dentro del espectro autista (TEA) que requieran apoyo en comunicación y lenguaje. Cada caso se evalúa de forma individual.",
+  },
+  {
+    question: "¿Dónde atiende en Chillán?",
+    answer:
+      "Atiendo en consulta presencial en Chillán, Región de Ñuble. Al agendar por WhatsApp coordinamos día, hora y detalles de la cita.",
+  },
+  {
+    question: "¿Puede ayudar con dificultades de lectura y escritura?",
+    answer:
+      "Sí, muchas dificultades de lectura y escritura tienen su origen en problemas del lenguaje oral. Trabajo tanto el lenguaje hablado como las habilidades pre-lectoras y de lectoescritura cuando es necesario.",
+  },
+];
+
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "¿A qué edad debe llevar a mi hijo al fonoaudiólogo?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Puedes consultar desde los 18 meses si tu hijo no dice palabras, o a cualquier edad ante dificultades en lenguaje, habla o pronunciación. A los 2 años se esperan unas 50 palabras y frases de 2 palabras. La intervención temprana mejora significativamente los resultados.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Cuántas sesiones de terapia de lenguaje son necesarias?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Depende del diagnóstico. Algunos casos mejoran en 3-6 meses (12-24 sesiones), otros requieren más tiempo. La evaluación inicial dura aproximadamente 60 minutos e incluye informe con estimado personalizado.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Cómo sé si mi hijo tiene un trastorno del habla o del lenguaje?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Señales frecuentes: habla poco para su edad, no sigue instrucciones simples, pronuncia mal varios sonidos, se frustra al comunicarse o tiene dificultades de lectura y escritura. Una evaluación fonoaudiológica de ~60 minutos determina si existe trastorno y el mejor tratamiento.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿La fonoaudióloga atiende niños con TEL o TEA en Chillán?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Sí. El TEL (Trastorno Específico del Lenguaje) afecta aproximadamente al 7% de los niños. Trabajo con TEL y con niños dentro del espectro autista (TEA) que requieran apoyo en comunicación. Cada caso se evalúa de forma individual.",
-      },
-    },
-  ],
+  mainEntity: pillarFaqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  })),
 };
 
 // WebPage con SpeakableSpecification (GEO: extracción por IA y búsqueda por voz)
@@ -223,10 +241,11 @@ const guiasPorTema = [
   { href: "/sintomas/nino-no-entiende-instrucciones-chillan", label: "Niño no entiende instrucciones" },
   { href: "/sintomas/nino-tartamudea-chillan", label: "Niño tartamudea" },
   { href: "/tratamientos/dislalia-infantil-chillan", label: "Tratamiento dislalia infantil" },
-  { href: "/tratamientos/retraso-del-lenguaje-chillan", label: "Retraso del lenguaje" },
+  { href: "/agendar-hora-fonoaudiologo-infantil-chillan", label: "Agendar hora de evaluación en Chillán" },
+  { href: "/tratamientos/retraso-del-lenguaje-chillan", label: "Tratamiento del retraso del lenguaje en Chillán" },
   { href: "/tratamientos/retraso-del-habla-chillan", label: "Retraso del habla" },
   { href: "/tratamientos/tel-trastorno-especifico-lenguaje-chillan", label: "TEL en Chillán" },
-  { href: "/tratamientos/trastorno-fonologico-chillan", label: "Trastorno fonológico" },
+  { href: "/tratamientos/trastorno-fonologico-chillan", label: "Tratamiento del trastorno fonológico en Chillán" },
   { href: "/tratamientos/apraxia-del-habla-infantil-chillan", label: "Apraxia del habla infantil" },
   { href: "/chillan/dislalia", label: "Dislalia en Chillán" },
   { href: "/chillan/retraso-del-lenguaje", label: "Retraso del lenguaje en Chillán" },
@@ -469,7 +488,7 @@ export default function FonoaudiologaNinosChillanPage() {
                 </p>
                 <ul className="space-y-1 text-sm text-gray-600">
                   <li>
-                    → <Link href="/tratamientos/retraso-del-lenguaje-chillan" className="font-medium text-rose-600 underline hover:text-rose-700">Retraso del lenguaje</Link>
+                    → <Link href="/tratamientos/retraso-del-lenguaje-chillan" className="font-medium text-rose-600 underline hover:text-rose-700">Tratamiento del retraso del lenguaje en Chillán</Link>
                   </li>
                   <li>
                     → <Link href="/tratamientos/tel-trastorno-especifico-lenguaje-chillan" className="font-medium text-rose-600 underline hover:text-rose-700">TEL / TDL (Trastorno Específico del Lenguaje)</Link>
@@ -491,7 +510,7 @@ export default function FonoaudiologaNinosChillanPage() {
                     → <Link href="/tratamientos/dislalia-infantil-chillan" className="font-medium text-rose-600 underline hover:text-rose-700">Dislalia (errores de pronunciación)</Link>
                   </li>
                   <li>
-                    → <Link href="/tratamientos/trastorno-fonologico-chillan" className="font-medium text-rose-600 underline hover:text-rose-700">Trastorno fonológico</Link>
+                    → <Link href="/tratamientos/trastorno-fonologico-chillan" className="font-medium text-rose-600 underline hover:text-rose-700">Tratamiento del trastorno fonológico en Chillán</Link>
                   </li>
                   <li>
                     → <Link href="/tratamientos/retraso-del-habla-chillan" className="font-medium text-rose-600 underline hover:text-rose-700">Retraso del habla</Link>
@@ -755,102 +774,20 @@ export default function FonoaudiologaNinosChillanPage() {
               </h2>
             </div>
             <div className="space-y-6">
-              <details className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-                <summary className="flex cursor-pointer items-start justify-between gap-4 font-semibold text-gray-900">
-                  <span>
-                    ¿A qué edad debo llevar a mi hijo al fonoaudiólogo?
-                  </span>
-                  <span className="flex-shrink-0 text-rose-500 transition-transform group-open:rotate-180">
-                    ▼
-                  </span>
-                </summary>
-                <p className="mt-4 text-gray-600">
-                  Puedes consultar desde los 18 meses si notas que tu hijo no
-                  dice palabras, o a cualquier edad si observas dificultades en
-                  el lenguaje, habla o pronunciación. Mientras más temprano se
-                  detecte un problema, mejores son los resultados.
-                </p>
-              </details>
-
-              <details className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-                <summary className="flex cursor-pointer items-start justify-between gap-4 font-semibold text-gray-900">
-                  <span>¿Cuántas sesiones de terapia son necesarias?</span>
-                  <span className="flex-shrink-0 text-rose-500 transition-transform group-open:rotate-180">
-                    ▼
-                  </span>
-                </summary>
-                <p className="mt-4 text-gray-600">
-                  Depende del diagnóstico. Algunos casos de trastornos del habla
-                  mejoran en 3-6 meses (12-24 sesiones), otros requieren más
-                  tiempo. En la evaluación inicial te daré un estimado según el
-                  caso de tu hijo.
-                </p>
-              </details>
-
-              <details className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-                <summary className="flex cursor-pointer items-start justify-between gap-4 font-semibold text-gray-900">
-                  <span>
-                    ¿Cómo sé si mi hijo tiene un trastorno del habla o del
-                    lenguaje?
-                  </span>
-                  <span className="flex-shrink-0 text-rose-500 transition-transform group-open:rotate-180">
-                    ▼
-                  </span>
-                </summary>
-                <p className="mt-4 text-gray-600">
-                  Algunas señales incluyen: habla poco para su edad, no sigue
-                  instrucciones simples, pronuncia mal varios sonidos, se
-                  frustra al comunicarse, o tiene dificultades de lectura y
-                  escritura. Una evaluación profesional puede determinar si
-                  existe un trastorno y cuál es el mejor tratamiento.
-                </p>
-              </details>
-
-              <details className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-                <summary className="flex cursor-pointer items-start justify-between gap-4 font-semibold text-gray-900">
-                  <span>¿Trabaja con niños con TEL o TEA?</span>
-                  <span className="flex-shrink-0 text-rose-500 transition-transform group-open:rotate-180">
-                    ▼
-                  </span>
-                </summary>
-                <p className="mt-4 text-gray-600">
-                  Sí, trabajo con niños con Trastorno Específico del Lenguaje
-                  (TEL) y también con niños dentro del espectro autista (TEA)
-                  que requieran apoyo en comunicación y lenguaje. Cada caso se
-                  evalúa de forma individual.
-                </p>
-              </details>
-
-              <details className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-                <summary className="flex cursor-pointer items-start justify-between gap-4 font-semibold text-gray-900">
-                  <span>¿Dónde atiende en Chillán?</span>
-                  <span className="flex-shrink-0 text-rose-500 transition-transform group-open:rotate-180">
-                    ▼
-                  </span>
-                </summary>
-                <p className="mt-4 text-gray-600">
-                  Atiendo en consulta presencial en Chillán, Región de Ñuble. Al
-                  agendar por WhatsApp coordinamos día, hora y detalles de la
-                  cita.
-                </p>
-              </details>
-
-              <details className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-                <summary className="flex cursor-pointer items-start justify-between gap-4 font-semibold text-gray-900">
-                  <span>
-                    ¿Puede ayudar con dificultades de lectura y escritura?
-                  </span>
-                  <span className="flex-shrink-0 text-rose-500 transition-transform group-open:rotate-180">
-                    ▼
-                  </span>
-                </summary>
-                <p className="mt-4 text-gray-600">
-                  Sí, muchas dificultades de lectura y escritura tienen su
-                  origen en problemas del lenguaje oral. Trabajo tanto el
-                  lenguaje hablado como las habilidades pre-lectoras y de
-                  lectoescritura cuando es necesario.
-                </p>
-              </details>
+              {pillarFaqs.map((faq) => (
+                <details
+                  key={faq.question}
+                  className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm"
+                >
+                  <summary className="flex cursor-pointer items-start justify-between gap-4 font-semibold text-gray-900">
+                    <span>{faq.question}</span>
+                    <span className="flex-shrink-0 text-rose-500 transition-transform group-open:rotate-180">
+                      ▼
+                    </span>
+                  </summary>
+                  <p className="mt-4 text-gray-600">{faq.answer}</p>
+                </details>
+              ))}
             </div>
 
             {/* CTA after FAQs */}

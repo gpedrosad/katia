@@ -82,6 +82,10 @@ const faqs = [
     q: "¿Necesito derivación del médico o colegio?",
     a: "No es obligatorio para agendar en consulta particular. Si el colegio o el PIE piden informe, lo elaboramos tras la evaluación formal.",
   },
+  {
+    q: "¿Qué incluye la evaluación y cómo son las sesiones en Chillán?",
+    a: "La evaluación inicial revisa comprensión y expresión. Las sesiones son presenciales, con juego y rutinas comunicativas, y al terminar te llevas una guía para practicar en casa. Las edades de las primeras palabras están en la guía de hitos, no en esta página de tratamiento.",
+  },
 ];
 
 const serviceJsonLd = {
@@ -94,6 +98,19 @@ const serviceJsonLd = {
   provider: { "@type": "Person", name: "Katia Domínguez", jobTitle: "Fonoaudióloga" },
   areaServed: { "@type": "City", name: "Chillán" },
   serviceType: "Terapia de lenguaje infantil",
+};
+
+const medicalWebPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "@id": `${SITE_URL}${PAGE_PATH}#webpage`,
+  url: `${SITE_URL}${PAGE_PATH}`,
+  name: "Tratamiento del retraso del lenguaje en Chillán",
+  description:
+    "Tratamiento presencial del retraso del lenguaje en Chillán: para quién es, qué incluye la evaluación y cómo son las sesiones.",
+  dateModified: "2026-10-19",
+  medicalSpecialty: "SpeechTherapy",
+  about: { "@id": `${SITE_URL}${PAGE_PATH}#service` },
 };
 
 const faqJsonLd = {
@@ -109,6 +126,10 @@ const faqJsonLd = {
 export default function RetrasoLenguajePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalWebPageJsonLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
@@ -137,10 +158,16 @@ export default function RetrasoLenguajePage() {
               data-speakable
               className="mb-6 text-xl leading-relaxed text-gray-600"
             >
-              El retraso del lenguaje es una de las consultas más frecuentes en
-              fonoaudiología infantil: el niño puede hablar poco, no formar
-              frases a los 2 años o frustrarse al comunicarse. En Chillán trabajamos con un
-              enfoque lúdico y planificado para favorecer su expresión.
+              Esta página es el tratamiento del retraso del lenguaje en Chillán,
+              para niños que hablan poco, no arman frases o se frustran al
+              comunicarse. La evaluación revisa comprensión y expresión. Las
+              sesiones son presenciales, con juego y rutinas, y incluyen una guía
+              para practicar en casa. Si buscas las edades de las primeras
+              palabras, esa guía es la de{" "}
+              <Link href="/recursos/hitos-del-lenguaje-por-edad" className="font-medium text-rose-700 underline">
+                hitos del lenguaje por edad
+              </Link>
+              .
             </p>
             <ul className="mb-8 space-y-3 text-gray-700">
               <li className="flex items-start gap-3">

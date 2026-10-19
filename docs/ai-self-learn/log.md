@@ -4,6 +4,10 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 
 ---
 
+## 2026-10-19
+
+- SEO Lote 13 | Segundo pase Lote 7. Hitos retitle «¿A qué edad hablan los niños?» (223 imp, 0 clic, pos 9,9). Home solo description (fonoaudióloga/fonoaudiología Chillán + voz online, sin «fonoaudiología infantil» en title/H1). `/servicios` hub con listado agrupado y OfferCatalog. Tratamientos de retraso del lenguaje y trastorno fonológico: intro de terapia, MedicalWebPage `dateModified` 2026-10-19; la consulta de edades queda en hitos y las señales fonológicas en `/chillan/trastorno-fonologico`. Google aún no rastreó el Lote 7 | Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 6 URLs y medir ~2026-11-02..11-09. Sitemap GSC bajado el 2026-10-11 (85 URLs; vivo 126).
+
 ## 2026-10-18
 
 - SEO Lote 12 | Cuello = rastreo, no robots. `/glosario/tdl` entra al índice del glosario y se enlaza desde TEL, disfasia y la comparación TEL vs retraso. Estimulación temprana se retargetea a «estimulación del lenguaje infantil en Chillán» y separa la consulta de la guía de casa. `/chillan/retraso-del-habla` y `/chillan/trastorno-fonologico` quedan como señales y entregan el tratamiento a `/tratamientos/*` (sin 301). Contacto gana ContactPage sobre el `#business` de `lib/site.ts` | Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar comparaciones, glosarios Lote 6, señales de alerta y contacto; reenviar sitemap. El `page.tsx` de `/evaluacion-fonoaudiologica-infantil-chillan` sigue, pero ya hay 308 a `/servicios/evaluacion-fonoaudiologica`.
