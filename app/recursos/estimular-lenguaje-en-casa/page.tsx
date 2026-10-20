@@ -8,15 +8,10 @@ import { SITE_URL, whatsappUrl } from "@/lib/site";
 
 const PAGE_PATH = "/recursos/estimular-lenguaje-en-casa";
 const WHATSAPP_HREF = whatsappUrl(
-  "Hola, estoy estimulando el lenguaje en casa pero sigo con dudas y quiero evaluar a mi hijo"
+  "Hola, estoy haciendo terapia de lenguaje en casa pero sigo con dudas y quiero evaluar a mi hijo"
 );
 
 const faqs = [
-  {
-    question: "¿Qué es la estimulación del lenguaje?",
-    answer:
-      "La estimulación del lenguaje es crear oportunidades naturales para que tu hijo escuche, participe y se exprese: hablar con él, seguir su interés, modelar palabras y frases, leer juntos y jugar. No es una clase formal ni reemplaza la terapia cuando hay un trastorno, pero sí fortalece el desarrollo del lenguaje en casa.",
-  },
   {
     question: "¿Cómo hacer terapia de lenguaje en casa?",
     answer:
@@ -51,22 +46,19 @@ const faqs = [
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Estimulación del Lenguaje en Casa | Terapia de Lenguaje",
+  title: "Terapia de lenguaje en casa: cómo empezar con tu hijo",
   description:
-    "Cómo estimular el lenguaje en casa, paso a paso de 1 a 5 años: qué evitar (no interrogar ni corregir todo) y cuándo evaluar. Fonoaudióloga, +20 años.",
+    "Cómo empezar la terapia de lenguaje en casa: sigue su atención, modela, expande y no interrogues. Unos 15-20 minutos, varias veces al día.",
   keywords: [
-    "estimulación del lenguaje",
-    "cómo hacer terapia de lenguaje en casa",
     "cómo empezar la terapia de lenguaje en casa",
-    "como dar terapia de lenguaje en casa",
-    "como hacer terapia de lenguaje en casa",
+    "cómo hacer terapia de lenguaje en casa",
     "terapia de lenguaje en casa",
-    "cómo empezar a estimular el lenguaje",
+    "como hacer terapia de lenguaje en casa",
+    "como dar terapia de lenguaje en casa",
     "estimular lenguaje en casa",
     "cómo ayudar a mi hijo a hablar",
     "actividades para estimular el lenguaje",
     "ejercicios de lenguaje para niños en casa",
-    "estimulación del lenguaje infantil",
   ],
   ogType: "article",
 });
@@ -74,10 +66,9 @@ export const metadata = buildPageMetadata({
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline:
-    "Estimulación del lenguaje en casa: cómo hacer terapia de lenguaje sin presionar",
+  headline: "Terapia de lenguaje en casa: cómo empezar con tu hijo",
   description:
-    "Guía práctica de estimulación del lenguaje y terapia de lenguaje en casa según la edad del niño (1 a 5 años).",
+    "Cómo empezar y cómo hacer terapia de lenguaje en casa, con pautas para la rutina de 1 a 5 años.",
   author: {
     "@type": "Person",
     name: "Katia Domínguez",
@@ -92,7 +83,7 @@ const articleJsonLd = {
     "@id": `${SITE_URL}${PAGE_PATH}`,
   },
   datePublished: "2026-05-20",
-  dateModified: "2026-10-13",
+  dateModified: "2026-10-20",
 };
 
 const faqJsonLd = {
@@ -127,7 +118,7 @@ export default function EstimularLenguajeEnCasaPage() {
               items={[
                 { label: "Inicio", href: "/" },
                 { label: "Recursos", href: "/recursos" },
-                { label: "Estimular lenguaje en casa" },
+                { label: "Terapia de lenguaje en casa" },
               ]}
             />
 
@@ -136,17 +127,16 @@ export default function EstimularLenguajeEnCasaPage() {
                 Consejos prácticos
               </span>
               <h1 className="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl">
-                Estimulación del lenguaje en casa: cómo hacer terapia de
-                lenguaje sin presionar
+                Terapia de lenguaje en casa: cómo empezar con tu hijo
               </h1>
               <div className="mb-6 rounded-2xl border-2 border-emerald-200 bg-emerald-50 p-6">
                 <p className="text-lg font-semibold text-gray-900">
-                  <strong>Respuesta rápida:</strong> La estimulación del
-                  lenguaje en casa es crear oportunidades naturales para que tu
-                  hijo escuche, participe y se exprese —no una «clase» formal.
-                  Cómo hacer terapia de lenguaje en casa: sigue su atención,
-                  modela sin corregir cada error y expande lo que dice. No
-                  reemplaza la terapia fonoaudiológica si hay un trastorno.
+                  <strong>Respuesta rápida:</strong> Empieza con momentos
+                  breves de la rutina, cara a cara. Sigue lo que tu hijo mira,
+                  modela sin corregir cada error y expande lo que dice. No lo
+                  interrogues ni le exijas que repita. Unos 15-20 minutos de
+                  interacción de calidad, varias veces al día, suelen servir
+                  más que una clase larga.
                 </p>
               </div>
               <p className="text-xl text-gray-600">
@@ -217,89 +207,58 @@ export default function EstimularLenguajeEnCasaPage() {
 
             <div className="prose prose-lg max-w-none">
               <p>
-                Estimular el lenguaje en casa no significa presionar ni corregir
+                La terapia de lenguaje en casa no significa presionar ni corregir
                 constantemente. Significa crear oportunidades naturales para que tu
                 hijo escuche, participe y se exprese en un ambiente tranquilo y
                 cercano.
               </p>
 
-              <h2>¿Qué es la estimulación del lenguaje?</h2>
+              <h2>¿Cómo empezar la terapia de lenguaje en casa?</h2>
               <p>
-                La <strong>estimulación del lenguaje</strong> es el acompañamiento
-                diario que hacen los padres: hablar con el niño, seguir su
-                interés, modelar palabras y frases, leer juntos y crear rutinas
-                de juego comunicativo. No es una clase formal. Fortalece el
-                desarrollo del lenguaje, pero{" "}
-                <strong>no reemplaza la terapia</strong> cuando hay un retraso o
-                un trastorno.
+                Empieza por momentos breves y frecuentes cara a cara: nombra lo
+                que mira, ofrece opciones («¿leche o jugo?»), lee juntos y
+                celebra cualquier intento. No hace falta una sesión larga
+                forzada. Unos 15-20 minutos de interacción de calidad, varias
+                veces al día, suelen ser más útiles. Si después de varias
+                semanas no hay progreso, conviene evaluar.
               </p>
               <p>
-                Si buscas un plan profesional (no solo ideas para casa), una{" "}
-                <Link href="/servicios/evaluacion-fonoaudiologica">
-                  evaluación fonoaudiológica
-                </Link>{" "}
-                aclara si conviene{" "}
-                <Link href="/servicios/terapia-lenguaje-infantil">
-                  terapia de lenguaje infantil
-                </Link>
-                .
+                Elige esos momentos dentro de la rutina —comidas, baño, paseos
+                y juego— en vez de armar una «clase».
               </p>
 
-              <h2>¿Cómo hacer terapia de lenguaje en casa?</h2>
-              <p>
-                Cómo empezar la terapia de lenguaje en casa: elige momentos
-                breves y frecuentes de la rutina —comidas, baño, paseos y
-                juego— en vez de una sesión larga forzada. Cómo dar terapia de
-                lenguaje en casa, en la práctica:
-              </p>
+              <h2>¿Cómo hacer terapia de lenguaje en casa paso a paso?</h2>
+              <p>Cómo dar terapia de lenguaje en casa, en la práctica:</p>
               <ul>
                 <li>
-                  Sigue lo que tu hijo mira o le interesa, no solo lo que tú
-                  quieres enseñar.
+                  <strong>Sigue su atención:</strong> comenta lo que mira o le
+                  interesa, no solo lo que tú quieres enseñar.
                 </li>
                 <li>
-                  Habla más lento y da tiempo para procesar y responder.
+                  <strong>Habla más lento:</strong> da tiempo para procesar y
+                  responder, especialmente si habla poco.
                 </li>
                 <li>
-                  Modela sin corregir cada error: si dice «agua tía», responde
-                  «sí, quieres agua fría».
+                  <strong>Modela sin corregir cada error:</strong> si dice «agua
+                  tía», puedes responder «sí, quieres agua fría» en lugar de
+                  exigir repetición perfecta.
                 </li>
                 <li>
-                  Expande: si dice «perro», puedes decir «perro grande» o «el
-                  perro corre».
+                  <strong>Expande:</strong> toma lo que dice y agrégale una o
+                  dos palabras. Si dice «perro», puedes decir «perro grande» o
+                  «el perro corre».
                 </li>
                 <li>
-                  Evita interrogar («¿qué es esto?», «¿de qué color?») y exigir
-                  «dilo bien» todo el rato.
+                  <strong>No interrogues:</strong> evita «¿qué es esto?» y
+                  «¿de qué color?» seguidos, y no le pidas «dilo bien» todo el
+                  rato.
                 </li>
               </ul>
               <p>
                 Estas pautas apoyan la terapia de lenguaje en casa. Si hay
                 señales de alerta o no ves avances, conviene evaluar: no es lo
-                mismo estimular que tratar un trastorno.
+                mismo acompañar en la rutina que tratar un trastorno.
               </p>
-
-              <h2>Antes de empezar: qué sí funciona</h2>
-              <ul>
-                <li>
-                  <strong>Seguir la atención del niño:</strong> comenta lo que mira
-                  o le interesa, no solo lo que tú quieres enseñar.
-                </li>
-                <li>
-                  <strong>Hablar más lento:</strong> da tiempo para procesar y
-                  responder, especialmente si habla poco.
-                </li>
-                <li>
-                  <strong>Modelar sin corregir cada error:</strong> si dice «agua
-                  tía», puedes responder «sí, quieres agua fría» en lugar de
-                  exigir repetición perfecta.
-                </li>
-                <li>
-                  <strong>Repetir y expandir:</strong> toma lo que dice y agrégale
-                  una o dos palabras. Si dice «perro», puedes decir «perro grande» o
-                  «el perro corre».
-                </li>
-              </ul>
 
               <h2>Ideas para niños de 1 a 2 años</h2>
               <ul>
@@ -351,12 +310,12 @@ export default function EstimularLenguajeEnCasaPage() {
                 </li>
               </ul>
 
-              <h2>Cuándo la estimulación en casa no alcanza</h2>
+              <h2>¿Cuándo no basta con lo que haces en casa?</h2>
               <p>
-                La estimulación en casa es valiosa, pero no siempre basta. Conviene
+                Lo que haces en casa es valioso, pero no siempre basta. Conviene
                 evaluar si hay señales de alerta persistentes, si no hay progreso
-                después de semanas de estimulación o si el colegio reporta
-                dificultades. Una{" "}
+                después de varias semanas o si el colegio reporta dificultades.
+                Una{" "}
                 <Link href="/servicios/evaluacion-del-lenguaje-infantil-chillan">
                   evaluación del lenguaje
                 </Link>{" "}
@@ -366,6 +325,24 @@ export default function EstimularLenguajeEnCasaPage() {
                   terapia fonoaudiológica
                 </Link>
                 . Actuar a tiempo suele facilitar mejores resultados.
+              </p>
+              <p>
+                Si buscas un plan profesional (no solo ideas para casa), una{" "}
+                <Link href="/servicios/evaluacion-fonoaudiologica">
+                  evaluación fonoaudiológica
+                </Link>{" "}
+                aclara si conviene{" "}
+                <Link href="/servicios/terapia-lenguaje-infantil">
+                  terapia de lenguaje infantil
+                </Link>
+                .
+              </p>
+              <p>
+                Si lo que buscas es el acompañamiento en la consulta, revisa la{" "}
+                <Link href="/servicios/estimulacion-temprana-del-lenguaje-chillan">
+                  estimulación del lenguaje en Chillán
+                </Link>
+                .
               </p>
 
               <h2>Preguntas frecuentes</h2>

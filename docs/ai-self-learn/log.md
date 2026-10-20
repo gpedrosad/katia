@@ -6,6 +6,7 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 
 ## 2026-10-20
 
+- SEO Lote 14 | `/recursos/estimular-lenguaje-en-casa` pasa al cluster «terapia de lenguaje en casa / cómo empezar» y cede «estimulación del lenguaje» a `/servicios/estimulacion-temprana-del-lenguaje-chillan` (ancla «estimulación del lenguaje en Chillán»). `/recursos/primera-evaluacion-fonoaudiologica-infantil` queda como guía de padres («qué esperar y cómo preparar»); la query «evaluacion fonoaudiologica» sigue en `/servicios/evaluacion-fonoaudiologica`. Duración alineada a los 60 minutos ya publicados en el servicio. Sitemap vivo 128 URLs; apex http sigue en dos 308 (Vercel → https apex → www). `lastmod` de `/sintomas/mi-hijo-no-habla-bien-chillan` en el sitemap vivo (`2026-10-15`) no coincide con git (`2026-10-13`); el generador local sí coincide, no se cambió `sitemap.ts` | Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 2 guías y reenviar sitemap; medir ~2026-11-03..11-10.
 - SEO voz online adultos | Hub retitulado a «Terapia de voz online para adultos en Chile». Páginas nuevas solo donde no había intención: `/voz-online/polipos-en-las-cuerdas-vocales` (terapia de apoyo, otorrino primero) y `/voz-online/como-es-la-sesion-de-voz-online`. Titles de disfonía (solo H1), ronquera, voz cansada, profesores, cantantes/locutores, nódulos e higiene. Entrada en home y `/servicios`. Sin páginas de ciudad, sin `/ads`, sin `/sitelink`. Sitemap autodescubre los `page.tsx` | Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar 12 URLs y medir ~2026-11-03..11-10.
 
 ## 2026-10-19

@@ -20,6 +20,81 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-10-20: SEO Lote 14 — terapia en casa, primera evaluación y chequeo de rastreo
+
+### Contexto
+
+**Datos GSC (90 días 2026-07-22 al 2026-10-19, sc-domain:katialafono.cl, dataState=all, pull 2026-10-20):**
+- **88 clics**
+- **5.577 impresiones**
+- **Posición promedio: 8,1**
+
+**Últimos 7 días (2026-10-13 al 2026-10-19):** 9 clics / 671 imp vs 7 días previos (2026-10-06 al 2026-10-12): 7 clics / 608 imp
+
+**URL Inspection (2026-10-20):** ninguna página del Lote 8 (editada el 2026-10-13) fue rastreada de nuevo. Último rastreo: estimular en casa 2026-09-10, TEL 2026-08-20, evaluación 2026-09-26, sobre Katia 2026-09-21, síntomas entre 2026-08-20 y 2026-10-03. Los números de GSC siguen viendo la versión anterior. `/recursos/primera-evaluacion-fonoaudiologica-infantil` sí se rastreó el 2026-10-16. `/voz-online/polipos-en-las-cuerdas-vocales` sigue desconocida para Google.
+
+**Sitemap:** GSC (www) lo bajó el 2026-10-11 con 85 URLs. El sitemap vivo lista 128.
+
+**Solape:** el Lote 12 dejó «estimulación del lenguaje» en `/servicios/estimulacion-temprana-del-lenguaje-chillan`. Esta guía seguía con ese término en title y H1, y en GSC aparece en pos 33 (61 imp, 0 clics). Su cluster real es «terapia de lenguaje en casa / cómo empezar» (pos ~10-16).
+
+**Primera evaluación:** 90 días 77 imp / 0 clics / pos 8,4. En 7 días subió de 19 a 33 imp. La única query visible es «evaluacion fonoaudiologica» (3 imp, pos 39,7), que pertenece a `/servicios/evaluacion-fonoaudiologica`.
+
+**Páginas congeladas:** no se editó copy ni metadata del resto del Lote 8, Lotes 9–13, ronda 2, home, `/servicios`, pilar, hitos, `/tratamientos/*`, `/chillan/*`, `/glosario/*`, `/comparaciones/*`, estimulación temprana, `/voz-online/*`, `/ads/*` ni `/sitelink/*`. Enlazar hacia ellas sí.
+
+**Objetivo:** ceder «estimulación del lenguaje» a la página de servicio y capturar el cluster de terapia en casa; subir el CTR de la guía de la primera evaluación sin competir con el servicio. Medir ~2026-11-03 al 2026-11-10.
+
+### Páginas optimizadas
+
+#### 1. `/recursos/estimular-lenguaje-en-casa`
+- **Title:** `"Estimulación del Lenguaje en Casa | Terapia de Lenguaje"` → `"Terapia de lenguaje en casa: cómo empezar con tu hijo"` (53 caracteres; `buildPageMetadata` usa título absoluto)
+- **Description:** cómo empezar: seguir la atención, modelar, expandir y no interrogar; 15-20 minutos varias veces al día (dato ya publicado)
+- **H1:** «Terapia de lenguaje en casa: cómo empezar con tu hijo»
+- **Respuesta rápida:** 52 palabras, justo bajo el H1, a «¿Cómo empezar la terapia de lenguaje en casa?»
+- **H2:** «¿Cómo empezar la terapia de lenguaje en casa?», «¿Cómo hacer terapia de lenguaje en casa paso a paso?», «¿Cuándo no basta con lo que haces en casa?»
+- **Enlace:** una sola mención, con ancla «estimulación del lenguaje en Chillán», hacia `/servicios/estimulacion-temprana-del-lenguaje-chillan`. Se sacó el término del title, del H1, de las keywords principales y de la FAQ «¿Qué es la estimulación del lenguaje?»
+- **FAQPage:** el schema repite las preguntas visibles. Se mantienen las de cómo hacer, cómo empezar, tiempo, pantallas y cuándo evaluar
+- **Article:** `dateModified` 2026-10-20. Sin cifras ni técnicas nuevas
+
+#### 2. `/recursos/primera-evaluacion-fonoaudiologica-infantil`
+- **Title:** `"Primera evaluación fonoaudiológica infantil"` → `"Primera evaluación: qué esperar y cómo preparar a tu hijo"` (57 caracteres)
+- **Description:** qué pasa en la sesión, qué llevar, cómo explicárselo y el informe
+- **H1:** «Primera evaluación fonoaudiológica: qué esperar y cómo preparar a tu hijo»
+- **Respuesta rápida** bajo el H1: entrevista, juego, pruebas, unos 60 minutos, cómo explicarlo y el informe. Los 60 minutos y el informe escrito son los ya publicados en `/servicios/evaluacion-fonoaudiologica`. Se dejó atrás el rango «60 a 90 minutos», que no está en esa página de servicio
+- **FAQ + FAQPage:** «¿Qué llevar a la primera evaluación?», «¿Cómo le explico a mi hijo que va al fonoaudiólogo?», «¿Qué pasa después de la evaluación?». El schema usa el mismo texto visible
+- **CTA:** bloque con ancla «evaluación fonoaudiológica en Chillán» hacia `/servicios/evaluacion-fonoaudiologica` y enlace a `/agendar-hora-fonoaudiologo-infantil-chillan`
+- **Article:** `dateModified` 2026-10-20
+- No se compite por «evaluacion fonoaudiologica»: ese término queda en el servicio
+
+### Chequeo técnico (sin cambio de código)
+
+- **Sitemap vivo:** las 8 URLs del Lote 8 y las dos de voz (`/voz-online/polipos-en-las-cuerdas-vocales`, `/voz-online/como-es-la-sesion-de-voz-online`) están, con `lastmod` por página. En 9 de esas 10 el `lastmod` coincide con el último commit del `page.tsx` (el generador usa git y, si no hay historial, `lib/page-lastmod.json`).
+- **Excepción:** `/sintomas/mi-hijo-no-habla-bien-chillan` sale en el sitemap vivo como `2026-10-15T12:13:31Z`. Git y el JSON dicen `2026-10-13T12:55:27Z`. El generador local, con el mismo código, devuelve la fecha de git. No se tocó `app/sitemap.ts`: no hay un fallo reproducible que corregir. El JSON de respaldo no incluye las dos páginas nuevas de voz (en producción no importa: el build sí tiene git y el `lastmod` vivo es `2026-10-20`).
+- **Indexación:** las 10 responden 200, `index, follow` y canonical a sí mismas en `https://www.katialafono.cl`.
+- **Enlaces entrantes** (archivos distintos, sin la propia página; `/seo-links` es noindex y no entra):
+  - estimular en casa: 16 (footer, índice de recursos, guías y síntomas)
+  - TEL: 9 (footer, home, `/servicios`)
+  - hub de voz: 20 (footer, header, home y `/servicios`)
+  - evaluación fonoaudiológica: 43
+  - sobre Katia: 7 (footer y home)
+  - niño no entiende instrucciones: 5
+  - mi hijo no habla bien: 9
+  - hijo no arma frases: 16
+  - pólipos: 5, entre ellas el hub de voz
+  - cómo es la sesión: 6, entre ellas el hub de voz
+- **Apex:** `http://katialafono.cl/` sigue en dos saltos 308: primero a `https://katialafono.cl/` (Vercel) y después a `https://www.katialafono.cl/` (200). No se cambió código. El salto directo a www se configura en dominios de Vercel.
+
+### Métricas esperadas
+
+- La guía de casa deja de rankear «estimulación del lenguaje» y gana clics en «cómo empezar / cómo hacer terapia de lenguaje en casa».
+- La guía de la primera evaluación sube el CTR con el snippet de qué esperar y cómo preparar, y la query «evaluacion fonoaudiologica» se queda en el servicio.
+- Que Google rastree de nuevo la guía de casa (último rastreo 2026-09-10) y descubra `/voz-online/polipos-en-las-cuerdas-vocales`.
+
+### Indexar en GSC
+
+`/recursos/estimular-lenguaje-en-casa` y `/recursos/primera-evaluacion-fonoaudiologica-infantil`. Reenviar el sitemap (GSC lo bajó el 2026-10-11).
+
+---
+
 ## 2026-10-20: SEO voz online adultos — hub, títulos y dos páginas nuevas
 
 ### Contexto

@@ -15,12 +15,22 @@ const faqs = [
   {
     question: "¿Cuánto dura la primera evaluación?",
     answer:
-      "Suele durar entre 60 y 90 minutos, según la edad del niño y la complejidad de la consulta. Incluye entrevista con la familia, observación, pruebas adaptadas y una devolución preliminar al final de la sesión.",
+      "La evaluación completa dura aproximadamente 60 minutos. Incluye entrevista con los padres, evaluación directa del niño y entrega de resultados preliminares. El informe escrito se entrega después.",
   },
   {
-    question: "¿Mi hijo debe ir preparado de alguna forma?",
+    question: "¿Qué llevar a la primera evaluación?",
     answer:
-      "No hace falta «entrenarlo». Conviene que descanse bien, vaya cómodo y en un horario en que esté más receptivo. Puedes explicarle de forma simple que irán a jugar y hablar con una profesional que ayuda a los niños a comunicarse mejor.",
+      "Lleva informes previos si existen (evaluaciones escolares, médicas o de otros profesionales), antecedentes de salud, audición o intervenciones, y comentarios del colegio o de las educadoras. Anota también tus preguntas para la entrevista y la devolución.",
+  },
+  {
+    question: "¿Cómo le explico a mi hijo que va al fonoaudiólogo?",
+    answer:
+      "No hace falta entrenarlo. Puedes explicarle de forma simple que irán a jugar y hablar con una profesional que ayuda a los niños a comunicarse mejor. Conviene que descanse bien, vaya cómodo y en un horario en que esté más receptivo.",
+  },
+  {
+    question: "¿Qué pasa después de la evaluación?",
+    answer:
+      "Al cierre hay una devolución preliminar. Después recibes el informe con resultados, fortalezas, dificultades y recomendaciones. Según lo que se encuentre, puede corresponder seguimiento, terapia con una frecuencia definida o solo orientaciones para la casa y el colegio.",
   },
   {
     question: "¿Siempre se entrega informe?",
@@ -36,14 +46,15 @@ const faqs = [
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Primera evaluación fonoaudiológica infantil",
+  title: "Primera evaluación: qué esperar y cómo preparar a tu hijo",
   description:
-    "Primera evaluación fonoaudiológica infantil en Chillán: dura 60 a 90 minutos, qué llevar, cómo es la sesión y qué incluye el informe.",
+    "En la primera sesión: entrevista, juego y pruebas (unos 60 minutos). Qué llevar, cómo explicárselo a tu hijo y el informe que recibes después.",
   keywords: [
     "qué esperar en la primera evaluación fonoaudiológica",
+    "cómo preparar a tu hijo para la evaluación",
+    "qué llevar a la primera evaluación",
+    "cómo explicarle al niño la visita al fonoaudiólogo",
     "primera evaluación fonoaudiológica infantil",
-    "qué esperar evaluación fonoaudiológica de tu hijo",
-    "qué llevar a evaluación del lenguaje",
     "informe fonoaudiológico niños",
   ],
   ogType: "article",
@@ -52,9 +63,10 @@ export const metadata = buildPageMetadata({
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Primera evaluación fonoaudiológica infantil: qué esperar",
+  headline:
+    "Primera evaluación fonoaudiológica: qué esperar y cómo preparar a tu hijo",
   description:
-    "Guía para padres sobre la primera evaluación fonoaudiológica: duración, preparación, informe y pasos siguientes.",
+    "Guía para padres: qué pasa en la primera sesión, qué llevar, cómo explicárselo a tu hijo y qué recibes después.",
   author: {
     "@type": "Person",
     name: "Katia Domínguez",
@@ -69,7 +81,7 @@ const articleJsonLd = {
     "@id": `${SITE_URL}${PAGE_PATH}`,
   },
   datePublished: "2026-05-20",
-  dateModified: "2026-05-20",
+  dateModified: "2026-10-20",
 };
 
 const faqJsonLd = {
@@ -113,8 +125,19 @@ export default function PrimeraEvaluacionPage() {
                 Primera consulta
               </span>
               <h1 className="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl">
-                Primera evaluación fonoaudiológica infantil: qué esperar
+                Primera evaluación fonoaudiológica: qué esperar y cómo preparar
+                a tu hijo
               </h1>
+              <div className="mb-6 rounded-2xl border-2 border-blue-200 bg-blue-50 p-6">
+                <p className="text-lg font-semibold text-gray-900">
+                  <strong>Respuesta rápida:</strong> En la primera sesión hay
+                  entrevista con la familia, observación en el juego y pruebas
+                  según la edad. Dura unos 60 minutos. No hace falta entrenarlo:
+                  explícaselo como un rato de juego y conversación. Después
+                  recibes un informe con resultados, fortalezas, dificultades y
+                  recomendaciones.
+                </p>
+              </div>
               <p className="text-xl text-gray-600">
                 Si es la primera vez que llevas a tu hijo a una evaluación, esta
                 guía te explica qué ocurre en la sesión, qué llevar y qué pasa
@@ -135,7 +158,7 @@ export default function PrimeraEvaluacionPage() {
                     href="/servicios/evaluacion-fonoaudiologica"
                     className="font-medium text-rose-600 underline"
                   >
-                    Evaluación fonoaudiológica
+                    Evaluación fonoaudiológica en Chillán
                   </Link>
                 </li>
                 <li>
@@ -273,13 +296,13 @@ export default function PrimeraEvaluacionPage() {
                 </li>
               </ul>
               <p>
-                Puedes conocer más detalle en la página de{" "}
+                El detalle de la sesión, el informe y el plan está en la{" "}
                 <Link href="/servicios/evaluacion-fonoaudiologica">
-                  evaluación fonoaudiológica
-                </Link>{" "}
-                o agendar directamente tu{" "}
+                  evaluación fonoaudiológica en Chillán
+                </Link>
+                . Cuando quieras pedir hora, entra a{" "}
                 <Link href="/agendar-hora-fonoaudiologo-infantil-chillan">
-                  primera hora en Chillán
+                  agendar hora
                 </Link>
                 .
               </p>
@@ -304,12 +327,39 @@ export default function PrimeraEvaluacionPage() {
               ))}
             </div>
 
-            <div className="mt-12 rounded-2xl bg-rose-50 p-8 text-center">
+            <div className="mt-12 rounded-2xl border-2 border-rose-200 bg-white p-8">
+              <h2 className="mb-3 text-2xl font-bold text-gray-900">
+                El siguiente paso
+              </h2>
+              <p className="mb-4 text-gray-700">
+                Esta guía es para preparar la visita. La sesión, el informe y
+                el plan están en la{" "}
+                <Link
+                  href="/servicios/evaluacion-fonoaudiologica"
+                  className="font-semibold text-rose-600 underline"
+                >
+                  evaluación fonoaudiológica en Chillán
+                </Link>
+                .
+              </p>
+              <p className="text-gray-700">
+                Si ya quieres pedir hora, revisa cómo{" "}
+                <Link
+                  href="/agendar-hora-fonoaudiologo-infantil-chillan"
+                  className="font-semibold text-rose-600 underline"
+                >
+                  agendar hora
+                </Link>
+                .
+              </p>
+            </div>
+
+            <div className="mt-8 rounded-2xl bg-rose-50 p-8 text-center">
               <h2 className="mb-4 text-2xl font-bold text-gray-900">
                 ¿Listo para dar el primer paso?
               </h2>
               <p className="mb-6 text-gray-600">
-                Agenda la primera evaluación fonoaudiológica de tu hijo en Chillán.
+                Agenda la primera evaluación de tu hijo en Chillán.
               </p>
               <WhatsAppCTA href={WHATSAPP_HREF}>
                 Agendar primera evaluación
