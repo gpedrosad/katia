@@ -1,6 +1,6 @@
 # INDEX — hechos densos (leer primero)
 
-Actualizado: **2026-10-19**
+Actualizado: **2026-10-20**
 
 ## Identidad / NAP
 
@@ -67,6 +67,7 @@ Actualizado: **2026-10-19**
 - Lote 11 (2026-10-17): GSC 90d 07-19..10-16 **89 clic / 5.469 imp / pos 8,0** · 7d 9/649 vs 5/711. Logopeda descubierta sin rastrear; conciencia fonológica rastreada sin indexar; trastornos del habla pos 54,6 por «fonoaudiologo chillan». Sitemap prod con el mismo `lastmod` (mtime del clone). Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar logopeda + conciencia + hubs ronda 1–2 y reenviar sitemap.
 - Lote 12 (2026-10-18): GSC 90d 07-20..10-17 **89 clic / 5.490 imp / pos 8,0** · 7d 10/634 vs 5/727. Las 23 URLs Lote 6 siguen en 0 imp. `/glosario/tdl` era huérfana. «estimulación del lenguaje» (59 imp, pos 33,5) cae en la guía de casa. Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar comparaciones, glosarios Lote 6, señales de alerta y contacto; reenviar sitemap (GSC lo bajó el 2026-10-11).
 - Lote 13 (2026-10-19): segundo pase Lote 7. GSC 90d 07-21..10-18 **90 clic / 5.495 imp / pos 8,1** · 7d 9/628 vs 7/707. Hitos aún rastreada el 2026-09-21 (Lote 7 no visto). Title hitos pasa a «¿A qué edad hablan los niños?» (223 imp, 0 clic, pos 9,9). `/servicios` en caída de impresiones. Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar hitos, pilar, home, servicios y los 2 tratamientos; medir ~2026-11-02..11-09.
+- 2026-10-20: lote voz online adultos. Hub title «Terapia de voz online para adultos en Chile». URLs nuevas: `/voz-online/polipos-en-las-cuerdas-vocales` y `/voz-online/como-es-la-sesion-de-voz-online` (apoyo al otorrino; sin ciudades). Entrada en home y `/servicios`. No se tocó `/ads`, `/sitelink` ni landings de ciudad. Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 12 URLs del lote y reenviar sitemap; medir ~2026-11-03..11-10.
 
 ## Stack / convenciones
 

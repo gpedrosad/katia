@@ -4,6 +4,10 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 
 ---
 
+## 2026-10-20
+
+- SEO voz online adultos | Hub retitulado a «Terapia de voz online para adultos en Chile». Páginas nuevas solo donde no había intención: `/voz-online/polipos-en-las-cuerdas-vocales` (terapia de apoyo, otorrino primero) y `/voz-online/como-es-la-sesion-de-voz-online`. Titles de disfonía (solo H1), ronquera, voz cansada, profesores, cantantes/locutores, nódulos e higiene. Entrada en home y `/servicios`. Sin páginas de ciudad, sin `/ads`, sin `/sitelink`. Sitemap autodescubre los `page.tsx` | Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar 12 URLs y medir ~2026-11-03..11-10.
+
 ## 2026-10-19
 
 - SEO Lote 13 | Segundo pase Lote 7. Hitos retitle «¿A qué edad hablan los niños?» (223 imp, 0 clic, pos 9,9). Home solo description (fonoaudióloga/fonoaudiología Chillán + voz online, sin «fonoaudiología infantil» en title/H1). `/servicios` hub con listado agrupado y OfferCatalog. Tratamientos de retraso del lenguaje y trastorno fonológico: intro de terapia, MedicalWebPage `dateModified` 2026-10-19; la consulta de edades queda en hitos y las señales fonológicas en `/chillan/trastorno-fonologico`. Google aún no rastreó el Lote 7 | Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 6 URLs y medir ~2026-11-02..11-09. Sitemap GSC bajado el 2026-10-11 (85 URLs; vivo 126).

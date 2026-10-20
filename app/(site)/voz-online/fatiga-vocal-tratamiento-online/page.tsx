@@ -7,9 +7,9 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/fatiga-vocal-tratamiento-online",
-  title: "¿Por qué se me cansa la voz? Fatiga vocal online",
+  title: "Voz cansada: ¿por qué se me cansa la voz?",
   description:
-    "Fatiga vocal: por qué se te cansa la voz al final del día y cómo tratarla online. Respiración, técnica y proyección sin tensión. Chile.",
+    "Voz cansada: por qué se te cansa la voz y cómo tratar la fatiga vocal online en Chile. Respiración y técnica, por videollamada.",
   keywords: [
     "fatiga vocal",
     "se me cansa la voz",
@@ -77,14 +77,15 @@ export default function FatigaVocalPage() {
         <article className="prose prose-orange lg:prose-lg max-w-none">
           <header className="mb-10 text-center">
             <h1 className="text-4xl font-extrabold text-orange-950 mb-6">
-              ¿Por qué se me cansa la voz?
+              Voz cansada: ¿por qué se me cansa la voz?
             </h1>
             <div className="not-prose mx-auto mb-6 max-w-3xl rounded-2xl border-2 border-orange-200 bg-white p-5 text-left">
               <p className="text-lg font-semibold text-orange-950">
-                <strong>Respuesta rápida:</strong> La fatiga vocal es cansancio,
-                debilidad o esfuerzo al hablar, sobre todo al final del día.
-                Suele venir de un uso vocal ineficiente. El tratamiento online
-                trabaja respiración, técnica y proyección sin tensión.
+                <strong>Respuesta rápida:</strong> La voz cansada (fatiga vocal)
+                es cansancio, debilidad o esfuerzo al hablar, sobre todo al
+                final del día. Suele venir de un uso vocal ineficiente. El
+                tratamiento online trabaja respiración, técnica y proyección
+                sin tensión.
               </p>
             </div>
             <p
@@ -192,6 +193,10 @@ export default function FatigaVocalPage() {
               . El punto de partida es la{" "}
               <Link href="/voz-online/evaluacion-vocal-online" className="font-semibold text-orange-700">
                 evaluación vocal online
+              </Link>
+              . El formato de la videollamada está en{" "}
+              <Link href="/voz-online/como-es-la-sesion-de-voz-online" className="font-semibold text-orange-700">
+                cómo es la sesión de voz online
               </Link>
               .
             </p>

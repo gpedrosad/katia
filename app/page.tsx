@@ -143,8 +143,14 @@ export default function Home() {
                   Fonoaudióloga con más de 20 años de experiencia clínica en
                   Chillán, Ñuble. Evaluación, diagnóstico y tratamiento para
                   niños que hablan poco, no arman frases, pronuncian mal o no se
-                  hacen entender.
-                  También atención de voz online para todo Chile.
+                  hacen entender. También{" "}
+                  <Link
+                    href="/voz-online/fonoaudiologa-de-voz-online"
+                    className="font-medium text-sky-700 underline"
+                  >
+                    atención de voz online para todo Chile
+                  </Link>
+                  .
                 </p>
 
                 {/* CTAs */}
@@ -229,6 +235,21 @@ export default function Home() {
               {services.map((service) => (
                 <ServiceCard key={service.href} {...service} />
               ))}
+            </div>
+
+            <div className="mt-10">
+              <Link
+                href="/voz-online/fonoaudiologa-de-voz-online"
+                className="block rounded-2xl border border-sky-200 bg-sky-50 px-6 py-5 text-center transition hover:border-sky-300"
+              >
+                <p className="text-lg font-semibold text-sky-950">
+                  ¿Eres adulto? Terapia de voz online en todo Chile
+                </p>
+                <p className="mt-1 text-sm text-sky-800">
+                  Disfonía, ronquera, nódulos y voz cansada, por videollamada.
+                  Distinto de la consulta infantil en Chillán.
+                </p>
+              </Link>
             </div>
 
             <div className="mt-10 text-center">

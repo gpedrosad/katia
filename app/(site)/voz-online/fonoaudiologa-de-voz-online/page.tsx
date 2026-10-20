@@ -3,36 +3,37 @@ import { WhatsAppCTA } from "@/app/_components/WhatsAppCTA";
 import { TestimonialCard } from "@/app/_components/TestimonialCard";
 import Link from "next/link";
 import { GeoFAQ } from "@/app/_components/GeoFAQ";
+import { MEDICAL_BUSINESS_ID } from "@/lib/local-business-schema";
 import { buildPageMetadata } from "@/lib/seo";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/fonoaudiologa-de-voz-online",
-  title: "Fonoaudióloga Especialista en Voz Online | Todo Chile",
+  title: "Terapia de voz online para adultos en Chile",
   description:
-    "Fonoaudióloga especialista en voz, 100% online por videollamada en todo Chile. Disfonía, nódulos y fatiga vocal, sin traslados. U. de Chile, +20 años.",
+    "Fonoaudióloga de voz online para adultos en todo Chile. Terapia por videollamada: disfonía, ronquera, nódulos y voz cansada. +20 años. Agenda por WhatsApp.",
   keywords: [
+    "terapia de voz online",
+    "fonoaudióloga voz online",
+    "fonoaudiología voz adultos",
+    "fonoaudióloga de voz online",
     "fonoaudiólogo especialista en voz",
     "fonoaudióloga especialista en voz",
-    "fonoaudiologo online",
-    "fonoaudióloga online",
-    "fonoaudiologa online",
-    "fonoaudiologia voz",
-    "fonoaudiología especialista en voz",
-    "fonoaudióloga de voz online",
-    "especialista en voz Chile",
-    "terapia de voz online todo Chile",
-    "videollamada fonoaudióloga",
-    "tratamiento disfonía online",
-    "nódulos vocales tratamiento",
-    "fatiga vocal tratamiento",
+    "disfonía tratamiento",
+    "ronquera persistente",
+    "voz cansada profesores",
+    "nódulos en las cuerdas vocales terapia",
+    "higiene vocal",
+    "terapia vocal cantantes",
+    "terapia vocal locutores",
   ],
 });
 
 const faqItems = [
   {
-    question: "¿Qué hace una fonoaudióloga especialista en voz?",
+    question: "¿Qué es la terapia de voz online?",
     answer:
-      "Una fonoaudióloga especialista en voz evalúa y trata trastornos vocales: disfonía, nódulos, fatiga vocal, rehabilitación post-cirugía e higiene vocal para docentes y profesionales de la voz. En esta consulta el trabajo es 100% online por videollamada, para adultos en todo Chile.",
+      "Es fonoaudiología de voz para adultos, por videollamada, en todo Chile. Katia Domínguez evalúa y trabaja disfonía, ronquera, nódulos, voz cansada, higiene vocal y el uso profesional de la voz. Si hay que mirar las cuerdas, el otorrino va primero y la terapia acompaña ese diagnóstico.",
   },
   {
     question: "¿Puedo atenderme con una fonoaudióloga online desde cualquier ciudad de Chile?",
@@ -60,9 +61,9 @@ export default function FonoaudiologaVozOnlinePage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "Katia Domínguez - Fonoaudióloga de Voz Online",
+    name: "Terapia de voz online para adultos — Katia Domínguez",
     description:
-      "Servicio de fonoaudiología especializada en trastornos de la voz con atención online para adultos en todo Chile.",
+      "Fonoaudiología de voz para adultos, 100% online por videollamada, en todo Chile.",
     areaServed: {
       "@type": "Country",
       name: "Chile",
@@ -86,6 +87,27 @@ export default function FonoaudiologaVozOnlinePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Terapia de voz online para adultos",
+            serviceType: "Terapia de voz",
+            description:
+              "Fonoaudiología de voz para adultos por videollamada en todo Chile: disfonía, ronquera, nódulos, voz cansada e higiene vocal.",
+            url: `${SITE_URL}/voz-online/fonoaudiologa-de-voz-online`,
+            areaServed: { "@type": "Country", name: "Chile" },
+            provider: { "@id": MEDICAL_BUSINESS_ID },
+            availableChannel: {
+              "@type": "ServiceChannel",
+              serviceType: "Videollamada",
+              availableLanguage: "es-CL",
+            },
+          }),
+        }}
+      />
       <main className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
         <Breadcrumbs
           items={[
@@ -97,15 +119,23 @@ export default function FonoaudiologaVozOnlinePage() {
         <article className="prose prose-sky lg:prose-lg max-w-none">
           <header className="mb-12 rounded-3xl bg-gradient-to-br from-sky-50 to-indigo-50 px-8 py-12 text-center text-sky-950">
             <h1 className="mb-4 text-4xl font-extrabold tracking-tight sm:text-5xl">
-              Fonoaudióloga especialista en voz online para todo Chile
+              Terapia de voz online para adultos en todo Chile
             </h1>
+            <div className="not-prose mx-auto mb-6 max-w-3xl rounded-2xl border border-sky-200 bg-white/80 p-5 text-left">
+              <p className="text-lg font-semibold leading-relaxed text-sky-950" data-speakable>
+                <strong>Respuesta rápida:</strong> La terapia de voz online es
+                fonoaudiología de voz para adultos, por videollamada, en todo
+                Chile. La hace Katia Domínguez, fonoaudióloga de la Universidad
+                de Chile, con más de 20 años de experiencia clínica. Sirve si
+                tienes disfonía, ronquera, nódulos, voz cansada o usas la voz
+                para trabajar. Si hay que mirar las cuerdas, el otorrino va
+                primero: la terapia acompaña ese diagnóstico.
+              </p>
+            </div>
             <p className="mx-auto mb-4 max-w-3xl text-2xl font-semibold leading-snug text-sky-900">
               ¿Sientes que tu voz te abandona cuando más la necesitas?
             </p>
-            <p
-              className="mx-auto max-w-3xl text-xl leading-relaxed text-sky-800/80"
-              data-speakable
-            >
+            <p className="mx-auto max-w-3xl text-xl leading-relaxed text-sky-800/80">
               Vivir con ronquera constante, ardor en la garganta o sentir que debes esforzarte para que te escuchen <strong>no es normal</strong>. Detén el desgaste antes de que sea irreversible con terapia vocal online especializada.
             </p>
             <p className="mx-auto mt-4 max-w-2xl text-sm text-sky-800/90">
@@ -133,14 +163,14 @@ export default function FonoaudiologaVozOnlinePage() {
 
           <section className="my-12">
             <h2 className="text-3xl font-bold text-sky-900 border-b pb-4">
-              Fonoaudióloga especialista en voz, 100% online
+              Fonoaudióloga de voz online para adultos
             </h2>
             <p className="text-gray-700 leading-relaxed">
-              Katia Domínguez es fonoaudióloga especialista en voz. La consulta
-              es <strong>fonoaudióloga online</strong> (fonoaudiólogo online) por
-              videollamada, para adultos en todo Chile: disfonía, nódulos,
-              fatiga vocal y rehabilitación post-cirugía. Sin traslados, con
-              agenda flexible.
+              Katia Domínguez es fonoaudióloga de voz. La{" "}
+              <strong>terapia de voz online</strong> es por videollamada, para
+              adultos en todo Chile: disfonía, ronquera persistente, nódulos,
+              voz cansada e higiene vocal. Sin traslados, con agenda por
+              WhatsApp. La consulta infantil sigue siendo presencial en Chillán.
             </p>
             <p className="text-gray-700 leading-relaxed mt-4">
               Si buscas fonoaudiología de voz con una especialista, el trabajo
@@ -192,38 +222,56 @@ export default function FonoaudiologaVozOnlinePage() {
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 not-prose mb-12">
                 {[
                   {
-                    title: "Disfonía Crónica",
-                    desc: "Recupera tu tono y pierde el miedo a quedar afónico.",
+                    title: "Disfonía y ronquera",
+                    desc: "Tratamiento de disfonía cuando la ronquera no se va.",
                     href: "/voz-online/tratamiento-disfonia-online",
                     icon: "🗣️",
                   },
                   {
-                    title: "Nódulos Vocales",
-                    desc: "Evita la cirugía con rehabilitación vocal especializada y guiada.",
+                    title: "Nódulos en las cuerdas",
+                    desc: "Terapia vocal que acompaña el diagnóstico del otorrino.",
                     href: "/voz-online/nodulos-vocales-tratamiento-online",
                     icon: "🔬",
                   },
                   {
-                    title: "Fatiga Vocal",
-                    desc: "Aprende a usar tu voz todo el día sin sentir dolor.",
+                    title: "Pólipos en las cuerdas",
+                    desc: "Terapia de apoyo: no reemplaza el examen del otorrino.",
+                    href: "/voz-online/polipos-en-las-cuerdas-vocales",
+                    icon: "🩺",
+                  },
+                  {
+                    title: "Voz cansada",
+                    desc: "Si al final del día ya no te alcanza la voz.",
                     href: "/voz-online/fatiga-vocal-tratamiento-online",
                     icon: "😮‍💨",
                   },
                   {
-                    title: "Vigilancia para Docentes",
-                    desc: "Termina el viernes con la misma voz que el lunes.",
+                    title: "Voz cansada en profesores",
+                    desc: "Terapia vocal para docentes, compatible con la jornada.",
                     href: "/voz-online/terapia-vocal-docentes-profesores",
                     icon: "👩‍🏫",
                   },
                   {
-                    title: "Voz Profesional",
-                    desc: "Lleva tu instrumento a su máximo rendimiento.",
+                    title: "Cantantes y locutores",
+                    desc: "Terapia vocal para quien vive de la voz.",
                     href: "/voz-online/rehabilitacion-vocal-profesionales-voz",
                     icon: "🎤",
                   },
                   {
-                    title: "Evaluación Diagnóstica",
-                    desc: "Descubre exactamente qué le pasa a tu voz de forma 100% online.",
+                    title: "Higiene vocal",
+                    desc: "Hábitos diarios para cuidar las cuerdas.",
+                    href: "/voz-online/higiene-vocal-cuidado-voz",
+                    icon: "💧",
+                  },
+                  {
+                    title: "Cómo es la sesión",
+                    desc: "Qué pasa en la videollamada y qué necesitas.",
+                    href: "/voz-online/como-es-la-sesion-de-voz-online",
+                    icon: "💻",
+                  },
+                  {
+                    title: "Evaluación vocal",
+                    desc: "El primer paso, 100% online, con plan.",
                     href: "/voz-online/evaluacion-vocal-online",
                     icon: "📋",
                   },
@@ -242,6 +290,17 @@ export default function FonoaudiologaVozOnlinePage() {
                   </Link>
                 ))}
               </div>
+              <p className="mx-auto max-w-3xl text-center text-base text-sky-900">
+                Si la queja es la ronquera, parte por{" "}
+                <Link href="/voz-online/voz-ronca-causas-tratamiento" className="font-semibold underline">
+                  ronquera persistente
+                </Link>
+                . Si el otorrino diagnosticó una parálisis de cuerda, la{" "}
+                <Link href="/voz-online/paralisis-cordal-rehabilitacion-online" className="font-semibold underline">
+                  rehabilitación de parálisis cordal
+                </Link>{" "}
+                también es online.
+              </p>
             </div>
           </section>
 

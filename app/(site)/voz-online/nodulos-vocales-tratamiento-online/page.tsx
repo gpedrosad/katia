@@ -7,9 +7,9 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/nodulos-vocales-tratamiento-online",
-  title: "Nódulos Vocales: ¿Se curan sin cirugía? | Online",
+  title: "Nódulos en las cuerdas vocales | Terapia",
   description:
-    "¿Se pueden curar los nódulos vocales sin cirugía? Terapia vocal online como primera línea. Mejora la calidad de la voz. Chile.",
+    "Terapia para nódulos en las cuerdas vocales, online en Chile. Acompaña al otorrino: en muchos casos se prueba antes de operar.",
   keywords: [
     "nódulos vocales",
     "nodulos cuerdas vocales",
@@ -202,7 +202,11 @@ export default function NodulosVocalesPage() {
               <Link href="/voz-online/evaluacion-vocal-online" className="font-semibold text-amber-700">
                 evaluación vocal online
               </Link>
-              .
+              . Si el diagnóstico es un pólipo, mira{" "}
+              <Link href="/voz-online/polipos-en-las-cuerdas-vocales" className="font-semibold text-amber-700">
+                pólipos en las cuerdas vocales
+              </Link>
+              : ahí la terapia es de apoyo y el otorrino define el camino.
             </p>
           </section>
 

@@ -6,9 +6,9 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/voz-ronca-causas-tratamiento",
-  title: "¿Por qué tengo la voz ronca? Causas y qué hacer",
+  title: "Ronquera persistente: por qué y qué hacer",
   description:
-    "Voz ronca: por qué aparece y qué hacer si dura más de 2 semanas. Causas frecuentes y tratamiento fonoaudiológico online en Chile.",
+    "Ronquera persistente: por qué tienes la voz ronca y qué hacer si dura más de 2 semanas. Evaluación y terapia de voz online en Chile.",
   keywords: [
     "voz ronca",
     "por qué tengo la voz ronca",
@@ -75,14 +75,15 @@ export default function VozRoncaPage() {
 
         <article className="prose prose-pink lg:prose-lg max-w-none">
           <h1 className="text-4xl font-extrabold text-pink-950">
-            ¿Por qué tengo la voz ronca?
+            Ronquera persistente: ¿por qué tengo la voz ronca?
           </h1>
           <div className="not-prose my-6 rounded-2xl border-2 border-pink-200 bg-pink-50 p-5">
             <p className="text-lg font-semibold text-pink-950">
-              <strong>Respuesta rápida:</strong> La voz ronca aparece cuando las
-              cuerdas vocales no vibran de forma simétrica. Si dura más de 2
-              semanas sin resfriado, conviene evaluación. Causas frecuentes:
-              mal uso vocal, laringitis, reflujo y nódulos.
+              <strong>Respuesta rápida:</strong> La ronquera persistente es una
+              voz ronca que no se va. Aparece cuando las cuerdas vocales no
+              vibran de forma simétrica. Si dura más de 2 semanas sin resfriado,
+              conviene evaluación. Causas frecuentes: mal uso vocal, laringitis,
+              reflujo y nódulos.
             </p>
           </div>
           <p className="lead font-medium text-gray-700" data-speakable>
@@ -223,7 +224,11 @@ export default function VozRoncaPage() {
               <Link href="/voz-online/terapia-vocal-docentes-profesores" className="font-semibold text-pink-700">
                 terapia vocal para docentes
               </Link>{" "}
-              trabaja la proyección en sala.
+              trabaja la proyección en sala. Si el otorrino habló de un pólipo,{" "}
+              <Link href="/voz-online/polipos-en-las-cuerdas-vocales" className="font-semibold text-pink-700">
+                la terapia de apoyo para pólipos
+              </Link>{" "}
+              no reemplaza ese examen.
             </p>
           </section>
 

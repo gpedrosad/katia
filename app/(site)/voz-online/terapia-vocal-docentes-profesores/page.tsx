@@ -7,9 +7,9 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/terapia-vocal-docentes-profesores",
-  title: "Terapia vocal para docentes | Online",
+  title: "Voz cansada en profesores | Terapia online",
   description:
-    "El 58% de los docentes desarrolla un trastorno de voz. Terapia online para profesores: técnica vocal, proyección sin gritar y prevención de disfonía.",
+    "Voz cansada en profesores: terapia vocal online para docentes en todo Chile. Proyección sin gritar, por videollamada. Agenda por WhatsApp.",
   keywords: [
     "terapia vocal docentes",
     "voz profesores",
@@ -77,7 +77,7 @@ export default function TerapiaVocalDocentesPage() {
         <article className="prose prose-emerald lg:prose-lg max-w-none">
           <header className="mb-10 text-center">
             <h1 className="text-4xl font-extrabold text-emerald-950 mb-6">
-              ¿Sobrevives apenas tus clases porque tu voz no da más?
+              Voz cansada en profesores: terapia vocal online
             </h1>
             <p
               className="lead font-medium text-gray-700 max-w-3xl mx-auto"
@@ -87,7 +87,7 @@ export default function TerapiaVocalDocentesPage() {
             </p>
             <div className="not-prose mx-auto mt-4 max-w-3xl rounded-2xl border-2 border-emerald-200 bg-white p-5 text-left text-base text-emerald-950">
               <p>
-                <strong>Respuesta rápida:</strong> La terapia vocal para docentes es online y enseña a proyectar sin gritar, con higiene vocal y calentamiento antes de clases, en horarios compatibles con la jornada escolar.
+                <strong>Respuesta rápida:</strong> La voz cansada en profesores se trabaja con terapia vocal online: proyectar sin gritar, higiene vocal y calentamiento antes de clases, en horarios compatibles con la jornada escolar.
               </p>
               <p className="mt-3 text-sm">
                 <Link href="/voz-online/higiene-vocal-cuidado-voz" className="font-semibold underline">
@@ -100,6 +100,10 @@ export default function TerapiaVocalDocentesPage() {
                 {" · "}
                 <Link href="/voz-online/fatiga-vocal-tratamiento-online" className="font-semibold underline">
                   Fatiga vocal
+                </Link>
+                {" · "}
+                <Link href="/voz-online/como-es-la-sesion-de-voz-online" className="font-semibold underline">
+                  Cómo es la sesión
                 </Link>
               </p>
             </div>

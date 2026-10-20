@@ -172,7 +172,7 @@ const serviceGroups = [
         emoji: "🎙️",
         title: "Terapia de voz online",
         description:
-          "Para adultos, por videollamada, en todo Chile: disfonía, nódulos y fatiga vocal.",
+          "¿Eres adulto? Terapia de voz online en todo Chile: disfonía, ronquera y voz cansada, por videollamada.",
       },
     ],
   },
@@ -234,6 +234,14 @@ export default function ServiciosPage() {
                 terapia del habla, TEL, TEA, lectoescritura, informe PIE,
                 conciencia fonológica y estimulación del lenguaje. La terapia de
                 voz es online, por videollamada, para adultos en todo Chile.
+              </p>
+              <p className="mx-auto mt-4 max-w-2xl text-center">
+                <Link
+                  href="/voz-online/fonoaudiologa-de-voz-online"
+                  className="font-semibold text-sky-800 underline"
+                >
+                  ¿Eres adulto? Terapia de voz online en todo Chile
+                </Link>
               </p>
             </div>
 

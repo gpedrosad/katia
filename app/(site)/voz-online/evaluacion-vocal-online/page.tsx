@@ -216,6 +216,10 @@ export default function EvaluacionVocalOnlinePage() {
               <Link href="/voz-online/nodulos-vocales-tratamiento-online" className="font-semibold text-violet-700">
                 tratamiento de nódulos
               </Link>
+              . Qué pasa después de esa primera videollamada está en{" "}
+              <Link href="/voz-online/como-es-la-sesion-de-voz-online" className="font-semibold text-violet-700">
+                cómo es la sesión de voz online
+              </Link>
               .
             </p>
           </section>

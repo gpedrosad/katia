@@ -20,6 +20,55 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-10-20: SEO voz online adultos — hub, títulos y dos páginas nuevas
+
+### Contexto
+
+Sin pull nuevo de GSC. El último corte sigue siendo el del Lote 13 (90 días al 2026-10-18: 90 clics / 5.495 imp / pos 8,1).
+
+La línea de voz ya tenía hub y páginas de disfonía, nódulos, fatiga, docentes, profesionales, higiene, ronquera, evaluación y parálisis. No se crearon páginas de ciudades. No se tocó `/ads` ni `/sitelink`.
+
+**Objetivo:** que el servicio nacional (terapia de voz online para adultos) se lea en títulos, H1 y enlaces, y cubrir solo las intenciones que no tenían URL. Medir ~2026-11-03 al 2026-11-10.
+
+### Páginas nuevas
+
+- `/voz-online/polipos-en-las-cuerdas-vocales` — terapia de apoyo. El otorrino diagnostica; la videollamada no reemplaza el examen ni una cirugía indicada. FAQPage + Service `areaServed` Chile.
+- `/voz-online/como-es-la-sesion-de-voz-online` — qué es la videollamada, para quién, cómo sigue después de la evaluación y cuándo ver al otorrino antes. FAQPage + Service `areaServed` Chile.
+
+Entran solas al sitemap (se descubren los `page.tsx`). También quedaron en `lib/seo-routes.ts`.
+
+### Títulos (antes → después)
+
+| URL | Title antes | Title después | H1 antes | H1 después |
+| --- | --- | --- | --- | --- |
+| `/voz-online/fonoaudiologa-de-voz-online` | Fonoaudióloga Especialista en Voz Online \| Todo Chile | Terapia de voz online para adultos en Chile | Fonoaudióloga especialista en voz online para todo Chile | Terapia de voz online para adultos en todo Chile |
+| `/voz-online/tratamiento-disfonia-online` | (igual) Tratamiento Disfonía Online Chile \| ¿Ronquera persistente? | (igual) | Saca esa ronquera de tu vida con Tratamiento de Disfonía Online | Tratamiento de disfonía online |
+| `/voz-online/voz-ronca-causas-tratamiento` | ¿Por qué tengo la voz ronca? Causas y qué hacer | Ronquera persistente: por qué y qué hacer | ¿Por qué tengo la voz ronca? | Ronquera persistente: ¿por qué tengo la voz ronca? |
+| `/voz-online/fatiga-vocal-tratamiento-online` | ¿Por qué se me cansa la voz? Fatiga vocal online | Voz cansada: ¿por qué se me cansa la voz? | ¿Por qué se me cansa la voz? | Voz cansada: ¿por qué se me cansa la voz? |
+| `/voz-online/terapia-vocal-docentes-profesores` | Terapia vocal para docentes \| Online | Voz cansada en profesores \| Terapia online | ¿Sobrevives apenas tus clases porque tu voz no da más? | Voz cansada en profesores: terapia vocal online |
+| `/voz-online/rehabilitacion-vocal-profesionales-voz` | Rehabilitación de la Voz en Profesionales \| Online | Cantantes y locutores: terapia vocal online | Rehabilitación de la voz en profesionales | Terapia vocal para cantantes y locutores |
+| `/voz-online/nodulos-vocales-tratamiento-online` | Nódulos Vocales: ¿Se curan sin cirugía? \| Online | Nódulos en las cuerdas vocales \| Terapia | (igual) ¿Se pueden tratar los nódulos vocales sin cirugía? | (igual) |
+| `/voz-online/higiene-vocal-cuidado-voz` | ¿Cómo Cuidar la Voz? Higiene Vocal Día a Día | Higiene vocal: cómo cuidar la voz cada día | ¿Cómo cuidar la voz? Higiene vocal | Higiene vocal: cómo cuidar la voz |
+
+El hub gana respuesta directa, Service con `areaServed` Chile y tarjetas a las páginas del cluster (incluidas las dos nuevas). Las de ciudad no se editaron.
+
+### Entrada desde el sitio infantil
+
+- Home: la frase de voz online del hero ahora enlaza, y hay una tarjeta «¿Eres adulto? Terapia de voz online en todo Chile».
+- `/servicios`: la misma frase, enlazada, bajo la intro. La tarjeta de voz online ya existía; solo se ajustó su descripción.
+
+### Métricas esperadas
+
+- Impresiones del hub en «terapia de voz online», «fonoaudióloga voz online» y «fonoaudiología voz adultos».
+- Que Google descubra las dos URLs nuevas.
+- Clics desde home y `/servicios` hacia el hub.
+
+### Indexar en GSC
+
+`/voz-online/fonoaudiologa-de-voz-online`, `/voz-online/polipos-en-las-cuerdas-vocales`, `/voz-online/como-es-la-sesion-de-voz-online`, `/voz-online/tratamiento-disfonia-online`, `/voz-online/voz-ronca-causas-tratamiento`, `/voz-online/fatiga-vocal-tratamiento-online`, `/voz-online/terapia-vocal-docentes-profesores`, `/voz-online/rehabilitacion-vocal-profesionales-voz`, `/voz-online/nodulos-vocales-tratamiento-online`, `/voz-online/higiene-vocal-cuidado-voz`, `/` y `/servicios`. Reenviar el sitemap.
+
+---
+
 ## 2026-10-19: SEO Lote 13 — segundo pase de las páginas del Lote 7
 
 ### Contexto

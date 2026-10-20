@@ -6,9 +6,9 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/higiene-vocal-cuidado-voz",
-  title: "¿Cómo Cuidar la Voz? Higiene Vocal Día a Día",
+  title: "Higiene vocal: cómo cuidar la voz cada día",
   description:
-    "Higiene vocal: cómo cuidar la voz cada día (hidratación, no carraspear, descanso). 10 reglas y cuándo pedir evaluación online en Chile.",
+    "Higiene vocal: cómo cuidar la voz cada día. Hidratación, no carraspear y descanso. Cuándo pedir terapia de voz online en Chile.",
   keywords: [
     "higiene vocal",
     "cómo cuidar la voz",
@@ -75,7 +75,7 @@ export default function HigieneVocalPage() {
 
         <article className="prose prose-teal lg:prose-lg max-w-none">
           <h1 className="text-4xl font-extrabold text-teal-950">
-            ¿Cómo cuidar la voz? Higiene vocal
+            Higiene vocal: cómo cuidar la voz
           </h1>
           <div className="not-prose my-6 rounded-2xl border-2 border-teal-200 bg-teal-50 p-5">
             <p className="text-lg font-semibold text-teal-950">
@@ -236,6 +236,13 @@ export default function HigieneVocalPage() {
               className="font-semibold text-teal-600"
             >
               terapia vocal para docentes
+            </Link>
+            . El formato de la atención está en{" "}
+            <Link
+              href="/voz-online/como-es-la-sesion-de-voz-online"
+              className="font-semibold text-teal-600"
+            >
+              cómo es la sesión de voz online
             </Link>
             .
           </p>

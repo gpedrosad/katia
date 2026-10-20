@@ -70,24 +70,29 @@ const SERVICIO_CHILLAN_SLUGS: { slug: string; label: string }[] = [
 ];
 
 const VOZ_ONLINE_SLUGS: { slug: string; label: string }[] = [
-  { slug: "fonoaudiologa-de-voz-online", label: "Fonoaudióloga de voz online" },
+  { slug: "fonoaudiologa-de-voz-online", label: "Terapia de voz online para adultos" },
+  { slug: "como-es-la-sesion-de-voz-online", label: "Cómo es la sesión de voz online" },
   { slug: "evaluacion-vocal-online", label: "Evaluación vocal online" },
   { slug: "tratamiento-disfonia-online", label: "Tratamiento disfonía online" },
   {
     slug: "nodulos-vocales-tratamiento-online",
-    label: "Nódulos vocales — tratamiento online",
+    label: "Nódulos en las cuerdas vocales",
+  },
+  {
+    slug: "polipos-en-las-cuerdas-vocales",
+    label: "Pólipos en las cuerdas vocales",
   },
   {
     slug: "fatiga-vocal-tratamiento-online",
-    label: "Fatiga vocal — tratamiento online",
+    label: "Voz cansada y fatiga vocal",
   },
   {
     slug: "rehabilitacion-vocal-profesionales-voz",
-    label: "Rehabilitación vocal profesionales de la voz",
+    label: "Terapia vocal para cantantes y locutores",
   },
   {
     slug: "terapia-vocal-docentes-profesores",
-    label: "Terapia vocal docentes y profesores",
+    label: "Voz cansada en profesores",
   },
   {
     slug: "paralisis-cordal-rehabilitacion-online",

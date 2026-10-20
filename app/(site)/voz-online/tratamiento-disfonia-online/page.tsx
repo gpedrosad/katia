@@ -70,12 +70,19 @@ export default function TratamientoDisfoniaPage() {
         <article className="prose prose-rose lg:prose-lg max-w-none">
           <header className="mb-10 text-center">
             <h1 className="text-4xl font-extrabold text-rose-950 mb-6">
-              Saca esa ronquera de tu vida con Tratamiento de Disfonía Online
+              Tratamiento de disfonía online
             </h1>
-            <p
-              className="lead font-medium text-gray-700 max-w-3xl mx-auto"
-              data-speakable
-            >
+            <div className="not-prose mx-auto mb-6 max-w-3xl rounded-2xl border-2 border-rose-200 bg-rose-50 p-5 text-left">
+              <p className="text-lg font-semibold text-rose-950" data-speakable>
+                <strong>Respuesta rápida:</strong> El tratamiento de disfonía
+                es rehabilitación vocal por videollamada para adultos en todo
+                Chile, cuando la voz está ronca, áspera o tensa. Si la ronquera
+                persiste más de dos semanas sin resfriado, conviene evaluar. Si
+                puede haber una lesión, el otorrino mira las cuerdas y la
+                terapia acompaña ese diagnóstico.
+              </p>
+            </div>
+            <p className="lead font-medium text-gray-700 max-w-3xl mx-auto">
               Si llevas semanas con la voz áspera o &quot;rasposa&quot;, sintiendo que la voz vibra mal en tu garganta, necesitas detenerte. La disfonía no es una condición normal, es una alarma de tu cuerpo pidiendo ayuda especializada.
             </p>
             <p className="mx-auto mt-4 max-w-2xl text-sm text-rose-800">
@@ -124,7 +131,7 @@ export default function TratamientoDisfoniaPage() {
                 <strong>Disfonía funcional de alto impacto:</strong> Has abusado de tu voz hablando demasiado tiempo, con fuerza o sin técnica, y ahora suena opaca y &quot;rota&quot;. ¡La que mejor pronóstico rápido tiene con nuestro entrenamiento!
               </li>
               <li>
-                <strong>Disfonía orgánica con patologías estructurales:</strong> Tienes <Link href="/voz-online/nodulos-vocales-tratamiento-online" className="text-rose-600 font-bold border-b border-rose-300">nódulos vocales descubiertos</Link>, pólipos en formación, o parálisis y ya tienes un informe Otorrino. Haremos el tratamiento conjunto imprescindible.
+                <strong>Disfonía orgánica con patologías estructurales:</strong> Tienes <Link href="/voz-online/nodulos-vocales-tratamiento-online" className="text-rose-600 font-bold border-b border-rose-300">nódulos vocales descubiertos</Link>, <Link href="/voz-online/polipos-en-las-cuerdas-vocales" className="text-rose-600 font-bold border-b border-rose-300">pólipos</Link> o parálisis, y ya tienes un informe del otorrino. La terapia acompaña esa indicación: no la reemplaza.
               </li>
               <li>
                 <strong>Disfonía por tensión muscular extrema (DTM):</strong> Cargas con un nivel de estrés y sobrecarga al hablar que provoca que tus cuerdas y la musculatura del cuello intenten suplir el trabajo. Produce un claro dolor y sensación de &quot;acogotamiento&quot;.
