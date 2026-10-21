@@ -275,6 +275,24 @@ export default function FonoaudiologaVozOnlinePage() {
                     href: "/voz-online/evaluacion-vocal-online",
                     icon: "📋",
                   },
+                  {
+                    title: "Me quedé sin voz",
+                    desc: "Afonía: qué hacer y cuándo ver al otorrino.",
+                    href: "/voz-online/afonia-perdi-la-voz",
+                    icon: "🔇",
+                  },
+                  {
+                    title: "Ejercicios para la voz",
+                    desc: "Calentamiento general, después de la evaluación.",
+                    href: "/voz-online/ejercicios-para-la-voz",
+                    icon: "🎵",
+                  },
+                  {
+                    title: "Reflujo y voz",
+                    desc: "La ronquera por reflujo y el apoyo de la terapia.",
+                    href: "/voz-online/reflujo-y-voz",
+                    icon: "🔥",
+                  },
                 ].map((s) => (
                   <Link
                     key={s.href}

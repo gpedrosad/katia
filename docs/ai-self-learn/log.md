@@ -4,6 +4,10 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 
 ---
 
+## 2026-10-21
+
+- SEO Lote 15 | Tres URLs nuevas de voz online, sin ciudad: `/voz-online/afonia-perdi-la-voz`, `/voz-online/ejercicios-para-la-voz` y `/voz-online/reflujo-y-voz` (esta última en lugar de adultos mayores: el sitio no dice que la terapia de voz atienda adulto mayor, ni ofrece deglución o audición). Tarjetas solo en el hub. Sitemap del build 131. Apex http sigue en dos 308 (Vercel → https apex → www). GSC 90d 07-23..10-20: 87 clic / 5.670 imp / pos 8,1 | Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 3 URLs y reenviar sitemap; medir ~2026-11-04..11-11.
+
 ## 2026-10-20
 
 - SEO Lote 14 | `/recursos/estimular-lenguaje-en-casa` pasa al cluster «terapia de lenguaje en casa / cómo empezar» y cede «estimulación del lenguaje» a `/servicios/estimulacion-temprana-del-lenguaje-chillan` (ancla «estimulación del lenguaje en Chillán»). `/recursos/primera-evaluacion-fonoaudiologica-infantil` queda como guía de padres («qué esperar y cómo preparar»); la query «evaluacion fonoaudiologica» sigue en `/servicios/evaluacion-fonoaudiologica`. Duración alineada a los 60 minutos ya publicados en el servicio. Sitemap vivo 128 URLs; apex http sigue en dos 308 (Vercel → https apex → www). `lastmod` de `/sintomas/mi-hijo-no-habla-bien-chillan` en el sitemap vivo (`2026-10-15`) no coincide con git (`2026-10-13`); el generador local sí coincide, no se cambió `sitemap.ts` | Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 2 guías y reenviar sitemap; medir ~2026-11-03..11-10.

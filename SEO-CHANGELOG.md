@@ -20,6 +20,77 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-10-21: SEO Lote 15 — afonía, ejercicios para la voz y reflujo
+
+### Contexto
+
+**Datos GSC (90 días 2026-07-23 al 2026-10-20, sc-domain:katialafono.cl, dataState=all, pull 2026-10-21):**
+- **87 clics**
+- **5.670 impresiones**
+- **Posición promedio: 8,1**
+
+**Últimos 7 días (2026-10-14 al 2026-10-20):** 8 clics / 753 imp vs 7 días previos (2026-10-07 al 2026-10-13): 8 clics / 682 imp
+
+**URL Inspection (2026-10-21):** Google todavía no volvió a rastrear páginas editadas en los Lotes 8–14 (por ejemplo `/servicios/evaluacion-fonoaudiologica` último rastreo 2026-09-26, `/servicios/tel-trastorno-especifico-lenguaje` 2026-08-20, hitos 2026-09-21, `/voz-online/fonoaudiologa-de-voz-online` 2026-10-05). Un segundo pase sobre páginas ya editadas es prematuro. Las dos URLs nuevas del 2026-10-20 (`/voz-online/polipos-en-las-cuerdas-vocales` y `/voz-online/como-es-la-sesion-de-voz-online`) sí se rastrearon e indexaron el mismo día.
+
+**Demanda de voz online en GSC (90 días):** «fonoaudiólogo especialista en voz» 30 imp / 3 clics / pos 7,8; «fonoaudiologo online» 10 imp / pos 19; «fonoaudiologia voz» 8 imp / pos 29; «rehabilitacion de la voz en profesionales» 5 imp / pos 28; «fonoaudiologia adulto mayor» 4 imp / pos 2,5 y «fonoaudiólogo adulto» 4 imp / pos 3,8 (ambas caen en la home, que es de niños); «impostar voz» 1 imp; «fono online funciona» 1 imp. `/voz-online/paralisis-cordal-rehabilitacion-online` 152 imp. `/voz-online/higiene-vocal-cuidado-voz` 67 imp / 3 clics.
+
+**Páginas congeladas:** no se editó copy ni metadata de Lotes 9–14, ronda 2, home, `/servicios`, pilar, hitos, `/tratamientos/*`, `/chillan/*`, `/glosario/*`, `/comparaciones/*`, estimulación temprana, guías de casa y primera evaluación, ni del resto de `/voz-online/*`. En el hub solo se agregaron tres tarjetas. No se tocó `/ads/*` ni `/sitelink/*`. No hay páginas nuevas de otras ciudades.
+
+**Objetivo:** contenido nuevo en la línea de terapia de voz online para adultos, en todo Chile. Medir ~2026-11-04 al 2026-11-11.
+
+### Página que se cambió
+
+No se creó `/voz-online/terapia-de-voz-adultos-mayores`. El copy del sitio dice «adultos» y no abre la terapia de voz a adultos mayores, ni ofrece deglución ni audición. «Adulto mayor» solo aparece como palabra negativa de Ads. En su lugar: `/voz-online/reflujo-y-voz`, porque la ronquera por reflujo y el cuidado «evitar comer tarde» ya están publicados (ronquera e higiene) y no tenían URL propia.
+
+### Páginas nuevas
+
+Entran solas al sitemap (se descubren los `page.tsx`). También quedaron en `lib/seo-routes.ts`. Cada una tiene FAQPage (las mismas 4 preguntas visibles), Service con `areaServed` Chile, BreadcrumbList, WebPage con `datePublished` y `dateModified` 2026-10-21, y CTA de WhatsApp. Canonical a sí mismas. El otorrinolaringólogo diagnostica; la videollamada no reemplaza el examen de laringe.
+
+#### 1. `/voz-online/afonia-perdi-la-voz`
+- **Title / H1:** «Me quedé sin voz (afonía): qué hacer y cuándo consultar» (55 caracteres)
+- **Description:** cuándo ver al otorrino y cuándo la terapia ayuda si la afonía vuelve por el uso (147)
+- **Respuesta rápida:** 59 palabras, bajo el H1
+- **Enlaces:** hub, disfonía, higiene vocal, voz cansada, ronquera, evaluación, cómo es la sesión, reflujo y voz, pilar infantil
+
+#### 2. `/voz-online/ejercicios-para-la-voz`
+- **Title / H1:** «Ejercicios para la voz: calentamiento y cuidado vocal» (53)
+- **Description:** se indican después de la evaluación; sin prometer resultados (151)
+- **Respuesta rápida:** 59 palabras
+- **Hechos ya publicados:** bostezos, tarareos suaves, resonancia, no carraspear, silencio vocal, al menos 2 litros de agua
+- **Enlaces:** hub, docentes, cantantes y locutores, evaluación, cómo es la sesión, higiene, disfonía, afonía
+
+#### 3. `/voz-online/reflujo-y-voz`
+- **Title / H1:** «Voz ronca por reflujo: qué hace la terapia de voz» (49)
+- **Description:** el gastroenterólogo o el otorrino tratan el ácido; la terapia apoya los hábitos (145)
+- **Respuesta rápida:** 57 palabras
+- **Enlaces:** hub, ronquera, higiene, evaluación, cómo es la sesión, disfonía, afonía
+
+### Enlaces agregados
+
+- Tarjetas nuevas en el bloque del hub `/voz-online/fonoaudiologa-de-voz-online`: «Me quedé sin voz», «Ejercicios para la voz», «Reflujo y voz». No se cambió title, description, H1 ni el párrafo del hub.
+- No hay un componente de «páginas relacionadas» en `/voz-online/*`. `RelatedGuides` no se usa en esa línea. Las tres páginas se enlazan entre sí y cada una apunta al hub y a más de tres páginas de voz ya existentes, así que no quedan huérfanas.
+- No se editaron home, footer, header, `/ads` ni landings de ciudad.
+
+### Chequeo técnico
+
+- **Build:** `npm run build` pasó (Next.js 16.1.1). 149 páginas estáticas. Hizo falta `NODE_OPTIONS=--max-old-space-size=6144` en esta máquina; el primer intento se quedó sin heap en el chequeo de TypeScript.
+- **Sitemap del build:** 131 URLs (antes 128). Las tres nuevas están, indexables en el HTML (`index, follow`) y con canonical a `https://www.katialafono.cl` + su path.
+- **lastmod de este build:** `2026-10-21T12:08:51Z` (mtime). El `page.tsx` todavía no estaba en git, así que el generador no tenía fecha de commit. En producción el `lastmod` queda en la fecha del commit de este lote (2026-10-21). No se tocó `app/sitemap.ts`.
+- **Apex:** `http://katialafono.cl/` responde 308 a `https://katialafono.cl/` (Vercel) y ese segundo salto 308 va a `https://www.katialafono.cl/` (200). `https://katialafono.cl/` hace un solo 308 a www. No se cambió código. El salto directo a www se configura en dominios de Vercel.
+
+### Métricas esperadas
+
+- Las tres URLs nuevas se rastrean rápido, como pólipos y «cómo es la sesión» el 2026-10-20.
+- Capturan afonía, ejercicios / calentamiento vocal y ronquera por reflujo sin competir con la home infantil ni con las landings de ciudad.
+- «fonoaudiología adulto mayor» sigue sin página propia hasta que el copy del sitio diga que la terapia de voz atiende a adultos mayores.
+
+### Indexar en GSC
+
+`/voz-online/afonia-perdi-la-voz`, `/voz-online/ejercicios-para-la-voz` y `/voz-online/reflujo-y-voz`. Reenviar el sitemap.
+
+---
+
 ## 2026-10-20: SEO Lote 14 — terapia en casa, primera evaluación y chequeo de rastreo
 
 ### Contexto

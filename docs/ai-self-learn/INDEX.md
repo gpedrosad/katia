@@ -1,6 +1,6 @@
 # INDEX — hechos densos (leer primero)
 
-Actualizado: **2026-10-20**
+Actualizado: **2026-10-21**
 
 ## Identidad / NAP
 
@@ -69,6 +69,7 @@ Actualizado: **2026-10-20**
 - Lote 13 (2026-10-19): segundo pase Lote 7. GSC 90d 07-21..10-18 **90 clic / 5.495 imp / pos 8,1** · 7d 9/628 vs 7/707. Hitos aún rastreada el 2026-09-21 (Lote 7 no visto). Title hitos pasa a «¿A qué edad hablan los niños?» (223 imp, 0 clic, pos 9,9). `/servicios` en caída de impresiones. Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar hitos, pilar, home, servicios y los 2 tratamientos; medir ~2026-11-02..11-09.
 - 2026-10-20: lote voz online adultos. Hub title «Terapia de voz online para adultos en Chile». URLs nuevas: `/voz-online/polipos-en-las-cuerdas-vocales` y `/voz-online/como-es-la-sesion-de-voz-online` (apoyo al otorrino; sin ciudades). Entrada en home y `/servicios`. No se tocó `/ads`, `/sitelink` ni landings de ciudad. Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 12 URLs del lote y reenviar sitemap; medir ~2026-11-03..11-10.
 - Lote 14 (2026-10-20): GSC 90d 07-22..10-19 **88 clic / 5.577 imp / pos 8,1** · 7d 9/671 vs 7/608. Guía de casa retarget a «terapia de lenguaje en casa»; «estimulación del lenguaje» queda en el servicio de Chillán. Primera evaluación: guía «qué esperar y cómo preparar», con CTA al servicio (60 min) y a agendar. Lote 8 aún sin recrawl. Sitemap vivo 128. Apex http: dos 308. Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 2 guías y reenviar sitemap; medir ~2026-11-03..11-10.
+- Lote 15 (2026-10-21): GSC 90d 07-23..10-20 **87 clic / 5.670 imp / pos 8,1** · 7d 8/753 vs 8/682. Lotes 8–14 sin recrawl; pólipos y «cómo es la sesión» sí se indexaron el 2026-10-20. URLs nuevas: `/voz-online/afonia-perdi-la-voz`, `/voz-online/ejercicios-para-la-voz`, `/voz-online/reflujo-y-voz`. No se creó terapia de voz para adultos mayores (el copy no la ofrece; deglución y audición tampoco). Sitemap del build 131. Apex http sigue en dos 308. Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 3 URLs y reenviar sitemap; medir ~2026-11-04..11-11.
 
 ## Stack / convenciones
 
