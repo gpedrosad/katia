@@ -76,7 +76,7 @@ Entran solas al sitemap (se descubren los `page.tsx`). También quedaron en `lib
 
 - **Build:** `npm run build` pasó (Next.js 16.1.1). 149 páginas estáticas. Hizo falta `NODE_OPTIONS=--max-old-space-size=6144` en esta máquina; el primer intento se quedó sin heap en el chequeo de TypeScript.
 - **Sitemap del build:** 131 URLs (antes 128). Las tres nuevas están, indexables en el HTML (`index, follow`) y con canonical a `https://www.katialafono.cl` + su path.
-- **lastmod de este build:** `2026-10-21T12:08:51Z` (mtime). El `page.tsx` todavía no estaba en git, así que el generador no tenía fecha de commit. En producción el `lastmod` queda en la fecha del commit de este lote (2026-10-21). No se tocó `app/sitemap.ts`.
+- **lastmod:** el build posterior al commit lista las tres URLs con `2026-10-21T12:12:48.000Z`, la fecha git de sus `page.tsx`. El hub queda con la misma fecha porque se le agregaron tarjetas. Un build anterior al commit había caído al mtime `2026-10-21T12:08:51Z`. No se tocó `app/sitemap.ts`.
 - **Apex:** `http://katialafono.cl/` responde 308 a `https://katialafono.cl/` (Vercel) y ese segundo salto 308 va a `https://www.katialafono.cl/` (200). `https://katialafono.cl/` hace un solo 308 a www. No se cambió código. El salto directo a www se configura en dominios de Vercel.
 
 ### Métricas esperadas
