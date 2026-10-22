@@ -84,7 +84,7 @@ Entran solas al sitemap (se descubren los `page.tsx`). La pregunta también qued
 
 - **Build:** `npm run build` pasó (Next.js 16.1.1). 152 páginas estáticas (149 del Lote 15 más estas 3).
 - **Sitemap del build previo al commit:** 134 URLs (antes 131). Las tres nuevas están, indexables (`index, follow`) y con canonical a `https://www.katialafono.cl` + su path. Service `areaServed` Chile en las dos de voz. FAQPage con 5, 4 y 5 preguntas, el mismo texto visible. BreadcrumbList en las tres.
-- **lastmod previo al commit:** las tres URLs cayeron al mtime `2026-10-22T12:15:40.006Z` porque todavía no tenían commit. El hub de voz seguía en `2026-10-21T12:12:48.000Z` (git ignora el working tree). `/preguntas` sigue en `2026-10-17T02:56:48.000Z`: no se editó su `page.tsx`; la tarjeta entra por `catalogo.ts`. El build posterior al commit confirma la fecha git. No se tocó `app/sitemap.ts`.
+- **lastmod:** el build posterior al commit `13c0cbb` lista las tres URLs nuevas y el hub de voz con `2026-10-22T12:19:27.000Z`, la fecha git de esos `page.tsx`. Un build anterior al commit había caído al mtime `2026-10-22T12:15:40.006Z`. `/preguntas` sigue en `2026-10-17T02:56:48.000Z`: no se editó su `page.tsx`; la tarjeta entra por `catalogo.ts`. No se tocó `app/sitemap.ts`.
 - **`/voz-online/terapia-de-voz-adultos-mayores`:** no existe en el repo, no está en el sitemap y no hay enlaces en `*.ts` / `*.tsx`.
 - **Apex:** no se cambió código de redirección.
 

@@ -6,7 +6,7 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 
 ## 2026-10-22
 
-- SEO Lote 16 | Tres URLs nuevas, sin otras ciudades: `/preguntas/el-tel-se-cura` (sin cura ni porcentajes), `/voz-online/disfonia-por-estres` y `/voz-online/disfonia-espasmodica` (complemento; el médico diagnostica; sin fármacos ni dosis). No se creó `/voz-online/nodulos-cirugia-o-terapia`: el H1 y las FAQ de `/voz-online/nodulos-vocales-tratamiento-online` ya cubren cirugía o terapia. Tarjetas solo en los hubs. GSC 90d 07-24..10-21: 85 clic / 5.790 imp / pos 8,1 | Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 3 URLs y reenviar sitemap; medir ~2026-11-05..11-12.
+- SEO Lote 16 | Tres URLs nuevas, sin otras ciudades: `/preguntas/el-tel-se-cura` (sin cura ni porcentajes), `/voz-online/disfonia-por-estres` y `/voz-online/disfonia-espasmodica` (complemento; el médico diagnostica; sin fármacos ni dosis). No se creó `/voz-online/nodulos-cirugia-o-terapia`: el H1 y las FAQ de `/voz-online/nodulos-vocales-tratamiento-online` ya cubren cirugía o terapia. Tarjetas solo en los hubs. Sitemap del build 134, lastmod `2026-10-22T12:19:27.000Z`. GSC 90d 07-24..10-21: 85 clic / 5.790 imp / pos 8,1 | Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 3 URLs y reenviar sitemap; medir ~2026-11-05..11-12.
 
 ## 2026-10-21
 
