@@ -76,4 +76,9 @@ export const PREGUNTAS: readonly PreguntaResumen[] = [
     question: "Habla en casa y en el jardín se calla",
     teaser: "El contraste entre la cocina y la sala, sin ponerle un diagnóstico.",
   },
+  {
+    href: "/preguntas/el-tel-se-cura",
+    question: "¿El TEL se cura?",
+    teaser: "No se cura: acompaña, y con terapia y apoyo puede mejorar mucho.",
+  },
 ] as const;

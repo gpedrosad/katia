@@ -1,6 +1,6 @@
 # INDEX — hechos densos (leer primero)
 
-Actualizado: **2026-10-21**
+Actualizado: **2026-10-22**
 
 ## Identidad / NAP
 
@@ -70,6 +70,7 @@ Actualizado: **2026-10-21**
 - 2026-10-20: lote voz online adultos. Hub title «Terapia de voz online para adultos en Chile». URLs nuevas: `/voz-online/polipos-en-las-cuerdas-vocales` y `/voz-online/como-es-la-sesion-de-voz-online` (apoyo al otorrino; sin ciudades). Entrada en home y `/servicios`. No se tocó `/ads`, `/sitelink` ni landings de ciudad. Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 12 URLs del lote y reenviar sitemap; medir ~2026-11-03..11-10.
 - Lote 14 (2026-10-20): GSC 90d 07-22..10-19 **88 clic / 5.577 imp / pos 8,1** · 7d 9/671 vs 7/608. Guía de casa retarget a «terapia de lenguaje en casa»; «estimulación del lenguaje» queda en el servicio de Chillán. Primera evaluación: guía «qué esperar y cómo preparar», con CTA al servicio (60 min) y a agendar. Lote 8 aún sin recrawl. Sitemap vivo 128. Apex http: dos 308. Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 2 guías y reenviar sitemap; medir ~2026-11-03..11-10.
 - Lote 15 (2026-10-21): GSC 90d 07-23..10-20 **87 clic / 5.670 imp / pos 8,1** · 7d 8/753 vs 8/682. Lotes 8–14 sin recrawl; pólipos y «cómo es la sesión» sí se indexaron el 2026-10-20. URLs nuevas: `/voz-online/afonia-perdi-la-voz`, `/voz-online/ejercicios-para-la-voz`, `/voz-online/reflujo-y-voz`. No se creó terapia de voz para adultos mayores (el copy no la ofrece; deglución y audición tampoco). Sitemap del build 131. Apex http sigue en dos 308. Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 3 URLs y reenviar sitemap; medir ~2026-11-04..11-11.
+- Lote 16 (2026-10-22): GSC 90d 07-24..10-21 **85 clic / 5.790 imp / pos 8,1** · 7d 6/791 vs 11/690. Lote 15 indexado en ~12 h; Lotes 8–14 sin recrawl. URLs nuevas: `/preguntas/el-tel-se-cura`, `/voz-online/disfonia-por-estres`, `/voz-online/disfonia-espasmodica`. No se creó `/voz-online/nodulos-cirugia-o-terapia` (solapa con nódulos, página congelada). Sin otras ciudades, sin `/ads`, sin `/sitelink`. Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 3 URLs y reenviar sitemap; medir ~2026-11-05..11-12.
 
 ## Stack / convenciones
 

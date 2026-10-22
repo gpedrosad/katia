@@ -4,6 +4,10 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 
 ---
 
+## 2026-10-22
+
+- SEO Lote 16 | Tres URLs nuevas, sin otras ciudades: `/preguntas/el-tel-se-cura` (sin cura ni porcentajes), `/voz-online/disfonia-por-estres` y `/voz-online/disfonia-espasmodica` (complemento; el médico diagnostica; sin fármacos ni dosis). No se creó `/voz-online/nodulos-cirugia-o-terapia`: el H1 y las FAQ de `/voz-online/nodulos-vocales-tratamiento-online` ya cubren cirugía o terapia. Tarjetas solo en los hubs. GSC 90d 07-24..10-21: 85 clic / 5.790 imp / pos 8,1 | Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 3 URLs y reenviar sitemap; medir ~2026-11-05..11-12.
+
 ## 2026-10-21
 
 - SEO Lote 15 | Tres URLs nuevas de voz online, sin ciudad: `/voz-online/afonia-perdi-la-voz`, `/voz-online/ejercicios-para-la-voz` y `/voz-online/reflujo-y-voz` (esta última en lugar de adultos mayores: el sitio no dice que la terapia de voz atienda adulto mayor, ni ofrece deglución o audición). Tarjetas solo en el hub. Sitemap del build 131. Apex http sigue en dos 308 (Vercel → https apex → www). GSC 90d 07-23..10-20: 87 clic / 5.670 imp / pos 8,1 | Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 3 URLs y reenviar sitemap; medir ~2026-11-04..11-11.

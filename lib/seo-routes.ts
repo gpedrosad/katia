@@ -103,6 +103,8 @@ const VOZ_ONLINE_SLUGS: { slug: string; label: string }[] = [
   { slug: "afonia-perdi-la-voz", label: "Me quedé sin voz (afonía)" },
   { slug: "ejercicios-para-la-voz", label: "Ejercicios para la voz" },
   { slug: "reflujo-y-voz", label: "Voz ronca por reflujo" },
+  { slug: "disfonia-por-estres", label: "Disfonía por estrés o tensión" },
+  { slug: "disfonia-espasmodica", label: "Disfonía espasmódica" },
   { slug: "fonoaudiologa-voz-santiago", label: "Fonoaudióloga voz — Santiago" },
   { slug: "fonoaudiologa-voz-concepcion", label: "Fonoaudióloga voz — Concepción" },
   { slug: "fonoaudiologa-voz-vina-del-mar", label: "Fonoaudióloga voz — Viña del Mar" },

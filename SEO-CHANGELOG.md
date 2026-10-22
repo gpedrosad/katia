@@ -20,6 +20,87 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-10-22: SEO Lote 16 — ¿el TEL se cura?, disfonía por estrés y disfonía espasmódica
+
+### Contexto
+
+**Datos GSC (90 días 2026-07-24 al 2026-10-21, sc-domain:katialafono.cl, dataState=all, pull 2026-10-22):**
+- **85 clics**
+- **5.790 impresiones**
+- **Posición promedio: 8,1**
+
+**Últimos 7 días (2026-10-15 al 2026-10-21):** 6 clics / 791 imp vs 7 días previos (2026-10-08 al 2026-10-14): 11 clics / 690 imp. Suben las impresiones y bajan los clics.
+
+**URL Inspection (2026-10-22):** las páginas nuevas del Lote 15 (`/voz-online/afonia-perdi-la-voz`, `/voz-online/ejercicios-para-la-voz`, `/voz-online/reflujo-y-voz`) se rastrearon e indexaron en unas 12 horas. Las páginas editadas en los Lotes 8–14 siguen sin recrawl (por ejemplo `/servicios/tel-trastorno-especifico-lenguaje` último rastreo 2026-08-20, hitos 2026-09-21, `/voz-online/fonoaudiologa-de-voz-online` 2026-10-05). Un segundo pase sobre páginas ya editadas sigue siendo prematuro. Las URLs nuevas siguen siendo la palanca más rápida.
+
+**Demanda sin página propia:** «el tel se cura» 27 imp / pos 9,5 / 0 clics, solo a través de `/servicios/tel-trastorno-especifico-lenguaje` (servicio congelado, sin recrawl desde el 2026-08-20). «tel diagnostico» ~6 imp. Estudio de SERP de voz (2026-10-21): disfonía espasmódica, disfonía por estrés o tensión, y la duda de nódulos (¿desaparecen solos? / cirugía o terapia). Se pidió reforzar la terapia de voz online para adultos, en todo Chile.
+
+**Páginas congeladas:** no se editó copy ni metadata de Lotes 10–15, ronda 2, home, `/servicios` y `/servicios/*`, pilar, hitos, `/tratamientos/*`, `/chillan/*`, `/glosario/*`, `/comparaciones/*`, `/recursos/*`, ni del resto de `/voz-online/*` y `/preguntas/*`. En los hubs solo se agregaron tarjeta o enlace. No se tocó `/ads/*` ni `/sitelink/*`. No hay páginas nuevas de otras ciudades.
+
+**Objetivo:** una pregunta directa sobre si el TEL se cura, y dos páginas de voz online sin ciudad. Medir ~2026-11-05 al 2026-11-12.
+
+### Página que no se creó
+
+No se creó `/voz-online/nodulos-cirugia-o-terapia`. `/voz-online/nodulos-vocales-tratamiento-online` ya es esa decisión: el H1 es «¿Se pueden tratar los nódulos vocales sin cirugía?», la respuesta rápida dice que la terapia suele ir primero y la cirugía queda si no hay respuesta o el otorrino la indica, y las FAQ preguntan si siempre hay que operar y qué es mejor, operar o hacer terapia. El solape con «cirugía o terapia» es demasiado alto. El ángulo «¿desaparecen solos?» no alcanza para una segunda URL que competiría con una página congelada.
+
+### Páginas nuevas
+
+Entran solas al sitemap (se descubren los `page.tsx`). La pregunta también queda en `app/preguntas/catalogo.ts` (y por eso en `lib/seo-routes.ts` y en el `hasPart` del hub). Las dos de voz quedaron en `lib/seo-routes.ts`. Canonical a sí mismas. Titles absolutos (`buildPageMetadata`), sin el sufijo de marca, todos ≤60 caracteres. Descriptions ≤155.
+
+#### 1. `/preguntas/el-tel-se-cura`
+- **Title:** «¿El TEL se cura? Lo que pasa con el trastorno del lenguaje» (58 caracteres)
+- **H1:** «¿El TEL se cura?»
+- **Description:** el TEL no se cura, acompaña y puede mejorar mucho con terapia y apoyo; edad, colegio y diagnóstico (129)
+- **Respuesta bajo el H1:** 58 palabras. En `/preguntas` ese texto es el párrafo del patrón, no una caja aparte
+- **Sin** porcentajes, plazos ni promesa de cura
+- **FAQPage:** la pregunta del H1 más «¿El TEL dura toda la vida?», «¿Cuánto dura la terapia?» (sin inventar duración; el cuerpo enlaza `/preguntas/cuanto-dura-una-terapia-de-lenguaje`), «¿Cómo se diagnostica el TEL?» y «¿TEL y TDL son lo mismo?». El schema usa el mismo texto visible
+- **BreadcrumbList:** Inicio / Preguntas / ¿El TEL se cura?
+- **Enlaces:** servicio TEL, tratamiento TEL Chillán, comparación TEL vs retraso, agendar, glosario TEL, glosario TDL, informe PIE, pilar infantil (lo agrega el componente) y tres preguntas ya publicadas
+
+#### 2. `/voz-online/disfonia-por-estres`
+- **Title / H1:** «Disfonía por estrés o tensión: cuando la voz se aprieta» (55)
+- **Description:** respiración, postura y hábitos; el otorrino descarta la lesión (140)
+- **Respuesta rápida:** 54 palabras, bajo el H1
+- **Hechos ya publicados:** disfonía por tensión muscular (estrés y sobrecarga, dolor o apriete), respiración, postura, higiene (silencio, no carraspear, no gritar), ronquera de más de dos semanas, la videollamada no reemplaza la nasofibrolaringoscopía
+- **Schema:** FAQPage (4 preguntas visibles), Service con `areaServed` Chile, WebPage `datePublished` y `dateModified` 2026-10-22, BreadcrumbList
+- **Enlaces:** hub, disfonía, fatiga vocal, afonía, disfonía espasmódica, higiene, ejercicios, cómo es la sesión, evaluación vocal, pilar infantil
+
+#### 3. `/voz-online/disfonia-espasmodica`
+- **Title / H1:** «Disfonía espasmódica: qué es y cómo ayuda la terapia de voz» (59)
+- **Description:** la diagnostican el otorrino o el neurólogo; la terapia es complemento, sin cura (147)
+- **Respuesta rápida:** 50 palabras
+- **Límite:** condición neurológica; sin cura, sin cifras, sin nombres de fármacos ni dosis. El tratamiento médico lo decide el médico
+- **Schema:** FAQPage (5 preguntas visibles), Service con `areaServed` Chile, WebPage `datePublished` y `dateModified` 2026-10-22, BreadcrumbList
+- **Enlaces:** hub, disfonía por estrés, parálisis cordal, tratamiento de disfonía, higiene, cómo es la sesión, evaluación vocal, ejercicios, pilar infantil
+
+### Enlaces agregados
+
+- Tarjeta nueva en `/preguntas`: el índice sale de `app/preguntas/catalogo.ts`. No se cambió title, description, H1 ni los párrafos de `/preguntas`.
+- Tarjetas nuevas en el bloque del hub `/voz-online/fonoaudiologa-de-voz-online`: «Disfonía por estrés» y «Disfonía espasmódica». No se cambió title, description, H1 ni el párrafo del hub.
+- No hay un componente de «páginas relacionadas» en `/voz-online/*`. `RelatedGuides` no se usa en esa línea. Las dos páginas se enlazan entre sí y cada una apunta al hub y a más de tres páginas de voz ya existentes.
+- No se editaron home, footer, header, `/ads`, `/sitelink` ni landings de ciudad.
+
+### Chequeo técnico
+
+- **Build:** `npm run build` pasó (Next.js 16.1.1). 152 páginas estáticas (149 del Lote 15 más estas 3).
+- **Sitemap del build previo al commit:** 134 URLs (antes 131). Las tres nuevas están, indexables (`index, follow`) y con canonical a `https://www.katialafono.cl` + su path. Service `areaServed` Chile en las dos de voz. FAQPage con 5, 4 y 5 preguntas, el mismo texto visible. BreadcrumbList en las tres.
+- **lastmod previo al commit:** las tres URLs cayeron al mtime `2026-10-22T12:15:40.006Z` porque todavía no tenían commit. El hub de voz seguía en `2026-10-21T12:12:48.000Z` (git ignora el working tree). `/preguntas` sigue en `2026-10-17T02:56:48.000Z`: no se editó su `page.tsx`; la tarjeta entra por `catalogo.ts`. El build posterior al commit confirma la fecha git. No se tocó `app/sitemap.ts`.
+- **`/voz-online/terapia-de-voz-adultos-mayores`:** no existe en el repo, no está en el sitemap y no hay enlaces en `*.ts` / `*.tsx`.
+- **Apex:** no se cambió código de redirección.
+
+### Métricas esperadas
+
+- Las tres URLs nuevas se rastrean rápido, como las del Lote 15.
+- «el tel se cura» deja de depender solo de la página de servicio congelada.
+- Disfonía por estrés y disfonía espasmódica entran al cluster de voz online de adultos, sin competir con las landings de ciudad.
+- Nódulos sigue en `/voz-online/nodulos-vocales-tratamiento-online`.
+
+### Indexar en GSC
+
+`/preguntas/el-tel-se-cura`, `/voz-online/disfonia-por-estres` y `/voz-online/disfonia-espasmodica`. Reenviar el sitemap.
+
+---
+
 ## 2026-10-21: SEO Lote 15 — afonía, ejercicios para la voz y reflujo
 
 ### Contexto

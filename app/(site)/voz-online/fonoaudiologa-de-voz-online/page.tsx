@@ -293,6 +293,18 @@ export default function FonoaudiologaVozOnlinePage() {
                     href: "/voz-online/reflujo-y-voz",
                     icon: "🔥",
                   },
+                  {
+                    title: "Disfonía por estrés",
+                    desc: "Cuando la voz se aprieta por tensión.",
+                    href: "/voz-online/disfonia-por-estres",
+                    icon: "😣",
+                  },
+                  {
+                    title: "Disfonía espasmódica",
+                    desc: "Qué es y cómo apoya la terapia de voz.",
+                    href: "/voz-online/disfonia-espasmodica",
+                    icon: "〰️",
+                  },
                 ].map((s) => (
                   <Link
                     key={s.href}
