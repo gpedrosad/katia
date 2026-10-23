@@ -20,6 +20,30 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-10-23: Mercados de voz online — copy en positivo
+
+Gonzalo pidió sacar los descargos negativos de las 9 páginas de mercado (`espana`, `argentina`, `miami`, `estados-unidos`, `canada`, `reino-unido`, `alemania`, `suiza`, `australia`).
+
+Se quitaron de title, meta, cuerpo, FAQ y schema las frases de licencia, colegiación, matrícula, obra social, seguro, NHS, Medicare, Logopädie local, título local y «no es en francés». Las FAQ que solo decían eso se eliminaron. El FAQPage sigue saliendo del mismo texto visible.
+
+La meta nueva dice terapia de voz en español, por videollamada desde Chile, para adultos, con el horario coordinado a la zona horaria. No se afirma licencia local, seguro, precio ni consulta en el país. El otorrino sigue como el médico que mira las cuerdas.
+
+En el hub solo se ajustó la frase del bloque de países y la tarjeta de Alemania, que repetía «no Logopädie local».
+
+### Metas nuevas
+
+- `/voz-online/espana` (137): Logopedia de la voz para adultos en España, por videollamada desde Chile con una fonoaudióloga. El horario se coordina a tu zona horaria.
+- `/voz-online/argentina` (150): Fonoaudióloga online para adultos en Argentina: terapia de voz en español, por videollamada desde Chile. El horario se coordina según tu zona horaria.
+- `/voz-online/miami` (152): Terapia de voz en español para adultos en Miami y Florida, por videollamada desde Chile con una fonoaudióloga. El horario se coordina a tu zona horaria.
+- `/voz-online/estados-unidos` (145): Terapia de voz en español para adultos en Nueva York, Texas y California, por videollamada desde Chile. El horario se coordina a tu zona horaria.
+- `/voz-online/canada` (153): Terapia de voz en español para adultos en Toronto, Montreal y el resto de Canadá, por videollamada desde Chile. El horario se coordina a tu zona horaria.
+- `/voz-online/reino-unido` (139): Terapia de voz en español para adultos en Londres y el Reino Unido, por videollamada desde Chile. El horario se coordina a tu zona horaria.
+- `/voz-online/alemania` (149): Terapia de voz en español para adultos en Alemania, por videollamada desde Chile con una fonoaudióloga. El horario se coordina según tu zona horaria.
+- `/voz-online/suiza` (146): Terapia de voz en español para adultos en Suiza, por videollamada desde Chile con una fonoaudióloga. El horario se coordina según tu zona horaria.
+- `/voz-online/australia` (150): Terapia de voz en español para adultos en Australia, por videollamada desde Chile con una fonoaudióloga. El horario se coordina según tu zona horaria.
+
+---
+
 ## 2026-10-23: Voz online — España, Argentina, mercados en español y temas nuevos
 
 ### Contexto

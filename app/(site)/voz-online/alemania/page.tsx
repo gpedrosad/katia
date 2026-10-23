@@ -5,7 +5,7 @@ import { buildPageMetadata } from "@/lib/seo";
 const PATH = "/voz-online/alemania";
 const TITLE = "Terapia de voz en español si vives en Alemania";
 const DESCRIPTION =
-  "Logopeda en español para adultos en Alemania: terapia de voz por videollamada desde Chile. No reemplaza la Logopädie local ni un seguro alemán.";
+  "Terapia de voz en español para adultos en Alemania, por videollamada desde Chile con una fonoaudióloga. El horario se coordina según tu zona horaria.";
 
 export const metadata = buildPageMetadata({
   path: PATH,
@@ -24,27 +24,22 @@ const faqItems = [
   {
     question: "¿Hay logopeda en español si vivo en Alemania?",
     answer:
-      "La sesión es terapia de voz en español, por videollamada desde Chile, para adultos. En Alemania la profesión local se llama Logopädie. Katia es fonoaudióloga en Chile y no afirma un título alemán.",
+      "Sí, para adultos. La sesión es terapia de voz en español, por videollamada desde Chile. En Alemania la profesión se busca como Logopädie. Katia es fonoaudióloga en Chile. El horario se coordina según tu zona horaria.",
   },
   {
-    question: "¿Esto lo cubre un seguro alemán?",
+    question: "¿Puedo atenderne desde Berlín, Múnich u otra ciudad?",
     answer:
-      "No está publicado un convenio con seguros de Alemania ni con una caja pública. Para consultar si hay hora se escribe por WhatsApp. Aquí no hay precios ni coberturas.",
+      "Sí. Berlín, Múnich y el resto de Alemania usan esta videollamada desde Chile, en español, para adultos. El horario se coordina según tu zona horaria.",
   },
   {
     question: "¿En qué se diferencia de la página de Suiza o de España?",
     answer:
-      "En Alemania la búsqueda mezcla Logopädie y logopeda en español, y el entorno diario suele ser el alemán. Suiza tiene otro país y otros idiomas oficiales. España usa logopeda como nombre local, no como búsqueda de una persona que vive fuera.",
-  },
-  {
-    question: "¿Hay consulta en Berlín, Múnich u otra ciudad?",
-    answer:
-      "No. Todas las ciudades de Alemania entran en esta videollamada. No hay una ficha por ciudad porque no hay oficina local.",
+      "En Alemania la búsqueda mezcla Logopädie y logopeda en español, y la sesión de esta página es en español. Suiza tiene su propia página. España usa logopeda como nombre de la profesión y también tiene la suya.",
   },
   {
     question: "¿La videollamada reemplaza al otorrino?",
     answer:
-      "No. En Alemania a ese médico se le busca como HNO. Si la ronquera sigue, hay dolor o la voz se corta, esa revisión es presencial. La terapia de voz la acompaña y no la sustituye.",
+      "La terapia de voz acompaña el examen médico. En Alemania a ese médico se le busca como HNO. Si la ronquera sigue, hay dolor o la voz se corta, esa revisión es presencial. Por cámara se escucha cómo hablas.",
   },
 ];
 
@@ -55,9 +50,9 @@ export default function VozOnlineAlemaniaPage() {
       title={TITLE}
       description={DESCRIPTION}
       breadcrumb="Alemania"
-      quickAnswer="Si vives en Alemania y buscas logopeda en español o terapia de voz en español, la sesión es por videollamada desde Chile, para adultos. No reemplaza la Logopädie local ni un seguro alemán, y no afirma un título alemán. El horario se coordina según tu zona horaria. Las cuerdas las mira un médico de forma presencial."
+      quickAnswer="Si vives en Alemania y buscas logopeda en español o terapia de voz en español, la sesión es para adultos, por videollamada desde Chile. Katia Domínguez es fonoaudióloga. El horario se coordina según tu zona horaria."
       serviceName="Terapia de voz en español para adultos en Alemania"
-      serviceDescription="Terapia de voz en español por videollamada desde Chile para adultos en Alemania. Sin título alemán, sin seguros y sin consulta local."
+      serviceDescription="Terapia de voz en español por videollamada desde Chile para adultos en Alemania. El horario se coordina según la zona horaria."
       areaServed={{ "@type": "Country", name: "Alemania" }}
       whatsappMessage="Hola, estoy en Alemania y quiero consultar horario para terapia de voz en español."
       hoursPlace="Alemania"
@@ -67,8 +62,8 @@ export default function VozOnlineAlemaniaPage() {
         <h2 className="text-2xl font-bold text-sky-950">Para quién es</h2>
         <p>
           Para adultos hispanohablantes en Alemania que quieren trabajar la voz en español. El
-          trabajo, el colegio de los hijos o el médico de cabecera pueden ser en alemán. La sesión
-          de voz, si la pides aquí, es en español. El mapa está en{" "}
+          trabajo o el día a día pueden ser en alemán. La sesión de voz, si la pides aquí, es en
+          español. El mapa está en{" "}
           <Link href="/voz-online/fonoaudiologa-de-voz-online">
             terapia de voz online para adultos
           </Link>
@@ -81,27 +76,27 @@ export default function VozOnlineAlemaniaPage() {
         <p>
           Logopädie es el nombre de la profesión en Alemania. Quien busca en español escribe
           «logopeda en español», «fonoaudióloga online» o «terapia de voz en español». Esta página
-          responde a esa segunda búsqueda: una videollamada desde Chile. No dice que Katia sea
-          Logopädin en Alemania ni que sustituya una Logopädie presencial.
+          es esa búsqueda: una videollamada desde Chile, para adultos, con Katia Domínguez,
+          fonoaudióloga.
         </p>
         <p>
           El español importa porque la ronquera, el carraspeo y el esfuerzo al hablar se cuentan
-          mejor en el idioma que usas para eso. No convierte la cámara en un examen de la laringe.
+          mejor en el idioma que usas para eso. La cámara escucha cómo hablas. Las cuerdas las
+          mira el médico.
         </p>
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-sky-950">No es Suiza ni España</h2>
+        <h2 className="text-2xl font-bold text-sky-950">Si estás en Suiza o en España</h2>
         <p>
-          Suiza no es Alemania: hay otros idiomas en la calle y otra forma de nombrar al
-          profesional. Si estás allí, usa{" "}
+          Si estás en Suiza, usa{" "}
           <Link href="/voz-online/suiza">terapia de voz en español si vives en Suiza</Link>. Si
-          vives en España y buscas logopeda como nombre local, la página es{" "}
+          vives en España y buscas logopeda como nombre de la profesión, la página es{" "}
           <Link href="/voz-online/espana">logopedia de la voz online si estás en España</Link>.
         </p>
         <p>
-          Berlín, Múnich, Hamburgo o Fráncfort no tienen ficha propia. No hay consulta en esas
-          ciudades. Abrir una URL por ciudad repetiría esta página.
+          Berlín, Múnich, Hamburgo y Fráncfort entran en esta misma videollamada. El horario se
+          coordina según tu zona horaria.
         </p>
       </section>
 
@@ -109,9 +104,8 @@ export default function VozOnlineAlemaniaPage() {
         <h2 className="text-2xl font-bold text-sky-950">Qué se trabaja</h2>
         <p>
           La <Link href="/voz-online/evaluacion-vocal-online">evaluación vocal online</Link> escucha
-          cómo hablas. No hay precios ni coberturas de un seguro alemán. Si la ronquera sigue más
-          de dos semanas sin resfriado, hay dolor o la voz se apaga, pide hora con un médico HNO
-          donde vives. La terapia no reemplaza esa revisión.
+          cómo hablas. Si la ronquera sigue más de dos semanas sin resfriado, hay dolor o la voz se
+          apaga, pide hora con un médico HNO donde vives. La terapia de voz acompaña esa revisión.
         </p>
       </section>
     </VoiceClusterPage>

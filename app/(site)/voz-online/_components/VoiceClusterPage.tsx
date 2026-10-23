@@ -21,7 +21,7 @@ type VoiceClusterPageProps = {
   areaServed: VoiceArea;
   whatsappMessage: string;
   faq: GeoFAQItem[];
-  /** Si viene, la página es de otro país y explica el horario sin un desfase fijo. */
+  /** Si viene, la página es de otro país y coordina el horario según esa zona. */
   hoursPlace?: string;
   children: ReactNode;
 };
@@ -107,14 +107,11 @@ export function VoiceClusterPage({
               <p>
                 El horario de atención publicado es de {BUSINESS_HOURS.daysLabel}, de{" "}
                 {BUSINESS_HOURS.opens} a {BUSINESS_HOURS.closes}, hora de Chile. Si estás en{" "}
-                {hoursPlace}, la hora de la videollamada se coordina según tu zona horaria. No
-                publicamos un desfase en horas: cambia según la época del año y no sirve prometer
-                un cruce que todavía no conversamos.
+                {hoursPlace}, la hora de la videollamada se coordina según tu zona horaria.
               </p>
               <p>
-                Escribes por WhatsApp, dices en qué ciudad estás y qué franja te acomoda, y desde
-                Chile se ve si hay un horario posible. Si no hay cruce con la atención publicada,
-                se dice en esa conversación. No hay una agenda automática para {hoursPlace}.
+                Escribes por WhatsApp, cuentas desde qué ciudad escribes y qué franja te acomoda, y
+                desde Chile se acuerda la hora.
               </p>
             </section>
           ) : null}

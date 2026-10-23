@@ -6,6 +6,10 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 
 ## 2026-10-23
 
+- Voz online mercados, copy | En las 9 páginas de país se quitaron descargos de licencia, seguro, colegiación, NHS, Medicare, matrícula y «no es en francés». La meta queda en positivo: terapia de voz en español, videollamada desde Chile, adultos, horario según zona horaria. No se afirma licencia, seguro, precio ni consulta local. El otorrino sigue mirando las cuerdas. | Changelog `SEO-CHANGELOG.md`.
+
+## 2026-10-23
+
 - Voz online mercados | 14 URLs nuevas. Países: `/voz-online/espana` (logopeda; Madrid y Barcelona dentro, sin URL propia), `/voz-online/argentina` (fonoaudióloga online; foniatría = médico, no esta hora), `/voz-online/miami`, `/voz-online/estados-unidos` (NY, Texas, California dentro), `/voz-online/canada` (Toronto y Montreal; sesión no es en francés), `/voz-online/reino-unido` (Londres dentro; sin NHS), `/voz-online/alemania`, `/voz-online/suiza`, `/voz-online/australia`. Temas: call center/teletrabajo, menopausia, voz tras resfrío o COVID, proyección de voz, presbifonía (solo voz; sin deglución ni audición). Horario publicado lun–vie 10:00–18:00 hora de Chile; la hora se coordina por WhatsApp sin desfase fijo. Sin precios, seguros ni licencias locales. No se creó calentamiento, higiene, docentes, ronquera, fatiga ni cantantes aficionados (ya existen). Agendar infantil no se enlaza (`/agendar` → hora de niños). | Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 14 URLs y reenviar sitemap; medir ~2026-11-06..11-13.
 
 ## 2026-10-22

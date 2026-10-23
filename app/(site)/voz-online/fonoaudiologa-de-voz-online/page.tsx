@@ -465,8 +465,8 @@ export default function FonoaudiologaVozOnlinePage() {
               Terapia de voz en español fuera de Chile
             </h2>
             <p className="mx-auto mb-8 max-w-2xl text-center text-gray-600">
-              La sesión es por videollamada desde Chile. No hay consulta en estos
-              países ni ciudades, y el horario se coordina según tu zona horaria.
+              La sesión es por videollamada desde Chile, en español, para adultos.
+              El horario se coordina según tu zona horaria.
             </p>
             <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {[
@@ -503,7 +503,7 @@ export default function FonoaudiologaVozOnlinePage() {
                 {
                   href: "/voz-online/alemania",
                   title: "Alemania",
-                  desc: "Logopeda en español, no Logopädie local.",
+                  desc: "Terapia de voz en español, por videollamada.",
                 },
                 {
                   href: "/voz-online/suiza",
