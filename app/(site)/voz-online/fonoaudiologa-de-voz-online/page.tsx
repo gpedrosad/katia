@@ -305,6 +305,36 @@ export default function FonoaudiologaVozOnlinePage() {
                     href: "/voz-online/disfonia-espasmodica",
                     icon: "〰️",
                   },
+                  {
+                    title: "Call center y teletrabajo",
+                    desc: "Voz con audífonos, llamadas y reuniones largas.",
+                    href: "/voz-online/voz-en-call-center",
+                    icon: "🎧",
+                  },
+                  {
+                    title: "Voz y menopausia",
+                    desc: "Cambios de la voz. Las hormonas las ve el médico.",
+                    href: "/voz-online/voz-y-menopausia",
+                    icon: "🌿",
+                  },
+                  {
+                    title: "Tras un resfrío o COVID",
+                    desc: "Si la voz no vuelve cuando el cuadro ya pasó.",
+                    href: "/voz-online/voz-despues-de-un-resfrio",
+                    icon: "🤒",
+                  },
+                  {
+                    title: "Proyección de voz",
+                    desc: "Hablar en público sin gritar.",
+                    href: "/voz-online/proyeccion-de-voz",
+                    icon: "📣",
+                  },
+                  {
+                    title: "Presbifonía",
+                    desc: "Cambios de la voz en la adultez mayor.",
+                    href: "/voz-online/presbifonia",
+                    icon: "🗣️",
+                  },
                 ].map((s) => (
                   <Link
                     key={s.href}
@@ -423,6 +453,78 @@ export default function FonoaudiologaVozOnlinePage() {
                     </span>
                     <span className="mt-2 block text-sm text-sky-600">
                       Atención online →
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section className="my-16 not-prose">
+            <h2 className="mb-4 text-center text-3xl font-bold text-sky-900">
+              Terapia de voz en español fuera de Chile
+            </h2>
+            <p className="mx-auto mb-8 max-w-2xl text-center text-gray-600">
+              La sesión es por videollamada desde Chile. No hay consulta en estos
+              países ni ciudades, y el horario se coordina según tu zona horaria.
+            </p>
+            <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {[
+                {
+                  href: "/voz-online/espana",
+                  title: "España",
+                  desc: "Logopeda y logopedia de la voz.",
+                },
+                {
+                  href: "/voz-online/argentina",
+                  title: "Argentina",
+                  desc: "Fonoaudióloga online y foniatría.",
+                },
+                {
+                  href: "/voz-online/miami",
+                  title: "Miami",
+                  desc: "Fonoaudióloga en español en Florida.",
+                },
+                {
+                  href: "/voz-online/estados-unidos",
+                  title: "Estados Unidos",
+                  desc: "Nueva York, Texas, California y el resto.",
+                },
+                {
+                  href: "/voz-online/canada",
+                  title: "Canadá",
+                  desc: "Toronto, Montreal y el resto del país.",
+                },
+                {
+                  href: "/voz-online/reino-unido",
+                  title: "Reino Unido",
+                  desc: "Londres y speech therapist en español.",
+                },
+                {
+                  href: "/voz-online/alemania",
+                  title: "Alemania",
+                  desc: "Logopeda en español, no Logopädie local.",
+                },
+                {
+                  href: "/voz-online/suiza",
+                  title: "Suiza",
+                  desc: "Sesión en español, en cualquier cantón.",
+                },
+                {
+                  href: "/voz-online/australia",
+                  title: "Australia",
+                  desc: "Fonoaudióloga en español, por videollamada.",
+                },
+              ].map((pais) => (
+                <li key={pais.href}>
+                  <Link
+                    href={pais.href}
+                    className="block h-full rounded-2xl border border-sky-100 bg-white p-5 shadow-sm transition hover:border-sky-300 hover:shadow-md"
+                  >
+                    <span className="text-lg font-semibold text-sky-900">{pais.title}</span>
+                    <span className="mt-2 block text-sm text-gray-600">{pais.desc}</span>
+                    <span className="mt-3 inline-block text-sm font-bold text-sky-600">
+                      Ver atención →
                     </span>
                   </Link>
                 </li>

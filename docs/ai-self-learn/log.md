@@ -4,6 +4,10 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 
 ---
 
+## 2026-10-23
+
+- Voz online mercados | 14 URLs nuevas. Países: `/voz-online/espana` (logopeda; Madrid y Barcelona dentro, sin URL propia), `/voz-online/argentina` (fonoaudióloga online; foniatría = médico, no esta hora), `/voz-online/miami`, `/voz-online/estados-unidos` (NY, Texas, California dentro), `/voz-online/canada` (Toronto y Montreal; sesión no es en francés), `/voz-online/reino-unido` (Londres dentro; sin NHS), `/voz-online/alemania`, `/voz-online/suiza`, `/voz-online/australia`. Temas: call center/teletrabajo, menopausia, voz tras resfrío o COVID, proyección de voz, presbifonía (solo voz; sin deglución ni audición). Horario publicado lun–vie 10:00–18:00 hora de Chile; la hora se coordina por WhatsApp sin desfase fijo. Sin precios, seguros ni licencias locales. No se creó calentamiento, higiene, docentes, ronquera, fatiga ni cantantes aficionados (ya existen). Agendar infantil no se enlaza (`/agendar` → hora de niños). | Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 14 URLs y reenviar sitemap; medir ~2026-11-06..11-13.
+
 ## 2026-10-22
 
 - SEO Lote 16 | Tres URLs nuevas, sin otras ciudades: `/preguntas/el-tel-se-cura` (sin cura ni porcentajes), `/voz-online/disfonia-por-estres` y `/voz-online/disfonia-espasmodica` (complemento; el médico diagnostica; sin fármacos ni dosis). No se creó `/voz-online/nodulos-cirugia-o-terapia`: el H1 y las FAQ de `/voz-online/nodulos-vocales-tratamiento-online` ya cubren cirugía o terapia. Tarjetas solo en los hubs. Sitemap del build 134, lastmod `2026-10-22T12:19:27.000Z`. GSC 90d 07-24..10-21: 85 clic / 5.790 imp / pos 8,1 | Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 3 URLs y reenviar sitemap; medir ~2026-11-05..11-12.

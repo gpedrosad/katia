@@ -20,6 +20,63 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-10-23: Voz online — España, Argentina, mercados en español y temas nuevos
+
+### Contexto
+
+Gonzalo pidió empujar la terapia de voz online para adultos y abrirla, con honestidad, a pacientes que ya atiende fuera de Chile. Prioridad: mercados con población hispanohablante y mayor capacidad de pago. La sesión sigue siendo por videollamada desde Chile. El horario publicado sigue siendo lunes a viernes, 10:00 a 18:00, hora de Chile (`lib/site.ts`). La hora concreta se coordina por WhatsApp según la zona horaria del paciente. No se publica un desfase en horas.
+
+No se inventan precios, monedas, seguros, licencias, matrículas, colegiaciones, resultados ni agendas locales. No hay Fonasa ni Isapre en estas páginas. No hay hreflang: mismo idioma `es`, canonical a sí misma. FAQPage sale de `GeoFAQ` con el mismo texto visible.
+
+No se tocó `/ads`, `/sitelink`, home, header ni footer. En el hub `/voz-online/fonoaudiologa-de-voz-online` solo se agregaron tarjetas (temas nuevos y un bloque de países). No se reescribió el copy previo del hub.
+
+La forma de agendar de la voz online sigue siendo WhatsApp, más el enlace a `/voz-online/como-es-la-sesion-de-voz-online`. No se enlaza `/agendar`: esa ruta redirige a la hora de fonoaudiología infantil en Chillán.
+
+### Páginas que no se crearon
+
+- **Madrid y Barcelona.** Misma lengua, mismo término (logopeda) y la misma videollamada que `/voz-online/espana`. Una URL por ciudad sería un duplicado. Quedan nombradas dentro de España.
+- **Nueva York, Houston/Texas y Los Ángeles/California.** La sesión no cambia por ciudad y no hay consulta local. Quedan como secciones de `/voz-online/estados-unidos`. Miami sí tiene URL: la búsqueda «fonoaudióloga en español / speech therapist en español» en Florida es la que Gonzalo pidió aparte.
+- **Toronto, Montreal y Londres** como URL propia. Toronto y Montreal están en `/voz-online/canada` (Montreal aclara que la sesión no es en francés). Londres está en `/voz-online/reino-unido`.
+- **`/voz-online/europa`.** No hace falta: España (logopeda, residente), Reino Unido (speech therapist, NHS), Alemania (Logopädie) y Suiza (varios idiomas oficiales, sesión solo en español) no comparten la misma búsqueda.
+- **México, Colombia y Perú.** Gonzalo pidió reemplazarlos por los mercados de arriba. Argentina se mantiene.
+- **Calentamiento vocal.** Ya es el H1 y una keyword de `/voz-online/ejercicios-para-la-voz`.
+- **Higiene vocal, docentes, voz ronca y fatiga al final del día.** Ya existen: `/voz-online/higiene-vocal-cuidado-voz`, `/voz-online/terapia-vocal-docentes-profesores`, `/voz-online/voz-ronca-causas-tratamiento`, `/voz-online/fatiga-vocal-tratamiento-online`.
+- **Cantantes aficionados.** `/voz-online/rehabilitacion-vocal-profesionales-voz` ya rankea «terapia voz cantantes» y cubre calentamiento y proyección del profesional. Una segunda URL de canto canibalizaría esa página.
+
+### Páginas nuevas
+
+Entran solas al sitemap (se descubren los `page.tsx`). También quedaron en `lib/seo-routes.ts`. Titles absolutos, todos ≤60. Descriptions entre 120 y 155.
+
+#### Mercados
+
+1. `/voz-online/espana` — «Logopedia de la voz online si estás en España» (45). Meta 153. Logopeda / logopedia de la voz. Sin colegiación española. Madrid y Barcelona, misma videollamada.
+2. `/voz-online/argentina` — «Fonoaudióloga online de la voz en Argentina» (43). Meta 144. Separa foniatría (médico) de fonoaudióloga. Sin matrícula ni obra social.
+3. `/voz-online/miami` — «Fonoaudióloga en español online en Miami» (40). Meta 153. Speech therapist en español. Florida en esta URL. Sin licencia de EE.UU. ni seguro.
+4. `/voz-online/estados-unidos` — «Terapia de voz en español en Estados Unidos» (43). Meta 151. Secciones de Nueva York, Texas/Houston y California/Los Ángeles. Enlaza Miami. Sin licencia estatal ni seguro.
+5. `/voz-online/canada` — «Fonoaudióloga en español online en Canadá» (41). Meta 151. Toronto y Montreal. La sesión no es en francés. Sin licencia canadiense.
+6. `/voz-online/reino-unido` — «Terapia de voz en español en el Reino Unido» (43). Meta 152. Londres dentro de la página. Sin NHS ni registro local.
+7. `/voz-online/alemania` — «Terapia de voz en español si vives en Alemania» (46). Meta 143. Logopädie frente a logopeda en español. Sin seguro alemán.
+8. `/voz-online/suiza` — «Terapia de voz en español si vives en Suiza» (43). Meta 144. Sesión en español aunque el cantón hable otro idioma. Sin título ni seguro suizo.
+9. `/voz-online/australia` — «Fonoaudióloga en español online en Australia» (44). Meta 135. Speech pathologist en español. Sin Medicare ni licencia local. La distancia no se traduce a un desfase publicado.
+
+#### Temas en Chile
+
+10. `/voz-online/voz-en-call-center` — «Voz en call center y teletrabajo: terapia online» (48). Meta 144. No compite con la voz cansada del final del día ni con docentes.
+11. `/voz-online/voz-y-menopausia` — «Voz y menopausia: cambios y terapia de voz» (42). Meta 152. No diagnostica hormonas. Distinta de la presbifonía.
+12. `/voz-online/voz-despues-de-un-resfrio` — «La voz no vuelve tras un resfrío o el COVID» (43). Meta 149. No trata la infección. El otorrino mira las cuerdas. Distinta de ronquera general y de afonía.
+13. `/voz-online/proyeccion-de-voz` — «Proyección de voz para hablar en público» (40). Meta 153. No es oratoria, ni docentes, ni cantantes, ni call center.
+14. `/voz-online/presbifonia` — «Presbifonía: la voz en la adultez mayor» (39). Meta 147. Gonzalo la pidió en este lote. Antes no se había creado porque el sitio no ofrecía adulto mayor, deglución ni audición. La página deja ese límite: solo voz, sin deglución ni audición, sin diagnosticar por cámara.
+
+Cada página enlaza el hub, al menos tres páginas del clúster y la sesión (ahí está cómo agendar), más WhatsApp.
+
+Sitemap del build: **148** URLs (`<loc>`), 134 del lote anterior más estas 14. Canonical de cada página a sí misma. Sin `hreflang`. FAQPage con el mismo texto que las preguntas visibles.
+
+### Métricas esperadas
+
+Indexar las 14 URLs y reenviar el sitemap. Medir ~2026-11-06 al 2026-11-13.
+
+---
+
 ## 2026-10-22: SEO Lote 16 — ¿el TEL se cura?, disfonía por estrés y disfonía espasmódica
 
 ### Contexto
