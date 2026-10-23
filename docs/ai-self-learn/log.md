@@ -6,7 +6,7 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 
 ## 2026-10-23
 
-- SEO Lote 17 | Tres URLs del clúster infantil, sin otras ciudades: `/comparaciones/dislexia-vs-dislalia` (habla vs lectoescritura; edades solo las del glosario; disartria en una línea), `/tartamudez/empezo-a-tartamudear-de-repente` (inicio brusco, distinta de repetir a los 3; sin cura) y `/preguntas/escuela-de-lenguaje-o-fonoaudiologa` (establecimiento educacional vs consulta particular; sin colegios, cupos ni requisitos inventados). Tarjetas solo en los hubs. GSC 90d 07-25..10-22: 89 clic / 5.950 imp / pos 8,1 | Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 3 URLs y reenviar sitemap; medir ~2026-11-06..11-13.
+- SEO Lote 17 | Tres URLs del clúster infantil, sin otras ciudades: `/comparaciones/dislexia-vs-dislalia` (habla vs lectoescritura; edades solo las del glosario; disartria en una línea), `/tartamudez/empezo-a-tartamudear-de-repente` (inicio brusco, distinta de repetir a los 3; sin cura) y `/preguntas/escuela-de-lenguaje-o-fonoaudiologa` (establecimiento educacional vs consulta particular; sin colegios, cupos ni requisitos inventados). Tarjetas solo en los hubs. Sitemap del build 151, lastmod `2026-10-23T12:18:04.000Z`. GSC 90d 07-25..10-22: 89 clic / 5.950 imp / pos 8,1 | Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 3 URLs y reenviar sitemap; medir ~2026-11-06..11-13.
 
 ## 2026-10-23
 
