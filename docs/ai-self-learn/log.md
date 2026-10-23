@@ -6,6 +6,10 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 
 ## 2026-10-23
 
+- SEO Lote 17 | Tres URLs del clúster infantil, sin otras ciudades: `/comparaciones/dislexia-vs-dislalia` (habla vs lectoescritura; edades solo las del glosario; disartria en una línea), `/tartamudez/empezo-a-tartamudear-de-repente` (inicio brusco, distinta de repetir a los 3; sin cura) y `/preguntas/escuela-de-lenguaje-o-fonoaudiologa` (establecimiento educacional vs consulta particular; sin colegios, cupos ni requisitos inventados). Tarjetas solo en los hubs. GSC 90d 07-25..10-22: 89 clic / 5.950 imp / pos 8,1 | Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 3 URLs y reenviar sitemap; medir ~2026-11-06..11-13.
+
+## 2026-10-23
+
 - Voz online mercados, copy | En las 9 páginas de país se quitaron descargos de licencia, seguro, colegiación, NHS, Medicare, matrícula y «no es en francés». La meta queda en positivo: terapia de voz en español, videollamada desde Chile, adultos, horario según zona horaria. No se afirma licencia, seguro, precio ni consulta local. El otorrino sigue mirando las cuerdas. | Changelog `SEO-CHANGELOG.md`.
 
 ## 2026-10-23

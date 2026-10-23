@@ -36,6 +36,12 @@ const comparaciones = [
     description:
       "Diferencias entre pronunciación y vocabulario/comprensión, señales en casa y cuándo evaluar en Chillán.",
   },
+  {
+    href: "/comparaciones/dislexia-vs-dislalia",
+    title: "Dislexia vs dislalia",
+    description:
+      "El habla y la lectoescritura no son el mismo cuadro. Tabla, señales por edad y cuándo evaluar.",
+  },
 ];
 
 export default function ComparacionesHubPage() {

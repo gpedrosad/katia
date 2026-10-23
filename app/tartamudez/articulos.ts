@@ -17,4 +17,10 @@ export const TARTAMUDEZ_ARTICULOS = [
     summary:
       "Timidez, cansancio o evitación. Qué preguntarle a la educadora.",
   },
+  {
+    href: "/tartamudez/empezo-a-tartamudear-de-repente",
+    title: "Empezó a tartamudear de repente",
+    summary:
+      "Si apareció de un día para otro: qué hacer en casa y cuándo evaluar.",
+  },
 ] as const;

@@ -214,6 +214,10 @@ export const SEO_ROUTE_SECTIONS: SeoRouteSection[] = [
         "/comparaciones/retraso-del-habla-vs-retraso-del-lenguaje",
         "Retraso del habla vs retraso del lenguaje"
       ),
+      route(
+        "/comparaciones/dislexia-vs-dislalia",
+        "Dislexia vs dislalia"
+      ),
     ],
   },
   {

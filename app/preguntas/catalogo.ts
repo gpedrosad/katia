@@ -81,4 +81,10 @@ export const PREGUNTAS: readonly PreguntaResumen[] = [
     question: "¿El TEL se cura?",
     teaser: "No se cura: acompaña, y con terapia y apoyo puede mejorar mucho.",
   },
+  {
+    href: "/preguntas/escuela-de-lenguaje-o-fonoaudiologa",
+    question: "¿Escuela de lenguaje o fonoaudióloga particular?",
+    teaser:
+      "No se excluyen. La evaluación y el informe ayudan a decidir. El establecimiento informa sus requisitos.",
+  },
 ] as const;

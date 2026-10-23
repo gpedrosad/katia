@@ -20,6 +20,49 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-10-23: SEO Lote 17 — dislexia vs dislalia, tartamudez de repente y escuela de lenguaje
+
+### Contexto
+
+**Datos GSC (90 días 2026-07-25 al 2026-10-22, sc-domain:katialafono.cl, dataState=all, pull 2026-10-23):**
+- **89 clics**
+- **5.950 impresiones**
+- **Posición promedio: 8,1**
+
+**Últimos 7 días (2026-10-16 al 2026-10-22):** 10 clics / 891 imp vs 7 días previos (2026-10-09 al 2026-10-15): 8 clics / 672 imp. Desde el 2026-10-19 las impresiones diarias subieron a 150–178.
+
+**URL Inspection (2026-10-23):** Google está rastreando más. `/sobre-katia`, `/fonoaudiologa-ninos-chillan`, `/servicios/evaluacion-fonoaudiologica` y `/preguntas/que-hace-un-fonoaudiologo-infantil` se rastrearon entre el 2026-10-21 y el 2026-10-23. Las páginas del Lote 16 (`/preguntas/el-tel-se-cura`, `/voz-online/disfonia-por-estres`) y las de mercado de anoche (`/voz-online/espana`, `/voz-online/presbifonia`) están indexadas. `/voz-online/miami` está «crawled, currently not indexed» y no se tocó. Home último rastreo 2026-10-18; hitos 2026-09-21; `/servicios/tel-trastorno-especifico-lenguaje` 2026-08-20.
+
+El clúster de voz online recibió 14 páginas el 2026-10-23. Este lote vuelve al clúster infantil (el negocio de Chillán), con URLs nuevas sin ciudad o con contexto Chillán, porque las URLs nuevas se indexan más rápido.
+
+La ronda 2 empezó a mostrar impresiones esta semana (`/lenguaje-infantil/habla-como-bebe` 25, `/preguntas/que-hace-un-fonoaudiologo-infantil` 22, `/preguntas/necesito-orden-medica-para-fonoaudiologo` 19, `/preguntas/es-normal-no-pronunciar-la-r-a-los-4` 15). No se editaron.
+
+**SERP Chile (2026-10-21):** «dislalia» tiene PAA «¿Cuál es la diferencia entre dislexia y dislalia?». «tartamudez niños» tiene PAA sobre por qué empieza y qué hacer, y related «Porque un niño empieza a tartamudear de repente» y «La tartamudez tiene cura». No hay página de katialafono.cl en el top 10 de dislalia ni de tartamudez niños. «escuela de lenguaje chillan» mostró 1 impresión en posición 1 vía `/tratamientos/tel-trastorno-especifico-lenguaje-chillan`.
+
+**Páginas congeladas:** no se editó copy ni metadata de Lotes 10–16, de las 14 páginas de voz online ni del copy de mercado del 2026-10-23, de la ronda 2, home, `/servicios` y `/servicios/*`, pilar, `/sobre-katia`, hitos, `/tratamientos/*`, `/chillan/*`, `/glosario/*`, `/comparaciones/*` ya existentes, `/recursos/*`, `/voz-online/*`, `/preguntas/*` ya existentes, `/tartamudez/*` ya existentes, `/dislalia/*` ni `/lectoescritura/*`. En los hubs solo se agregó tarjeta. No se tocó `/ads/*` ni `/sitelink/*`. No hay páginas nuevas de otras ciudades.
+
+### Páginas nuevas
+
+Entran solas al sitemap (se descubren los `page.tsx`). Titles absolutos, todos ≤60. Descriptions entre 120 y 155. FAQPage con el mismo texto visible. Sin estadísticas, porcentajes, precios, cupos, edades de corte ni colegios inventados.
+
+1. `/comparaciones/dislexia-vs-dislalia` — title «Dislexia vs dislalia: diferencias y cuándo consultar» (52). Meta 138. H1 «Diferencia entre dislexia y dislalia». Respuesta rápida: 55 palabras (dislalia = habla; dislexia = lectoescritura; pueden coincidir; quién evalúa). Tabla, señales por edad ya publicadas en el glosario (4-5, 5-6, preescolar, 6-8 / primero y segundo básico). 5 FAQ. Una línea de disartria enlaza `/glosario/disartria`, sin página nueva. Article + FAQPage + BreadcrumbList (Inicio → Comparaciones). Enlaces: hub y las otras 3 comparaciones, glosario de dislalia y dislexia, `/dislalia`, `/lectoescritura`, tratamiento de dislalia en Chillán, `/chillan/dislexia`, dificultades de lectoescritura, agendar y evaluación. Tarjeta nueva en `/comparaciones`. Ruta en `lib/seo-routes.ts`.
+
+2. `/tartamudez/empezo-a-tartamudear-de-repente` — title y H1 «Empezó a tartamudear de repente: qué hacer» (42). Meta 151. Respuesta rápida: 55 palabras. Ángulo distinto de `/tartamudez/repite-palabras-a-los-3`: esa guía es de una edad y de repetir la palabra entera; esta es del inicio brusco en preescolar. Sin cura prometida. En casa: calma, no completar palabras, no decir «habla más lento». Cuándo evaluar: sonidos, bloqueos, tensión, evitación, más de 6 meses, antecedentes familiares con empeoramiento (hechos ya publicados). 5 FAQ, incluida «¿La tartamudez tiene cura?» y «¿Es por algo que hicimos?». Article (fecha 2026-10-23, sin cambiar el helper compartido de las guías congeladas) + FAQPage + BreadcrumbList. Enlaces: hub, las otras 3 guías, `/chillan/disfemia`, `/sintomas/nino-tartamudea-chillan`, `/glosario/disfemia` y agendar. Tarjeta en el hub vía `app/tartamudez/articulos.ts` (también `hasPart` y `lib/seo-routes.ts`). No se reescribió el title, la description ni el cuerpo del hub.
+
+3. `/preguntas/escuela-de-lenguaje-o-fonoaudiologa` — title y H1 «¿Escuela de lenguaje o fonoaudióloga particular?» (48). Meta 151. Escuela de lenguaje = establecimiento educacional; la consulta particular evalúa, hace terapia y el informe para postular o para el PIE. No se excluyen. Chillán nombrado porque ahí atiende Katia. Sin colegios, cupos, costos ni requisitos que el repo no publique: el establecimiento informa los suyos. 5 FAQ además de la pregunta del H1 (FAQPage de `GeoFAQ`, mismo texto visible). Enlaces: TEL servicio y tratamiento Chillán, informe PIE, `/preguntas/el-tel-se-cura`, derivación del jardín, informe del colegio, `/glosario/tel`, agendar y el hub. Tarjeta en `/preguntas` vía `catalogo.ts` (`hasPart`). No se editó `app/preguntas/page.tsx`.
+
+### Métricas esperadas
+
+Indexar las 3 URLs y reenviar el sitemap. Medir ~2026-11-06 al 2026-11-13.
+
+### Técnico
+
+- **Build:** `npm run build` pasó (Next.js 16.1.1). 169 páginas estáticas. El primer intento del typecheck se quedó sin heap; el build que pasó usó `NODE_OPTIONS=--max-old-space-size=4096`.
+- **Sitemap del build previo al commit:** 151 URLs (`<loc>`), 148 del lote de voz online más estas 3. Las tres nuevas están, indexables (`index, follow`) y con canonical a `https://www.katialafono.cl` + su path. FAQPage con 5, 5 y 6 preguntas (la de escuela incluye la pregunta del H1), el mismo texto visible. Article en la comparación y en la guía de tartamudez. BreadcrumbList en las tres.
+- **lastmod previo al commit:** las tres URLs cayeron al mtime (`/comparaciones/dislexia-vs-dislalia` `2026-10-23T12:13:45.283Z`, `/tartamudez/empezo-a-tartamudear-de-repente` `2026-10-23T12:14:11.555Z`, `/preguntas/escuela-de-lenguaje-o-fonoaudiologa` `2026-10-23T12:14:10.967Z`) porque todavía no tenían commit. `/comparaciones` sigue en `2026-10-18T12:22:21.000Z` (git ignora el working tree). `/tartamudez` sigue en `2026-10-17T04:04:19.000Z` y `/preguntas` en `2026-10-17T02:56:48.000Z`: no se editó su `page.tsx`; la tarjeta entra por `articulos.ts` y `catalogo.ts`. El build posterior al commit confirma la fecha git. No se tocó `app/sitemap.ts`.
+
+---
+
 ## 2026-10-23: Mercados de voz online — copy en positivo
 
 Gonzalo pidió sacar los descargos negativos de las 9 páginas de mercado (`espana`, `argentina`, `miami`, `estados-unidos`, `canada`, `reino-unido`, `alemania`, `suiza`, `australia`).
