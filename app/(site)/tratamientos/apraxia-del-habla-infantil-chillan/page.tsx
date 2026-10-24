@@ -177,6 +177,8 @@ export default function ApraxiaHablaPage() {
               <Link href="/tratamientos/dislalia-infantil-chillan" className="font-semibold text-slate-600 underline">dislalia</Link>{" "}
               y{" "}
               <Link href="/tratamientos/retraso-del-habla-chillan" className="font-semibold text-slate-600 underline">retraso del habla</Link>.{" "}
+              Si el habla suena imprecisa por la fuerza de la boca, y no por errores que cambian, mira{" "}
+              <Link href="/comparaciones/dislalia-vs-disartria" className="font-semibold text-slate-600 underline">dislalia y disartria</Link>.{" "}
               Más información en el{" "}
               <Link href="/glosario/praxias-orofaciales" className="font-semibold text-slate-600 underline">glosario</Link>,{" "}
               <Link href="/chillan/apraxia-del-habla" className="font-semibold text-slate-600 underline">apraxia en Chillán</Link>{" "}

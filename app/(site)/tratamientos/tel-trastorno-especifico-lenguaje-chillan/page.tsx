@@ -152,7 +152,11 @@ export default function TratamientoTELPage() {
               Esta página es de <strong>tratamiento fonoaudiológico particular en Chillán</strong>. Una escuela de lenguaje es un establecimiento educacional: para postular se pide un diagnóstico formal. En la consulta elaboramos el informe, también útil para el PIE. No es lo mismo que atenderse en una escuela de lenguaje.
             </p>
             <p className="mt-4 text-gray-700">
-              Si el colegio te pidió el documento, revisa el{" "}
+              Si no sabes si buscar escuela de lenguaje o consulta particular, la respuesta está en{" "}
+              <Link href="/preguntas/escuela-de-lenguaje-o-fonoaudiologa" className="font-semibold text-purple-700 underline">
+                escuela de lenguaje o fonoaudióloga
+              </Link>
+              . Si el colegio te pidió el documento, revisa el{" "}
               <Link href="/servicios/informe-fonoaudiologico-pie-chillan" className="font-semibold text-purple-700 underline">
                 informe fonoaudiológico para PIE y escuelas de lenguaje
               </Link>

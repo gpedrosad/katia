@@ -42,6 +42,12 @@ const comparaciones = [
     description:
       "El habla y la lectoescritura no son el mismo cuadro. Tabla, señales por edad y cuándo evaluar.",
   },
+  {
+    href: "/comparaciones/dislalia-vs-disartria",
+    title: "Dislalia vs disartria",
+    description:
+      "Un sonido cambiado no es lo mismo que un habla imprecisa, lenta o con poco volumen. Cuándo evaluar.",
+  },
 ];
 
 export default function ComparacionesHubPage() {
@@ -99,6 +105,14 @@ export default function ComparacionesHubPage() {
         y{" "}
         <Link href="/glosario/tdl" className="font-medium text-rose-700 underline">
           qué es el TDL
+        </Link>
+        . Si la duda es leer o pronunciar, mira{" "}
+        <Link href="/comparaciones/dislexia-vs-dislalia" className="font-medium text-rose-700 underline">
+          dislexia y dislalia
+        </Link>
+        . Si el habla suena débil, lenta o arrastrada, mira{" "}
+        <Link href="/comparaciones/dislalia-vs-disartria" className="font-medium text-rose-700 underline">
+          dislalia y disartria
         </Link>
         . Las edades están en las{" "}
         <Link

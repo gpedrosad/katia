@@ -162,7 +162,11 @@ export default function NinoPronunciaMalPage() {
               <Link href="/chillan/dislalia">dislalia en Chillán</Link>,{" "}
               <Link href="/servicios/terapia-del-habla-infantil-chillan">terapia del habla</Link>{" "}
               y <Link href="/servicios/evaluacion-fonoaudiologica">evaluación</Link>.{" "}
-              La atención general está en la <Link href="/fonoaudiologa-ninos-chillan">fonoaudiología infantil en Chillán</Link>.
+              La atención general está en la <Link href="/fonoaudiologa-ninos-chillan">fonoaudiología infantil en Chillán</Link>.{" "}
+              Si el habla suena débil o arrastrada, compara{" "}
+              <Link href="/comparaciones/dislalia-vs-disartria">dislalia y disartria</Link>.{" "}
+              Si la duda es la lectura y no el sonido, mira{" "}
+              <Link href="/comparaciones/dislexia-vs-dislalia">dislexia y dislalia</Link>.
             </p>
           </div>
         </section>

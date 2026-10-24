@@ -56,6 +56,21 @@ export default function ChillanPatologiasHubPage() {
           </li>
         ))}
       </ul>
+      <p className="mt-10 text-gray-700">
+        Si el colegio mezcla lectura y pronunciación, compara{" "}
+        <Link href="/comparaciones/dislexia-vs-dislalia" className="font-medium text-rose-700 underline">
+          dislexia y dislalia
+        </Link>
+        . Si la fluidez cambió de un día para otro, mira{" "}
+        <Link href="/tartamudez/empezo-a-tartamudear-de-repente" className="font-medium text-rose-700 underline">
+          empezó a tartamudear de repente
+        </Link>
+        . Si te hablan de una escuela de lenguaje, la duda está en{" "}
+        <Link href="/preguntas/escuela-de-lenguaje-o-fonoaudiologa" className="font-medium text-rose-700 underline">
+          escuela de lenguaje o fonoaudióloga particular
+        </Link>
+        .
+      </p>
       <section className="mt-12 rounded-2xl border border-rose-100 bg-rose-50 p-6 text-center">
         <p className="mb-4 text-gray-700">
           Atención presencial en Chillán, Ñuble. Primera cita: evaluación

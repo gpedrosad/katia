@@ -189,6 +189,32 @@ export default function SobrePage() {
               <p>Katia Domínguez es fonoaudióloga titulada de la Universidad de Chile, con postítulo en trastorno fonológico y más de 20 años de experiencia clínica en evaluación y tratamiento de trastornos del lenguaje, habla y lectoescritura en población infantil.</p>
               <p>Ha trabajado con niños en edad preescolar y escolar, abordando desde retrasos simples del habla hasta cuadros más complejos como TEL/TDL, trastornos fonológicos y dificultades de comunicación asociadas a TEA.</p>
               <p>Si buscas fonoaudiólogo en Chillán, la atención es presencial en la comuna, {BUSINESS_HOURS.daysLabel} de {BUSINESS_HOURS.opens} a {BUSINESS_HOURS.closes}. El horario y el contacto se coordinan por WhatsApp.</p>
+              <p>
+                Si tu hijo{" "}
+                <Link href="/tartamudez/empezo-a-tartamudear-de-repente" className="font-semibold text-rose-600 underline">
+                  empezó a tartamudear de repente
+                </Link>
+                , si el colegio mezcla lectura y pronunciación en{" "}
+                <Link href="/comparaciones/dislexia-vs-dislalia" className="font-semibold text-rose-600 underline">
+                  dislexia y dislalia
+                </Link>
+                , o si te preguntan por{" "}
+                <Link href="/preguntas/escuela-de-lenguaje-o-fonoaudiologa" className="font-semibold text-rose-600 underline">
+                  escuela de lenguaje o fonoaudióloga particular
+                </Link>
+                , cada duda tiene su página. La tabla de{" "}
+                <Link href="/recursos/hitos-del-lenguaje-por-edad" className="font-semibold text-rose-600 underline">
+                  a qué edad hablan los niños
+                </Link>{" "}
+                orienta la edad antes de pedir hora.
+              </p>
+              <p>
+                La terapia de voz para adultos es otra línea: videollamada desde Chile, con el horario coordinado a tu zona. Si estás en Miami, la página es{" "}
+                <Link href="/voz-online/miami" className="font-semibold text-rose-600 underline">
+                  fonoaudióloga en español en Miami
+                </Link>
+                .
+              </p>
               <p>Su enfoque combina evaluación rigurosa, trabajo coordinado con la familia y el colegio, y un lenguaje claro para que las familias entiendan qué le pasa a su hijo y qué se puede hacer.</p>
             </div>
           </div>

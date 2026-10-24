@@ -4,6 +4,10 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 
 ---
 
+## 2026-10-24
+
+- SEO Lote 18 | 9 URLs nuevas, sin otras ciudades chilenas: `/tartamudez/se-traba-al-leer-en-el-colegio`, `/tartamudez/hay-tartamudez-en-la-familia`, `/lenguaje-infantil/a-los-3-anos-habla-poco`, `/lectoescritura/el-colegio-dice-dislexia`, `/preguntas/el-pie-reemplaza-la-terapia`, `/preguntas/a-que-edad-se-le-entiende`, `/comparaciones/dislalia-vs-disartria`, `/voz-online/terapia-de-voz-desde-otro-pais`, `/voz-online/cuanto-dura-la-terapia-de-voz`. Hitos no se reescribió (cambio del 2026-10-19 sin recrawl). Ancla «a qué edad hablan los niños» desde hubs antiguos. Miami enlazada en cuerpo desde sobre Katia, parálisis cordal y el hub de voz. Sin licencia, seguro ni precios. | Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 9 URLs, las 3 del Lote 17 y `/voz-online/miami`; medir ~2026-11-07..11-14.
+
 ## 2026-10-23
 
 - SEO Lote 17 | Tres URLs del clúster infantil, sin otras ciudades: `/comparaciones/dislexia-vs-dislalia` (habla vs lectoescritura; edades solo las del glosario; disartria en una línea), `/tartamudez/empezo-a-tartamudear-de-repente` (inicio brusco, distinta de repetir a los 3; sin cura) y `/preguntas/escuela-de-lenguaje-o-fonoaudiologa` (establecimiento educacional vs consulta particular; sin colegios, cupos ni requisitos inventados). Tarjetas solo en los hubs. Sitemap del build 151, lastmod `2026-10-23T12:18:04.000Z`. GSC 90d 07-25..10-22: 89 clic / 5.950 imp / pos 8,1 | Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 3 URLs y reenviar sitemap; medir ~2026-11-06..11-13.

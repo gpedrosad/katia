@@ -110,6 +110,14 @@ const VOZ_ONLINE_SLUGS: { slug: string; label: string }[] = [
   { slug: "voz-despues-de-un-resfrio", label: "Voz tras un resfrío o COVID" },
   { slug: "proyeccion-de-voz", label: "Proyección de voz para hablar en público" },
   { slug: "presbifonia", label: "Presbifonía" },
+  {
+    slug: "terapia-de-voz-desde-otro-pais",
+    label: "Terapia de voz desde otro país",
+  },
+  {
+    slug: "cuanto-dura-la-terapia-de-voz",
+    label: "Cuánto dura la terapia de voz",
+  },
   { slug: "espana", label: "Terapia de voz en español — España" },
   { slug: "argentina", label: "Terapia de voz en español — Argentina" },
   { slug: "miami", label: "Terapia de voz en español — Miami" },
@@ -217,6 +225,10 @@ export const SEO_ROUTE_SECTIONS: SeoRouteSection[] = [
       route(
         "/comparaciones/dislexia-vs-dislalia",
         "Dislexia vs dislalia"
+      ),
+      route(
+        "/comparaciones/dislalia-vs-disartria",
+        "Dislalia vs disartria"
       ),
     ],
   },

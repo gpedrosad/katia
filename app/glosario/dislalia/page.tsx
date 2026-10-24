@@ -216,6 +216,19 @@ export default function DislaliaPage() {
                 Es uno de los trastornos del habla más comunes en niños y tiene
                 muy buen pronóstico con tratamiento fonoaudiológico.
               </p>
+              <p>
+                Si la duda es leer y no pronunciar, la diferencia con la
+                dislexia está en{" "}
+                <Link href="/comparaciones/dislexia-vs-dislalia">
+                  dislexia y dislalia
+                </Link>
+                . Si el habla suena débil, lenta o con poco volumen, no es el
+                mismo cuadro: mira{" "}
+                <Link href="/comparaciones/dislalia-vs-disartria">
+                  dislalia y disartria
+                </Link>
+                .
+              </p>
 
               <h2>Tipos de dislalia</h2>
               <h3>Según su causa</h3>

@@ -172,7 +172,11 @@ export default function HablaPocoPage() {
               A veces es un{" "}
               <Link href="/tratamientos/retraso-del-lenguaje-chillan" className="font-semibold text-indigo-600 underline">retraso del lenguaje</Link>, otras un{" "}
               <Link href="/tratamientos/tel-trastorno-especifico-lenguaje-chillan" className="font-semibold text-indigo-600 underline">TEL</Link>.{" "}
-              Lee el <Link href="/glosario/tel" className="font-semibold text-indigo-600 underline">glosario</Link>,{" "}
+              Si tiene cerca de 3 años y sigue en palabras sueltas, mira{" "}
+              <Link href="/lenguaje-infantil/a-los-3-anos-habla-poco" className="font-semibold text-indigo-600 underline">a los 3 años habla poco</Link>.{" "}
+              La tabla de{" "}
+              <Link href="/recursos/hitos-del-lenguaje-por-edad" className="font-semibold text-indigo-600 underline">a qué edad hablan los niños</Link>{" "}
+              está en los hitos. Lee el <Link href="/glosario/tel" className="font-semibold text-indigo-600 underline">glosario</Link>,{" "}
               <Link href="/chillan/retraso-del-lenguaje" className="font-semibold text-indigo-600 underline">retraso del lenguaje en Chillán</Link> y la{" "}
               <Link href="/servicios/terapia-lenguaje-infantil" className="font-semibold text-indigo-600 underline">terapia de lenguaje</Link>.{" "}
               La <Link href="/servicios/evaluacion-fonoaudiologica" className="font-semibold text-indigo-600 underline">evaluación</Link> aclara el diagnóstico. La atención general está en la <Link href="/fonoaudiologa-ninos-chillan" className="font-semibold text-indigo-600 underline">fonoaudiología infantil en Chillán</Link>.

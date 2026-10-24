@@ -136,7 +136,15 @@ export default function SenalesDeAlertaPage() {
                     href="/recursos/hitos-del-lenguaje-por-edad"
                     className="font-medium text-rose-600 underline"
                   >
-                    Hitos del lenguaje por edad
+                    ¿A qué edad hablan los niños?
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/preguntas/a-que-edad-se-le-entiende"
+                    className="font-medium text-rose-600 underline"
+                  >
+                    ¿A qué edad se le entiende?
                   </Link>
                 </li>
                 <li>

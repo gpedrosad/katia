@@ -335,6 +335,18 @@ export default function FonoaudiologaVozOnlinePage() {
                     href: "/voz-online/presbifonia",
                     icon: "🗣️",
                   },
+                  {
+                    title: "Desde otro país",
+                    desc: "Videollamada desde Chile. El horario se coordina a tu zona.",
+                    href: "/voz-online/terapia-de-voz-desde-otro-pais",
+                    icon: "🌎",
+                  },
+                  {
+                    title: "Cuánto dura",
+                    desc: "El plan sale de la evaluación vocal. No hay un paquete fijo.",
+                    href: "/voz-online/cuanto-dura-la-terapia-de-voz",
+                    icon: "🗓️",
+                  },
                 ].map((s) => (
                   <Link
                     key={s.href}
@@ -466,7 +478,19 @@ export default function FonoaudiologaVozOnlinePage() {
             </h2>
             <p className="mx-auto mb-8 max-w-2xl text-center text-gray-600">
               La sesión es por videollamada desde Chile, en español, para adultos.
-              El horario se coordina según tu zona horaria.
+              El horario se coordina según tu zona horaria. Si estás en Miami, la
+              página es{" "}
+              <Link href="/voz-online/miami" className="font-semibold text-sky-800 underline">
+                fonoaudióloga en español en Miami
+              </Link>
+              . La duda general, desde cualquier país, está en{" "}
+              <Link
+                href="/voz-online/terapia-de-voz-desde-otro-pais"
+                className="font-semibold text-sky-800 underline"
+              >
+                terapia de voz desde otro país
+              </Link>
+              .
             </p>
             <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {[

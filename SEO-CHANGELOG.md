@@ -20,6 +20,64 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-10-24: SEO Lote 18 — clúster infantil, edad del habla y voz online en positivo
+
+### Contexto
+
+Sin pull nuevo de GSC. Se usa el corte del Lote 17 (90 días 2026-07-25 al 2026-10-22): **89 clics / 5.950 impresiones / posición 8,1**. El encargo trae la query «a que edad hablan los niños» en ~254 impresiones y posición 9,8. Esa URL es `/recursos/hitos-del-lenguaje-por-edad`. El title ya se cambió el 2026-10-19 y el último rastreo conocido sigue siendo el 2026-09-21, así que no se reescribió: un segundo pase antes del recrawl repetiría el Lote 13. Se refuerza con el ancla exacta desde hubs antiguos y con una pregunta distinta (a qué edad se le entiende).
+
+Lote de fin de semana, más grande que el diario. Clúster infantil (tartamudez, dislexia/dislalia, lenguaje, escuela) más dos FAQ de voz online en positivo. Sin páginas de otras ciudades chilenas. Sin `/ads` ni `/sitelink`. No se reescribió el cuerpo de las URLs del Lote 17 ni de `/voz-online/miami`: solo se enlazan desde páginas más antiguas y desde el párrafo de países del hub de voz.
+
+### Páginas nuevas
+
+Entran solas al sitemap. Titles absolutos, todos ≤60. Descriptions entre 120 y 155. FAQPage con el mismo texto visible. Sin precios, cupos, colegios, licencias, seguros ni estadísticas nuevas. Edades solo las ya publicadas en hitos y glosario.
+
+1. `/tartamudez/se-traba-al-leer-en-el-colegio` — title «Se traba al leer en el colegio: qué hacer» (41). Meta 148. Lectura en voz alta y respuesta en la sala. Distinta de «no quiere hablar en el jardín» y de «empezó de repente». Sin cura. 5 FAQ. Article + FAQPage + BreadcrumbList. Tarjeta en `app/tartamudez/articulos.ts`.
+
+2. `/tartamudez/hay-tartamudez-en-la-familia` — title «Hay tartamudez en la familia: cuándo evaluar» (44). Meta 137. El antecedente no decide solo. La señal publicada es antecedente más empeoramiento, sin porcentaje de herencia. 5 FAQ. Tarjeta en el hub.
+
+3. `/lenguaje-infantil/a-los-3-anos-habla-poco` — title «A los 3 años habla poco: qué mirar» (34). Meta 140. Oraciones hacia los 3 años. No repite la guía de dos palabras (hacia los 2) ni la de 18 meses. Sin un número de palabras inventado para los 3. 5 FAQ. Tarjeta en `articulos.ts`.
+
+4. `/lectoescritura/el-colegio-dice-dislexia` — title «El colegio dice dislexia: qué evaluar» (37). Meta 136. La palabra del colegio no es el diagnóstico. El diagnóstico formal sigue en evaluaciones especializadas, como ya dice la comparación del Lote 17. 5 FAQ. Tarjeta en `articulos.ts`. Enlaza `/comparaciones/dislexia-vs-dislalia`.
+
+5. `/preguntas/el-pie-reemplaza-la-terapia` — title «¿El PIE reemplaza la terapia particular?» (40). Meta 142. El PIE es apoyo en el colegio. La consulta evalúa, hace terapia y el informe. No es la escuela de lenguaje: esa decisión sigue en la URL del Lote 17. 5 FAQ además de la pregunta del H1. Tarjeta en `catalogo.ts`.
+
+6. `/preguntas/a-que-edad-se-le-entiende` — title «¿A qué edad se le entiende lo que dice?» (39). Meta 150. A los 3, oraciones que extraños entienden en gran parte; hacia los 4 y 5, más claridad; si a los 4 cuesta entenderlo, evaluar. El ancla «a qué edad hablan los niños» apunta a hitos. 5 FAQ además del H1. No compite con el H1 de hitos.
+
+7. `/comparaciones/dislalia-vs-disartria` — title «Dislalia vs disartria: qué las distingue» (40). Meta 151. Tabla con hechos del glosario. El médico acompaña la disartria. Si hay masticación o tragar, se lo comentas al médico; la hora mira la claridad del habla. Una línea separa la apraxia. 5 FAQ. Article + FAQPage + BreadcrumbList. Tarjeta en `/comparaciones`, más una frase del cuerpo hacia dislexia vs dislalia.
+
+8. `/voz-online/terapia-de-voz-desde-otro-pais` — title «Terapia de voz online desde otro país» (37). Meta 138. Videollamada desde Chile, adultos, horario lun–vie 10:00–18:00 hora de Chile coordinado a tu zona. Enlace de cuerpo a `/voz-online/miami` y al resto de mercados. Sin descargos de licencia ni seguro. 5 FAQ.
+
+9. `/voz-online/cuanto-dura-la-terapia-de-voz` — title «¿Cuánto dura la terapia de voz online?» (38). Meta 145. Sin número de sesiones. El plan sale de la evaluación vocal. Enlace a Miami y a la página de otro país. 5 FAQ.
+
+### Enlaces de descubrimiento
+
+Hacia el Lote 17 y Miami, desde páginas cuyo último commit de contenido era anterior al 2026-10-17, salvo la tarjeta y una frase en hubs que ya listan el clúster:
+
+- `/sobre-katia-dominguez-fonoaudiologa-chillan` (rastreada 2026-10-21 a 2026-10-23): tartamudez de repente, dislexia vs dislalia, escuela de lenguaje, ancla de hitos y Miami.
+- `/chillan`: las tres URLs del Lote 17.
+- `/tratamientos/tel-trastorno-especifico-lenguaje-chillan`: escuela de lenguaje o fonoaudióloga.
+- `/servicios/informe-fonoaudiologico-pie-chillan`: escuela de lenguaje y PIE vs terapia.
+- `/glosario/dislalia`: dislexia vs dislalia y dislalia vs disartria.
+- `/sintomas/nino-pronuncia-mal-chillan` y `/tratamientos/apraxia-del-habla-infantil-chillan`: dislalia vs disartria. Pronunciación también enlaza dislexia vs dislalia.
+- `/sintomas/hijo-habla-poco-edad-chillan`: a los 3 años habla poco y el ancla «a qué edad hablan los niños».
+- `/recursos/senales-de-alerta-del-lenguaje-y-habla`: el mismo ancla, más la pregunta de a qué edad se le entiende.
+- `/voz-online/paralisis-cordal-rehabilitacion-online`: Miami y terapia desde otro país.
+- Hub `/voz-online/fonoaudiologa-de-voz-online`: dos tarjetas nuevas y, en el párrafo de países, enlace de cuerpo a Miami. No se reescribió el resto del hub.
+
+No se tocó `/ads`, `/sitelink`, home, `/servicios`, el pilar, hitos, ni el cuerpo de las 3 URLs del Lote 17 ni de las páginas de mercado del 2026-10-23.
+
+### Métricas esperadas
+
+Indexar las 9 URLs, reenviar el sitemap y pedir inspección de las 3 del Lote 17 y de `/voz-online/miami`. Medir ~2026-11-07 al 2026-11-14. La query de edad se mide en hitos, no en la pregunta nueva.
+
+### Técnico
+
+- Rutas nuevas en `lib/seo-routes.ts` (comparación y voz a mano; el resto entra por `articulos.ts` y `catalogo.ts`).
+- Sitemap: se descubren los `page.tsx`. No se tocó `app/sitemap.ts`.
+
+---
+
 ## 2026-10-23: SEO Lote 17 — dislexia vs dislalia, tartamudez de repente y escuela de lenguaje
 
 ### Contexto

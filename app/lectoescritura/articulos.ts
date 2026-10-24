@@ -17,4 +17,10 @@ export const LECTOESCRITURA_ARTICULOS = [
     summary:
       "Evitación, adivinación y esfuerzo. No es un diagnóstico de dislexia hecho en casa.",
   },
+  {
+    href: "/lectoescritura/el-colegio-dice-dislexia",
+    title: "El colegio dice dislexia",
+    summary:
+      "La palabra de la profesora no cierra el nombre. Qué mira la evaluación.",
+  },
 ] as const;

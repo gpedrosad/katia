@@ -23,4 +23,16 @@ export const TARTAMUDEZ_ARTICULOS = [
     summary:
       "Si apareció de un día para otro: qué hacer en casa y cuándo evaluar.",
   },
+  {
+    href: "/tartamudez/se-traba-al-leer-en-el-colegio",
+    title: "Se traba al leer en el colegio",
+    summary:
+      "Lectura en voz alta y respuestas en la sala: cómo esperar sin corregirlo.",
+  },
+  {
+    href: "/tartamudez/hay-tartamudez-en-la-familia",
+    title: "Hay tartamudez en la familia",
+    summary:
+      "El antecedente no decide solo. Qué observar si la fluidez va a más.",
+  },
 ] as const;

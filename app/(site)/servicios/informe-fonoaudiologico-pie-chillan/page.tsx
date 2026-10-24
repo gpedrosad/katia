@@ -201,7 +201,21 @@ export default function InformePiePage() {
               </li>
               <li>
                 Para postular a una escuela de lenguaje (requiere diagnóstico
-                formal).
+                formal). Si dudas entre ese establecimiento y la consulta, mira{" "}
+                <Link
+                  href="/preguntas/escuela-de-lenguaje-o-fonoaudiologa"
+                  className="font-semibold text-violet-600"
+                >
+                  escuela de lenguaje o fonoaudióloga
+                </Link>
+                . El PIE del colegio no reemplaza la hora particular:{" "}
+                <Link
+                  href="/preguntas/el-pie-reemplaza-la-terapia"
+                  className="font-semibold text-violet-600"
+                >
+                  PIE y terapia
+                </Link>
+                .
               </li>
               <li>
                 Cuando el pediatra solicita{" "}

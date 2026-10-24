@@ -87,4 +87,16 @@ export const PREGUNTAS: readonly PreguntaResumen[] = [
     teaser:
       "No se excluyen. La evaluación y el informe ayudan a decidir. El establecimiento informa sus requisitos.",
   },
+  {
+    href: "/preguntas/el-pie-reemplaza-la-terapia",
+    question: "¿El PIE reemplaza la terapia particular?",
+    teaser:
+      "No. El PIE es apoyo en el colegio. La consulta evalúa, hace terapia y el informe.",
+  },
+  {
+    href: "/preguntas/a-que-edad-se-le-entiende",
+    question: "¿A qué edad se le entiende lo que dice?",
+    teaser:
+      "Oraciones más claras hacia los 3 años, y más aún a los 4 y 5. La tabla de cuándo empiezan a hablar está en los hitos.",
+  },
 ] as const;

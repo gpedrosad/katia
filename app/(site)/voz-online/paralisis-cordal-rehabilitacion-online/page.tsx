@@ -204,6 +204,22 @@ export default function ParalisisCordalPage() {
           </p>
 
           <p>
+            La misma videollamada sirve si te conectas desde otro país. El
+            horario se coordina a tu zona horaria. Si estás en Miami, entra por{" "}
+            <Link href="/voz-online/miami" className="font-semibold text-slate-700">
+              fonoaudióloga en español en Miami
+            </Link>
+            . La guía general está en{" "}
+            <Link
+              href="/voz-online/terapia-de-voz-desde-otro-pais"
+              className="font-semibold text-slate-700"
+            >
+              terapia de voz desde otro país
+            </Link>
+            .
+          </p>
+
+          <p>
             Si además hay ronquera persistente, revisa{" "}
             <Link href="/voz-online/voz-ronca-causas-tratamiento" className="font-semibold text-slate-700">
               voz ronca

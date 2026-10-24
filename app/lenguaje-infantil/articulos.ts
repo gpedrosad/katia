@@ -23,4 +23,10 @@ export const LENGUAJE_ARTICULOS = [
     summary:
       "Cómo se ve juntar dos palabras en la casa y cuándo esa pausa merece una evaluación.",
   },
+  {
+    href: "/lenguaje-infantil/a-los-3-anos-habla-poco",
+    title: "A los 3 años habla poco",
+    summary:
+      "Si a los 3 sigue en palabras sueltas y no cuenta el día, qué mirar antes de evaluar.",
+  },
 ] as const;
