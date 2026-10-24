@@ -74,7 +74,8 @@ Indexar las 9 URLs, reenviar el sitemap y pedir inspección de las 3 del Lote 17
 ### Técnico
 
 - Rutas nuevas en `lib/seo-routes.ts` (comparación y voz a mano; el resto entra por `articulos.ts` y `catalogo.ts`).
-- Sitemap: se descubren los `page.tsx`. No se tocó `app/sitemap.ts`.
+- **Build:** `npm run build` pasó (Next.js 16.1.1). 178 páginas estáticas (169 del Lote 17 más estas 9).
+- **Sitemap del build:** 160 URLs (`<loc>`), 151 del lote anterior más estas 9. Las nueve están, con canonical a `https://www.katialafono.cl` + su path, `index, follow` y FAQPage. lastmod `2026-10-24T04:02:09.000Z` (commit `c9d2441`). Sin `/ads` ni `/sitelink`. No se tocó `app/sitemap.ts`.
 
 ---
 

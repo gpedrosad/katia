@@ -6,7 +6,7 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 
 ## 2026-10-24
 
-- SEO Lote 18 | 9 URLs nuevas, sin otras ciudades chilenas: `/tartamudez/se-traba-al-leer-en-el-colegio`, `/tartamudez/hay-tartamudez-en-la-familia`, `/lenguaje-infantil/a-los-3-anos-habla-poco`, `/lectoescritura/el-colegio-dice-dislexia`, `/preguntas/el-pie-reemplaza-la-terapia`, `/preguntas/a-que-edad-se-le-entiende`, `/comparaciones/dislalia-vs-disartria`, `/voz-online/terapia-de-voz-desde-otro-pais`, `/voz-online/cuanto-dura-la-terapia-de-voz`. Hitos no se reescribió (cambio del 2026-10-19 sin recrawl). Ancla «a qué edad hablan los niños» desde hubs antiguos. Miami enlazada en cuerpo desde sobre Katia, parálisis cordal y el hub de voz. Sin licencia, seguro ni precios. | Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 9 URLs, las 3 del Lote 17 y `/voz-online/miami`; medir ~2026-11-07..11-14.
+- SEO Lote 18 | 9 URLs nuevas, sin otras ciudades chilenas: `/tartamudez/se-traba-al-leer-en-el-colegio`, `/tartamudez/hay-tartamudez-en-la-familia`, `/lenguaje-infantil/a-los-3-anos-habla-poco`, `/lectoescritura/el-colegio-dice-dislexia`, `/preguntas/el-pie-reemplaza-la-terapia`, `/preguntas/a-que-edad-se-le-entiende`, `/comparaciones/dislalia-vs-disartria`, `/voz-online/terapia-de-voz-desde-otro-pais`, `/voz-online/cuanto-dura-la-terapia-de-voz`. Hitos no se reescribió (cambio del 2026-10-19 sin recrawl). Ancla «a qué edad hablan los niños» desde hubs antiguos. Miami enlazada en cuerpo desde sobre Katia, parálisis cordal y el hub de voz. Sitemap del build 160, lastmod `2026-10-24T04:02:09.000Z`. Sin licencia, seguro ni precios. | Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 9 URLs, las 3 del Lote 17 y `/voz-online/miami`; medir ~2026-11-07..11-14.
 
 ## 2026-10-23
 
