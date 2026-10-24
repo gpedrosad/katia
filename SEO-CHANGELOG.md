@@ -109,7 +109,7 @@ Medir ~2026-11-07 al 2026-11-14:
 
 - Sin URLs nuevas. No se tocó `app/sitemap.ts` ni `lib/seo-routes.ts`
 - **Build:** `npm run build` pasó (Next.js 16.1.1). 178 páginas estáticas, igual que el Lote 18
-- **Sitemap del build previo al commit:** 160 URLs (`<loc>`). Sin `/ads` ni `/sitelink`. En ese build el `lastmod` de las cinco páginas editadas sigue en el commit anterior, porque el sitemap lee la fecha git y el commit de este lote todavía no existía. El build posterior al commit queda anotado abajo si cambia
+- **Sitemap del build posterior al commit `614f497`:** 160 URLs (`<loc>`). Sin `/ads` ni `/sitelink`. Las cinco páginas editadas quedan con `lastmod` `2026-10-24T12:18:15.000Z`. `/chillan/dislalia`, `/chillan/apraxia-del-habla` y `/chillan/lectoescritura` siguen en `2026-10-18T12:22:21.000Z` (template del Lote 12) y `/tratamientos/dislalia-infantil-chillan` en `2026-10-17T04:04:19.000Z`: no se editaron en este lote
 
 ---
 
