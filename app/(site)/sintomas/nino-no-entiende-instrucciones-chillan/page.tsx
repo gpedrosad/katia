@@ -10,9 +10,9 @@ const WHATSAPP_LINK = whatsappUrl("Hola, mi hijo no entiende instrucciones y me 
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Niño no entiende instrucciones | Chillán",
+  title: "No entiende instrucciones: qué hacer en Chillán",
   description:
-    "¿Tu hijo no sigue instrucciones? Puede ser déficit de comprensión o atención. Señales por edad, qué hacer y cuándo evaluar. Fonoaudióloga en Chillán.",
+    "Si no sigue «ven» o dos pasos, puede ser comprensión del lenguaje y, a veces, TEA. No diagnostica. Qué hacer y evaluación en Chillán.",
   keywords: [
     "niño no entiende instrucciones",
     "niño no sigue instrucciones",
@@ -53,7 +53,8 @@ const medicalWebPageJsonLd = {
   "@type": "MedicalWebPage",
   "@id": `${SITE_URL}${PAGE_PATH}#webpage`,
   name: "¿Tu hijo no entiende instrucciones? Ayuda en Chillán",
-  description: "¿Tu hijo no sigue instrucciones o parece no entender? Señales de problema de comprensión y qué hacer. Evaluación fonoaudiológica presencial en Chillán.",
+  description:
+    "Si no sigue «ven» o dos pasos, puede ser comprensión del lenguaje y, a veces, TEA. No diagnostica. Qué hacer y evaluación en Chillán.",
   medicalSpecialty: "SpeechTherapy",
   about: { "@type": "MedicalCondition", name: "Déficit de comprensión del lenguaje" },
 };
@@ -99,8 +100,9 @@ export default function NinoNoEntiendeInstruccionesPage() {
               <p className="text-lg font-semibold text-gray-900">
                 <strong>Respuesta rápida:</strong> Si tu hijo no entiende
                 instrucciones, puede ser comprensión del lenguaje, atención, o
-                ambas. No es lo mismo «no quiere» que «no entiende». Una
-                evaluación fonoaudiológica diferencia ambos y orienta si hay
+                ambas. A veces también se relaciona con TEA; esta página no lo
+                diagnostica. No es lo mismo «no quiere» que «no entiende». Una
+                evaluación en Chillán diferencia ambos y orienta si hay
                 retraso o TEL receptivo.
               </p>
             </div>
@@ -180,6 +182,11 @@ export default function NinoNoEntiendeInstruccionesPage() {
                 <strong>TEL receptivo:</strong> el trastorno específico del
                 lenguaje puede afectar sobre todo lo que el niño entiende.
               </li>
+              <li>
+                <strong>A veces, TEA:</strong> no seguir instrucciones puede
+                relacionarse con la comprensión y, en algunos niños, con el
+                autismo. No es un diagnóstico.
+              </li>
             </ul>
             <p className="mb-8 text-center text-gray-600">
               Revisa{" "}
@@ -194,6 +201,14 @@ export default function NinoNoEntiendeInstruccionesPage() {
               <Link href="/recursos/estimular-lenguaje-en-casa">estimulación del lenguaje en casa</Link>
               {" "}y{" "}
               <Link href="/servicios/evaluacion-fonoaudiologica">evaluación</Link>
+              . Si la duda es de autismo, sin diagnosticar desde aquí:{" "}
+              <Link href="/servicios/tea-trastorno-espectro-autista">
+                fonoaudióloga para TEA
+              </Link>{" "}
+              y{" "}
+              <Link href="/chillan/tea-comunicacion">
+                TEA y comunicación en Chillán
+              </Link>
               .
             </p>
           </div>

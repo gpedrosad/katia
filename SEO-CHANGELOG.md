@@ -20,6 +20,99 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-10-24: SEO Lote 19 — CTR en página 1 e intención de TEA y terapia de lenguaje
+
+### Contexto
+
+**Datos GSC (90 días 2026-07-26 al 2026-10-23, sc-domain:katialafono.cl, dataState=all, pull 2026-10-24):**
+- **90 clics**
+- **6.158 impresiones**
+- **Posición promedio: 8,1**
+
+**Últimos 7 días (2026-10-17 al 2026-10-23):** 9 clics / 1.005 imp vs 7 días previos (2026-10-10 al 2026-10-16): 9 clics / 597 imp. Desde el 2026-10-19 las impresiones diarias van de 150 a 223 (223 el 2026-10-23).
+
+Lote chico. Solo páginas cuyo último pase de title y cuerpo es del 2026-10-16 o anterior. El commit del 2026-10-17 (`6d8fe10`, ronda 2) en lectoescritura, TEA y terapia de lenguaje cambió el retrato y, en dos de ellas, un enlace a un hub nuevo. No reescribió title ni cuerpo. Se siguió el alcance del brief.
+
+No se tocó home, el pilar, `/servicios`, hitos, `/recursos/*`, `/ads/*`, `/sitelink/*`, voz online, otras ciudades, ni las URLs de los Lotes 17 y 18.
+
+### Páginas optimizadas
+
+Titles absolutos (`buildPageMetadata`), todos ≤60. Descriptions entre 120 y 155. Sin precios, cupos, estadísticas nuevas ni promesas. El 40 % de retraso de lenguaje en TEA ya estaba publicado y se mantuvo.
+
+#### 1. `/sintomas/nino-no-entiende-instrucciones-chillan`
+**Métricas GSC:** 47 imp, 0 clics, pos 6,1. Queries vistas: «para niños autistas», «tea no verbal». Último pase de contenido: 2026-10-13.
+
+- **Title (40 → 47):** «Niño no entiende instrucciones | Chillán» → «No entiende instrucciones: qué hacer en Chillán»
+- **Description (149 → 133):** de déficit de comprensión o atención a la situación concreta («ven» o dos pasos), comprensión del lenguaje y, a veces, TEA, sin diagnosticar, más qué hacer y evaluación en Chillán
+- **H1:** se mantiene «¿Tu hijo no entiende instrucciones? Ayuda en Chillán»
+- **Respuesta rápida:** una frase de que a veces se relaciona con TEA y que esta página no lo diagnostica
+- **Enlaces nuevos:** `/servicios/tea-trastorno-espectro-autista` y `/chillan/tea-comunicacion`
+- FAQPage sigue saliendo del mismo arreglo visible. No se agregaron preguntas
+
+#### 2. `/servicios/dificultades-lectoescritura`
+**Métricas GSC:** 44 imp, 0 clics, pos 6,6. Último pase de title: 2026-10-16.
+
+- **Title (47 → 47):** «Mi hijo no aprende a leer ni escribir | Chillán» → «Lee lento o confunde letras | Evalúa en Chillán»
+- **Description (147 → 142):** lee lento, confunde b/d o evita leer; qué evaluar (conciencia fonológica y comprensión) y evaluación en Chillán. La dislexia sigue en su página
+- **H1:** se mantiene «Mi hijo no aprende a leer ni escribir»
+- **Respuesta rápida:** la primera frase ahora dice que la evaluación en Chillán mira esas bases. El resto (rol de la página y diagnóstico formal en evaluaciones especializadas) no se reescribió
+- **FAQPage:** se alineó al texto visible. Faltaban «¿Cuánto tiempo toma mejorar la lectura?» y «¿Qué relación tiene la lectura con el lenguaje oral?». No se reescribieron las respuestas (siguen los plazos que ya estaban)
+
+#### 3. `/sintomas/hijo-no-arma-frases-chillan`
+**Métricas GSC:** 31 imp, 0 clics, pos 6,4. Query «3 años y medio». Último pase de contenido: 2026-10-13.
+
+- **Title (43 → 47):** «Mi hijo de 2 años no forma frases | Chillán» → «No arma frases a los 3 años | Evalúa en Chillán»
+- **Description (146 → 141):** a los 3 años, oraciones de 3 o 4 palabras (hito ya publicado). Si a los 3, o con 3 años y medio, sigue en palabras sueltas, evaluación en Chillán
+- **H1:** «Mi hijo de 2 años no forma frases: cuándo consultar en Chillán» → «No arma frases a los 2 o 3 años: cuándo consultar en Chillán». El H1 solo de 2 años no coincidía con la query que ya rankea
+- **Edad:** «3 años y medio» no es un hito del sitio. El «y medio» publicado es 2 años y medio (conteo de palabras en hitos). Aquí nombra la edad del niño. La expectativa citada es la de los 3 años: oraciones de 3 o 4 palabras
+- **Enlace nuevo:** `/lenguaje-infantil/a-los-3-anos-habla-poco`
+- La FAQ de edad usa el mismo texto en la página y en el FAQPage
+
+#### 4. `/servicios/tea-trastorno-espectro-autista`
+**Métricas GSC:** 86 imp, 1 clic, pos 10,1. Último pase de title: 2026-10-15.
+
+- **Title (45 → 43):** «Fonoaudiología para TEA en Chillán | Lenguaje» → «Fonoaudióloga TEA en Chillán | Comunicación»
+- **Description (147 → 154):** comunicación en niños con autismo, lenguaje y pragmática, y que esta URL es el servicio. Agenda la evaluación
+- **H1:** «Fonoaudiología para niños con TEA en Chillán» → «Fonoaudióloga para niños con autismo en Chillán»
+- **Ángulo:** esta página es el servicio (qué trabaja la fonoaudióloga y cómo es la primera consulta). `/chillan/tea-comunicacion` sigue como guía local de señales (title «Comunicación y Lenguaje en Niños con TEA | Chillán», H1 «TEA y Comunicación en Chillán»). No comparten H1
+- **FAQ nuevas, mismo texto en FAQPage:** «¿Esta página es la guía de señales de TEA en Chillán?» y «¿Si no sigue instrucciones, es autismo?». Sin estadística nueva y sin prometer resultado. La segunda enlaza el síntoma
+- **Enlace nuevo** en la respuesta rápida: `/sintomas/nino-no-entiende-instrucciones-chillan`. El de `/chillan/tea-comunicacion` ya estaba
+- **FAQPage:** la respuesta de la primera consulta ahora incluye la frase visible de las señales locales, que el JSON-LD omitía
+
+#### 5. `/servicios/terapia-lenguaje-infantil`
+**Métricas GSC:** 45 imp, 1 clic, pos 15,0. Query «especialista en terapia de lenguaje para niños» (pos 11,5). Último pase de title: 2026-10-16.
+
+- **Title (46 → 44):** «Especialista en terapia de lenguaje para niños» → «Especialista en terapia de lenguaje infantil»
+- **Description (146 → 153):** «terapia de lenguaje infantil» y «para niños», pocas palabras o sin frases, evaluación y plan con los padres. No se metió «fonoaudiólogo Chillán»: eso queda en home y en el pilar
+- **H1:** alineado al title
+- **Respuesta rápida:** 53 palabras. Antes eran unas 32. Manda la fonoaudiología infantil en general al pilar
+- **Enlaces:** el pilar se mantiene con el ancla ya establecida «Fonoaudiología infantil en Chillán». Se agregó «Agendar la evaluación» hacia `/agendar-hora-fonoaudiologo-infantil-chillan`
+- **Keywords:** se sacaron «fonoaudióloga para niños Chillán» y «fonoaudiología infantil Chillán»
+- **FAQPage:** el nombre visible de las sesiones no coincidía con el schema, y faltaba la pregunta de precio (sin cifra: pide el valor por WhatsApp). Se alineó al texto visible. No se reescribieron las duraciones que ya estaban
+
+### Anclas «fonoaudiólogo / fonoaudióloga en Chillán»
+
+No se editó copy. En las cinco URLs elegibles el enlace contextual al pilar ya existía, con el ancla que fijaron el Lote 10 y el Lote 13: «fonoaudiología infantil en Chillán» → `/fonoaudiologa-ninos-chillan`. La home se quedó con «fonoaudióloga infantil en Chillán». Cambiar el ancla a «fonoaudióloga» mezclaría esos dos intents.
+
+- `/chillan/dislalia`, `/chillan/apraxia-del-habla`, `/chillan/lectoescritura`: ancla «Fonoaudiología infantil en Chillán» en la respuesta rápida. El template `/chillan/[slug]` se tocó el 2026-10-18 (Lote 12) por otros slugs; el copy de estos tres sigue en `dateModified` 2026-10-16
+- `/tratamientos/dislalia-infantil-chillan`: ancla «fonoaudiología infantil en Chillán». El 2026-10-17 solo se agregó el enlace a `/dislalia`
+- `/servicios/terapia-lenguaje-infantil`: misma ancla, conservada en el pase de intención de arriba
+
+### Métricas esperadas
+
+Medir ~2026-11-07 al 2026-11-14:
+- CTR > 0 en las tres URLs de página 1 que hoy están en 0 clics
+- `/servicios/tea-trastorno-espectro-autista` sube de pos ~10 sin quitarle impresiones de señales a `/chillan/tea-comunicacion`
+- «especialista en terapia de lenguaje para niños» y «terapia de lenguaje infantil» se quedan en `/servicios/terapia-lenguaje-infantil`, no en la query genérica de fonoaudiólogo en Chillán
+
+### Técnico
+
+- Sin URLs nuevas. No se tocó `app/sitemap.ts` ni `lib/seo-routes.ts`
+- **Build:** `npm run build` pasó (Next.js 16.1.1). 178 páginas estáticas, igual que el Lote 18
+- **Sitemap del build previo al commit:** 160 URLs (`<loc>`). Sin `/ads` ni `/sitelink`. En ese build el `lastmod` de las cinco páginas editadas sigue en el commit anterior, porque el sitemap lee la fecha git y el commit de este lote todavía no existía. El build posterior al commit queda anotado abajo si cambia
+
+---
+
 ## 2026-10-24: SEO Lote 18 — clúster infantil, edad del habla y voz online en positivo
 
 ### Contexto

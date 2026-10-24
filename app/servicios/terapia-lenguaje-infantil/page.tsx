@@ -13,15 +13,15 @@ const WHATSAPP_HREF = whatsappUrl("Hola, quiero consultar por terapia de lenguaj
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Especialista en terapia de lenguaje para niños",
+  title: "Especialista en terapia de lenguaje infantil",
   description:
-    "Especialista en terapia de lenguaje para niños en Chillán. Retraso del lenguaje, pocas palabras y frases cortas. Evaluación y plan con los padres.",
+    "Terapia de lenguaje infantil en Chillán si dice pocas palabras o no arma frases. La especialista evalúa, te dice qué hacer y arma el plan con los padres.",
   keywords: ["terapia de lenguaje infantil Chillán",
     "especialista en terapia de lenguaje para niños",
-    "fonoaudióloga para niños Chillán",
+    "terapia de lenguaje infantil",
     "retraso del lenguaje niños",
     "terapia del lenguaje niños Chillán",
-    "fonoaudiología infantil Chillán",],
+    "terapia de lenguaje para niños",],
 });
 
 const signals = [
@@ -91,7 +91,7 @@ const jsonLd = {
     "@type": "PeopleAudience",
     audienceType: "Niños de 2 a 10 años con dificultades del lenguaje",
   },
-  dateModified: "2026-10-16",
+  dateModified: "2026-10-24",
 };
 
 const faqJsonLd = {
@@ -116,10 +116,18 @@ const faqJsonLd = {
     },
     {
       "@type": "Question",
-      name: "¿Las sesiones de terapia son solo con el niño?",
+      name: "¿Las sesiones son solo con el niño?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "No, los padres participan activamente. Te enseño ejercicios y estrategias para practicar en casa, lo que acelera significativamente el progreso del niño.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuánto cuesta la terapia de lenguaje?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Los valores varían según el tipo de sesión (evaluación o terapia). Escríbeme por WhatsApp y te envío la información de precios actualizada.",
       },
     },
   ],
@@ -154,15 +162,16 @@ export default function TerapiaLenguajeInfantilPage() {
                   👶 Niños de 2 a 10 años
                 </span>
                 <h1 className="mb-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
-                  Especialista en terapia de lenguaje para niños
+                  Especialista en terapia de lenguaje infantil
                 </h1>
                 <div className="mb-6 rounded-2xl border border-rose-200 bg-white p-5 text-gray-700">
                   <p>
-                    <strong>Respuesta rápida:</strong> Sí: la especialista en
-                    terapia de lenguaje para niños en Chillán es la
-                    fonoaudióloga. Trabaja retraso del lenguaje, pocas palabras
-                    y dificultad para armar frases, con evaluación, plan y
-                    participación de los padres.
+                    <strong>Respuesta rápida:</strong> La terapia de lenguaje
+                    infantil la hace una especialista cuando tu hijo dice pocas
+                    palabras, no junta dos palabras o no arma oraciones. En
+                    Chillán el primer paso es la evaluación: de ahí sale un plan
+                    y los padres participan en casa. Si buscas la fonoaudiología
+                    infantil en general, esa es otra página.
                   </p>
                   <p className="mt-3 text-sm">
                     <Link
@@ -170,6 +179,13 @@ export default function TerapiaLenguajeInfantilPage() {
                       className="font-semibold text-rose-700 underline"
                     >
                       Fonoaudiología infantil en Chillán
+                    </Link>
+                    {" · "}
+                    <Link
+                      href="/agendar-hora-fonoaudiologo-infantil-chillan"
+                      className="font-semibold text-rose-700 underline"
+                    >
+                      Agendar la evaluación
                     </Link>
                     {" · "}
                     <Link

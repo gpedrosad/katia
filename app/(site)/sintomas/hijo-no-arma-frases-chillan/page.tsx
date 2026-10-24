@@ -10,9 +10,9 @@ const WHATSAPP_LINK = whatsappUrl("Hola, mi hijo no arma frases y me preocupa. B
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Mi hijo de 2 años no forma frases | Chillán",
+  title: "No arma frases a los 3 años | Evalúa en Chillán",
   description:
-    "¿Tu hijo de 2 años no forma frases o solo dice palabras sueltas como «mamá ven» o «más pan»? Hitos esperados, señales y cuándo evaluar en Chillán.",
+    "A los 3 años se esperan oraciones de 3 o 4 palabras. Si a los 3, o con 3 años y medio, sigue en palabras sueltas, pide evaluación en Chillán.",
   keywords: [
     "mi hijo de 2 años no forma frases",
     "hijo no arma frases",
@@ -21,6 +21,7 @@ export const metadata = buildPageMetadata({
     "hijo de 2 años solo palabras sueltas",
     "fonoaudióloga Chillán",
     "fonoaudiología infantil",
+    "no arma frases a los 3 años",
   ],
 });
 
@@ -42,7 +43,7 @@ const actionsNow = [
 const faqs = [
   { q: "¿Qué hago si mi hijo de 2 años no forma frases?", a: "Observa si combina dos palabras con intención, como «mamá ven» o «más pan». Si solo usa palabras sueltas o gestos, conviene evaluar lenguaje expresivo y comprensión." },
   { q: "¿Un niño de 2 años que no habla puede mejorar solo?", a: "Algunos niños avanzan con estimulación, pero si a los 2 años no hay frases de dos palabras o hay pocas palabras, es mejor evaluar temprano y no esperar varios meses sin orientación." },
-  { q: "¿A qué edad debería armar frases?", a: "Entre 18-24 meses suelen aparecer frases de dos palabras; a los 3 años, oraciones más largas." },
+  { q: "¿A qué edad debería armar frases?", a: "Entre 18 y 24 meses suelen aparecer frases de dos palabras. A los 3 años, oraciones de 3 o 4 palabras. Si con 3 años y medio sigue en palabras sueltas, se mira ese mismo hito de los 3 años." },
   { q: "¿Es normal que un niño de 3 años no arme frases?", a: "No es lo esperado. Conviene evaluar retraso del lenguaje o TEL." },
   { q: "¿Qué técnicas usan en terapia?", a: "Expansión, modelado, recast y juego simbólico con objetivos graduales." },
   { q: "¿Debo preocuparme si entiende todo?", a: "Puede ser retraso expresivo, pero hay que confirmarlo y descartar TEL u otros factores." },
@@ -52,8 +53,9 @@ const medicalWebPageJsonLd = {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
   "@id": `${SITE_URL}${PAGE_PATH}#webpage`,
-  name: "Mi hijo de 2 años no forma frases: cuándo consultar en Chillán",
-  description: "Si tu hijo de 2 años no forma frases o solo dice palabras sueltas, revisa hitos, señales y cuándo evaluar en Chillán.",
+  name: "No arma frases a los 2 o 3 años: cuándo consultar en Chillán",
+  description:
+    "A los 3 años se esperan oraciones de 3 o 4 palabras. Si a los 3, o con 3 años y medio, sigue en palabras sueltas, pide evaluación en Chillán.",
   medicalSpecialty: "SpeechTherapy",
   about: { "@type": "MedicalCondition", name: "Retraso del lenguaje expresivo" },
 };
@@ -93,15 +95,16 @@ export default function HijoNoArmaFrasesPage() {
               Estructura del lenguaje
             </span>
             <h1 className="mb-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
-              Mi hijo de 2 años no forma frases: cuándo consultar en Chillán
+              No arma frases a los 2 o 3 años: cuándo consultar en Chillán
             </h1>
             <div className="mb-6 rounded-2xl border-2 border-sky-200 bg-sky-50 p-5">
               <p className="text-lg font-semibold text-gray-900">
                 <strong>Respuesta rápida:</strong> Entre los 18 y 24 meses
                 suelen aparecer frases de dos palabras («mamá ven», «más pan»).
-                Si tu hijo de 2 años solo usa palabras sueltas o gestos, o a
-                los 3 años no arma oraciones simples, conviene evaluar lenguaje
-                expresivo y comprensión —no esperar varios meses sin orientación.
+                A los 3 años, los hitos describen oraciones de 3 o 4 palabras.
+                Si a los 3, o con 3 años y medio, sigue en palabras sueltas,
+                conviene evaluar lenguaje expresivo y comprensión —no esperar
+                varios meses sin orientación.
               </p>
             </div>
             <p
@@ -193,7 +196,11 @@ export default function HijoNoArmaFrasesPage() {
               <Link href="/chillan/retraso-del-lenguaje">Chillán</Link>,{" "}
               <Link href="/recursos/estimular-lenguaje-en-casa">estimulación del lenguaje en casa</Link>
               ,{" "}
-              <Link href="/servicios/terapia-lenguaje-infantil">terapia de lenguaje</Link>{" "}
+              <Link href="/servicios/terapia-lenguaje-infantil">terapia de lenguaje</Link>
+              ,{" "}
+              <Link href="/lenguaje-infantil/a-los-3-anos-habla-poco">
+                a los 3 años habla poco
+              </Link>{" "}
               y <Link href="/servicios/evaluacion-fonoaudiologica">evaluación</Link>.
             </p>
           </div>

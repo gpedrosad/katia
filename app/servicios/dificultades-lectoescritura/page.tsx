@@ -13,9 +13,9 @@ const WHATSAPP_HREF = whatsappUrl("Hola, quiero consultar por dificultades de le
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Mi hijo no aprende a leer ni escribir | Chillán",
+  title: "Lee lento o confunde letras | Evalúa en Chillán",
   description:
-    "¿Lee lento, confunde letras (b/d) o evita leer? Apoyo en Chillán: conciencia fonológica, decodificación y comprensión. La dislexia tiene su página.",
+    "Si lee lento, confunde b/d o evita leer, evalúa conciencia fonológica y comprensión. Qué hacer ahora, en Chillán. La dislexia tiene su página.",
   keywords: ["dificultades lectoescritura Chillán",
     "problemas de lectura niños Chillán",
     "conciencia fonológica Chillán",
@@ -91,7 +91,7 @@ const jsonLd = {
     name: "Chillán",
   },
   serviceType: "Tratamiento de lectoescritura",
-  dateModified: "2026-10-16",
+  dateModified: "2026-10-24",
 };
 
 const faqJsonLd = {
@@ -120,6 +120,22 @@ const faqJsonLd = {
       acceptedAnswer: {
         "@type": "Answer",
         text: "Se pueden detectar factores de riesgo desde los 4-5 años (antes de la enseñanza formal de lectura) evaluando conciencia fonológica. Los problemas de lectura se hacen evidentes en primero y segundo básico cuando se enseña a leer.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuánto tiempo toma mejorar la lectura?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Depende de la severidad del problema y la constancia del tratamiento. Generalmente se ven mejoras en 3-6 meses con sesiones semanales y práctica en casa. Casos más severos requieren intervención más prolongada.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué relación tiene la lectura con el lenguaje oral?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "La lectura se apoya en habilidades del lenguaje oral: conciencia fonológica (identificar sonidos), vocabulario (conocer el significado de palabras) y comprensión oral (entender estructuras). Muchas dificultades de lectura tienen raíz en estas bases lingüísticas.",
       },
     },
   ],
@@ -159,8 +175,8 @@ export default function LectoescrituraPage() {
                 <div className="mb-6 rounded-2xl border border-rose-200 bg-white p-5 text-gray-700">
                   <p>
                     <strong>Respuesta rápida:</strong> Si lee lento, confunde
-                    letras como b/d o evita leer, en Chillán se trabajan la
-                    conciencia fonológica, la decodificación y la comprensión.
+                    letras como b/d o evita leer, la evaluación en Chillán mira
+                    la conciencia fonológica, la decodificación y la comprensión.
                     Esta es la página del apoyo de lectoescritura. La definición
                     de dislexia y la página de fonoaudiología y dislexia están
                     aparte. El diagnóstico formal de dislexia se hace con
