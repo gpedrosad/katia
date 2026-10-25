@@ -20,6 +20,72 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-10-25: SEO Lote 20 — primeras palabras del bebé, diagnóstico del TEL y CTR corto
+
+### Contexto
+
+**Datos GSC (90 días 2026-07-27 al 2026-10-24, sc-domain:katialafono.cl, dataState=all, pull 2026-10-25):**
+- **91 clics**
+- **6.376 impresiones**
+- **Posición promedio: 8,1**
+
+**Últimos 7 días (2026-10-18 al 2026-10-24):** 9 clics / 1.253 imp vs 7 días previos (2026-10-11 al 2026-10-17): 11 clics / 646 imp. Impresiones diarias: 224 el 2026-10-23 y 258 el 2026-10-24.
+
+Casi todo el sitio se editó entre el 2026-10-18 y el 2026-10-24. Este lote abre dos URLs nuevas (se indexan en ~12–24 h), un enlace de descubrimiento y un pase de title y meta solo en páginas cuyo último cambio de title, meta o cuerpo es del 2026-10-18 o anterior.
+
+No se tocó home, el pilar, `/servicios`, hitos, `/recursos/*`, `/ads/*`, `/sitelink/*`, voz online, otras ciudades, ni el cuerpo de los Lotes 17, 18 y 19. En los hubs solo se agregó tarjeta (`articulos.ts` y `catalogo.ts`). No se reescribió `app/lenguaje-infantil/page.tsx` ni `app/preguntas/page.tsx`.
+
+### Páginas nuevas
+
+Entran solas al sitemap. Titles absolutos, todos ≤60. Descriptions entre 120 y 155. FAQPage con el mismo texto visible. Sin decretos, nombres de test, edades de corte, duraciones, precios ni estadísticas nuevas. Las edades del bebé son las ya publicadas en hitos.
+
+1. `/lenguaje-infantil/a-que-edad-empieza-a-hablar-un-bebe` — title y H1 «¿A qué edad empieza a hablar un bebé?» (37). Meta 154. Ángulo: balbuceo, gestos y primeras palabras («mamá», «agua») entre los 11 y 14 meses; algunos a los 10 y otros a los 15; consultar si a los 18 meses no hay ninguna. No compite con hitos, que sigue con «a qué edad hablan los niños». Respuesta rápida: 50 palabras. 5 FAQ. Article + FAQPage + BreadcrumbList. Ancla «a qué edad hablan los niños» hacia hitos. También enlaza 18 meses, a los 3 años habla poco, retraso del lenguaje en Chillán y agendar. Tarjeta al inicio de `app/lenguaje-infantil/articulos.ts` (entra a `lib/seo-routes.ts` y al `hasPart` del hub).
+
+2. `/preguntas/como-se-diagnostica-el-tel` — title y H1 «¿Cómo se diagnostica el TEL en niños?» (37). Meta 142. Quién evalúa (fonoaudióloga, entrevista, observación y pruebas de lenguaje), que el diagnóstico no sale de un comentario del colegio ni de una sola prueba, qué llevar si ya hay informes, y qué pasa después (terapia o informe para PIE / escuela de lenguaje, sin prometer cupo). Distinta de «¿el TEL se cura?», del servicio, del glosario y de TEL vs retraso. Chillán porque ahí atiende Katia. 5 FAQ además de la pregunta del H1 (FAQPage de `GeoFAQ`, mismo texto visible). Enlaces: esas cuatro páginas, evaluación, informe PIE, escuela de lenguaje o fonoaudióloga y agendar. Tarjeta en `catalogo.ts`.
+
+### Enlace de descubrimiento
+
+- `/tratamientos/retraso-del-lenguaje-chillan`: una frase nueva hacia la guía del bebé. No se cambió title, meta, H1 ni el resto del cuerpo. El párrafo que manda las edades a hitos se quedó igual. Último pase de esa URL: 2026-10-19 (Lote 13); por eso el cambio es solo el enlace.
+
+### CTR (title y meta; H1 y cuerpo intactos)
+
+Elegibles: último cambio de title, meta o cuerpo el 2026-10-18 o antes (`git log`).
+
+#### 1. `/glosario/tel`
+**Métricas GSC:** 50 imp, 0 clics, pos 8,4 (90 d). Último cambio de cuerpo: 2026-10-18 (`988009c`, Lote 12, un enlace). Title y meta de antes, del 2026-10-15.
+
+- **Title (38 → 39):** «¿Qué es el TEL? Definición breve (TDL)» → «¿Qué es el TEL? No es solo hablar tarde»
+- **Description (155 → 151):** de «definición breve» y «el tratamiento está en otra página» a la situación (no es solo hablar tarde), el 7 % ya publicado y la evaluación en Chillán
+- **H1:** se mantiene «¿Qué es el TEL (TDL)?»
+
+#### 2. `/sintomas/mi-hijo-no-habla-bien-chillan`
+**Métricas GSC:** 28 imp, 0 clics, pos 6,1 (90 d). Último cambio: 2026-10-13 (`ebeb33d`, Lote 8).
+
+- **Title (51 → 43):** «Mi hijo no habla bien: ¿Cuándo consultar? — Chillán» → «Mi hijo no habla bien: qué hacer en Chillán»
+- **Description (141 → 148):** no se le entiende fuera de casa, habla como bebé o a los 2 años no junta dos palabras; señales por edad y evaluación en Chillán
+- **H1:** se mantiene «Mi hijo no habla bien o no se le entiende: cuándo consultar en Chillán»
+
+### Omitidas
+
+- `/tratamientos/trastorno-fonologico-chillan` (115 imp, pos 8,4, 0 clics): el cuerpo y una FAQ se reescribieron el 2026-10-19 (`fe6acc6`, Lote 13). Fuera del corte.
+- `/servicios/informe-fonoaudiologico-pie-chillan` (99 imp, pos 6,7, 2 clics): el 2026-10-24 (`c9d2441`, Lote 18) se agregaron enlaces a escuela de lenguaje y a PIE vs terapia. Fuera del corte.
+
+### Métricas esperadas
+
+Medir ~2026-11-08 al 2026-11-15:
+- Indexar las 2 URLs nuevas. Las queries de bebé («a que edad empiezan a hablar los bebes» y cercanas) se miden en la guía nueva, no en el tratamiento de retraso. «A qué edad hablan los niños» se sigue midiendo en hitos.
+- «tel diagnostico» y «cómo se diagnostica el TEL» en la pregunta nueva, sin quitarle «el tel se cura» a su página ni «qué es el TEL» al glosario.
+- CTR > 0 en `/glosario/tel` y en `/sintomas/mi-hijo-no-habla-bien-chillan`.
+
+### Técnico
+
+- Rutas nuevas por `articulos.ts` y `catalogo.ts`, que ya alimentan `lib/seo-routes.ts`. No se editó `app/sitemap.ts`.
+- Canonical `https://www.katialafono.cl` + path, `index, follow`, en las dos URLs nuevas y en las dos de CTR. FAQPage: 5 preguntas en la guía del bebé y 6 en el diagnóstico del TEL (la del H1 más 5), el mismo texto visible. Article y BreadcrumbList en la guía del bebé.
+- **Build:** `npm run build` pasó (Next.js 16.1.1). 180 páginas estáticas (178 del Lote 19 más estas 2).
+- **Sitemap del build:** 162 URLs (`<loc>`). Sin `/ads` ni `/sitelink`. El build previo al commit dejó lastmod de las URLs nuevas en el mtime del archivo, porque todavía no tenían commit. El lastmod definitivo es la fecha git de ese commit (se anota abajo tras el build posterior). `/tratamientos/trastorno-fonologico-chillan` sigue en `2026-10-19T12:26:58.000Z` y `/servicios/informe-fonoaudiologico-pie-chillan` en `2026-10-24T04:02:09.000Z`: no se editaron.
+
+---
+
 ## 2026-10-24: SEO Lote 19 — CTR en página 1 e intención de TEA y terapia de lenguaje
 
 ### Contexto

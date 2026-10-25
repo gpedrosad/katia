@@ -169,6 +169,17 @@ export default function RetrasoLenguajePage() {
               </Link>
               .
             </p>
+            <p className="mb-6 text-lg leading-relaxed text-gray-700">
+              Si la duda es el bebé y las primeras palabras, sin la tabla de
+              todas las edades, lee{" "}
+              <Link
+                href="/lenguaje-infantil/a-que-edad-empieza-a-hablar-un-bebe"
+                className="font-medium text-rose-700 underline"
+              >
+                a qué edad empieza a hablar un bebé
+              </Link>
+              .
+            </p>
             <ul className="mb-8 space-y-3 text-gray-700">
               <li className="flex items-start gap-3">
                 <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">

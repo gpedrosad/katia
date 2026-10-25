@@ -4,6 +4,10 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 
 ---
 
+## 2026-10-25
+
+- SEO Lote 20 | Dos URLs nuevas: `/lenguaje-infantil/a-que-edad-empieza-a-hablar-un-bebe` (balbuceo y primeras palabras 11–14 meses; consultar si a los 18 no hay ninguna; ancla «a qué edad hablan los niños» sigue en hitos) y `/preguntas/como-se-diagnostica-el-tel` (fonoaudióloga, entrevista, observación y pruebas de lenguaje; no un comentario del colegio ni una sola prueba; informe después, sin cupo). Una frase desde `/tratamientos/retraso-del-lenguaje-chillan`. CTR de title y meta en `/glosario/tel` y `/sintomas/mi-hijo-no-habla-bien-chillan`. Se omitieron trastorno fonológico (cuerpo 2026-10-19) e informe PIE (enlaces 2026-10-24). Sin otras ciudades, sin `/ads`, sin `/sitelink`. | Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 2 URLs y medir ~2026-11-08..11-15.
+
 ## 2026-10-24
 
 - SEO Lote 19 | Pase de CTR/intención, sin URLs nuevas: `/sintomas/nino-no-entiende-instrucciones-chillan` (comprensión y a veces TEA, sin diagnosticar; enlaza servicio TEA y `/chillan/tea-comunicacion`), `/servicios/dificultades-lectoescritura`, `/sintomas/hijo-no-arma-frases-chillan` (hito de oraciones a los 3 años; «3 años y medio» es la edad del niño, no un hito nuevo; enlaza `/lenguaje-infantil/a-los-3-anos-habla-poco`), `/servicios/tea-trastorno-espectro-autista` (servicio, no la guía de señales) y `/servicios/terapia-lenguaje-infantil` (sin apuntar a «fonoaudiólogo Chillán»). Ancla «fonoaudiología infantil en Chillán» al pilar ya estaba en dislalia, apraxia, lectoescritura local y el tratamiento de dislalia: no se reescribió. | Sitemap del build 160, lastmod `2026-10-24T12:18:15.000Z` en las 5 URLs. Changelog `SEO-CHANGELOG.md`. `pendiente:` medir CTR ~2026-11-07..11-14.

@@ -10,9 +10,9 @@ const WHATSAPP_LINK = whatsappUrl("Hola, me preocupa que mi hijo no habla bien. 
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Mi hijo no habla bien: ¿Cuándo consultar? — Chillán",
+  title: "Mi hijo no habla bien: qué hacer en Chillán",
   description:
-    "¿Tu hijo no se le entiende, habla como bebé o no habla bien? Señales por edad, qué hacer y cuándo evaluar. Fonoaudióloga infantil en Chillán.",
+    "Si no se le entiende fuera de casa, habla como bebé o a los 2 años no junta dos palabras, mira las señales por edad y pide la evaluación en Chillán.",
   keywords: [
     "mi hijo no habla bien",
     "no se le entiende al hablar",

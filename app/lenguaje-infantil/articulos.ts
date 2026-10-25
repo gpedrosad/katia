@@ -1,5 +1,11 @@
 export const LENGUAJE_ARTICULOS = [
   {
+    href: "/lenguaje-infantil/a-que-edad-empieza-a-hablar-un-bebe",
+    title: "¿A qué edad empieza a hablar un bebé?",
+    summary:
+      "Balbuceo, primeras palabras entre los 11 y 14 meses, y cuándo consultar si a los 18 no hay ninguna.",
+  },
+  {
     href: "/lenguaje-infantil/nino-de-18-meses-no-habla",
     title: "18 meses y todavía no habla",
     summary:

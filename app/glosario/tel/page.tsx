@@ -57,9 +57,9 @@ const faqs = [
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "¿Qué es el TEL? Definición breve (TDL)",
+  title: "¿Qué es el TEL? No es solo hablar tarde",
   description:
-    "Definición breve del TEL (TDL): trastorno del lenguaje sin causa aparente. Afecta cerca del 7% de los niños. El tratamiento en Chillán está en otra página.",
+    "El TEL (TDL) es un trastorno del lenguaje sin causa aparente. No es solo hablar tarde. Afecta cerca del 7% de los niños. Pide la evaluación en Chillán.",
   keywords: [
     "qué es TEL",
     "definición TEL",

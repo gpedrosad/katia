@@ -82,6 +82,12 @@ export const PREGUNTAS: readonly PreguntaResumen[] = [
     teaser: "No se cura: acompaña, y con terapia y apoyo puede mejorar mucho.",
   },
   {
+    href: "/preguntas/como-se-diagnostica-el-tel",
+    question: "¿Cómo se diagnostica el TEL en niños?",
+    teaser:
+      "Lo define la evaluación de la fonoaudióloga, no un test suelto ni el comentario del colegio.",
+  },
+  {
     href: "/preguntas/escuela-de-lenguaje-o-fonoaudiologa",
     question: "¿Escuela de lenguaje o fonoaudióloga particular?",
     teaser:
