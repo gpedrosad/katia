@@ -6,7 +6,7 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 
 ## 2026-10-25
 
-- SEO Lote 20 | Dos URLs nuevas: `/lenguaje-infantil/a-que-edad-empieza-a-hablar-un-bebe` (balbuceo y primeras palabras 11–14 meses; consultar si a los 18 no hay ninguna; ancla «a qué edad hablan los niños» sigue en hitos) y `/preguntas/como-se-diagnostica-el-tel` (fonoaudióloga, entrevista, observación y pruebas de lenguaje; no un comentario del colegio ni una sola prueba; informe después, sin cupo). Una frase desde `/tratamientos/retraso-del-lenguaje-chillan`. CTR de title y meta en `/glosario/tel` y `/sintomas/mi-hijo-no-habla-bien-chillan`. Se omitieron trastorno fonológico (cuerpo 2026-10-19) e informe PIE (enlaces 2026-10-24). Sin otras ciudades, sin `/ads`, sin `/sitelink`. | Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 2 URLs y medir ~2026-11-08..11-15.
+- SEO Lote 20 | Dos URLs nuevas: `/lenguaje-infantil/a-que-edad-empieza-a-hablar-un-bebe` (balbuceo y primeras palabras 11–14 meses; consultar si a los 18 no hay ninguna; ancla «a qué edad hablan los niños» sigue en hitos) y `/preguntas/como-se-diagnostica-el-tel` (fonoaudióloga, entrevista, observación y pruebas de lenguaje; no un comentario del colegio ni una sola prueba; informe después, sin cupo). Una frase desde `/tratamientos/retraso-del-lenguaje-chillan`. CTR de title y meta en `/glosario/tel` y `/sintomas/mi-hijo-no-habla-bien-chillan`. Se omitieron trastorno fonológico (cuerpo 2026-10-19) e informe PIE (enlaces 2026-10-24). Sin otras ciudades, sin `/ads`, sin `/sitelink`. Sitemap del build 162, lastmod `2026-10-25T12:13:51.000Z` (commit `efbe17a`). | Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 2 URLs y medir ~2026-11-08..11-15.
 
 ## 2026-10-24
 

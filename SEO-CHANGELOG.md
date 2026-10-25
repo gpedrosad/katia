@@ -82,7 +82,7 @@ Medir ~2026-11-08 al 2026-11-15:
 - Rutas nuevas por `articulos.ts` y `catalogo.ts`, que ya alimentan `lib/seo-routes.ts`. No se editó `app/sitemap.ts`.
 - Canonical `https://www.katialafono.cl` + path, `index, follow`, en las dos URLs nuevas y en las dos de CTR. FAQPage: 5 preguntas en la guía del bebé y 6 en el diagnóstico del TEL (la del H1 más 5), el mismo texto visible. Article y BreadcrumbList en la guía del bebé.
 - **Build:** `npm run build` pasó (Next.js 16.1.1). 180 páginas estáticas (178 del Lote 19 más estas 2).
-- **Sitemap del build:** 162 URLs (`<loc>`). Sin `/ads` ni `/sitelink`. El build previo al commit dejó lastmod de las URLs nuevas en el mtime del archivo, porque todavía no tenían commit. El lastmod definitivo es la fecha git de ese commit (se anota abajo tras el build posterior). `/tratamientos/trastorno-fonologico-chillan` sigue en `2026-10-19T12:26:58.000Z` y `/servicios/informe-fonoaudiologico-pie-chillan` en `2026-10-24T04:02:09.000Z`: no se editaron.
+- **Sitemap del build posterior al commit `efbe17a`:** 162 URLs (`<loc>`). Sin `/ads` ni `/sitelink`. Las dos URLs nuevas, `/glosario/tel`, `/sintomas/mi-hijo-no-habla-bien-chillan` y `/tratamientos/retraso-del-lenguaje-chillan` quedan con `lastmod` `2026-10-25T12:13:51.000Z`. Los hubs `/lenguaje-infantil` y `/preguntas` siguen en `2026-10-17T04:04:19.000Z` y `2026-10-17T02:56:48.000Z`: no se editó su `page.tsx`; la tarjeta entra por `articulos.ts` y `catalogo.ts`. `/tratamientos/trastorno-fonologico-chillan` sigue en `2026-10-19T12:26:58.000Z` y `/servicios/informe-fonoaudiologico-pie-chillan` en `2026-10-24T04:02:09.000Z`: no se editaron.
 
 ---
 
