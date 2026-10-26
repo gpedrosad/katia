@@ -90,7 +90,7 @@ Medir ~2026-11-09 al 2026-11-16:
 - No se editó `app/sitemap.ts` ni `lib/seo-routes.ts`. Sin URLs nuevas.
 - Canonical `https://www.katialafono.cl` + path, `index, follow`. FAQPage de `/glosario/logopeda`: 8 preguntas, el mismo texto visible.
 - **Build:** `npm run build` pasó (Next.js 16.1.1). 180 páginas estáticas, las mismas del Lote 20. Sin URLs nuevas.
-- **Sitemap del build previo al commit:** 162 URLs (`<loc>`). Sin `/ads` ni `/sitelink`. El `lastmod` de las páginas editadas sigue en la fecha del commit anterior, porque el generador usa git y estos cambios todavía no estaban commiteados. El lastmod definitivo es la fecha git de este commit (se anota tras el build posterior). `/recursos/estimular-lenguaje-en-casa` sigue en `2026-10-20T12:16:51.000Z` y `/voz-online/fonoaudiologa-de-voz-online` en `2026-10-24T04:02:09.000Z`: no se editaron.
+- **Sitemap del build posterior al commit `c5289a3`:** 162 URLs (`<loc>`). Sin `/ads` ni `/sitelink`. `/glosario/logopeda`, `/recursos`, `/lenguaje-infantil/nino-de-18-meses-no-habla`, `/lenguaje-infantil/entiende-pero-no-habla`, `/guias-padres/pantallas-y-lenguaje-infantil`, `/guias-padres/lectura-compartida-de-cuentos` y `/guias-padres/de-los-gestos-a-las-palabras` quedan con `lastmod` `2026-10-26T12:09:53.000Z`. `/recursos/estimular-lenguaje-en-casa` sigue en `2026-10-20T12:16:51.000Z` y `/voz-online/fonoaudiologa-de-voz-online` en `2026-10-24T04:02:09.000Z`: no se editaron. Home sigue en `2026-10-20T03:04:08.000Z`. No se tocó `app/sitemap.ts`.
 
 ---
 
