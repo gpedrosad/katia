@@ -99,7 +99,12 @@ export default function GestosAPalabrasPage() {
         <Link href="/recursos/estimular-lenguaje-en-casa">
           estimular el lenguaje en casa
         </Link>
-        . Si el tema es corregir un sonido que ya dice mal, es otra página:{" "}
+        . Si quieres la consulta presencial de 0 a 3 años, es la{" "}
+        <Link href="/servicios/estimulacion-temprana-del-lenguaje-chillan">
+          estimulación del lenguaje
+        </Link>{" "}
+        en Chillán. Si el tema es corregir un sonido que ya dice mal, es otra
+        página:{" "}
         <Link href="/preguntas/conviene-corregir-cuando-habla-mal">
           ¿conviene corregir?
         </Link>

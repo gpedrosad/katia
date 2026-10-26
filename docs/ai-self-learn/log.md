@@ -4,6 +4,10 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 
 ---
 
+## 2026-10-26
+
+- SEO Lote 21 | `/glosario/logopeda` (último cambio previo 2026-10-17) responde logopeda y logopedia: nombres de España y algunos otros países para fonoaudiólogo y fonoaudiología en Chile; FAQ «¿Logopedia y fonoaudiología son lo mismo?» y «¿Un logopeda atiende a niños y adultos?»; enlace a `/fonoaudiologa-ninos-chillan` y a `/voz-online/fonoaudiologa-de-voz-online` (sin editar voz ni ciudades). Ancla exacta «estimulación del lenguaje» hacia `/servicios/estimulacion-temprana-del-lenguaje-chillan` desde `/lenguaje-infantil/nino-de-18-meses-no-habla`, `/lenguaje-infantil/entiende-pero-no-habla`, `/guias-padres/pantallas-y-lenguaje-infantil` (ancla que ya apuntaba al servicio), `/guias-padres/lectura-compartida-de-cuentos` y `/guias-padres/de-los-gestos-a-las-palabras`. Hub `/recursos` (2026-10-17): title «Guías para padres sobre lenguaje y habla infantil»; `/guias-padres`, `/preguntas` y `/lenguaje-infantil` ya estaban. No se editó `/recursos/estimular-lenguaje-en-casa` (2026-10-20). Sin otras ciudades, sin `/ads`, sin `/sitelink`. GSC 90d 07-28..10-25: 91 clic / 6.654 imp / pos 8,2. | Changelog `SEO-CHANGELOG.md`. `pendiente:` medir ~2026-11-09..11-16.
+
 ## 2026-10-25
 
 - SEO Lote 20 | Dos URLs nuevas: `/lenguaje-infantil/a-que-edad-empieza-a-hablar-un-bebe` (balbuceo y primeras palabras 11–14 meses; consultar si a los 18 no hay ninguna; ancla «a qué edad hablan los niños» sigue en hitos) y `/preguntas/como-se-diagnostica-el-tel` (fonoaudióloga, entrevista, observación y pruebas de lenguaje; no un comentario del colegio ni una sola prueba; informe después, sin cupo). Una frase desde `/tratamientos/retraso-del-lenguaje-chillan`. CTR de title y meta en `/glosario/tel` y `/sintomas/mi-hijo-no-habla-bien-chillan`. Se omitieron trastorno fonológico (cuerpo 2026-10-19) e informe PIE (enlaces 2026-10-24). Sin otras ciudades, sin `/ads`, sin `/sitelink`. Sitemap del build 162, lastmod `2026-10-25T12:13:51.000Z` (commit `efbe17a`). | Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 2 URLs y medir ~2026-11-08..11-15.

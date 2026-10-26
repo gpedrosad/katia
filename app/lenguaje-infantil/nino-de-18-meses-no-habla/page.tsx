@@ -119,8 +119,13 @@ export default function NinoDe18MesesPage() {
         <Link href="/fonoaudiologa-ninos-chillan">
           fonoaudiología infantil en Chillán
         </Link>{" "}
-        explican el paso presencial. Lleva la edad en meses y dos o tres
-        ejemplos: qué pide, cómo lo pide y si te entiende.
+        explican el paso presencial. A esta edad, la consulta de las primeras
+        palabras es la{" "}
+        <Link href="/servicios/estimulacion-temprana-del-lenguaje-chillan">
+          estimulación del lenguaje
+        </Link>{" "}
+        en Chillán. Lleva la edad en meses y dos o tres ejemplos: qué pide,
+        cómo lo pide y si te entiende.
       </p>
     </GuiaPage>
   );

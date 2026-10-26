@@ -203,7 +203,7 @@ export default function PantallasYLenguajePage() {
         </Link>{" "}
         o por la{" "}
         <Link href="/servicios/estimulacion-temprana-del-lenguaje-chillan">
-          estimulación temprana del lenguaje
+          estimulación del lenguaje
         </Link>
         . Lleva ejemplos: a qué hora suele haber pantalla, si tú estás al lado
         y qué pasa cuando está apagada.

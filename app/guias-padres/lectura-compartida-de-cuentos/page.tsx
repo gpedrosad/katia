@@ -190,7 +190,12 @@ export default function LecturaCompartidaPage() {
         <Link href="/recursos/hitos-del-lenguaje-por-edad">
           hitos del lenguaje por edad
         </Link>
-        . Para una mirada en Chillán, parte por{" "}
+        . Si tu hijo tiene entre 0 y 3 años y al leer ves que las palabras no llegan,
+        la consulta de esa etapa es la{" "}
+        <Link href="/servicios/estimulacion-temprana-del-lenguaje-chillan">
+          estimulación del lenguaje
+        </Link>{" "}
+        en Chillán. Para una mirada en Chillán, parte por{" "}
         <Link href="/fonoaudiologa-ninos-chillan">
           fonoaudiología infantil
         </Link>

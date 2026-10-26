@@ -124,7 +124,13 @@ export default function EntiendePeroNoHablaPage() {
         <Link href="/servicios/terapia-lenguaje-infantil">
           terapia de lenguaje infantil
         </Link>
-        , según lo que viste en casa.
+        , según lo que viste en casa. Si tu hijo tiene entre 0 y 3 años y la
+        duda está en el balbuceo o en las primeras palabras, la consulta de
+        esa etapa es la{" "}
+        <Link href="/servicios/estimulacion-temprana-del-lenguaje-chillan">
+          estimulación del lenguaje
+        </Link>{" "}
+        en Chillán.
       </p>
     </GuiaPage>
   );

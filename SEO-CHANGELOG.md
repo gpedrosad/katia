@@ -20,6 +20,80 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-10-26: SEO Lote 21 — logopeda y logopedia, ancla de estimulación del lenguaje y hub de recursos
+
+### Contexto
+
+**Datos GSC (90 días 2026-07-28 al 2026-10-25, sc-domain:katialafono.cl, dataState=all, pull 2026-10-26):**
+- **91 clics**
+- **6.654 impresiones**
+- **Posición promedio: 8,2**
+
+**Últimos 7 días (2026-10-19 al 2026-10-25):** 9 clics / 1.529 imp vs 7 días previos (2026-10-12 al 2026-10-18): 9 clics / 638 imp. El 2026-10-25 hubo 327 impresiones (récord del periodo).
+
+Home `/` sigue congelada (Lote 13, medir hasta ~2026-11-09). No se tocó `/fonoaudiologa-ninos-chillan`, el hub `/servicios`, `/recursos/*` salvo el hub `/recursos`, `/voz-online/*`, ni las URLs de los Lotes 17–20. Sin páginas de otras ciudades, sin `/ads`, sin `/sitelink`. Sin precios, estadísticas ni credenciales nuevas. La edad 0 a 3 años de la estimulación es la ya publicada en el servicio.
+
+Elegibilidad: `git log --since=2026-10-19` vacío en cada archivo editado.
+
+### Páginas optimizadas
+
+Titles absolutos (`buildPageMetadata`), ≤60. Descriptions entre 120 y 155.
+
+#### 1. `/glosario/logopeda`
+**Métricas GSC:** 29 imp, 0 clics, pos 9,2. La home rankea «logopedia» (31 imp, pos 6,9, 0 clics) y «logopeda» (18 imp, pos 2,6, 0 clics). Último cambio: 2026-10-17 (`846e899`, Lote 11).
+
+- **Title (41 → 38):** «¿Qué es un logopeda? | Logopedia infantil» → «Logopeda y logopedia: qué son en Chile»
+- **Description (145 → 151):** de «nombres de España» a que logopeda y logopedia nombran, en España y otros países, al fonoaudiólogo y a la fonoaudiología de Chile, qué hace un logopeda infantil y cómo buscarlo
+- **H1:** se mantiene «¿Qué es un logopeda?»
+- **Respuesta rápida:** logopeda es la persona y logopedia la disciplina; en España y en algunos otros países así se llama al fonoaudiólogo y a la fonoaudiología de Chile; qué hace un logopeda infantil; en Chile se busca como fonoaudiólogo o fonoaudióloga
+- **FAQ nuevas** (mismo texto visible y en FAQPage): «¿Logopedia y fonoaudiología son lo mismo?» y «¿Un logopeda atiende a niños y adultos?». Las dos FAQ viejas de definición ahora dicen «España y algunos otros países», sin listar países
+- **Enlaces:** se mantiene fonoaudióloga infantil en Chillán. Se agrega en el cuerpo «terapia de voz online» hacia `/voz-online/fonoaudiologa-de-voz-online` (hub sin ciudad, solo voz de adultos) y la misma URL en «Para seguir». No se editó ninguna página de voz
+- **Article `dateModified`:** 2026-10-26
+
+#### 2. Ancla «estimulación del lenguaje» → `/servicios/estimulacion-temprana-del-lenguaje-chillan`
+
+La query (68 imp, pos 32) sigue cayendo en `/recursos/estimular-lenguaje-en-casa`. Esa guía no se editó (Lote 14, 2026-10-20: cedió el término y se retargeteó a «terapia de lenguaje en casa»). Un enlace contextual por página, con el ancla exacta. La edad 0 a 3 años es la del servicio.
+
+- `/lenguaje-infantil/nino-de-18-meses-no-habla` (último cambio 2026-10-17, `6d8fe10`): frase en «Dónde sigue la evaluación en Chillán»
+- `/lenguaje-infantil/entiende-pero-no-habla` (2026-10-17, `6d8fe10`): frase al cierre, solo si tiene entre 0 y 3 años
+- `/guias-padres/pantallas-y-lenguaje-infantil` (2026-10-16, `bfeb2b5`): el enlace al servicio ya estaba; el ancla pasa de «estimulación temprana del lenguaje» a «estimulación del lenguaje». El enlace «estimulación del lenguaje en casa» sigue yendo a la guía
+- `/guias-padres/lectura-compartida-de-cuentos` (2026-10-16, `bfeb2b5`): frase nueva, solo de 0 a 3 años. «Estimulación del lenguaje en casa» sigue en la guía
+- `/guias-padres/de-los-gestos-a-las-palabras` (2026-10-17, `6d8fe10`): frase nueva de la consulta presencial de 0 a 3 años, distinta de la guía de casa
+
+No se cambió title, meta ni H1 de esas cinco.
+
+#### 3. `/recursos`
+**Métricas GSC:** 44 imp, pos 12,7. Último cambio del `page.tsx`: 2026-10-17 (`6d8fe10`). Eligible.
+
+- **Title (57 → 49):** «Recursos y Guías Fonoaudiología Infantil | Padres Chillán» → «Guías para padres sobre lenguaje y habla infantil»
+- **Description (127 → 151):** hitos, señales de alerta, qué puedes hacer en casa y cómo preparar la primera evaluación en Chillán
+- **H1:** se mantiene «Recursos y guías para padres»
+- **Enlaces:** `/guias-padres`, `/preguntas` y `/lenguaje-infantil` ya estaban en «Más guías por tema». No se duplicaron
+
+### Omitidas
+
+- `/recursos/estimular-lenguaje-en-casa`: editada el 2026-10-20 (`53550ae`, Lote 14). Fuera del corte. No se le devolvió «estimulación del lenguaje»
+- `/recursos/hitos-del-lenguaje-por-edad` (2026-10-19), `/recursos/primera-evaluacion-fonoaudiologica-infantil` (2026-10-20) y `/recursos/senales-de-alerta-del-lenguaje-y-habla` (2026-10-24): fuera del corte. El hub `/recursos` sí era eligible y se retocó solo title y description
+- `/glosario/tel` (2026-10-25) y `/glosario/dislalia` (2026-10-24): fuera del corte. No se usaron como origen del ancla
+- `/lenguaje-infantil/a-los-3-anos-habla-poco` (2026-10-24) y `/lenguaje-infantil/a-que-edad-empieza-a-hablar-un-bebe` (2026-10-25): fuera del corte
+- Home, pilar, `/servicios`, `/voz-online/*`, `/ads/*`, `/sitelink/*` y páginas de otras ciudades: no se editaron
+
+### Métricas esperadas
+
+Medir ~2026-11-09 al 2026-11-16:
+- «logopeda» y «logopedia» en `/glosario/logopeda`, no en la home. CTR > 0 en esa URL
+- «estimulación del lenguaje» en `/servicios/estimulacion-temprana-del-lenguaje-chillan`. La guía de casa se sigue midiendo por «terapia de lenguaje en casa»
+- El hub `/recursos` se lee como guías para padres sobre lenguaje y habla infantil
+
+### Técnico
+
+- No se editó `app/sitemap.ts` ni `lib/seo-routes.ts`. Sin URLs nuevas.
+- Canonical `https://www.katialafono.cl` + path, `index, follow`. FAQPage de `/glosario/logopeda`: 8 preguntas, el mismo texto visible.
+- **Build:** `npm run build` pasó (Next.js 16.1.1). 180 páginas estáticas, las mismas del Lote 20. Sin URLs nuevas.
+- **Sitemap del build previo al commit:** 162 URLs (`<loc>`). Sin `/ads` ni `/sitelink`. El `lastmod` de las páginas editadas sigue en la fecha del commit anterior, porque el generador usa git y estos cambios todavía no estaban commiteados. El lastmod definitivo es la fecha git de este commit (se anota tras el build posterior). `/recursos/estimular-lenguaje-en-casa` sigue en `2026-10-20T12:16:51.000Z` y `/voz-online/fonoaudiologa-de-voz-online` en `2026-10-24T04:02:09.000Z`: no se editaron.
+
+---
+
 ## 2026-10-25: SEO Lote 20 — primeras palabras del bebé, diagnóstico del TEL y CTR corto
 
 ### Contexto

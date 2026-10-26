@@ -15,17 +15,27 @@ const faqs = [
   {
     question: "¿Qué es un logopeda?",
     answer:
-      "Es el nombre que se usa en España para la persona que en Chile se llama fonoaudiólogo o fonoaudióloga.",
+      "Es el nombre que se usa en España y en algunos otros países para la persona que en Chile se llama fonoaudiólogo o fonoaudióloga.",
   },
   {
     question: "¿Qué es la logopedia?",
     answer:
-      "Es el nombre de la disciplina en España. En Chile esa disciplina se llama fonoaudiología.",
+      "Es el nombre de la disciplina en España y en algunos otros países. En Chile esa disciplina se llama fonoaudiología.",
   },
   {
     question: "¿Logopeda y fonoaudiólogo es lo mismo?",
     answer:
       "Sí. Es la misma profesión. Cambia el nombre según el país, no el trabajo: comunicación, lenguaje, habla, voz y deglución.",
+  },
+  {
+    question: "¿Logopedia y fonoaudiología son lo mismo?",
+    answer:
+      "Sí. Es la misma disciplina. Logopedia es el nombre en España y en algunos otros países; en Chile se llama fonoaudiología.",
+  },
+  {
+    question: "¿Un logopeda atiende a niños y adultos?",
+    answer:
+      "Sí. La profesión atiende a niños y a adultos. En niños suele ser lenguaje, habla y pronunciación. En adultos, una consulta frecuente es la voz. En este sitio, la fonoaudiología infantil es presencial en Chillán. La terapia de voz para adultos es online, por videollamada, y no depende de la ciudad.",
   },
   {
     question: "¿En Chile se dice logopeda o fonoaudiólogo?",
@@ -46,9 +56,9 @@ const faqs = [
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "¿Qué es un logopeda? | Logopedia infantil",
+  title: "Logopeda y logopedia: qué son en Chile",
   description:
-    "Logopeda y logopedia son los nombres de España para el fonoaudiólogo y la fonoaudiología. Qué hace un logopeda infantil y cómo buscarlo en Chile.",
+    "Logopeda y logopedia nombran, en España y otros países, al fonoaudiólogo y a la fonoaudiología de Chile. Qué hace un logopeda infantil y cómo buscarlo.",
   keywords: [
     "logopeda",
     "logopedia",
@@ -64,9 +74,9 @@ const articleJsonLd = {
   "@type": "Article",
   headline: "¿Qué es un logopeda?",
   description:
-    "Logopeda y logopedia son los nombres de España para el fonoaudiólogo y la fonoaudiología.",
+    "Logopeda y logopedia nombran, en España y otros países, al fonoaudiólogo y a la fonoaudiología de Chile.",
   datePublished: "2026-10-09",
-  dateModified: "2026-10-17",
+  dateModified: "2026-10-26",
   inLanguage: "es-CL",
   author: {
     "@type": "Person",
@@ -101,6 +111,11 @@ const guides = [
     href: "/fonoaudiologa-ninos-chillan",
     title: "Fonoaudióloga infantil en Chillán",
     note: "La página de la atención presencial.",
+  },
+  {
+    href: "/voz-online/fonoaudiologa-de-voz-online",
+    title: "Terapia de voz online para adultos",
+    note: "La misma profesión, cuando el tema es la voz y la persona es adulta. No depende de la ciudad.",
   },
   {
     href: "/lenguaje-infantil",
@@ -160,8 +175,11 @@ export default function LogopedaPage() {
                 ¿Qué es un logopeda?
               </h1>
               <p className="text-xl text-gray-600">
-                Logopeda y logopedia son las palabras de España. En Chile se
-                dice fonoaudiólogo y fonoaudiología.
+                Logopeda es la persona y logopedia, la disciplina. En España y
+                en algunos otros países así se llama al fonoaudiólogo y a la
+                fonoaudiología de Chile. Un logopeda infantil evalúa lenguaje,
+                habla y voz en niños. Si buscas en Chile, pregunta por
+                fonoaudiólogo o fonoaudióloga.
               </p>
             </header>
 
@@ -171,10 +189,11 @@ export default function LogopedaPage() {
               </h2>
               <p>
                 <strong>Logopeda</strong> es la persona. <strong>Logopedia</strong>{" "}
-                es la disciplina. En España se usan esas dos palabras para lo
-                que en Chile, Argentina y gran parte de Latinoamérica se llama
-                fonoaudiólogo (o fonoaudióloga) y fonoaudiología. En inglés, el
-                nombre habitual es speech-language pathologist.
+                es la disciplina. En España y en algunos otros países se usan
+                esas dos palabras para lo que en Chile, Argentina y gran parte
+                de Latinoamérica se llama fonoaudiólogo (o fonoaudióloga) y
+                fonoaudiología. En inglés, el nombre habitual es
+                speech-language pathologist.
               </p>
               <p>
                 Es la misma profesión. El trabajo es la comunicación, el
@@ -225,6 +244,18 @@ export default function LogopedaPage() {
                   className="font-semibold text-rose-700 underline"
                 >
                   agendar
+                </Link>
+                .
+              </p>
+              <p>
+                Si quien necesita la hora es un adulto y el tema es la voz, no
+                es esta consulta infantil. La atención de voz es online, por
+                videollamada, y no depende de la ciudad:{" "}
+                <Link
+                  href="/voz-online/fonoaudiologa-de-voz-online"
+                  className="font-semibold text-rose-700 underline"
+                >
+                  terapia de voz online
                 </Link>
                 .
               </p>

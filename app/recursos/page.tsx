@@ -6,9 +6,9 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/recursos",
-  title: "Recursos y Guías Fonoaudiología Infantil | Padres Chillán",
+  title: "Guías para padres sobre lenguaje y habla infantil",
   description:
-    "Guías para padres en Chillán: hitos del lenguaje, señales de alerta, estimulación en casa y qué esperar en la primera consulta.",
+    "Guías para padres sobre lenguaje y habla infantil: hitos, señales de alerta, qué puedes hacer en casa y cómo preparar la primera evaluación en Chillán.",
   keywords: [
     "recursos fonoaudiología padres Chillán",
     "guías fonoaudiología infantil",
