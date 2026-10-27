@@ -101,7 +101,7 @@ Medir ~2026-11-10 al 2026-11-17:
 - No se editó `app/sitemap.ts` ni `lib/seo-routes.ts`. Sin URLs nuevas.
 - Canonical `https://www.katialafono.cl` + path, `index, follow`. FAQPage de las dos guías de dislalia: 5 preguntas, el mismo texto visible. En la pregunta de cuándo consultar, la respuesta bajo el H1 es la primera entrada del FAQPage.
 - **Build:** `npm run build` pasó (Next.js 16.1.1). 180 páginas estáticas, las mismas del Lote 21. Sin URLs nuevas. `npx tsc --noEmit` y `eslint` en los archivos editados pasaron.
-- **Sitemap del build previo al commit:** el `lastmod` de las páginas editadas sigue en la fecha del commit anterior, porque el generador usa git y estos cambios todavía no estaban commiteados. El lastmod definitivo es la fecha git de este commit (se anota tras el build posterior). No se tocó `app/sitemap.ts`.
+- **Sitemap del build posterior al commit `9220b5f`:** 162 URLs (`<loc>`). Sin `/ads` ni `/sitelink`. `/dislalia/no-pronuncia-la-s`, `/dislalia/cambia-sonidos-al-hablar`, `/dislalia/lo-entienden-en-casa-no-afuera`, `/preguntas/cuando-llevar-a-mi-hijo-al-fonoaudiologo`, `/preguntas/hay-que-esperar-a-los-4-anos` y `/tartamudez/que-hacer-cuando-se-traba` quedan con `lastmod` `2026-10-27T12:13:22.000Z`. El hub `/dislalia` sigue en `2026-10-17T04:04:19.000Z`: no se editó. `/servicios/evaluacion-fonoaudiologica` sigue en `2026-10-17T04:04:19.000Z`, `/fonoaudiologa-ninos-chillan` en `2026-10-19T12:26:58.000Z` y `/recursos/hitos-del-lenguaje-por-edad` en `2026-10-19T12:26:58.000Z`: no se editaron. Home sigue en `2026-10-20T03:04:08.000Z`. No se tocó `app/sitemap.ts`.
 
 ---
 
