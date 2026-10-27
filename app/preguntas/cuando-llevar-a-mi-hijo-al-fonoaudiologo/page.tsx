@@ -5,7 +5,7 @@ import { buildPageMetadata } from "@/lib/seo";
 const PATH = "/preguntas/cuando-llevar-a-mi-hijo-al-fonoaudiologo";
 const TITLE = "¿Cuándo llevar a mi hijo al fonoaudiólogo?";
 const DESCRIPTION =
-  "Pide hora si la duda persiste, hay varias señales juntas o el jardín lo comenta. En Chillán no necesitas orden médica para agendar.";
+  "Señales por edad: a los 18 meses sin palabras con significado, a los 2 sin frases de dos, o a los 4 si cuesta entenderlo. Evaluación en Chillán.";
 
 export const metadata = buildPageMetadata({
   path: PATH,
@@ -15,12 +15,13 @@ export const metadata = buildPageMetadata({
     "cuándo llevar a mi hijo al fonoaudiólogo",
     "cuándo consultar fonoaudiólogo infantil",
     "fonoaudióloga Chillán",
+    "señales por edad para el fonoaudiólogo",
   ],
   ogType: "article",
 });
 
 const answer =
-  "Llévalo cuando la duda ya no es de un día: varias señales juntas, poco avance, el jardín o el colegio lo comenta, o casi no se le entiende. Para una consulta particular en Chillán no necesitas orden médica. Las edades concretas están en la guía de hitos; esta página es para decidir si pides hora.";
+  "Conviene consultar si, para su edad, la señal ya está en los hitos: a los 18 meses no hay palabras con significado, a los 2 años no junta dos palabras, o a los 4 cuesta entenderlo. Si hay avance claro y una sola duda menor, no es la misma situación. En consulta particular en Chillán no necesitas orden médica.";
 
 export default function CuandoLlevarPage() {
   return (
@@ -88,15 +89,37 @@ export default function CuandoLlevarPage() {
         que cuesta entenderlo en la ronda, anota el ejemplo y tráelo a la
         evaluación. Esa observación no es un diagnóstico. Es información.
       </p>
-      <h2>Qué no responde esta página</h2>
+      <h2>Señales por edad</h2>
       <p>
         «¿A qué edad debe hablar?» tiene su propia guía:{" "}
         <Link href="/recursos/hitos-del-lenguaje-por-edad">
           hitos del lenguaje por edad
         </Link>
-        . Ahí están las referencias por etapa. Aquí la pregunta es otra: si
-        con lo que ya ves en tu hijo corresponde pedir una evaluación en
-        Chillán.
+        . Esta lista usa solo esas referencias, no un plazo nuevo:
+      </p>
+      <ul>
+        <li>
+          A los 18 meses, si no dice ninguna palabra con significado, conviene
+          consultar.
+        </li>
+        <li>
+          A los 2 años, la referencia es alrededor de 50 palabras o más y frases
+          de dos. Si no combina palabras, conviene mirarlo.
+        </li>
+        <li>
+          Alrededor de los 3 años, muchos niños arman oraciones que extraños
+          entienden en gran parte.
+        </li>
+        <li>
+          A los 4 años, si le cuesta expresarse con claridad de forma
+          persistente o su habla es poco inteligible, conviene evaluar. La erre
+          fuerte puede llegar hacia los 5 o 6, y ese plazo no cubre el resto
+          del habla.
+        </li>
+      </ul>
+      <p>
+        Aquí la pregunta es otra: si, con lo que ya ves en tu hijo, corresponde
+        pedir hora en Chillán.
       </p>
       <p>
         Si ya tienes el síntoma puesto en palabras, mira el índice de{" "}
@@ -107,14 +130,18 @@ export default function CuandoLlevarPage() {
       <h2>Cómo pedir la hora</h2>
       <p>
         Escribe por WhatsApp la edad, qué te preocupa y si el jardín o el
-        colegio ya lo mencionó. La primera cita es la evaluación, no un
-        tratamiento que empiece sin haberlo visto. El horario de atención es
-        de lunes a viernes, de 10:00 a 18:00, presencial en Chillán.
+        colegio ya lo mencionó. La primera cita es la{" "}
+        <Link href="/servicios/evaluacion-fonoaudiologica">
+          evaluación fonoaudiológica
+        </Link>
+        , no un tratamiento que empiece sin haberlo visto. El horario de
+        atención es de lunes a viernes, de 10:00 a 18:00, presencial en
+        Chillán.
       </p>
       <p>
         El recorrido completo de la consulta está en{" "}
         <Link href="/fonoaudiologa-ninos-chillan">
-          fonoaudióloga infantil en Chillán
+          fonoaudiología infantil en Chillán
         </Link>
         . Si tu duda es el trámite de la orden o del informe del colegio,
         sigue en la pregunta sobre la orden médica.

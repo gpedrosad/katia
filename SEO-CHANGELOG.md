@@ -20,6 +20,91 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-10-27: SEO Lote 22 — CTR de la ese y del orden de las palabras, y cuándo consultar por edad
+
+### Contexto
+
+**Datos GSC (90 días 2026-07-29 al 2026-10-26, sc-domain:katialafono.cl, dataState=all, pull 2026-10-27):**
+- **90 clics**
+- **7.122 impresiones**
+- **Posición promedio: 8,1**
+
+**Últimos 7 días (2026-10-20 al 2026-10-26):** 10 clics / 1.928 imp vs 7 días previos: 9 clics / 727 imp. El 2026-10-26 hubo 521 impresiones (récord del periodo).
+
+Home `/` sigue congelada. No se tocó `/fonoaudiologa-ninos-chillan`, `/servicios/evaluacion-fonoaudiologica` (solo enlaces hacia esa URL), `/recursos/*`, `/voz-online/*`, `/comparaciones/*`, `/lectoescritura/*` ni las URLs de los Lotes 14–21. `app/preguntas/catalogo.ts` se editó el 2026-10-25: no se tocó. Sin páginas de otras ciudades, sin `/ads`, sin `/sitelink`. Sin precios, estadísticas, credenciales ni promesas nuevas. Las edades son las ya publicadas en hitos (18 meses sin palabras con significado; cerca de 50 palabras o más y frases de dos a los 2 años; oraciones que extraños entienden en gran parte alrededor de los 3; a los 4, claridad persistente o habla poco inteligible; erre fuerte hacia los 5 o 6).
+
+Elegibilidad: `git log --since=2026-10-20` vacío en cada archivo editado. Último cambio de las dos guías de dislalia y del hub: 2026-10-17 (`6d8fe10`). La pregunta de cuándo consultar: 2026-10-16 (`ab22710`).
+
+### Páginas optimizadas
+
+Titles absolutos (`buildPageMetadata` / `guiaMetadata`), ≤60. Descriptions entre 120 y 155. H1 de las dos guías de dislalia se mantiene.
+
+#### 1. `/dislalia/no-pronuncia-la-s`
+**Métricas GSC:** 21 imp en los últimos 7 días, pos 8,0, 0 clics. Último cambio: 2026-10-17 (`6d8fe10`, ronda 2).
+
+- **Title (36 → 57):** «Mi hijo no pronuncia la S: qué mirar» → «Mi hijo no pronuncia la S: ¿es normal y cuándo consultar?»
+- **Description (115 → 148):** de la ese que se cae a mirar si es el único sonido, si se le entiende, y que no hay una edad única para la ese
+- **H1:** se mantiene «Mi hijo no pronuncia la S»
+- **Respuesta rápida** (3 frases, bajo el H1): no hay una edad propia de la ese; hacia los 4 años la mayoría de los sonidos suele estar más consolidada; la erre fuerte hacia los 5 o 6 no se copia a la ese; si hay más sonidos o cuesta entenderlo, conviene evaluar
+- **FAQ nuevas** (mismo texto visible y en FAQPage): «¿Es normal que mi hijo no pronuncie la S?» y «¿Cuándo consultar si no dice la S?». Las tres FAQ anteriores siguen
+- **Enlaces:** el ancla al tratamiento pasa a «tratamiento de la dislalia en Chillán». Se agrega en el cuerpo «evaluación fonoaudiológica» hacia `/servicios/evaluacion-fonoaudiologica`
+- **Article:** JSON-LD local, `datePublished` 2026-10-17, `dateModified` 2026-10-27. No se cambió el helper compartido de `guia-ui.tsx` (otras guías siguen en 2026-10-17)
+
+#### 2. `/dislalia/cambia-sonidos-al-hablar`
+**Métricas GSC:** 19 imp, pos 9,3, 0 clics. Query vista: «cambiar el orden de las palabras al hablar». Último cambio: 2026-10-17 (`6d8fe10`).
+
+- **Title (40 → 51):** «Cambia los sonidos al hablar: qué anotar» → «Cambia sonidos o el orden de las palabras al hablar»
+- **Description (132 → 138):** «tasa» por casa no es lo mismo que cambiar el orden de las palabras al hablar; qué anotar y cuándo evaluar en Chillán
+- **H1:** se mantiene «Cambia los sonidos al hablar»
+- **Respuesta rápida** (3 frases, bajo el H1): un sonido cambiado y el orden de las palabras son escenas distintas; anotar el ejemplo; si se repite o no se le entiende, conviene evaluar
+- **FAQ nuevas** (mismo texto visible y en FAQPage): «¿Cambiar el orden de las palabras al hablar es cambiar sonidos?» y «¿Qué anoto si cambia el orden de la frase?». Las tres FAQ anteriores siguen. El orden de las palabras no recibe un plazo de edad nuevo
+- **Enlaces:** «evaluación fonoaudiológica» y, para el caso distinto de palabras que no se juntan, «dice palabras, pero no arma frases». El ancla de dislalia pasa a «tratamiento de la dislalia en Chillán»
+- **Article:** igual que la ese, `dateModified` 2026-10-27 solo en esta página
+
+#### 3. `/preguntas/cuando-llevar-a-mi-hijo-al-fonoaudiologo`
+**Métricas GSC:** 14 imp, pos 26. Último cambio del `page.tsx`: 2026-10-16 (`ab22710`). `catalogo.ts` no se editó (2026-10-25).
+
+- **Title (42):** se mantiene «¿Cuándo llevar a mi hijo al fonoaudiólogo?». El H1 es el mismo texto
+- **Description (131 → 144):** señales por edad (18 meses sin palabras con significado, a los 2 sin frases de dos, a los 4 si cuesta entenderlo) y evaluación en Chillán
+- **Respuesta rápida:** la respuesta bajo el H1 ahora nombra esas tres señales, ya publicadas en hitos, y mantiene que una sola duda menor con avance no es la misma situación y que en consulta particular no hace falta orden médica. El mismo texto es la primera pregunta del FAQPage
+- **Cuerpo:** sección «Señales por edad» con 18 meses, 2 años (alrededor de 50 palabras o más y frases de dos), 3 años (oraciones que extraños entienden en gran parte) y 4 años (claridad persistente o habla poco inteligible; erre fuerte hacia los 5 o 6)
+- **Enlaces:** el ancla al pilar pasa a «fonoaudiología infantil en Chillán». Se agrega «evaluación fonoaudiológica». `/recursos/hitos-del-lenguaje-por-edad` ya estaba enlazado y se mantiene en esa sección
+
+#### 4. Ancla «evaluación fonoaudiológica» → `/servicios/evaluacion-fonoaudiologica`
+
+La query «evaluacion fonoaudiologica» (44 imp, pos 19,9) cae en esa URL. Un enlace contextual por página, con el ancla exacta, además de los de los puntos 1 a 3. No se cambió title, meta ni H1.
+
+- `/dislalia/lo-entienden-en-casa-no-afuera` (2026-10-17, `6d8fe10`): frase cuando afuera no lo siguen
+- `/tartamudez/que-hacer-cuando-se-traba` (2026-10-17, `6d8fe10`): la frase que ya decía que la evaluación decide el trabajo ahora enlaza el servicio
+- `/preguntas/hay-que-esperar-a-los-4-anos` (2026-10-17, `6d8fe10`): la primera hora, si ya no se va a esperar
+
+### Hub
+
+`/dislalia` es elegible (2026-10-17, `6d8fe10`) y ya enlaza `/dislalia/no-pronuncia-la-s` y `/dislalia/cambia-sonidos-al-hablar` en «Elige la guía», desde `DISLALIA_ARTICULOS`. No se editó el hub ni `articulos.ts`.
+
+### Omitidas
+
+- `app/preguntas/catalogo.ts`: editado el 2026-10-25 (`efbe17a`, Lote 20). La ficha de la pregunta no se reescribió
+- Tartamudez congelada, no usada como origen del ancla: `app/tartamudez/articulos.ts` y `/tartamudez/hay-tartamudez-en-la-familia` y `/tartamudez/se-traba-al-leer-en-el-colegio` (2026-10-24), `/tartamudez/empezo-a-tartamudear-de-repente` (2026-10-23)
+- Guías de Lote 21: `/guias-padres/de-los-gestos-a-las-palabras`, `/guias-padres/lectura-compartida-de-cuentos`, `/guias-padres/pantallas-y-lenguaje-infantil` (2026-10-26)
+- Home, pilar, `/recursos/*`, `/voz-online/*`, `/comparaciones/*`, `/lectoescritura/*`, `/ads/*`, `/sitelink/*` y páginas de otras ciudades: no se editaron
+
+### Métricas esperadas
+
+Medir ~2026-11-10 al 2026-11-17:
+- CTR > 0 en `/dislalia/no-pronuncia-la-s` y en `/dislalia/cambia-sonidos-al-hablar`. La query «cambiar el orden de las palabras al hablar» se lee en la segunda, separada de «tasa» por casa
+- «¿Cuándo llevar a mi hijo al fonoaudiólogo?» con señales por edad en su URL
+- «evaluacion fonoaudiologica» y «fonoaudiología infantil» se miden en `/servicios/evaluacion-fonoaudiologica` y en `/fonoaudiologa-ninos-chillan`. Esas dos páginas no se editaron
+
+### Técnico
+
+- No se editó `app/sitemap.ts` ni `lib/seo-routes.ts`. Sin URLs nuevas.
+- Canonical `https://www.katialafono.cl` + path, `index, follow`. FAQPage de las dos guías de dislalia: 5 preguntas, el mismo texto visible. En la pregunta de cuándo consultar, la respuesta bajo el H1 es la primera entrada del FAQPage.
+- **Build:** `npm run build` pasó (Next.js 16.1.1). 180 páginas estáticas, las mismas del Lote 21. Sin URLs nuevas. `npx tsc --noEmit` y `eslint` en los archivos editados pasaron.
+- **Sitemap del build previo al commit:** el `lastmod` de las páginas editadas sigue en la fecha del commit anterior, porque el generador usa git y estos cambios todavía no estaban commiteados. El lastmod definitivo es la fecha git de este commit (se anota tras el build posterior). No se tocó `app/sitemap.ts`.
+
+---
+
 ## 2026-10-26: SEO Lote 21 — logopeda y logopedia, ancla de estimulación del lenguaje y hub de recursos
 
 ### Contexto

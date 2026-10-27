@@ -1,13 +1,24 @@
 import Link from "next/link";
-import { articleJsonLd, faqJsonLd, GuiaPage, guiaMetadata } from "@/app/guias-padres/guia-ui";
-import { whatsappUrl } from "@/lib/site";
+import { faqJsonLd, GuiaPage, guiaMetadata } from "@/app/guias-padres/guia-ui";
+import { SITE_URL, whatsappUrl } from "@/lib/site";
 
 const PATH = "/dislalia/no-pronuncia-la-s";
-const TITLE = "Mi hijo no pronuncia la S: qué mirar";
+const TITLE = "Mi hijo no pronuncia la S: ¿es normal y cuándo consultar?";
 const DESCRIPTION =
-  "La ese que se cae o sale como otra consonante. Qué anotar junto con el resto del habla y cuándo evaluar en Chillán.";
+  "Si tu hijo no pronuncia la S, mira si es el único sonido y si se le entiende. No hay una edad única para la ese. Cuándo pedir evaluación en Chillán.";
+const H1 = "Mi hijo no pronuncia la S";
 
 const faqs = [
+  {
+    question: "¿Es normal que mi hijo no pronuncie la S?",
+    answer:
+      "Puede pasar, y en este sitio no hay una edad única para la ese. Se mira si es el único sonido y si el resto de la frase se entiende. Hacia los 4 años la mayoría de los sonidos del español suele estar más consolidada. La erre fuerte puede llegar hacia los 5 o 6, y ese plazo no se copia a la ese.",
+  },
+  {
+    question: "¿Cuándo consultar si no dice la S?",
+    answer:
+      "Conviene consultar si la ese se junta con otros sonidos, si cuesta entenderlo fuera de casa o si el jardín ya lo comentó. Si es el único cambio y el habla se entiende, puedes anotarlo sin entrenarlo en la casa. La evaluación confirma si es solo ese fonema.",
+  },
   {
     question: "¿Hay una edad única en la que la S «debe» estar?",
     answer:
@@ -32,10 +43,36 @@ export const metadata = guiaMetadata({
   keywords: [
     "niño no pronuncia la s",
     "no dice la ese",
+    "es normal no pronunciar la s",
     "pronunciación de la s en niños",
     "dislalia Chillán",
   ],
 });
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: H1,
+  description: DESCRIPTION,
+  inLanguage: "es-CL",
+  datePublished: "2026-10-17",
+  dateModified: "2026-10-27",
+  author: {
+    "@type": "Person",
+    name: "Katia Domínguez",
+    url: `${SITE_URL}/sobre-katia-dominguez-fonoaudiologa-chillan`,
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Katia Domínguez - Fonoaudióloga",
+    url: SITE_URL,
+  },
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${PATH}`,
+  },
+  url: `${SITE_URL}${PATH}`,
+};
 
 export default function NoPronunciaLaSPage() {
   return (
@@ -46,22 +83,15 @@ export default function NoPronunciaLaSPage() {
         { label: "La S", href: PATH },
       ]}
       eyebrow="Dislalia"
-      title="Mi hijo no pronuncia la S"
-      lead="La ese se nota porque cambia palabras muy frecuentes. Antes de decidir si «ya debería decirla», mira si es el único sonido y si el resto de la frase se entiende."
+      title={H1}
+      lead="No hay, en este sitio, una edad en la que la S tenga que estar sí o sí. Hacia los 4 años la mayoría de los sonidos del español suele estar más consolidada, y la erre fuerte puede llegar hacia los 5 o 6: ese plazo no es el de la ese. Si es el único sonido y se le entiende, anótalo; si hay más sonidos o cuesta entenderlo, conviene una evaluación fonoaudiológica."
       related={[
         { href: "/dislalia", label: "Guías de dislalia" },
         { href: "/preguntas/es-normal-no-pronunciar-la-r-a-los-4", label: "La erre a los 4 años" },
         { href: "/glosario/dislalia", label: "Qué es la dislalia" },
         { href: "/tratamientos/dislalia-infantil-chillan", label: "Tratamiento de dislalia" },
       ]}
-      jsonLd={[
-        articleJsonLd({
-          path: PATH,
-          headline: "Mi hijo no pronuncia la S",
-          description: DESCRIPTION,
-        }),
-        faqJsonLd(faqs),
-      ]}
+      jsonLd={[articleJsonLd, faqJsonLd(faqs)]}
       faqs={faqs}
       imageAlt="Retrato de Katia Domínguez, fonoaudióloga infantil en Chillán, guía sobre la ese"
       ctaTitle="¿La ese es lo que más te preocupa?"
@@ -107,12 +137,16 @@ export default function NoPronunciaLaSPage() {
         <li>Si en el jardín ya lo comentaron.</li>
       </ul>
       <p>
-        No hace falta practicar la ese toda la semana previa. El tratamiento,
-        cuando corresponde, está descrito en{" "}
+        No hace falta practicar la ese toda la semana previa. Si corresponde
+        trabajarla, el{" "}
         <Link href="/tratamientos/dislalia-infantil-chillan">
-          dislalia infantil en Chillán
-        </Link>
-        . La definición corta está en el{" "}
+          tratamiento de la dislalia en Chillán
+        </Link>{" "}
+        describe esa hora. Antes, la{" "}
+        <Link href="/servicios/evaluacion-fonoaudiologica">
+          evaluación fonoaudiológica
+        </Link>{" "}
+        confirma si es solo la ese. La definición corta está en el{" "}
         <Link href="/glosario/dislalia">glosario</Link>.
       </p>
     </GuiaPage>

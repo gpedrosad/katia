@@ -94,8 +94,12 @@ export default function QueHacerCuandoSeTrabaPage() {
       <p>
         Obligarlo a saludar o a recitar cuando ya está tenso empeora el
         momento. Puedes ofrecer el turno y aceptar un gesto si hoy no quiere
-        hablar. La evaluación decide el trabajo; esta guía solo baja la
-        presión. Las señales para pedir hora están en{" "}
+        hablar. La{" "}
+        <Link href="/servicios/evaluacion-fonoaudiologica">
+          evaluación fonoaudiológica
+        </Link>{" "}
+        decide el trabajo; esta guía solo baja la presión. Las señales para
+        pedir hora están en{" "}
         <Link href="/sintomas/nino-tartamudea-chillan">
           niño tartamudea
         </Link>{" "}

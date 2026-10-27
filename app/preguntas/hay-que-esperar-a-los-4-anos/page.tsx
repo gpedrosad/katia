@@ -73,7 +73,11 @@ export default function EsperarALosCuatroPage() {
         <Link href="/preguntas/cuando-llevar-a-mi-hijo-al-fonoaudiologo">
           cuándo llevarlo al fonoaudiólogo
         </Link>{" "}
-        ordena esa decisión.
+        ordena esa decisión. Si ya no vas a esperar, la primera hora es la{" "}
+        <Link href="/servicios/evaluacion-fonoaudiologica">
+          evaluación fonoaudiológica
+        </Link>
+        .
       </p>
       <h2>Cuándo sí tiene sentido no apurar un sonido</h2>
       <p>

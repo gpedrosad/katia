@@ -1,13 +1,24 @@
 import Link from "next/link";
-import { articleJsonLd, faqJsonLd, GuiaPage, guiaMetadata } from "@/app/guias-padres/guia-ui";
-import { whatsappUrl } from "@/lib/site";
+import { faqJsonLd, GuiaPage, guiaMetadata } from "@/app/guias-padres/guia-ui";
+import { SITE_URL, whatsappUrl } from "@/lib/site";
 
 const PATH = "/dislalia/cambia-sonidos-al-hablar";
-const TITLE = "Cambia los sonidos al hablar: qué anotar";
+const TITLE = "Cambia sonidos o el orden de las palabras al hablar";
 const DESCRIPTION =
-  "Si dice «tasa» por casa o cambia varias consonantes, anota ejemplos reales. Cómo distinguir un sonido de un patrón y cuándo evaluar.";
+  "Cambiar un sonido («tasa» por casa) no es lo mismo que cambiar el orden de las palabras al hablar. Qué anotar y cuándo evaluar en Chillán.";
+const H1 = "Cambia los sonidos al hablar";
 
 const faqs = [
+  {
+    question: "¿Cambiar el orden de las palabras al hablar es cambiar sonidos?",
+    answer:
+      "No. Cambiar un sonido es «tasa» por casa. Cambiar el orden de las palabras es que la frase se arme distinto, aunque cada sonido se entienda. Anótalos en listas separadas. El nombre lo confirma la evaluación.",
+  },
+  {
+    question: "¿Qué anoto si cambia el orden de la frase?",
+    answer:
+      "La frase que quería decir y la frase que dijo. Si además cambia consonantes, escríbelo aparte. Hacia los 4 años la mayoría de los fonemas del español suele estar más consolidada. El orden de las palabras no se mide con ese plazo.",
+  },
   {
     question: "¿«Tasa» por casa es dislalia?",
     answer:
@@ -31,11 +42,37 @@ export const metadata = guiaMetadata({
   description: DESCRIPTION,
   keywords: [
     "cambia los sonidos al hablar",
+    "cambiar el orden de las palabras al hablar",
     "dice tasa por casa",
     "sustituye letras al hablar",
     "trastorno fonológico niños",
   ],
 });
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: H1,
+  description: DESCRIPTION,
+  inLanguage: "es-CL",
+  datePublished: "2026-10-17",
+  dateModified: "2026-10-27",
+  author: {
+    "@type": "Person",
+    name: "Katia Domínguez",
+    url: `${SITE_URL}/sobre-katia-dominguez-fonoaudiologa-chillan`,
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Katia Domínguez - Fonoaudióloga",
+    url: SITE_URL,
+  },
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${PATH}`,
+  },
+  url: `${SITE_URL}${PATH}`,
+};
 
 export default function CambiaSonidosPage() {
   return (
@@ -46,8 +83,8 @@ export default function CambiaSonidosPage() {
         { label: "Cambia sonidos", href: PATH },
       ]}
       eyebrow="Dislalia"
-      title="Cambia los sonidos al hablar"
-      lead="Una palabra cambiada se puede contar en la once. Varias palabras con el mismo cambio ya son un patrón. Anótalo así, sin ponerle nombre todavía."
+      title={H1}
+      lead="Cambiar un sonido, como «tasa» por casa, no es lo mismo que cambiar el orden de las palabras en la frase. Anota qué quería decir y qué dijo. Si el ejemplo se repite o no se le entiende, conviene una evaluación fonoaudiológica."
       related={[
         { href: "/dislalia", label: "Guías de dislalia" },
         {
@@ -57,14 +94,7 @@ export default function CambiaSonidosPage() {
         { href: "/tratamientos/trastorno-fonologico-chillan", label: "Trastorno fonológico" },
         { href: "/sintomas/nino-pronuncia-mal-chillan", label: "Pronuncia mal" },
       ]}
-      jsonLd={[
-        articleJsonLd({
-          path: PATH,
-          headline: "Cambia los sonidos al hablar",
-          description: DESCRIPTION,
-        }),
-        faqJsonLd(faqs),
-      ]}
+      jsonLd={[articleJsonLd, faqJsonLd(faqs)]}
       faqs={faqs}
       imageAlt="Retrato de Katia Domínguez, fonoaudióloga infantil en Chillán, guía de sonidos cambiados"
       ctaTitle="¿Los ejemplos ya son varios?"
@@ -76,6 +106,20 @@ export default function CambiaSonidosPage() {
       backHref="/dislalia"
       backLabel="← Volver a dislalia"
     >
+      <h2>El orden de las palabras es otra duda</h2>
+      <p>
+        Si la frase sale en otro orden y los sonidos se entienden, no lo anotes
+        como una consonante. Escribe la frase que quería decir y la que dijo.
+        Esta página no le pone nombre: lo separa la{" "}
+        <Link href="/servicios/evaluacion-fonoaudiologica">
+          evaluación fonoaudiológica
+        </Link>
+        . Si las palabras todavía no se juntan, esa escena está en{" "}
+        <Link href="/lenguaje-infantil/dice-palabras-y-no-frases">
+          dice palabras, pero no arma frases
+        </Link>
+        .
+      </p>
       <p>
         «Tasa» por casa es un ejemplo que casi todas las familias reconocen. A
         veces es el único cambio y el resto de la frase se entiende. A veces
@@ -99,9 +143,9 @@ export default function CambiaSonidosPage() {
         <Link href="/tratamientos/trastorno-fonologico-chillan">
           trastorno fonológico en Chillán
         </Link>{" "}
-        explica el trabajo presencial. Si parece un sonido aislado, sigue en{" "}
+        explica el trabajo presencial. Si parece un sonido aislado, sigue en el{" "}
         <Link href="/tratamientos/dislalia-infantil-chillan">
-          tratamiento de dislalia
+          tratamiento de la dislalia en Chillán
         </Link>
         .
       </p>

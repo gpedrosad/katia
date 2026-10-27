@@ -89,7 +89,11 @@ export default function CasaNoAfueraPage() {
       <p>
         Si afuera se pierde, no estás frente a una manía de pronunciación
         menor. Estás frente a un habla poco clara para quien no conoce al niño.
-        Las páginas{" "}
+        La{" "}
+        <Link href="/servicios/evaluacion-fonoaudiologica">
+          evaluación fonoaudiológica
+        </Link>{" "}
+        parte de esa diferencia. Las páginas{" "}
         <Link href="/sintomas/nino-pronuncia-mal-chillan">pronuncia mal</Link> y{" "}
         <Link href="/sintomas/mi-hijo-no-habla-bien-chillan">no habla bien</Link>{" "}
         recogen esa consulta en Chillán. Si los cambios son de varios sonidos,
