@@ -11,11 +11,23 @@ const WHATSAPP_HREF = whatsappUrl(
   "Hola, tengo dudas sobre los hitos del lenguaje de mi hijo y quiero evaluarlo"
 );
 
+const answerEdad =
+  "Los niños empiezan a hablar con palabras con significado entre los 11 y 14 meses. A los 2 años suelen decir unas 50 palabras y frases de dos. A los 3 años arman oraciones que extraños entienden en gran parte. Hacia los 4 y 5 años el habla se entiende con más claridad.";
+
+const answerBebes =
+  "Los bebés empiezan a hablar con palabras con significado, como «mamá» o «agua», entre los 11 y 14 meses. Antes balbucean con entonación y usan gestos. Si a los 18 meses no dice ninguna palabra, conviene consultar.";
+
+const answerHablanBien =
+  "Hablar bien es gradual. Alrededor de los 3 años, muchos niños arman oraciones que extraños entienden en gran parte. A los 4 y 5 años el habla suele ser más fluida y se entiende con más claridad. Algunos sonidos, como la /r/ fuerte, pueden consolidarse hacia los 5 o 6 años. Si a los 4 años cuesta entender a tu hijo, conviene evaluar.";
+
 const faqs = [
   {
+    question: "¿A qué edad hablan los niños?",
+    answer: answerEdad,
+  },
+  {
     question: "¿A qué edad hablan los bebés?",
-    answer:
-      "Los bebés empiezan a hablar con palabras con significado, como «mamá» o «agua», entre los 11 y 14 meses. Antes balbucean con entonación y usan gestos. Si a los 18 meses no dice ninguna palabra, conviene consultar.",
+    answer: answerBebes,
   },
   {
     question: "¿A qué edad empiezan a hablar los bebés?",
@@ -23,9 +35,8 @@ const faqs = [
       "La mayoría de los bebés dice sus primeras palabras con significado (como «mamá» o «agua») entre los 11 y 14 meses. Antes de eso balbucean con entonación y usan gestos. Si a los 15–18 meses no dice ninguna palabra con significado, es recomendable consultar.",
   },
   {
-    question: "¿A qué edad hablan bien los niños?",
-    answer:
-      "Hablar bien es gradual. Alrededor de los 3 años, muchos niños arman oraciones que extraños entienden en gran parte. A los 4 y 5 años el habla suele ser más fluida y se entiende con más claridad. Algunos sonidos, como la /r/ fuerte, pueden consolidarse hacia los 5 o 6 años. Si a los 4 años cuesta entender a tu hijo, conviene evaluar.",
+    question: "¿A qué edad los niños hablan bien?",
+    answer: answerHablanBien,
   },
   {
     question: "¿Hablan antes las niñas que los niños?",
@@ -66,17 +77,18 @@ const faqs = [
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "¿A qué edad hablan los niños? Hitos del lenguaje por edad",
+  title: "¿A qué edad hablan los niños? Hitos, 11-14 meses",
   description:
-    "Los niños empiezan a hablar entre los 11 y 14 meses. Tabla por edad, señales de alerta y cuándo consultar en Chillán.",
+    "Hitos del lenguaje por edad: primeras palabras entre los 11 y 14 meses. Los bebés balbucean antes; hablar bien es más claro hacia los 3 y 4 años.",
   keywords: [
     "a qué edad hablan los niños",
-    "a qué edad empiezan a hablar los bebés",
     "hitos del lenguaje por edad",
+    "a qué edad los niños hablan bien",
+    "a qué edad hablan los bebés",
+    "a qué edad empiezan a hablar los bebés",
     "cuántas palabras dice un niño de 2 años",
     "desarrollo del lenguaje infantil",
     "cuándo hablan los bebés",
-    "a qué edad hablan los bebés",
   ],
   ogType: "article",
 });
@@ -84,9 +96,9 @@ export const metadata = buildPageMetadata({
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "¿A qué edad hablan los niños? Hitos del lenguaje por edad",
+  headline: "¿A qué edad hablan los niños? Hitos, 11-14 meses",
   description:
-    "Los niños empiezan a hablar entre los 11 y 14 meses. Tabla por edad, señales de alerta y cuándo consultar en Chillán.",
+    "Hitos del lenguaje por edad: primeras palabras entre los 11 y 14 meses. Los bebés balbucean antes; hablar bien es más claro hacia los 3 y 4 años.",
   author: {
     "@type": "Person",
     name: "Katia Domínguez",
@@ -101,7 +113,7 @@ const articleJsonLd = {
     "@id": `${SITE_URL}${PAGE_PATH}`,
   },
   datePublished: "2026-05-20",
-  dateModified: "2026-10-19",
+  dateModified: "2026-10-28",
 };
 
 const webPageJsonLd = {
@@ -109,10 +121,10 @@ const webPageJsonLd = {
   "@type": "WebPage",
   "@id": `${SITE_URL}${PAGE_PATH}#webpage`,
   url: `${SITE_URL}${PAGE_PATH}`,
-  name: "¿A qué edad hablan los niños? Hitos del lenguaje por edad",
+  name: "¿A qué edad hablan los niños? Hitos, 11-14 meses",
   description:
-    "Los niños empiezan a hablar entre los 11 y 14 meses. Tabla por edad, señales de alerta y cuándo consultar en Chillán.",
-  dateModified: "2026-10-19",
+    "Hitos del lenguaje por edad: primeras palabras entre los 11 y 14 meses. Los bebés balbucean antes; hablar bien es más claro hacia los 3 y 4 años.",
+  dateModified: "2026-10-28",
 };
 
 const faqJsonLd = {
@@ -166,9 +178,7 @@ export default function HitosDelLenguajePorEdadPage() {
                 <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-rose-700">
                   Respuesta rápida
                 </p>
-                <p className="text-lg font-semibold text-gray-900">
-                  Los niños empiezan a hablar con palabras con significado entre los 11 y 14 meses. A los 2 años suelen decir unas 50 palabras y frases de dos. A los 3 años arman oraciones que extraños entienden en gran parte. Hacia los 4 y 5 años el habla se entiende con más claridad.
-                </p>
+                <p className="text-lg font-semibold text-gray-900">{answerEdad}</p>
               </div>
               <p className="text-xl text-gray-600">
                 Cada niño tiene su ritmo, pero existen hitos orientativos que ayudan a saber
@@ -237,6 +247,32 @@ export default function HitosDelLenguajePorEdadPage() {
                 <Link href="/agendar-hora-fonoaudiologo-infantil-chillan" className="font-medium text-rose-600 underline">
                   agendar una hora de evaluación en Chillán
                 </Link>.
+              </p>
+
+              <h2>¿A qué edad hablan los bebés?</h2>
+              <p>{answerBebes}</p>
+              <p>
+                Las primeras palabras, con más detalle, están en{" "}
+                <Link
+                  href="/lenguaje-infantil/a-que-edad-empieza-a-hablar-un-bebe"
+                  className="font-medium text-rose-600 underline"
+                >
+                  a qué edad empieza a hablar un bebé
+                </Link>
+                .
+              </p>
+
+              <h2>¿A qué edad los niños hablan bien?</h2>
+              <p>{answerHablanBien}</p>
+              <p>
+                Si la duda es si lo siguen fuera de casa, mira{" "}
+                <Link
+                  href="/preguntas/a-que-edad-se-le-entiende"
+                  className="font-medium text-rose-600 underline"
+                >
+                  a qué edad se le entiende lo que dice
+                </Link>
+                .
               </p>
 
               <h2>Tabla resumen de hitos del lenguaje por edad</h2>
@@ -456,16 +492,6 @@ export default function HitosDelLenguajePorEdadPage() {
                 <strong>Señal de alerta principal:</strong> dificultad para contar
                 experiencias, errores de pronunciación persistentes o problemas para
                 seguir el ritmo del lenguaje en el aula.
-              </p>
-
-              <h2>¿A qué edad los niños hablan bien (con fluidez)?</h2>
-              <p>
-                El concepto de hablar «bien» o con fluidez es gradual. Alrededor de los 3 años, la mayoría de los niños
-                forma oraciones completas que extraños entienden en gran parte. A los 4–5 años, el habla suele ser fluida,
-                con narrativas coherentes y la mayoría de los sonidos bien articulados. Sin embargo, es normal que algunos
-                sonidos complejos (como la /r/ fuerte) se consoliden recién hacia los 5–6 años. Si a los 4 años tu hijo
-                tiene dificultades persistentes para expresarse con claridad o su habla es poco inteligible, conviene
-                evaluar.
               </p>
 
               <h2>¿Cuántas palabras debería decir mi hijo por edad?</h2>

@@ -20,6 +20,97 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-10-28: SEO Lote 23 — hitos, terapia en casa, home, qué hace el fonoaudiólogo y hablar como bebé
+
+### Contexto
+
+**Datos GSC (90 días 2026-07-30 al 2026-10-27, sc-domain:katialafono.cl):**
+- **91 clics**
+- **7.594 impresiones**
+- **Posición promedio: 8,0**
+
+**Últimos 7 días (2026-10-21 al 2026-10-27):** 12 clics / 2.297 imp vs 7 días previos: 8 clics / 778 imp. Impresiones diarias: 540 el 2026-10-26 y 505 el 2026-10-27.
+
+Elegibilidad: title, meta o copy de cada URL editado el 2026-10-20 o antes (`git log`). Sin páginas de otras ciudades, sin `/ads`, sin `/sitelink`. Sin precios, estadísticas, credenciales ni promesas nuevas. Las edades de hitos son las ya publicadas (primeras palabras entre los 11 y 14 meses; unas 50 palabras y frases de dos a los 2 años; oraciones que extraños entienden en gran parte a los 3; más claridad hacia los 4 y 5; /r/ fuerte hacia los 5 o 6). «Estimulación del lenguaje» sigue en el servicio de Chillán: esta guía de casa no lo recupera.
+
+### Páginas optimizadas
+
+Titles absolutos (`buildPageMetadata`; en «habla como bebé», `guiaMetadata` que llama a `buildPageMetadata`), ≤60. Descriptions entre 144 y 155.
+
+#### 1. `/recursos/hitos-del-lenguaje-por-edad`
+**Métricas GSC:** 28 días, 871 imp / 1 clic / pos 8,6. «a que edad hablan los niños» 293 imp, pos 9,7, 0 clics. También «hitos del lenguaje por edad», «a qué edad los niños hablan bien» y «a qué edad hablan los bebés». Último cambio: 2026-10-19 (`fe6acc6`, Lote 13).
+
+- **Title (57 → 48):** «¿A qué edad hablan los niños? Hitos del lenguaje por edad» → «¿A qué edad hablan los niños? Hitos, 11-14 meses»
+- **Description (117 → 145):** de la tabla y las señales a hitos del lenguaje por edad, bebés que balbucean antes y hablar bien más claro hacia los 3 y 4 años
+- **H1:** se mantiene «¿A qué edad hablan los niños?»
+- **Respuesta rápida:** el mismo párrafo de siempre (11–14 meses, ~50 palabras y frases de dos a los 2, oraciones a los 3, más claridad a los 4 y 5) ahora es también la primera pregunta del FAQPage
+- **H2 nuevas, arriba de la tabla,** con el mismo texto que el FAQ: «¿A qué edad hablan los bebés?» y «¿A qué edad los niños hablan bien?». La H2 vieja «¿A qué edad los niños hablan bien (con fluidez)?» se quitó para no repetir otra redacción
+- **FAQ:** la pregunta de «hablan bien» pasa a «¿A qué edad los niños hablan bien?». La de bebés se mantiene. El texto visible y el FAQPage son el mismo
+- **Enlaces:** «a qué edad empieza a hablar un bebé» hacia `/lenguaje-infantil/a-que-edad-empieza-a-hablar-un-bebe` y «a qué edad se le entiende lo que dice» hacia `/preguntas/a-que-edad-se-le-entiende`
+- **Article / WebPage:** `dateModified` 2026-10-28
+
+#### 2. `/recursos/estimular-lenguaje-en-casa`
+**Métricas GSC:** 379 imp, pos 13,8, 6 clics. «cómo empezar la terapia de lenguaje en casa» 30 imp, pos 15. «cómo hacer terapia de lenguaje en casa» 27 imp, pos 10–14. «terapia de lenguaje en casa». Último cambio: 2026-10-20 (`53550ae`, Lote 14).
+
+- **Title (53 → 43):** «Terapia de lenguaje en casa: cómo empezar con tu hijo» → «Cómo empezar la terapia de lenguaje en casa»
+- **Description (138 → 144):** cómo empezar y cómo hacer (modela, expande, no interrogues) y que complementa la evaluación en Chillán y no la reemplaza
+- **H1:** el mismo texto que el title
+- **Respuesta rápida:** se agrega que esa práctica complementa la evaluación y la terapia y no las reemplaza, con enlace a `/servicios/evaluacion-fonoaudiologica` y a `/servicios/terapia-lenguaje-infantil`. El mismo cierre está en el cuerpo de «¿Cómo empezar la terapia de lenguaje en casa?» y en esa FAQ
+- **H2:** «¿Cómo hacer terapia de lenguaje en casa paso a paso?» → «¿Cómo hacer terapia de lenguaje en casa?». Los cinco pasos que ya estaban pasan a lista numerada
+- **No se recuperó** «estimulación del lenguaje». El enlace al servicio de Chillán se queda. El cierre deja de decir «¿Estimulas en casa…?»
+- **Article:** `dateModified` 2026-10-28
+
+#### 3. `/` (home)
+**Métricas GSC:** «fonoaudiologa» 193 imp, pos 3,5, 1 clic; «fonoaudiologia» 159 imp, pos 3,9, 3 clics; «fonoaudiólogo» 71 imp, pos 3,8, 0 clics; «fonoaudióloga» 31 imp. Meta anterior: 2026-10-19 (`fe6acc6`). El cuerpo de voz online es del 2026-10-20 (`9437dfa`), antes del corte.
+
+- **Title (51 → 45):** «Fonoaudióloga infantil en Chillán | Katia Domínguez» → «Fonoaudióloga en Chillán y voz online | Katia»
+- **Description (132 → 154):** fonoaudióloga y fonoaudiólogo en Chillán, fonoaudiología infantil, evaluación y terapia para niños, voz online para adultos en todo Chile, más de 20 años
+- **H1:** se mantiene «Fonoaudióloga infantil en Chillán»
+- **Subtítulo:** «Terapia de lenguaje, habla y evaluación con informe» → «Fonoaudiología en Chillán y voz online para adultos». El párrafo del hero y la tarjeta de voz online no cambian de destino
+- **Enlace:** «qué hace un fonoaudiólogo infantil» hacia `/preguntas/que-hace-un-fonoaudiologo-infantil`
+- Sin claims nuevos. Los +20 años ya estaban en la meta y en el cuerpo
+
+#### 4. `/preguntas/que-hace-un-fonoaudiologo-infantil`
+**Métricas GSC:** 50 imp / 0 clics / pos 10,8. «fonoaudiólogo infantil» 12 imp, pos 9,8. También «que hace un/una fonoaudiólogo(a) infantil» y «que es una fonoaudióloga infantil». Último cambio del `page.tsx`: 2026-10-16 (`ab22710`). `catalogo.ts` no se tocó (editado el 2026-10-25).
+
+- **Title y H1 (36 → 45):** «¿Qué hace un fonoaudiólogo infantil?» → «¿Qué es y qué hace un fonoaudiólogo infantil?»
+- **Description (141 → 155):** fonoaudiólogo infantil que evalúa comprensión, habla y pronunciación, y qué es una fonoaudióloga infantil en Chillán (primera hora, evaluación e informe)
+- **Respuesta bajo el H1:** definición corta. Una fonoaudióloga infantil hace ese mismo trabajo. Presencial en Chillán; la primera hora es evaluación con informe y, si hace falta, plan de terapia. La lectoescritura sigue en el cuerpo
+- **H2 y FAQ** «¿Qué es una fonoaudióloga infantil?»: el mismo párrafo visible y en el FAQPage de `GeoFAQ`. La pregunta del H1 sigue siendo la primera entrada
+- **Enlace:** el ancla a la guía de casa pasa de «estimulación del lenguaje en casa» a «terapia de lenguaje en casa». No se devolvió el término cedido al servicio
+- La tarjeta del hub `/preguntas` sigue diciendo «¿Qué hace un fonoaudiólogo infantil?» porque `catalogo.ts` no se editó
+
+#### 5. `/lenguaje-infantil/habla-como-bebe`
+**Métricas GSC:** 78 imp / 0 clics / pos 7,8. «hablar como bebé» y «por qué un niño de 7 años habla como bebé». Último cambio: 2026-10-17 (`6d8fe10`). Solo title y meta. El H1 sigue «Mi hijo habla como bebé». No se inventa una causa ni un plazo para los 7 años.
+
+- **Title (37 → 43):** «Mi hijo habla como bebé: qué observar» → «¿Por qué un niño habla como bebé? Qué mirar»
+- **Description (137 → 149):** hablar como bebé no es un diagnóstico (palabras cortadas, pocas frases o un habla que solo entienden en casa); qué anotar y cuándo evaluar en Chillán
+- Cuerpo, FAQ y H1 intactos. El FAQPage sigue con las tres preguntas de siempre
+
+### Omitida
+
+- `/voz-online/fonoaudiologa-de-voz-online` (333 imp / 13 clics / pos 8,3; «fonoaudiólogo especialista en voz» 21 imp, pos 9,4). El title es del 2026-10-20 (`9437dfa`), pero el copy sí se editó después del corte: el párrafo de países el 2026-10-23 (`63df24f`) y otra vez el 2026-10-24 (`c9d2441`, enlace a Miami). Entre el 2026-10-21 y el 2026-10-24 también se agregaron tarjetas. Google todavía no tiene ~7 días sobre ese copy. No se tocó title, meta, H1 ni H2.
+
+### Métricas esperadas
+
+Medir ~2026-11-11 al 2026-11-18:
+- CTR > 0 en `/recursos/hitos-del-lenguaje-por-edad` para «a que edad hablan los niños». «A qué edad los niños hablan bien» y «a qué edad hablan los bebés» se leen en esa URL; las primeras palabras del bebé siguen en `/lenguaje-infantil/a-que-edad-empieza-a-hablar-un-bebe`
+- «Cómo empezar» y «cómo hacer terapia de lenguaje en casa» en `/recursos/estimular-lenguaje-en-casa`, con posición bajo 10. «Estimulación del lenguaje» se sigue midiendo en el servicio de Chillán
+- CTR de «fonoaudiologa», «fonoaudiologia» y «fonoaudiólogo» en la home, con el snippet de Chillán y voz online
+- CTR > 0 en `/preguntas/que-hace-un-fonoaudiologo-infantil` para «fonoaudiólogo infantil» y «qué es una fonoaudióloga infantil»
+- CTR > 0 en `/lenguaje-infantil/habla-como-bebe` para «hablar como bebé», sin una respuesta inventada para los 7 años
+- El hub de voz online se puede retocar cuando cumplan 7 días desde el 2026-10-24 (desde el 2026-10-31)
+
+### Técnico
+
+- No se editó `app/sitemap.ts` ni `lib/seo-routes.ts`. Sin URLs nuevas.
+- Canonical `https://www.katialafono.cl` + path, `index, follow`.
+- FAQPage de hitos: 11 preguntas, el mismo texto visible. En la guía de casa, la respuesta de «¿Cómo empezar…?» es el mismo párrafo del H2. En la pregunta del fonoaudiólogo, `GeoFAQ` repite el H1 y «¿Qué es una fonoaudióloga infantil?».
+- **Build:** `npm run build` pasó (Next.js 16.1.1). El typecheck con el heap por defecto se quedó sin memoria; con `NODE_OPTIONS=--max-old-space-size=4096` compiló, tipó y generó las páginas. 180 páginas estáticas, las mismas del Lote 22. Sin URLs nuevas.
+- **Sitemap de ese build:** 162 URLs (`<loc>`). Sin `/ads` ni `/sitelink`. El `lastmod` de las cinco URLs editadas todavía apunta al commit anterior, porque el sitemap lee `git log` y este lote aún no estaba commiteado. El build posterior al commit de este lote lo actualiza. El hub de voz sigue en `2026-10-24T04:02:09.000Z`: no se editó. No se tocó `app/sitemap.ts`.
+
+---
+
 ## 2026-10-27: SEO Lote 22 — CTR de la ese y del orden de las palabras, y cuándo consultar por edad
 
 ### Contexto

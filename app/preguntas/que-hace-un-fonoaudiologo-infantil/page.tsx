@@ -3,9 +3,9 @@ import { PreguntaArticle } from "@/app/preguntas/_components/PreguntaArticle";
 import { buildPageMetadata } from "@/lib/seo";
 
 const PATH = "/preguntas/que-hace-un-fonoaudiologo-infantil";
-const TITLE = "¿Qué hace un fonoaudiólogo infantil?";
+const TITLE = "¿Qué es y qué hace un fonoaudiólogo infantil?";
 const DESCRIPTION =
-  "Evalúa y trata cómo tu hijo comprende, habla y pronuncia. En Chillán la primera hora es una evaluación con informe y, si hace falta, terapia.";
+  "Fonoaudiólogo infantil: evalúa cómo tu hijo comprende, habla y pronuncia. Qué es una fonoaudióloga infantil en Chillán: primera hora, evaluación e informe.";
 
 export const metadata = buildPageMetadata({
   path: PATH,
@@ -13,6 +13,8 @@ export const metadata = buildPageMetadata({
   description: DESCRIPTION,
   keywords: [
     "qué hace un fonoaudiólogo infantil",
+    "fonoaudiólogo infantil",
+    "qué es una fonoaudióloga infantil",
     "fonoaudióloga infantil Chillán",
     "evaluación de lenguaje",
     "terapia de habla",
@@ -21,7 +23,10 @@ export const metadata = buildPageMetadata({
 });
 
 const answer =
-  "Un fonoaudiólogo infantil evalúa y trata cómo tu hijo comprende, arma frases, pronuncia y, si ya está en el colegio, cómo eso se relaciona con la lectura y la escritura. En Chillán, Katia Domínguez lo hace de forma presencial: la primera hora es una evaluación con informe y, si hace falta, un plan de terapia.";
+  "Un fonoaudiólogo infantil evalúa y trata cómo tu hijo comprende, arma frases y pronuncia. Una fonoaudióloga infantil hace ese mismo trabajo. En Chillán, Katia Domínguez lo hace de forma presencial: la primera hora es una evaluación con informe y, si hace falta, un plan de terapia.";
+
+const queEs =
+  "Una fonoaudióloga infantil evalúa y trata cómo un niño comprende, arma frases y pronuncia. En Chillán, Katia Domínguez lo hace de forma presencial. La primera hora es una evaluación con informe y, si hace falta, un plan de terapia.";
 
 export default function QueHaceUnFonoaudiologoInfantilPage() {
   return (
@@ -54,6 +59,10 @@ export default function QueHaceUnFonoaudiologoInfantilPage() {
       ]}
       faqs={[
         {
+          question: "¿Qué es una fonoaudióloga infantil?",
+          answer: queEs,
+        },
+        {
           question: "¿Atiende solo a niños que no hablan?",
           answer:
             "No. También consulta quien habla y no se le entiende, quien comprende poco, quien no arma frases o quien ya está en el colegio y le cuesta leer o escribir. El motivo lo cuentas tú al escribir.",
@@ -70,6 +79,8 @@ export default function QueHaceUnFonoaudiologoInfantilPage() {
         },
       ]}
     >
+      <h2>¿Qué es una fonoaudióloga infantil?</h2>
+      <p>{queEs}</p>
       <h2>Qué se mira en la evaluación</h2>
       <p>
         La consulta parte por lo que tú ves en la casa y por lo que comenta el
@@ -120,7 +131,7 @@ export default function QueHaceUnFonoaudiologoInfantilPage() {
         terapia, la práctica entra en la rutina. No se trata de convertir la
         casa en una clase. La guía de{" "}
         <Link href="/recursos/estimular-lenguaje-en-casa">
-          estimulación del lenguaje en casa
+          terapia de lenguaje en casa
         </Link>{" "}
         ordena esa idea para el día a día.
       </p>

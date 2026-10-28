@@ -35,10 +35,9 @@ const homeFaqItems = [
 const WHATSAPP_LINK =
   "https://wa.me/56995497838?text=Hola%2C%20quiero%20agendar%20una%20hora";
 const PAGE_PATH = "/";
-const HOME_TITLE =
-  "Fonoaudióloga infantil en Chillán | Katia Domínguez";
+const HOME_TITLE = "Fonoaudióloga en Chillán y voz online | Katia";
 const HOME_DESCRIPTION =
-  "Fonoaudióloga en Chillán (+20 años): fonoaudiología, evaluación y terapia para niños. Voz online en todo Chile. Agenda por WhatsApp.";
+  "Fonoaudióloga y fonoaudiólogo en Chillán: fonoaudiología infantil, evaluación y terapia para niños. Voz online para adultos en todo Chile. Más de 20 años.";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
@@ -134,7 +133,7 @@ export default function Home() {
                   Fonoaudióloga infantil en Chillán
                 </h1>
                 <p className="mb-4 text-2xl font-medium text-rose-600 sm:text-3xl">
-                  Terapia de lenguaje, habla y evaluación con informe
+                  Fonoaudiología en Chillán y voz online para adultos
                 </p>
                 <p
                   data-speakable
@@ -281,7 +280,11 @@ export default function Home() {
               <Link href="/agendar-hora-fonoaudiologo-infantil-chillan" className="font-medium text-rose-600 underline">
                 agendar una hora
               </Link>
-              .
+              . Si la pregunta es{" "}
+              <Link href="/preguntas/que-hace-un-fonoaudiologo-infantil" className="font-medium text-rose-600 underline">
+                qué hace un fonoaudiólogo infantil
+              </Link>
+              , también está respondida.
             </p>
           </div>
         </section>

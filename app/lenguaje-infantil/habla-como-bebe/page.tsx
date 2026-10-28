@@ -3,9 +3,9 @@ import { articleJsonLd, faqJsonLd, GuiaPage, guiaMetadata } from "@/app/guias-pa
 import { whatsappUrl } from "@/lib/site";
 
 const PATH = "/lenguaje-infantil/habla-como-bebe";
-const TITLE = "Mi hijo habla como bebé: qué observar";
+const TITLE = "¿Por qué un niño habla como bebé? Qué mirar";
 const DESCRIPTION =
-  "Hablar como bebé puede ser palabras recortadas, pocas frases o un habla que solo la familia entiende. Cómo distinguirlo y cuándo evaluar.";
+  "Hablar como bebé no es un diagnóstico: palabras cortadas, pocas frases o un habla que solo entienden en casa. Qué anotar y cuándo evaluar en Chillán.";
 
 const faqs = [
   {
@@ -31,6 +31,8 @@ export const metadata = guiaMetadata({
   description: DESCRIPTION,
   keywords: [
     "mi hijo habla como bebé",
+    "hablar como bebé",
+    "por qué un niño habla como bebé",
     "habla como guagua",
     "habla infantilizado",
     "pronunciación infantil Chillán",

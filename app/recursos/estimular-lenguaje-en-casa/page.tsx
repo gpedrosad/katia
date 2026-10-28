@@ -20,7 +20,7 @@ const faqs = [
   {
     question: "¿Cómo empezar la terapia de lenguaje en casa?",
     answer:
-      "Empieza por momentos breves y frecuentes cara a cara: nombra lo que mira, ofrece opciones («¿leche o jugo?»), lee juntos y celebra cualquier intento. No hace falta una sesión larga forzada. Unos 15-20 minutos de interacción de calidad, varias veces al día, suelen ser más útiles. Si después de varias semanas no hay progreso, conviene evaluar.",
+      "Empieza por momentos breves y frecuentes cara a cara: nombra lo que mira, ofrece opciones («¿leche o jugo?»), lee juntos y celebra cualquier intento. No hace falta una sesión larga forzada. Unos 15-20 minutos de interacción de calidad, varias veces al día, suelen ser más útiles. Si después de varias semanas no hay progreso, conviene evaluar. Esa práctica complementa la evaluación y la terapia: no las reemplaza.",
   },
   {
     question: "¿Se puede estimular el lenguaje sin ser especialista?",
@@ -46,9 +46,9 @@ const faqs = [
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Terapia de lenguaje en casa: cómo empezar con tu hijo",
+  title: "Cómo empezar la terapia de lenguaje en casa",
   description:
-    "Cómo empezar la terapia de lenguaje en casa: sigue su atención, modela, expande y no interrogues. Unos 15-20 minutos, varias veces al día.",
+    "Cómo empezar y cómo hacer terapia de lenguaje en casa: modela, expande y no interrogues. Complementa la evaluación en Chillán y no la reemplaza.",
   keywords: [
     "cómo empezar la terapia de lenguaje en casa",
     "cómo hacer terapia de lenguaje en casa",
@@ -66,9 +66,9 @@ export const metadata = buildPageMetadata({
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Terapia de lenguaje en casa: cómo empezar con tu hijo",
+  headline: "Cómo empezar la terapia de lenguaje en casa",
   description:
-    "Cómo empezar y cómo hacer terapia de lenguaje en casa, con pautas para la rutina de 1 a 5 años.",
+    "Cómo empezar y cómo hacer terapia de lenguaje en casa: modela, expande y no interrogues. Complementa la evaluación en Chillán y no la reemplaza.",
   author: {
     "@type": "Person",
     name: "Katia Domínguez",
@@ -83,7 +83,7 @@ const articleJsonLd = {
     "@id": `${SITE_URL}${PAGE_PATH}`,
   },
   datePublished: "2026-05-20",
-  dateModified: "2026-10-20",
+  dateModified: "2026-10-28",
 };
 
 const faqJsonLd = {
@@ -127,7 +127,7 @@ export default function EstimularLenguajeEnCasaPage() {
                 Consejos prácticos
               </span>
               <h1 className="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl">
-                Terapia de lenguaje en casa: cómo empezar con tu hijo
+                Cómo empezar la terapia de lenguaje en casa
               </h1>
               <div className="mb-6 rounded-2xl border-2 border-emerald-200 bg-emerald-50 p-6">
                 <p className="text-lg font-semibold text-gray-900">
@@ -136,7 +136,21 @@ export default function EstimularLenguajeEnCasaPage() {
                   modela sin corregir cada error y expande lo que dice. No lo
                   interrogues ni le exijas que repita. Unos 15-20 minutos de
                   interacción de calidad, varias veces al día, suelen servir
-                  más que una clase larga.
+                  más que una clase larga. Esa práctica complementa la{" "}
+                  <Link
+                    href="/servicios/evaluacion-fonoaudiologica"
+                    className="underline"
+                  >
+                    evaluación
+                  </Link>{" "}
+                  y la{" "}
+                  <Link
+                    href="/servicios/terapia-lenguaje-infantil"
+                    className="underline"
+                  >
+                    terapia
+                  </Link>
+                  : no las reemplaza.
                 </p>
               </div>
               <p className="text-xl text-gray-600">
@@ -220,16 +234,17 @@ export default function EstimularLenguajeEnCasaPage() {
                 celebra cualquier intento. No hace falta una sesión larga
                 forzada. Unos 15-20 minutos de interacción de calidad, varias
                 veces al día, suelen ser más útiles. Si después de varias
-                semanas no hay progreso, conviene evaluar.
+                semanas no hay progreso, conviene evaluar. Esa práctica
+                complementa la evaluación y la terapia: no las reemplaza.
               </p>
               <p>
                 Elige esos momentos dentro de la rutina —comidas, baño, paseos
                 y juego— en vez de armar una «clase».
               </p>
 
-              <h2>¿Cómo hacer terapia de lenguaje en casa paso a paso?</h2>
-              <p>Cómo dar terapia de lenguaje en casa, en la práctica:</p>
-              <ul>
+              <h2>¿Cómo hacer terapia de lenguaje en casa?</h2>
+              <p>Cómo dar terapia de lenguaje en casa, en cinco pasos:</p>
+              <ol>
                 <li>
                   <strong>Sigue su atención:</strong> comenta lo que mira o le
                   interesa, no solo lo que tú quieres enseñar.
@@ -253,7 +268,7 @@ export default function EstimularLenguajeEnCasaPage() {
                   «¿de qué color?» seguidos, y no le pidas «dilo bien» todo el
                   rato.
                 </li>
-              </ul>
+              </ol>
               <p>
                 Estas pautas apoyan la terapia de lenguaje en casa. Si hay
                 señales de alerta o no ves avances, conviene evaluar: no es lo
@@ -367,7 +382,7 @@ export default function EstimularLenguajeEnCasaPage() {
 
             <div className="mt-12 rounded-2xl bg-rose-50 p-8 text-center">
               <h2 className="mb-4 text-2xl font-bold text-gray-900">
-                ¿Estimulas en casa pero no ves avances?
+                ¿Lo haces en casa y no ves avances?
               </h2>
               <p className="mb-6 text-gray-600">
                 Una evaluación puede aclarar si necesitas apoyo profesional.
