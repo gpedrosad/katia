@@ -107,7 +107,7 @@ Medir ~2026-11-11 al 2026-11-18:
 - Canonical `https://www.katialafono.cl` + path, `index, follow`.
 - FAQPage de hitos: 11 preguntas, el mismo texto visible. En la guía de casa, la respuesta de «¿Cómo empezar…?» es el mismo párrafo del H2. En la pregunta del fonoaudiólogo, `GeoFAQ` repite el H1 y «¿Qué es una fonoaudióloga infantil?».
 - **Build:** `npm run build` pasó (Next.js 16.1.1). El typecheck con el heap por defecto se quedó sin memoria; con `NODE_OPTIONS=--max-old-space-size=4096` compiló, tipó y generó las páginas. 180 páginas estáticas, las mismas del Lote 22. Sin URLs nuevas.
-- **Sitemap de ese build:** 162 URLs (`<loc>`). Sin `/ads` ni `/sitelink`. El `lastmod` de las cinco URLs editadas todavía apunta al commit anterior, porque el sitemap lee `git log` y este lote aún no estaba commiteado. El build posterior al commit de este lote lo actualiza. El hub de voz sigue en `2026-10-24T04:02:09.000Z`: no se editó. No se tocó `app/sitemap.ts`.
+- **Sitemap del build posterior al commit `5cd1d4d`:** 162 URLs (`<loc>`). Sin `/ads` ni `/sitelink`. `/`, `/recursos/hitos-del-lenguaje-por-edad`, `/recursos/estimular-lenguaje-en-casa`, `/preguntas/que-hace-un-fonoaudiologo-infantil` y `/lenguaje-infantil/habla-como-bebe` quedan con `lastmod` `2026-10-28T12:22:04.000Z`. `/voz-online/fonoaudiologa-de-voz-online` sigue en `2026-10-24T04:02:09.000Z`: no se editó. No se tocó `app/sitemap.ts`.
 
 ---
 
