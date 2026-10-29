@@ -164,7 +164,7 @@ Medir ~2026-11-12:
 - Canonical `https://www.katialafono.cl` + path, `index, follow`.
 - FAQPage del pilar: 9 preguntas, el mismo texto visible. En el servicio de TEL, 5 preguntas, el mismo arreglo en la página y en el schema; salió la de «¿se cura?». En pólipos, el H2 «¿Qué es un pólipo en la cuerda vocal?» es la primera entrada del FAQPage de `GeoFAQ`.
 - **Build:** `npm run build` pasó (Next.js 16.1.1, `NODE_OPTIONS=--max-old-space-size=4096`). 180 páginas estáticas, las mismas del Lote 23. Sin URLs nuevas.
-- **Sitemap del build anterior al commit de este lote:** 162 URLs (`<loc>`). Sin `/ads` ni `/sitelink`. El `lastmod` de las URLs editadas queda en el commit de este lote; se anota en el build posterior. No se tocó `app/sitemap.ts`. `/tratamientos/tel-trastorno-especifico-lenguaje-chillan` sigue en `2026-10-24T04:02:09.000Z` y `/voz-online/fonoaudiologa-de-voz-online` también: no se editaron.
+- **Sitemap del build posterior al commit `a47025c`:** 162 URLs (`<loc>`). Sin `/ads` ni `/sitelink`. Las 12 URLs editadas quedan con `lastmod` `2026-10-29T12:14:25.000Z`. No se tocó `app/sitemap.ts`. `/tratamientos/tel-trastorno-especifico-lenguaje-chillan` sigue en `2026-10-24T04:02:09.000Z` y `/voz-online/fonoaudiologa-de-voz-online` también: no se editaron.
 
 ---
 
