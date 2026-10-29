@@ -7,9 +7,9 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/rehabilitacion-vocal-profesionales-voz",
-  title: "Cantantes y locutores: terapia vocal online",
+  title: "Rehabilitación de la voz en profesionales online",
   description:
-    "Terapia vocal online para cantantes y locutores en Chile. También actores y profesores: resistencia y proyección, por videollamada.",
+    "Rehabilitación de la voz en profesionales: cantantes, locutores, actores y profesores. Terapia vocal online en Chile, por videollamada.",
   keywords: [
     "rehabilitación vocal",
     "rehabilitacion de la voz en profesionales",
@@ -58,9 +58,9 @@ export default function RehabilitacionVocalProfesionalesPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Terapia vocal para cantantes y locutores",
+    name: "Rehabilitación de la voz en profesionales",
     description:
-      "Terapia vocal online para cantantes, locutores, actores y otros profesionales que dependen de su voz, en todo Chile.",
+      "Rehabilitación de la voz en profesionales: cantantes, locutores, actores y profesores. Terapia vocal online en Chile, por videollamada.",
     provider: {
       "@type": "Person",
       name: "Katia Domínguez",
@@ -70,7 +70,7 @@ export default function RehabilitacionVocalProfesionalesPage() {
       "@type": "Country",
       name: "Chile",
     },
-    dateModified: "2026-10-15",
+    dateModified: "2026-10-29",
   };
 
   return (
@@ -91,13 +91,13 @@ export default function RehabilitacionVocalProfesionalesPage() {
         <article className="prose prose-indigo lg:prose-lg max-w-none">
           <header className="mb-10 text-center">
             <h1 className="text-4xl font-extrabold text-indigo-950 mb-6">
-              Terapia vocal para cantantes y locutores
+              Rehabilitación de la voz en profesionales
             </h1>
             <div className="not-prose mx-auto mb-6 max-w-3xl rounded-2xl border-2 border-indigo-200 bg-indigo-50 p-5 text-left">
               <p className="text-lg font-semibold text-indigo-950">
-                <strong>Respuesta rápida:</strong> La terapia vocal para
-                cantantes y locutores es rehabilitación de la voz online para
-                quien la usa como herramienta de trabajo: también actores y
+                <strong>Respuesta rápida:</strong> La rehabilitación de la voz
+                en profesionales es terapia vocal online para quien la usa como
+                herramienta de trabajo: cantantes, locutores, actores y
                 profesores. Busca recuperar resistencia y proyección. Impostar
                 la voz —forzar un tono que no es el tuyo, por ejemplo un grave
                 artificial— cansa las cuerdas; el trabajo es técnica sin esa
@@ -200,6 +200,14 @@ export default function RehabilitacionVocalProfesionalesPage() {
             . El primer paso sigue siendo la{" "}
             <Link href="/voz-online/evaluacion-vocal-online" className="font-semibold text-indigo-700">
               evaluación vocal online
+            </Link>
+            . Si el otorrino habló de un pólipo, la terapia de apoyo está en{" "}
+            <Link href="/voz-online/polipos-en-las-cuerdas-vocales" className="font-semibold text-indigo-700">
+              pólipos en las cuerdas vocales
+            </Link>
+            . El conjunto de la atención está en la{" "}
+            <Link href="/voz-online/fonoaudiologa-de-voz-online" className="font-semibold text-indigo-700">
+              terapia de voz online
             </Link>
             .
           </p>

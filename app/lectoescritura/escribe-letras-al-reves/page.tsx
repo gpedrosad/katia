@@ -3,9 +3,9 @@ import { articleJsonLd, faqJsonLd, GuiaPage, guiaMetadata } from "@/app/guias-pa
 import { whatsappUrl } from "@/lib/site";
 
 const PATH = "/lectoescritura/escribe-letras-al-reves";
-const TITLE = "Escribe letras al revés: cuándo mirar";
+const TITLE = "Escribe letras al revés o invierte letras";
 const DESCRIPTION =
-  "Al empezar a escribir, algunas letras salen al revés. Cuándo es parte del inicio y cuándo se junta con una lectura que no avanza. Chillán.";
+  "Si escribe letras al revés o invierte letras, a veces es el inicio de la escritura. Mira también qué pasa cuando lee. Evaluación en Chillán.";
 
 const faqs = [
   {

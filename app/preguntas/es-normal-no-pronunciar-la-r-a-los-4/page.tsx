@@ -3,9 +3,9 @@ import { PreguntaArticle } from "@/app/preguntas/_components/PreguntaArticle";
 import { buildPageMetadata } from "@/lib/seo";
 
 const PATH = "/preguntas/es-normal-no-pronunciar-la-r-a-los-4";
-const TITLE = "¿Es normal que mi hijo de 4 años no pronuncie la R?";
+const TITLE = "¿Mi hija no puede pronunciar la R a los 4 años?";
 const DESCRIPTION =
-  "A los 4 años la erre fuerte puede ser el único sonido pendiente y consolidarse hacia los 5 o 6. Si fallan varios sonidos, evalúa en Chillán.";
+  "¿Es normal a los 4 años? La erre fuerte puede ser el único sonido pendiente y consolidarse hacia los 5 o 6. Si fallan varios sonidos, evalúa en Chillán.";
 
 export const metadata = buildPageMetadata({
   path: PATH,

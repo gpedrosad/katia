@@ -6,9 +6,9 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/voz-ronca-causas-tratamiento",
-  title: "Ronquera persistente: por qué y qué hacer",
+  title: "Voz ronca: causas y tratamiento online en Chile",
   description:
-    "Ronquera persistente: por qué tienes la voz ronca y qué hacer si dura más de 2 semanas. Evaluación y terapia de voz online en Chile.",
+    "Voz ronca o ronquera que no se va: causas frecuentes y qué hacer si dura más de 2 semanas. Evaluación y terapia de voz online en Chile.",
   keywords: [
     "voz ronca",
     "por qué tengo la voz ronca",
@@ -50,7 +50,7 @@ export default function VozRoncaPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    dateModified: "2026-10-15",
+    dateModified: "2026-10-29",
     mainEntity: faqItems.map((item) => ({
       "@type": "Question",
       name: item.question,
@@ -228,7 +228,15 @@ export default function VozRoncaPage() {
               <Link href="/voz-online/polipos-en-las-cuerdas-vocales" className="font-semibold text-pink-700">
                 la terapia de apoyo para pólipos
               </Link>{" "}
-              no reemplaza ese examen.
+              acompaña ese examen. Si la voz es tu herramienta de trabajo, mira{" "}
+              <Link href="/voz-online/rehabilitacion-vocal-profesionales-voz" className="font-semibold text-pink-700">
+                rehabilitación de la voz en profesionales
+              </Link>
+              . El conjunto de la atención está en la{" "}
+              <Link href="/voz-online/fonoaudiologa-de-voz-online" className="font-semibold text-pink-700">
+                terapia de voz online
+              </Link>
+              .
             </p>
           </section>
 

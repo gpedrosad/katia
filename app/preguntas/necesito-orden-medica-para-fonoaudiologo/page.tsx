@@ -3,9 +3,9 @@ import { PreguntaArticle } from "@/app/preguntas/_components/PreguntaArticle";
 import { buildPageMetadata } from "@/lib/seo";
 
 const PATH = "/preguntas/necesito-orden-medica-para-fonoaudiologo";
-const TITLE = "¿Necesito orden para ir al fonoaudiólogo?";
+const TITLE = "¿Necesito orden médica para ir al fonoaudiólogo?";
 const DESCRIPTION =
-  "Para agendar una consulta particular en Chillán no es obligatoria una orden médica. Si el colegio pide informe, se elabora tras la evaluación.";
+  "No hace falta orden médica para ir al fonoaudiólogo en consulta particular en Chillán. Si el colegio pide informe, se elabora tras la evaluación.";
 
 export const metadata = buildPageMetadata({
   path: PATH,

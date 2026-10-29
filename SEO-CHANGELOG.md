@@ -20,6 +20,154 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-10-29: SEO Lote 24 — pilar infantil, TEL, voz online, preguntas y letras al revés
+
+### Contexto
+
+**Datos GSC (90 días 2026-07-31 al 2026-10-28, sc-domain:katialafono.cl, pull 2026-10-29):**
+- **96 clics**
+- **8.022 impresiones**
+- **Posición promedio: 8,0**
+
+**Últimos 7 días (2026-10-22 al 2026-10-28):** 14 clics / 2.605 imp vs 7 días previos (2026-10-15 al 2026-10-21): 8 clics / 824 imp. Impresiones de los últimos 3 días: 540 / 510 / 486.
+
+Elegibilidad: `git log --since=2026-10-22` en el archivo de cada URL. Sin páginas de otras ciudades, sin `/ads`, sin `/sitelink`. Sin precios, estadísticas, credenciales ni plazos nuevos. Español de Chile, tú. En voz online, el copy nuevo va en positivo. El hub `/voz-online/fonoaudiologa-de-voz-online` no se editó (enlace hacia él, sí). `app/preguntas/catalogo.ts` y `app/lectoescritura/articulos.ts` no se tocaron.
+
+### Páginas optimizadas
+
+Titles absolutos (`buildPageMetadata`; en letras al revés, `guiaMetadata` que llama a `buildPageMetadata`), ≤60. Descriptions entre 135 y 152.
+
+#### 1. `/fonoaudiologa-ninos-chillan`
+**Métricas GSC:** 90 días, 458 imp / 3 clics / pos 8,3. «fonoaudiólogo» 91 imp, pos 9,4. «fonoaudiologa» 45, pos 7,3. «fonoaudiologo» 28, pos 9,8. «fonoaudiología infantil» 24, pos 15,9 (la home tiene 39 en pos 25). «fonoaudióloga» 16, pos 7,2. «fonoaudiologia chillan» 7, pos 13,4. «fonoaudiólogo infantil» 5, pos 5,8. Último cambio: 2026-10-19 (`fe6acc6`, Lote 13).
+
+- **Title (52 → 51):** «Fonoaudiología infantil en Chillán | Katia Domínguez» → «Fonoaudiólogo infantil en Chillán | Katia Domínguez»
+- **Description (144 → 145):** fonoaudiología infantil en Chillán con fonoaudióloga para niños, evaluación de lenguaje y habla, informe y plan, presencial, +20 años
+- **H1:** se mantiene «Fonoaudiología infantil en Chillán»
+- **Bajada:** abre con «Fonoaudiólogo y fonoaudióloga infantil en Chillán». El resto (evaluación, terapia, informe) es el mismo
+- **H2:** «¿Cuándo consultar a una fonoaudióloga por tu hijo?» → «¿Cuándo consultar a un fonoaudiólogo infantil?». «Tu fonoaudióloga en Chillán» → «Fonoaudióloga infantil en Chillán»
+- **Bio:** «fonoaudióloga» → «fonoaudióloga infantil». Los +20 años ya estaban
+- La home sigue con la marca genérica y la voz online. Esta URL no recupera ese marco
+- FAQPage: las 9 preguntas de siempre, el mismo texto visible
+
+#### 2. `/servicios/tel-trastorno-especifico-lenguaje`
+**Métricas GSC:** 80 imp / 0 clics / pos 11,1. «el tel se cura» 27 imp, pos 9,5, mientras `/preguntas/el-tel-se-cura` rankea pos 4,9 con 31 imp. «tel diagnostico» 4 imp, pos 10,2. «tdl se cura» 13 imp va a la pregunta. Último cambio: 2026-10-17 (`6d8fe10`).
+
+- **Title (52 → 42):** «¿El TEL Se Cura? Diagnóstico y Tratamiento | Chillán» → «TEL y TDL: evaluación y terapia en Chillán»
+- **Description (114 → 140):** evaluación, diagnóstico y terapia del TEL en Chillán. También llamado TDL, trastorno del desarrollo del lenguaje. Informe y plan presencial
+- **H1:** el mismo texto que el title. Sale «¿El TEL se cura?»
+- **Respuesta rápida:** esta página es evaluación, diagnóstico y terapia. El ancla «¿el TEL se cura?» apunta a `/preguntas/el-tel-se-cura`. «tratamiento del TEL en Chillán» apunta al tratamiento local, que no se editó
+- **FAQ:** se quitó «¿El TEL se cura con tratamiento?». Siguen qué es el TEL, duración, diagnóstico, inteligencia y diferencia con el retraso. El texto visible y el FAQPage salen del mismo arreglo. La frase de TDL que ya estaba en la respuesta visible de «qué es» ahora también está en el schema. Las duraciones de 1-3 años y 1-2 sesiones por semana no se reescribieron
+- **Service:** el nombre pasa a «Evaluación y terapia del TEL y del TDL»
+
+#### 3. Voz online (sin ciudades)
+
+Último cambio de las seis: 2026-10-20 (`9437dfa`). Enlace de cuerpo a la hub «terapia de voz online» (`/voz-online/fonoaudiologa-de-voz-online`). La hub no se editó. `dateModified` de schema: 2026-10-29 donde ya existía.
+
+##### `/voz-online/higiene-vocal-cuidado-voz`
+**Métricas GSC:** 85 imp / 3 clics / pos 7,7.
+
+- **Title (42 → 42):** «Higiene vocal: cómo cuidar la voz cada día» → «Higiene vocal: cómo cuidar tu voz cada día»
+- **Description (127 → 145):** hidratación, descanso y un uso más suave; si ya hay molestia, terapia de voz online en Chile
+- **Enlace:** «voz ronca» y «terapia de voz online». H1, respuesta rápida y FAQ se mantienen
+
+##### `/voz-online/nodulos-vocales-tratamiento-online`
+**Métricas GSC:** 35 imp / 0 clics / pos 7,8.
+
+- **Title (40 → 46):** «Nódulos en las cuerdas vocales | Terapia» → «Nódulos en las cuerdas vocales: terapia online»
+- **Description (126 → 144):** terapia online junto al plan del otorrino, técnica e higiene vocal, videollamada, adultos en Chile
+- **Enlace:** «rehabilitación de la voz en profesionales» y «terapia de voz online». H1 y FAQ se mantienen
+
+##### `/voz-online/fatiga-vocal-tratamiento-online`
+**Métricas GSC:** 33 imp / 0 clics / pos 8,6.
+
+- **Title (41 → 42):** «Voz cansada: ¿por qué se me cansa la voz?» → «Fatiga vocal: ¿por qué se me cansa la voz?»
+- **Description (127 → 135):** por qué se te cansa la voz y fatiga vocal online: respiración, técnica y proyección
+- **H1:** se mantiene «Voz cansada: ¿por qué se me cansa la voz?»
+- **Enlace:** «voz ronca» y «terapia de voz online»
+
+##### `/voz-online/polipos-en-las-cuerdas-vocales`
+**Métricas GSC:** 15 imp / 0 clics / pos 23,3. «polipos cuerdas vocales» pos 42,2. «polipo cuerda vocal» pos 40.
+
+- **Title (40 → 46):** «Pólipos en las cuerdas vocales | Terapia» → «Pólipos en las cuerdas vocales: terapia online»
+- **Description (131 → 144):** pólipos en las cuerdas vocales y pólipo en la cuerda vocal; terapia de voz online que acompaña al otorrino
+- **H1:** se mantiene «Pólipos en las cuerdas vocales: terapia de apoyo»
+- **H2 y FAQ nuevas,** el mismo texto: «¿Qué es un pólipo en la cuerda vocal?». Lo confirma el otorrino; la terapia acompaña con higiene y técnica, por videollamada, adultos en todo Chile
+- **FAQ:** sale «¿La terapia de voz online cura un pólipo?» y su descargo. «¿Puedo empezar la terapia sin ver al otorrino?» queda en positivo: el otorrino mira las cuerdas; en la videollamada se escucha el uso de la voz
+- **Cuerpo:** la cirugía se coordina con la indicación del otorrino. La nasofibrolaringoscopía la hace él. Enlace a «fatiga vocal» y «terapia de voz online»
+- **Service:** la description acompaña el title nuevo
+
+##### `/voz-online/rehabilitacion-vocal-profesionales-voz`
+**Métricas GSC:** 25 imp / 1 clic / pos 11,9. «rehabilitacion de la voz en profesionales» pos 28.
+
+- **Title (43 → 48):** «Cantantes y locutores: terapia vocal online» → «Rehabilitación de la voz en profesionales online»
+- **Description (131 → 135):** rehabilitación de la voz en profesionales: cantantes, locutores, actores y profesores, terapia vocal online
+- **H1:** el mismo tema que el title, «Rehabilitación de la voz en profesionales»
+- **Respuesta rápida:** abre con esa frase. Cantantes, locutores, actores y profesores; impostar la voz sigue definido como en la página
+- **Service:** nombre «Rehabilitación de la voz en profesionales»
+- **Enlace:** «pólipos en las cuerdas vocales» y «terapia de voz online». Las FAQ de siempre se mantienen, incluida la de 6 semanas que ya estaba
+
+##### `/voz-online/voz-ronca-causas-tratamiento`
+**Métricas GSC:** 18 imp / 0 clics / pos 9,6.
+
+- **Title (41 → 47):** «Ronquera persistente: por qué y qué hacer» → «Voz ronca: causas y tratamiento online en Chile»
+- **Description (132 → 135):** voz ronca o ronquera que no se va, causas y qué hacer si dura más de 2 semanas
+- **H1:** se mantiene «Ronquera persistente: ¿por qué tengo la voz ronca?»
+- **Enlace:** «rehabilitación de la voz en profesionales» y «terapia de voz online». El ancla de pólipos pasa de «no reemplaza ese examen» a «acompaña ese examen»
+
+#### 4. Preguntas (solo title y meta)
+
+El H1 usa la misma constante que el title. Cuerpo y FAQ intactos. `catalogo.ts` no se editó (2026-10-25, `efbe17a`). Último cambio de cada `page.tsx`: 2026-10-16 (`ab22710`).
+
+##### `/preguntas/cuanto-dura-una-terapia-de-lenguaje`
+**Métricas GSC:** 47 imp / 0 clics / pos 8,6.
+
+- **Title (37 → 46):** «¿Cuánto dura una terapia de lenguaje?» → «¿Cuánto dura una terapia de lenguaje infantil?»
+- **Description (139 → 142):** no hay un plazo igual; el tiempo se propone después de la evaluación. Sin un número nuevo
+- La tarjeta del hub `/preguntas` sigue con la pregunta anterior
+
+##### `/preguntas/necesito-orden-medica-para-fonoaudiologo`
+**Métricas GSC:** 43 imp / 0 clics / pos 5,2.
+
+- **Title (41 → 48):** «¿Necesito orden para ir al fonoaudiólogo?» → «¿Necesito orden médica para ir al fonoaudiólogo?»
+- **Description (142 → 145):** no hace falta orden médica en consulta particular en Chillán; el informe, si el colegio lo pide, se elabora tras la evaluación
+- La tarjeta del hub ya decía esta pregunta. No se tocó
+
+##### `/preguntas/es-normal-no-pronunciar-la-r-a-los-4`
+**Métricas GSC:** 33 imp / 0 clics / pos 6,9. «mi hija no puede pronunciar la r» pos 22.
+
+- **Title (51 → 47):** «¿Es normal que mi hijo de 4 años no pronuncie la R?» → «¿Mi hija no puede pronunciar la R a los 4 años?»
+- **Description (140 → 152):** «¿es normal a los 4 años?», erre fuerte hacia los 5 o 6 si es el único sonido, evaluar si fallan varios. Esa edad ya estaba en la página
+- La tarjeta del hub sigue con la pregunta del hijo
+
+#### 5. `/lectoescritura/escribe-letras-al-reves`
+**Métricas GSC:** 30 imp / 0 clics / pos 9,9, todas en los últimos 7 días. «leer al reves» pos 8. Último cambio del `page.tsx`: 2026-10-17 (`6d8fe10`). `articulos.ts` se editó el 2026-10-24 por otras guías: no se tocó, y la ficha de esta URL no cambió en ese commit.
+
+- **Title (37 → 41):** «Escribe letras al revés: cuándo mirar» → «Escribe letras al revés o invierte letras»
+- **Description (138 → 140):** escribe letras al revés o invierte letras al empezar; mira también qué pasa cuando lee. Evaluación en Chillán
+- **H1:** se mantiene «Escribe letras al revés». Cuerpo y FAQ intactos. El FAQPage sigue con las tres preguntas de siempre
+
+### Omitida
+
+- `/tratamientos/tel-trastorno-especifico-lenguaje-chillan` (106 imp / 0 clics / pos 12,6; «tel» 19 imp, pos 19,4; «tel diagnostico» 2 imp, pos 8,5). El copy sí cambió después del corte: el 2026-10-24 (`c9d2441`, Lote 18) se agregó el enlace a «escuela de lenguaje o fonoaudióloga». No se tocó title, meta, H1 ni cuerpo. Desde el servicio de TEL se enlaza con el ancla «tratamiento del TEL en Chillán»
+
+### Métricas esperadas
+
+Medir ~2026-11-12:
+- CTR de «fonoaudiología infantil» y «fonoaudiólogo infantil» en `/fonoaudiologa-ninos-chillan`. «fonoaudiologa» / «fonoaudiologia» sin «infantil» se siguen midiendo en la home
+- «el tel se cura» y «tdl se cura» en `/preguntas/el-tel-se-cura`. «tel diagnostico» y TEL/TDL en `/servicios/tel-trastorno-especifico-lenguaje`. «tratamiento del TEL en Chillán» sigue en la URL de tratamiento, que no se editó
+- CTR > 0 en higiene vocal, nódulos, fatiga, pólipos («polipos cuerdas vocales», «polipo cuerda vocal»), rehabilitación de la voz en profesionales y voz ronca
+- CTR > 0 en las tres preguntas (duración, orden médica, la R a los 4 / «mi hija no puede pronunciar la r») y en «escribe letras al revés» / «invierte letras»
+
+### Técnico
+
+- No se editó `app/sitemap.ts` ni `lib/seo-routes.ts`. Sin URLs nuevas.
+- Canonical `https://www.katialafono.cl` + path, `index, follow`.
+- FAQPage del pilar: 9 preguntas, el mismo texto visible. En el servicio de TEL, 5 preguntas, el mismo arreglo en la página y en el schema; salió la de «¿se cura?». En pólipos, el H2 «¿Qué es un pólipo en la cuerda vocal?» es la primera entrada del FAQPage de `GeoFAQ`.
+- **Build:** `npm run build` pasó (Next.js 16.1.1, `NODE_OPTIONS=--max-old-space-size=4096`). 180 páginas estáticas, las mismas del Lote 23. Sin URLs nuevas.
+- **Sitemap del build anterior al commit de este lote:** 162 URLs (`<loc>`). Sin `/ads` ni `/sitelink`. El `lastmod` de las URLs editadas queda en el commit de este lote; se anota en el build posterior. No se tocó `app/sitemap.ts`. `/tratamientos/tel-trastorno-especifico-lenguaje-chillan` sigue en `2026-10-24T04:02:09.000Z` y `/voz-online/fonoaudiologa-de-voz-online` también: no se editaron.
+
+---
+
 ## 2026-10-28: SEO Lote 23 — hitos, terapia en casa, home, qué hace el fonoaudiólogo y hablar como bebé
 
 ### Contexto

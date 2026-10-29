@@ -13,21 +13,19 @@ const WHATSAPP_HREF = whatsappUrl("Hola, quiero consultar por TEL");
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "¿El TEL Se Cura? Diagnóstico y Tratamiento | Chillán",
+  title: "TEL y TDL: evaluación y terapia en Chillán",
   description:
-    "¿El TEL se cura? No desaparece, pero mejora mucho con terapia. Qué es, diagnóstico (TDL) y tratamiento en Chillán.",
+    "Evaluación, diagnóstico y terapia del TEL en Chillán. También llamado TDL, trastorno del desarrollo del lenguaje. Informe y plan presencial.",
   keywords: [
-    "el tel se cura",
-    "TEL se cura",
     "tel",
     "tel diagnostico",
     "tel diagnóstico",
     "trastorno específico del lenguaje",
-    "trastorno específico del lenguaje se cura",
     "TEL tratamiento",
     "TEL Chillán",
     "trastorno del desarrollo del lenguaje",
-    "TDL tratamiento",
+    "TDL",
+    "evaluación TEL",
     "fonoaudióloga TEL Chillán",
   ],
 });
@@ -59,9 +57,9 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": `${SITE_URL}${PAGE_PATH}#service`,
-  name: "Tratamiento del Trastorno Específico del Lenguaje (TEL)",
+  name: "Evaluación y terapia del TEL y del TDL",
   description:
-    "Diagnóstico y tratamiento especializado del TEL en niños en Chillán.",
+    "Evaluación, diagnóstico y terapia del TEL en Chillán. También llamado TDL, trastorno del desarrollo del lenguaje.",
   provider: {
     "@type": "Person",
     name: "Katia Domínguez",
@@ -71,46 +69,45 @@ const jsonLd = {
     "@type": "City",
     name: "Chillán",
   },
-  serviceType: "Tratamiento TEL",
+  serviceType: "Evaluación y terapia del TEL",
 };
+
+const telFaqs = [
+  {
+    question: "¿Qué es el TEL o Trastorno Específico del Lenguaje?",
+    answer:
+      "El TEL es un trastorno del neurodesarrollo que afecta la adquisición y desarrollo del lenguaje sin que exista una causa evidente como pérdida auditiva, discapacidad intelectual o daño neurológico. También se llama TDL (Trastorno del Desarrollo del Lenguaje). Afecta aproximadamente al 7% de los niños.",
+  },
+  {
+    question: "¿Cuánto tiempo de tratamiento necesita un niño con TEL?",
+    answer:
+      "El tratamiento del TEL suele ser prolongado, generalmente de 1-3 años dependiendo de la severidad. Se requieren sesiones regulares (1-2 por semana) y trabajo constante en casa y en el colegio para lograr avances significativos.",
+  },
+  {
+    question: "¿Cómo se diagnostica el TEL?",
+    answer:
+      "El diagnóstico del TEL se hace con una evaluación fonoaudiológica especializada: entrevista a la familia, observación clínica y pruebas específicas de lenguaje. Se confirma cuando hay dificultades persistentes de lenguaje sin una causa evidente como pérdida auditiva, discapacidad intelectual o daño neurológico, y con inteligencia general conservada.",
+  },
+  {
+    question: "¿El TEL afecta la inteligencia?",
+    answer:
+      "No. El TEL afecta específicamente el lenguaje, no la inteligencia general. De hecho, para diagnosticar TEL se requiere que el niño tenga inteligencia normal. Sin embargo, las dificultades de lenguaje pueden impactar el rendimiento académico.",
+  },
+  {
+    question: "¿Cómo se diferencia el TEL del retraso del lenguaje?",
+    answer:
+      "El retraso del lenguaje es temporal: el niño va más lento pero eventualmente alcanza a sus pares. El TEL es un trastorno persistente que requiere intervención especializada. Una evaluación profesional puede diferenciar entre ambos.",
+  },
+];
 
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "¿Qué es el TEL o Trastorno Específico del Lenguaje?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "El TEL es un trastorno del neurodesarrollo que afecta la adquisición y desarrollo del lenguaje sin que exista una causa evidente como pérdida auditiva, discapacidad intelectual o daño neurológico. Afecta aproximadamente al 7% de los niños.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿El TEL se cura con tratamiento?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "El TEL es una condición que acompaña a la persona, pero con tratamiento adecuado los niños pueden mejorar significativamente sus habilidades lingüísticas y desarrollar estrategias compensatorias. La intervención temprana e intensiva produce los mejores resultados.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Cuánto tiempo de tratamiento necesita un niño con TEL?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "El tratamiento del TEL suele ser prolongado, generalmente de 1-3 años dependiendo de la severidad. Se requieren sesiones regulares (1-2 por semana) y trabajo constante en casa y en el colegio para lograr avances significativos.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Cómo se diagnostica el TEL?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "El diagnóstico del TEL se hace con una evaluación fonoaudiológica especializada: entrevista a la familia, observación clínica y pruebas específicas de lenguaje. Se confirma cuando hay dificultades persistentes de lenguaje sin una causa evidente como pérdida auditiva, discapacidad intelectual o daño neurológico, y con inteligencia general conservada.",
-      },
-    },
-  ],
+  mainEntity: telFaqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  })),
 };
 
 export default function TELPage() {
@@ -142,23 +139,33 @@ export default function TELPage() {
                   💬 Trastorno del neurodesarrollo
                 </span>
                 <h1 className="mb-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
-                  ¿El TEL se cura? Diagnóstico y tratamiento en Chillán
+                  TEL y TDL: evaluación y terapia en Chillán
                 </h1>
                 <div className="mb-6 rounded-2xl border-2 border-rose-200 bg-rose-50 p-5">
                   <p className="text-lg font-semibold text-gray-900">
-                    <strong>Respuesta rápida:</strong> El TEL no se cura: es una
-                    condición que acompaña a la persona. Con terapia intensiva y
-                    temprana los niños mejoran mucho sus habilidades
-                    lingüísticas y desarrollan estrategias compensatorias. El
-                    diagnóstico se hace con evaluación fonoaudiológica
-                    especializada.
+                    <strong>Respuesta rápida:</strong> Esta página cubre la
+                    evaluación, el diagnóstico y la terapia del TEL en Chillán.
+                    El TEL también se llama TDL (trastorno del desarrollo del
+                    lenguaje). Si tu pregunta es si se resuelve, léela en{" "}
+                    <Link
+                      href="/preguntas/el-tel-se-cura"
+                      className="text-rose-700 underline"
+                    >
+                      ¿el TEL se cura?
+                    </Link>
+                    . Cómo se vive la terapia semana a semana está en{" "}
+                    <Link
+                      href="/tratamientos/tel-trastorno-especifico-lenguaje-chillan"
+                      className="text-rose-700 underline"
+                    >
+                      tratamiento del TEL en Chillán
+                    </Link>
+                    .
                   </p>
                 </div>
                 <p className="mb-6 text-xl text-gray-600">
-                  El Trastorno Específico del Lenguaje no desaparece solo, pero
-                  con terapia intensiva y temprana los niños mejoran
-                  significativamente. Diagnóstico, tratamiento y coordinación
-                  escolar en Chillán.
+                  Evaluación fonoaudiológica, diagnóstico y terapia presencial
+                  en Chillán, con coordinación escolar.
                 </p>
                 <ul className="mb-8 space-y-3 text-gray-700">
                   <li className="flex items-start gap-3">
@@ -381,104 +388,21 @@ export default function TELPage() {
               Preguntas frecuentes sobre TEL
             </h2>
             <div className="space-y-4">
-              <details className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm" open>
-                <summary className="flex cursor-pointer items-start justify-between gap-4 font-semibold text-gray-900">
-                  <span>¿Qué es el TEL o Trastorno Específico del Lenguaje?</span>
-                  <span className="flex-shrink-0 text-rose-500 transition-transform group-open:rotate-180">
-                    ▼
-                  </span>
-                </summary>
-                <p className="mt-4 text-gray-600">
-                  El TEL es un trastorno del neurodesarrollo que afecta la
-                  adquisición y desarrollo del lenguaje sin que exista una causa
-                  evidente como pérdida auditiva, discapacidad intelectual o
-                  daño neurológico. También se llama TDL (Trastorno del
-                  Desarrollo del Lenguaje). Afecta aproximadamente al 7% de los
-                  niños.
-                </p>
-              </details>
-
-              <details className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-                <summary className="flex cursor-pointer items-start justify-between gap-4 font-semibold text-gray-900">
-                  <span>¿El TEL se cura con tratamiento?</span>
-                  <span className="flex-shrink-0 text-rose-500 transition-transform group-open:rotate-180">
-                    ▼
-                  </span>
-                </summary>
-                <p className="mt-4 text-gray-600">
-                  El TEL es una condición que acompaña a la persona, pero con
-                  tratamiento adecuado los niños pueden mejorar significativamente
-                  sus habilidades lingüísticas y desarrollar estrategias
-                  compensatorias. La intervención temprana e intensiva produce
-                  los mejores resultados.
-                </p>
-              </details>
-
-              <details className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-                <summary className="flex cursor-pointer items-start justify-between gap-4 font-semibold text-gray-900">
-                  <span>
-                    ¿Cuánto tiempo de tratamiento necesita un niño con TEL?
-                  </span>
-                  <span className="flex-shrink-0 text-rose-500 transition-transform group-open:rotate-180">
-                    ▼
-                  </span>
-                </summary>
-                <p className="mt-4 text-gray-600">
-                  El tratamiento del TEL suele ser prolongado, generalmente de
-                  1-3 años dependiendo de la severidad. Se requieren sesiones
-                  regulares (1-2 por semana) y trabajo constante en casa y en el
-                  colegio para lograr avances significativos.
-                </p>
-              </details>
-
-              <details className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-                <summary className="flex cursor-pointer items-start justify-between gap-4 font-semibold text-gray-900">
-                  <span>¿Cómo se diagnostica el TEL?</span>
-                  <span className="flex-shrink-0 text-rose-500 transition-transform group-open:rotate-180">
-                    ▼
-                  </span>
-                </summary>
-                <p className="mt-4 text-gray-600">
-                  El diagnóstico del TEL se hace con una evaluación
-                  fonoaudiológica especializada: entrevista a la familia,
-                  observación clínica y pruebas específicas de lenguaje. Se
-                  confirma cuando hay dificultades persistentes de lenguaje sin
-                  una causa evidente como pérdida auditiva, discapacidad
-                  intelectual o daño neurológico, y con inteligencia general
-                  conservada.
-                </p>
-              </details>
-
-              <details className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-                <summary className="flex cursor-pointer items-start justify-between gap-4 font-semibold text-gray-900">
-                  <span>¿El TEL afecta la inteligencia?</span>
-                  <span className="flex-shrink-0 text-rose-500 transition-transform group-open:rotate-180">
-                    ▼
-                  </span>
-                </summary>
-                <p className="mt-4 text-gray-600">
-                  No. El TEL afecta específicamente el lenguaje, no la
-                  inteligencia general. De hecho, para diagnosticar TEL se
-                  requiere que el niño tenga inteligencia normal. Sin embargo,
-                  las dificultades de lenguaje pueden impactar el rendimiento
-                  académico.
-                </p>
-              </details>
-
-              <details className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-                <summary className="flex cursor-pointer items-start justify-between gap-4 font-semibold text-gray-900">
-                  <span>¿Cómo se diferencia el TEL del retraso del lenguaje?</span>
-                  <span className="flex-shrink-0 text-rose-500 transition-transform group-open:rotate-180">
-                    ▼
-                  </span>
-                </summary>
-                <p className="mt-4 text-gray-600">
-                  El retraso del lenguaje es temporal: el niño va más lento pero
-                  eventualmente alcanza a sus pares. El TEL es un trastorno
-                  persistente que requiere intervención especializada. Una
-                  evaluación profesional puede diferenciar entre ambos.
-                </p>
-              </details>
+              {telFaqs.map((faq, index) => (
+                <details
+                  key={faq.question}
+                  className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm"
+                  open={index === 0}
+                >
+                  <summary className="flex cursor-pointer items-start justify-between gap-4 font-semibold text-gray-900">
+                    <span>{faq.question}</span>
+                    <span className="flex-shrink-0 text-rose-500 transition-transform group-open:rotate-180">
+                      ▼
+                    </span>
+                  </summary>
+                  <p className="mt-4 text-gray-600">{faq.answer}</p>
+                </details>
+              ))}
             </div>
           </div>
         </section>

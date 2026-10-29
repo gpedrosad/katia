@@ -10,28 +10,29 @@ const PATH = "/voz-online/polipos-en-las-cuerdas-vocales";
 
 export const metadata = buildPageMetadata({
   path: PATH,
-  title: "Pólipos en las cuerdas vocales | Terapia",
+  title: "Pólipos en las cuerdas vocales: terapia online",
   description:
-    "Pólipos en las cuerdas vocales: la terapia de voz online acompaña el diagnóstico del otorrino. Adultos, videollamada en todo Chile.",
+    "Pólipos en las cuerdas vocales y pólipo en la cuerda vocal: terapia de voz online que acompaña al otorrino. Adultos, videollamada en todo Chile.",
   keywords: [
     "pólipos en las cuerdas vocales",
-    "pólipos cuerdas vocales terapia",
+    "polipos cuerdas vocales",
+    "pólipo cuerda vocal",
+    "polipo cuerda vocal",
     "terapia de voz online",
     "fonoaudióloga voz online",
-    "disfonía tratamiento",
   ],
 });
 
 const faqItems = [
   {
-    question: "¿La terapia de voz online cura un pólipo?",
+    question: "¿Qué es un pólipo en la cuerda vocal?",
     answer:
-      "No se puede prometer eso. El pólipo lo confirma el otorrino al mirar las cuerdas. La terapia de voz online acompaña el plan que él indique: higiene vocal y técnica, por videollamada. No reemplaza el examen ni una cirugía si el otorrino la indica.",
+      "Un pólipo en la cuerda vocal lo confirma el otorrino cuando mira las cuerdas. La terapia de voz online acompaña ese plan con higiene vocal y técnica, por videollamada, para adultos en todo Chile.",
   },
   {
     question: "¿Puedo empezar la terapia sin ver al otorrino?",
     answer:
-      "Si la ronquera lleva más de dos semanas sin resfriado, o ya te mencionaron un pólipo, primero el otorrino. La fonoaudiología no ve las cuerdas por dentro en la videollamada.",
+      "Si la ronquera lleva más de dos semanas sin resfriado, o ya te mencionaron un pólipo, el primer paso es el otorrino: él mira las cuerdas. En la videollamada se escucha y se describe cómo usas la voz.",
   },
   {
     question: "¿En qué se diferencia de un nódulo?",
@@ -52,7 +53,7 @@ export default function PoliposCuerdasVocalesPage() {
     name: "Terapia de apoyo para pólipos en las cuerdas vocales",
     serviceType: "Terapia de voz online",
     description:
-      "Acompañamiento fonoaudiológico online para adultos con pólipo en las cuerdas vocales, en coordinación con el otorrino, en todo Chile.",
+      "Terapia de voz online para adultos con pólipos en las cuerdas vocales, junto al plan del otorrino, en todo Chile.",
     url: `${SITE_URL}${PATH}`,
     areaServed: { "@type": "Country", name: "Chile" },
     provider: { "@id": MEDICAL_BUSINESS_ID },
@@ -86,12 +87,24 @@ export default function PoliposCuerdasVocalesPage() {
             <div className="not-prose my-6 rounded-2xl border-2 border-fuchsia-200 bg-fuchsia-50 p-5">
               <p className="text-lg font-semibold text-fuchsia-950" data-speakable>
                 <strong>Respuesta rápida:</strong> Un pólipo en las cuerdas
-                vocales lo diagnostica el otorrino. La terapia de voz online no
-                lo reemplaza: acompaña el plan que él indique, con higiene
-                vocal y técnica, por videollamada, para adultos en todo Chile.
+                vocales lo confirma el otorrino. La terapia de voz online
+                acompaña el plan que él indique, con higiene vocal y técnica,
+                por videollamada, para adultos en todo Chile.
               </p>
             </div>
           </header>
+
+          <section>
+            <h2 className="text-2xl font-bold text-fuchsia-950">
+              ¿Qué es un pólipo en la cuerda vocal?
+            </h2>
+            <p>
+              Un pólipo en la cuerda vocal lo confirma el otorrino cuando mira
+              las cuerdas. La terapia de voz online acompaña ese plan con
+              higiene vocal y técnica, por videollamada, para adultos en todo
+              Chile.
+            </p>
+          </section>
 
           <section>
             <h2 className="text-2xl font-bold text-fuchsia-950">Para quién es</h2>
@@ -106,7 +119,16 @@ export default function PoliposCuerdasVocalesPage() {
               <Link href="/voz-online/nodulos-vocales-tratamiento-online">
                 terapia para nódulos en las cuerdas vocales
               </Link>
-              . No mezcles los dos: el otorrino es quien dice qué lesión es.
+              . El otorrino es quien dice qué lesión es. Si la voz se cansa
+              antes, mira{" "}
+              <Link href="/voz-online/fatiga-vocal-tratamiento-online">
+                fatiga vocal
+              </Link>
+              . El conjunto de la atención está en la{" "}
+              <Link href="/voz-online/fonoaudiologa-de-voz-online">
+                terapia de voz online
+              </Link>
+              .
             </p>
           </section>
 
@@ -127,8 +149,7 @@ export default function PoliposCuerdasVocalesPage() {
                 .
               </li>
               <li>
-                Si indicó cirugía, la fonoaudiología no la sustituye. Se
-                coordina con esa indicación.
+                Si indicó cirugía, la sesión se coordina con esa indicación.
               </li>
               <li>
                 Entre sesiones practicas lo que quedó claro en la
@@ -153,7 +174,7 @@ export default function PoliposCuerdasVocalesPage() {
               <li>Te duele hablar, te falta el aire o la voz se apaga de golpe.</li>
             </ul>
             <p>
-              La videollamada no reemplaza la nasofibrolaringoscopía. En la{" "}
+              La nasofibrolaringoscopía la hace el otorrino. En la{" "}
               <Link href="/voz-online/evaluacion-vocal-online">
                 evaluación vocal online
               </Link>{" "}

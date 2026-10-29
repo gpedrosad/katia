@@ -13,9 +13,9 @@ import { StickyWhatsApp } from "../chillan/lenguaje-infantil/_components/StickyW
 const PAGE_PATH = "/fonoaudiologa-ninos-chillan";
 const WHATSAPP_HREF = whatsappUrl("Hola, quiero agendar una evaluación de lenguaje para mi hijo/a");
 const PAGE_TITLE =
-  "Fonoaudiología infantil en Chillán | Katia Domínguez";
+  "Fonoaudiólogo infantil en Chillán | Katia Domínguez";
 const PAGE_DESCRIPTION =
-  "Fonoaudiología infantil en Chillán: evaluación y terapia de lenguaje, habla, pronunciación, lectoescritura, TEL y TDL. Informe y plan. +20 años.";
+  "Fonoaudiología infantil en Chillán con fonoaudióloga para niños. Evaluación de lenguaje y habla, informe y plan de terapia. Presencial. +20 años.";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
@@ -27,6 +27,8 @@ export const metadata = buildPageMetadata({
     "trastornos del habla",
     "dificultades de lectura y escritura",
     "fonoaudiología infantil Chillán",
+    "fonoaudiólogo infantil",
+    "fonoaudióloga infantil",
     "problemas de pronunciación niños",
     "terapia fonoaudiológica Chillán",],
 });
@@ -339,7 +341,7 @@ export default function FonoaudiologaNinosChillanPage() {
                   data-speakable
                   className="mb-6 text-xl leading-relaxed text-gray-700 sm:text-2xl"
                 >
-                  Evaluación y terapia especializada de lenguaje, habla, pronunciación y lectoescritura para niños. Si tu hijo habla poco, no arma frases o no se hace entender, agenda evaluación con informe y plan de tratamiento personalizado.
+                  Fonoaudiólogo y fonoaudióloga infantil en Chillán: evaluación y terapia especializada de lenguaje, habla, pronunciación y lectoescritura para niños. Si tu hijo habla poco, no arma frases o no se hace entender, agenda evaluación con informe y plan de tratamiento personalizado.
                 </p>
 
                 {/* Bullets de beneficios */}
@@ -437,7 +439,7 @@ export default function FonoaudiologaNinosChillanPage() {
             <div className="mb-10 text-center">
               {/* H2 con variación de keyword */}
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
-                ¿Cuándo consultar a una fonoaudióloga por tu hijo?
+                ¿Cuándo consultar a un fonoaudiólogo infantil?
               </h2>
               <p className="mx-auto max-w-2xl text-lg text-gray-600">
                 Si tu hijo presenta alguna de estas señales, una evaluación de
@@ -638,12 +640,12 @@ export default function FonoaudiologaNinosChillanPage() {
                 <div className="md:col-span-2">
                   {/* H2 sobre la profesional */}
                   <h2 className="mb-6 text-3xl font-bold text-gray-900">
-                    Tu fonoaudióloga en Chillán
+                    Fonoaudióloga infantil en Chillán
                   </h2>
                   <p className="mb-6 text-lg leading-relaxed text-gray-700">
-                    Soy <strong>Katia Domínguez</strong>, fonoaudióloga con más
-                    de 20 años ayudando a niños de Chillán y la región a
-                    desarrollar su lenguaje y comunicación.
+                    Soy <strong>Katia Domínguez</strong>, fonoaudióloga
+                    infantil con más de 20 años ayudando a niños de Chillán y
+                    la región a desarrollar su lenguaje y comunicación.
                   </p>
                   <ul className="mb-6 space-y-3 text-gray-700">
                     <li className="flex items-start gap-3">

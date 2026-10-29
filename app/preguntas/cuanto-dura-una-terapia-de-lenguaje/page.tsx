@@ -3,9 +3,9 @@ import { PreguntaArticle } from "@/app/preguntas/_components/PreguntaArticle";
 import { buildPageMetadata } from "@/lib/seo";
 
 const PATH = "/preguntas/cuanto-dura-una-terapia-de-lenguaje";
-const TITLE = "¿Cuánto dura una terapia de lenguaje?";
+const TITLE = "¿Cuánto dura una terapia de lenguaje infantil?";
 const DESCRIPTION =
-  "No hay un plazo igual para todos. Depende de la evaluación, las áreas que haya que apoyar, la participación del niño y la práctica en casa.";
+  "No hay un plazo igual para todos los niños. El tiempo se propone después de la evaluación, según lo que haya que apoyar y la práctica en casa.";
 
 export const metadata = buildPageMetadata({
   path: PATH,

@@ -6,9 +6,9 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/higiene-vocal-cuidado-voz",
-  title: "Higiene vocal: cómo cuidar la voz cada día",
+  title: "Higiene vocal: cómo cuidar tu voz cada día",
   description:
-    "Higiene vocal: cómo cuidar la voz cada día. Hidratación, no carraspear y descanso. Cuándo pedir terapia de voz online en Chile.",
+    "Higiene vocal para cuidar la voz cada día: hidratación, descanso y un uso más suave. Si ya hay molestia, sigue la terapia de voz online en Chile.",
   keywords: [
     "higiene vocal",
     "cómo cuidar la voz",
@@ -50,7 +50,7 @@ export default function HigieneVocalPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    dateModified: "2026-10-15",
+    dateModified: "2026-10-29",
     mainEntity: faqItems.map((item) => ({
       "@type": "Question",
       name: item.question,
@@ -243,6 +243,20 @@ export default function HigieneVocalPage() {
               className="font-semibold text-teal-600"
             >
               cómo es la sesión de voz online
+            </Link>
+            . Si la voz ya está ronca, mira{" "}
+            <Link
+              href="/voz-online/voz-ronca-causas-tratamiento"
+              className="font-semibold text-teal-600"
+            >
+              voz ronca
+            </Link>
+            . El conjunto de la atención está en la{" "}
+            <Link
+              href="/voz-online/fonoaudiologa-de-voz-online"
+              className="font-semibold text-teal-600"
+            >
+              terapia de voz online
             </Link>
             .
           </p>

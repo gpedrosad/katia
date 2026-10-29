@@ -7,9 +7,9 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/fatiga-vocal-tratamiento-online",
-  title: "Voz cansada: ¿por qué se me cansa la voz?",
+  title: "Fatiga vocal: ¿por qué se me cansa la voz?",
   description:
-    "Voz cansada: por qué se te cansa la voz y cómo tratar la fatiga vocal online en Chile. Respiración y técnica, por videollamada.",
+    "¿Por qué se te cansa la voz al hablar? La fatiga vocal se trabaja online en Chile: respiración, técnica y proyección, por videollamada.",
   keywords: [
     "fatiga vocal",
     "se me cansa la voz",
@@ -51,7 +51,7 @@ export default function FatigaVocalPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    dateModified: "2026-10-15",
+    dateModified: "2026-10-29",
     mainEntity: faqItems.map((item) => ({
       "@type": "Question",
       name: item.question,
@@ -197,6 +197,14 @@ export default function FatigaVocalPage() {
               . El formato de la videollamada está en{" "}
               <Link href="/voz-online/como-es-la-sesion-de-voz-online" className="font-semibold text-orange-700">
                 cómo es la sesión de voz online
+              </Link>
+              . Si la ronquera ya es lo que más se nota, mira{" "}
+              <Link href="/voz-online/voz-ronca-causas-tratamiento" className="font-semibold text-orange-700">
+                voz ronca
+              </Link>
+              . El conjunto de la atención está en la{" "}
+              <Link href="/voz-online/fonoaudiologa-de-voz-online" className="font-semibold text-orange-700">
+                terapia de voz online
               </Link>
               .
             </p>

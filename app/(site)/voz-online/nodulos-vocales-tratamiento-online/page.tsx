@@ -7,9 +7,9 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/nodulos-vocales-tratamiento-online",
-  title: "Nódulos en las cuerdas vocales | Terapia",
+  title: "Nódulos en las cuerdas vocales: terapia online",
   description:
-    "Terapia para nódulos en las cuerdas vocales, online en Chile. Acompaña al otorrino: en muchos casos se prueba antes de operar.",
+    "Terapia online para nódulos en las cuerdas vocales, junto al plan del otorrino. Técnica e higiene vocal por videollamada, para adultos en Chile.",
   keywords: [
     "nódulos vocales",
     "nodulos cuerdas vocales",
@@ -62,7 +62,7 @@ export default function NodulosVocalesPage() {
         name: "Terapia Vocal Conservadora",
       },
     },
-    dateModified: "2026-10-15",
+    dateModified: "2026-10-29",
   };
 
   return (
@@ -207,6 +207,15 @@ export default function NodulosVocalesPage() {
                 pólipos en las cuerdas vocales
               </Link>
               : ahí la terapia es de apoyo y el otorrino define el camino.
+              Si usas la voz en el escenario o al aire, sigue en{" "}
+              <Link href="/voz-online/rehabilitacion-vocal-profesionales-voz" className="font-semibold text-amber-700">
+                rehabilitación de la voz en profesionales
+              </Link>
+              . El conjunto de la atención está en la{" "}
+              <Link href="/voz-online/fonoaudiologa-de-voz-online" className="font-semibold text-amber-700">
+                terapia de voz online
+              </Link>
+              .
             </p>
           </section>
 
