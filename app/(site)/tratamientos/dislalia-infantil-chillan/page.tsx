@@ -10,9 +10,9 @@ const WHATSAPP_LINK = whatsappUrl("Hola, busco ayuda con dislalia o pronunciaci�
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Tratamiento de Dislalia Infantil en Chillán",
+  title: "Dislalia infantil en Chillán: tratamiento de pronunciación",
   description:
-    "Tratamiento de dislalia infantil en Chillán: la r, la s y otros sonidos, con praxias, juego y práctica en casa.",
+    "Tratamiento de la dislalia infantil en Chillán: la r, la s y otros sonidos, con praxias y juego. Es la terapia, no la página de señales ni las guías.",
   keywords: ["dislalia infantil Chillán", "tratamiento dislalia Chillán", "terapia pronunciación niños Chillán", "rotacismo niños", "problemas articulación"],
 });
 
@@ -47,7 +47,7 @@ const serviceJsonLd = {
   description: "Terapia fonoaudiológica para corrección de errores de articulación en niños en Chillán.",
   provider: { "@type": "Person", name: "Katia Domínguez", jobTitle: "Fonoaudióloga" },
   areaServed: { "@type": "City", name: "Chillán" },
-  dateModified: "2026-10-16",
+  dateModified: "2026-10-30",
 };
 
 const faqJsonLd = {
@@ -99,7 +99,7 @@ export default function DislaliaInfantilPage() {
           <div className="mx-auto max-w-4xl text-center text-gray-600">
             <p className="text-lg">
               <strong>Esta es la página principal de tratamiento de dislalia en Chillán.</strong> Para definición corta: <Link href="/glosario/dislalia" className="font-semibold text-teal-600 underline">glosario de dislalia</Link>. Para señales locales: <Link href="/chillan/dislalia" className="font-semibold text-teal-600 underline">dislalia en Chillán</Link>. Si buscas la atención general, mira la <Link href="/fonoaudiologa-ninos-chillan" className="font-semibold text-teal-600 underline">fonoaudiología infantil en Chillán</Link>. También: <Link href="/servicios/trastornos-del-habla" className="font-semibold text-teal-600 underline">trastornos del habla</Link> y{" "}
-              <Link href="/servicios/evaluacion-fonoaudiologica" className="font-semibold text-teal-600 underline">evaluación fonoaudiológica</Link>. Para dudas de padres (la ese, sonidos que cambian, solo se entiende en casa): <Link href="/dislalia" className="font-semibold text-teal-600 underline">guías de dislalia</Link>.
+              <Link href="/servicios/evaluacion-fonoaudiologica" className="font-semibold text-teal-600 underline">evaluación fonoaudiológica</Link>. Para dudas de padres (la ese, sonidos que cambian, solo se entiende en casa): <Link href="/dislalia" className="font-semibold text-teal-600 underline">guías de dislalia</Link>. Si lo que se desordena es el patrón de los sonidos, y no un fonema aislado, el tratamiento está en <Link href="/tratamientos/trastorno-fonologico-chillan" className="font-semibold text-teal-600 underline">trastorno fonológico en Chillán</Link>. La diferencia con la lectura está en <Link href="/comparaciones/dislexia-vs-dislalia" className="font-semibold text-teal-600 underline">dislexia y dislalia</Link>.
             </p>
           </div>
         </section>

@@ -7,9 +7,9 @@ import { buildPageMetadata } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 
 const PATH = "/voz-online/afonia-perdi-la-voz";
-const TITLE = "Me quedé sin voz (afonía): qué hacer y cuándo consultar";
+const TITLE = "Afonía: me quedé sin voz, qué hacer y cuándo consultar";
 const DESCRIPTION =
-  "Te quedaste sin voz: cuándo ver al otorrino y cuándo la terapia de voz online ayuda si la afonía vuelve por el uso. Adultos, videollamada en Chile.";
+  "Afonía es quedarte sin voz. El otorrino mira las cuerdas; la terapia de voz online ayuda si vuelve por el uso. Adultos, videollamada en Chile.";
 
 export const metadata = buildPageMetadata({
   path: PATH,
@@ -73,7 +73,7 @@ export default function AfoniaPerdiLaVozPage() {
     url: `${SITE_URL}${PATH}`,
     inLanguage: "es-CL",
     datePublished: "2026-10-21",
-    dateModified: "2026-10-21",
+    dateModified: "2026-10-30",
   };
 
   return (
@@ -158,6 +158,14 @@ export default function AfoniaPerdiLaVozPage() {
               . Si la ronquera no se va, está en{" "}
               <Link href="/voz-online/voz-ronca-causas-tratamiento">
                 ronquera persistente
+              </Link>
+              . Los{" "}
+              <Link href="/voz-online/ejercicios-para-la-voz">
+                ejercicios para la voz
+              </Link>{" "}
+              se indican después de la evaluación. Si das clases, mira la{" "}
+              <Link href="/voz-online/terapia-vocal-docentes-profesores">
+                terapia vocal para docentes
               </Link>
               .
             </p>

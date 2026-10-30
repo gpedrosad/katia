@@ -7,9 +7,9 @@ import { buildPageMetadata } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 
 const PATH = "/voz-online/ejercicios-para-la-voz";
-const TITLE = "Ejercicios para la voz: calentamiento y cuidado vocal";
+const TITLE = "Ejercicios para la voz: calentamiento y plan online";
 const DESCRIPTION =
-  "Ejercicios para la voz: se indican después de la evaluación. Calentamiento general y cuidado de las cuerdas, sin prometer resultados. Adultos en Chile.";
+  "Los ejercicios para la voz se indican después de la evaluación vocal. El calentamiento suave es parte del cuidado. Adultos, videollamada en Chile.";
 
 export const metadata = buildPageMetadata({
   path: PATH,
@@ -73,7 +73,7 @@ export default function EjerciciosParaLaVozPage() {
     url: `${SITE_URL}${PATH}`,
     inLanguage: "es-CL",
     datePublished: "2026-10-21",
-    dateModified: "2026-10-21",
+    dateModified: "2026-10-30",
   };
 
   return (

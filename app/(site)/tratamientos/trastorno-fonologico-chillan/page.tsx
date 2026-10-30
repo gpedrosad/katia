@@ -10,9 +10,9 @@ const WHATSAPP_LINK = whatsappUrl("Hola, busco ayuda por trastorno fonológico e
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Trastorno fonológico en Chillán | Habla",
+  title: "Tratamiento del trastorno fonológico en Chillán",
   description:
-    "¿Tu hijo no se le entiende o habla como bebé? Tratamiento del trastorno fonológico en Chillán: evaluación y terapia presencial de pronunciación.",
+    "Tratamiento del trastorno fonológico en Chillán: terapia presencial de cómo organiza los sonidos. Distinto de la dislalia y de la página de señales.",
   keywords: [
     "trastorno fonológico niños",
     "fonoaudiología Chillán",
@@ -67,8 +67,8 @@ const medicalWebPageJsonLd = {
   url: `${SITE_URL}${PAGE_PATH}`,
   name: "Tratamiento del trastorno fonológico en Chillán",
   description:
-    "Tratamiento presencial del trastorno fonológico en Chillán: para quién es, qué incluye la evaluación y cómo son las sesiones.",
-  dateModified: "2026-10-19",
+    "Tratamiento del trastorno fonológico en Chillán: terapia presencial de cómo organiza los sonidos. Distinto de la dislalia y de la página de señales.",
+  dateModified: "2026-10-30",
   medicalSpecialty: "SpeechTherapy",
   about: { "@id": `${SITE_URL}${PAGE_PATH}#service` },
 };
@@ -112,7 +112,7 @@ export default function TrastornoFonologicoPage() {
               Fonología y habla inteligible
             </span>
             <h1 className="mb-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
-              Mi hijo no pronuncia bien: trastorno fonológico en Chillán
+              Tratamiento del trastorno fonológico en Chillán
             </h1>
             <p
               data-speakable

@@ -21,7 +21,7 @@ const DESCRIPTION_OVERRIDES: Record<string, string> = {
   dislalia:
     "Señales de dislalia en Chillán: omite sonidos o dice «tasa» por casa. El tratamiento está en su página. Cuándo consultar. Agenda por WhatsApp.",
   dislexia:
-    "Fonoaudiología y dislexia en Chillán: se evalúan las bases del lenguaje oral, como la conciencia fonológica. Definición en el glosario.",
+    "Fonoaudiología y dislexia en Chillán: evaluación de la conciencia fonológica y del lenguaje oral. El diagnóstico formal usa evaluaciones especializadas.",
   lectoescritura:
     "Si leer o escribir cuesta, muchas veces la base está en el lenguaje oral. Página local en Chillán. El servicio y la dislexia están en otras páginas.",
   "retraso-del-habla":
@@ -36,7 +36,7 @@ const TITLE_OVERRIDES: Record<string, string> = {
   "apraxia-del-habla":
     "Apraxia del Habla Infantil Chillán | Eval. Especializada",
   dislalia: "Dislalia en Chillán | Señales por edad",
-  dislexia: "Fonoaudiología y Dislexia en Chillán",
+  dislexia: "Fonoaudiología y dislexia en Chillán: evaluación",
   lectoescritura: "Lectoescritura en Chillán | Base del lenguaje",
   "retraso-del-habla": "Retraso del habla en Chillán | Señales",
   "trastorno-fonologico": "Trastorno fonológico en Chillán | Señales",
@@ -79,6 +79,7 @@ const KEYWORD_OVERRIDES: Record<string, string[]> = {
     "dice tasa por casa",
   ],
   dislexia: [
+    "fonoaudiología dislexia Chillán",
     "fonoaudiología y dislexia",
     "fonoaudiologia dislexia",
     "dislexia Chillán",
@@ -96,7 +97,7 @@ const KEYWORD_OVERRIDES: Record<string, string[]> = {
 const SCHEMA_DATE_MODIFIED: Record<string, string> = {
   tel: "2026-10-15",
   dislalia: "2026-10-16",
-  dislexia: "2026-10-16",
+  dislexia: "2026-10-30",
   lectoescritura: "2026-10-16",
   "apraxia-del-habla": "2026-10-16",
   disfemia: "2026-10-16",

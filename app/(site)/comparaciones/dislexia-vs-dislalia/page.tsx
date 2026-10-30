@@ -5,25 +5,32 @@ import { buildPageMetadata } from "@/lib/seo";
 import { SITE_URL, whatsappUrl } from "@/lib/site";
 
 const PAGE_PATH = "/comparaciones/dislexia-vs-dislalia";
-const TITLE = "Dislexia vs dislalia: diferencias y cuándo consultar";
+const TITLE = "Dislexia y dislalia: diferencias y cómo saber cuál es";
 const DESCRIPTION =
-  "Diferencia entre dislexia y dislalia: una es del habla y la otra de leer y escribir. Pueden coincidir. Cuándo pedir evaluación en Chillán.";
+  "La dislalia es pronunciar los sonidos al hablar. La dislexia es leer y escribir. No son lo mismo y pueden coincidir. Evaluación en Chillán.";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
   title: TITLE,
   description: DESCRIPTION,
   keywords: [
-    "diferencia entre dislexia y dislalia",
-    "dislexia vs dislalia",
+    "dislexia y dislalia",
     "dislalia y dislexia",
+    "diferencia entre dislexia y dislalia",
+    "qué es dislalia y dislexia",
     "dislexia o dislalia",
-    "problemas de pronunciación y lectura",
   ],
   ogType: "article",
 });
 
+const QUE_ES =
+  "La dislalia es la dificultad para pronunciar los sonidos al hablar: el niño omite, sustituye o distorsiona fonemas. La dislexia es la dificultad para leer y escribir. No son el mismo cuadro y pueden presentarse juntas.";
+
 const faqs = [
+  {
+    question: "¿Qué es la dislalia y qué es la dislexia?",
+    acceptedAnswer: QUE_ES,
+  },
   {
     question: "¿La dislexia y la dislalia son lo mismo?",
     acceptedAnswer:
@@ -71,7 +78,7 @@ const articleJsonLd = {
     "@id": `${SITE_URL}${PAGE_PATH}`,
   },
   datePublished: "2026-10-23",
-  dateModified: "2026-10-23",
+  dateModified: "2026-10-30",
 };
 
 const faqJsonLd = {
@@ -145,13 +152,15 @@ export default function DislexiaVsDislaliaPage() {
                 Diferencia entre dislexia y dislalia
               </h1>
               <p className="lead text-lg text-gray-700" data-speakable>
-                La dislalia es una dificultad para pronunciar sonidos del habla:
-                el niño omite, sustituye o distorsiona fonemas. La dislexia es
-                una dificultad específica para aprender a leer y escribir. No
-                son el mismo cuadro y pueden presentarse juntas. Quién las
-                distingue es la evaluación fonoaudiológica; el diagnóstico
-                formal de dislexia se hace con evaluaciones especializadas.
+                Dislexia y dislalia no son el mismo cuadro: la dislalia es la
+                pronunciación de los sonidos al hablar y la dislexia es leer y
+                escribir. Pueden coincidir. El diagnóstico formal de dislexia se
+                hace con evaluaciones especializadas; en el habla, las distingue
+                la evaluación fonoaudiológica.
               </p>
+
+              <h2>¿Qué es la dislalia y qué es la dislexia?</h2>
+              <p>{QUE_ES}</p>
 
               <h2>Tabla comparativa</h2>
               <div className="not-prose overflow-x-auto rounded-xl border border-gray-200 shadow-sm">

@@ -46,14 +46,15 @@ const faqs = [
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Primera evaluación: qué esperar y cómo preparar a tu hijo",
+  title: "Evaluación fonoaudiológica: qué pasa, qué llevar",
   description:
-    "En la primera sesión: entrevista, juego y pruebas (unos 60 minutos). Qué llevar, cómo explicárselo a tu hijo y el informe que recibes después.",
+    "Evaluación fonoaudiológica infantil: qué pasa en la primera visita, qué llevar, qué preguntar y el informe. Unos 60 minutos, presencial en Chillán.",
   keywords: [
     "qué esperar en la primera evaluación fonoaudiológica",
     "cómo preparar a tu hijo para la evaluación",
     "qué llevar a la primera evaluación",
     "cómo explicarle al niño la visita al fonoaudiólogo",
+    "evaluación fonoaudiológica",
     "primera evaluación fonoaudiológica infantil",
     "informe fonoaudiológico niños",
   ],
@@ -81,7 +82,7 @@ const articleJsonLd = {
     "@id": `${SITE_URL}${PAGE_PATH}`,
   },
   datePublished: "2026-05-20",
-  dateModified: "2026-10-20",
+  dateModified: "2026-10-30",
 };
 
 const faqJsonLd = {
@@ -130,12 +131,12 @@ export default function PrimeraEvaluacionPage() {
               </h1>
               <div className="mb-6 rounded-2xl border-2 border-blue-200 bg-blue-50 p-6">
                 <p className="text-lg font-semibold text-gray-900">
-                  <strong>Respuesta rápida:</strong> En la primera sesión hay
-                  entrevista con la familia, observación en el juego y pruebas
-                  según la edad. Dura unos 60 minutos. No hace falta entrenarlo:
-                  explícaselo como un rato de juego y conversación. Después
-                  recibes un informe con resultados, fortalezas, dificultades y
-                  recomendaciones.
+                  <strong>Respuesta rápida:</strong> En la evaluación
+                  fonoaudiológica infantil, la primera sesión incluye entrevista
+                  con la familia, observación en el juego y pruebas según la
+                  edad. Dura unos 60 minutos. Llevas informes previos si existen
+                  y tus preguntas. Después recibes un informe con resultados,
+                  fortalezas, dificultades y recomendaciones.
                 </p>
               </div>
               <p className="text-xl text-gray-600">
@@ -254,7 +255,12 @@ export default function PrimeraEvaluacionPage() {
                 </li>
                 <li>
                   <strong>Preguntas de la familia:</strong> anota tus dudas para
-                  abordarlas durante la entrevista y la devolución.
+                  abordarlas durante la entrevista y la devolución. Una guía de
+                  qué decir está en{" "}
+                  <Link href="/preguntas/que-preguntar-en-la-primera-visita">
+                    qué preguntar en la primera visita
+                  </Link>
+                  .
                 </li>
               </ul>
 

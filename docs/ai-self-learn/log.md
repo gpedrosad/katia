@@ -4,6 +4,10 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 
 ---
 
+## 2026-10-30
+
+- SEO Lote 25 | GSC 90d 08-01..10-29: 98 clic / 8.455 imp / pos 8,0. 7d 15/2.917 vs 10/900. `/comparaciones/dislexia-vs-dislalia` (creada 2026-10-23, sin edición posterior): title «Dislexia y dislalia: diferencias y cómo saber cuál es»; H2 y FAQ «¿Qué es la dislalia y qué es la dislexia?». `/recursos/primera-evaluacion-fonoaudiologica-infantil` (2026-10-20): title «Evaluación fonoaudiológica: qué pasa, qué llevar»; enlace a qué preguntar en la primera visita. Voz online sin ciudad, último cambio previo 2026-10-20 o 2026-10-21: afonía, evaluación vocal, ejercicios, sesión y docentes (copy de docentes en positivo; sale la FAQ de cambiar de profesión). Tratamiento fonológico y dislalia infantil en Chillán. `/chillan/dislexia`: solo title y meta. Hub de voz no editado (2026-10-23 y 2026-10-24). Sin otras ciudades, sin `/ads`, sin `/sitelink`. | Changelog `SEO-CHANGELOG.md`. `pendiente:` medir ~2026-11-13.
+
 ## 2026-10-29
 
 - SEO Lote 24 | GSC 90d 07-31..10-28: 96 clic / 8.022 imp / pos 8,0. 7d 14/2.605 vs 8/824. `/fonoaudiologa-ninos-chillan` (2026-10-19): title «Fonoaudiólogo infantil en Chillán | Katia Domínguez»; H1 se mantiene «Fonoaudiología infantil en Chillán». `/servicios/tel-trastorno-especifico-lenguaje` (2026-10-17): title «TEL y TDL: evaluación y terapia en Chillán»; sale la FAQ «¿se cura?»; ancla «¿el TEL se cura?» a `/preguntas/el-tel-se-cura`. Seis URLs de voz online sin ciudad (último cambio previo 2026-10-20): title/meta, enlace a la hub y, en pólipos, FAQ «¿Qué es un pólipo en la cuerda vocal?». Preguntas de duración, orden médica y la R a los 4: solo title y meta. `/lectoescritura/escribe-letras-al-reves`: title «Escribe letras al revés o invierte letras»; H1 se mantiene. Omitida `/tratamientos/tel-trastorno-especifico-lenguaje-chillan` (copy 2026-10-24, `c9d2441`). `catalogo.ts` y `articulos.ts` no se tocaron. Sin otras ciudades, sin `/ads`, sin `/sitelink`. Sitemap del build 162, lastmod `2026-10-29T12:14:25.000Z` (commit `a47025c`). | Changelog `SEO-CHANGELOG.md`. `pendiente:` medir ~2026-11-12.

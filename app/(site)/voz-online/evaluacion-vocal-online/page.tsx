@@ -6,9 +6,9 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/evaluacion-vocal-online",
-  title: "Evaluación Vocal Online | Qué incluye el diagnóstico",
+  title: "Evaluación vocal online para adultos: qué incluye",
   description:
-    "Qué incluye la evaluación vocal online: anamnesis, GRBAS, análisis acústico, tiempos de fonación e informe con plan. Todo Chile, por videollamada.",
+    "Qué incluye la evaluación vocal online: historia de tu voz, cómo suena, pruebas e informe con plan. Adultos, por videollamada en todo Chile.",
   keywords: [
     "evaluación vocal online",
     "diagnóstico de voz",
@@ -62,10 +62,10 @@ export default function EvaluacionVocalOnlinePage() {
   const pageJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Evaluación vocal online: qué incluye",
-    dateModified: "2026-10-15",
+    name: "Evaluación vocal online para adultos: qué incluye",
+    dateModified: "2026-10-30",
     description:
-      "Qué incluye la evaluación vocal online: anamnesis, análisis perceptual, acústico y funcional, e informe con plan.",
+      "Qué incluye la evaluación vocal online: historia de tu voz, cómo suena, pruebas e informe con plan. Adultos, por videollamada en todo Chile.",
   };
 
   return (
@@ -219,6 +219,22 @@ export default function EvaluacionVocalOnlinePage() {
               . Qué pasa después de esa primera videollamada está en{" "}
               <Link href="/voz-online/como-es-la-sesion-de-voz-online" className="font-semibold text-violet-700">
                 cómo es la sesión de voz online
+              </Link>
+              . El mapa del servicio está en{" "}
+              <Link href="/voz-online/fonoaudiologa-de-voz-online" className="font-semibold text-violet-700">
+                terapia de voz online
+              </Link>
+              . Si te quedaste sin voz, parte por{" "}
+              <Link href="/voz-online/afonia-perdi-la-voz" className="font-semibold text-violet-700">
+                afonía
+              </Link>
+              . Los{" "}
+              <Link href="/voz-online/ejercicios-para-la-voz" className="font-semibold text-violet-700">
+                ejercicios para la voz
+              </Link>{" "}
+              van después de esta evaluación. Si das clases, está la{" "}
+              <Link href="/voz-online/terapia-vocal-docentes-profesores" className="font-semibold text-violet-700">
+                terapia vocal para docentes
               </Link>
               .
             </p>

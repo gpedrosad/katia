@@ -10,9 +10,9 @@ const PATH = "/voz-online/como-es-la-sesion-de-voz-online";
 
 export const metadata = buildPageMetadata({
   path: PATH,
-  title: "Cómo es una sesión de terapia de voz online",
+  title: "Cómo es la sesión de voz online por videollamada",
   description:
-    "Cómo es una sesión de terapia de voz online: videollamada para adultos en todo Chile, qué se trabaja y cuándo ver al otorrino antes.",
+    "Cómo es la sesión de voz online: videollamada para adultos en Chile. La primera videollamada es la evaluación; después se practica el plan.",
   keywords: [
     "terapia de voz online",
     "sesión de voz online",
@@ -63,11 +63,27 @@ export default function ComoEsLaSesionPage() {
     },
   };
 
+  const pageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "Cómo es la sesión de voz online por videollamada",
+    description:
+      "Cómo es la sesión de voz online: videollamada para adultos en Chile. La primera videollamada es la evaluación; después se practica el plan.",
+    url: `${SITE_URL}${PATH}`,
+    inLanguage: "es-CL",
+    datePublished: "2026-10-20",
+    dateModified: "2026-10-30",
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}
       />
       <main className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
         <Breadcrumbs
@@ -178,7 +194,12 @@ export default function ComoEsLaSesionPage() {
               <Link href="/voz-online/fatiga-vocal-tratamiento-online">
                 voz cansada
               </Link>
-              .
+              . Si te quedaste sin voz, mira{" "}
+              <Link href="/voz-online/afonia-perdi-la-voz">afonía</Link>. Los{" "}
+              <Link href="/voz-online/ejercicios-para-la-voz">
+                ejercicios para la voz
+              </Link>{" "}
+              se indican después de la evaluación.
             </p>
           </section>
 

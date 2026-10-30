@@ -20,6 +20,150 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-10-30: SEO Lote 25 — dislexia y dislalia, primera evaluación, voz online y tratamientos en Chillán
+
+### Contexto
+
+**Datos GSC (90 días 2026-08-01 al 2026-10-29, sc-domain:katialafono.cl, pull 2026-10-30, dataState=all):**
+- **98 clics**
+- **8.455 impresiones**
+- **Posición promedio: 8,0**
+
+**Últimos 7 días (2026-10-23 al 2026-10-29):** 15 clics / 2.917 imp vs 7 días previos (2026-10-16 al 2026-10-22): 10 clics / 900 imp. Impresiones de los últimos 4 días: 540 / 510 / 508 / 459.
+
+Elegibilidad: `git log --since=2026-10-23` en el archivo de cada URL. `/comparaciones/dislexia-vs-dislalia` se creó el 2026-10-23 (`2b67b73`) y no tuvo edición posterior: entra por la excepción de 7 días. Sin páginas de otras ciudades, sin `/ads`, sin `/sitelink`. Sin precios, estadísticas, credenciales ni plazos nuevos. Español de Chile, tú. En voz online, el copy nuevo va en positivo. El hub `/voz-online/fonoaudiologa-de-voz-online` no se editó (enlace hacia él, sí).
+
+### Páginas optimizadas
+
+Titles absolutos (`buildPageMetadata`; en `/chillan/dislexia`, el override de `generateMetadata` que llama a `buildPageMetadata`), ≤60. Descriptions entre 139 y 152.
+
+#### 1. `/comparaciones/dislexia-vs-dislalia`
+**Métricas GSC:** 641 imp / 0 clics / pos 5,8, todas en los últimos 7 días. «dislexia y dislalia» 164 imp, pos 6,2. «dislalia y dislexia» 100, pos 6,2. «diferencia entre dislexia y dislalia» 65, pos 5,3. «diferencia entre dislalia y dislexia» 30, pos 5,1. «dislalia y dislexia diferencia» 18. «dislexia o dislalia» 16. «dislexia y dislalia diferencias» 13, pos 3,8. «que es dislalia y dislexia» 6, pos 8,3. Creada el 2026-10-23 (`2b67b73`). Sin commits posteriores.
+
+- **Title (52 → 53):** «Dislexia vs dislalia: diferencias y cuándo consultar» → «Dislexia y dislalia: diferencias y cómo saber cuál es»
+- **Description (138 → 139):** la dislalia es pronunciar los sonidos al hablar; la dislexia es leer y escribir. No son lo mismo y pueden coincidir. Evaluación en Chillán
+- **H1:** se mantiene «Diferencia entre dislexia y dislalia»
+- **Respuesta directa:** el párrafo bajo el H1 abre con «Dislexia y dislalia no son el mismo cuadro». La dislalia es la pronunciación al hablar; la dislexia es leer y escribir. El diagnóstico formal de dislexia sigue con evaluaciones especializadas
+- **H2 nueva:** «¿Qué es la dislalia y qué es la dislexia?». El párrafo visible y la primera entrada del FAQPage son el mismo texto (`QUE_ES`): omite, sustituye o distorsiona fonemas; la dislexia es leer y escribir; pueden presentarse juntas
+- **FAQ:** las 5 preguntas de siempre se mantienen. Entran 6
+- **Enlaces:** ya estaban `/chillan/dislexia`, `/tratamientos/dislalia-infantil-chillan`, `/glosario/dislalia` y `/glosario/dislexia`. No se inventaron edades
+- **Article:** `dateModified` 2026-10-30. `datePublished` sigue 2026-10-23
+
+#### 2. `/recursos/primera-evaluacion-fonoaudiologica-infantil`
+**Métricas GSC:** 168 imp / 0 clics / pos 7,8 (62 imp en 7 días, pos 7,1). Única query visible: «evaluacion fonoaudiologica», 7 imp, pos 26,6. Último cambio: 2026-10-20 (`53550ae`, Lote 14).
+
+- **Title (57 → 48):** «Primera evaluación: qué esperar y cómo preparar a tu hijo» → «Evaluación fonoaudiológica: qué pasa, qué llevar»
+- **Description (142 → 147):** qué pasa en la primera visita, qué llevar, qué preguntar y el informe. Unos 60 minutos, presencial en Chillán. Esos 60 minutos ya estaban en la página
+- **H1:** se mantiene «Primera evaluación fonoaudiológica: qué esperar y cómo preparar a tu hijo»
+- **Respuesta rápida:** abre con «evaluación fonoaudiológica infantil». Entrevista, juego y pruebas, 60 minutos, informes previos y preguntas, informe después. Sin un plazo nuevo
+- **Enlace:** «qué preguntar en la primera visita» hacia `/preguntas/que-preguntar-en-la-primera-visita`. La página no se editó. «Evaluación fonoaudiológica en Chillán» (`/servicios/evaluacion-fonoaudiologica`) ya estaba: solo enlace
+- **Article:** `dateModified` 2026-10-30. FAQPage: las 6 preguntas de siempre, el mismo texto visible
+
+#### 3. Voz online (sin ciudades)
+
+Enlace de cuerpo al hub «terapia de voz online» (`/voz-online/fonoaudiologa-de-voz-online`) donde faltaba en el texto. La hub no se editó. `dateModified` de schema: 2026-10-30.
+
+##### `/voz-online/afonia-perdi-la-voz`
+**Métricas GSC:** 16 imp / 0 clics / pos 8,2. Último cambio: 2026-10-21 (`ae6334f`, Lote 15).
+
+- **Title (55 → 54):** «Me quedé sin voz (afonía): qué hacer y cuándo consultar» → «Afonía: me quedé sin voz, qué hacer y cuándo consultar»
+- **Description (147 → 142):** afonía es quedarte sin voz. El otorrino mira las cuerdas; la terapia de voz online ayuda si vuelve por el uso
+- **H1:** se mantiene «Me quedé sin voz (afonía): qué hacer y cuándo consultar»
+- **Enlaces:** «ejercicios para la voz» y «terapia vocal para docentes». Evaluación, sesión y hub ya estaban. Respuesta rápida y FAQ se mantienen
+
+##### `/voz-online/evaluacion-vocal-online`
+**Métricas GSC:** 19 imp / 1 clic / pos 6,5. Último cambio: 2026-10-20 (`9437dfa`).
+
+- **Title (52 → 49):** «Evaluación Vocal Online | Qué incluye el diagnóstico» → «Evaluación vocal online para adultos: qué incluye»
+- **Description (146 → 140):** historia de tu voz, cómo suena, pruebas e informe con plan. Adultos, videollamada en todo Chile. GRBAS y los tiempos de fonación siguen en el cuerpo
+- **H1:** se mantiene «¿Qué incluye la evaluación vocal online?»
+- **Enlaces:** hub, afonía, ejercicios para la voz y terapia vocal para docentes. Sesión, fatiga, nódulos y voz ronca ya estaban
+- **WebPage:** `dateModified` 2026-10-30. El dato de ASHA que ya estaba no se reescribió. FAQ de siempre
+
+##### `/voz-online/ejercicios-para-la-voz`
+**Métricas GSC:** 2 imp / 0 clics / pos 7,0. Último cambio: 2026-10-21 (`ae6334f`).
+
+- **Title (53 → 51):** «Ejercicios para la voz: calentamiento y cuidado vocal» → «Ejercicios para la voz: calentamiento y plan online»
+- **Description (151 → 146):** se indican después de la evaluación vocal. El calentamiento suave es parte del cuidado. Adultos, videollamada en Chile. Sale «sin prometer resultados»
+- **H1, respuesta rápida y FAQ:** se mantienen. Hub, docentes, evaluación, sesión y afonía ya estaban enlazados
+- **WebPage:** `dateModified` 2026-10-30
+
+##### `/voz-online/como-es-la-sesion-de-voz-online`
+**Métricas GSC:** 2 imp / 0 clics / pos 4,5. Último cambio: 2026-10-20 (`9437dfa`).
+
+- **Title (43 → 48):** «Cómo es una sesión de terapia de voz online» → «Cómo es la sesión de voz online por videollamada»
+- **Description (132 → 139):** videollamada para adultos en Chile. La primera videollamada es la evaluación; después se practica el plan. Sin una duración nueva
+- **H1:** se mantiene «Cómo es una sesión de terapia de voz online»
+- **Enlaces:** afonía y ejercicios para la voz. Hub, evaluación y docentes ya estaban
+- **WebPage nuevo**, el mismo patrón que afonía: `datePublished` 2026-10-20, `dateModified` 2026-10-30. FAQ de siempre
+
+##### `/voz-online/terapia-vocal-docentes-profesores`
+**Métricas GSC:** 16 imp / 2 clics / pos 7,6. Último cambio: 2026-10-20 (`9437dfa`).
+
+- **Title (42 → 47):** «Voz cansada en profesores | Terapia online» → «Terapia vocal para docentes y profesores online»
+- **Description (138 → 143):** proyectar sin gritar, higiene y calentamiento antes de clases. Adultos, videollamada en Chile
+- **H1:** se mantiene «Voz cansada en profesores: terapia vocal online»
+- **Bajada:** sale el párrafo de «alerta roja» y «destruir tu herramienta». Entra el mismo texto que la FAQ «¿Qué es la terapia vocal para docentes y profesores?»: videollamada, adultos en todo Chile, proyección sin gritar, higiene y calentamiento, horario compatible con la jornada
+- **Caja:** sale «cientos de profesores», la licencia y el cambio de profesión. Queda la hora por videollamada y que el plan sale de la evaluación vocal. El botón pasa a «Agendar terapia vocal por WhatsApp»
+- **H2:** «El diagnóstico oculto tras el pizarrón» → «Qué se nota cuando la voz del profesor se cansa». «Profesores que hoy hacen clases sin miedo» → «Profesores que se atienden por videollamada». Las dos reseñas no se reescribieron
+- **FAQ:** sale «¿Qué pasa si no trato la disfonía docente?» (edema de Reinke, licencias, cambiar de profesión). Entra «¿La terapia vocal para docentes reemplaza al otorrino?», visible en el FAQ. Las 6 y 8 horas y el 58% de la ASHA ya estaban: no se tocaron
+- **Enlaces:** hub, evaluación vocal, ejercicios y afonía, junto a higiene, profesionales, fatiga y sesión
+- **FAQPage:** `dateModified` 2026-10-30. El schema y el texto visible salen del mismo arreglo
+
+#### 4. `/tratamientos/trastorno-fonologico-chillan`
+**Métricas GSC:** 101 imp / 0 clics / pos 9,2. Último cambio: 2026-10-19 (`fe6acc6`, Lote 13). La ficha `/chillan/trastorno-fonologico` sigue en «señales».
+
+- **Title (39 → 47):** «Trastorno fonológico en Chillán | Habla» → «Tratamiento del trastorno fonológico en Chillán»
+- **Description (144 → 148):** terapia presencial de cómo organiza los sonidos. Distinto de la dislalia y de la página de señales. Sale «habla como bebé»
+- **H1:** «Mi hijo no pronuncia bien: trastorno fonológico en Chillán» → «Tratamiento del trastorno fonológico en Chillán»
+- **Cuerpo y FAQ:** se mantienen, incluida la distinción con la dislalia y el enlace a `/chillan/trastorno-fonologico`. Sin una prueba ni un plazo nuevo
+- **MedicalWebPage:** `dateModified` 2026-10-30
+
+#### 5. `/tratamientos/dislalia-infantil-chillan`
+**Métricas GSC:** 39 imp / 0 clics / pos 29,9. Último cambio: 2026-10-17 (`6d8fe10`).
+
+- **Title (43 → 58):** «Tratamiento de Dislalia Infantil en Chillán» → «Dislalia infantil en Chillán: tratamiento de pronunciación»
+- **Description (111 → 149):** la r, la s y otros sonidos, con praxias y juego. Es la terapia, no la página de señales ni las guías
+- **H1:** se mantiene «Tratamiento de dislalia infantil en Chillán». La respuesta rápida se mantiene
+- **Enlaces:** «trastorno fonológico en Chillán» hacia el tratamiento y «dislexia y dislalia» hacia la comparación. Glosario, `/chillan/dislalia` y `/dislalia` ya estaban
+- **Service:** `dateModified` 2026-10-30
+
+#### 6. `/chillan/dislexia`
+**Métricas GSC:** 50 imp / 0 clics / pos 17,9. «fonoaudiologia dislexia» 1 imp, pos 11. «fonoaudiologo chillan» 6 imp, pos 14,2, se deja en el pilar. Último cambio de `app/chillan/[slug]/page.tsx` y de `patologias.ts`: 2026-10-18 (`988009c`). Solo se tocaron las claves de dislexia en el template.
+
+- **Title (36 → 48):** «Fonoaudiología y Dislexia en Chillán» → «Fonoaudiología y dislexia en Chillán: evaluación»
+- **Description (135 → 152):** evaluación de la conciencia fonológica y del lenguaje oral. El diagnóstico formal usa evaluaciones especializadas. Esa frase ya estaba en la respuesta rápida
+- **H1:** se mantiene «Fonoaudiología y Dislexia en Chillán» (`patologias.ts` no se editó)
+- **Service:** `dateModified` 2026-10-30 solo en este slug. Los otros slugs siguen en su fecha
+- El `lastmod` del sitemap de las demás fichas `/chillan/[slug]` se mueve con el `page.tsx` compartido. Su title, meta y fecha de schema no cambiaron
+
+### Omitidas
+
+- `/voz-online/fonoaudiologa-de-voz-online`. Copy el 2026-10-23 (`63df24f`, `cf6feb0`) y el 2026-10-24 (`c9d2441`, Lote 18). Solo enlaces desde las páginas de este lote
+- Páginas de ciudad o país en `/voz-online/` (Antofagasta, Concepción, Viña del Mar, Santiago, Temuco, Miami, España y el resto). No se editaron
+- `/ads/*` y `/sitelink/*`. No se editaron
+- Hub `/comparaciones` y `/comparaciones/dislalia-vs-disartria` (2026-10-24). No eran objetivo y siguen congeladas
+- Home, hitos, estimular en casa y el resto de Lotes 17–24. Fuera de este lote
+
+### Métricas esperadas
+
+Medir ~2026-11-13:
+- CTR > 0 en «dislexia y dislalia», «dislalia y dislexia» y «diferencia entre dislexia y dislalia» en `/comparaciones/dislexia-vs-dislalia`
+- «evaluacion fonoaudiologica» y la primera visita en `/recursos/primera-evaluacion-fonoaudiologica-infantil`. El servicio de evaluación no se editó
+- CTR en afonía, evaluación vocal online, ejercicios para la voz, cómo es la sesión y terapia vocal para docentes. El hub de voz no se editó
+- Tratamiento del trastorno fonológico y de la dislalia infantil en Chillán, distintos de `/chillan/trastorno-fonologico`, `/chillan/dislalia` y `/dislalia`
+- «fonoaudiología dislexia» en `/chillan/dislexia`. «fonoaudiólogo chillán» se sigue midiendo en el pilar
+
+### Técnico
+
+- No se editó `app/sitemap.ts` ni `lib/seo-routes.ts`. Sin URLs nuevas.
+- Canonical `https://www.katialafono.cl` + path, `index, follow`.
+- FAQPage de dislexia vs dislalia: 6 preguntas; la H2 «¿Qué es la dislalia y qué es la dislexia?» es la primera y el texto es el del párrafo visible. En docentes, el FAQPage sale del mismo arreglo que `GeoFAQ` (`includeJsonLd={false}`).
+- **Build:** `npm run build` pasó (Next.js 16.1.1, `NODE_OPTIONS=--max-old-space-size=4096`). 180 páginas estáticas, las mismas del Lote 24. Sin URLs nuevas.
+- **Sitemap de ese build (aún sin el commit):** 162 URLs (`<loc>`). Sin `/ads` ni `/sitelink`. El `lastmod` de las URLs editadas queda en la fecha del commit de cada `page.tsx`. No se tocó `app/sitemap.ts`.
+
+---
+
 ## 2026-10-29: SEO Lote 24 — pilar infantil, TEL, voz online, preguntas y letras al revés
 
 ### Contexto

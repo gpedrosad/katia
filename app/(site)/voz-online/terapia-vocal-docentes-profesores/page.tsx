@@ -7,9 +7,9 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/terapia-vocal-docentes-profesores",
-  title: "Voz cansada en profesores | Terapia online",
+  title: "Terapia vocal para docentes y profesores online",
   description:
-    "Voz cansada en profesores: terapia vocal online para docentes en todo Chile. Proyección sin gritar, por videollamada. Agenda por WhatsApp.",
+    "Terapia vocal online para docentes y profesores: proyectar sin gritar, higiene y calentamiento antes de clases. Adultos, videollamada en Chile.",
   keywords: [
     "terapia vocal docentes",
     "voz profesores",
@@ -19,7 +19,14 @@ export const metadata = buildPageMetadata({
   ],
 });
 
+const DOCENTES_RESPUESTA =
+  "La terapia vocal para docentes y profesores es online: por videollamada, para adultos en todo Chile. Se trabaja proyección sin gritar, higiene vocal y calentamiento antes de clases, en un horario compatible con la jornada escolar.";
+
 const faqItems = [
+  {
+    question: "¿Qué es la terapia vocal para docentes y profesores?",
+    answer: DOCENTES_RESPUESTA,
+  },
   {
     question: "¿Por qué los profesores pierden la voz?",
     answer:
@@ -41,9 +48,9 @@ const faqItems = [
       "La duración se define según las necesidades de cada docente. Se enseña técnica de respiración, apoyo, proyección y estrategias específicas para el aula.",
   },
   {
-    question: "¿Qué pasa si no trato la disfonía docente?",
+    question: "¿La terapia vocal para docentes reemplaza al otorrino?",
     answer:
-      "El mal uso crónico puede llevar a nódulos vocales, edema de Reinke o licencias médicas recurrentes. En casos extremos, profesores deben cambiar de profesión por no poder usar la voz.",
+      "El otorrino mira las cuerdas si hay dolor, afonía o una lesión. La terapia vocal online trabaja cómo usas la voz en el aula: proyección sin gritar, higiene y calentamiento antes de clases.",
   },
 ];
 
@@ -51,7 +58,7 @@ export default function TerapiaVocalDocentesPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    dateModified: "2026-10-15",
+    dateModified: "2026-10-30",
     mainEntity: faqItems.map((item) => ({
       "@type": "Question",
       name: item.question,
@@ -83,13 +90,10 @@ export default function TerapiaVocalDocentesPage() {
               className="lead font-medium text-gray-700 max-w-3xl mx-auto"
               data-speakable
             >
-              Ser profesor y quedarte sin voz no es un &quot;gafe del oficio&quot; aceptable. Es una alerta roja de que estás destruyendo tu herramienta de trabajo vital. Sal de la estadística aprendiendo a usar tu voz sin dañarte.
+              {DOCENTES_RESPUESTA}
             </p>
             <div className="not-prose mx-auto mt-4 max-w-3xl rounded-2xl border-2 border-emerald-200 bg-white p-5 text-left text-base text-emerald-950">
-              <p>
-                <strong>Respuesta rápida:</strong> La voz cansada en profesores se trabaja con terapia vocal online: proyectar sin gritar, higiene vocal y calentamiento antes de clases, en horarios compatibles con la jornada escolar.
-              </p>
-              <p className="mt-3 text-sm">
+              <p className="text-sm">
                 <Link href="/voz-online/higiene-vocal-cuidado-voz" className="font-semibold underline">
                   Higiene vocal
                 </Link>
@@ -104,6 +108,22 @@ export default function TerapiaVocalDocentesPage() {
                 {" · "}
                 <Link href="/voz-online/como-es-la-sesion-de-voz-online" className="font-semibold underline">
                   Cómo es la sesión
+                </Link>
+                {" · "}
+                <Link href="/voz-online/fonoaudiologa-de-voz-online" className="font-semibold underline">
+                  Terapia de voz online
+                </Link>
+                {" · "}
+                <Link href="/voz-online/evaluacion-vocal-online" className="font-semibold underline">
+                  Evaluación vocal online
+                </Link>
+                {" · "}
+                <Link href="/voz-online/ejercicios-para-la-voz" className="font-semibold underline">
+                  Ejercicios para la voz
+                </Link>
+                {" · "}
+                <Link href="/voz-online/afonia-perdi-la-voz" className="font-semibold underline">
+                  Afonía
                 </Link>
               </p>
             </div>
@@ -127,26 +147,26 @@ export default function TerapiaVocalDocentesPage() {
           <section className="my-10">
             <div className="bg-emerald-50 p-8 rounded-2xl border border-emerald-200 shadow-sm text-center">
               <h3 className="text-2xl font-bold text-emerald-900 mt-0 mb-4">
-                No arriesgues una licencia médica ni tu carrera vocacional
+                Terapia vocal en un horario compatible con las clases
               </h3>
               <p className="text-emerald-800 mb-6 text-left">
-                He visto a cientos de profesores llegar a consulta llorando porque la disfonía y los nódulos amenazaban con forzarlos a cambiar de profesión. A través de nuestra terapia de voz 100% online, puedes entrar a la sala con la certeza de que tu voz resistirá la jornada completa. Sin tener que ir a un box, directo desde tu hogar tras tu horario escolar.
+                La hora es por videollamada, para adultos en todo Chile, en un horario compatible con la jornada escolar. El plan sale de la evaluación vocal: proyección sin gritar, higiene vocal y calentamiento antes de clases.
               </p>
               <WhatsAppCTA
-                message="Hola, soy docente y mi voz no da más. Deseo tratamiento online."
+                message="Hola, soy docente y quiero terapia vocal online."
                 className="bg-emerald-600 hover:bg-emerald-700 ring-emerald-300 w-full sm:w-auto"
               >
-                Proteger Mi Voz Docente
+                Agendar terapia vocal por WhatsApp
               </WhatsAppCTA>
               <p className="text-xs mt-3 text-emerald-700 font-bold opacity-80">
-                Horarios especiales compatibles post jornada escolar.
+                Horarios compatibles con la jornada escolar.
               </p>
             </div>
           </section>
 
           <section className="my-12">
             <h2 className="text-2xl font-bold mt-8 text-emerald-900 border-b pb-2">
-              El diagnóstico oculto tras el pizarrón
+              Qué se nota cuando la voz del profesor se cansa
             </h2>
             <ul className="space-y-4 mt-4 text-gray-800">
               <li>
@@ -163,7 +183,7 @@ export default function TerapiaVocalDocentesPage() {
 
           <section className="my-12">
             <h2 className="text-2xl font-bold text-emerald-900 text-center mb-8">
-              Profesores que hoy hacen clases sin miedo
+              Profesores que se atienden por videollamada
             </h2>
             <div className="grid md:grid-cols-2 gap-6 not-prose">
               <TestimonialCard
