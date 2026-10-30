@@ -160,7 +160,7 @@ Medir ~2026-11-13:
 - Canonical `https://www.katialafono.cl` + path, `index, follow`.
 - FAQPage de dislexia vs dislalia: 6 preguntas; la H2 «¿Qué es la dislalia y qué es la dislexia?» es la primera y el texto es el del párrafo visible. En docentes, el FAQPage sale del mismo arreglo que `GeoFAQ` (`includeJsonLd={false}`).
 - **Build:** `npm run build` pasó (Next.js 16.1.1, `NODE_OPTIONS=--max-old-space-size=4096`). 180 páginas estáticas, las mismas del Lote 24. Sin URLs nuevas.
-- **Sitemap de ese build (aún sin el commit):** 162 URLs (`<loc>`). Sin `/ads` ni `/sitelink`. El `lastmod` de las URLs editadas queda en la fecha del commit de cada `page.tsx`. No se tocó `app/sitemap.ts`.
+- **Sitemap del build posterior al commit `0fd168a`:** 162 URLs (`<loc>`). Sin `/ads` ni `/sitelink`. Las 10 URLs con `page.tsx` propio editado quedan con `lastmod` `2026-10-30T12:14:29.000Z`. No se tocó `app/sitemap.ts`. `/voz-online/fonoaudiologa-de-voz-online` sigue en `2026-10-24T04:02:09.000Z`. Las demás fichas `/chillan/[slug]` comparten ese `page.tsx`, así que su `lastmod` también pasa a `2026-10-30T12:14:29.000Z`; su title, meta y `dateModified` de schema no cambiaron.
 
 ---
 
