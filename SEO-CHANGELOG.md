@@ -121,7 +121,7 @@ Medir ~2026-11-14:
 - **Lint:** `npx eslint` en los seis `page.tsx` editados pasó. `npm run lint` del repo sigue con el error previo de `app/ads/_components/AdsStickyCta.tsx` (`react-hooks/set-state-in-effect`); no se tocó `/ads`.
 - **Typecheck:** `NODE_OPTIONS=--max-old-space-size=4096 npx tsc --noEmit` pasó.
 - **Build:** `npm run build` pasó (Next.js 16.1.1, `NODE_OPTIONS=--max-old-space-size=4096`). 180 páginas estáticas, las mismas del Lote 25. Sin URLs nuevas.
-- **Sitemap de ese build (aún sin el commit):** 162 URLs (`<loc>`). Sin `/ads` ni `/sitelink`. El `lastmod` de las URLs editadas queda en la fecha del commit de cada `page.tsx` (todavía 2026-10-24 o 2026-10-18, porque este build es anterior al commit). No se tocó `app/sitemap.ts`. `/voz-online/fonoaudiologa-de-voz-online` sigue en `2026-10-24T04:02:09.000Z`.
+- **Sitemap del build posterior al commit `8de0122`:** 162 URLs (`<loc>`). Sin `/ads` ni `/sitelink`. Las 6 URLs con `page.tsx` editado quedan con `lastmod` `2026-10-31T12:20:57.000Z`. No se tocó `app/sitemap.ts`. `/voz-online/fonoaudiologa-de-voz-online` sigue en `2026-10-24T04:02:09.000Z`.
 
 ---
 
