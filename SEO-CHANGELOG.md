@@ -20,6 +20,111 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-10-31: SEO Lote 26 — dislalia y disartria, clúster de comparaciones y parálisis cordal
+
+### Contexto
+
+**Datos GSC (90 días 2026-08-02 al 2026-10-30, sc-domain:katialafono.cl, pull 2026-10-31, dataState=all):**
+- **100 clics**
+- **8.818 impresiones**
+- **Posición promedio: 8,0**
+
+**Últimos 7 días (2026-10-24 al 2026-10-30):** 17 clics / 3.086 imp / pos 7,8 vs 7 días previos (2026-10-17 al 2026-10-23): 9 clics / 1.055 imp / pos 8,4.
+
+Elegibilidad: `git log` del `page.tsx` de cada URL. Entran las editadas el 2026-10-24 o antes. Sin páginas de otras ciudades, sin `/ads`, sin `/sitelink`. Sin precios, estadísticas, credenciales ni plazos nuevos. Español de Chile, tú. El enlace que ya existía a `/comparaciones/dislexia-vs-dislalia` se dejó; esa página no se editó.
+
+### Páginas optimizadas
+
+Titles absolutos (`buildPageMetadata`), ≤60. Descriptions entre 138 y 155.
+
+#### 1. `/comparaciones/dislalia-vs-disartria`
+**Métricas GSC:** 601 imp / 1 clic / pos 7,5, todas en los últimos 7 días. «dislalia y disartria» 269 imp, pos 7,8, 0 clics. «disartria y dislalia» 139, pos 7,4. «dislalia o disartria» 40, pos 8,4. «diferencia entre dislalia y disartria» 25, pos 5,1, 1 clic. «diferencia entre disartria y dislalia» 15, pos 5,7. «disartria y dislalia diferencias» 14, pos 5,1. Último cambio: 2026-10-24 (`c9d2441`, Lote 18).
+
+- **Title (40 → 54):** «Dislalia vs disartria: qué las distingue» → «Dislalia y disartria: diferencias y cómo saber cuál es»
+- **Description (151 → 148):** dislalia y disartria no son lo mismo: sonidos sin causa neuromotora, o una alteración motora del habla de origen neurológico. Evaluación en Chillán
+- **H1:** se mantiene «Diferencia entre dislalia y disartria»
+- **Respuesta directa:** el párrafo bajo el H1 abre con «Dislalia y disartria no son el mismo cuadro». La dislalia es articular mal sonidos (omisión, sustitución o distorsión) sin causa neuromotora. La disartria es una alteración motora del habla de origen neurológico. La mirada médica de la disartria ya estaba
+- **FAQ:** las 5 preguntas de siempre se mantienen. El FAQPage sale de `GeoFAQ` con el mismo arreglo que el texto visible
+- **Enlaces:** se mantienen dislexia vs dislalia, glosario, hub de dislalia, apraxia, tratamiento de dislalia y evaluación del habla. Entran la diferencia entre dislalia y trastorno fonológico, retraso del habla o del lenguaje, y TEL o retraso del lenguaje
+- **Article:** `dateModified` 2026-10-31. `datePublished` sigue 2026-10-24. La description del Article es la meta
+
+#### 2. Clúster de comparaciones (0–1 impresiones en 90 días)
+
+Enlaces contextuales desde la página anterior y desde el hub. En las tres, title, meta y H1 apuntan a la consulta, el primer párrafo responde, y se enlazan entre sí. La evaluación o el agendamiento en Chillán que ya existía se mantiene o se acerca al primer párrafo.
+
+##### `/comparaciones`
+**Último cambio:** 2026-10-24 (`c9d2441`). Title, meta y H1 se mantienen. Las tarjetas ya apuntaban a las tres. En el párrafo final entran anclas «diferencia entre dislalia y trastorno fonológico», «retraso del habla o del lenguaje» y «TEL o retraso del lenguaje (TDL)». El enlace a dislexia y dislalia se queda.
+
+##### `/comparaciones/dislalia-vs-trastorno-fonologico`
+**Último cambio:** 2026-10-18 (`988009c`, Lote 12).
+
+- **Title (48):** se mantiene «Diferencia entre dislalia y trastorno fonológico»
+- **Description (152 → 140):** un fonema mal articulado no es una regla que cambia muchos sonidos. Evaluación en Chillán
+- **H1 (54 → 48):** «Dislalia vs trastorno fonológico: ¿cuál tiene mi hijo?» → «Diferencia entre dislalia y trastorno fonológico»
+- **Respuesta directa:** el tipo de error. La dislalia es un fonema concreto; el trastorno fonológico, una regla que simplifica muchos sonidos. Enlace a la evaluación del habla en Chillán
+- **Enlaces nuevos:** dislalia y disartria, retraso del habla o del lenguaje, TEL o retraso del lenguaje. Evaluación, contacto, glosario y tratamientos ya estaban
+- **FAQ:** las 4 de siempre. El texto visible y el `acceptedAnswer` salen del mismo arreglo
+- **Article:** `dateModified` 2026-10-31. `datePublished` sigue 2026-05-19. Headline y description alineados con H1 y meta
+
+##### `/comparaciones/retraso-del-habla-vs-retraso-del-lenguaje`
+**Último cambio:** 2026-10-18 (`988009c`).
+
+- **Title (49 → 47):** «Diferencia entre retraso del habla y del lenguaje» → «Retraso del habla o del lenguaje: la diferencia»
+- **Description (126 → 138):** pronunciar mal no es lo mismo que tener pocas palabras o frases cortas. Señales y evaluación en Chillán
+- **H1 (72 → 63):** «Retraso del habla vs retraso del lenguaje: qué cambia y cuándo consultar» → «Retraso del habla o del lenguaje: qué cambia y cuándo consultar»
+- **Respuesta directa:** el habla es cómo suenan las palabras; el lenguaje es vocabulario, frases e instrucciones. Puede ser uno, el otro o ambos
+- **Enlaces:** evaluación fonoaudiológica, evaluación del lenguaje, evaluación del habla y agendar ya estaban. Entran la diferencia entre dislalia y trastorno fonológico, y TEL o retraso del lenguaje
+- **FAQ:** las 4 de siempre, mismo texto visible y `acceptedAnswer`
+- **Article:** `dateModified` 2026-10-31. `datePublished` sigue 2026-05-20
+
+##### `/comparaciones/tel-vs-retraso-del-lenguaje`
+**Último cambio:** 2026-10-18 (`988009c`).
+
+- **Title (43 → 47):** «Diferencia entre TEL y retraso del lenguaje» → «TEL o retraso del lenguaje (TDL): la diferencia»
+- **Description (125 → 155):** el retraso puede ser transitorio; el TEL, también llamado TDL, es un perfil que persiste. Evaluación en Chillán
+- **H1 (65 → 42):** «TEL vs retraso del lenguaje: ¿es solo “lento” o hay un trastorno?» → «TEL o retraso del lenguaje: ¿atraso o TDL?»
+- **Respuesta directa:** no son el mismo cuadro. El retraso es un desarrollo más lento que a veces avanza con estimulación. El TEL, también llamado TDL, persiste al comprender o armar frases. Enlace a la evaluación del lenguaje en Chillán
+- **Enlaces:** glosario TEL, TDL y retraso ya estaban más abajo; ahora también en el primer párrafo. Entra agendar una hora en Chillán, más retraso del habla o del lenguaje y la diferencia entre dislalia y trastorno fonológico. El 7 % de la ASHA que ya estaba no se reescribió
+- **FAQ:** las 4 de siempre, mismo texto visible y `acceptedAnswer`
+- **Article:** `dateModified` 2026-10-31. `datePublished` sigue 2026-05-19
+
+#### 3. `/voz-online/paralisis-cordal-rehabilitacion-online`
+**Métricas GSC:** empieza a verse en pos 40–60. «parálisis de cuerda vocal derecha» 5 imp, pos 62. «cuerdas vocales paralizadas» 5, pos 58. «paresia de cuerda vocal» 3, pos 42. «parálisis de cuerdas vocales» 3, pos 63. Último cambio: 2026-10-24 (`c9d2441`). Sin ciudad en la URL. No se tocaron landings de ciudad.
+
+- **Title (49):** se mantiene «Parálisis de cuerda vocal | Rehabilitación online»
+- **Description (134 → 155):** parálisis o paresia de cuerda vocal, de un lado (derecha o izquierda) o de las dos, y qué hace la fonoaudióloga después del diagnóstico del otorrino. Online. Sale el plazo de 6 a 12 meses de la meta; ese plazo sigue en el cuerpo, donde ya estaba
+- **H1:** se mantiene «Parálisis de Cuerda Vocal: Rehabilitación Vocal Online»
+- **H2 nueva:** «Qué es la parálisis o la paresia de una cuerda vocal». Parálisis (no se mueve) y paresia (se mueve con menos fuerza), de un lado —derecha o izquierda— o de las dos. El otorrino diagnostica; después la fonoaudióloga trabaja la voz que queda. Sin cifra nueva, sin plazo nuevo y sin prometer que el nervio vuelva
+- **FAQ:** las 5 de siempre. `GeoFAQ` con `includeJsonLd={false}`; el FAQPage usa el mismo arreglo
+- **MedicalWebPage:** `dateModified` 2026-10-31. El dato de ASHA y el enlace a Miami que ya estaban no se reescribieron
+
+### Omitidas
+
+- `/comparaciones/dislexia-vs-dislalia`. Copy el 2026-10-30 (Lote 25). Solo se dejó el enlace que ya existía
+- `/recursos/primera-evaluacion-fonoaudiologica-infantil`, voz online de afonía, evaluación vocal, ejercicios, sesión y docentes, `/tratamientos/trastorno-fonologico-chillan`, `/tratamientos/dislalia-infantil-chillan`, `/chillan/*`, hitos, habla como bebé, `/preguntas/*`, el hub `/voz-online/fonoaudiologa-de-voz-online`, la home, `/servicios/*` y `/glosario/*`. Editadas el 2026-10-25 o después, o fuera de este lote. Solo enlaces hacia las que ya existían
+- Páginas de ciudad en `/voz-online/` (Antofagasta, Concepción, Viña del Mar, Santiago, Temuco y el resto). No se editaron
+- `/ads/*` y `/sitelink/*`. No se editaron
+- Tracking, formularios y textos de WhatsApp. No se editaron
+
+### Métricas esperadas
+
+Medir ~2026-11-14:
+- CTR > 0 en «dislalia y disartria», «disartria y dislalia» y «diferencia entre dislalia y disartria» en `/comparaciones/dislalia-vs-disartria`
+- Primeras impresiones en la diferencia entre dislalia y trastorno fonológico, retraso del habla o del lenguaje, y TEL o retraso del lenguaje (TDL)
+- «paresia de cuerda vocal», «parálisis de cuerda vocal derecha» y «cuerdas vocales paralizadas» en la rehabilitación online, sin ciudad
+
+### Técnico
+
+- No se editó `app/sitemap.ts` ni `lib/seo-routes.ts`. Sin URLs nuevas.
+- Canonical `https://www.katialafono.cl` + path, `index, follow`.
+- FAQPage: en dislalia vs disartria, `GeoFAQ` emite el schema con el mismo `faqs` que el texto visible. En las otras tres comparaciones, el `acceptedAnswer` y el `<details>` salen del mismo arreglo. En parálisis cordal, el FAQPage y `GeoFAQ` comparten `faqItems`.
+- **Lint:** `npx eslint` en los seis `page.tsx` editados pasó. `npm run lint` del repo sigue con el error previo de `app/ads/_components/AdsStickyCta.tsx` (`react-hooks/set-state-in-effect`); no se tocó `/ads`.
+- **Typecheck:** `NODE_OPTIONS=--max-old-space-size=4096 npx tsc --noEmit` pasó.
+- **Build:** `npm run build` pasó (Next.js 16.1.1, `NODE_OPTIONS=--max-old-space-size=4096`). 180 páginas estáticas, las mismas del Lote 25. Sin URLs nuevas.
+- **Sitemap de ese build (aún sin el commit):** 162 URLs (`<loc>`). Sin `/ads` ni `/sitelink`. El `lastmod` de las URLs editadas queda en la fecha del commit de cada `page.tsx` (todavía 2026-10-24 o 2026-10-18, porque este build es anterior al commit). No se tocó `app/sitemap.ts`. `/voz-online/fonoaudiologa-de-voz-online` sigue en `2026-10-24T04:02:09.000Z`.
+
+---
+
 ## 2026-10-30: SEO Lote 25 — dislexia y dislalia, primera evaluación, voz online y tratamientos en Chillán
 
 ### Contexto

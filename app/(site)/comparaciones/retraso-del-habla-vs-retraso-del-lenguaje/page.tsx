@@ -11,10 +11,11 @@ const WHATSAPP_LINK = whatsappUrl(
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Diferencia entre retraso del habla y del lenguaje",
+  title: "Retraso del habla o del lenguaje: la diferencia",
   description:
-    "Diferencia entre retraso del habla y del lenguaje: pronunciación versus vocabulario y frases. Señales y evaluación en Chillán.",
+    "Retraso del habla o del lenguaje: pronunciar mal no es lo mismo que tener pocas palabras o frases cortas. Señales y evaluación en Chillán.",
   keywords: [
+    "retraso del habla o del lenguaje",
     "diferencia entre retraso del habla y lenguaje",
     "retraso del habla vs retraso del lenguaje",
     "diferencia habla y lenguaje",
@@ -51,9 +52,9 @@ const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline:
-    "Retraso del habla vs retraso del lenguaje: qué cambia y cuándo consultar",
+    "Retraso del habla o del lenguaje: qué cambia y cuándo consultar",
   description:
-    "Comparación para padres entre retraso del habla y retraso del lenguaje infantil, señales, evaluación y recursos en Chillán.",
+    "Retraso del habla o del lenguaje: pronunciar mal no es lo mismo que tener pocas palabras o frases cortas. Señales y evaluación en Chillán.",
   author: {
     "@type": "Person",
     name: "Katia Domínguez",
@@ -68,7 +69,7 @@ const articleJsonLd = {
     "@id": `${SITE_URL}${PAGE_PATH}`,
   },
   datePublished: "2026-05-20",
-  dateModified: "2026-05-20",
+  dateModified: "2026-10-31",
 };
 
 const faqJsonLd = {
@@ -144,18 +145,15 @@ export default function RetrasoHablaVsRetrasoLenguajePage() {
 
             <article className="prose prose-rose lg:prose-lg max-w-none">
               <h1 className="text-4xl font-extrabold text-gray-900">
-                Retraso del habla vs retraso del lenguaje: qué cambia y cuándo
-                consultar
+                Retraso del habla o del lenguaje: qué cambia y cuándo consultar
               </h1>
               <p className="lead text-lg text-gray-700" data-speakable>
-                No son lo mismo. El{" "}
-                <strong>retraso del habla</strong> se relaciona sobre todo con
-                cómo suenan las palabras: claridad, sonidos y articulación. El{" "}
-                <strong>retraso del lenguaje</strong> tiene que ver con
-                comprender y usar el lenguaje: vocabulario, frases e
-                instrucciones. Un niño puede tener uno, el otro o ambos; esta
-                guía te ayuda a distinguirlos sin confundirlos con otros
-                trastornos.
+                Retraso del habla o del lenguaje no es la misma duda. El{" "}
+                <strong>retraso del habla</strong> es cómo suenan las palabras:
+                claridad, sonidos y articulación. El{" "}
+                <strong>retraso del lenguaje</strong> es comprender y usar el
+                idioma: vocabulario, frases e instrucciones. Un niño puede tener
+                uno, el otro o ambos.
               </p>
 
               <h2>Tabla comparativa</h2>
@@ -301,7 +299,22 @@ export default function RetrasoHablaVsRetrasoLenguajePage() {
                 >
                   agendar una hora con fonoaudióloga infantil en Chillán
                 </Link>{" "}
-                para empezar.
+                para empezar. Si el problema parece de sonidos sueltos o de una
+                regla que se repite, mira la{" "}
+                <Link
+                  href="/comparaciones/dislalia-vs-trastorno-fonologico"
+                  className="font-semibold text-rose-600"
+                >
+                  diferencia entre dislalia y trastorno fonológico
+                </Link>
+                . Si el atraso es de frases y te hablaron de TEL, mira{" "}
+                <Link
+                  href="/comparaciones/tel-vs-retraso-del-lenguaje"
+                  className="font-semibold text-rose-600"
+                >
+                  TEL o retraso del lenguaje
+                </Link>
+                .
               </p>
 
               <section className="not-prose mt-12">

@@ -6,15 +6,16 @@ import { buildPageMetadata } from "@/lib/seo";
 import { SITE_URL, whatsappUrl } from "@/lib/site";
 
 const PAGE_PATH = "/comparaciones/dislalia-vs-disartria";
-const TITLE = "Dislalia vs disartria: qué las distingue";
+const TITLE = "Dislalia y disartria: diferencias y cómo saber cuál es";
 const DESCRIPTION =
-  "La dislalia cambia sonidos sueltos. La disartria es neuromuscular: el habla puede sonar imprecisa, lenta o con poco volumen. Cuándo evaluar en Chillán.";
+  "Dislalia y disartria no son lo mismo: sonidos sin causa neuromotora, o una alteración motora del habla de origen neurológico. Evaluación en Chillán.";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
   title: TITLE,
   description: DESCRIPTION,
   keywords: [
+    "dislalia y disartria",
     "diferencia entre dislalia y disartria",
     "dislalia vs disartria",
     "qué es disartria infantil",
@@ -59,7 +60,7 @@ const articleJsonLd = {
   description: DESCRIPTION,
   inLanguage: "es-CL",
   datePublished: "2026-10-24",
-  dateModified: "2026-10-24",
+  dateModified: "2026-10-31",
   author: {
     "@type": "Person",
     name: "Katia Domínguez",
@@ -159,12 +160,12 @@ export default function DislaliaVsDisartriaPage() {
                 Diferencia entre dislalia y disartria
               </h1>
               <p className="lead text-lg text-gray-700" data-speakable>
-                La dislalia cambia sonidos del habla: el niño omite, sustituye
-                o distorsiona fonemas. La disartria es otra cosa. Tiene base
-                neuromuscular y el habla puede sonar imprecisa, lenta, con poco
-                volumen o con esfuerzo. No son el mismo cuadro. La evaluación
-                del habla las separa, y la disartria además se mira con un
-                médico.
+                Dislalia y disartria no son el mismo cuadro. La dislalia es
+                articular mal los sonidos —omitirlos, sustituirlos o
+                distorsionarlos— sin una causa neuromotora. La disartria es una
+                alteración motora del habla de origen neurológico: puede sonar
+                imprecisa, lenta, con poco volumen o con esfuerzo, y además se
+                mira con un médico.
               </p>
 
               <h2>Tabla comparativa</h2>
@@ -251,9 +252,17 @@ export default function DislaliaVsDisartriaPage() {
                 <Link href="/tratamientos/dislalia-infantil-chillan">
                   dislalia infantil en Chillán
                 </Link>
-                . Si cambia varios sonidos a la vez, la otra comparación es{" "}
+                . Si cambia varios sonidos a la vez, mira la{" "}
                 <Link href="/comparaciones/dislalia-vs-trastorno-fonologico">
-                  dislalia y trastorno fonológico
+                  diferencia entre dislalia y trastorno fonológico
+                </Link>
+                . Si no se le entiende o le faltan palabras, mira{" "}
+                <Link href="/comparaciones/retraso-del-habla-vs-retraso-del-lenguaje">
+                  retraso del habla o del lenguaje
+                </Link>
+                . Si te hablaron de TEL o de un retraso del lenguaje, mira{" "}
+                <Link href="/comparaciones/tel-vs-retraso-del-lenguaje">
+                  TEL o retraso del lenguaje
                 </Link>
                 . La hora de habla es la{" "}
                 <Link href="/servicios/evaluacion-del-habla-infantil-chillan">

@@ -114,6 +114,18 @@ export default function ComparacionesHubPage() {
         <Link href="/comparaciones/dislalia-vs-disartria" className="font-medium text-rose-700 underline">
           dislalia y disartria
         </Link>
+        . Si no sabes si falla un sonido o una regla que se repite, mira la{" "}
+        <Link href="/comparaciones/dislalia-vs-trastorno-fonologico" className="font-medium text-rose-700 underline">
+          diferencia entre dislalia y trastorno fonológico
+        </Link>
+        . Si la duda es pronunciar o tener pocas palabras, mira{" "}
+        <Link href="/comparaciones/retraso-del-habla-vs-retraso-del-lenguaje" className="font-medium text-rose-700 underline">
+          retraso del habla o del lenguaje
+        </Link>
+        . Si te dijeron TEL o retraso del lenguaje, mira{" "}
+        <Link href="/comparaciones/tel-vs-retraso-del-lenguaje" className="font-medium text-rose-700 underline">
+          TEL o retraso del lenguaje (TDL)
+        </Link>
         . Las edades están en las{" "}
         <Link
           href="/recursos/senales-de-alerta-del-lenguaje-y-habla"

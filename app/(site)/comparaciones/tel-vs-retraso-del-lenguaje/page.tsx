@@ -8,10 +8,12 @@ const PAGE_PATH = "/comparaciones/tel-vs-retraso-del-lenguaje";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Diferencia entre TEL y retraso del lenguaje",
+  title: "TEL o retraso del lenguaje (TDL): la diferencia",
   description:
-    "Diferencia entre TEL y retraso del lenguaje: uno puede ser transitorio y el otro persiste. Tabla y cuándo evaluar en Chillán.",
+    "TEL o retraso del lenguaje no es lo mismo. El retraso puede ser transitorio; el TEL, también llamado TDL, es un perfil que persiste. Evaluación en Chillán.",
   keywords: [
+    "TEL o retraso del lenguaje",
+    "TDL o retraso del lenguaje",
     "diferencia entre TEL y retraso del lenguaje",
     "TEL vs retraso del lenguaje",
     "TEL TDL diferencia retraso",
@@ -47,9 +49,9 @@ const faqs = [
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "TEL vs Retraso del Lenguaje: Diferencias Clave",
+  headline: "TEL o retraso del lenguaje: ¿atraso o TDL?",
   description:
-    "Comparación para padres entre TEL/TDL y retraso del lenguaje infantil, cuándo consultar y recursos en Chillán.",
+    "TEL o retraso del lenguaje no es lo mismo. El retraso puede ser transitorio; el TEL, también llamado TDL, es un perfil que persiste. Evaluación en Chillán.",
   author: {
     "@type": "Person",
     name: "Katia Domínguez",
@@ -64,7 +66,7 @@ const articleJsonLd = {
     "@id": `${SITE_URL}${PAGE_PATH}`,
   },
   datePublished: "2026-05-19",
-  dateModified: "2026-05-19",
+  dateModified: "2026-10-31",
 };
 
 const faqJsonLd = {
@@ -140,27 +142,36 @@ export default function TelVsRetrasoLenguajePage() {
 
             <article className="prose prose-rose lg:prose-lg max-w-none">
               <h1 className="text-4xl font-extrabold text-gray-900">
-                TEL vs retraso del lenguaje: ¿es solo “lento” o hay un trastorno?
+                TEL o retraso del lenguaje: ¿atraso o TDL?
               </h1>
               <p
                 className="lead text-lg text-gray-700"
                 data-speakable
               >
-                Muchos padres escuchan que su hijo “va un poco atrasado” en el
-                habla. El{" "}
-                <Link href="/glosario/tel" className="font-semibold text-rose-600">
-                  TEL (trastorno del desarrollo del lenguaje)
-                </Link>{" "}
-                y el{" "}
+                TEL o retraso del lenguaje no son el mismo cuadro. El{" "}
                 <Link
                   href="/glosario/retraso-del-lenguaje"
                   className="font-semibold text-rose-600"
                 >
                   retraso del lenguaje
                 </Link>{" "}
-                no son intercambiables: uno puede resolverse con estimulación;
-                el otro implica un perfil persistente que beneficia de terapia
-                especializada. Aquí te explicamos las diferencias.
+                es un desarrollo más lento, que a veces avanza con estimulación.
+                El{" "}
+                <Link href="/glosario/tel" className="font-semibold text-rose-600">
+                  TEL
+                </Link>
+                , también llamado{" "}
+                <Link href="/glosario/tdl" className="font-semibold text-rose-600">
+                  TDL
+                </Link>
+                , es un perfil que persiste al comprender o armar frases. La{" "}
+                <Link
+                  href="/servicios/evaluacion-del-lenguaje-infantil-chillan"
+                  className="font-semibold text-rose-600"
+                >
+                  evaluación en Chillán
+                </Link>{" "}
+                los distingue.
               </p>
 
               <h2>Tabla comparativa</h2>
@@ -325,6 +336,18 @@ export default function TelVsRetrasoLenguajePage() {
                 y la hora se pide en{" "}
                 <Link href="/contacto-fonoaudiologa-chillan">
                   contacto en Chillán
+                </Link>{" "}
+                o al{" "}
+                <Link href="/agendar-hora-fonoaudiologo-infantil-chillan">
+                  agendar una hora en Chillán
+                </Link>
+                . Si la duda es pronunciar o tener pocas palabras, mira{" "}
+                <Link href="/comparaciones/retraso-del-habla-vs-retraso-del-lenguaje">
+                  retraso del habla o del lenguaje
+                </Link>
+                . Si falla un sonido o una regla que se repite, mira la{" "}
+                <Link href="/comparaciones/dislalia-vs-trastorno-fonologico">
+                  diferencia entre dislalia y trastorno fonológico
                 </Link>
                 .
               </p>

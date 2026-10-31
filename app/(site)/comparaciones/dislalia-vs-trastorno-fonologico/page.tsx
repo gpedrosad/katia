@@ -10,7 +10,7 @@ export const metadata = buildPageMetadata({
   path: PAGE_PATH,
   title: "Diferencia entre dislalia y trastorno fonológico",
   description:
-    "¿Cuál es la diferencia entre dislalia y trastorno fonológico? Tabla comparativa, ejemplos, señales por edad y cuándo consultar fonoaudióloga en Chillán.",
+    "Diferencia entre dislalia y trastorno fonológico: un fonema mal articulado no es una regla que cambia muchos sonidos. Evaluación en Chillán.",
   keywords: [
     "diferencia entre dislalia y trastorno fonológico",
     "dislalia vs trastorno fonológico",
@@ -47,9 +47,9 @@ const faqs = [
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Dislalia vs Trastorno Fonológico: Diferencias Clave",
+  headline: "Diferencia entre dislalia y trastorno fonológico",
   description:
-    "Guía comparativa para padres: diferencias entre dislalia y trastorno fonológico, cuándo consultar y enlaces a tratamiento en Chillán.",
+    "Diferencia entre dislalia y trastorno fonológico: un fonema mal articulado no es una regla que cambia muchos sonidos. Evaluación en Chillán.",
   author: {
     "@type": "Person",
     name: "Katia Domínguez",
@@ -64,7 +64,7 @@ const articleJsonLd = {
     "@id": `${SITE_URL}${PAGE_PATH}`,
   },
   datePublished: "2026-05-19",
-  dateModified: "2026-05-19",
+  dateModified: "2026-10-31",
 };
 
 const faqJsonLd = {
@@ -153,27 +153,32 @@ export default function DislaliaVsTrastornoFonologicoPage() {
 
             <article className="prose prose-rose lg:prose-lg max-w-none">
               <h1 className="text-4xl font-extrabold text-gray-900">
-                Dislalia vs trastorno fonológico: ¿cuál tiene mi hijo?
+                Diferencia entre dislalia y trastorno fonológico
               </h1>
               <p
                 className="lead text-lg text-gray-700"
                 data-speakable
               >
-                Ambos trastornos afectan cómo suena el habla de un niño, pero no
-                son lo mismo: la{" "}
+                La diferencia entre dislalia y trastorno fonológico está en el
+                tipo de error. La{" "}
                 <Link href="/glosario/dislalia" className="font-semibold text-rose-600">
                   dislalia
                 </Link>{" "}
-                apunta a fonemas mal articulados; el{" "}
+                es articular mal fonemas concretos. El{" "}
                 <Link
                   href="/glosario/trastorno-fonologico"
                   className="font-semibold text-rose-600"
                 >
                   trastorno fonológico
                 </Link>{" "}
-                refleja reglas erróneas que simplifican muchos sonidos a la vez.
-                Esta guía te ayuda a distinguirlos y saber cuándo consultar en
-                Chillán.
+                es una regla que simplifica muchos sonidos a la vez, y la{" "}
+                <Link
+                  href="/servicios/evaluacion-del-habla-infantil-chillan"
+                  className="font-semibold text-rose-600"
+                >
+                  evaluación del habla en Chillán
+                </Link>{" "}
+                los separa.
               </p>
 
               <h2>Tabla comparativa</h2>
@@ -334,6 +339,19 @@ export default function DislaliaVsTrastornoFonologicoPage() {
                 . Si quieres la evaluación de la pronunciación, está en la{" "}
                 <Link href="/servicios/evaluacion-del-habla-infantil-chillan">
                   evaluación del habla infantil
+                </Link>
+                . Si el habla suena débil o con esfuerzo y no es un sonido suelto,
+                mira{" "}
+                <Link href="/comparaciones/dislalia-vs-disartria">
+                  dislalia y disartria
+                </Link>
+                . Si no se le entiende o le faltan palabras, mira{" "}
+                <Link href="/comparaciones/retraso-del-habla-vs-retraso-del-lenguaje">
+                  retraso del habla o del lenguaje
+                </Link>
+                . Si te dijeron TEL o retraso del lenguaje, mira{" "}
+                <Link href="/comparaciones/tel-vs-retraso-del-lenguaje">
+                  TEL o retraso del lenguaje
                 </Link>
                 . Las edades están en las{" "}
                 <Link href="/recursos/senales-de-alerta-del-lenguaje-y-habla">

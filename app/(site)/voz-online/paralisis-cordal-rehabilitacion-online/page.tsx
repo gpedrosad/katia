@@ -8,9 +8,10 @@ export const metadata = buildPageMetadata({
   path: "/voz-online/paralisis-cordal-rehabilitacion-online",
   title: "Parálisis de cuerda vocal | Rehabilitación online",
   description:
-    "Rehabilitación online de parálisis de cuerda vocal. Con terapia, el cierre glótico suele mejorar en 6 a 12 meses. Especialista en voz.",
+    "Parálisis o paresia de cuerda vocal: de un lado (derecha o izquierda) o de las dos. Qué hace la fonoaudióloga después del diagnóstico del otorrino. Online.",
   keywords: [
     "parálisis cuerda vocal",
+    "paresia de cuerda vocal",
     "parálisis cordal",
     "rehabilitación vocal online",
     "fonoaudióloga especialista en voz",
@@ -50,7 +51,7 @@ export default function ParalisisCordalPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
-    dateModified: "2026-10-15",
+    dateModified: "2026-10-31",
     name: "Parálisis de Cuerda Vocal - Rehabilitación Online",
     medicalSpecialty: "SpeechTherapy",
     about: {
@@ -106,6 +107,23 @@ export default function ParalisisCordalPage() {
             fonoaudiológica online es altamente efectiva</strong> para recuperar función vocal
             en 6-12 meses en casos post-quirúrgicos y virales.
           </p>
+          <section>
+            <h2 className="text-2xl font-bold mt-8 text-slate-900">
+              Qué es la parálisis o la paresia de una cuerda vocal
+            </h2>
+            <p>
+              La parálisis de una cuerda vocal es cuando esa cuerda no se mueve.
+              La paresia de cuerda vocal es cuando se mueve, pero con menos
+              fuerza. Puede ser de un solo lado —la cuerda vocal derecha o la
+              izquierda— o de las dos. Si las cuerdas vocales quedan
+              paralizadas, la voz puede salir soplada o débil. Tu otorrino es
+              quien diagnostica la parálisis o la paresia, al mirar la laringe.
+              Después de ese diagnóstico, la fonoaudióloga trabaja la voz que te
+              queda: el aire, el cierre al hablar y el cuidado vocal. La terapia
+              no reemplaza al otorrino ni promete que el nervio vuelva a
+              moverse.
+            </p>
+          </section>
           <p className="not-prose mb-6">
             <Link
               href="/voz-online/fonoaudiologa-de-voz-online"
