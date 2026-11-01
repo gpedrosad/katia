@@ -20,6 +20,115 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-11-01: SEO Lote 27 — corte de 7 días; guía de casa, logopeda y fonoaudiólogo infantil quedan para medir
+
+### Contexto
+
+**Datos GSC (90 días 2026-08-03 al 2026-10-31, sc-domain:katialafono.cl):**
+- **100 clics**
+- **9.972 impresiones**
+- **Posición promedio: 8,4**
+
+**Últimos 7 días (2026-10-25 al 2026-10-31):** 15 clics / 2.977 imp / pos 7,8 vs 7 días previos: 9 clics / 1.260 imp / pos 8,4. El 2026-10-31 está incompleto.
+
+Elegibilidad: última edición de contenido del `page.tsx` el 2026-10-25 o antes (`git log` + este changelog). Se ignoran regeneraciones globales de sitemap y `lastmod`. Sin páginas de otras ciudades, sin `/ads`, sin `/sitelink`. Sin precios, estadísticas, credenciales ni plazos nuevos. Español de Chile, tú.
+
+Las tres URLs pedidas se editaron después del corte. No se reescribió title, meta, H1 ni cuerpo. Un segundo pase a los 4–6 días resetearía la medición de los Lotes 21 y 23.
+
+### Páginas revisadas (sin cambios)
+
+Titles absolutos (`buildPageMetadata`). Lo que sigue es el texto que ya está en producción de código: antes = después.
+
+#### 1. `/recursos/estimular-lenguaje-en-casa`
+**Métricas GSC:** 90 días, 7 clics / 404 imp / pos 13,6. 7 días, 2 clics / 53 imp / pos 10,8. «cómo empezar la terapia de lenguaje en casa» 30 imp, pos 15,1. «cómo hacer terapia de lenguaje en casa» 17 imp, pos 14,5, y 10 imp, pos 9,7. «como dar terapia de lenguaje en casa» 4 imp. «estimulación del lenguaje» 74 imp, pos 31. Último cambio: 2026-10-28 (`5cd1d4d`, Lote 23). Eligible de nuevo ~2026-11-04.
+
+- **Title (43):** se mantiene «Cómo empezar la terapia de lenguaje en casa»
+- **Description (144):** se mantiene «Cómo empezar y cómo hacer terapia de lenguaje en casa: modela, expande y no interrogues. Complementa la evaluación en Chillán y no la reemplaza.»
+- **H1 (43):** el mismo texto que el title
+- **H2 que ya responde «cómo empezar»:** «¿Cómo empezar la terapia de lenguaje en casa?». Dos frases de rutina (nombrar, ofrecer opciones, leer, celebrar el intento; 15-20 minutos que ya estaban) y el cierre de que esa práctica complementa la evaluación y la terapia y no las reemplaza. El enlace a `/servicios/evaluacion-fonoaudiologica` está en la respuesta rápida, junto al de `/servicios/terapia-lenguaje-infantil`. Más abajo siguen «evaluación del lenguaje» y «evaluación fonoaudiológica»
+- **H2 de «cómo hacer»:** «¿Cómo hacer terapia de lenguaje en casa?», con «Cómo dar terapia de lenguaje en casa, en cinco pasos». El FAQPage usa el mismo párrafo que el H2 de «cómo empezar»
+- **«Estimulación del lenguaje»** sigue cedida a `/servicios/estimulacion-temprana-del-lenguaje-chillan` (Lotes 14 y 21). No se armó un H2 «Cómo empezar a estimular el lenguaje en casa»: ese título devolvería a esta guía la consulta que el servicio de Chillán tiene que capturar. Cuando sea eligible, el ajuste fino es el enlace dentro del párrafo del H2, no un title nuevo
+
+#### 2. `/glosario/logopeda`
+**Métricas GSC:** 90 días, 1 clic / 97 imp / pos 9,3. 7 días, 1 clic / 77 imp. «logopeda es lo mismo que fonoaudiología» 7 imp, pos 5,6. «logopeda y fonoaudiología es lo mismo» 7 imp, pos 7,0. «logopeda es lo mismo que fonoaudiólogo» 4 imp, pos 5,5. Último cambio: 2026-10-26 (`c5289a3`, Lote 21). Eligible de nuevo ~2026-11-02.
+
+- **Title (38):** se mantiene «Logopeda y logopedia: qué son en Chile»
+- **Description (151):** se mantiene «Logopeda y logopedia nombran, en España y otros países, al fonoaudiólogo y a la fonoaudiología de Chile. Qué hace un logopeda infantil y cómo buscarlo.»
+- **H1 (20):** se mantiene «¿Qué es un logopeda?»
+- **Primer párrafo:** ya responde. Logopeda es la persona y logopedia la disciplina. En España y en algunos otros países así se llama al fonoaudiólogo y a la fonoaudiología de Chile. En Chile se busca como fonoaudiólogo o fonoaudióloga
+- **FAQ, mismo texto visible:** «¿Logopeda y fonoaudiólogo es lo mismo?» y «¿Logopedia y fonoaudiología son lo mismo?». El FAQPage sale de ese arreglo
+- El title todavía no abre con «¿son lo mismo?». Ese es el retoque que queda para cuando cumplan 7 días, si esas consultas siguen en pos 5–7 con poco clic. El hecho (España / Chile) no se reescribe
+
+#### 3. `/preguntas/que-hace-un-fonoaudiologo-infantil`
+**Métricas GSC:** 90 días, 0 clics / 70 imp / pos 9,5. «fonoaudiólogo infantil» 15 imp, pos 9,9. «que hace un fonoaudiólogo infantil» 7 imp, pos 5,0. «que hace una fonoaudióloga infantil» 4 imp. Último cambio del `page.tsx`: 2026-10-28 (`5cd1d4d`, Lote 23). `catalogo.ts` se editó el 2026-10-25 (`efbe17a`) y no se tocó. Eligible de nuevo ~2026-11-04.
+
+- **Title y H1 (45):** se mantienen «¿Qué es y qué hace un fonoaudiólogo infantil?»
+- **Description (155):** se mantiene «Fonoaudiólogo infantil: evalúa cómo tu hijo comprende, habla y pronuncia. Qué es una fonoaudióloga infantil en Chillán: primera hora, evaluación e informe.»
+- **Respuesta bajo el H1:** un fonoaudiólogo infantil evalúa y trata cómo el niño comprende, arma frases y pronuncia. Una fonoaudióloga infantil hace el mismo trabajo. En Chillán la primera hora es evaluación con informe y, si hace falta, plan de terapia
+- **Enlaces que ya están:** «evaluación fonoaudiológica» hacia `/servicios/evaluacion-fonoaudiologica` (relacionados) y «fonoaudióloga infantil en Chillán» hacia `/fonoaudiologa-ninos-chillan` (cuerpo). También evaluación del lenguaje y evaluación del habla. No faltaba el enlace contextual
+- **FAQ:** «¿Qué es una fonoaudióloga infantil?» usa el mismo párrafo visible
+
+### Informe (sin editar): `/voz-online/fonoaudiologa-de-voz-online`
+
+**Métricas GSC, 7 días:** de 3 clics / 35 imp / pos 6,3 a 2 clics / 51 imp / pos 9,3. Último cambio de contenido: 2026-10-24 (`c9d2441`, Lote 18: párrafo de países y enlace a Miami). El title es del 2026-10-20 (`9437dfa`). La semana 25–31 oct es la primera semana completa después de ese copy. El día 31 está incompleto. No se editó la hub ni ninguna landing de ciudad.
+
+**Canonical.** `buildPageMetadata` publica canonical propio, `index, follow`, en la hub y en cada ciudad. Ninguna página de `/voz-online/` usa `canonicalPath`. La hub canónica es `https://www.katialafono.cl/voz-online/fonoaudiologa-de-voz-online`. No hay un canonical roto ni un noindex escondido. El schema `Service` de la hub usa esa misma URL y `areaServed` Chile.
+
+**Canibalización con ciudades.** Cinco URLs indexables, en el sitemap, con title que contiene la frase de la hub y canonical propio:
+
+| URL | Title | Caracteres |
+| --- | --- | --- |
+| `/voz-online/fonoaudiologa-voz-santiago` | Fonoaudióloga de voz online en Santiago | 39 |
+| `/voz-online/fonoaudiologa-voz-concepcion` | Fonoaudióloga de voz online en Concepción | 41 |
+| `/voz-online/fonoaudiologa-voz-antofagasta` | Fonoaudióloga de voz online en Antofagasta | 42 |
+| `/voz-online/fonoaudiologa-voz-temuco` | Fonoaudióloga de Voz Online en Temuco \| Disfonía y Nódulos | 58 |
+| `/voz-online/fonoaudiologa-voz-vina-del-mar` | Fonoaudióloga experta en Voz en Viña del Mar \| Vía Online | 57 |
+
+La hub, desde el 2026-10-20, titula «Terapia de voz online para adultos en Chile» (43) y el H1 es «Terapia de voz online para adultos en todo Chile» (48). La frase «fonoaudióloga de voz online» quedó en el slug, en la meta y en `keywords`. Antofagasta repite esa frase suelta en `keywords`, sin la ciudad. El bloque «Atención online en tu ciudad» enlaza las cinco con el ancla «Fonoaudióloga de voz en {ciudad}». Cada ciudad vuelve a la hub por breadcrumb. El FAQ de la hub dice que atiende Santiago y regiones: la misma intención que el FAQ de cada ciudad.
+
+Más impresiones (35 → 51) con peor posición (6,3 → 9,3) calza con un mix más ancho después del title de «terapia de voz online», mientras las ciudades siguen compitiendo por «fonoaudióloga de voz online». No calza con un canonical mal puesto en la hub.
+
+**Qué hacer, en un lote de voz y con la consulta partida en GSC.** No en este lote, y sin reescribir las ciudades desde un lote de Chillán.
+
+1. En GSC, partir por URL las consultas «fonoaudióloga de voz online», «fonoaudiologo online», «terapia de voz online» y «fonoaudiólogo especialista en voz» entre la hub y las cinco ciudades. Si una ciudad rankea la consulta sin el nombre de la ciudad, ahí está la canibalización.
+2. Mientras eso no se vea, dejar el canonical propio. Consolidar las cinco hacia la hub borraría landings que pueden estar rankeando «en Santiago» y el resto.
+3. Cuando se edite la hub: devolver «fonoaudióloga de voz online» al title, junto a «terapia de voz online para adultos», sin ciudad, en ≤60 caracteres, y alinear el H1. La frase suelta en `keywords` de Antofagasta sale en ese mismo pase de voz.
+4. Juzgar el copy del 2026-10-24 recién hacia el 2026-11-07. Reescribir la hub esta semana mezclaría el title del 20-oct con otro cambio.
+
+### Omitidas
+
+- `/recursos/estimular-lenguaje-en-casa` y `/preguntas/que-hace-un-fonoaudiologo-infantil`. Copy el 2026-10-28 (Lote 23, `5cd1d4d`). Medir ~2026-11-11 antes de otro pase. Elegibles ~2026-11-04
+- `/glosario/logopeda`. Copy el 2026-10-26 (Lote 21, `c5289a3`). Eligible ~2026-11-02
+- `/voz-online/fonoaudiologa-de-voz-online`. Informe arriba. Copy el 2026-10-24. No se editó
+- `/comparaciones/*` (Lotes 25–26), `/voz-online/paralisis-cordal-rehabilitacion-online`, `/recursos/primera-evaluacion-fonoaudiologica-infantil`, `/recursos/hitos-del-lenguaje-por-edad`, `/preguntas/el-tel-se-cura`, `/tratamientos/trastorno-fonologico-chillan`, `/tratamientos/dislalia-infantil-chillan`, `/chillan/*`, la home y el resto de Lotes 24–26
+- Páginas de ciudad en `/voz-online/` (Antofagasta, Concepción, Viña del Mar, Santiago, Temuco y el resto). No se editaron
+- `/ads/*` y `/sitelink/*`. No se editaron
+- Tracking, formularios y textos de WhatsApp. No se editaron
+
+### Métricas esperadas
+
+Medir ~2026-11-15, sobre el copy que ya está:
+- «cómo empezar» y «cómo hacer terapia de lenguaje en casa» en `/recursos/estimular-lenguaje-en-casa`, con el title del 2026-10-28. «estimulación del lenguaje» se sigue mirando en el servicio de Chillán; si a mediados de noviembre sigue cayendo en la guía (74 imp, pos 31), el pase del ~4-nov agrega la frase en una oración del H2 y mantiene el enlace al servicio, sin devolverla al title
+- «logopeda es lo mismo que fonoaudiólogo / fonoaudiología» en `/glosario/logopeda`. Si al ~2-nov siguen en pos 5–7 con poco clic, el title pasa a preguntar «¿Logopeda y fonoaudiólogo son lo mismo?» (≤60). El primer párrafo ya lo dice
+- CTR > 0 en `/preguntas/que-hace-un-fonoaudiologo-infantil` para «fonoaudiólogo infantil» y «que hace un fonoaudiólogo infantil». Title, respuesta y enlaces al pilar y a la evaluación ya están
+- En la hub de voz, la consulta partida por URL antes de tocar title o canonical. Posición de la hub hacia el 2026-11-07, con el día 31-oct ya cerrado
+
+Próximo lote, cuando el corte lo permita:
+- Hitos, «a que edad hablan los niños» (en el Lote 23: 293 imp, pos 9,7; el encargo de este lote la cita en 316 imp, pos 9,7). Último cambio 2026-10-28. Eligible ~2026-11-04. El title ya es «¿A qué edad hablan los niños? Hitos, 11-14 meses»: primero ver si el CTR se movió; si sigue en ~9,7 y 0 clics, el pase es de snippet, no un title desde cero
+- Logopeda, el title «¿son lo mismo?», desde ~2026-11-02
+- Hub de voz, solo después de ver qué URL se queda con «fonoaudióloga de voz online»
+
+### Técnico
+
+- No se editó `app/sitemap.ts`, `lib/seo-routes.ts` ni ningún `page.tsx`. Sin URLs nuevas.
+- Canonical de las tres candidatas: `https://www.katialafono.cl` + path, `index, follow`. FAQPage de la guía de casa y de logopeda: el `acceptedAnswer` ya es el texto visible. En la pregunta del fonoaudiólogo, `GeoFAQ` ya repite el H1 y «¿Qué es una fonoaudióloga infantil?».
+- **Lint:** `npm run lint` sale 1 por el error previo de `app/ads/_components/AdsStickyCta.tsx` (`react-hooks/set-state-in-effect`); no se tocó `/ads`. El resto del reporte son warnings ya presentes. No hubo `page.tsx` nuevo que pasar por `eslint`.
+- **Typecheck:** `NODE_OPTIONS=--max-old-space-size=4096 npx tsc --noEmit` pasó.
+- **Build:** `npm run build` pasó (Next.js 16.1.1, `NODE_OPTIONS=--max-old-space-size=4096`). 180 páginas estáticas, las mismas del Lote 26. Sin URLs nuevas.
+- **Sitemap de este build:** 162 URLs (`<loc>`). Sin `/ads` ni `/sitelink`. No hay segundo commit de sitemap: ningún `page.tsx` cambió, así que el `lastmod` no se mueve. `/recursos/estimular-lenguaje-en-casa` y `/preguntas/que-hace-un-fonoaudiologo-infantil` siguen en `2026-10-28T12:22:04.000Z`. `/glosario/logopeda` sigue en `2026-10-26T12:09:53.000Z`. `/voz-online/fonoaudiologa-de-voz-online` sigue en `2026-10-24T04:02:09.000Z`. No se tocó `app/sitemap.ts`.
+
+---
+
 ## 2026-10-31: SEO Lote 26 — dislalia y disartria, clúster de comparaciones y parálisis cordal
 
 ### Contexto
