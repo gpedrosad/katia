@@ -143,7 +143,7 @@ Title (45) «Fonoaudióloga en Chillán y voz online | Katia». H1 «Fonoaudiól
 
 ### Sitemap
 
-Build de este lote: **162** URLs (`<loc>`). Sin `/ads` ni `/sitelink`. No se tocó `app/sitemap.ts`. El `lastmod` de los `page.tsx` editados queda en el commit de este lote. En el HTML, `dateModified` 2026-11-03 solo en logopeda, disfonía por estrés y voz después de un resfrío. `/voz-online/presbifonia` y `/voz-online/proyeccion-de-voz` siguen en 2026-10-23. `/voz-online/afonia-perdi-la-voz` sigue en 2026-10-30.
+**Sitemap del build posterior al commit `bfa0ef4`:** 162 URLs (`<loc>`). Sin `/ads` ni `/sitelink`. Los cinco `page.tsx` editados quedan con `lastmod` `2026-11-03T12:26:33.000Z`. No se tocó `app/sitemap.ts`. En el HTML, `dateModified` 2026-11-03 solo en logopeda, disfonía por estrés y voz después de un resfrío. `/voz-online/presbifonia` y `/voz-online/proyeccion-de-voz` siguen en 2026-10-23. `/voz-online/afonia-perdi-la-voz` sigue en 2026-10-30. `/voz-online/fonoaudiologa-de-voz-online` no se editó.
 
 ### Métricas esperadas
 
