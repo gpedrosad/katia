@@ -3,9 +3,9 @@ import { VoiceClusterPage } from "@/app/(site)/voz-online/_components/VoiceClust
 import { buildPageMetadata } from "@/lib/seo";
 
 const PATH = "/voz-online/voz-despues-de-un-resfrio";
-const TITLE = "La voz no vuelve tras un resfrío o el COVID";
+const TITLE = "¿Por qué se va la voz cuando da gripe o resfrío?";
 const DESCRIPTION =
-  "Si el resfrío o el COVID ya pasó y la voz sigue ronca, el otorrino mira las cuerdas. La terapia online trabaja cómo hablas después. Adultos en Chile.";
+  "Si la gripe, el resfrío o el COVID ya pasó y la voz sigue ronca o se corta, el otorrino mira las cuerdas. La terapia online trabaja cómo hablas después.";
 
 export const metadata = buildPageMetadata({
   path: PATH,
@@ -13,6 +13,8 @@ export const metadata = buildPageMetadata({
   description: DESCRIPTION,
   keywords: [
     "voz después de un resfrío",
+    "por qué se va la voz cuando da gripe",
+    "se va la voz con la gripe",
     "ronquera después del COVID",
     "la voz no vuelve",
     "disfonía después de un resfriado",
@@ -55,7 +57,8 @@ export default function VozDespuesDeUnResfrioPage() {
       title={TITLE}
       description={DESCRIPTION}
       breadcrumb="Voz tras un resfrío"
-      quickAnswer="Si el resfrío o el COVID ya pasó y la voz sigue ronca, débil o se corta, el otorrino mira las cuerdas. La terapia de voz online —adultos, por videollamada, en todo Chile— no trata la infección: trabaja cómo hablas después, si ese examen lo permite. No promete que la voz vuelva a ser la de antes."
+      quickAnswer="Cuando da gripe, un resfrío o un COVID, la voz puede quedarse ronca, débil o cortada aunque el cuadro ya haya pasado. Esta página no describe secuelas con cifras: el otorrino mira las cuerdas. La terapia de voz online —adultos, por videollamada, en todo Chile— no trata la infección. Trabaja cómo hablas después, si ese examen lo permite, y no promete que la voz vuelva a ser la de antes."
+      dateModified="2026-11-03"
       serviceName="Terapia de voz online cuando la voz no vuelve tras un resfrío"
       serviceDescription="Acompañamiento fonoaudiológico online para adultos cuya voz no vuelve tras un resfrío o un COVID, en todo Chile, sin tratar la infección ni reemplazar al otorrino."
       areaServed={{ "@type": "Country", name: "Chile" }}
@@ -82,8 +85,10 @@ export default function VozDespuesDeUnResfrioPage() {
           <Link href="/voz-online/voz-ronca-causas-tratamiento">Voz ronca: causas y tratamiento</Link>{" "}
           ordena motivos distintos, entre ellos el mal uso, el reflujo y las lesiones.{" "}
           <Link href="/voz-online/afonia-perdi-la-voz">Me quedé sin voz</Link> es la pérdida, a
-          menudo brusca. Aquí el relato es otro: primero hubo una infección de vía aérea y, cuando
-          esa parte cedió, la voz no acompañó.
+          menudo brusca. Si no hubo gripe ni resfrío y lo que sientes es la voz apretada, la página
+          es <Link href="/voz-online/disfonia-por-estres">disfonía por estrés</Link>. Aquí el relato
+          es otro: primero hubo una infección de vía aérea y, cuando esa parte cedió, la voz no
+          acompañó.
         </p>
         <p>
           El reflujo también puede mantener una ronquera sin que hayas estado resfriado. Si esa es

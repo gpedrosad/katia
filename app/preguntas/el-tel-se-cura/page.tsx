@@ -4,9 +4,9 @@ import { buildPageMetadata } from "@/lib/seo";
 
 const PATH = "/preguntas/el-tel-se-cura";
 const H1 = "¿El TEL se cura?";
-const TITLE = "¿El TEL se cura? Lo que pasa con el trastorno del lenguaje";
+const TITLE = "¿El TEL se cura? No: qué esperar del TEL o TDL";
 const DESCRIPTION =
-  "El TEL no se cura: acompaña, y con terapia y apoyo puede mejorar mucho. Qué cambia con la edad, el colegio y cómo se diagnostica.";
+  "No. El TEL o TDL (trastorno del desarrollo del lenguaje) no se cura: acompaña. Con terapia y apoyo puede mejorar mucho. No hay un plazo igual.";
 
 export const metadata = buildPageMetadata({
   path: PATH,
@@ -15,6 +15,8 @@ export const metadata = buildPageMetadata({
   keywords: [
     "el tel se cura",
     "TEL se cura",
+    "tdl se cura",
+    "trastorno del lenguaje se cura",
     "tel diagnóstico",
     "trastorno específico del lenguaje",
     "TDL",
@@ -23,7 +25,7 @@ export const metadata = buildPageMetadata({
 });
 
 const answer =
-  "El TEL, hoy también llamado TDL, no se cura: es una condición del desarrollo del lenguaje que acompaña. No desaparece de un día para otro. Con terapia y apoyo en la casa y en el colegio, lo que se ve puede cambiar y mejorar mucho. La evaluación temprana define qué apoyar. No hay un plazo igual para todos.";
+  "No. El TEL, hoy también llamado TDL (trastorno del desarrollo del lenguaje), no se cura: es una condición del desarrollo del lenguaje que acompaña. No desaparece de un día para otro. Con terapia y apoyo en la casa y en el colegio, lo que se ve puede cambiar y mejorar mucho. No hay un plazo igual para todos.";
 
 export default function ElTelSeCuraPage() {
   return (
@@ -46,6 +48,10 @@ export default function ElTelSeCuraPage() {
         {
           href: "/comparaciones/tel-vs-retraso-del-lenguaje",
           label: "TEL y retraso del lenguaje",
+        },
+        {
+          href: "/servicios/evaluacion-fonoaudiologica",
+          label: "Evaluación fonoaudiológica",
         },
         {
           href: "/agendar-hora-fonoaudiologo-infantil-chillan",
@@ -126,9 +132,12 @@ export default function ElTelSeCuraPage() {
       <h2>Por qué conviene evaluar temprano</h2>
       <p>
         La evaluación no cura el TEL. Sirve para ver qué está pasando y qué
-        apoyar primero. En Chillán la primera hora con Katia Domínguez es
-        esa evaluación: entrevista, observación, pruebas según la edad y una
-        devolución. Ahí se dice si corresponde terapia y por dónde empezar.
+        apoyar primero. En Chillán, la primera hora con Katia Domínguez es una{" "}
+        <Link href="/servicios/evaluacion-fonoaudiologica">
+          evaluación fonoaudiológica
+        </Link>
+        : entrevista, observación, pruebas según la edad y una devolución.
+        Ahí se dice si corresponde terapia y por dónde empezar.
       </p>
       <p>
         Sin esa hora no hay un plan. Esperar «a ver si habla» deja la duda

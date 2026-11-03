@@ -23,6 +23,8 @@ type VoiceClusterPageProps = {
   faq: GeoFAQItem[];
   /** Si viene, la página es de otro país y coordina el horario según esa zona. */
   hoursPlace?: string;
+  /** Solo en la página que se editó. El resto conserva la fecha del lote de voz. */
+  dateModified?: string;
   children: ReactNode;
 };
 
@@ -38,6 +40,7 @@ export function VoiceClusterPage({
   whatsappMessage,
   faq,
   hoursPlace,
+  dateModified = "2026-10-23",
   children,
 }: VoiceClusterPageProps) {
   const pageUrl = `${SITE_URL}${path}`;
@@ -65,7 +68,7 @@ export function VoiceClusterPage({
     url: pageUrl,
     inLanguage: "es",
     datePublished: "2026-10-23",
-    dateModified: "2026-10-23",
+    dateModified,
   };
 
   return (

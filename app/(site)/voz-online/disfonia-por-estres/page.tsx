@@ -7,9 +7,9 @@ import { buildPageMetadata } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 
 const PATH = "/voz-online/disfonia-por-estres";
-const TITLE = "Disfonía por estrés o tensión: cuando la voz se aprieta";
+const TITLE = "Disfonía por estrés: ¿se puede perder la voz?";
 const DESCRIPTION =
-  "Si el estrés te aprieta la voz, la terapia online trabaja respiración, postura y hábitos. El otorrino descarta una lesión. Adultos en Chile.";
+  "El estrés puede apretarte la voz: se siente tensa y cuesta más hablar. No es quedarte sin voz de golpe. El otorrino descarta una lesión.";
 
 export const metadata = buildPageMetadata({
   path: PATH,
@@ -17,6 +17,8 @@ export const metadata = buildPageMetadata({
   description: DESCRIPTION,
   keywords: [
     "disfonía por estrés",
+    "disfonia por estres",
+    "se puede perder la voz por estrés",
     "disfonía por tensión muscular",
     "voz apretada por estrés",
     "terapia de voz online",
@@ -25,6 +27,11 @@ export const metadata = buildPageMetadata({
 });
 
 const faqItems = [
+  {
+    question: "¿Se puede perder la voz por estrés?",
+    answer:
+      "El estrés puede apretar la voz: se siente tensa, con un nudo en el cuello, y cuesta más hablar. Eso no es lo mismo que quedarte sin voz de golpe. Si la voz se corta, la página de afonía ordena ese caso. Si duele o la ronquera sigue, el otorrino mira las cuerdas.",
+  },
   {
     question: "¿El estrés puede dejarme la voz apretada?",
     answer:
@@ -73,7 +80,7 @@ export default function DisfoniaPorEstresPage() {
     url: `${SITE_URL}${PATH}`,
     inLanguage: "es-CL",
     datePublished: "2026-10-22",
-    dateModified: "2026-10-22",
+    dateModified: "2026-11-03",
   };
 
   return (
@@ -97,18 +104,16 @@ export default function DisfoniaPorEstresPage() {
 
         <article className="prose prose-rose lg:prose-lg max-w-none">
           <header className="mb-10">
-            <h1 className="text-4xl font-extrabold text-rose-950">
-              Disfonía por estrés o tensión: cuando la voz se aprieta
-            </h1>
+            <h1 className="text-4xl font-extrabold text-rose-950">{TITLE}</h1>
             <div className="not-prose my-6 rounded-2xl border-2 border-rose-200 bg-rose-50 p-5">
               <p className="text-lg font-semibold text-rose-950" data-speakable>
-                <strong>Respuesta rápida:</strong> Si el estrés o la tensión te
-                aprietan la voz, la terapia de voz online —adultos, por
-                videollamada, en todo Chile— trabaja respiración, postura y
-                hábitos al hablar. No diagnostica una lesión: el
-                otorrinolaringólogo mira las cuerdas. La videollamada no
-                reemplaza ese examen. Si hay dolor o la ronquera sigue, el
-                otorrino va primero.
+                <strong>Respuesta rápida:</strong> El estrés puede apretarte la
+                voz: se siente tensa, con un nudo en el cuello, y cuesta más
+                hablar. Eso no es quedarte sin voz de golpe. La terapia de voz
+                online —adultos, por videollamada, en todo Chile— trabaja
+                respiración, postura y hábitos al hablar. No diagnostica una
+                lesión: el otorrinolaringólogo mira las cuerdas. Si la voz se
+                corta, duele o la ronquera sigue, el otorrino va primero.
               </p>
             </div>
           </header>
@@ -162,6 +167,10 @@ export default function DisfoniaPorEstresPage() {
               . Si la voz se corta de golpe, mira{" "}
               <Link href="/voz-online/afonia-perdi-la-voz">
                 me quedé sin voz
+              </Link>
+              . Si se quedó después de una gripe o un resfrío, mira{" "}
+              <Link href="/voz-online/voz-despues-de-un-resfrio">
+                la voz después de un resfrío
               </Link>
               . Si te dijeron que es una condición neurológica y no solo
               tensión, la página distinta es{" "}

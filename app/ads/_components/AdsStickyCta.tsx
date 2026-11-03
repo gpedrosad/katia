@@ -33,8 +33,8 @@ export function AdsStickyCta({
       .filter((el): el is Element => el != null);
 
     if (targets.length === 0) {
-      setHidden(false);
-      return;
+      const frame = requestAnimationFrame(() => setHidden(false));
+      return () => cancelAnimationFrame(frame);
     }
 
     const visible = new Map<Element, boolean>();

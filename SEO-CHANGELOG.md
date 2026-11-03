@@ -20,6 +20,142 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-11-03: SEO Lote 28 — TEL o TDL, logopeda, evaluación en Chillán y voz sin ciudad
+
+### Contexto
+
+**Datos GSC (90 días 2026-08-04 al 2026-11-01, sc-domain:katialafono.cl):**
+- **102 clics**
+- **9.310 impresiones**
+- **Posición promedio: 8,0**
+
+**Últimos 7 días (2026-10-26 al 2026-11-01):** 19 clics / 2.986 imp / pos 7,6 vs 7 días previos (19–25 oct): 9 clics / 1.481 imp / pos 8,2.
+
+Elegibilidad: `git log --since=2026-10-28` sobre el `page.tsx` de cada URL, más este changelog. Se ignoran regeneraciones globales de sitemap y `lastmod`. Sin páginas de otras ciudades, sin `/ads`, sin `/sitelink`. Sin precios, estadísticas, credenciales ni plazos nuevos. Español de Chile, tú. Titles ≤60 y metas ≤155, vía `buildPageMetadata`. `dateModified` solo en las páginas editadas que ya lo publicaban.
+
+### Páginas optimizadas
+
+#### 1. `/preguntas/el-tel-se-cura`
+**Métricas GSC, 7 días:** 2 clics / 118 imp / pos 5,7. «el tel se cura» 28 imp, pos 4,8, 0 clics (90 días, 44 imp). «tdl se cura» 16 imp, pos 9,9, 0 clics. «trastorno del lenguaje se cura» 2 imp. Último cambio previo: 2026-10-22 (`13c0cbb`).
+
+El title preguntaba y no respondía. La respuesta bajo el H1 ya existía y el FAQ visible ya alimenta el FAQPage (`GeoFAQ`). TDL ya estaba en el cuerpo («trastorno del desarrollo del lenguaje») y en «¿TEL y TDL son lo mismo?».
+
+- **Title (58 → 46):** «¿El TEL se cura? Lo que pasa con el trastorno del lenguaje» → «¿El TEL se cura? No: qué esperar del TEL o TDL»
+- **Description (129 → 142):** «El TEL no se cura: acompaña, y con terapia y apoyo puede mejorar mucho. Qué cambia con la edad, el colegio y cómo se diagnostica.» → «No. El TEL o TDL (trastorno del desarrollo del lenguaje) no se cura: acompaña. Con terapia y apoyo puede mejorar mucho. No hay un plazo igual.»
+- **H1:** se mantiene «¿El TEL se cura?»
+- **Respuesta bajo el H1:** abre con «No.» y nombra TDL (trastorno del desarrollo del lenguaje). El resto ya estaba: no desaparece de un día para otro, con terapia y apoyo puede mejorar mucho, no hay un plazo igual para todos. El FAQ «¿El TEL se cura?» usa ese mismo párrafo
+- **Enlace nuevo**, ancla exacta «evaluación fonoaudiológica», hacia `/servicios/evaluacion-fonoaudiologica`, en el párrafo de la primera hora en Chillán y en «Sigue con estas páginas». La hora sigue siendo entrevista, observación, pruebas según la edad y devolución
+
+#### 2. `/glosario/logopeda`
+**Métricas GSC:** «logopeda es lo mismo que fonoaudiología» 8 imp, pos 5,9. «logopeda y fonoaudiología es lo mismo» 8 imp, pos 6,2. «logopeda es lo mismo que fonoaudiologo» 7 imp, pos 6,7. Las tres, 0 clics. Último cambio previo: 2026-10-26 (`c5289a3`). Eligible desde ~2026-11-02 (Lote 27). Es el retoque que ese lote dejó anotado.
+
+- **Title (38 → 48):** «Logopeda y logopedia: qué son en Chile» → «¿Logopeda y fonoaudiólogo son lo mismo? En Chile»
+- **Description (151 → 126):** «Logopeda y logopedia nombran, en España y otros países, al fonoaudiólogo y a la fonoaudiología de Chile. Qué hace un logopeda infantil y cómo buscarlo.» → «Sí. Logopeda y fonoaudiólogo son lo mismo. En España y otros países se dice logopeda; en Chile, fonoaudiólogo o fonoaudióloga.»
+- **H1 (20):** se mantiene «¿Qué es un logopeda?»
+- **Cuerpo y FAQ:** no se reescribieron. El hecho sigue siendo el mismo: en España y en algunos otros países se dice logopeda y logopedia; en Chile, fonoaudiólogo o fonoaudióloga
+- **dateModified:** 2026-10-26 → 2026-11-03. La description del `Article` queda alineada con la meta
+
+#### 3. `/servicios/evaluacion-fonoaudiologica`
+**Métricas GSC:** «evaluacion fonoaudiologica» 36 imp, pos 18,6, 0 clics. Último cambio previo: 2026-10-17 (`6d8fe10`).
+
+La consulta exacta ya estaba en el title, el H1, la respuesta rápida y el H2 «¿Qué incluye la evaluación fonoaudiológica?». El title gastaba el final en «| 60 min» y la meta, en «U. de Chile». La formación sigue en la home y en Sobre Katia; no se inventó ni se borró del sitio.
+
+- **Title (46 → 50):** «Evaluación fonoaudiológica en Chillán | 60 min» → «Evaluación fonoaudiológica en Chillán: qué incluye»
+- **Description (149 → 138):** «Evaluación fonoaudiológica en Chillán: 60 minutos, test estandarizados, diagnóstico de lenguaje y habla, informe para el colegio y plan. U. de Chile.» → «Evaluación fonoaudiológica en Chillán: 60 minutos, entrevista, pruebas de lenguaje y habla, informe para el colegio y plan de tratamiento.»
+- **H1:** se mantiene «Evaluación fonoaudiológica: qué es y cómo se hace en Chillán». La respuesta rápida ya dice qué incluye (60 minutos, pruebas estandarizadas, entrevista, informe y plan)
+- **Enlaces con el ancla «evaluación fonoaudiológica»:** ya estaba en `/preguntas/como-se-diagnostica-el-tel` (2026-10-25, `efbe17a`; no se editó). Se agregó desde `/preguntas/el-tel-se-cura`. No se inventaron duraciones, precios ni pruebas
+
+#### 4. `/voz-online/disfonia-por-estres`
+**Métricas GSC:** «disfonia por estres» 8 imp, pos 3,5, 0 clics. «disfonía por estrés» 4 imp, pos 7,8. «se puede perder la voz por estres» 4 imp, pos 9,2. Último cambio previo: 2026-10-22 (`13c0cbb`).
+
+- **Title y H1 (55 → 45):** «Disfonía por estrés o tensión: cuando la voz se aprieta» → «Disfonía por estrés: ¿se puede perder la voz?»
+- **Description (140 → 136):** «Si el estrés te aprieta la voz, la terapia online trabaja respiración, postura y hábitos. El otorrino descarta una lesión. Adultos en Chile.» → «El estrés puede apretarte la voz: se siente tensa y cuesta más hablar. No es quedarte sin voz de golpe. El otorrino descarta una lesión.»
+- **Respuesta bajo el H1:** el estrés aprieta la voz (tensa, nudo en el cuello, cuesta más hablar). Eso no es quedarse sin voz de golpe. La terapia online, adultos por videollamada en todo Chile, trabaja respiración, postura y hábitos. No diagnostica una lesión
+- **FAQ nueva, visible y en el FAQPage:** «¿Se puede perder la voz por estrés?». Misma distinción, más el enlace de criterio que ya estaba: si la voz se corta, afonía; si duele o la ronquera sigue, el otorrino
+- **Enlaces:** la hub `/voz-online/fonoaudiologa-de-voz-online` y `/voz-online/afonia-perdi-la-voz` ya estaban. Se agregó `/voz-online/voz-despues-de-un-resfrio`. No se editó la hub ni la afonía
+- **dateModified:** 2026-10-22 → 2026-11-03
+
+#### 5. `/voz-online/voz-despues-de-un-resfrio`
+**Métricas GSC, 7 días:** 0 clics / 78 imp / pos 9,2. Consulta «porque se va la voz cuando da gripe». Último cambio previo: 2026-10-23 (`cf6feb0`).
+
+- **Title y H1 (43 → 48):** «La voz no vuelve tras un resfrío o el COVID» → «¿Por qué se va la voz cuando da gripe o resfrío?»
+- **Description (149 → 152):** «Si el resfrío o el COVID ya pasó y la voz sigue ronca, el otorrino mira las cuerdas. La terapia online trabaja cómo hablas después. Adultos en Chile.» → «Si la gripe, el resfrío o el COVID ya pasó y la voz sigue ronca o se corta, el otorrino mira las cuerdas. La terapia online trabaja cómo hablas después.»
+- **Respuesta bajo el H1:** la gripe ya estaba en el cuerpo («un resfrío, una gripe o un COVID»). La voz puede quedarse ronca, débil o cortada cuando el cuadro pasó. No se describen secuelas con cifras. El otorrino mira las cuerdas. La terapia no trata la infección y no promete la voz de antes
+- **Enlaces:** la hub y la afonía ya estaban. Se agregó `/voz-online/disfonia-por-estres` para el caso sin gripe ni resfrío
+- **dateModified:** 2026-11-03, solo en esta página. `VoiceClusterPage` recibe la fecha por prop; el default sigue en 2026-10-23, así el resto del clúster no cambia de fecha
+
+### Informe (sin editar)
+
+La ventana de 7 días de este pull (26 oct–1 nov) pisa los titles nuevos del 30 y del 31 de octubre. El CTR ~0 de esas dos comparaciones no alcanza a ser un veredicto de esos titles.
+
+#### `/comparaciones/dislexia-vs-dislalia`
+**Métricas GSC, 7 días:** 0 clics / 668 imp / pos 5,5. «dislexia y dislalia» 203 imp, pos 5,8. «diferencia entre dislexia y dislalia» 97 imp, pos 5,2. Último cambio: 2026-10-30 (`0fd168a`, Lote 25). Eligible ~2026-11-06.
+
+**Por qué el CTR está en ~0 con posición 5–7.** Cuatro de los siete días son el title anterior. En lo que ya está publicado: el title (53) «Dislexia y dislalia: diferencias y cómo saber cuál es» nombra el par y no dice la diferencia. La meta (139) sí la dice («pronunciar» frente a «leer y escribir») y cierra con «Evaluación en Chillán», que en una consulta nacional se lee como ficha local. El H1 y el `headline` del Article son «Diferencia entre dislexia y dislalia»: si Google reescribe el title con el H1, la consulta de 203 imp pierde el arranque «Dislexia y dislalia». Hay FAQPage visible («¿Qué es la dislalia y qué es la dislexia?», «¿La dislexia y la dislalia son lo mismo?»). Desde 2023 Google casi no muestra FAQ rich results fuera de sitios de salud o gobierno muy conocidos: el schema no está roto y no es la palanca que falta. En la posición 5–6, un fragmento destacado o un «otras preguntas» de un sitio grande se queda con el clic.
+
+**Propuesta para ~2026-11-06, si el title del 30-oct sigue en ~0 clics con la ventana ya limpia:**
+- **Title (51):** «Dislexia y dislalia: hablar no es lo mismo que leer»
+- **Description (134):** «No son lo mismo. La dislalia es pronunciar sonidos al hablar. La dislexia es leer y escribir. Pueden coincidir. Evaluación en Chillán.»
+- **H1:** puede quedar «Diferencia entre dislexia y dislalia». Cubre la consulta de 97 imp
+
+#### `/comparaciones/dislalia-vs-disartria`
+**Métricas GSC, 7 días:** 1 clic / 632 imp / pos 7,4. «dislalia y disartria» 331 imp, pos 7,7. «disartria y dislalia» 171 imp, pos 7,4. Último cambio: 2026-10-31 (`8de0122`, Lote 26). En esta ventana de 7 días ese title solo alcanza a entrar el 1-nov, día incompleto en pulls anteriores. Eligible ~2026-11-07.
+
+**Mismo patrón de snippet.** Title (54) «Dislalia y disartria: diferencias y cómo saber cuál es»: método, no respuesta. Meta (148) correcta y cargada de «neuromotora» y «origen neurológico» para una consulta de padres. H1 «Diferencia entre dislalia y disartria». FAQ visible «¿La disartria es lo mismo que la dislalia?» responde «No» y separa sonidos sueltos de una base neuromuscular. Misma limitación de rich results. Posición 7–8, debajo de definiciones que ya contestan.
+
+**Propuesta para ~2026-11-07:**
+- **Title (49):** «Dislalia y disartria: un sonido o el habla entera»
+- **Description (132):** «No son lo mismo. La dislalia cambia sonidos sueltos. La disartria altera el habla por una base neuromuscular. Evaluación en Chillán.»
+- **H1:** puede quedar. Las dos frases ya están en el lead y en el FAQ
+
+#### `/recursos/hitos-del-lenguaje-por-edad`
+**Métricas GSC:** «a que edad hablan los niños» 333 imp, pos 9,6, 0 clics. Último cambio: 2026-10-28 (`5cd1d4d`, Lote 23). Eligible ~2026-11-04.
+
+El title (48) ya es «¿A qué edad hablan los niños? Hitos, 11-14 meses» y la meta (145) ya dice las primeras palabras entre los 11 y 14 meses. El FAQPage abre con esa misma pregunta. En la posición 9,6 el CTR esperado es bajo, y un fragmento destacado («alrededor de los 12 meses») se lleva el clic de arriba. El hueco de snippet: la palabra «Hitos,» se mete entre la pregunta y la edad, y el H1 es solo «¿A qué edad hablan los niños?». Si Google reescribe con el H1, el resultado no muestra los 11–14 meses.
+
+**Propuesta para ~2026-11-04, si sigue en ~0 clics.** No es un title desde cero:
+- **Title (49):** «¿A qué edad hablan los niños? Entre 11 y 14 meses»
+- **Description (137):** «Empiezan a hablar entre los 11 y 14 meses. A los 2 años, unas 50 palabras y frases de dos. Hablar bien es más claro hacia los 3 y 4 años.»
+- **H1:** puede quedar. La edad ya está en la respuesta rápida
+
+#### Home
+**Métricas GSC:** «fonoaudiologa» 199 imp, pos 3,6, 1 clic. «fonoaudiologo chillan» 29 imp, pos 7,6. Último cambio: 2026-10-28 (Lote 23). Eligible ~2026-11-04.
+
+Title (45) «Fonoaudióloga en Chillán y voz online | Katia». H1 «Fonoaudióloga infantil en Chillán». Meta (154) «Fonoaudióloga y fonoaudiólogo en Chillán: fonoaudiología infantil, evaluación y terapia para niños. Voz online para adultos en todo Chile. Más de 20 años.»
+
+«fonoaudiologa» sin ciudad, en posición 3,6 y con 1 clic, no es un problema de ranking. El snippet es de consulta local (Chillán, voz online, marca) y la consulta es de cabeza. Un pack de Maps y las definiciones de arriba se quedan con el clic; el H1, si reescribe el title, agrega «infantil» y saca «fonoaudiólogo». «fonoaudiologo chillan» en posición 7,6 sí es de ranking: el masculino está en la meta, no al inicio del title.
+
+**Propuesta para ~2026-11-04.** Se mantiene Chillán. No se persigue la consulta pelada sacando la ciudad:
+- **Title (46):** «Fonoaudióloga en Chillán: evaluación y terapia»
+- **Description (148):** «Fonoaudióloga y fonoaudiólogo en Chillán: evalúa y trata lenguaje, habla y pronunciación en niños. Voz online para adultos en Chile. Más de 20 años.»
+- **H1:** puede quedar «Fonoaudióloga infantil en Chillán»
+
+### Omitidas
+
+- `/servicios/tel-trastorno-especifico-lenguaje`. Copy el 2026-10-29 (Lote 24, `a47025c`). El title no se toca: «TEL y TDL: evaluación y terapia en Chillán». El enlace de desambiguación ya está en el intro, ancla «¿el TEL se cura?», hacia `/preguntas/el-tel-se-cura`. Esa página compite por «el tel se cura» (27 imp, pos 9,5): se deja así hasta que salga de la ventana
+- `/preguntas/como-se-diagnostica-el-tel`. El ancla «evaluación fonoaudiológica» ya apunta al servicio. Copy del 2026-10-25. No hacía falta editarla
+- `/voz-online/fonoaudiologa-de-voz-online` y `/voz-online/afonia-perdi-la-voz`. Solo se enlazan desde las dos páginas de voz editadas. La afonía es del 2026-10-30 (Lote 25, `0fd168a`). La hub no se reescribió
+- Home, `/recursos/hitos-del-lenguaje-por-edad`, `/recursos/estimular-lenguaje-en-casa`, `/recursos/primera-evaluacion-fonoaudiologica-infantil`, `/preguntas/que-hace-un-fonoaudiologo-infantil`, `/lenguaje-infantil/habla-como-bebe`, `/fonoaudiologa-ninos-chillan` y `/comparaciones/*`. Copy del 28-oct o posterior. Propuesta arriba donde el lote la pedía; sin edición
+- Resto de Lotes 24–26. No se editó
+- Páginas de ciudad (Antofagasta, Viña del Mar, Concepción, Santiago, Temuco, España y el resto de `/voz-online/` con ciudad). No se optimizaron ni se crearon
+- `/ads/*` y `/sitelink/*`. No se optimizó ninguna landing. `app/ads/_components/AdsStickyCta.tsx` ya fallaba `npm run lint` (`react-hooks/set-state-in-effect`, `setHidden` síncrono si no hay CTA en página). Se pasó ese `setState` a `requestAnimationFrame` para que el lint salga en 0. Sin cambio de copy, metadata ni rutas
+- Sin URLs nuevas
+
+### Sitemap
+
+Build de este lote: **162** URLs (`<loc>`). Sin `/ads` ni `/sitelink`. No se tocó `app/sitemap.ts`. El `lastmod` de los `page.tsx` editados queda en el commit de este lote. En el HTML, `dateModified` 2026-11-03 solo en logopeda, disfonía por estrés y voz después de un resfrío. `/voz-online/presbifonia` y `/voz-online/proyeccion-de-voz` siguen en 2026-10-23. `/voz-online/afonia-perdi-la-voz` sigue en 2026-10-30.
+
+### Métricas esperadas
+
+Medir ~2026-11-17:
+- CTR de «el tel se cura», «tdl se cura» y «trastorno del lenguaje se cura» en `/preguntas/el-tel-se-cura`, y si el servicio TEL deja de quedarse con «el tel se cura»
+- CTR de «logopeda es lo mismo que fonoaudiólogo / fonoaudiología» en `/glosario/logopeda`
+- Impresiones y posición de «evaluacion fonoaudiologica» en `/servicios/evaluacion-fonoaudiologica` (hoy pos 18,6)
+- CTR de «disfonia por estres» y «se puede perder la voz por estres» en `/voz-online/disfonia-por-estres`
+- CTR de «porque se va la voz cuando da gripe» en `/voz-online/voz-despues-de-un-resfrio`
+- Al ~2026-11-04, hitos y home, con la propuesta de arriba solo si el CTR sigue en ~0
+- Al ~2026-11-06 y ~2026-11-07, las dos comparaciones, con la ventana ya fuera del title del 30 y del 31 de octubre
+
 ## 2026-11-01: SEO Lote 27 — corte de 7 días; guía de casa, logopeda y fonoaudiólogo infantil quedan para medir
 
 ### Contexto

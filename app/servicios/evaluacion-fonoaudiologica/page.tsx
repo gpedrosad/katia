@@ -13,9 +13,9 @@ const WHATSAPP_HREF = whatsappUrl("Hola, quiero agendar una evaluación fonoaudi
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Evaluación fonoaudiológica en Chillán | 60 min",
+  title: "Evaluación fonoaudiológica en Chillán: qué incluye",
   description:
-    "Evaluación fonoaudiológica en Chillán: 60 minutos, test estandarizados, diagnóstico de lenguaje y habla, informe para el colegio y plan. U. de Chile.",
+    "Evaluación fonoaudiológica en Chillán: 60 minutos, entrevista, pruebas de lenguaje y habla, informe para el colegio y plan de tratamiento.",
   keywords: [
     "evaluación fonoaudiológica",
     "evaluacion fonoaudiologica",

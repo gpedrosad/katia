@@ -56,9 +56,9 @@ const faqs = [
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Logopeda y logopedia: qué son en Chile",
+  title: "¿Logopeda y fonoaudiólogo son lo mismo? En Chile",
   description:
-    "Logopeda y logopedia nombran, en España y otros países, al fonoaudiólogo y a la fonoaudiología de Chile. Qué hace un logopeda infantil y cómo buscarlo.",
+    "Sí. Logopeda y fonoaudiólogo son lo mismo. En España y otros países se dice logopeda; en Chile, fonoaudiólogo o fonoaudióloga.",
   keywords: [
     "logopeda",
     "logopedia",
@@ -74,9 +74,9 @@ const articleJsonLd = {
   "@type": "Article",
   headline: "¿Qué es un logopeda?",
   description:
-    "Logopeda y logopedia nombran, en España y otros países, al fonoaudiólogo y a la fonoaudiología de Chile.",
+    "Sí. Logopeda y fonoaudiólogo son lo mismo. En España y otros países se dice logopeda; en Chile, fonoaudiólogo o fonoaudióloga.",
   datePublished: "2026-10-09",
-  dateModified: "2026-10-26",
+  dateModified: "2026-11-03",
   inLanguage: "es-CL",
   author: {
     "@type": "Person",
