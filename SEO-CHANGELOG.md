@@ -20,6 +20,32 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-11-04: SEO Lote 29 — CTR de hitos y qué hace el fonoaudiólogo; propuestas para comparaciones
+
+Contexto GSC (sc-domain:katialafono.cl). 90d (2026-08-05..2026-11-02): 103 clics / 9.660 impr / pos 8,0. 7d (2026-10-27..2026-11-02): 20 clics / 2.861 impr, contra 10 / 1.871 en los 7d previos (2026-10-20..2026-10-26). Las impresiones suben más rápido que los clics: el lote ataca páginas con muchas impresiones y 0 clics, donde el snippet no responde la consulta.
+
+### Aplicado hoy
+
+1) /recursos/hitos-del-lenguaje-por-edad — objetivo: «a que edad hablan los niños». 7d: 0 clics / 173 impr / pos 8,4; 90d: 1 / 1.013 / pos 8,6. Consulta 90d: «a que edad hablan los niños» 0 / 340 / pos 9,6 (7d 0 / 55 / pos 9,1). Title anterior (cambiado el 2026-10-28, sin clics desde entonces): «¿A qué edad hablan los niños? Hitos, 11-14 meses» → nuevo: «¿A qué edad hablan los niños? Primeras palabras 11-14 meses». Description anterior: «Hitos del lenguaje por edad: primeras palabras entre los 11 y 14 meses. Los bebés balbucean antes; hablar bien es más claro hacia los 3 y 4 años.» → nueva: «Primeras palabras con significado entre los 11 y 14 meses. A los 2 años unas 50 palabras y frases de dos. Hitos del lenguaje por edad y cuándo consultar.» H1 sin cambios. Motivo: el title anterior no decía qué ocurre a esa edad; ahora la respuesta queda dentro de los 60 caracteres.
+
+2) /preguntas/que-hace-un-fonoaudiologo-infantil — objetivo: «que hace un fonoaudiologo infantil». 7d: 0 / 44 / pos 8,6; 90d: 0 / 83 / pos 10,1. Consultas: «fonoaudiólogo infantil» 0 / 19 pos 9,8; «que hace un fonoaudiólogo infantil» 0 / 8 pos 5,6 (7d pos 4,4); «que hace una fonoaudióloga infantil» 0 / 4; «que es una fonoaudióloga infantil» 0 / 3. Title anterior: «¿Qué es y qué hace un fonoaudiólogo infantil?» → nuevo: «¿Qué hace un fonoaudiólogo infantil? Evaluación y terapia». Description anterior: «Fonoaudiólogo infantil: evalúa cómo tu hijo comprende, habla y pronuncia. Qué es una fonoaudióloga infantil en Chillán: primera hora, evaluación e informe.» → nueva: «Evalúa y trata cómo tu hijo comprende, arma frases y pronuncia. Fonoaudióloga infantil en Chillán, presencial: primera hora, evaluación e informe.» H1 (sale del mismo TITLE en `PreguntaArticle`): «¿Qué es y qué hace un fonoaudiólogo infantil?» → «¿Qué hace un fonoaudiólogo infantil? Evaluación y terapia». Motivo: la consulta en mejor posición (5,6) pedía «qué hace» y el title respondía «qué es» primero.
+
+Enlace interno: hitos → /comparaciones/tel-vs-retraso-del-lenguaje (desde el bloque de señales de cuándo consultar).
+Enlace interno: qué hace el fonoaudiólogo infantil → /glosario/logopeda («¿Logopeda y fonoaudiólogo son lo mismo?», en relacionados).
+`dateModified` de hitos (Article y WebPage): 2026-10-28 → 2026-11-04.
+
+### Propuestas fechadas (no se aplican hoy)
+
+3) /comparaciones/dislexia-vs-dislalia — aplicable desde el 2026-11-06 (editada el 2026-10-30). 7d: 0 / 599 / pos 5,5; 90d: 0 / 874 / pos 5,6. Consultas 7d: «dislexia y dislalia» 0 / 132 pos 5,6; «dislalia y dislexia» 0 / 86 pos 6,0; «diferencia entre dislexia y dislalia» 0 / 75 pos 5,2; «diferencia entre dislalia y dislexia» 0 / 39 pos 4,8; «dislexia o dislalia» 0 / 15 pos 4,3. Title anterior: «Dislexia y dislalia: diferencias y cómo saber cuál es» → propuesto: «Dislexia es leer; dislalia es pronunciar: la diferencia». Description anterior: «La dislalia es pronunciar los sonidos al hablar. La dislexia es leer y escribir. No son lo mismo y pueden coincidir. Evaluación en Chillán.» → propuesta: «La dislexia es leer y escribir; la dislalia es pronunciar los sonidos al hablar. No son lo mismo y pueden coincidir. Evaluación en Chillán.» H1 sin cambios.
+
+4) /comparaciones/dislalia-vs-disartria — aplicable desde el 2026-11-07 (editada el 2026-10-31). 7d: 1 / 580 / pos 7,4; 90d: 1 / 812. Consultas 7d: «dislalia y disartria» 0 / 262 pos 7,8; «disartria y dislalia» 0 / 133 pos 7,4; «dislalia o disartria» 0 / 33; «diferencia entre dislalia y disartria» 1 / 23 pos 6,0. Title anterior: «Dislalia y disartria: diferencias y cómo saber cuál es» → propuesto: «Dislalia y disartria: qué es cada una y la diferencia». Description anterior: «Dislalia y disartria no son lo mismo: sonidos sin causa neuromotora, o una alteración motora del habla de origen neurológico. Evaluación en Chillán.» → propuesta: «Dislalia: sonidos sin causa neuromotora. Disartria: alteración motora del habla de origen neurológico. Diferencia, con evaluación en Chillán.» H1 sin cambios.
+
+Copy: DeepSeek V4.1 Flash vía OpenRouter (gen-1793824042-Hoy7QpmdKzTJcm2HcgCM), revisado y aplicado por Grok Bot (sin agente cloud). Registro CTR: `docs/seo/ctr-tracking.md`.
+
+Medir el 2026-11-18: clics e impresiones por página y por consulta objetivo en los 7d y 14d posteriores; CTR de las páginas 1 y 2 contra el 0 actual; y, si las propuestas 3 y 4 se aplican el 06 y 07 de noviembre, comparar su CTR con el de los 7d previos a la aplicación.
+
+---
+
 ## 2026-11-03: SEO Lote 28 — TEL o TDL, logopeda, evaluación en Chillán y voz sin ciudad
 
 ### Contexto

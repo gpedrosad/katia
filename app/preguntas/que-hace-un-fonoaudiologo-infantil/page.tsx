@@ -3,9 +3,9 @@ import { PreguntaArticle } from "@/app/preguntas/_components/PreguntaArticle";
 import { buildPageMetadata } from "@/lib/seo";
 
 const PATH = "/preguntas/que-hace-un-fonoaudiologo-infantil";
-const TITLE = "¿Qué es y qué hace un fonoaudiólogo infantil?";
+const TITLE = "¿Qué hace un fonoaudiólogo infantil? Evaluación y terapia";
 const DESCRIPTION =
-  "Fonoaudiólogo infantil: evalúa cómo tu hijo comprende, habla y pronuncia. Qué es una fonoaudióloga infantil en Chillán: primera hora, evaluación e informe.";
+  "Evalúa y trata cómo tu hijo comprende, arma frases y pronuncia. Fonoaudióloga infantil en Chillán, presencial: primera hora, evaluación e informe.";
 
 export const metadata = buildPageMetadata({
   path: PATH,
@@ -50,6 +50,10 @@ export default function QueHaceUnFonoaudiologoInfantilPage() {
         {
           href: "/sobre-katia-dominguez-fonoaudiologa-chillan",
           label: "Sobre Katia Domínguez",
+        },
+        {
+          href: "/glosario/logopeda",
+          label: "¿Logopeda y fonoaudiólogo son lo mismo?",
         },
       ]}
       tambien={[
