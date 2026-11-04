@@ -77,9 +77,9 @@ const faqs = [
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "¿A qué edad hablan los niños? Hitos, 11-14 meses",
+  title: "¿A qué edad hablan los niños? Primeras palabras 11-14 meses",
   description:
-    "Hitos del lenguaje por edad: primeras palabras entre los 11 y 14 meses. Los bebés balbucean antes; hablar bien es más claro hacia los 3 y 4 años.",
+    "Primeras palabras con significado entre los 11 y 14 meses. A los 2 años unas 50 palabras y frases de dos. Hitos del lenguaje por edad y cuándo consultar.",
   keywords: [
     "a qué edad hablan los niños",
     "hitos del lenguaje por edad",
@@ -96,9 +96,9 @@ export const metadata = buildPageMetadata({
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "¿A qué edad hablan los niños? Hitos, 11-14 meses",
+  headline: "¿A qué edad hablan los niños? Primeras palabras 11-14 meses",
   description:
-    "Hitos del lenguaje por edad: primeras palabras entre los 11 y 14 meses. Los bebés balbucean antes; hablar bien es más claro hacia los 3 y 4 años.",
+    "Primeras palabras con significado entre los 11 y 14 meses. A los 2 años unas 50 palabras y frases de dos. Hitos del lenguaje por edad y cuándo consultar.",
   author: {
     "@type": "Person",
     name: "Katia Domínguez",
@@ -113,7 +113,7 @@ const articleJsonLd = {
     "@id": `${SITE_URL}${PAGE_PATH}`,
   },
   datePublished: "2026-05-20",
-  dateModified: "2026-10-28",
+  dateModified: "2026-11-04",
 };
 
 const webPageJsonLd = {
@@ -121,10 +121,10 @@ const webPageJsonLd = {
   "@type": "WebPage",
   "@id": `${SITE_URL}${PAGE_PATH}#webpage`,
   url: `${SITE_URL}${PAGE_PATH}`,
-  name: "¿A qué edad hablan los niños? Hitos, 11-14 meses",
+  name: "¿A qué edad hablan los niños? Primeras palabras 11-14 meses",
   description:
-    "Hitos del lenguaje por edad: primeras palabras entre los 11 y 14 meses. Los bebés balbucean antes; hablar bien es más claro hacia los 3 y 4 años.",
-  dateModified: "2026-10-28",
+    "Primeras palabras con significado entre los 11 y 14 meses. A los 2 años unas 50 palabras y frases de dos. Hitos del lenguaje por edad y cuándo consultar.",
+  dateModified: "2026-11-04",
 };
 
 const faqJsonLd = {
@@ -355,6 +355,14 @@ export default function HitosDelLenguajePorEdadPage() {
                       className="font-medium text-rose-600 underline"
                     >
                       Señales de alerta del lenguaje y el habla
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/comparaciones/tel-vs-retraso-del-lenguaje"
+                      className="font-medium text-rose-600 underline"
+                    >
+                      ¿TEL o retraso del lenguaje? Diferencias
                     </Link>
                   </li>
                   <li>
