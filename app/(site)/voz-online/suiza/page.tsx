@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LatamVoiceLinks } from "@/app/(site)/voz-online/_components/LatamVoiceLinks";
 import { VoiceClusterPage } from "@/app/(site)/voz-online/_components/VoiceClusterPage";
 import { buildPageMetadata } from "@/lib/seo";
 
@@ -93,7 +94,7 @@ export default function VozOnlineSuizaPage() {
           Si vives en Alemania, la página es{" "}
           <Link href="/voz-online/alemania">terapia de voz en español si vives en Alemania</Link>.
           Si vives en España y logopeda es el nombre de la profesión, usa{" "}
-          <Link href="/voz-online/espana">logopedia de la voz online si estás en España</Link>.
+          <Link href="/voz-online/espana">logopeda de la voz online en España</Link>.
         </p>
       </section>
 
@@ -106,6 +107,7 @@ export default function VozOnlineSuizaPage() {
           apaga, el otorrino va primero, de forma presencial. La terapia de voz acompaña ese
           examen.
         </p>
+        <LatamVoiceLinks />
       </section>
     </VoiceClusterPage>
   );

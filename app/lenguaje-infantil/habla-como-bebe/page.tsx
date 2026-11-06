@@ -3,9 +3,9 @@ import { articleJsonLd, faqJsonLd, GuiaPage, guiaMetadata } from "@/app/guias-pa
 import { whatsappUrl } from "@/lib/site";
 
 const PATH = "/lenguaje-infantil/habla-como-bebe";
-const TITLE = "¿Por qué un niño habla como bebé? Qué mirar";
+const TITLE = "Mi hijo habla como bebé: qué mirar";
 const DESCRIPTION =
-  "Hablar como bebé no es un diagnóstico: palabras cortadas, pocas frases o un habla que solo entienden en casa. Qué anotar y cuándo evaluar en Chillán.";
+  "Hablar como bebé no es un diagnóstico: palabras cortadas, pocas frases o un habla que solo entienden en casa. Qué anotar y cuándo evaluar.";
 
 const faqs = [
   {

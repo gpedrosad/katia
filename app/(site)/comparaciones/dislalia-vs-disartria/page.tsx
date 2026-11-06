@@ -6,9 +6,9 @@ import { buildPageMetadata } from "@/lib/seo";
 import { SITE_URL, whatsappUrl } from "@/lib/site";
 
 const PAGE_PATH = "/comparaciones/dislalia-vs-disartria";
-const TITLE = "Dislalia y disartria: diferencias y cómo saber cuál es";
+const TITLE = "Dislalia y disartria: un sonido o el habla entera";
 const DESCRIPTION =
-  "Dislalia y disartria no son lo mismo: sonidos sin causa neuromotora, o una alteración motora del habla de origen neurológico. Evaluación en Chillán.";
+  "No son lo mismo. La dislalia cambia sonidos sueltos. La disartria altera el habla por una base neuromuscular. Evaluación en Chillán.";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
@@ -56,11 +56,11 @@ const faqs = [
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Diferencia entre dislalia y disartria",
+  headline: TITLE,
   description: DESCRIPTION,
   inLanguage: "es-CL",
   datePublished: "2026-10-24",
-  dateModified: "2026-10-31",
+  dateModified: "2026-11-06",
   author: {
     "@type": "Person",
     name: "Katia Domínguez",
@@ -156,9 +156,7 @@ export default function DislaliaVsDisartriaPage() {
             />
 
             <article className="prose prose-rose lg:prose-lg max-w-none">
-              <h1 className="text-4xl font-extrabold text-gray-900">
-                Diferencia entre dislalia y disartria
-              </h1>
+              <h1 className="text-4xl font-extrabold text-gray-900">{TITLE}</h1>
               <p className="lead text-lg text-gray-700" data-speakable>
                 Dislalia y disartria no son el mismo cuadro. La dislalia es
                 articular mal los sonidos —omitirlos, sustituirlos o

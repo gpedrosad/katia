@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LatamVoiceLinks } from "@/app/(site)/voz-online/_components/LatamVoiceLinks";
 import { VoiceClusterPage } from "@/app/(site)/voz-online/_components/VoiceClusterPage";
 import { buildPageMetadata } from "@/lib/seo";
 
@@ -100,6 +101,7 @@ export default function VozOnlineCanadaPage() {
           otorrino, de forma presencial en Canadá, mira las cuerdas si la ronquera se queda, hay
           dolor o la voz se apaga. La terapia de voz acompaña ese examen.
         </p>
+        <LatamVoiceLinks />
       </section>
     </VoiceClusterPage>
   );

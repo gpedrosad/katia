@@ -10,9 +10,9 @@ const PATH = "/voz-online/polipos-en-las-cuerdas-vocales";
 
 export const metadata = buildPageMetadata({
   path: PATH,
-  title: "Pólipos en las cuerdas vocales: terapia online",
+  title: "Pólipos en las cuerdas vocales: qué hacer online",
   description:
-    "Pólipos en las cuerdas vocales y pólipo en la cuerda vocal: terapia de voz online que acompaña al otorrino. Adultos, videollamada en todo Chile.",
+    "Un pólipo en la cuerda vocal lo confirma el otorrino. La terapia de voz online acompaña ese plan, con higiene vocal y técnica, en español.",
   keywords: [
     "pólipos en las cuerdas vocales",
     "polipos cuerdas vocales",
@@ -27,7 +27,7 @@ const faqItems = [
   {
     question: "¿Qué es un pólipo en la cuerda vocal?",
     answer:
-      "Un pólipo en la cuerda vocal lo confirma el otorrino cuando mira las cuerdas. La terapia de voz online acompaña ese plan con higiene vocal y técnica, por videollamada, para adultos en todo Chile.",
+      "Un pólipo en la cuerda vocal lo confirma el otorrino cuando mira las cuerdas. La terapia de voz online acompaña ese plan con higiene vocal y técnica, por videollamada, en español, para adultos.",
   },
   {
     question: "¿Puedo empezar la terapia sin ver al otorrino?",
@@ -40,9 +40,9 @@ const faqItems = [
       "Son lesiones distintas. Las dos las confirma el otorrino. Esta página es la terapia de apoyo cuando el diagnóstico es un pólipo. Si te hablaron de nódulos, el camino está en la página de nódulos en las cuerdas vocales.",
   },
   {
-    question: "¿La sesión sirve en todo Chile?",
+    question: "¿La terapia del pólipo es online y en español?",
     answer:
-      "Sí. Es para adultos, por videollamada, en cualquier ciudad de Chile. La hora se coordina por WhatsApp. La fonoaudiología infantil de esta consulta sigue siendo presencial en Chillán.",
+      "Sí, si eres adulto. Es por videollamada, en español, y la hora se coordina por WhatsApp según tu zona horaria. La fonoaudiología infantil de esta consulta sigue siendo presencial en Chillán.",
   },
 ];
 
@@ -53,9 +53,9 @@ export default function PoliposCuerdasVocalesPage() {
     name: "Terapia de apoyo para pólipos en las cuerdas vocales",
     serviceType: "Terapia de voz online",
     description:
-      "Terapia de voz online para adultos con pólipos en las cuerdas vocales, junto al plan del otorrino, en todo Chile.",
+      "Terapia de voz online para adultos con pólipos en las cuerdas vocales, junto al plan del otorrino, por videollamada en español.",
     url: `${SITE_URL}${PATH}`,
-    areaServed: { "@type": "Country", name: "Chile" },
+    areaServed: { "@type": "AdministrativeArea", name: "Países de habla hispana" },
     provider: { "@id": MEDICAL_BUSINESS_ID },
     availableChannel: {
       "@type": "ServiceChannel",
@@ -89,7 +89,7 @@ export default function PoliposCuerdasVocalesPage() {
                 <strong>Respuesta rápida:</strong> Un pólipo en las cuerdas
                 vocales lo confirma el otorrino. La terapia de voz online
                 acompaña el plan que él indique, con higiene vocal y técnica,
-                por videollamada, para adultos en todo Chile.
+                por videollamada, en español, para adultos.
               </p>
             </div>
           </header>
@@ -101,8 +101,8 @@ export default function PoliposCuerdasVocalesPage() {
             <p>
               Un pólipo en la cuerda vocal lo confirma el otorrino cuando mira
               las cuerdas. La terapia de voz online acompaña ese plan con
-              higiene vocal y técnica, por videollamada, para adultos en todo
-              Chile.
+              higiene vocal y técnica, por videollamada, en español, para
+              adultos.
             </p>
           </section>
 

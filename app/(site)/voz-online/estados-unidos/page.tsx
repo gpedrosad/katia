@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LatamVoiceLinks } from "@/app/(site)/voz-online/_components/LatamVoiceLinks";
 import { VoiceClusterPage } from "@/app/(site)/voz-online/_components/VoiceClusterPage";
 import { buildPageMetadata } from "@/lib/seo";
 
@@ -112,6 +113,7 @@ export default function VozOnlineEstadosUnidosPage() {
           Si estás en Canadá, la página es{" "}
           <Link href="/voz-online/canada">fonoaudióloga en español online en Canadá</Link>.
         </p>
+        <LatamVoiceLinks />
       </section>
     </VoiceClusterPage>
   );

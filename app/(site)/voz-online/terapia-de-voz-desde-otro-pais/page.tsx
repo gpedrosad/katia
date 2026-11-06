@@ -160,11 +160,23 @@ export default function TerapiaVozDesdeOtroPaisPage() {
               Nueva York, Texas y California dentro de esa página.
             </li>
             <li>
-              <Link href="/voz-online/espana">España</Link>, si buscas logopedia
+              <Link href="/voz-online/espana">España</Link>, si buscas logopeda
               de la voz.
             </li>
             <li>
               <Link href="/voz-online/argentina">Argentina</Link>.
+            </li>
+            <li>
+              <Link href="/voz-online/mexico">México</Link>, si buscas terapeuta
+              de lenguaje para la voz.
+            </li>
+            <li>
+              <Link href="/voz-online/colombia">Colombia</Link>, con el mismo
+              nombre: fonoaudióloga.
+            </li>
+            <li>
+              <Link href="/voz-online/peru">Perú</Link>, como terapia de
+              lenguaje o fonoaudióloga.
             </li>
             <li>
               <Link href="/voz-online/canada">Canadá</Link>,{" "}
