@@ -9,11 +9,12 @@ import { SITE_URL } from "@/lib/site";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/fonoaudiologa-de-voz-online",
-  title: "Terapia de voz online para adultos en Chile",
+  title: "Terapia de voz online en español para adultos",
   description:
-    "Fonoaudióloga de voz online para adultos en todo Chile. Terapia por videollamada: disfonía, ronquera, nódulos y voz cansada. +20 años. Agenda por WhatsApp.",
+    "Fonoaudióloga de voz online en español para adultos, en cualquier país de habla hispana. Videollamada: disfonía, ronquera, nódulos y voz cansada.",
   keywords: [
     "terapia de voz online",
+    "terapia de voz online en español",
     "fonoaudióloga voz online",
     "fonoaudiología voz adultos",
     "fonoaudióloga de voz online",
@@ -33,12 +34,12 @@ const faqItems = [
   {
     question: "¿Qué es la terapia de voz online?",
     answer:
-      "Es fonoaudiología de voz para adultos, por videollamada, en todo Chile. Katia Domínguez evalúa y trabaja disfonía, ronquera, nódulos, voz cansada, higiene vocal y el uso profesional de la voz. Si hay que mirar las cuerdas, el otorrino va primero y la terapia acompaña ese diagnóstico.",
+      "Es fonoaudiología de voz para adultos, por videollamada, en español. Atiende en Chile y en cualquier país de habla hispana. Katia Domínguez evalúa y trabaja disfonía, ronquera, nódulos, voz cansada, higiene vocal y el uso profesional de la voz. Si hay que mirar las cuerdas, el otorrino va primero y la terapia acompaña ese diagnóstico.",
   },
   {
-    question: "¿Puedo atenderme con una fonoaudióloga online desde cualquier ciudad de Chile?",
+    question: "¿Puedo atenderme online si vivo en otro país de habla hispana?",
     answer:
-      "Sí. El servicio de fonoaudióloga online / fonoaudiólogo online de voz está disponible para todo Chile: Santiago, regiones y localidades sin especialista en voz cercano. Sin traslados y con agenda flexible.",
+      "Sí, si eres adulto. La sesión es por videollamada, en español, desde Chile. El horario se coordina según tu zona horaria. En Chile también cubre Santiago, regiones y localidades sin especialista en voz cercano. La fonoaudiología infantil sigue presencial en Chillán.",
   },
   {
     question: "¿Qué trastornos de la voz se pueden tratar online?",
@@ -53,7 +54,7 @@ const faqItems = [
   {
     question: "¿Atienden pacientes fuera de Chillán?",
     answer:
-      "Sí. El servicio de voz online está disponible para todo Chile: Santiago, regiones y localidades sin fonoaudiólogo especializado en voz cercano.",
+      "Sí. La voz online es para adultos en Chile y en cualquier país de habla hispana, por videollamada en español. La fonoaudiología infantil sigue presencial en Chillán.",
   },
 ];
 
@@ -63,10 +64,10 @@ export default function FonoaudiologaVozOnlinePage() {
     "@type": "ProfessionalService",
     name: "Terapia de voz online para adultos — Katia Domínguez",
     description:
-      "Fonoaudiología de voz para adultos, 100% online por videollamada, en todo Chile.",
+      "Fonoaudiología de voz para adultos, 100% online por videollamada, en español, para cualquier país de habla hispana.",
     areaServed: {
-      "@type": "Country",
-      name: "Chile",
+      "@type": "AdministrativeArea",
+      name: "Países de habla hispana",
     },
     availableChannel: {
       "@type": "ServiceChannel",
@@ -96,9 +97,9 @@ export default function FonoaudiologaVozOnlinePage() {
             name: "Terapia de voz online para adultos",
             serviceType: "Terapia de voz",
             description:
-              "Fonoaudiología de voz para adultos por videollamada en todo Chile: disfonía, ronquera, nódulos, voz cansada e higiene vocal.",
+              "Fonoaudiología de voz para adultos por videollamada en español, en cualquier país de habla hispana: disfonía, ronquera, nódulos, voz cansada e higiene vocal.",
             url: `${SITE_URL}/voz-online/fonoaudiologa-de-voz-online`,
-            areaServed: { "@type": "Country", name: "Chile" },
+            areaServed: { "@type": "AdministrativeArea", name: "Países de habla hispana" },
             provider: { "@id": MEDICAL_BUSINESS_ID },
             availableChannel: {
               "@type": "ServiceChannel",
@@ -119,13 +120,14 @@ export default function FonoaudiologaVozOnlinePage() {
         <article className="prose prose-sky lg:prose-lg max-w-none">
           <header className="mb-12 rounded-3xl bg-gradient-to-br from-sky-50 to-indigo-50 px-8 py-12 text-center text-sky-950">
             <h1 className="mb-4 text-4xl font-extrabold tracking-tight sm:text-5xl">
-              Terapia de voz online para adultos en todo Chile
+              Terapia de voz online en español para adultos
             </h1>
             <div className="not-prose mx-auto mb-6 max-w-3xl rounded-2xl border border-sky-200 bg-white/80 p-5 text-left">
               <p className="text-lg font-semibold leading-relaxed text-sky-950" data-speakable>
                 <strong>Respuesta rápida:</strong> La terapia de voz online es
-                fonoaudiología de voz para adultos, por videollamada, en todo
-                Chile. La hace Katia Domínguez, fonoaudióloga de la Universidad
+                fonoaudiología de voz para adultos, por videollamada, en
+                español, desde Chile y para cualquier país de habla hispana.
+                La hace Katia Domínguez, fonoaudióloga de la Universidad
                 de Chile, con más de 20 años de experiencia clínica. Sirve si
                 tienes disfonía, ronquera, nódulos, voz cansada o usas la voz
                 para trabajar. Si hay que mirar las cuerdas, el otorrino va
@@ -168,7 +170,8 @@ export default function FonoaudiologaVozOnlinePage() {
             <p className="text-gray-700 leading-relaxed">
               Katia Domínguez es fonoaudióloga de voz. La{" "}
               <strong>terapia de voz online</strong> es por videollamada, para
-              adultos en todo Chile: disfonía, ronquera persistente, nódulos,
+              adultos en español, en Chile y en cualquier país de habla hispana:
+              disfonía, ronquera persistente, nódulos,
               voz cansada e higiene vocal. Sin traslados, con agenda por
               WhatsApp. La consulta infantil sigue siendo presencial en Chillán.
             </p>
@@ -403,7 +406,7 @@ export default function FonoaudiologaVozOnlinePage() {
               <div className="bg-sky-50 rounded-xl p-5">
                 <span className="text-2xl mb-2 block">🌎</span>
                 <h4 className="font-bold text-sky-900 text-sm mb-1">Sin limites de ciudad</h4>
-                <p className="text-xs text-gray-600">Accede a una fonoaudióloga experta sin importar en qué lugar de Chile te encuentres.</p>
+                <p className="text-xs text-gray-600">Accede a una fonoaudióloga por videollamada, en español, estés en Chile o en otro país de habla hispana.</p>
               </div>
               <div className="bg-sky-50 rounded-xl p-5">
                 <span className="text-2xl mb-2 block">⏱️</span>
@@ -428,9 +431,9 @@ export default function FonoaudiologaVozOnlinePage() {
               Atención online en tu ciudad
             </h2>
             <p className="mx-auto mb-8 max-w-2xl text-center text-gray-600">
-              Terapia vocal por videollamada para profesionales de la voz en
-              todo Chile. Elige tu ciudad para ver cómo funciona la atención
-              online en tu región.
+              Si estás en Chile, elige tu ciudad. La terapia vocal es por
+              videollamada. Estas páginas explican la atención online en cada
+              región.
             </p>
             <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {[
@@ -474,11 +477,12 @@ export default function FonoaudiologaVozOnlinePage() {
 
           <section className="my-16 not-prose">
             <h2 className="mb-4 text-center text-3xl font-bold text-sky-900">
-              Terapia de voz en español fuera de Chile
+              Terapia de voz en español según el país
             </h2>
             <p className="mx-auto mb-8 max-w-2xl text-center text-gray-600">
-              La sesión es por videollamada desde Chile, en español, para adultos.
-              El horario se coordina según tu zona horaria. Si estás en Miami, la
+              La sesión es por videollamada desde Chile, en español, para adultos
+              de cualquier país de habla hispana. El horario se coordina según tu
+              zona horaria. Si estás en Miami, la
               página es{" "}
               <Link href="/voz-online/miami" className="font-semibold text-sky-800 underline">
                 fonoaudióloga en español en Miami
@@ -503,6 +507,21 @@ export default function FonoaudiologaVozOnlinePage() {
                   href: "/voz-online/argentina",
                   title: "Argentina",
                   desc: "Fonoaudióloga online y foniatría.",
+                },
+                {
+                  href: "/voz-online/mexico",
+                  title: "México",
+                  desc: "Terapeuta de lenguaje para la voz.",
+                },
+                {
+                  href: "/voz-online/colombia",
+                  title: "Colombia",
+                  desc: "Fonoaudióloga online de la voz.",
+                },
+                {
+                  href: "/voz-online/peru",
+                  title: "Perú",
+                  desc: "Terapia de lenguaje y voz online.",
                 },
                 {
                   href: "/voz-online/miami",

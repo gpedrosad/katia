@@ -4,6 +4,10 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 
 ---
 
+## 2026-11-06
+
+- SEO Lote 30 | Titles ≤60. `/comparaciones/dislexia-vs-dislalia` (consulta «dislexia y dislalia», 1143 impr, 0 clics, pos 5,6) y `/comparaciones/dislalia-vs-disartria`: title y H1 abren con la consulta y dicen la diferencia. También snippets de primera evaluación, habla como bebé, voz tras resfrío, parálisis cordal («online en español»), hub de voz (ya no solo Chile: videollamada en español para adultos en cualquier país de habla hispana) y España (logopeda). Disfonía por estrés y pólipos: title/meta; FAQPage y enlace a la hub ya estaban. URLs nuevas de país: `/voz-online/mexico` (terapeuta de lenguaje; varias zonas horarias), `/voz-online/colombia` (fonoaudióloga; una zona), `/voz-online/peru` (terapia de lenguaje y fonoaudióloga; una zona). Sin desfase publicado, sin precios, sin páginas de ciudad. Sitemap las descubre. | `docs/seo/ctr-tracking.md` y `SEO-CHANGELOG.md`. `pendiente:` indexar las 3 URLs y medir el 2026-11-20.
+
 ## 2026-11-03
 
 - SEO Lote 28 | GSC 90d 08-04..11-01: 102 clic / 9.310 imp / pos 8,0. 7d 19/2.986 pos 7,6 vs 9/1.481 pos 8,2. Editadas: `/preguntas/el-tel-se-cura` (2026-10-22), `/glosario/logopeda` (2026-10-26), `/servicios/evaluacion-fonoaudiologica` (2026-10-17), `/voz-online/disfonia-por-estres` (2026-10-22) y `/voz-online/voz-despues-de-un-resfrio` (2026-10-23). Title del TEL responde «no» y nombra TDL. Logopeda abre con «¿son lo mismo?» sin cambiar España/Chile. Evaluación: title «qué incluye» y ancla desde la pregunta del TEL; el ancla ya estaba en cómo se diagnostica el TEL. Voz: FAQ «¿Se puede perder la voz por estrés?» y title de gripe/resfrío; enlaces cruzados, a la hub y a afonía. `dateModified` del clúster de voz solo cambia en la página del resfrío (prop; default 2026-10-23). Saltada `/servicios/tel-trastorno-especifico-lenguaje` (2026-10-29, `a47025c`): el enlace «¿el TEL se cura?» ya está. Comparaciones (30 y 31 oct), hitos y home: propuesta, sin edición. Sin otras ciudades, sin `/ads`, sin `/sitelink`. Sitemap del build 162. | Changelog `SEO-CHANGELOG.md`. `pendiente:` medir ~2026-11-17.

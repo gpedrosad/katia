@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LatamVoiceLinks } from "@/app/(site)/voz-online/_components/LatamVoiceLinks";
 import { VoiceClusterPage } from "@/app/(site)/voz-online/_components/VoiceClusterPage";
 import { buildPageMetadata } from "@/lib/seo";
 
@@ -92,7 +93,7 @@ export default function VozOnlineAlemaniaPage() {
           Si estás en Suiza, usa{" "}
           <Link href="/voz-online/suiza">terapia de voz en español si vives en Suiza</Link>. Si
           vives en España y buscas logopeda como nombre de la profesión, la página es{" "}
-          <Link href="/voz-online/espana">logopedia de la voz online si estás en España</Link>.
+          <Link href="/voz-online/espana">logopeda de la voz online en España</Link>.
         </p>
         <p>
           Berlín, Múnich, Hamburgo y Fráncfort entran en esta misma videollamada. El horario se
@@ -107,6 +108,7 @@ export default function VozOnlineAlemaniaPage() {
           cómo hablas. Si la ronquera sigue más de dos semanas sin resfriado, hay dolor o la voz se
           apaga, pide hora con un médico HNO donde vives. La terapia de voz acompaña esa revisión.
         </p>
+        <LatamVoiceLinks />
       </section>
     </VoiceClusterPage>
   );

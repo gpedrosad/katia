@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LatamVoiceLinks } from "@/app/(site)/voz-online/_components/LatamVoiceLinks";
 import { VoiceClusterPage } from "@/app/(site)/voz-online/_components/VoiceClusterPage";
 import { buildPageMetadata } from "@/lib/seo";
 
@@ -110,6 +111,7 @@ export default function VozOnlineAustraliaPage() {
           ese examen indique. Si la queja es la calidad de la voz, el marco está en el{" "}
           <Link href="/voz-online/tratamiento-disfonia-online">tratamiento de disfonía</Link>.
         </p>
+        <LatamVoiceLinks />
       </section>
     </VoiceClusterPage>
   );

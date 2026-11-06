@@ -5,9 +5,9 @@ import { buildPageMetadata } from "@/lib/seo";
 import { SITE_URL, whatsappUrl } from "@/lib/site";
 
 const PAGE_PATH = "/comparaciones/dislexia-vs-dislalia";
-const TITLE = "Dislexia y dislalia: diferencias y cómo saber cuál es";
+const TITLE = "Dislexia y dislalia: hablar no es lo mismo que leer";
 const DESCRIPTION =
-  "La dislalia es pronunciar los sonidos al hablar. La dislexia es leer y escribir. No son lo mismo y pueden coincidir. Evaluación en Chillán.";
+  "No son lo mismo. La dislalia es pronunciar sonidos al hablar. La dislexia es leer y escribir. Pueden coincidir. Evaluación en Chillán.";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
@@ -61,7 +61,7 @@ const faqs = [
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Diferencia entre dislexia y dislalia",
+  headline: TITLE,
   description: DESCRIPTION,
   inLanguage: "es-CL",
   author: {
@@ -78,7 +78,7 @@ const articleJsonLd = {
     "@id": `${SITE_URL}${PAGE_PATH}`,
   },
   datePublished: "2026-10-23",
-  dateModified: "2026-10-30",
+  dateModified: "2026-11-06",
 };
 
 const faqJsonLd = {
@@ -148,9 +148,7 @@ export default function DislexiaVsDislaliaPage() {
             />
 
             <article className="prose prose-rose lg:prose-lg max-w-none">
-              <h1 className="text-4xl font-extrabold text-gray-900">
-                Diferencia entre dislexia y dislalia
-              </h1>
+              <h1 className="text-4xl font-extrabold text-gray-900">{TITLE}</h1>
               <p className="lead text-lg text-gray-700" data-speakable>
                 Dislexia y dislalia no son el mismo cuadro: la dislalia es la
                 pronunciación de los sonidos al hablar y la dislexia es leer y

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LatamVoiceLinks } from "@/app/(site)/voz-online/_components/LatamVoiceLinks";
 import { VoiceClusterPage } from "@/app/(site)/voz-online/_components/VoiceClusterPage";
 import { buildPageMetadata } from "@/lib/seo";
 
@@ -105,6 +106,7 @@ export default function VozOnlineMiamiPage() {
           <Link href="/voz-online/estados-unidos">terapia de voz en español en Estados Unidos</Link>
           .
         </p>
+        <LatamVoiceLinks />
       </section>
 
       <section>

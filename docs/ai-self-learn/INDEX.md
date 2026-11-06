@@ -1,6 +1,6 @@
 # INDEX — hechos densos (leer primero)
 
-Actualizado: **2026-11-03**
+Actualizado: **2026-11-06**
 
 ## Identidad / NAP
 
@@ -47,6 +47,9 @@ Actualizado: **2026-11-03**
 - Meta TEA: funnel **consciente del problema** (no oferta) · landing **8,5/10** post-ajuste (H1 30 días, tipos de ayuda, FAQ emocional) · doc `app/meta/primeros-30-dias-tea/funnel-consciente-del-problema.md` (2026-09-29)
 
 ## GSC / SEO orgánico (último corte)
+
+- Lote 30 (2026-11-06): CTR en dislexia y dislalia (1143 impr, 0 clics, pos 5,6), dislalia y disartria, primera evaluación, habla como bebé, resfrío, parálisis cordal («online en español»), hub de voz (sale el marco solo Chile; adultos en español en cualquier país de habla hispana) y España (logopeda). URLs nuevas de país, no de ciudad: `/voz-online/mexico`, `/voz-online/colombia`, `/voz-online/peru`. Sin precios ni testimonios nuevos. Registro `docs/seo/ctr-tracking.md`. Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 3 URLs y medir el 2026-11-20.
+
 
 - SERP infantil CL 2026-08-26: `docs/seo-oportunidades-serp-infantil-chile-2026-08-26.md` · 63/207 keywords con scrape (144 cortadas por cuota Apify) · **no** es volumen/CPC/DA
 - Mejor opp **93** LOW: `mi hijo de 2 años no forma frases` / `niño de 2 años no habla` (directorios + intl.) · 19 LOW · 8 locales Chillán

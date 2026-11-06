@@ -1,11 +1,12 @@
 import Link from "next/link";
+import { LatamVoiceLinks } from "@/app/(site)/voz-online/_components/LatamVoiceLinks";
 import { VoiceClusterPage } from "@/app/(site)/voz-online/_components/VoiceClusterPage";
 import { buildPageMetadata } from "@/lib/seo";
 
 const PATH = "/voz-online/espana";
-const TITLE = "Logopedia de la voz online si estás en España";
+const TITLE = "Logopeda de la voz online en España";
 const DESCRIPTION =
-  "Logopedia de la voz para adultos en España, por videollamada desde Chile con una fonoaudióloga. El horario se coordina a tu zona horaria.";
+  "Logopeda de la voz para adultos en España: logopedia por videollamada desde Chile, en español. El horario se coordina a tu zona horaria.";
 
 export const metadata = buildPageMetadata({
   path: PATH,
@@ -56,6 +57,7 @@ export default function VozOnlineEspanaPage() {
       areaServed={{ "@type": "Country", name: "España" }}
       whatsappMessage="Hola, estoy en España y quiero consultar horario para terapia de voz online."
       hoursPlace="España"
+      dateModified="2026-11-06"
       faq={faqItems}
     >
       <section>
@@ -117,6 +119,7 @@ export default function VozOnlineEspanaPage() {
           Si un otorrino en España ya vio una lesión y pidió terapia de voz, la sesión acompaña
           esa indicación. La cámara escucha cómo hablas. Las cuerdas las mira el otorrino.
         </p>
+        <LatamVoiceLinks />
       </section>
     </VoiceClusterPage>
   );

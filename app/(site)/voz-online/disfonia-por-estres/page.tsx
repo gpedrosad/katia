@@ -7,9 +7,9 @@ import { buildPageMetadata } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 
 const PATH = "/voz-online/disfonia-por-estres";
-const TITLE = "Disfonía por estrés: ¿se puede perder la voz?";
+const TITLE = "Disfonía por estrés: terapia de voz online";
 const DESCRIPTION =
-  "El estrés puede apretarte la voz: se siente tensa y cuesta más hablar. No es quedarte sin voz de golpe. El otorrino descarta una lesión.";
+  "La disfonía por estrés aprieta la voz: suena tensa y cuesta hablar. La terapia de voz online trabaja respiración y hábitos. El otorrino mira las cuerdas.";
 
 export const metadata = buildPageMetadata({
   path: PATH,
@@ -40,7 +40,7 @@ const faqItems = [
   {
     question: "¿La terapia de voz online quita el estrés?",
     answer:
-      "No trata la ansiedad ni promete que el estrés desaparezca. Trabaja cómo respiras, la postura y los hábitos al hablar, por videollamada, para adultos en todo Chile.",
+      "No trata la ansiedad ni promete que el estrés desaparezca. Trabaja cómo respiras, la postura y los hábitos al hablar, por videollamada, en español, para adultos.",
   },
   {
     question: "¿Cómo sé si es tensión o una lesión en las cuerdas?",
@@ -48,9 +48,9 @@ const faqItems = [
       "No se cierra por videollamada. Si hay dolor al hablar, la voz se apaga o la ronquera lleva más de dos semanas sin resfriado, el otorrinolaringólogo mira las cuerdas. La terapia no reemplaza ese examen.",
   },
   {
-    question: "¿Atienden esta disfonía en todo Chile?",
+    question: "¿La terapia de esta disfonía es online?",
     answer:
-      "Sí, si eres adulto. La hora se coordina por WhatsApp. La fonoaudiología infantil sigue siendo presencial en Chillán.",
+      "Sí, si eres adulto. Es por videollamada, en español, y la hora se coordina por WhatsApp según tu zona horaria. La fonoaudiología infantil sigue siendo presencial en Chillán.",
   },
 ];
 
@@ -61,9 +61,9 @@ export default function DisfoniaPorEstresPage() {
     name: "Terapia de voz online ante disfonía por estrés o tensión",
     serviceType: "Terapia de voz online",
     description:
-      "Acompañamiento fonoaudiológico online para adultos con disfonía por estrés o tensión muscular, en todo Chile, sin reemplazar el examen del otorrino.",
+      "Acompañamiento fonoaudiológico online para adultos con disfonía por estrés o tensión muscular, por videollamada en español, sin reemplazar el examen del otorrino.",
     url: `${SITE_URL}${PATH}`,
-    areaServed: { "@type": "Country", name: "Chile" },
+    areaServed: { "@type": "AdministrativeArea", name: "Países de habla hispana" },
     provider: { "@id": MEDICAL_BUSINESS_ID },
     availableChannel: {
       "@type": "ServiceChannel",
@@ -80,7 +80,7 @@ export default function DisfoniaPorEstresPage() {
     url: `${SITE_URL}${PATH}`,
     inLanguage: "es-CL",
     datePublished: "2026-10-22",
-    dateModified: "2026-11-03",
+    dateModified: "2026-11-06",
   };
 
   return (
@@ -110,7 +110,7 @@ export default function DisfoniaPorEstresPage() {
                 <strong>Respuesta rápida:</strong> El estrés puede apretarte la
                 voz: se siente tensa, con un nudo en el cuello, y cuesta más
                 hablar. Eso no es quedarte sin voz de golpe. La terapia de voz
-                online —adultos, por videollamada, en todo Chile— trabaja
+                online —adultos, por videollamada, en español— trabaja
                 respiración, postura y hábitos al hablar. No diagnostica una
                 lesión: el otorrinolaringólogo mira las cuerdas. Si la voz se
                 corta, duele o la ronquera sigue, el otorrino va primero.

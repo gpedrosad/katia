@@ -20,6 +20,34 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-11-06: SEO Lote 30 — CTR de comparaciones y voz; México, Colombia y Perú
+
+Titles ≤60 y metas ≤155. Español de Chile, tuteo. Sin páginas de ciudad nuevas, sin precios ni testimonios nuevos. La hub de voz deja de presentarse como solo Chile: videollamada en español para adultos en cualquier país de habla hispana. La fonoaudiología infantil sigue presencial en Chillán.
+
+### Snippets
+
+- `/comparaciones/dislexia-vs-dislalia` — title y H1 abren con «Dislexia y dislalia» y dicen la diferencia (hablar / leer).
+- `/comparaciones/dislalia-vs-disartria` — title y H1 abren con «Dislalia y disartria» (un sonido o el habla entera).
+- `/recursos/primera-evaluacion-fonoaudiologica-infantil` — title con «Primera evaluación fonoaudiológica». H1 sin cambio.
+- `/lenguaje-infantil/habla-como-bebe` — title «Mi hijo habla como bebé: qué mirar». H1 sin cambio.
+- `/voz-online/voz-despues-de-un-resfrio` — title con «qué hacer»; meta en español, no solo Chile.
+- `/voz-online/paralisis-cordal-rehabilitacion-online` — «rehabilitación online en español». FAQPage ya estaba. Ancla a la hub.
+- `/voz-online/fonoaudiologa-de-voz-online` — title y H1 sin «en Chile». Schema `areaServed`: países de habla hispana.
+- `/voz-online/espana` — title «Logopeda de la voz online en España».
+- `/voz-online/disfonia-por-estres` y `/voz-online/polipos-en-las-cuerdas-vocales` — title y meta. FAQ y FAQPage ya estaban. Enlace a la hub ya estaba.
+
+### URLs nuevas
+
+- `/voz-online/mexico` — terapeuta de lenguaje; varias zonas horarias; sin desfase publicado.
+- `/voz-online/colombia` — fonoaudióloga; una zona horaria.
+- `/voz-online/peru` — terapia de lenguaje y fonoaudióloga; una zona horaria.
+
+Entran al sitemap al existir el `page.tsx` (`app/sitemap.ts` las descubre). También en `lib/seo-routes.ts`. Enlazadas desde la hub, desde `/voz-online/terapia-de-voz-desde-otro-pais` y desde las páginas de país hermanas.
+
+Registro antes/después: `docs/seo/ctr-tracking.md`. Medir el 2026-11-20. `pendiente:` indexar las 3 URLs nuevas y reenviar sitemap en GSC.
+
+---
+
 ## 2026-11-04: SEO Lote 29 — CTR de hitos y qué hace el fonoaudiólogo; propuestas para comparaciones
 
 Contexto GSC (sc-domain:katialafono.cl). 90d (2026-08-05..2026-11-02): 103 clics / 9.660 impr / pos 8,0. 7d (2026-10-27..2026-11-02): 20 clics / 2.861 impr, contra 10 / 1.871 en los 7d previos (2026-10-20..2026-10-26). Las impresiones suben más rápido que los clics: el lote ataca páginas con muchas impresiones y 0 clics, donde el snippet no responde la consulta.

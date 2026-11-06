@@ -3,9 +3,9 @@ import { VoiceClusterPage } from "@/app/(site)/voz-online/_components/VoiceClust
 import { buildPageMetadata } from "@/lib/seo";
 
 const PATH = "/voz-online/voz-despues-de-un-resfrio";
-const TITLE = "¿Por qué se va la voz cuando da gripe o resfrío?";
+const TITLE = "¿Se va la voz con la gripe o el resfrío? Qué hacer";
 const DESCRIPTION =
-  "Si la gripe, el resfrío o el COVID ya pasó y la voz sigue ronca o se corta, el otorrino mira las cuerdas. La terapia online trabaja cómo hablas después.";
+  "Si la gripe o el resfrío ya pasó y la voz sigue ronca o se corta, el otorrino mira las cuerdas. La terapia online, en español, trabaja cómo hablas.";
 
 export const metadata = buildPageMetadata({
   path: PATH,
@@ -26,7 +26,7 @@ const faqItems = [
   {
     question: "¿Qué hago si la voz no vuelve después de un resfrío?",
     answer:
-      "Si ya pasó el resfrío y la voz sigue ronca, débil o se corta, un otorrino tiene que mirar las cuerdas. La terapia de voz online, para adultos en Chile, trabaja cómo hablas después. No trata el resfrío.",
+      "Si ya pasó el resfrío y la voz sigue ronca, débil o se corta, un otorrino tiene que mirar las cuerdas. La terapia de voz online, para adultos y en español, trabaja cómo hablas después. No trata el resfrío.",
   },
   {
     question: "¿Y si fue COVID y no un resfrío común?",
@@ -46,7 +46,7 @@ const faqItems = [
   {
     question: "¿La terapia online cura el resfrío o el COVID?",
     answer:
-      "No. No es un tratamiento de la infección. Si el médico ya miró las cuerdas y la terapia de voz cabe, la sesión trabaja el uso de la voz por videollamada, en todo Chile.",
+      "No. No es un tratamiento de la infección. Si el médico ya miró las cuerdas y la terapia de voz cabe, la sesión trabaja el uso de la voz por videollamada, en español.",
   },
 ];
 
@@ -57,11 +57,11 @@ export default function VozDespuesDeUnResfrioPage() {
       title={TITLE}
       description={DESCRIPTION}
       breadcrumb="Voz tras un resfrío"
-      quickAnswer="Cuando da gripe, un resfrío o un COVID, la voz puede quedarse ronca, débil o cortada aunque el cuadro ya haya pasado. Esta página no describe secuelas con cifras: el otorrino mira las cuerdas. La terapia de voz online —adultos, por videollamada, en todo Chile— no trata la infección. Trabaja cómo hablas después, si ese examen lo permite, y no promete que la voz vuelva a ser la de antes."
-      dateModified="2026-11-03"
+      quickAnswer="Cuando da gripe, un resfrío o un COVID, la voz puede quedarse ronca, débil o cortada aunque el cuadro ya haya pasado. Esta página no describe secuelas con cifras: el otorrino mira las cuerdas. La terapia de voz online —adultos, por videollamada, en español— no trata la infección. Trabaja cómo hablas después, si ese examen lo permite, y no promete que la voz vuelva a ser la de antes."
+      dateModified="2026-11-06"
       serviceName="Terapia de voz online cuando la voz no vuelve tras un resfrío"
-      serviceDescription="Acompañamiento fonoaudiológico online para adultos cuya voz no vuelve tras un resfrío o un COVID, en todo Chile, sin tratar la infección ni reemplazar al otorrino."
-      areaServed={{ "@type": "Country", name: "Chile" }}
+      serviceDescription="Acompañamiento fonoaudiológico online para adultos cuya voz no vuelve tras un resfrío o un COVID, por videollamada en español, sin tratar la infección ni reemplazar al otorrino."
+      areaServed={{ "@type": "AdministrativeArea", name: "Países de habla hispana" }}
       whatsappMessage="Hola, se me quedó la voz después de un resfrío o COVID y quiero consultar la terapia de voz online."
       faq={faqItems}
     >

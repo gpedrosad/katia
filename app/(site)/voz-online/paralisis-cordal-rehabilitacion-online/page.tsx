@@ -4,18 +4,21 @@ import Link from "next/link";
 import { GeoFAQ } from "@/app/_components/GeoFAQ";
 import { buildPageMetadata } from "@/lib/seo";
 
+const TITLE = "Parálisis cordal: rehabilitación online en español";
+const DESCRIPTION =
+  "Parálisis o paresia de cuerda vocal, de un lado o de los dos. Rehabilitación online en español, después del diagnóstico del otorrino.";
+
 export const metadata = buildPageMetadata({
   path: "/voz-online/paralisis-cordal-rehabilitacion-online",
-  title: "Parálisis de cuerda vocal | Rehabilitación online",
-  description:
-    "Parálisis o paresia de cuerda vocal: de un lado (derecha o izquierda) o de las dos. Qué hace la fonoaudióloga después del diagnóstico del otorrino. Online.",
+  title: TITLE,
+  description: DESCRIPTION,
   keywords: [
     "parálisis cuerda vocal",
     "paresia de cuerda vocal",
     "parálisis cordal",
     "rehabilitación vocal online",
+    "parálisis cordal online en español",
     "fonoaudióloga especialista en voz",
-    "terapia voz online Chile",
   ],
 });
 
@@ -51,8 +54,8 @@ export default function ParalisisCordalPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
-    dateModified: "2026-10-31",
-    name: "Parálisis de Cuerda Vocal - Rehabilitación Online",
+    dateModified: "2026-11-06",
+    name: TITLE,
     medicalSpecialty: "SpeechTherapy",
     about: {
       "@type": "MedicalCondition",
@@ -96,9 +99,7 @@ export default function ParalisisCordalPage() {
         />
 
         <article className="prose prose-slate lg:prose-lg max-w-none">
-          <h1 className="text-4xl font-extrabold text-slate-950">
-            Parálisis de Cuerda Vocal: Rehabilitación Vocal Online
-          </h1>
+          <h1 className="text-4xl font-extrabold text-slate-950">{TITLE}</h1>
           <p className="lead font-medium text-gray-700" data-speakable>
             La parálisis de cuerda vocal ocurre cuando una (unilateral) o ambas
             (bilateral) cuerdas vocales no se mueven correctamente. Esto
@@ -129,7 +130,7 @@ export default function ParalisisCordalPage() {
               href="/voz-online/fonoaudiologa-de-voz-online"
               className="font-medium text-slate-600 underline hover:text-slate-800"
             >
-              ← Ver todos los servicios de voz online
+              terapia de voz online para adultos
             </Link>
           </p>
           <p className="not-prose my-4 rounded-xl border border-slate-200 bg-slate-50/80 p-4 text-sm text-slate-900">
