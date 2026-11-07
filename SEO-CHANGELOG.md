@@ -20,6 +20,28 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-11-07: SEO Lote 31 — enlaces internos; titles en freeze
+
+### Contexto
+- Baseline GSC 90d: 115c / 11.737i / CTR 0,98 % / pos 8,0
+- 7d (10-31..11-06): 24c / 3.244i vs prev7 17c / 3.018i
+- Lote 30 (11-06) acababa de retitular comparaciones y voz; hoy **sin cambios de title/meta/H1**
+
+### Cambios
+1. `/glosario` — +2 cards en «Comparaciones útiles» → `/comparaciones/dislexia-vs-dislalia` y `/comparaciones/dislalia-vs-disartria` (titles frozen; solo enlaces entrantes).
+2. `/recursos` — en «Más guías»: +`/comparaciones` y +`/fonoaudiologa-ninos-chillan` (refuerza cannib «fonoaudiologa» hacia Chillán; no se potencian voz-online de otras ciudades).
+
+### Clics bajos
+Prior CTR (Lote 29/30) mide **2026-11-18** / **2026-11-20**. Sin retítulos nuevos hoy.
+
+### DeepSeek
+gen-1794054433-RXZMQbxIfGqyWCA4elbi (deepseek/deepseek-v4.1-flash).
+
+### GA4
+Skip (reauth).
+
+---
+
 ## 2026-11-06: SEO Lote 30 — CTR de comparaciones y voz; México, Colombia y Perú
 
 Titles ≤60 y metas ≤155. Español de Chile, tuteo. Sin páginas de ciudad nuevas, sin precios ni testimonios nuevos. La hub de voz deja de presentarse como solo Chile: videollamada en español para adultos en cualquier país de habla hispana. La fonoaudiología infantil sigue presencial en Chillán.

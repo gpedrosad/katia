@@ -1,4 +1,11 @@
-# CTR tracking — katialafono.cl
+# CTR tracking — Katia (katialafono.cl)
+
+## 2026-11-07 · Lote 31 — sin cambios de title (freeze)
+
+- No se retitularon páginas. Lote 30 (11-06) y Lote 29 (11-04) siguen midiendo **2026-11-18** / **2026-11-20**.
+- Enlaces internos: `/glosario` → dislexia-vs-dislalia + dislalia-vs-disartria; `/recursos` → `/comparaciones` + `/fonoaudiologa-ninos-chillan`.
+- Cannib «fonoaudiologa»: preferencia home / Chillán services; sin boost a voz-online de otras ciudades.
+
 
 Registro de cambios de snippet (title/description/H1) para subir el CTR. Fuente: Search Console, sc-domain:katialafono.cl. Medir cada entrada en la fecha indicada con el mismo rango de 7 días posterior.
 
