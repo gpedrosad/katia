@@ -186,6 +186,28 @@ export default function GlosarioPage() {
                     Diferencias entre pronunciación y comprensión/vocabulario.
                   </p>
                 </Link>
+                <Link
+                  href="/comparaciones/dislexia-vs-dislalia"
+                  className="block rounded-xl border border-gray-200 bg-white p-4 transition-all hover:border-rose-300 hover:shadow-md"
+                >
+                  <h3 className="font-semibold text-gray-900 hover:text-rose-600">
+                    Dislexia vs dislalia
+                  </h3>
+                  <p className="mt-1 text-sm text-gray-600">
+                    Leer y escribir no es lo mismo que pronunciar los sonidos.
+                  </p>
+                </Link>
+                <Link
+                  href="/comparaciones/dislalia-vs-disartria"
+                  className="block rounded-xl border border-gray-200 bg-white p-4 transition-all hover:border-rose-300 hover:shadow-md"
+                >
+                  <h3 className="font-semibold text-gray-900 hover:text-rose-600">
+                    Dislalia vs disartria
+                  </h3>
+                  <p className="mt-1 text-sm text-gray-600">
+                    Un sonido puntual o el habla entera por causa motora.
+                  </p>
+                </Link>
               </div>
             </div>
 

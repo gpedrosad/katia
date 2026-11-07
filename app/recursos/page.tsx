@@ -198,6 +198,8 @@ export default function RecursosPage() {
                   ["/lectoescritura", "Lectoescritura"],
                   ["/preguntas", "Preguntas de padres"],
                   ["/guias-padres", "Guías para la casa"],
+                  ["/comparaciones", "Comparaciones: dislalia, dislexia, TEL"],
+                  ["/fonoaudiologa-ninos-chillan", "Fonoaudióloga para niños en Chillán"],
                 ].map(([href, label]) => (
                   <li key={href}>
                     <Link
