@@ -7,9 +7,9 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/nodulos-vocales-tratamiento-online",
-  title: "Nódulos en las cuerdas vocales: terapia online",
+  title: "Nódulos en las cuerdas vocales: terapia vocal online",
   description:
-    "Terapia online para nódulos en las cuerdas vocales, junto al plan del otorrino. Técnica e higiene vocal por videollamada, para adultos en Chile.",
+    "¿Te diagnosticaron nódulos? Respiración, técnica e higiene vocal por videollamada para adultos en Chile. La cirugía la indica el otorrino.",
   keywords: [
     "nódulos vocales",
     "nodulos cuerdas vocales",

@@ -13,9 +13,9 @@ const WHATSAPP_HREF = whatsappUrl("Hola, quiero consultar por terapia de lenguaj
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Especialista en terapia de lenguaje infantil",
+  title: "Terapia de lenguaje infantil presencial en Chillán",
   description:
-    "Terapia de lenguaje infantil en Chillán si dice pocas palabras o no arma frases. La especialista evalúa, te dice qué hacer y arma el plan con los padres.",
+    "Terapia para retraso del lenguaje, vocabulario limitado y dificultades de comprensión o expresión. Con ejercicios para casa. Presencial en Chillán.",
   keywords: ["terapia de lenguaje infantil Chillán",
     "especialista en terapia de lenguaje para niños",
     "terapia de lenguaje infantil",

@@ -48,6 +48,7 @@ Actualizado: **2026-11-08**
 
 ## GSC / SEO orgánico (último corte)
 
+- CTR test Opus 5.5 batch 2 (2026-11-08): solo title y meta en informe PIE (0/70, pos 6,17), evaluación fonoaudiológica (0/50, pos 9,14), voz ronca (0/33, pos 9,21), nódulos vocales (0/27, pos 7,19) y terapia de lenguaje infantil (0/13, pos 13,31). H1 sin cambio. Registro `docs/seo/ctr-tracking.md`. `pendiente:` medir el 2026-11-22.
 - CTR test Opus 5.5 (2026-11-08): solo title y meta en `/preguntas/el-tel-se-cura` (consulta «el tel se cura»; 3 clic / 244 impr / CTR 1,23 % / pos 5,42), `/preguntas/cuanto-dura-una-terapia-de-lenguaje` (consulta «cuánto dura una terapia de lenguaje»; 0/113 / pos 7,46) y `/comparaciones/tel-vs-retraso-del-lenguaje` (consulta «TEL o retraso del lenguaje»; 0/106 / pos 8,39). H1 sin cambio. Registro `docs/seo/ctr-tracking.md`. `pendiente:` medir el 2026-11-22.
 - Lote 30 (2026-11-06): CTR en dislexia y dislalia (1143 impr, 0 clics, pos 5,6), dislalia y disartria, primera evaluación, habla como bebé, resfrío, parálisis cordal («online en español»), hub de voz (sale el marco solo Chile; adultos en español en cualquier país de habla hispana) y España (logopeda). URLs nuevas de país, no de ciudad: `/voz-online/mexico`, `/voz-online/colombia`, `/voz-online/peru`. Sin precios ni testimonios nuevos. Registro `docs/seo/ctr-tracking.md`. Changelog `SEO-CHANGELOG.md`. `pendiente:` indexar las 3 URLs y medir el 2026-11-20.
 
