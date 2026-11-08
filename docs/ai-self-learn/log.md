@@ -4,6 +4,10 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 
 ---
 
+## 2026-11-08
+
+- CTR test Opus 5.5 | Solo title y meta. `/preguntas/el-tel-se-cura`: consulta «el tel se cura», antes 3 clic / 244 impr / CTR 1,23 % / pos 5,42. `/preguntas/cuanto-dura-una-terapia-de-lenguaje`: consulta «cuánto dura una terapia de lenguaje», antes 0/113 / pos 7,46. `/comparaciones/tel-vs-retraso-del-lenguaje`: consulta «TEL o retraso del lenguaje», antes 0/106 / pos 8,39. H1 sin cambio. | `docs/seo/ctr-tracking.md`. `pendiente:` medir el 2026-11-22.
+
 ## 2026-11-06
 
 - SEO Lote 30 | Titles ≤60. `/comparaciones/dislexia-vs-dislalia` (consulta «dislexia y dislalia», 1143 impr, 0 clics, pos 5,6) y `/comparaciones/dislalia-vs-disartria`: title y H1 abren con la consulta y dicen la diferencia. También snippets de primera evaluación, habla como bebé, voz tras resfrío, parálisis cordal («online en español»), hub de voz (ya no solo Chile: videollamada en español para adultos en cualquier país de habla hispana) y España (logopeda). Disfonía por estrés y pólipos: title/meta; FAQPage y enlace a la hub ya estaban. URLs nuevas de país: `/voz-online/mexico` (terapeuta de lenguaje; varias zonas horarias), `/voz-online/colombia` (fonoaudióloga; una zona), `/voz-online/peru` (terapia de lenguaje y fonoaudióloga; una zona). Sin desfase publicado, sin precios, sin páginas de ciudad. Sitemap las descubre. | `docs/seo/ctr-tracking.md` y `SEO-CHANGELOG.md`. `pendiente:` indexar las 3 URLs y medir el 2026-11-20.

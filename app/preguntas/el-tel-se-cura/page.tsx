@@ -4,9 +4,9 @@ import { buildPageMetadata } from "@/lib/seo";
 
 const PATH = "/preguntas/el-tel-se-cura";
 const H1 = "¿El TEL se cura?";
-const TITLE = "¿El TEL se cura? No: qué esperar del TEL o TDL";
+const TITLE = "¿El TEL o TDL se cura? Qué esperar con terapia y apoyo";
 const DESCRIPTION =
-  "No. El TEL o TDL (trastorno del desarrollo del lenguaje) no se cura: acompaña. Con terapia y apoyo puede mejorar mucho. No hay un plazo igual.";
+  "No se cura, pero tampoco se pasa solo. Con terapia y apoyo en casa y colegio puede mejorar mucho. No hay un plazo igual para todos.";
 
 export const metadata = buildPageMetadata({
   path: PATH,

@@ -8,9 +8,9 @@ const PAGE_PATH = "/comparaciones/tel-vs-retraso-del-lenguaje";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "TEL o retraso del lenguaje (TDL): la diferencia",
+  title: "Retraso del lenguaje o TEL/TDL: ¿cuál es la diferencia?",
   description:
-    "TEL o retraso del lenguaje no es lo mismo. El retraso puede ser transitorio; el TEL, también llamado TDL, es un perfil que persiste. Evaluación en Chillán.",
+    "El retraso es un desarrollo más lento que a veces avanza con estimulación; el TEL, hoy llamado TDL, persiste. Compara y mira cuándo consultar.",
   keywords: [
     "TEL o retraso del lenguaje",
     "TDL o retraso del lenguaje",
