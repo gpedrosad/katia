@@ -6,9 +6,9 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   path: "/voz-online/voz-ronca-causas-tratamiento",
-  title: "Voz ronca: causas y tratamiento online en Chile",
+  title: "Voz ronca que no se va: causas y terapia online en Chile",
   description:
-    "Voz ronca o ronquera que no se va: causas frecuentes y qué hacer si dura más de 2 semanas. Evaluación y terapia de voz online en Chile.",
+    "Causas frecuentes de la voz ronca, señales de alarma y cuándo consultar. Evaluación vocal online y derivación a otorrino si se sospecha una lesión.",
   keywords: [
     "voz ronca",
     "por qué tengo la voz ronca",

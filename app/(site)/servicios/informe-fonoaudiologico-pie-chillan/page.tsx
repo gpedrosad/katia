@@ -34,9 +34,9 @@ const faqItems = [
 
 export const metadata = buildPageMetadata({
   path: "/servicios/informe-fonoaudiologico-pie-chillan",
-  title: "Informe Fonoaudiológico | Qué es y quién lo pide",
+  title: "Informe fonoaudiológico para PIE: qué es y quién lo pide",
   description:
-    "Documento de la evaluación (test y plan) que piden el colegio para el PIE, una escuela de lenguaje o el pediatra. Se elabora en Chillán. WhatsApp.",
+    "Qué incluye el informe fonoaudiológico que pide el colegio para el PIE, la escuela de lenguaje o el pediatra: entrevista, test y plan. En Chillán.",
   keywords: [
     "informe fonoaudiológico para PIE",
     "informe fonoaudiológico Chillán",

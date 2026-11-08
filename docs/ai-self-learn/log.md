@@ -6,6 +6,7 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 
 ## 2026-11-08
 
+- CTR test Opus 5.5 batch 2 | Solo title y meta. Informe PIE (consulta «la fono del pie; informe fonoaudiologico», 0/70, pos 6,17), evaluación fonoaudiológica («evaluacion fonoaudiologica», 0/50, pos 9,14), voz ronca (tema semántico, 0/33, pos 9,21), nódulos vocales (tema semántico, 0/27, pos 7,19, variante B) y terapia de lenguaje infantil presencial (tema semántico, 0/13, pos 13,31, variante B). H1 sin cambio. | `docs/seo/ctr-tracking.md`. `pendiente:` medir el 2026-11-22.
 - CTR test Opus 5.5 | Solo title y meta. `/preguntas/el-tel-se-cura`: consulta «el tel se cura», antes 3 clic / 244 impr / CTR 1,23 % / pos 5,42. `/preguntas/cuanto-dura-una-terapia-de-lenguaje`: consulta «cuánto dura una terapia de lenguaje», antes 0/113 / pos 7,46. `/comparaciones/tel-vs-retraso-del-lenguaje`: consulta «TEL o retraso del lenguaje», antes 0/106 / pos 8,39. H1 sin cambio. | `docs/seo/ctr-tracking.md`. `pendiente:` medir el 2026-11-22.
 
 ## 2026-11-06

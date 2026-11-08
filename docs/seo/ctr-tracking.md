@@ -1,5 +1,69 @@
 # CTR tracking — Katia (katialafono.cl)
 
+## 2026-11-08 · CTR test Opus 5.5 — batch 2 — APLICADO
+
+Solo title y meta description. El H1 no cambia. Métricas de página del baseline. Medir el 2026-11-22.
+
+### `/servicios/informe-fonoaudiologico-pie-chillan`
+
+- URL: https://www.katialafono.cl/servicios/informe-fonoaudiologico-pie-chillan
+- Consulta objetivo: la fono del pie; informe fonoaudiologico
+- Antes: 0 clics / 70 impr / CTR 0 % / pos 6,17
+- Title: «Informe Fonoaudiológico | Qué es y quién lo pide» → «Informe fonoaudiológico para PIE: qué es y quién lo pide»
+- Description: «Documento de la evaluación (test y plan) que piden el colegio para el PIE, una escuela de lenguaje o el pediatra. Se elabora en Chillán. WhatsApp.» → «Qué incluye el informe fonoaudiológico que pide el colegio para el PIE, la escuela de lenguaje o el pediatra: entrevista, test y plan. En Chillán.»
+- H1: se mantiene «Informe fonoaudiológico: qué es y quién lo pide»
+- Variante: A
+- Fecha: 2026-11-08 · Medir el: 2026-11-22
+- Resultado: (pendiente)
+
+### `/servicios/evaluacion-fonoaudiologica`
+
+- URL: https://www.katialafono.cl/servicios/evaluacion-fonoaudiologica
+- Consulta objetivo: evaluacion fonoaudiologica
+- Antes: 0 clics / 50 impr / CTR 0 % / pos 9,14
+- Title: «Evaluación fonoaudiológica en Chillán: qué incluye» → «Evaluación fonoaudiológica infantil en Chillán: qué incluye»
+- Description: «Evaluación fonoaudiológica en Chillán: 60 minutos, entrevista, pruebas de lenguaje y habla, informe para el colegio y plan de tratamiento.» → «Qué incluye la evaluación fonoaudiológica de tu hijo: entrevista contigo, pruebas de lenguaje y habla, informe escrito y plan de tratamiento. En Chillán.»
+- H1: se mantiene «Evaluación fonoaudiológica: qué es y cómo se hace en Chillán»
+- Variante: A
+- Fecha: 2026-11-08 · Medir el: 2026-11-22
+- Resultado: (pendiente)
+
+### `/voz-online/voz-ronca-causas-tratamiento`
+
+- URL: https://www.katialafono.cl/voz-online/voz-ronca-causas-tratamiento
+- Consulta objetivo: tema semántico no reportado por GSC: voz ronca o ronquera persistente, causas y tratamiento
+- Antes: 0 clics / 33 impr / CTR 0 % / pos 9,21
+- Title: «Voz ronca: causas y tratamiento online en Chile» → «Voz ronca que no se va: causas y terapia online en Chile»
+- Description: «Voz ronca o ronquera que no se va: causas frecuentes y qué hacer si dura más de 2 semanas. Evaluación y terapia de voz online en Chile.» → «Causas frecuentes de la voz ronca, señales de alarma y cuándo consultar. Evaluación vocal online y derivación a otorrino si se sospecha una lesión.»
+- H1: se mantiene «Ronquera persistente: ¿por qué tengo la voz ronca?»
+- Variante: A
+- Fecha: 2026-11-08 · Medir el: 2026-11-22
+- Resultado: (pendiente)
+
+### `/voz-online/nodulos-vocales-tratamiento-online`
+
+- URL: https://www.katialafono.cl/voz-online/nodulos-vocales-tratamiento-online
+- Consulta objetivo: tema semántico no reportado por GSC: tratamiento de nódulos vocales sin cirugía u online
+- Antes: 0 clics / 27 impr / CTR 0 % / pos 7,19
+- Title: «Nódulos en las cuerdas vocales: terapia online» → «Nódulos en las cuerdas vocales: terapia vocal online»
+- Description: «Terapia online para nódulos en las cuerdas vocales, junto al plan del otorrino. Técnica e higiene vocal por videollamada, para adultos en Chile.» → «¿Te diagnosticaron nódulos? Respiración, técnica e higiene vocal por videollamada para adultos en Chile. La cirugía la indica el otorrino.»
+- H1: se mantiene «¿Se pueden tratar los nódulos vocales sin cirugía?»
+- Variante: B
+- Fecha: 2026-11-08 · Medir el: 2026-11-22
+- Resultado: (pendiente)
+
+### `/servicios/terapia-lenguaje-infantil`
+
+- URL: https://www.katialafono.cl/servicios/terapia-lenguaje-infantil
+- Consulta objetivo: tema semántico no reportado por GSC: terapia de lenguaje infantil. «fonoaudiologo chillan» corresponde mejor a la página general de fonoaudiología infantil y no se persigue aquí.
+- Antes: 0 clics / 13 impr / CTR 0 % / pos 13,31
+- Title: «Especialista en terapia de lenguaje infantil» → «Terapia de lenguaje infantil presencial en Chillán»
+- Description: «Terapia de lenguaje infantil en Chillán si dice pocas palabras o no arma frases. La especialista evalúa, te dice qué hacer y arma el plan con los padres.» → «Terapia para retraso del lenguaje, vocabulario limitado y dificultades de comprensión o expresión. Con ejercicios para casa. Presencial en Chillán.»
+- H1: se mantiene «Especialista en terapia de lenguaje infantil»
+- Variante: B
+- Fecha: 2026-11-08 · Medir el: 2026-11-22
+- Resultado: (pendiente)
+
 ## 2026-11-08 · CTR test Opus 5.5 — APLICADO
 
 Solo title y meta description. El H1 no cambia. Variante A. Métricas de página del baseline.
