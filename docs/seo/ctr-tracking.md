@@ -1,5 +1,42 @@
 # CTR tracking — Katia (katialafono.cl)
 
+## 2026-11-08 · CTR test Opus 5.5 — APLICADO
+
+Solo title y meta description. El H1 no cambia. Variante A. Métricas de página del baseline.
+
+### `/preguntas/el-tel-se-cura`
+
+- URL: https://www.katialafono.cl/preguntas/el-tel-se-cura
+- Consulta objetivo: el tel se cura
+- Antes: 3 clics / 244 impr / CTR 1,23 % / pos 5,42
+- Title: «¿El TEL se cura? No: qué esperar del TEL o TDL» → «¿El TEL o TDL se cura? Qué esperar con terapia y apoyo»
+- Description: «No. El TEL o TDL (trastorno del desarrollo del lenguaje) no se cura: acompaña. Con terapia y apoyo puede mejorar mucho. No hay un plazo igual.» → «No se cura, pero tampoco se pasa solo. Con terapia y apoyo en casa y colegio puede mejorar mucho. No hay un plazo igual para todos.»
+- H1: se mantiene «¿El TEL se cura?»
+- Fecha: 2026-11-08 · Medir el: 2026-11-22
+- Resultado: (pendiente)
+
+### `/preguntas/cuanto-dura-una-terapia-de-lenguaje`
+
+- URL: https://www.katialafono.cl/preguntas/cuanto-dura-una-terapia-de-lenguaje
+- Consulta objetivo: cuánto dura una terapia de lenguaje
+- Antes: 0 clics / 113 impr / CTR 0 % / pos 7,46
+- Title: «¿Cuánto dura una terapia de lenguaje infantil?» → «Terapia de lenguaje infantil: cuánto dura y de qué depende»
+- Description: «No hay un plazo igual para todos los niños. El tiempo se propone después de la evaluación, según lo que haya que apoyar y la práctica en casa.» → «No hay un plazo igual para todos los niños. Conoce qué factores influyen y por qué el estimado se conversa después de la evaluación.»
+- H1: se mantiene «¿Cuánto dura una terapia de lenguaje infantil?»
+- Fecha: 2026-11-08 · Medir el: 2026-11-22
+- Resultado: (pendiente)
+
+### `/comparaciones/tel-vs-retraso-del-lenguaje`
+
+- URL: https://www.katialafono.cl/comparaciones/tel-vs-retraso-del-lenguaje
+- Consulta objetivo: TEL o retraso del lenguaje
+- Antes: 0 clics / 106 impr / CTR 0 % / pos 8,39
+- Title: «TEL o retraso del lenguaje (TDL): la diferencia» → «Retraso del lenguaje o TEL/TDL: ¿cuál es la diferencia?»
+- Description: «TEL o retraso del lenguaje no es lo mismo. El retraso puede ser transitorio; el TEL, también llamado TDL, es un perfil que persiste. Evaluación en Chillán.» → «El retraso es un desarrollo más lento que a veces avanza con estimulación; el TEL, hoy llamado TDL, persiste. Compara y mira cuándo consultar.»
+- H1: se mantiene «TEL o retraso del lenguaje: ¿atraso o TDL?»
+- Fecha: 2026-11-08 · Medir el: 2026-11-22
+- Resultado: (pendiente)
+
 ## 2026-11-07 · Lote 31 — sin cambios de title (freeze)
 
 - No se retitularon páginas. Lote 30 (11-06) y Lote 29 (11-04) siguen midiendo **2026-11-18** / **2026-11-20**.
