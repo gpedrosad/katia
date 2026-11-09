@@ -20,6 +20,35 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-11-09: SEO Lote 32 — CTR del home y de fonoaudiología infantil en Chillán
+
+### Contexto
+- GSC pull 2026-11-09 (último día 2026-11-08). 90d (08-11..11-08): 119c / 12.469i / CTR 0,95 % / pos 8,1. 28d (10-12..11-08): 61c / 8.557i / CTR 0,71 % / pos 8,1.
+- 7d (11-02..11-08): 24c / 3.495i / CTR 0,69 % / pos 8,4 vs prev7 19c / 2.986i / CTR 0,64 % / pos 7,6.
+- Congeladas (sin retítulo): 8 páginas del test Opus 11-08 (medir 11-22), Lote 30 (11-20), Lote 29 (11-18), `/voz-online/*` (11-13), `/glosario` y `/recursos` (11-14), `/glosario/logopeda` (11-17).
+
+### Cambios
+1. `/` — title `Fonoaudióloga en Chillán y voz online | Katia` → `Fonoaudióloga en Chillán | Fonoaudiología infantil`. Antes 28d: 7c / 521i / CTR 1,34 % / pos 4,7; «fonoaudiologa» 0/81 pos 3,5; «fonoaudiologia» 1/59 pos 3,5; «fonoaudiólogo» 0/35 pos 4,7. Meta y H1 sin cambio (la meta sigue nombrando la voz online).
+2. `/fonoaudiologa-ninos-chillan` — title `Fonoaudiólogo infantil en Chillán | Katia Domínguez` → `Fonoaudiología infantil en Chillán | Evaluación y terapia` (calza con el H1 y se diferencia del home). Antes 28d: 0c / 97i / pos 8,6; «fonoaudiólogo» 0/29 pos 9,0. Meta y H1 sin cambio.
+
+### Canibalización
+«fonoaudiologa» / «fonoaudiólogo»: primaria el home; `/fonoaudiologa-ninos-chillan` queda para «fonoaudiología infantil». No se potencian páginas de voz de otras ciudades.
+
+### Propuestas (congeladas)
+- `/preguntas/cuanto-dura-una-terapia-de-lenguaje` (desde 2026-11-22): ordenar la respuesta por área, sin plazos nuevos; enlace a `/fonoaudiologa-ninos-chillan`.
+- `/servicios/informe-fonoaudiologico-pie-chillan` (desde 2026-11-22): pasos evaluación → informe → entrega al colegio; enlace a `/preguntas/necesito-orden-medica-para-fonoaudiologo`.
+
+### Clics bajos
+Medir el 2026-11-23. Mediciones anteriores: 2026-11-18 / 2026-11-20 / 2026-11-22.
+
+### DeepSeek
+gen-1794227301-xSRIMmiBGRKjRK6aQJJM (deepseek/deepseek-v4.1-flash). Grok Bot cambió el title propuesto para `/fonoaudiologa-ninos-chillan` («Fonoaudióloga infantil…») para no duplicar el H1 del home.
+
+### GA4
+Skip (el conector pide reautenticación).
+
+---
+
 ## 2026-11-07: SEO Lote 31 — enlaces internos; titles en freeze
 
 ### Contexto

@@ -13,7 +13,7 @@ import { StickyWhatsApp } from "../chillan/lenguaje-infantil/_components/StickyW
 const PAGE_PATH = "/fonoaudiologa-ninos-chillan";
 const WHATSAPP_HREF = whatsappUrl("Hola, quiero agendar una evaluación de lenguaje para mi hijo/a");
 const PAGE_TITLE =
-  "Fonoaudiólogo infantil en Chillán | Katia Domínguez";
+  "Fonoaudiología infantil en Chillán | Evaluación y terapia";
 const PAGE_DESCRIPTION =
   "Fonoaudiología infantil en Chillán con fonoaudióloga para niños. Evaluación de lenguaje y habla, informe y plan de terapia. Presencial. +20 años.";
 
