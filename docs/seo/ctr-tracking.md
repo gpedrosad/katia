@@ -1,5 +1,25 @@
 # CTR tracking — Katia (katialafono.cl)
 
+## 2026-11-09 · Lote 32 — APLICADO
+
+### `/`
+- URL: https://www.katialafono.cl/
+- Consulta objetivo: fonoaudiologa; fonoaudiologia; fonoaudiólogo
+- Antes (28d 10-12..11-08): 7 clics / 521 impr / CTR 1,34 % / pos 4,7; «fonoaudiologa» 0/81 pos 3,5; «fonoaudiologia» 1/59 pos 3,5
+- Title: «Fonoaudióloga en Chillán y voz online | Katia» → «Fonoaudióloga en Chillán | Fonoaudiología infantil»
+- Description / H1: sin cambio
+- Fecha: 2026-11-09 · Medir el: 2026-11-23
+- Resultado: (pendiente)
+
+### `/fonoaudiologa-ninos-chillan`
+- URL: https://www.katialafono.cl/fonoaudiologa-ninos-chillan
+- Consulta objetivo: fonoaudiólogo; fonoaudiología infantil; fonoaudiólogo infantil
+- Antes (28d): 0 clics / 97 impr / CTR 0 % / pos 8,6; «fonoaudiólogo» 0/29 pos 9,0
+- Title: «Fonoaudiólogo infantil en Chillán | Katia Domínguez» → «Fonoaudiología infantil en Chillán | Evaluación y terapia»
+- Description / H1: sin cambio
+- Fecha: 2026-11-09 · Medir el: 2026-11-23
+- Resultado: (pendiente)
+
 ## 2026-11-08 · CTR test Opus 5.5 — batch 2 — APLICADO
 
 Solo title y meta description. El H1 no cambia. Métricas de página del baseline. Medir el 2026-11-22.

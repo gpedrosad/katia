@@ -35,7 +35,7 @@ const homeFaqItems = [
 const WHATSAPP_LINK =
   "https://wa.me/56995497838?text=Hola%2C%20quiero%20agendar%20una%20hora";
 const PAGE_PATH = "/";
-const HOME_TITLE = "Fonoaudióloga en Chillán y voz online | Katia";
+const HOME_TITLE = "Fonoaudióloga en Chillán | Fonoaudiología infantil";
 const HOME_DESCRIPTION =
   "Fonoaudióloga y fonoaudiólogo en Chillán: fonoaudiología infantil, evaluación y terapia para niños. Voz online para adultos en todo Chile. Más de 20 años.";
 
