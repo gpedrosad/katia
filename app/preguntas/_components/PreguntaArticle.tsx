@@ -22,6 +22,7 @@ export function PreguntaArticle({
   faqs,
   tambien,
   children,
+  faqQuestion,
 }: {
   path: string;
   crumb: string;
@@ -33,6 +34,8 @@ export function PreguntaArticle({
   faqs: GeoFAQItem[];
   tambien: string[];
   children: React.ReactNode;
+  /** Pregunta del FAQ si el H1 ya incluye la respuesta. */
+  faqQuestion?: string;
 }) {
   const links = related.some((item) => item.href === PILLAR.href)
     ? related
@@ -40,7 +43,10 @@ export function PreguntaArticle({
   const otras = PREGUNTAS.filter(
     (item) => item.href !== path && tambien.includes(item.href),
   );
-  const faqItems: GeoFAQItem[] = [{ question: title, answer }, ...faqs];
+  const faqItems: GeoFAQItem[] = [
+    { question: faqQuestion ?? title, answer },
+    ...faqs,
+  ];
 
   return (
     <article className="px-4 py-12 sm:px-6 lg:px-8">

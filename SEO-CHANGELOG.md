@@ -20,6 +20,46 @@ Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
 ---
 
+## 2026-11-10: SEO Lote 33 — CTR de orden médica, la R a los 4 y señales de alerta
+
+### Contexto
+- Brief 2026-11-10. GSC con último día completo 2026-11-09. 90d (08-12..11-09): 120c / 13.056i / CTR 0,92 % / pos 8,2. 28d (10-13..11-09): 64c / 9.148i / CTR 0,70 % / pos 8,2. 7d (11-03..11-09): 25c / 3.736i / CTR 0,67 % / pos 8,7 vs prev7 20c / 2.861i / CTR 0,70 % / pos 7,6.
+- Sin página nueva: el brief no trae consultas con ≥40 impr y mejor posición >15. Sin páginas de otras ciudades. Sin precios ni cifras nuevas.
+- No se retitularon páginas congeladas: test Opus hasta 2026-11-22, Lote 32 (home y `/fonoaudiologa-ninos-chillan`, medir 11-23), Lote 30 (medir 11-20), Lote 29 (medir 11-18), `/voz-online/*` hasta 11-13, `/glosario` y `/recursos` hasta 11-14, `/glosario/logopeda` hasta 11-17. `/comparaciones/dislalia-vs-trastorno-fonologico` se dejó (CTR 3,85 % en pos 3,1).
+
+### Páginas optimizadas
+Titles vía `buildPageMetadata`, ≤60. Metas ≤155. Español de Chile, tú. El H1 de las preguntas ya no sale del title: la respuesta va en el H1 y el FAQ conserva la pregunta.
+
+1. `/preguntas/necesito-orden-medica-para-fonoaudiologo` — consultas GSC anonimizadas. Baseline del brief: 1 clic / 91 impr / CTR 1,10 % / pos 4,8. 7d: 1/25 vs prev7 0/27. Último cambio previo: 2026-10-29 (`a47025c`).
+   - Title (48): «¿Necesito orden médica para ir al fonoaudiólogo?» → «¿Necesito orden médica para el fonoaudiólogo? No»
+   - Description (145 → 144): la respuesta sigue siendo no, en consulta particular en Chillán, y el informe se elabora después si lo piden.
+   - H1: «¿Necesito orden médica para ir al fonoaudiólogo?» → «No necesitas orden médica para el fonoaudiólogo»
+   - Snippet: abre con «No» y «no necesitas», el mismo alcance de siempre (consulta particular; sin derivación del colegio; informe después de evaluar).
+
+2. `/preguntas/es-normal-no-pronunciar-la-r-a-los-4` — la consulta nombrada en el brief es «mi hija no puede pronunciar la r» (0/1, pos 22). La página: 0 clic / 75 impr / CTR 0 % / pos 6,3. 7d: 0/25 vs 0/25. Último cambio previo: 2026-10-29 (`a47025c`). El title de octubre perseguía esa consulta de 1 impresión y no respondía «es normal».
+   - Title (47 → 48): «¿Mi hija no puede pronunciar la R a los 4 años?» → «¿Es normal no pronunciar la R a los 4? Puede ser»
+   - Description (152 → 138): puede ser normal si la erre es el único sonido; puede consolidarse hacia los 5 o 6; si fallan varios, evaluar en Chillán. Esas edades ya estaban en la página.
+   - H1: «¿Mi hija no puede pronunciar la R a los 4 años?» → «No pronunciar la R a los 4 puede ser normal»
+   - Snippet: «Puede ser» pasa a «Puede ser normal si…», con la misma condición (erre fuerte única y el resto se entiende).
+
+3. `/recursos/senales-de-alerta-del-lenguaje-y-habla` — consultas GSC anonimizadas. Baseline del brief: 0 clic / 58 impr / CTR 0 % / pos 5,9. 7d: 0/24 vs prev7 0/22. Último cambio previo: 2026-10-24 (`c9d2441`).
+   - Title (46 → 48): «Señales de alerta del lenguaje y habla | Niños» → «Señales de alerta del lenguaje: cuándo consultar»
+   - Description (135 → 143): nombra las señales que ya están en la guía (no responde al nombre, habla muy poco, casi no se le entiende, se frustra).
+   - H1: «Señales de alerta del lenguaje y el habla en niños» → «Señales de alerta del lenguaje y el habla: cuándo consultar»
+   - Snippet: el párrafo bajo el H1 deja el texto genérico y abre con esas mismas señales. `dateModified` del Article: 2026-05-20 → 2026-11-10.
+
+### Enlaces
+- Hub `/preguntas` (catálogo): ancla y bajada de las dos preguntas alineadas a la respuesta. Title, meta y H1 del hub sin cambio.
+- `/dislalia` ya enlazaba la erre; el ancla pasa a «¿es normal no pronunciar la R a los 4?». Title y H1 del hub sin cambio.
+- `/agendar-hora-fonoaudiologo-infantil-chillan` enlaza «No necesitas orden médica». Title y H1 sin cambio.
+- `/lenguaje-infantil` enlaza la guía de señales. Title y H1 sin cambio.
+- `/recursos` ya enlazaba las señales. No se editó: freeze de enlaces hasta 2026-11-14. El footer y `/guias-padres` ya la enlazaban.
+
+### Métricas esperadas
+Medir el 2026-11-24. Registro: `docs/seo/ctr-tracking.md`.
+
+---
+
 ## 2026-11-09: SEO Lote 32 — CTR del home y de fonoaudiología infantil en Chillán
 
 ### Contexto

@@ -3,9 +3,10 @@ import { PreguntaArticle } from "@/app/preguntas/_components/PreguntaArticle";
 import { buildPageMetadata } from "@/lib/seo";
 
 const PATH = "/preguntas/es-normal-no-pronunciar-la-r-a-los-4";
-const TITLE = "¿Mi hija no puede pronunciar la R a los 4 años?";
+const TITLE = "¿Es normal no pronunciar la R a los 4? Puede ser";
+const H1 = "No pronunciar la R a los 4 puede ser normal";
 const DESCRIPTION =
-  "¿Es normal a los 4 años? La erre fuerte puede ser el único sonido pendiente y consolidarse hacia los 5 o 6. Si fallan varios sonidos, evalúa en Chillán.";
+  "Puede ser normal si a los 4 la erre es el único sonido que falta. Puede consolidarse hacia los 5 o 6. Si fallan varios, evalúa en Chillán.";
 
 export const metadata = buildPageMetadata({
   path: PATH,
@@ -13,6 +14,7 @@ export const metadata = buildPageMetadata({
   description: DESCRIPTION,
   keywords: [
     "niño de 4 años no pronuncia la r",
+    "es normal no pronunciar la r a los 4",
     "es normal no decir la r a los 4",
     "dislalia Chillán",
     "pronunciación infantil",
@@ -21,14 +23,15 @@ export const metadata = buildPageMetadata({
 });
 
 const answer =
-  "Puede ser, si a los 4 años la erre fuerte es el único sonido que falta y el resto del habla se entiende. Ese sonido puede consolidarse hacia los 5 o 6 años. Si cambian varios sonidos, cuesta entenderlo o se frustra al hablar, conviene evaluarlo en Chillán.";
+  "Puede ser normal si a los 4 años la erre fuerte es el único sonido que falta y el resto del habla se entiende. Ese sonido puede consolidarse hacia los 5 o 6 años. Si cambian varios sonidos, cuesta entenderlo o se frustra al hablar, conviene evaluarlo en Chillán.";
 
 export default function ErreALosCuatroPage() {
   return (
     <PreguntaArticle
       path={PATH}
       crumb="La R a los 4 años"
-      title={TITLE}
+      title={H1}
+      faqQuestion="¿Es normal no pronunciar la R a los 4 años?"
       answer={answer}
       whatsappMessage="Hola, mi hijo de 4 años no pronuncia la R y quiero una evaluación en Chillán"
       ctaLabel="Consultar el habla por WhatsApp"

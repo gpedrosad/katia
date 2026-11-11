@@ -4,6 +4,10 @@ Formato: `YYYY-MM-DD | tema | hecho | acción/implicación`
 
 ---
 
+## 2026-11-10
+
+- SEO Lote 33 | GSC del brief (último día 2026-11-09). Title, meta, H1 y snippet en `/preguntas/necesito-orden-medica-para-fonoaudiologo` (1/91, CTR 1,10 %, pos 4,8; consultas anonimizadas), `/preguntas/es-normal-no-pronunciar-la-r-a-los-4` (0/75, CTR 0 %, pos 6,3; «mi hija no puede pronunciar la r» 0/1 pos 22) y `/recursos/senales-de-alerta-del-lenguaje-y-habla` (0/58, CTR 0 %, pos 5,9). La erre vuelve a «es normal» con la condición ya publicada (único sonido; 5 o 6 años). Sin página nueva y sin otras ciudades. `/recursos` no se tocó (freeze hasta 11-14). | `docs/seo/ctr-tracking.md` y `SEO-CHANGELOG.md`. `pendiente:` medir el 2026-11-24.
+
 ## 2026-11-08
 
 - CTR test Opus 5.5 batch 2 | Solo title y meta. Informe PIE (consulta «la fono del pie; informe fonoaudiologico», 0/70, pos 6,17), evaluación fonoaudiológica («evaluacion fonoaudiologica», 0/50, pos 9,14), voz ronca (tema semántico, 0/33, pos 9,21), nódulos vocales (tema semántico, 0/27, pos 7,19, variante B) y terapia de lenguaje infantil presencial (tema semántico, 0/13, pos 13,31, variante B). H1 sin cambio. | `docs/seo/ctr-tracking.md`. `pendiente:` medir el 2026-11-22.

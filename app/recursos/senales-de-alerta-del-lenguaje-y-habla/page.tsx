@@ -36,9 +36,9 @@ const faqs = [
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Señales de alerta del lenguaje y habla | Niños",
+  title: "Señales de alerta del lenguaje: cuándo consultar",
   description:
-    "Señales de alerta del lenguaje y habla de 0 a 5 años: no responde al nombre, no arma frases o pronuncia mal. Cuándo evaluar en Chillán.",
+    "No responde al nombre, habla muy poco, casi no se le entiende o se frustra al comunicarse. Señales de 0 a 5 años y cuándo consultar en Chillán.",
   keywords: [
     "señales de alerta lenguaje niños",
     "señales de alerta habla por edad",
@@ -53,9 +53,9 @@ export const metadata = buildPageMetadata({
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Señales de alerta del lenguaje y el habla en niños",
+  headline: "Señales de alerta del lenguaje y el habla: cuándo consultar",
   description:
-    "Guía para padres sobre cuándo una dificultad del lenguaje o habla requiere evaluación fonoaudiológica.",
+    "No responde al nombre, habla muy poco, casi no se le entiende o se frustra al comunicarse. Señales de 0 a 5 años y cuándo consultar en Chillán.",
   author: {
     "@type": "Person",
     name: "Katia Domínguez",
@@ -70,7 +70,7 @@ const articleJsonLd = {
     "@id": `${SITE_URL}${PAGE_PATH}`,
   },
   datePublished: "2026-05-20",
-  dateModified: "2026-05-20",
+  dateModified: "2026-11-10",
 };
 
 const faqJsonLd = {
@@ -114,12 +114,14 @@ export default function SenalesDeAlertaPage() {
                 Alerta temprana
               </span>
               <h1 className="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl">
-                Señales de alerta del lenguaje y el habla en niños
+                Señales de alerta del lenguaje y el habla: cuándo consultar
               </h1>
               <p className="text-xl text-gray-600">
-                Saber distinguir cuándo esperar, cuándo observar y cuándo pedir
-                evaluación puede marcar la diferencia en el desarrollo de tu hijo
-                en <strong>Chillán, Chile</strong>.
+                Conviene consultar si no responde al nombre, no sigue
+                instrucciones simples, habla muy poco para su edad, casi no se
+                le entiende o se frustra mucho al comunicarse. Más abajo están
+                esas señales por edad, para que anotes ejemplos antes de una
+                evaluación en Chillán.
               </p>
             </header>
 

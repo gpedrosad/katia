@@ -70,7 +70,7 @@ export default function DislaliaHubPage() {
         Si la duda es solo la erre a los 4 años, esa pregunta ya está respondida
         en{" "}
         <Link href="/preguntas/es-normal-no-pronunciar-la-r-a-los-4">
-          ¿es normal que no pronuncie la R a los 4?
+          ¿es normal no pronunciar la R a los 4?
         </Link>
         . Aquí van otras tres situaciones que las familias describen distinto.
       </p>

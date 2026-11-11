@@ -115,6 +115,13 @@ export default function AgendarHoraPage() {
               >
                 Evaluación fonoaudiológica
               </Link>
+              {" · "}
+              <Link
+                href="/preguntas/necesito-orden-medica-para-fonoaudiologo"
+                className="font-semibold underline"
+              >
+                No necesitas orden médica
+              </Link>
             </p>
           </div>
           <p className="lead font-medium text-gray-700" data-speakable>
