@@ -76,6 +76,11 @@ export default function LenguajeInfantilPage() {
         ni las landings de síntoma en Chillán. Sirven para nombrar la duda con
         más precisión: no es lo mismo un niño de 18 meses sin palabras que uno
         que entiende todo y dice poco, o uno que tiene palabras y no las junta.
+        Si quieres la lista de cuándo conviene consultar, está en{" "}
+        <Link href="/recursos/senales-de-alerta-del-lenguaje-y-habla">
+          señales de alerta del lenguaje y el habla
+        </Link>
+        .
       </p>
       <h2>Elige la guía</h2>
       <ul>

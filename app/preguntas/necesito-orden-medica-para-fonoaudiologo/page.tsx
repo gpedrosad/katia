@@ -3,15 +3,17 @@ import { PreguntaArticle } from "@/app/preguntas/_components/PreguntaArticle";
 import { buildPageMetadata } from "@/lib/seo";
 
 const PATH = "/preguntas/necesito-orden-medica-para-fonoaudiologo";
-const TITLE = "¿Necesito orden médica para ir al fonoaudiólogo?";
+const TITLE = "¿Necesito orden médica para el fonoaudiólogo? No";
+const H1 = "No necesitas orden médica para el fonoaudiólogo";
 const DESCRIPTION =
-  "No hace falta orden médica para ir al fonoaudiólogo en consulta particular en Chillán. Si el colegio pide informe, se elabora tras la evaluación.";
+  "No. En consulta particular en Chillán agendas sin orden médica ni derivación del colegio. Si piden informe, se elabora después de la evaluación.";
 
 export const metadata = buildPageMetadata({
   path: PATH,
   title: TITLE,
   description: DESCRIPTION,
   keywords: [
+    "necesito orden médica para el fonoaudiólogo",
     "orden médica fonoaudiólogo",
     "derivación fonoaudiólogo infantil",
     "agendar fonoaudióloga Chillán",
@@ -20,14 +22,15 @@ export const metadata = buildPageMetadata({
 });
 
 const answer =
-  "No. Para agendar una consulta particular con la fonoaudióloga en Chillán no es obligatoria una orden médica ni una derivación del colegio. Si el jardín, el PIE o el pediatra piden un informe, ese documento se elabora después de la evaluación.";
+  "No. Para agendar en consulta particular en Chillán no necesitas orden médica ni derivación del colegio. Si el jardín, el PIE o el pediatra piden un informe, ese documento se elabora después de la evaluación.";
 
 export default function OrdenMedicaPage() {
   return (
     <PreguntaArticle
       path={PATH}
       crumb="Orden médica"
-      title={TITLE}
+      title={H1}
+      faqQuestion="¿Necesito orden médica para ir al fonoaudiólogo?"
       answer={answer}
       whatsappMessage="Hola, quiero agendar una evaluación fonoaudiológica en Chillán"
       ctaLabel="Agendar sin orden por WhatsApp"

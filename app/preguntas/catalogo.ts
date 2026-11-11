@@ -18,8 +18,9 @@ export const PREGUNTAS: readonly PreguntaResumen[] = [
   },
   {
     href: "/preguntas/es-normal-no-pronunciar-la-r-a-los-4",
-    question: "¿Es normal que mi hijo de 4 años no pronuncie la R?",
-    teaser: "Cuándo la erre sola puede esperar y cuándo conviene evaluar el habla.",
+    question: "¿Es normal no pronunciar la R a los 4?",
+    teaser:
+      "Puede ser, si la erre es el único sonido que falta y el resto se entiende.",
   },
   {
     href: "/preguntas/cuanto-dura-una-terapia-de-lenguaje",
@@ -28,8 +29,9 @@ export const PREGUNTAS: readonly PreguntaResumen[] = [
   },
   {
     href: "/preguntas/necesito-orden-medica-para-fonoaudiologo",
-    question: "¿Necesito orden médica para ir al fonoaudiólogo?",
-    teaser: "Qué se pide para agendar en consulta particular y cuándo aparece el informe.",
+    question: "¿Necesito orden médica para el fonoaudiólogo?",
+    teaser:
+      "No. En consulta particular en Chillán agendas sin orden médica ni derivación.",
   },
   {
     href: "/preguntas/el-jardin-me-derivo-a-fonoaudiologia",

@@ -1,5 +1,45 @@
 # CTR tracking — Katia (katialafono.cl)
 
+## 2026-11-10 · Lote 33 — APLICADO
+
+Baselines del brief 2026-11-10 (último día completo GSC: 2026-11-09). Sin consultas con volumen nombrado en las dos primeras salvo la erre. Medir el 2026-11-24.
+
+### `/preguntas/necesito-orden-medica-para-fonoaudiologo`
+
+- URL: https://www.katialafono.cl/preguntas/necesito-orden-medica-para-fonoaudiologo
+- Consulta objetivo: necesito orden médica para el fonoaudiólogo (consultas de la página anonimizadas en GSC)
+- Antes: 1 clic / 91 impr / CTR 1,10 % / pos 4,8. 7d: 1/25 vs prev7 0/27
+- Title: «¿Necesito orden médica para ir al fonoaudiólogo?» → «¿Necesito orden médica para el fonoaudiólogo? No»
+- Description: «No hace falta orden médica para ir al fonoaudiólogo en consulta particular en Chillán. Si el colegio pide informe, se elabora tras la evaluación.» → «No. En consulta particular en Chillán agendas sin orden médica ni derivación del colegio. Si piden informe, se elabora después de la evaluación.»
+- H1: «¿Necesito orden médica para ir al fonoaudiólogo?» → «No necesitas orden médica para el fonoaudiólogo»
+- Snippet: «No. Para agendar una consulta particular… no es obligatoria…» → «No. Para agendar en consulta particular en Chillán no necesitas orden médica ni derivación del colegio…»
+- Fecha: 2026-11-10 · Medir el: 2026-11-24
+- Resultado: (pendiente)
+
+### `/preguntas/es-normal-no-pronunciar-la-r-a-los-4`
+
+- URL: https://www.katialafono.cl/preguntas/es-normal-no-pronunciar-la-r-a-los-4
+- Consulta objetivo: es normal no pronunciar la r a los 4. Consulta nombrada en el brief: «mi hija no puede pronunciar la r» 0/1 pos 22
+- Antes: 0 clics / 75 impr / CTR 0 % / pos 6,3. 7d: 0/25 vs 0/25
+- Title: «¿Mi hija no puede pronunciar la R a los 4 años?» → «¿Es normal no pronunciar la R a los 4? Puede ser»
+- Description: «¿Es normal a los 4 años? La erre fuerte puede ser el único sonido pendiente y consolidarse hacia los 5 o 6. Si fallan varios sonidos, evalúa en Chillán.» → «Puede ser normal si a los 4 la erre es el único sonido que falta. Puede consolidarse hacia los 5 o 6. Si fallan varios, evalúa en Chillán.»
+- H1: «¿Mi hija no puede pronunciar la R a los 4 años?» → «No pronunciar la R a los 4 puede ser normal»
+- Snippet: «Puede ser, si a los 4 años la erre fuerte es el único sonido…» → «Puede ser normal si a los 4 años la erre fuerte es el único sonido que falta y el resto del habla se entiende…»
+- Fecha: 2026-11-10 · Medir el: 2026-11-24
+- Resultado: (pendiente)
+
+### `/recursos/senales-de-alerta-del-lenguaje-y-habla`
+
+- URL: https://www.katialafono.cl/recursos/senales-de-alerta-del-lenguaje-y-habla
+- Consulta objetivo: señales de alerta del lenguaje (consultas de la página anonimizadas en GSC)
+- Antes: 0 clics / 58 impr / CTR 0 % / pos 5,9. 7d: 0/24 vs prev7 0/22
+- Title: «Señales de alerta del lenguaje y habla | Niños» → «Señales de alerta del lenguaje: cuándo consultar»
+- Description: «Señales de alerta del lenguaje y habla de 0 a 5 años: no responde al nombre, no arma frases o pronuncia mal. Cuándo evaluar en Chillán.» → «No responde al nombre, habla muy poco, casi no se le entiende o se frustra al comunicarse. Señales de 0 a 5 años y cuándo consultar en Chillán.»
+- H1: «Señales de alerta del lenguaje y el habla en niños» → «Señales de alerta del lenguaje y el habla: cuándo consultar»
+- Snippet: «Saber distinguir cuándo esperar, cuándo observar y cuándo pedir evaluación…» → «Conviene consultar si no responde al nombre, no sigue instrucciones simples, habla muy poco para su edad, casi no se le entiende o se frustra mucho al comunicarse…»
+- Fecha: 2026-11-10 · Medir el: 2026-11-24
+- Resultado: (pendiente)
+
 ## 2026-11-09 · Lote 32 — APLICADO
 
 ### `/`
