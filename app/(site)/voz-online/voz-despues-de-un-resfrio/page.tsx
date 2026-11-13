@@ -3,9 +3,9 @@ import { VoiceClusterPage } from "@/app/(site)/voz-online/_components/VoiceClust
 import { buildPageMetadata } from "@/lib/seo";
 
 const PATH = "/voz-online/voz-despues-de-un-resfrio";
-const TITLE = "¿Se va la voz con la gripe o el resfrío? Qué hacer";
+const TITLE = "Se va la voz con un resfrío o gripe: cuándo consultar";
 const DESCRIPTION =
-  "Si la gripe o el resfrío ya pasó y la voz sigue ronca o se corta, el otorrino mira las cuerdas. La terapia online, en español, trabaja cómo hablas.";
+  "¿Se fue la voz con el resfrío o la gripe y sigue ronca? Si lleva más de dos semanas, consulta al otorrino. La terapia de voz online trabaja cómo hablas.";
 
 export const metadata = buildPageMetadata({
   path: PATH,

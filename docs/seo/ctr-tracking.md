@@ -1,5 +1,27 @@
 # CTR tracking — Katia (katialafono.cl)
 
+## 2026-11-13 — Lote 34 (CTR)
+
+Search Console (último día 2026-11-12). 90d: 129 clics / 14.043 impr / CTR 0.92 % / pos 8.3. 7d (2026-11-06..2026-11-12): 18 clics / 3.249 impr / CTR 0.55 % / pos 9.4 vs prev7 (2026-10-30..2026-11-05): 25 clics / 3.030 impr / CTR 0.83 % / pos 7.8. Copy: claude-opus-5-5 (effort high) vía API de Anthropic, revisado y aplicado por Grok Bot. Congeladas y no tocadas: test Opus 11-08 (hasta 2026-11-22) y todo lo editado el 11-04/11-07/11-09/11-10 (ver freeze del run). GA4: conector pide reautenticación. PageSpeed: HTTP 429 (cuota). Medir el 2026-11-27.
+
+### `/voz-online/voz-despues-de-un-resfrio`
+
+Antes — 28d (2026-10-16..2026-11-12): 0 clics / 185 impr / CTR 0.00 % / pos 8.9; 7d 0/53 vs prev7 0/67. Consultas: «por que se va la voz con un resfrio» 0 clics/2 impr, pos 11.0; «porque se va la voz cuando da gripe» 0 clics/2 impr, pos 11.0; «disfonia por resfriado» 0 clics/1 impr, pos 29.0; «voz ronca sin dolor de garganta covid» 0 clics/1 impr, pos 11.0.
+Consulta objetivo: «por que se va la voz con un resfrio». Title `¿Se va la voz con la gripe o el resfrío? Qué hacer` → `Se va la voz con un resfrío o gripe: cuándo consultar`. Meta → «¿Se fue la voz con el resfrío o la gripe y sigue ronca? Si lleva más de dos semanas, consulta al otorrino. La terapia de voz online trabaja cómo hablas.». H1: igual. Motivo: Usa la frase exacta «se va la voz con un resfrío» y promete un criterio concreto que la página ya tiene (más de dos semanas), en vez de un «por qué» que el contenido no explica.
+Aplicado 2026-11-13. Medir 2026-11-27 (14 d).
+
+### `/voz-online/disfonia-por-estres`
+
+Antes — 28d (2026-10-16..2026-11-12): 0 clics / 64 impr / CTR 0.00 % / pos 7.8; 7d 0/18 vs prev7 0/27. Consultas: «disfonía por estrés» 0 clics/9 impr, pos 9.2; «disfonia por estres» 0 clics/8 impr, pos 3.5; «se puede perder la voz por estres» 0 clics/5 impr, pos 9.4; «afonia por estres» 0 clics/1 impr, pos 13.0.
+Consulta objetivo: «disfonia por estres». Title `Disfonía por estrés: terapia de voz online` → `Disfonía por estrés: ¿se puede perder la voz?`. Meta → «¿Se puede perder la voz por estrés? El estrés aprieta la voz: suena tensa y cuesta hablar. Cuándo ver al otorrino y qué trabaja la terapia online.». H1: igual. Motivo: En posición 3.5 sin clics: el title suma la duda real «se puede perder la voz por estrés», que la primera FAQ ya responde, en lugar de un rótulo de servicio.
+Aplicado 2026-11-13. Medir 2026-11-27 (14 d).
+
+### `/preguntas/como-se-diagnostica-el-tel`
+
+Antes — 28d (2026-10-16..2026-11-12): 0 clics / 58 impr / CTR 0.00 % / pos 7.6; 7d 0/9 vs prev7 0/27. Consultas: «tel diagnostico» 0 clics/3 impr, pos 1.0; «diagnostico tel» 0 clics/2 impr, pos 1.0; «nombra» 0 clics/1 impr, pos 100.0.
+Consulta objetivo: «tel diagnostico». Title `¿Cómo se diagnostica el TEL en niños?` → `Diagnóstico del TEL en niños: cómo se evalúa`. Meta → «El diagnóstico del TEL sale de una evaluación fonoaudiológica, no de un solo test. En Chillán: entrevista, observación y se define si hay terapia.». H1: Diagnóstico del TEL en niños: cómo se evalúa (el H1 usa TITLE vía PreguntaArticle). Motivo: En posición 1 para «tel diagnostico» sin clics: el title abre con «Diagnóstico del TEL» y la meta resume pasos reales de la página (entrevista, observación, terapia).
+Aplicado 2026-11-13. Medir 2026-11-27 (14 d).
+
 ## 2026-11-10 · Lote 33 — APLICADO
 
 Baselines del brief 2026-11-10 (último día completo GSC: 2026-11-09). Sin consultas con volumen nombrado en las dos primeras salvo la erre. Medir el 2026-11-24.

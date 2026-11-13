@@ -3,9 +3,9 @@ import { PreguntaArticle } from "@/app/preguntas/_components/PreguntaArticle";
 import { buildPageMetadata } from "@/lib/seo";
 
 const PATH = "/preguntas/como-se-diagnostica-el-tel";
-const TITLE = "¿Cómo se diagnostica el TEL en niños?";
+const TITLE = "Diagnóstico del TEL en niños: cómo se evalúa";
 const DESCRIPTION =
-  "El TEL no sale de un comentario del colegio ni de un solo test. Lo define la fonoaudióloga al evaluar. En Chillán, después: terapia o informe.";
+  "El diagnóstico del TEL sale de una evaluación fonoaudiológica, no de un solo test. En Chillán: entrevista, observación y se define si hay terapia.";
 
 export const metadata = buildPageMetadata({
   path: PATH,

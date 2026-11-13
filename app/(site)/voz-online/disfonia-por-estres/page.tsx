@@ -7,9 +7,9 @@ import { buildPageMetadata } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 
 const PATH = "/voz-online/disfonia-por-estres";
-const TITLE = "Disfonía por estrés: terapia de voz online";
+const TITLE = "Disfonía por estrés: ¿se puede perder la voz?";
 const DESCRIPTION =
-  "La disfonía por estrés aprieta la voz: suena tensa y cuesta hablar. La terapia de voz online trabaja respiración y hábitos. El otorrino mira las cuerdas.";
+  "¿Se puede perder la voz por estrés? El estrés aprieta la voz: suena tensa y cuesta hablar. Cuándo ver al otorrino y qué trabaja la terapia online.";
 
 export const metadata = buildPageMetadata({
   path: PATH,
