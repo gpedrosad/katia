@@ -3,9 +3,9 @@ import { PreguntaArticle } from "@/app/preguntas/_components/PreguntaArticle";
 import { guiaMetadata } from "@/app/guias-padres/guia-ui";
 
 const PATH = "/preguntas/fonoaudiologo-o-psicologo";
-const TITLE = "¿Fonoaudiólogo o psicólogo para mi hijo?";
+const TITLE = "¿Fonoaudiólogo o psicólogo para mi hijo? Cómo elegir";
 const DESCRIPTION =
-  "Si la duda es habla, lenguaje o comprensión, parte por fonoaudiología. Si hay angustia o conducta, el psicólogo también cabe. Chillán.";
+  "Fonoaudiólogo o psicólogo: si la duda es habla, lenguaje o comprensión, parte por fonoaudiología; si hay angustia o conducta, el psicólogo también cabe.";
 
 export const metadata = guiaMetadata({
   path: PATH,

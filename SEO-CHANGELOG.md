@@ -2,6 +2,32 @@
 
 Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
+## 2026-11-15 — Lote 35 (CTR): CTR de dislalia vs trastorno fonológico, hijo que habla poco y fono o psicólogo
+
+Search Console (último día 2026-11-14). 90d: 129 clics / 14.294 impr / CTR 0.9 % / pos 8.5. 7d (2026-11-08..2026-11-14): 17 clics / 2.601 impr / CTR 0.65 % / pos 10.3 vs prev7 (2026-11-01..2026-11-07): 24 clics / 3.391 impr / CTR 0.71 % / pos 8.2. Copy: claude-opus-5-5 (effort high) vía API de Anthropic, revisado y aplicado por Grok Bot. Congeladas y no tocadas: test Opus 11-08 (hasta 2026-11-22), lotes 11-04/11-07/11-09/11-10 y lo editado el 11-13 (hasta 2026-11-20). GA4: conector sigue pidiendo reautenticación. PageSpeed: HTTP 429 (cuota). Medir el 2026-11-29.
+
+### `/comparaciones/dislalia-vs-trastorno-fonologico`
+
+Antes — 28d (2026-10-18..2026-11-14): 2 clics / 68 impr / CTR 2.94 % / pos 3.0; 7d 0/22 vs prev7 2/44. Consultas: «diferencia entre dislalia y trastorno fonológico» 0 clics/7 impr, pos 2.7.
+Consulta objetivo: «diferencia entre dislalia y trastorno fonológico». Title `Diferencia entre dislalia y trastorno fonológico` → `Diferencia entre dislalia y trastorno fonológico`. Meta → «Diferencia entre dislalia y trastorno fonológico: en la dislalia falla un fonema; en el fonológico, una regla cambia muchos sonidos. Evaluación en Chillán.». H1: igual. Motivo: El title ya coincide exacto con la consulta. La meta ahora entrega la respuesta directa contrastando ambos casos en paralelo para atraer clics en posición 3.
+Aplicado 2026-11-15. Medir 2026-11-29 (14 d).
+
+### `/sintomas/hijo-habla-poco-edad-chillan`
+
+Antes — 28d (2026-10-18..2026-11-14): 0 clics / 62 impr / CTR 0.00 % / pos 7.5; 7d 0/8 vs prev7 0/31. Consultas: «mi hijo de 2 años no habla» 0 clics/1 impr, pos 11.0; «no habla mucho» 0 clics/1 impr, pos 3.0; «retraso en el habla 2 años» 0 clics/1 impr, pos 1.0.
+Consulta objetivo: «mi hijo de 2 años no habla». Title `Mi hijo de 2 años habla poco: ¿es normal?` → `Mi hijo de 2 años no habla o habla poco: ¿es normal?`. Meta → «¿Retraso en el habla a los 2 años? Se esperan unas 50 palabras y frases de dos («mamá agua»). Mira las señales y cuándo evaluar en Chillán.». H1: igual. Motivo: El title suma la redacción exacta «mi hijo de 2 años no habla» y la meta abre con «retraso en el habla 2 años». Se mantienen tal cual los datos de 50 palabras y «mamá agua».
+Aplicado 2026-11-15. Medir 2026-11-29 (14 d).
+
+### `/preguntas/fonoaudiologo-o-psicologo`
+
+Antes — 28d (2026-10-18..2026-11-14): 0 clics / 29 impr / CTR 0.00 % / pos 5.2; 7d 0/6 vs prev7 0/21. Consultas: (anonimizadas).
+Consulta objetivo: «fonoaudiólogo o psicólogo». Title `¿Fonoaudiólogo o psicólogo para mi hijo?` → `¿Fonoaudiólogo o psicólogo para mi hijo? Cómo elegir`. Meta → «Fonoaudiólogo o psicólogo: si la duda es habla, lenguaje o comprensión, parte por fonoaudiología; si hay angustia o conducta, el psicólogo también cabe.». H1: ¿Fonoaudiólogo o psicólogo para mi hijo? Cómo elegir. Motivo: No hay consultas visibles, así que se usa la keyword principal. «Cómo elegir» promete una guía de decisión y la meta abre con la keyword exacta sin agregar datos.
+Aplicado 2026-11-15. Medir 2026-11-29 (14 d).
+
+Sin otras ciudades. La meta nueva de dislalia vs trastorno fonológico también se aplicó al `description` del JSON-LD Article (era el mismo texto).
+
+**Medición vencida (Lote 27, «medir ~2026-11-15»)** — `/recursos/estimular-lenguaje-en-casa` (title del 2026-10-28): 14d antes (2026-10-14..10-27) 2 clics / 94 impr / CTR 2,13 % / pos 11,5 → últimos 14d (2026-11-01..11-14) 1 clic / 88 impr / CTR 1,14 % / pos 12,7. «estimulación del lenguaje» sigue cayendo en la guía (15 impr, pos 29,5); «cómo empezar la terapia de lenguaje en casa» sube de 2 a 9 impr (pos 12,8). Sin mejora, pero el volumen es bajo (diferencia de 1 clic): no se revierte; queda como candidata a pase de snippet en la próxima corrida.
+
 ## 2026-11-13 — Lote 34 (CTR)
 
 Search Console (último día 2026-11-12). 90d: 129 clics / 14.043 impr / CTR 0.92 % / pos 8.3. 7d (2026-11-06..2026-11-12): 18 clics / 3.249 impr / CTR 0.55 % / pos 9.4 vs prev7 (2026-10-30..2026-11-05): 25 clics / 3.030 impr / CTR 0.83 % / pos 7.8. Copy: claude-opus-5-5 (effort high) vía API de Anthropic, revisado y aplicado por Grok Bot. Congeladas y no tocadas: test Opus 11-08 (hasta 2026-11-22) y todo lo editado el 11-04/11-07/11-09/11-10 (ver freeze del run). GA4: conector pide reautenticación. PageSpeed: HTTP 429 (cuota). Medir el 2026-11-27.

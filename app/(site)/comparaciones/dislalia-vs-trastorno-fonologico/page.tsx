@@ -10,7 +10,7 @@ export const metadata = buildPageMetadata({
   path: PAGE_PATH,
   title: "Diferencia entre dislalia y trastorno fonológico",
   description:
-    "Diferencia entre dislalia y trastorno fonológico: un fonema mal articulado no es una regla que cambia muchos sonidos. Evaluación en Chillán.",
+    "Diferencia entre dislalia y trastorno fonológico: en la dislalia falla un fonema; en el fonológico, una regla cambia muchos sonidos. Evaluación en Chillán.",
   keywords: [
     "diferencia entre dislalia y trastorno fonológico",
     "dislalia vs trastorno fonológico",
@@ -49,7 +49,7 @@ const articleJsonLd = {
   "@type": "Article",
   headline: "Diferencia entre dislalia y trastorno fonológico",
   description:
-    "Diferencia entre dislalia y trastorno fonológico: un fonema mal articulado no es una regla que cambia muchos sonidos. Evaluación en Chillán.",
+    "Diferencia entre dislalia y trastorno fonológico: en la dislalia falla un fonema; en el fonológico, una regla cambia muchos sonidos. Evaluación en Chillán.",
   author: {
     "@type": "Person",
     name: "Katia Domínguez",
