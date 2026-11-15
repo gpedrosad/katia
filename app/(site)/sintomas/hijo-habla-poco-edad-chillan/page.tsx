@@ -12,9 +12,9 @@ const WHATSAPP_LINK = whatsappUrl(
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Mi hijo de 2 años habla poco: ¿es normal?",
+  title: "Mi hijo de 2 años no habla o habla poco: ¿es normal?",
   description:
-    "A los 2 años se esperan unas 50 palabras y frases de dos («mamá agua»). Si habla mucho menos, mira las señales y cuándo evaluar en Chillán.",
+    "¿Retraso en el habla a los 2 años? Se esperan unas 50 palabras y frases de dos («mamá agua»). Mira las señales y cuándo evaluar en Chillán.",
   keywords: [
     "mi hijo de 2 años habla poco",
     "hijo habla poco para su edad",
