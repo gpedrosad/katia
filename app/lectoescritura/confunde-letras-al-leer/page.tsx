@@ -3,9 +3,9 @@ import { articleJsonLd, faqJsonLd, GuiaPage, guiaMetadata } from "@/app/guias-pa
 import { whatsappUrl } from "@/lib/site";
 
 const PATH = "/lectoescritura/confunde-letras-al-leer";
-const TITLE = "Confunde letras al leer: qué observar";
+const TITLE = "Confunde las letras al leer (b y d): qué observar";
 const DESCRIPTION =
-  "B y D, saltarse palabras o adivinar el final. Qué anotar en una lectura corta y cuándo evaluar lenguaje y lectura en Chillán.";
+  "¿Confunde letras como b y d, se salta palabras o adivina el final? Qué anotar en una lectura corta y cuándo evaluar lenguaje y lectura en Chillán.";
 
 const faqs = [
   {
