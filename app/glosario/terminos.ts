@@ -770,9 +770,9 @@ export const GLOSARIO_TERMINOS: GlosarioTermino[] = [
     shortDescription:
       "Ejercicios de los músculos de la boca, lengua y cara.",
     category: "Intervención",
-    metaTitle: "¿Qué son las praxias orofaciales?",
+    metaTitle: "Praxias orofaciales: qué son y para qué sirven",
     metaDescription:
-      "Definición de praxias orofaciales: ejercicios para fortalecer labios, lengua, mandíbula. Cuándo se usan, cómo ayudan en dislalia y apraxia.",
+      "Qué son las praxias orofaciales (bucofaciales u orales): ejercicios de labios, lengua y mandíbula. Para qué sirven en dislalia y apraxia.",
     keywords: [
       "qué son praxias orofaciales",
       "praxias orofaciales definición",

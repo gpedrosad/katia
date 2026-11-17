@@ -1,5 +1,31 @@
 # CTR tracking — Katia (katialafono.cl)
 
+## 2026-11-17 — Lote 36 (CTR): CTR de praxias orofaciales y confunde letras al leer
+
+Search Console (último día 2026-11-16). 90d: 141 clics / 15.146 impr / CTR 0.93 % / pos 8.5. 7d (2026-11-10..2026-11-16): 24 clics / 2.511 impr / CTR 0.96 % / pos 10.1 vs prev7 (2026-11-03..2026-11-09): 25 clics / 3.736 impr / CTR 0.67 % / pos 8.7. Copy: claude-opus-5-5 (effort high) vía API de Anthropic, revisado y aplicado por Grok Bot. Congeladas y no tocadas: test Opus 11-08 (hasta 2026-11-22), lotes 11-04 (hasta 11-18), 11-07 (11-21), 11-09/11-10 (11-23/24), 11-13 (11-20) y 11-15 (11-22). GA4: conector sigue pidiendo reautenticación. PageSpeed: HTTP 429. Medir el 2026-12-01.
+
+### `/glosario/praxias-orofaciales`
+
+Antes — 28d (2026-10-20..2026-11-16): 2 clics / 176 impr / CTR 1.14 % / pos 8.4; 7d 1/124 vs prev7 1/52. Consultas: «praxias orofaciales» 1 clics/95 impr, pos 6.9; «para que sirven los ejercicios orofaciales» 0 clics/6 impr, pos 10.2; «praxia que es» 0 clics/3 impr, pos 44.3; «que son las praxias orofaciales» 0 clics/3 impr, pos 3.7.
+Consulta objetivo: «praxias orofaciales». Title `¿Qué son las praxias orofaciales?` → `Praxias orofaciales: qué son y para qué sirven`. Meta → «Qué son las praxias orofaciales (bucofaciales u orales): ejercicios de labios, lengua y mandíbula. Para qué sirven en dislalia y apraxia.». H1: igual. Motivo: El title abre con la consulta principal y suma «para qué sirven». La meta cubre las variantes bucofaciales/orales y mantiene dislalia y apraxia.
+Aplicado 2026-11-17. Medir 2026-12-01 (14 d).
+
+### `/lectoescritura/confunde-letras-al-leer`
+
+Antes — 28d (2026-10-20..2026-11-16): 0 clics / 73 impr / CTR 0.00 % / pos 7.3; 7d 0/36 vs prev7 0/37. Consultas: «confundir letras» 0 clics/3 impr, pos 10.7; «confundir las letras» 0 clics/2 impr, pos 9.5; «confunde las letras» 0 clics/1 impr, pos 11.0; «confundir palabras al leer» 0 clics/1 impr, pos 8.0.
+Consulta objetivo: «confundir las letras». Title `Confunde letras al leer: qué observar` → `Confunde las letras al leer (b y d): qué observar`. Meta → «¿Confunde letras como b y d, se salta palabras o adivina el final? Qué anotar en una lectura corta y cuándo evaluar lenguaje y lectura en Chillán.». H1: igual. Motivo: Usa la redacción «confunde las letras» y deja visible el ejemplo b/d en el title. La meta pasa a pregunta con los mismos datos que ya tenía.
+Aplicado 2026-11-17. Medir 2026-12-01 (14 d).
+
+
+### Medición vencida: Lote 28 (2026-11-03, medir ~11-17)
+
+- `/preguntas/el-tel-se-cura` (Lote 28): antes 2026-10-20..2026-11-02 2/173 CTR 1.16 % pos 5.7 → después 2026-11-03..2026-11-16 1/214 CTR 0.47 % pos 4.8. Baja, pero la página entró al test Opus del 11-08 (title/meta nuevos): se decide con el test el 2026-11-22.
+- `/glosario/logopeda` (Lote 28): antes 2026-10-20..2026-11-02 2/119 CTR 1.68 % pos 8.9 → después 2026-11-03..2026-11-16 0/108 CTR 0.0 % pos 12.4. Baja por posición (8,9 → 12,4); el title live («¿Logopeda y fonoaudiólogo son lo mismo? En Chile») ya calza con las consultas. No se reescribe: Opus propuso cambiar `terminos.ts`, pero esa entrada no alimenta la ruta estática `/glosario/logopeda`, así que el cambio se descartó en la revisión.
+- `/servicios/evaluacion-fonoaudiologica` (Lote 28): antes 2026-10-20..2026-11-02 0/21 CTR 0.0 % pos 10.1 → después 2026-11-03..2026-11-16 0/29 CTR 0.0 % pos 7.0. Sube posición (10,1 → 7,0) sin clics todavía. Se mantiene.
+- `/voz-online/disfonia-por-estres`, `/voz-online/voz-despues-de-un-resfrio`: re-editadas el 2026-11-13 (Lote 34); se miden el 2026-11-27.
+
+Sin otras ciudades. `/glosario/logopeda` descartado en revisión (ver medición).
+
 ## 2026-11-15 — Lote 35 (CTR): CTR de dislalia vs trastorno fonológico, hijo que habla poco y fono o psicólogo
 
 Search Console (último día 2026-11-14). 90d: 129 clics / 14.294 impr / CTR 0.9 % / pos 8.5. 7d (2026-11-08..2026-11-14): 17 clics / 2.601 impr / CTR 0.65 % / pos 10.3 vs prev7 (2026-11-01..2026-11-07): 24 clics / 3.391 impr / CTR 0.71 % / pos 8.2. Copy: claude-opus-5-5 (effort high) vía API de Anthropic, revisado y aplicado por Grok Bot. Congeladas y no tocadas: test Opus 11-08 (hasta 2026-11-22), lotes 11-04/11-07/11-09/11-10 y lo editado el 11-13 (hasta 2026-11-20). GA4: conector sigue pidiendo reautenticación. PageSpeed: HTTP 429 (cuota). Medir el 2026-11-29.
