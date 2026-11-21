@@ -2,6 +2,30 @@
 
 Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
+## 2026-11-21 — Lote 37 (CTR): CTR de dislexia vs dislalia y dislalia vs disartria
+
+Search Console (último día 2026-11-20). 90d: 151 clics / 17.683 impr / CTR 0.85 % / pos 8.4. 7d (2026-11-14..2026-11-20): 27 clics / 3.818 impr / CTR 0.71 % / pos 8.6 vs prev7 (2026-11-07..2026-11-13): 17 clics / 2.862 impr / CTR 0.59 % / pos 9.8. Copy: claude-sonnet-5-5 vía API de Anthropic, revisado y aplicado por Grok Bot. Congeladas y no tocadas: test Opus 11-08 (se mide desde 2026-11-22) y lotes 11-09 en adelante. GA4: conector sigue pidiendo reautenticación. Medir el 2026-12-05.
+
+### `/comparaciones/dislexia-vs-dislalia`
+
+Antes — 28d (2026-10-24..2026-11-20): 2 clics / 2899 impr / CTR 0.07 % / pos 6.4; 7d 1/869 vs prev7 0/648. Consultas: «dislexia y dislalia» 0 clics/838 impr, pos 7.1; «dislalia y dislexia» 0 clics/557 impr, pos 7.4; «diferencia entre dislexia y dislalia» 0 clics/244 impr, pos 4.7; «diferencia entre dislalia y dislexia» 2 clics/130 impr, pos 5.3.
+Consulta objetivo: «dislexia y dislalia». Title `Dislexia y dislalia: hablar no es lo mismo que leer` → `Dislexia y dislalia: diferencia entre leer y pronunciar`. Meta → «Diferencia: la dislalia dificulta pronunciar sonidos al hablar; la dislexia, leer y escribir. Pueden coincidir. Evaluación en Chillán.». H1: Dislexia y dislalia: diferencia entre leer y pronunciar (el H1 es igual al title). Motivo: El enfoque anterior era una frase de contraste. Ahora el title incluye la palabra «diferencia», que buscan casi todas las consultas, y dice qué distingue a cada una (leer vs. pronunciar). La meta abre con «Diferencia:» y conserva los datos existentes.
+Modelo: claude-sonnet-5-5. Aplicado 2026-11-21. Medir 2026-12-05 (14 d).
+
+### `/comparaciones/dislalia-vs-disartria`
+
+Antes — 28d (2026-10-24..2026-11-20): 3 clics / 2117 impr / CTR 0.14 % / pos 7.4; 7d 2/535 vs prev7 0/349. Consultas: «dislalia y disartria» 1 clics/961 impr, pos 7.6; «disartria y dislalia» 0 clics/492 impr, pos 7.2; «dislalia o disartria» 0 clics/131 impr, pos 7.9; «diferencia entre dislalia y disartria» 1 clics/64 impr, pos 5.7.
+Consulta objetivo: «dislalia y disartria». Title `Dislalia y disartria: un sonido o el habla entera` → `Dislalia y disartria: cuál es la diferencia`. Meta → «Diferencia: la dislalia cambia sonidos sueltos; la disartria altera el habla por una base neuromuscular. Evaluación en Chillán.». H1: Dislalia y disartria: cuál es la diferencia (el H1 es igual al title). Motivo: Cambia el enfoque de una metáfora a una promesa directa de la diferencia, con la consulta literal al inicio. La meta sigue sin inventar nada y mantiene la distinción que ya existía (sonidos sueltos vs. base neuromuscular).
+Modelo: claude-sonnet-5-5. Aplicado 2026-11-21. Medir 2026-12-05 (14 d).
+
+
+### Medición vencida (~2026-11-06/07, medir 11-20/21)
+
+- `/comparaciones/dislexia-vs-dislalia` (cambio 11-07): antes 2026-10-24..2026-11-06 1/1382 CTR 0.07 % pos 5.7 → después 2026-11-07..2026-11-20 1/1517 CTR 0.07 % pos 6.9. Sin mejora (CTR 0,07 %): reintento hoy con otro enfoque («diferencia»).
+- `/comparaciones/dislalia-vs-disartria` (cambio 11-07): antes 2026-10-24..2026-11-06 1/1233 CTR 0.08 % pos 7.5 → después 2026-11-07..2026-11-20 2/884 CTR 0.23 % pos 7.2. Mejora leve (0,08 → 0,23 %) pero sigue muy bajo: reintento hoy.
+
+Sin otras ciudades. Sin datos clínicos nuevos.
+
 ## 2026-11-17 — Lote 36 (CTR): CTR de praxias orofaciales y confunde letras al leer
 
 Search Console (último día 2026-11-16). 90d: 141 clics / 15.146 impr / CTR 0.93 % / pos 8.5. 7d (2026-11-10..2026-11-16): 24 clics / 2.511 impr / CTR 0.96 % / pos 10.1 vs prev7 (2026-11-03..2026-11-09): 25 clics / 3.736 impr / CTR 0.67 % / pos 8.7. Copy: claude-opus-5-5 (effort high) vía API de Anthropic, revisado y aplicado por Grok Bot. Congeladas y no tocadas: test Opus 11-08 (hasta 2026-11-22), lotes 11-04 (hasta 11-18), 11-07 (11-21), 11-09/11-10 (11-23/24), 11-13 (11-20) y 11-15 (11-22). GA4: conector sigue pidiendo reautenticación. PageSpeed: HTTP 429. Medir el 2026-12-01.
