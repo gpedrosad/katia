@@ -6,9 +6,9 @@ import { buildPageMetadata } from "@/lib/seo";
 import { SITE_URL, whatsappUrl } from "@/lib/site";
 
 const PAGE_PATH = "/comparaciones/dislalia-vs-disartria";
-const TITLE = "Dislalia y disartria: un sonido o el habla entera";
+const TITLE = "Dislalia y disartria: cuál es la diferencia";
 const DESCRIPTION =
-  "No son lo mismo. La dislalia cambia sonidos sueltos. La disartria altera el habla por una base neuromuscular. Evaluación en Chillán.";
+  "Diferencia: la dislalia cambia sonidos sueltos; la disartria altera el habla por una base neuromuscular. Evaluación en Chillán.";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,

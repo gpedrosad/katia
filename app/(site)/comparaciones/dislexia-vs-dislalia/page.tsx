@@ -5,9 +5,9 @@ import { buildPageMetadata } from "@/lib/seo";
 import { SITE_URL, whatsappUrl } from "@/lib/site";
 
 const PAGE_PATH = "/comparaciones/dislexia-vs-dislalia";
-const TITLE = "Dislexia y dislalia: hablar no es lo mismo que leer";
+const TITLE = "Dislexia y dislalia: diferencia entre leer y pronunciar";
 const DESCRIPTION =
-  "No son lo mismo. La dislalia es pronunciar sonidos al hablar. La dislexia es leer y escribir. Pueden coincidir. Evaluación en Chillán.";
+  "Diferencia: la dislalia dificulta pronunciar sonidos al hablar; la dislexia, leer y escribir. Pueden coincidir. Evaluación en Chillán.";
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
