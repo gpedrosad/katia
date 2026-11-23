@@ -77,7 +77,7 @@ const faqs = [
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "¿A qué edad hablan los niños? Primeras palabras 11-14 meses",
+  title: "¿A qué edad hablan los niños? Hitos del lenguaje por edad",
   description:
     "Primeras palabras con significado entre los 11 y 14 meses. A los 2 años unas 50 palabras y frases de dos. Hitos del lenguaje por edad y cuándo consultar.",
   keywords: [
