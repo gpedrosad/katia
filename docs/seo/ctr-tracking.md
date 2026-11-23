@@ -1,5 +1,47 @@
 # CTR tracking — Katia (katialafono.cl)
 
+## 2026-11-23 — Lote 38: hitos del lenguaje y «¿el TEL se cura?» (retry test Opus)
+
+Search Console (último día 2026-11-22). 90d: 157 clics / 18.733 impr / CTR 0.84 % / pos 8.5. 7d (2026-11-16..2026-11-22): 32 clics / 4.424 impr / CTR 0.72 % / pos 8.3 vs prev7 (2026-11-09..2026-11-15): 15 clics / 2.585 impr / CTR 0.58 % / pos 10.3. Copy: claude-opus-5-5 (effort high) vía API de Anthropic, revisado y aplicado por Grok Bot. Congeladas y no tocadas: lotes 2026-11-21 (hasta 11-28), tienda #40 (hasta 11-26) y lotes 11-10 (hasta 11-24). GA4: conector sigue pidiendo reautenticación. Medir el 2026-12-07.
+
+### `/recursos/hitos-del-lenguaje-por-edad`
+
+Antes — 28d (2026-10-26..2026-11-22): 1 clics / 670 impr / CTR 0.15 % / pos 8.4; 7d 0/192 vs prev7 1/146. Consultas: «a que edad hablan los niños» 0 clics/212 impr, pos 9.5; «a que edad los niños hablan» 1 clics/22 impr, pos 9.8; «a qué edad hablan los bebés» 0 clics/21 impr, pos 9.7; «a qué edad hablan los niños» 0 clics/6 impr, pos 10.2.
+Consulta objetivo: «a que edad hablan los niños». Title `¿A qué edad hablan los niños? Primeras palabras 11-14 meses` → `¿A qué edad hablan los niños? Hitos del lenguaje por edad`. Meta → «Primeras palabras con significado entre los 11 y 14 meses. A los 2 años unas 50 palabras y frases de dos. Hitos del lenguaje por edad y cuándo consultar.». H1: igual. Motivo: El title actual tiene 59 caracteres y supera el límite de 58. Además marcó 0/192 en los últimos 7 días tras el cambio. El nuevo promete el recorrido completo por edad (consulta «hitos del lenguaje por edad»), y los datos 11-14 meses y 50 palabras se mantienen tal cual en la meta.
+Modelo: claude-opus-5-5. Aplicado 2026-11-23. Medir 2026-12-07 (14 d).
+
+### `/preguntas/el-tel-se-cura`
+
+Antes — 28d (2026-10-26..2026-11-22): 6 clics / 505 impr / CTR 1.19 % / pos 5.0; 7d 3/180 vs prev7 0/98. Consultas: «el tel se cura» 1 clics/126 impr, pos 4.3; «tdl se cura» 0 clics/48 impr, pos 8.8; «trastorno del lenguaje se cura» 0 clics/17 impr, pos 5.8; «tel» 0 clics/9 impr, pos 3.0.
+Consulta objetivo: «el tel se cura». Title `¿El TEL o TDL se cura? Qué esperar con terapia y apoyo` → `¿El TEL o TDL se cura? Qué esperar y cómo ayudar a tu hijo`. Meta → «El TEL o TDL (trastorno del desarrollo del lenguaje) no se cura ni se pasa solo, pero con terapia y apoyo en casa y colegio puede mejorar mucho.». H1: igual. Motivo: Ninguna de las dos versiones funcionó: 1,30 % antes y 1,08 % después, a pos 4-5, donde lo esperable es bastante más. Por eso no conviene volver atrás, sino probar un ángulo distinto, accionable para padres («cómo ayudar a tu hijo», respaldado por el apoyo en casa y colegio). La meta suma «TDL» y «trastorno del lenguaje» con la respuesta directa.
+Modelo: claude-opus-5-5. Aplicado 2026-11-23. Medir 2026-12-07 (14 d).
+
+No aplicado: `/voz-online/voz-despues-de-un-resfrio` — Se cambió el 13/11 y la medición cierra el 27/11. Las consultas visibles suman muy pocas impresiones y no hay una alternativa claramente mejor que justifique interrumpir la prueba. Si el 27/11 sigue en 0 clics, conviene probar un title con «disfonía por resfrío» al inicio.
+
+
+### Test CTR Opus 5.5 — medición 14 d (2026-11-23)
+
+Antes 2026-10-24..2026-11-06 vs después 2026-11-09..2026-11-22 (GSC dataState all; el 22/11 puede no estar final: provisional). Total del sitio (8 URLs): 3/531 (CTR 0.56 %) → 8/714 (CTR 1.12 %). Sin control A/B: no es causal. Las páginas se descongelan. Re-medición 28 d en la primera corrida desde 2026-12-06.
+
+| URL | Var. | Antes (clics/impr, CTR, pos) | Después | Veredicto |
+|---|---|---|---|---|
+| `/preguntas/el-tel-se-cura` | A | 3/231, 1.30 %, 5.5 | 3/278, 1.08 %, 4.6 | sin cambio claro |
+| `/preguntas/cuanto-dura-una-terapia-de-lenguaje` | A | 0/84, 0.00 %, 7.0 | 0/72, 0.00 %, 7.6 | sin datos suficientes |
+| `/comparaciones/tel-vs-retraso-del-lenguaje` | A | 0/106, 0.00 %, 8.4 | 1/136, 0.74 %, 11.3 | sin datos suficientes |
+| `/servicios/informe-fonoaudiologico-pie-chillan` | A | 0/39, 0.00 %, 5.1 | 4/147, 2.72 %, 6.2 | mejoró |
+| `/servicios/evaluacion-fonoaudiologica` | A | 0/24, 0.00 %, 7.1 | 0/31, 0.00 %, 7.4 | sin datos suficientes |
+| `/voz-online/voz-ronca-causas-tratamiento` | A | 0/29, 0.00 %, 9.6 | 0/36, 0.00 %, 9.1 | sin datos suficientes |
+| `/voz-online/nodulos-vocales-tratamiento-online` | B | 0/12, 0.00 %, 5.3 | 0/11, 0.00 %, 7.0 | sin datos suficientes |
+| `/servicios/terapia-lenguaje-infantil` | B | 0/6, 0.00 %, 13.5 | 0/3, 0.00 %, 22.0 | sin datos suficientes |
+
+`/preguntas/el-tel-se-cura` (1,30 → 1,08 %, pos 5,5 → 4,6): ningún title funcionó, se prueba un ángulo distinto.
+
+### Medición vencida (cambios 2026-11-09, medir 11-23)
+
+- `/` (cambio 11-09): antes 2026-10-27..2026-11-08 3/235 CTR 1.28 % pos 4.5 → después 2026-11-10..2026-11-22 5/384 CTR 1.3 % pos 5.6. Estable (1,28 → 1,30 %); se mantiene.
+- `/fonoaudiologa-ninos-chillan` (cambio 11-09): antes 2026-10-27..2026-11-08 0/40 CTR 0.0 % pos 9.9 → después 2026-11-10..2026-11-22 0/34 CTR 0.0 % pos 7.7. Sin clics en ambos períodos, poco volumen; se mantiene.
+
+
 ## 2026-11-21 — Lote 37 (CTR): CTR de dislexia vs dislalia y dislalia vs disartria
 
 Search Console (último día 2026-11-20). 90d: 151 clics / 17.683 impr / CTR 0.85 % / pos 8.4. 7d (2026-11-14..2026-11-20): 27 clics / 3.818 impr / CTR 0.71 % / pos 8.6 vs prev7 (2026-11-07..2026-11-13): 17 clics / 2.862 impr / CTR 0.59 % / pos 9.8. Copy: claude-sonnet-5-5 vía API de Anthropic, revisado y aplicado por Grok Bot. Congeladas y no tocadas: test Opus 11-08 (se mide desde 2026-11-22) y lotes 11-09 en adelante. GA4: conector sigue pidiendo reautenticación. Medir el 2026-12-05.
