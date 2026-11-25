@@ -46,9 +46,9 @@ const faqs = [
 
 export const metadata = buildPageMetadata({
   path: PAGE_PATH,
-  title: "Primera evaluación fonoaudiológica: qué esperar",
+  title: "Evaluación fonoaudiológica infantil: qué esperar e informe",
   description:
-    "Qué pasa en la primera evaluación fonoaudiológica, qué llevar y el informe. Unos 60 minutos, presencial en Chillán.",
+    "Qué pasa en la primera evaluación fonoaudiológica de tu hijo, qué llevar y cómo es el informe fonoaudiológico. Unos 60 minutos, presencial en Chillán.",
   keywords: [
     "qué esperar en la primera evaluación fonoaudiológica",
     "cómo preparar a tu hijo para la evaluación",
@@ -67,7 +67,7 @@ const articleJsonLd = {
   headline:
     "Primera evaluación fonoaudiológica: qué esperar y cómo preparar a tu hijo",
   description:
-    "Qué pasa en la primera evaluación fonoaudiológica, qué llevar y el informe. Unos 60 minutos, presencial en Chillán.",
+    "Qué pasa en la primera evaluación fonoaudiológica de tu hijo, qué llevar y cómo es el informe fonoaudiológico. Unos 60 minutos, presencial en Chillán.",
   author: {
     "@type": "Person",
     name: "Katia Domínguez",
