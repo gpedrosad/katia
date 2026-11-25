@@ -1,5 +1,18 @@
 # CTR tracking — Katia (katialafono.cl)
 
+## 2026-11-25 — Lote 39: CTR de primera evaluación fonoaudiológica infantil
+
+Search Console (último día 2026-11-24). 90d: 165 clics / 20.144 impr / CTR 0.82 % / pos 8.5. 7d (2026-11-18..2026-11-24): 30 clics / 4.688 impr / CTR 0.64 % / pos 8.4 vs prev7 (2026-11-11..2026-11-17): 21 clics / 2.499 impr / CTR 0.84 % / pos 9.8. Copy: claude-opus-5-5 (effort high) vía API de Anthropic, revisado y aplicado por Grok Bot. Páginas cambiadas en los últimos 7 días no se tocaron (lotes 11-21 y 11-23 congelados). Medir 2026-12-09 (14 d). Test Opus 11-08: medición 14 d ya hecha el 2026-11-23; re-medición 28 d en la primera corrida desde 2026-12-06.
+
+### `/recursos/primera-evaluacion-fonoaudiologica-infantil`
+
+Antes — 28d (2026-10-28..2026-11-24): 2 clics / 351 impr / CTR 0.57 % / pos 6.1; 7d 1/80 vs prev7 1/76. Consultas: «evaluacion fonoaudiologica» 0 clics/5 impr, pos 17.6; «informe fonoaudiologico infantil» 0 clics/2 impr, pos 10.5; «evaluación fonoaudiológica» 0 clics/1 impr, pos 14.0; «examen de fonoaudiologia» 0 clics/1 impr, pos 4.0.
+Consulta objetivo: «evaluacion fonoaudiologica». Title `Primera evaluación fonoaudiológica: qué esperar` → `Evaluación fonoaudiológica infantil: qué esperar e informe`. Meta → «Qué pasa en la primera evaluación fonoaudiológica de tu hijo, qué llevar y cómo es el informe fonoaudiológico. Unos 60 minutos, presencial en Chillán.». H1: igual. Motivo: El title empieza con «evaluación fonoaudiológica» y suma «infantil» e «informe» para calzar con «informe fonoaudiologico infantil»; la meta incluye «informe fonoaudiológico» y mantiene literal «Unos 60 minutos, presencial en Chillán».
+Modelo: claude-opus-5-5. Aplicado 2026-11-25. Medir 2026-12-09 (14 d).
+
+No aplicado: `/lenguaje-infantil/habla-como-bebe` — Las constantes TITLE y DESCRIPTION no aparecen en el fragmento, así que no se pueden editar con texto literal. Además, la consulta principal «como hablar como bebe» (8 impr) tiene una intención ambigua, posiblemente ajena a padres preocupados, y la otra consulta tiene 1 impresión. No hay una mejora clara y segura.
+
+
 ## 2026-11-23 — Lote 38: hitos del lenguaje y «¿el TEL se cura?» (retry test Opus)
 
 Search Console (último día 2026-11-22). 90d: 157 clics / 18.733 impr / CTR 0.84 % / pos 8.5. 7d (2026-11-16..2026-11-22): 32 clics / 4.424 impr / CTR 0.72 % / pos 8.3 vs prev7 (2026-11-09..2026-11-15): 15 clics / 2.585 impr / CTR 0.58 % / pos 10.3. Copy: claude-opus-5-5 (effort high) vía API de Anthropic, revisado y aplicado por Grok Bot. Congeladas y no tocadas: lotes 2026-11-21 (hasta 11-28), tienda #40 (hasta 11-26) y lotes 11-10 (hasta 11-24). GA4: conector sigue pidiendo reautenticación. Medir el 2026-12-07.
