@@ -2,6 +2,33 @@
 
 Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
+## 2026-11-26 — Contenido nuevo: logopedia online para adultos + boost TEL vs TDL
+
+### `/voz-online/logopedia-online-adultos` (nueva)
+- Página del cluster de voz con `VoiceClusterPage` para la intención «consulta de logopedia online» (servicio, terminología de España y otros países) centrada en voz de adultos. No compite con «fonoaudiólogo online» (hub) ni con «logopeda online España» (`/voz-online/espana`).
+- Queries GSC 90 d (al 25/11/2026): "consulta de logopedia adultos online" 24 impr, pos 62,8; "consulta de logopedia online" 17 impr, pos 73,4 (hoy solo rankea `/voz-online/espana`, geográfica). Señal secundaria: "logopeda adulto" en `/glosario/logopeda` 3 impr, pos 79,7.
+- TITLE «Consulta de logopedia online de voz para adultos» (48 caracteres), DESCRIPTION 141 caracteres. 6 FAQs (adulto, logopeda vs fonoaudióloga, problemas de voz, alcance honesto: la consulta online es de voz para adultos, horario, primera consulta). `areaServed`: España, Argentina, México, Colombia, Perú, Estados Unidos. `hoursPlace="tu país"`, `dateModified` 2026-11-26.
+- Secciones: qué es, logopeda o fonoaudióloga, problemas de voz (enlaces a 15 páginas del cluster), cómo es la consulta, para quién, coordinación con el otorrino, qué necesitas para la videollamada, en español desde cualquier país (12 páginas de país + desde otro país) y `<LatamVoiceLinks />`.
+
+### `/voz-online/fonoaudiologa-de-voz-online` (hub)
+- Nueva tarjeta «Logopedia online adultos» en la grilla de servicios, después de «Desde otro país».
+
+### `/voz-online/espana`
+- Enlace contextual «logopedia online para adultos» en el párrafo de terminología (logopeda/fonoaudióloga). TITLE, DESCRIPTION y keywords sin cambios. `dateModified` → 2026-11-26.
+
+### `/glosario/logopeda`
+- Nuevo item en `guides` hacia la página nueva, para pasar la señal de "logopeda adulto" (3 impr, pos 79,7).
+
+### `/comparaciones/tel-vs-retraso-del-lenguaje` (boost)
+- GSC 28 d: 318 impr, pos 9,9 (crecimiento fuerte desde casi cero). Queries: "diferencia entre tel y tdl" 30 impr pos 23; "tdl y tel es lo mismo" 20 pos 10,7; "tel o tdl" 19 pos 7,6; "tel y tdl es lo mismo" 13 pos 9,6; "diferencia entre retraso y trastorno del lenguaje" 7 pos 9,4; "tdl" 5 pos 13; "diferencia entre tdl y tel" 4 pos 10.
+- Respuesta directa (speakable) TEL vs TDL: TDL = denominación internacional actual (consenso CATALISE, Bishop y colaboradores, 2016-2017); TEL = nombre anterior que en Chile se sigue usando (Decreto 170 de NEE, PIE).
+- Nuevo H2 «¿TEL y TDL es lo mismo?» con tabla cualitativa retraso / TEL / TDL (sin edades ni porcentajes nuevos) y enlaces a `/servicios/informe-fonoaudiologico-pie-chillan` y `/tratamientos/tel-trastorno-especifico-lenguaje-chillan`.
+- H2 «Diferencias clave» → «Diferencia entre retraso y trastorno del lenguaje»; H2 de la tabla original → «Tabla comparativa: retraso del lenguaje vs TEL/TDL».
+- 6 FAQs nuevas (TEL y TDL es lo mismo, diferencia TEL/TDL, TEL o TDL, qué es el TDL, diferencia retraso/trastorno, ¿el TDL se cura? → enlace a `/preguntas/el-tel-se-cura`, dueña de esa intención). Entran al JSON-LD FAQPage porque salen del mismo array `faqs`; el enlace se renderiza aparte vía campo opcional `link`.
+- Title sin cambios (ya incluye "TEL/TDL", 55 caracteres). Keywords ampliadas. `dateModified` → 2026-11-26.
+
+Medir: 2026-12-10 (14 d) y 2026-12-24 (28 d)
+
 ## 2026-11-25 — Lote 39: CTR de primera evaluación fonoaudiológica infantil
 
 Search Console (último día 2026-11-24). 90d: 165 clics / 20.144 impr / CTR 0.82 % / pos 8.5. 7d (2026-11-18..2026-11-24): 30 clics / 4.688 impr / CTR 0.64 % / pos 8.4 vs prev7 (2026-11-11..2026-11-17): 21 clics / 2.499 impr / CTR 0.84 % / pos 9.8. Copy: claude-opus-5-5 (effort high) vía API de Anthropic, revisado y aplicado por Grok Bot. Páginas cambiadas en los últimos 7 días no se tocaron (lotes 11-21 y 11-23 congelados). Medir 2026-12-09 (14 d). Test Opus 11-08: medición 14 d ya hecha el 2026-11-23; re-medición 28 d en la primera corrida desde 2026-12-06.

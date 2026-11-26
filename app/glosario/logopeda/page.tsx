@@ -118,6 +118,11 @@ const guides = [
     note: "La misma profesión, cuando el tema es la voz y la persona es adulta. No depende de la ciudad.",
   },
   {
+    href: "/voz-online/logopedia-online-adultos",
+    title: "Logopedia online para adultos",
+    note: "Si buscas logopeda adulto: consulta de voz por videollamada, en español.",
+  },
+  {
     href: "/lenguaje-infantil",
     title: "Lenguaje infantil: guías para padres",
     note: "18 meses, entiende y no habla, habla como bebé, palabras sin frases.",

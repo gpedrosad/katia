@@ -19,11 +19,21 @@ export const metadata = buildPageMetadata({
     "TEL TDL diferencia retraso",
     "trastorno específico del lenguaje vs retraso",
     "cuándo TEL cuándo retraso lenguaje",
+    "TEL y TDL es lo mismo",
+    "diferencia entre TEL y TDL",
+    "TEL o TDL",
+    "diferencia entre retraso y trastorno del lenguaje",
   ],
   ogType: "article",
 });
 
-const faqs = [
+type TelFaq = {
+  question: string;
+  acceptedAnswer: string;
+  link?: { href: string; label: string };
+};
+
+const faqs: TelFaq[] = [
   {
     question: "¿El TEL es lo mismo que un retraso del lenguaje?",
     acceptedAnswer:
@@ -43,6 +53,38 @@ const faqs = [
     question: "¿Ambos requieren terapia fonoaudiológica?",
     acceptedAnswer:
       "Sí. La intervención temprana mejora vocabulario, estructura de frases y comprensión. El plan y la duración dependen del perfil del niño tras la evaluación inicial.",
+  },
+  {
+    question: "¿TEL y TDL es lo mismo?",
+    acceptedAnswer:
+      "Sí, en la práctica nombran el mismo cuadro. TDL (trastorno del desarrollo del lenguaje) es la denominación internacional actual, acordada en el consenso CATALISE (Bishop y colaboradores, 2016-2017). TEL (trastorno específico del lenguaje) es el nombre anterior, que en Chile se sigue usando, por ejemplo en el Decreto 170 de necesidades educativas especiales (NEE) que se aplica en el PIE.",
+  },
+  {
+    question: "¿Cuál es la diferencia entre TEL y TDL?",
+    acceptedAnswer:
+      "La diferencia está en el nombre, no en el niño. TDL es el término que reemplazó a TEL en la terminología internacional; TEL es el término anterior. En Chile vas a ver los dos: TDL en informes que siguen la terminología internacional y TEL en documentos escolares y del PIE.",
+  },
+  {
+    question: "¿Se dice TEL o TDL?",
+    acceptedAnswer:
+      "Las dos formas son correctas según el contexto. TDL es la denominación internacional actual. TEL es la que se sigue usando en Chile en el ámbito escolar, por ejemplo en el Decreto 170 y en el PIE. Si un informe dice TEL y otro dice TDL, hablan del mismo cuadro.",
+  },
+  {
+    question: "¿Qué es el TDL?",
+    acceptedAnswer:
+      "El TDL (trastorno del desarrollo del lenguaje) es un trastorno del neurodesarrollo con dificultades persistentes para comprender y/o expresarse con el lenguaje, sin una causa evidente como pérdida auditiva o discapacidad intelectual. Es el nombre actual de lo que muchos informes en Chile llaman TEL.",
+    link: { href: "/glosario/tdl", label: "Qué es el TDL" },
+  },
+  {
+    question: "¿Cuál es la diferencia entre retraso y trastorno del lenguaje?",
+    acceptedAnswer:
+      "El retraso del lenguaje es un desarrollo más lento que el esperado para la edad, que a veces avanza con estimulación y maduración. El trastorno del lenguaje (TEL/TDL) es un perfil de dificultades que persiste en el tiempo y suele requerir terapia y seguimiento. La evaluación fonoaudiológica y la evolución del niño ayudan a distinguirlos.",
+  },
+  {
+    question: "¿El TDL se cura?",
+    acceptedAnswer:
+      "El TDL suele acompañar al niño durante años; con terapia fonoaudiológica el lenguaje mejora, pero requiere seguimiento. La respuesta completa está en la página «¿El TEL se cura?».",
+    link: { href: "/preguntas/el-tel-se-cura", label: "¿El TEL se cura?" },
   },
 ];
 
@@ -66,7 +108,7 @@ const articleJsonLd = {
     "@id": `${SITE_URL}${PAGE_PATH}`,
   },
   datePublished: "2026-05-19",
-  dateModified: "2026-10-31",
+  dateModified: "2026-11-26",
 };
 
 const faqJsonLd = {
@@ -115,6 +157,39 @@ const comparisonRows = [
     aspect: "Evaluación",
     retraso: "Control de hitos, estimulación temprana, reevaluación periódica.",
     tel: "Baterías de lenguaje, perfil fonológico, descarte auditivo y cognitivo según caso.",
+  },
+];
+
+const namesRows = [
+  {
+    aspect: "Qué describe",
+    retraso: "Un desarrollo del lenguaje más lento que lo esperado para la edad.",
+    tel: "Dificultades del lenguaje que persisten, sin causa evidente como pérdida auditiva o discapacidad intelectual.",
+    tdl: "El mismo perfil que el TEL.",
+  },
+  {
+    aspect: "Tipo de término",
+    retraso: "Describe el ritmo del desarrollo; puede ser transitorio.",
+    tel: "Nombre anterior del trastorno.",
+    tdl: "Denominación internacional actual (consenso CATALISE, Bishop y colaboradores, 2016-2017).",
+  },
+  {
+    aspect: "Dónde lo vas a leer",
+    retraso: "Evaluaciones del lenguaje y controles del desarrollo.",
+    tel: "En Chile, en documentos escolares y en el Decreto 170 de NEE usado en el PIE.",
+    tdl: "En informes y textos que siguen la terminología internacional.",
+  },
+  {
+    aspect: "Evolución",
+    retraso: "Muchos niños alcanzan los hitos con apoyo y maduración.",
+    tel: "Suele acompañar al niño años; mejora con terapia y requiere seguimiento.",
+    tdl: "Igual que el TEL: es el mismo cuadro.",
+  },
+  {
+    aspect: "Qué hacer",
+    retraso: "Evaluación fonoaudiológica, estimulación y reevaluación.",
+    tel: "Evaluación fonoaudiológica y terapia de lenguaje.",
+    tdl: "Evaluación fonoaudiológica y terapia de lenguaje.",
   },
 ];
 
@@ -174,7 +249,87 @@ export default function TelVsRetrasoLenguajePage() {
                 los distingue.
               </p>
 
-              <h2>Tabla comparativa</h2>
+              <p className="text-gray-700" data-speakable>
+                <strong>¿TEL o TDL?</strong> Son el mismo cuadro con dos nombres. TDL
+                (trastorno del desarrollo del lenguaje) es la denominación internacional
+                actual, acordada en el consenso CATALISE (Bishop y colaboradores,
+                2016-2017). TEL (trastorno específico del lenguaje) es el nombre anterior,
+                que en Chile se sigue usando, por ejemplo en el Decreto 170 de necesidades
+                educativas especiales (NEE) que se aplica en el PIE. El retraso del
+                lenguaje, en cambio, es otro cuadro.
+              </p>
+
+              <h2>¿TEL y TDL es lo mismo?</h2>
+              <p>
+                Sí. TEL y TDL describen el mismo perfil: dificultades del lenguaje que
+                persisten en el tiempo y que no se explican por otra causa evidente, como
+                una pérdida auditiva o una discapacidad intelectual. El cambio de nombre
+                buscó unificar la terminología entre países. El detalle de cada término
+                está en{" "}
+                <Link href="/glosario/tel" className="font-semibold text-rose-600">
+                  qué es el TEL
+                </Link>{" "}
+                y{" "}
+                <Link href="/glosario/tdl" className="font-semibold text-rose-600">
+                  qué es el TDL
+                </Link>
+                .
+              </p>
+              <p>
+                En Chile vas a ver los dos nombres. TDL aparece en informes que siguen la
+                terminología internacional; TEL, en documentos escolares y en el PIE, porque
+                así lo nombra el Decreto 170. Si el colegio te pide un documento, mira el{" "}
+                <Link
+                  href="/servicios/informe-fonoaudiologico-pie-chillan"
+                  className="font-semibold text-rose-600"
+                >
+                  informe fonoaudiológico para el PIE en Chillán
+                </Link>
+                . Y si ya hay diagnóstico, el{" "}
+                <Link
+                  href="/tratamientos/tel-trastorno-especifico-lenguaje-chillan"
+                  className="font-semibold text-rose-600"
+                >
+                  tratamiento del TEL en Chillán
+                </Link>{" "}
+                es el mismo se llame TEL o TDL.
+              </p>
+
+              <h3>Retraso del lenguaje, TEL y TDL: comparación rápida</h3>
+              <div className="not-prose overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
+                <table className="min-w-full divide-y divide-gray-200 text-sm">
+                  <thead className="bg-rose-50">
+                    <tr>
+                      <th className="px-4 py-3 text-left font-bold text-gray-900">
+                        Aspecto
+                      </th>
+                      <th className="px-4 py-3 text-left font-bold text-rose-800">
+                        Retraso del lenguaje
+                      </th>
+                      <th className="px-4 py-3 text-left font-bold text-rose-800">
+                        TEL
+                      </th>
+                      <th className="px-4 py-3 text-left font-bold text-rose-800">
+                        TDL
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-100 bg-white">
+                    {namesRows.map((row) => (
+                      <tr key={row.aspect}>
+                        <td className="px-4 py-3 font-semibold text-gray-900">
+                          {row.aspect}
+                        </td>
+                        <td className="px-4 py-3 text-gray-700">{row.retraso}</td>
+                        <td className="px-4 py-3 text-gray-700">{row.tel}</td>
+                        <td className="px-4 py-3 text-gray-700">{row.tdl}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+
+              <h2>Tabla comparativa: retraso del lenguaje vs TEL/TDL</h2>
               <div className="not-prose overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
                 <table className="min-w-full divide-y divide-gray-200 text-sm">
                   <thead className="bg-rose-50">
@@ -250,7 +405,7 @@ export default function TelVsRetrasoLenguajePage() {
                 de salud infantil.
               </p>
 
-              <h2>Diferencias clave</h2>
+              <h2>Diferencia entre retraso y trastorno del lenguaje</h2>
               <ul>
                 <li>
                   <strong>Retraso del lenguaje:</strong> el niño comprende bien
@@ -368,7 +523,20 @@ export default function TelVsRetrasoLenguajePage() {
                           ▼
                         </span>
                       </summary>
-                      <p className="mt-4 text-gray-600">{f.acceptedAnswer}</p>
+                      <p className="mt-4 text-gray-600">
+                        {f.acceptedAnswer}
+                        {f.link && (
+                          <>
+                            {" "}
+                            <Link
+                              href={f.link.href}
+                              className="font-semibold text-rose-600 underline hover:text-rose-800"
+                            >
+                              {f.link.label}
+                            </Link>
+                          </>
+                        )}
+                      </p>
                     </details>
                   ))}
                 </div>

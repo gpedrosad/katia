@@ -345,6 +345,12 @@ export default function FonoaudiologaVozOnlinePage() {
                     icon: "🌎",
                   },
                   {
+                    title: "Logopedia online adultos",
+                    desc: "Si buscas logopeda: consulta de voz para adultos, en español.",
+                    href: "/voz-online/logopedia-online-adultos",
+                    icon: "💬",
+                  },
+                  {
                     title: "Cuánto dura",
                     desc: "El plan sale de la evaluación vocal. No hay un paquete fijo.",
                     href: "/voz-online/cuanto-dura-la-terapia-de-voz",
