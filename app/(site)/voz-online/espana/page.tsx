@@ -57,7 +57,7 @@ export default function VozOnlineEspanaPage() {
       areaServed={{ "@type": "Country", name: "España" }}
       whatsappMessage="Hola, estoy en España y quiero consultar horario para terapia de voz online."
       hoursPlace="España"
-      dateModified="2026-11-06"
+      dateModified="2026-11-26"
       faq={faqItems}
     >
       <section>
@@ -81,7 +81,9 @@ export default function VozOnlineEspanaPage() {
         <p>
           En España la profesión se llama logopeda y la disciplina, logopedia. En Chile se dice
           fonoaudióloga y fonoaudiología. Es el mismo campo con otro nombre. Katia atiende la voz
-          de adultos por videollamada desde Chile, en español.
+          de adultos por videollamada desde Chile, en español. Cómo funciona la consulta, sin
+          importar el país, está en{" "}
+          <Link href="/voz-online/logopedia-online-adultos">logopedia online para adultos</Link>.
         </p>
         <p>
           La búsqueda «logopedia de la voz» o «terapia de voz online» encaja con el trabajo de la
