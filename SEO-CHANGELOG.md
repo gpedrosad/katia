@@ -2,6 +2,23 @@
 
 Log de optimizaciones SEO on-page, ordenadas por fecha (más reciente primero).
 
+## 2026-11-27 — Lote 40: retry CTR de voz después de un resfrío (medición 14 d del 13/11)
+
+Search Console (último día 2026-11-26). 90d: 170 clics / 21.561 impr / CTR 0.79 % / pos 8.4. 7d (2026-11-20..2026-11-26): 27 clics / 4.818 impr / CTR 0.56 % / pos 8.4 vs prev7 (2026-11-13..2026-11-19): 26 clics / 3.418 impr / CTR 0.76 % / pos 8.9. Copy: claude-opus-5-5 (effort high) vía API de Anthropic, revisado y aplicado por Grok Bot. Páginas cambiadas en los últimos 7 días (11-21, 11-23, 11-25, contenido 11-26) no se tocaron. Medir 2026-12-11 (14 d). Test Opus 11-08: 14 d medido el 2026-11-23; re-medición 28 d desde 2026-12-06.
+
+### `/voz-online/voz-despues-de-un-resfrio`
+
+Antes — 28d (2026-10-30..2026-11-26): 0 clics / 724 impr / CTR 0.00 % / pos 9.2; 7d 0/406 vs prev7 0/198. Consultas: «disfonia por resfrio» 0 clics/18 impr, pos 9.9; «por que se va la voz con un resfrio» 0 clics/8 impr, pos 10.9; «perdida de voz por resfriado» 0 clics/6 impr, pos 9.8; «porque se va la voz cuando da gripe» 0 clics/4 impr, pos 11.0.
+Consulta objetivo: «disfonia por resfrio». Title `Se va la voz con un resfrío o gripe: cuándo consultar` → `Disfonía por resfrío: por qué se va la voz y qué hacer`. Meta → «¿Por qué se va la voz con un resfrío o la gripe? Si la ronquera o afonía dura más de dos semanas, consulta al otorrino. Terapia de voz online en Chile.». H1: igual. Motivo: Retry distinto: el title abre con la consulta principal «disfonia por resfrio» y suma «por qué se va la voz». La meta cubre «por que se va la voz con un resfrio», gripe, ronquera y afonía, y mantiene el dato de dos semanas tal cual.
+Modelo: claude-opus-5-5. Aplicado 2026-11-27. Medir 2026-12-11 (14 d).
+
+### Medición 14 d del lote del 2026-11-13 (antes 31/10–12/11, después 14/11–26/11; sin control, no causal)
+
+- `/voz-online/voz-despues-de-un-resfrio`: 0/106 (CTR 0.0 %, pos 8.8) → 0/604 (CTR 0.0 %, pos 9.2)
+- `/voz-online/disfonia-por-estres`: 0/45 (CTR 0.0 %, pos 7.4) → 2/77 (CTR 2.6 %, pos 9.4)
+- `/preguntas/como-se-diagnostica-el-tel`: 0/31 (CTR 0.0 %, pos 6.1) → 0/27 (CTR 0.0 %, pos 6.5)
+
+
 ## 2026-11-26 — Contenido nuevo: logopedia online para adultos + boost TEL vs TDL
 
 ### `/voz-online/logopedia-online-adultos` (nueva)
