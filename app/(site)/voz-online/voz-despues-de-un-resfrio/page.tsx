@@ -3,9 +3,9 @@ import { VoiceClusterPage } from "@/app/(site)/voz-online/_components/VoiceClust
 import { buildPageMetadata } from "@/lib/seo";
 
 const PATH = "/voz-online/voz-despues-de-un-resfrio";
-const TITLE = "Se va la voz con un resfrío o gripe: cuándo consultar";
+const TITLE = "Disfonía por resfrío: por qué se va la voz y qué hacer";
 const DESCRIPTION =
-  "¿Se fue la voz con el resfrío o la gripe y sigue ronca? Si lleva más de dos semanas, consulta al otorrino. La terapia de voz online trabaja cómo hablas.";
+  "¿Por qué se va la voz con un resfrío o la gripe? Si la ronquera o afonía dura más de dos semanas, consulta al otorrino. Terapia de voz online en Chile.";
 
 export const metadata = buildPageMetadata({
   path: PATH,
